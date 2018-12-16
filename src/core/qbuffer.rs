@@ -1,428 +1,692 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qbuffer.h
-// dst-file: /src/core/qbuffer.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QBuffer
+// package qtcore
+// /usr/include/qt/QtCore/qbuffer.h
+// #include <qbuffer.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
-use super::qiodevice::*; // 773
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 59
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qbytearray::*; // 773
-use super::qobject::*; // 773
-use super::qobjectdefs::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QBuffer_Class_Size() -> c_int;
-  // proto:  bool QBuffer::seek(qint64 off);
-  fn C_ZN7QBuffer4seekEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong) -> c_char;
-  // proto:  bool QBuffer::canReadLine();
-  fn C_ZNK7QBuffer11canReadLineEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QBuffer::~QBuffer();
-  fn C_ZN7QBufferD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void QBuffer::setData(const QByteArray & data);
-  fn C_ZN7QBuffer7setDataERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  const QByteArray & QBuffer::data();
-  fn C_ZNK7QBuffer4dataEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QBuffer::QBuffer(QObject * parent);
-  fn C_ZN7QBufferC2EP7QObject(arg0: *mut c_void) -> u64;
-  // proto:  void QBuffer::setBuffer(QByteArray * a);
-  fn C_ZN7QBuffer9setBufferEP10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  QByteArray & QBuffer::buffer();
-  fn C_ZN7QBuffer6bufferEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  qint64 QBuffer::pos();
-  fn C_ZNK7QBuffer3posEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
-  // proto:  void QBuffer::close();
-  fn C_ZN7QBuffer5closeEv(qthis: u64 /* *mut c_void*/);
-  // proto:  const QMetaObject * QBuffer::metaObject();
-  fn C_ZNK7QBuffer10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  qint64 QBuffer::size();
-  fn C_ZNK7QBuffer4sizeEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
-  // proto:  void QBuffer::QBuffer(QByteArray * buf, QObject * parent);
-  fn C_ZN7QBufferC2EP10QByteArrayP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> u64;
-  // proto:  bool QBuffer::atEnd();
-  fn C_ZNK7QBuffer5atEndEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QBuffer::setData(const char * data, int len);
-  fn C_ZN7QBuffer7setDataEPKci(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int);
-} // <= ext block end
+// void connectNotify(const QMetaMethod &)
+// func (this *QBuffer) InheritConnectNotify(f func(arg0 *QMetaMethod) /*void*/) {
+//  qtrt.SetAllInheritCallback(this, "connectNotify", f)
+// }
 
-// body block begin =>
-// class sizeof(QBuffer)=1
-#[derive(Default)]
+// void disconnectNotify(const QMetaMethod &)
+// func (this *QBuffer) InheritDisconnectNotify(f func(arg0 *QMetaMethod) /*void*/) {
+//  qtrt.SetAllInheritCallback(this, "disconnectNotify", f)
+// }
+
+// long long readData(char *, qint64)
+// func (this *QBuffer) InheritReadData(f func(data string, maxlen int64) int64) {
+//  qtrt.SetAllInheritCallback(this, "readData", f)
+// }
+
+// long long writeData(const char *, qint64)
+// func (this *QBuffer) InheritWriteData(f func(data string, len_ int64) int64) {
+//  qtrt.SetAllInheritCallback(this, "writeData", f)
+// }
+
+
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QBuffer)=16
 pub struct QBuffer {
   qbase: QIODevice,
-  pub qclsinst: u64 /* *mut c_void*/,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QBuffer_ITF interface {
+//    QIODevice_ITF
+//    QBuffer_PTR() *QBuffer
+//}
+//func (ptr *QBuffer) QBuffer_PTR() *QBuffer { return ptr }
 
 impl /*struct*/ QBuffer {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QBuffer {
-    return QBuffer{qbase: QIODevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QBuffer {
+    return QBuffer{qclsinst: qthis, ..Default::default()};
   }
 }
-impl Deref for QBuffer {
-  type Target = QIODevice;
+//impl Deref for QBuffer {
+//  type Target = QBufferBASE;
+//
+//  fn deref(&self) -> &QBufferBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QBufferBASE> for QBuffer {
+//  fn as_ref(& self) -> & QBufferBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qbuffer.h:55
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject() const
 
-  fn deref(&self) -> &QIODevice {
-    return & self.qbase;
-  }
-}
-impl AsRef<QIODevice> for QBuffer {
-  fn as_ref(& self) -> & QIODevice {
-    return & self.qbase;
-  }
-}
-  // proto:  bool QBuffer::seek(qint64 off);
+/*
+
+*/
 impl /*struct*/ QBuffer {
-  pub fn seek<RetType, T: QBuffer_seek<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.seek(self);
+  pub fn metaObject_0<RetType, T: QBuffer_metaObject_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.metaObject_0(self);
     // return 1;
   }
 }
-
-pub trait QBuffer_seek<RetType> {
-  fn seek(self , rsthis: & QBuffer) -> RetType;
+pub trait QBuffer_metaObject_0<RetType> {
+  fn metaObject_0(self , rsthis: & QBuffer) -> RetType;
 }
-
-  // proto:  bool QBuffer::seek(qint64 off);
-impl<'a> /*trait*/ QBuffer_seek<i8> for (i64) {
-  fn seek(self , rsthis: & QBuffer) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QBuffer4seekEx()};
-    let arg0 = self  as c_longlong;
-    let mut ret = unsafe {C_ZN7QBuffer4seekEx(rsthis.qclsinst, arg0)};
-    return ret as i8; // 1
+impl<'a> /*trait*/ QBuffer_metaObject_0<usize> for () {
+  fn metaObject_0(self , rsthis: & QBuffer) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QBuffer10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  bool QBuffer::canReadLine();
+// /usr/include/qt/QtCore/qbuffer.h:60
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QBuffer(QObject *)
+
+/*
+Constructs an empty buffer with the given parent. You can call setData() to fill the buffer with data, or you can open it in write mode and use write().
+
+See also open().
+*/
+// QBuffer(QObject *) ctx.fn_proto_cpp
 impl /*struct*/ QBuffer {
-  pub fn canReadLine<RetType, T: QBuffer_canReadLine<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.canReadLine(self);
-    // return 1;
-  }
-}
-
-pub trait QBuffer_canReadLine<RetType> {
-  fn canReadLine(self , rsthis: & QBuffer) -> RetType;
-}
-
-  // proto:  bool QBuffer::canReadLine();
-impl<'a> /*trait*/ QBuffer_canReadLine<i8> for () {
-  fn canReadLine(self , rsthis: & QBuffer) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QBuffer11canReadLineEv()};
-    let mut ret = unsafe {C_ZNK7QBuffer11canReadLineEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QBuffer::~QBuffer();
-impl /*struct*/ QBuffer {
-  pub fn free<RetType, T: QBuffer_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
-    // return 1;
-  }
-}
-
-pub trait QBuffer_free<RetType> {
-  fn free(self , rsthis: & QBuffer) -> RetType;
-}
-
-  // proto:  void QBuffer::~QBuffer();
-impl<'a> /*trait*/ QBuffer_free<()> for () {
-  fn free(self , rsthis: & QBuffer) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QBufferD2Ev()};
-     unsafe {C_ZN7QBufferD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QBuffer::setData(const QByteArray & data);
-impl /*struct*/ QBuffer {
-  pub fn setData<RetType, T: QBuffer_setData<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setData(self);
-    // return 1;
-  }
-}
-
-pub trait QBuffer_setData<RetType> {
-  fn setData(self , rsthis: & QBuffer) -> RetType;
-}
-
-  // proto:  void QBuffer::setData(const QByteArray & data);
-impl<'a> /*trait*/ QBuffer_setData<()> for (&'a QByteArray) {
-  fn setData(self , rsthis: & QBuffer) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QBuffer7setDataERK10QByteArray()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN7QBuffer7setDataERK10QByteArray(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  const QByteArray & QBuffer::data();
-impl /*struct*/ QBuffer {
-  pub fn data<RetType, T: QBuffer_data<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.data(self);
-    // return 1;
-  }
-}
-
-pub trait QBuffer_data<RetType> {
-  fn data(self , rsthis: & QBuffer) -> RetType;
-}
-
-  // proto:  const QByteArray & QBuffer::data();
-impl<'a> /*trait*/ QBuffer_data<QByteArray> for () {
-  fn data(self , rsthis: & QBuffer) -> QByteArray {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QBuffer4dataEv()};
-    let mut ret = unsafe {C_ZNK7QBuffer4dataEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QBuffer::QBuffer(QObject * parent);
-impl /*struct*/ QBuffer {
-  pub fn new<T: QBuffer_new>(value: T) -> QBuffer {
-    let rsthis = value.new();
+  pub fn QBuffer_0<T: QBuffer_QBuffer_0>(value: T) -> QBuffer {
+    let rsthis = value.QBuffer_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QBuffer_new {
-  fn new(self) -> QBuffer;
+pub trait QBuffer_QBuffer_0 {
+  fn QBuffer_0(self) -> QBuffer;
 }
-
-  // proto:  void QBuffer::QBuffer(QObject * parent);
-impl<'a> /*trait*/ QBuffer_new for (Option<&'a QObject>) {
-  fn new(self) -> QBuffer {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QBuffer(QObject *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QBuffer_QBuffer_0 for (usize) {
+  fn QBuffer_0(self) -> QBuffer {
     // unsafe{_ZN7QBufferC2EP7QObject()};
-    let ctysz: c_int = unsafe{QBuffer_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN7QBufferC2EP7QObject(arg0)};
-    let rsthis = QBuffer{qbase: QIODevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN7QBufferC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QBuffer{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QBuffer::setBuffer(QByteArray * a);
+// /usr/include/qt/QtCore/qbuffer.h:61
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QBuffer(QByteArray *, QObject *)
+
+/*
+Constructs an empty buffer with the given parent. You can call setData() to fill the buffer with data, or you can open it in write mode and use write().
+
+See also open().
+*/
+// QBuffer(QByteArray *, QObject *) ctx.fn_proto_cpp
 impl /*struct*/ QBuffer {
-  pub fn setBuffer<RetType, T: QBuffer_setBuffer<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setBuffer(self);
+  pub fn QBuffer_1<T: QBuffer_QBuffer_1>(value: T) -> QBuffer {
+    let rsthis = value.QBuffer_1();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QBuffer_setBuffer<RetType> {
-  fn setBuffer(self , rsthis: & QBuffer) -> RetType;
+pub trait QBuffer_QBuffer_1 {
+  fn QBuffer_1(self) -> QBuffer;
 }
-
-  // proto:  void QBuffer::setBuffer(QByteArray * a);
-impl<'a> /*trait*/ QBuffer_setBuffer<()> for (&'a QByteArray) {
-  fn setBuffer(self , rsthis: & QBuffer) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QBuffer9setBufferEP10QByteArray()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN7QBuffer9setBufferEP10QByteArray(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  QByteArray & QBuffer::buffer();
-impl /*struct*/ QBuffer {
-  pub fn buffer<RetType, T: QBuffer_buffer<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.buffer(self);
-    // return 1;
-  }
-}
-
-pub trait QBuffer_buffer<RetType> {
-  fn buffer(self , rsthis: & QBuffer) -> RetType;
-}
-
-  // proto:  QByteArray & QBuffer::buffer();
-impl<'a> /*trait*/ QBuffer_buffer<QByteArray> for () {
-  fn buffer(self , rsthis: & QBuffer) -> QByteArray {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QBuffer6bufferEv()};
-    let mut ret = unsafe {C_ZN7QBuffer6bufferEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  qint64 QBuffer::pos();
-impl /*struct*/ QBuffer {
-  pub fn pos<RetType, T: QBuffer_pos<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.pos(self);
-    // return 1;
-  }
-}
-
-pub trait QBuffer_pos<RetType> {
-  fn pos(self , rsthis: & QBuffer) -> RetType;
-}
-
-  // proto:  qint64 QBuffer::pos();
-impl<'a> /*trait*/ QBuffer_pos<i64> for () {
-  fn pos(self , rsthis: & QBuffer) -> i64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QBuffer3posEv()};
-    let mut ret = unsafe {C_ZNK7QBuffer3posEv(rsthis.qclsinst)};
-    return ret as i64; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QBuffer::close();
-impl /*struct*/ QBuffer {
-  pub fn close<RetType, T: QBuffer_close<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.close(self);
-    // return 1;
-  }
-}
-
-pub trait QBuffer_close<RetType> {
-  fn close(self , rsthis: & QBuffer) -> RetType;
-}
-
-  // proto:  void QBuffer::close();
-impl<'a> /*trait*/ QBuffer_close<()> for () {
-  fn close(self , rsthis: & QBuffer) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QBuffer5closeEv()};
-     unsafe {C_ZN7QBuffer5closeEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  const QMetaObject * QBuffer::metaObject();
-impl /*struct*/ QBuffer {
-  pub fn metaObject<RetType, T: QBuffer_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.metaObject(self);
-    // return 1;
-  }
-}
-
-pub trait QBuffer_metaObject<RetType> {
-  fn metaObject(self , rsthis: & QBuffer) -> RetType;
-}
-
-  // proto:  const QMetaObject * QBuffer::metaObject();
-impl<'a> /*trait*/ QBuffer_metaObject<QMetaObject> for () {
-  fn metaObject(self , rsthis: & QBuffer) -> QMetaObject {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QBuffer10metaObjectEv()};
-    let mut ret = unsafe {C_ZNK7QBuffer10metaObjectEv(rsthis.qclsinst)};
-    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  qint64 QBuffer::size();
-impl /*struct*/ QBuffer {
-  pub fn size<RetType, T: QBuffer_size<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.size(self);
-    // return 1;
-  }
-}
-
-pub trait QBuffer_size<RetType> {
-  fn size(self , rsthis: & QBuffer) -> RetType;
-}
-
-  // proto:  qint64 QBuffer::size();
-impl<'a> /*trait*/ QBuffer_size<i64> for () {
-  fn size(self , rsthis: & QBuffer) -> i64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QBuffer4sizeEv()};
-    let mut ret = unsafe {C_ZNK7QBuffer4sizeEv(rsthis.qclsinst)};
-    return ret as i64; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QBuffer::QBuffer(QByteArray * buf, QObject * parent);
-impl<'a> /*trait*/ QBuffer_new for (&'a QByteArray, Option<&'a QObject>) {
-  fn new(self) -> QBuffer {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QBuffer(QByteArray *, QObject *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QBuffer_QBuffer_1 for (usize,usize) {
+  fn QBuffer_1(self) -> QBuffer {
     // unsafe{_ZN7QBufferC2EP10QByteArrayP7QObject()};
-    let ctysz: c_int = unsafe{QBuffer_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN7QBufferC2EP10QByteArrayP7QObject(arg0, arg1)};
-    let rsthis = QBuffer{qbase: QIODevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN7QBufferC2EP10QByteArrayP7QObject", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QBuffer{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  bool QBuffer::atEnd();
+// /usr/include/qt/QtCore/qbuffer.h:66
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QBuffer()
+
+/*
+
+*/
+pub fn DeleteQBuffer(this :*mut QBuffer) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN7QBufferD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 16)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qbuffer.h:68
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QByteArray & buffer()
+
+/*
+Returns a reference to the QBuffer's internal buffer. You can use it to modify the QByteArray behind the QBuffer's back.
+
+See also setBuffer() and data().
+*/
 impl /*struct*/ QBuffer {
-  pub fn atEnd<RetType, T: QBuffer_atEnd<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.atEnd(self);
+  pub fn buffer_0<RetType, T: QBuffer_buffer_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.buffer_0(self);
+    // return 1;
+  }
+}
+pub trait QBuffer_buffer_0<RetType> {
+  fn buffer_0(self , rsthis: & QBuffer) -> RetType;
+}
+impl<'a> /*trait*/ QBuffer_buffer_0<usize> for () {
+  fn buffer_0(self , rsthis: & QBuffer) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QBuffer6bufferEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbuffer.h:69
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] const QByteArray & buffer() const
+
+/*
+Returns a reference to the QBuffer's internal buffer. You can use it to modify the QByteArray behind the QBuffer's back.
+
+See also setBuffer() and data().
+*/
+impl /*struct*/ QBuffer {
+  pub fn buffer_1<RetType, T: QBuffer_buffer_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.buffer_1(self);
+    // return 1;
+  }
+}
+pub trait QBuffer_buffer_1<RetType> {
+  fn buffer_1(self , rsthis: & QBuffer) -> RetType;
+}
+impl<'a> /*trait*/ QBuffer_buffer_1<usize> for () {
+  fn buffer_1(self , rsthis: & QBuffer) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QBuffer6bufferEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbuffer.h:70
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setBuffer(QByteArray *)
+
+/*
+Makes QBuffer uses the QByteArray pointed to by byteArray as its internal buffer. The caller is responsible for ensuring that byteArray remains valid until the QBuffer is destroyed, or until setBuffer() is called to change the buffer. QBuffer doesn't take ownership of the QByteArray.
+
+Does nothing if isOpen() is true.
+
+If you open the buffer in write-only mode or read-write mode and write something into the QBuffer, byteArray will be modified.
+
+Example:
+
+
+      QByteArray byteArray("abc");
+      QBuffer buffer;
+      buffer.setBuffer(&byteArray);
+      buffer.open(QIODevice::WriteOnly);
+      buffer.seek(3);
+      buffer.write("def", 3);
+      buffer.close();
+      // byteArray == "abcdef"
+
+
+
+If byteArray is 0, the buffer creates its own internal QByteArray to work on. This byte array is initially empty.
+
+See also buffer(), setData(), and open().
+*/
+impl /*struct*/ QBuffer {
+  pub fn setBuffer_0<RetType, T: QBuffer_setBuffer_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setBuffer_0(self);
+    // return 1;
+  }
+}
+pub trait QBuffer_setBuffer_0<RetType> {
+  fn setBuffer_0(self , rsthis: & QBuffer) -> RetType;
+}
+impl<'a> /*trait*/ QBuffer_setBuffer_0<(/*void*/)> for (usize) {
+  fn setBuffer_0(self , rsthis: & QBuffer) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN7QBuffer9setBufferEP10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QBuffer_atEnd<RetType> {
-  fn atEnd(self , rsthis: & QBuffer) -> RetType;
-}
+// /usr/include/qt/QtCore/qbuffer.h:72
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setData(const QByteArray &)
 
-  // proto:  bool QBuffer::atEnd();
-impl<'a> /*trait*/ QBuffer_atEnd<i8> for () {
-  fn atEnd(self , rsthis: & QBuffer) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QBuffer5atEndEv()};
-    let mut ret = unsafe {C_ZNK7QBuffer5atEndEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+/*
+Sets the contents of the internal buffer to be data. This is the same as assigning data to buffer().
+
+Does nothing if isOpen() is true.
+
+See also data() and setBuffer().
+*/
+impl /*struct*/ QBuffer {
+  pub fn setData_0<RetType, T: QBuffer_setData_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setData_0(self);
+    // return 1;
+  }
+}
+pub trait QBuffer_setData_0<RetType> {
+  fn setData_0(self , rsthis: & QBuffer) -> RetType;
+}
+impl<'a> /*trait*/ QBuffer_setData_0<(/*void*/)> for (usize) {
+  fn setData_0(self , rsthis: & QBuffer) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN7QBuffer7setDataERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-  // proto:  void QBuffer::setData(const char * data, int len);
-impl<'a> /*trait*/ QBuffer_setData<()> for (&'a  String, i32) {
-  fn setData(self , rsthis: & QBuffer) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QBuffer7setDataEPKci()};
-    let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = self.1  as c_int;
-     unsafe {C_ZN7QBuffer7setDataEPKci(rsthis.qclsinst, arg0, arg1)};
+// /usr/include/qt/QtCore/qbuffer.h:73
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [-2] void setData(const char *, int)
+
+/*
+Sets the contents of the internal buffer to be data. This is the same as assigning data to buffer().
+
+Does nothing if isOpen() is true.
+
+See also data() and setBuffer().
+*/
+impl /*struct*/ QBuffer {
+  pub fn setData_1<RetType, T: QBuffer_setData_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setData_1(self);
+    // return 1;
+  }
+}
+pub trait QBuffer_setData_1<RetType> {
+  fn setData_1(self , rsthis: & QBuffer) -> RetType;
+}
+impl<'a> /*trait*/ QBuffer_setData_1<(/*void*/)> for (usize,i32) {
+  fn setData_1(self , rsthis: & QBuffer) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (self.0) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN7QBuffer7setDataEPKci", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qbuffer.h:74
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] const QByteArray & data() const
 
+/*
+Returns the data contained in the buffer.
+
+This is the same as buffer().
+
+See also setData() and setBuffer().
+*/
+impl /*struct*/ QBuffer {
+  pub fn data_0<RetType, T: QBuffer_data_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.data_0(self);
+    // return 1;
+  }
+}
+pub trait QBuffer_data_0<RetType> {
+  fn data_0(self , rsthis: & QBuffer) -> RetType;
+}
+impl<'a> /*trait*/ QBuffer_data_0<usize> for () {
+  fn data_0(self , rsthis: & QBuffer) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QBuffer4dataEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbuffer.h:76
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool open(QIODevice::OpenMode)
+
+/*
+Reimplemented from QIODevice::open().
+*/
+impl /*struct*/ QBuffer {
+  pub fn open_0<RetType, T: QBuffer_open_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.open_0(self);
+    // return 1;
+  }
+}
+pub trait QBuffer_open_0<RetType> {
+  fn open_0(self , rsthis: & QBuffer) -> RetType;
+}
+impl<'a> /*trait*/ QBuffer_open_0<bool> for (i32) {
+  fn open_0(self , rsthis: & QBuffer) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QBuffer4openE6QFlagsIN9QIODevice12OpenModeFlagEE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbuffer.h:78
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void close()
+
+/*
+Reimplemented from QIODevice::close().
+*/
+impl /*struct*/ QBuffer {
+  pub fn close_0<RetType, T: QBuffer_close_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.close_0(self);
+    // return 1;
+  }
+}
+pub trait QBuffer_close_0<RetType> {
+  fn close_0(self , rsthis: & QBuffer) -> RetType;
+}
+impl<'a> /*trait*/ QBuffer_close_0<(/*void*/)> for () {
+  fn close_0(self , rsthis: & QBuffer) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZN7QBuffer5closeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qbuffer.h:79
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] qint64 size() const
+
+/*
+Reimplemented from QIODevice::size().
+*/
+impl /*struct*/ QBuffer {
+  pub fn size_0<RetType, T: QBuffer_size_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.size_0(self);
+    // return 1;
+  }
+}
+pub trait QBuffer_size_0<RetType> {
+  fn size_0(self , rsthis: & QBuffer) -> RetType;
+}
+impl<'a> /*trait*/ QBuffer_size_0<i64> for () {
+  fn size_0(self , rsthis: & QBuffer) -> i64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QBuffer4sizeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i64 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbuffer.h:80
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] qint64 pos() const
+
+/*
+Reimplemented from QIODevice::pos().
+*/
+impl /*struct*/ QBuffer {
+  pub fn pos_0<RetType, T: QBuffer_pos_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.pos_0(self);
+    // return 1;
+  }
+}
+pub trait QBuffer_pos_0<RetType> {
+  fn pos_0(self , rsthis: & QBuffer) -> RetType;
+}
+impl<'a> /*trait*/ QBuffer_pos_0<i64> for () {
+  fn pos_0(self , rsthis: & QBuffer) -> i64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QBuffer3posEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i64 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbuffer.h:81
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool seek(qint64)
+
+/*
+Reimplemented from QIODevice::seek().
+*/
+impl /*struct*/ QBuffer {
+  pub fn seek_0<RetType, T: QBuffer_seek_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.seek_0(self);
+    // return 1;
+  }
+}
+pub trait QBuffer_seek_0<RetType> {
+  fn seek_0(self , rsthis: & QBuffer) -> RetType;
+}
+impl<'a> /*trait*/ QBuffer_seek_0<bool> for (i64) {
+  fn seek_0(self , rsthis: & QBuffer) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i64 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QBuffer4seekEx", 1,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbuffer.h:82
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool atEnd() const
+
+/*
+Reimplemented from QIODevice::atEnd().
+*/
+impl /*struct*/ QBuffer {
+  pub fn atEnd_0<RetType, T: QBuffer_atEnd_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.atEnd_0(self);
+    // return 1;
+  }
+}
+pub trait QBuffer_atEnd_0<RetType> {
+  fn atEnd_0(self , rsthis: & QBuffer) -> RetType;
+}
+impl<'a> /*trait*/ QBuffer_atEnd_0<bool> for () {
+  fn atEnd_0(self , rsthis: & QBuffer) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QBuffer5atEndEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbuffer.h:83
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool canReadLine() const
+
+/*
+Reimplemented from QIODevice::canReadLine().
+*/
+impl /*struct*/ QBuffer {
+  pub fn canReadLine_0<RetType, T: QBuffer_canReadLine_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.canReadLine_0(self);
+    // return 1;
+  }
+}
+pub trait QBuffer_canReadLine_0<RetType> {
+  fn canReadLine_0(self , rsthis: & QBuffer) -> RetType;
+}
+impl<'a> /*trait*/ QBuffer_canReadLine_0<bool> for () {
+  fn canReadLine_0(self , rsthis: & QBuffer) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QBuffer11canReadLineEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbuffer.h:87
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void connectNotify(const QMetaMethod &)
+
+/*
+
+*/
+impl /*struct*/ QBuffer {
+  pub fn connectNotify_0<RetType, T: QBuffer_connectNotify_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.connectNotify_0(self);
+    // return 1;
+  }
+}
+pub trait QBuffer_connectNotify_0<RetType> {
+  fn connectNotify_0(self , rsthis: & QBuffer) -> RetType;
+}
+impl<'a> /*trait*/ QBuffer_connectNotify_0<(/*void*/)> for (usize) {
+  fn connectNotify_0(self , rsthis: & QBuffer) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN7QBuffer13connectNotifyERK11QMetaMethod", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qbuffer.h:88
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void disconnectNotify(const QMetaMethod &)
+
+/*
+
+*/
+impl /*struct*/ QBuffer {
+  pub fn disconnectNotify_0<RetType, T: QBuffer_disconnectNotify_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.disconnectNotify_0(self);
+    // return 1;
+  }
+}
+pub trait QBuffer_disconnectNotify_0<RetType> {
+  fn disconnectNotify_0(self , rsthis: & QBuffer) -> RetType;
+}
+impl<'a> /*trait*/ QBuffer_disconnectNotify_0<(/*void*/)> for (usize) {
+  fn disconnectNotify_0(self , rsthis: & QBuffer) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN7QBuffer16disconnectNotifyERK11QMetaMethod", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qbuffer.h:90
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [8] qint64 readData(char *, qint64)
+
+/*
+Reimplemented from QIODevice::readData().
+*/
+impl /*struct*/ QBuffer {
+  pub fn readData_0<RetType, T: QBuffer_readData_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.readData_0(self);
+    // return 1;
+  }
+}
+pub trait QBuffer_readData_0<RetType> {
+  fn readData_0(self , rsthis: & QBuffer) -> RetType;
+}
+impl<'a> /*trait*/ QBuffer_readData_0<i64> for (usize,i64) {
+  fn readData_0(self , rsthis: & QBuffer) -> i64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (self.0) as *const usize as usize;
+    let arg1 = (&self.1) as *const i64 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QBuffer8readDataEPcx", 2,qtrt::FFITY_POINTER,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i64 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbuffer.h:91
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [8] qint64 writeData(const char *, qint64)
+
+/*
+Reimplemented from QIODevice::writeData().
+*/
+impl /*struct*/ QBuffer {
+  pub fn writeData_0<RetType, T: QBuffer_writeData_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.writeData_0(self);
+    // return 1;
+  }
+}
+pub trait QBuffer_writeData_0<RetType> {
+  fn writeData_0(self , rsthis: & QBuffer) -> RetType;
+}
+impl<'a> /*trait*/ QBuffer_writeData_0<i64> for (usize,i64) {
+  fn writeData_0(self , rsthis: & QBuffer) -> i64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (self.0) as *const usize as usize;
+    let arg1 = (&self.1) as *const i64 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QBuffer9writeDataEPKcx", 2,qtrt::FFITY_POINTER,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i64 = Default::default(); return dret;
+  }
+}
+
+//  body block end
+
+//  keep block begin
+
+//  keep block end

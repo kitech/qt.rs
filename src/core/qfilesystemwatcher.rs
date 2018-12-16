@@ -1,354 +1,378 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qfilesystemwatcher.h
-// dst-file: /src/core/qfilesystemwatcher.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QFileSystemWatcher
+// package qtcore
+// /usr/include/qt/QtCore/qfilesystemwatcher.h
+// #include <qfilesystemwatcher.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
-use super::qobject::*; // 773
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 8
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qstring::*; // 773
-use super::qstringlist::*; // 773
-use super::qobjectdefs::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QFileSystemWatcher_Class_Size() -> c_int;
-  // proto:  void QFileSystemWatcher::~QFileSystemWatcher();
-  fn C_ZN18QFileSystemWatcherD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  bool QFileSystemWatcher::removePath(const QString & file);
-  fn C_ZN18QFileSystemWatcher10removePathERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
-  // proto:  QStringList QFileSystemWatcher::directories();
-  fn C_ZNK18QFileSystemWatcher11directoriesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QStringList QFileSystemWatcher::files();
-  fn C_ZNK18QFileSystemWatcher5filesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QStringList QFileSystemWatcher::addPaths(const QStringList & files);
-  fn C_ZN18QFileSystemWatcher8addPathsERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  QStringList QFileSystemWatcher::removePaths(const QStringList & files);
-  fn C_ZN18QFileSystemWatcher11removePathsERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QFileSystemWatcher::QFileSystemWatcher(QObject * parent);
-  fn C_ZN18QFileSystemWatcherC2EP7QObject(arg0: *mut c_void) -> u64;
-  // proto:  bool QFileSystemWatcher::addPath(const QString & file);
-  fn C_ZN18QFileSystemWatcher7addPathERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
-  // proto:  const QMetaObject * QFileSystemWatcher::metaObject();
-  fn C_ZNK18QFileSystemWatcher10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QFileSystemWatcher::QFileSystemWatcher(const QStringList & paths, QObject * parent);
-  fn C_ZN18QFileSystemWatcherC2ERK11QStringListP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> u64;
-} // <= ext block end
 
-// body block begin =>
-// class sizeof(QFileSystemWatcher)=1
-#[derive(Default)]
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QFileSystemWatcher)=16
 pub struct QFileSystemWatcher {
   qbase: QObject,
-  pub qclsinst: u64 /* *mut c_void*/,
-  pub _directoryChanged: QFileSystemWatcher_directoryChanged_signal,
-  pub _fileChanged: QFileSystemWatcher_fileChanged_signal,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QFileSystemWatcher_ITF interface {
+//    QObject_ITF
+//    QFileSystemWatcher_PTR() *QFileSystemWatcher
+//}
+//func (ptr *QFileSystemWatcher) QFileSystemWatcher_PTR() *QFileSystemWatcher { return ptr }
 
 impl /*struct*/ QFileSystemWatcher {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QFileSystemWatcher {
-    return QFileSystemWatcher{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QFileSystemWatcher {
+    return QFileSystemWatcher{qclsinst: qthis, ..Default::default()};
   }
 }
-impl Deref for QFileSystemWatcher {
-  type Target = QObject;
+//impl Deref for QFileSystemWatcher {
+//  type Target = QFileSystemWatcherBASE;
+//
+//  fn deref(&self) -> &QFileSystemWatcherBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QFileSystemWatcherBASE> for QFileSystemWatcher {
+//  fn as_ref(& self) -> & QFileSystemWatcherBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qfilesystemwatcher.h:54
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject() const
 
-  fn deref(&self) -> &QObject {
-    return & self.qbase;
-  }
-}
-impl AsRef<QObject> for QFileSystemWatcher {
-  fn as_ref(& self) -> & QObject {
-    return & self.qbase;
-  }
-}
-  // proto:  void QFileSystemWatcher::~QFileSystemWatcher();
+/*
+
+*/
 impl /*struct*/ QFileSystemWatcher {
-  pub fn free<RetType, T: QFileSystemWatcher_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
+  pub fn metaObject_0<RetType, T: QFileSystemWatcher_metaObject_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.metaObject_0(self);
     // return 1;
   }
 }
-
-pub trait QFileSystemWatcher_free<RetType> {
-  fn free(self , rsthis: & QFileSystemWatcher) -> RetType;
+pub trait QFileSystemWatcher_metaObject_0<RetType> {
+  fn metaObject_0(self , rsthis: & QFileSystemWatcher) -> RetType;
 }
-
-  // proto:  void QFileSystemWatcher::~QFileSystemWatcher();
-impl<'a> /*trait*/ QFileSystemWatcher_free<()> for () {
-  fn free(self , rsthis: & QFileSystemWatcher) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QFileSystemWatcherD2Ev()};
-     unsafe {C_ZN18QFileSystemWatcherD2Ev(rsthis.qclsinst)};
+impl<'a> /*trait*/ QFileSystemWatcher_metaObject_0<usize> for () {
+  fn metaObject_0(self , rsthis: & QFileSystemWatcher) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QFileSystemWatcher10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  bool QFileSystemWatcher::removePath(const QString & file);
+// /usr/include/qt/QtCore/qfilesystemwatcher.h:58
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QFileSystemWatcher(QObject *)
+
+/*
+Constructs a new file system watcher object with the given parent.
+*/
+// QFileSystemWatcher(QObject *) ctx.fn_proto_cpp
 impl /*struct*/ QFileSystemWatcher {
-  pub fn removePath<RetType, T: QFileSystemWatcher_removePath<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.removePath(self);
-    // return 1;
-  }
-}
-
-pub trait QFileSystemWatcher_removePath<RetType> {
-  fn removePath(self , rsthis: & QFileSystemWatcher) -> RetType;
-}
-
-  // proto:  bool QFileSystemWatcher::removePath(const QString & file);
-impl<'a> /*trait*/ QFileSystemWatcher_removePath<i8> for (&'a QString) {
-  fn removePath(self , rsthis: & QFileSystemWatcher) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QFileSystemWatcher10removePathERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN18QFileSystemWatcher10removePathERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QStringList QFileSystemWatcher::directories();
-impl /*struct*/ QFileSystemWatcher {
-  pub fn directories<RetType, T: QFileSystemWatcher_directories<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.directories(self);
-    // return 1;
-  }
-}
-
-pub trait QFileSystemWatcher_directories<RetType> {
-  fn directories(self , rsthis: & QFileSystemWatcher) -> RetType;
-}
-
-  // proto:  QStringList QFileSystemWatcher::directories();
-impl<'a> /*trait*/ QFileSystemWatcher_directories<QStringList> for () {
-  fn directories(self , rsthis: & QFileSystemWatcher) -> QStringList {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK18QFileSystemWatcher11directoriesEv()};
-    let mut ret = unsafe {C_ZNK18QFileSystemWatcher11directoriesEv(rsthis.qclsinst)};
-    let mut ret1 = QStringList::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QStringList QFileSystemWatcher::files();
-impl /*struct*/ QFileSystemWatcher {
-  pub fn files<RetType, T: QFileSystemWatcher_files<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.files(self);
-    // return 1;
-  }
-}
-
-pub trait QFileSystemWatcher_files<RetType> {
-  fn files(self , rsthis: & QFileSystemWatcher) -> RetType;
-}
-
-  // proto:  QStringList QFileSystemWatcher::files();
-impl<'a> /*trait*/ QFileSystemWatcher_files<QStringList> for () {
-  fn files(self , rsthis: & QFileSystemWatcher) -> QStringList {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK18QFileSystemWatcher5filesEv()};
-    let mut ret = unsafe {C_ZNK18QFileSystemWatcher5filesEv(rsthis.qclsinst)};
-    let mut ret1 = QStringList::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QStringList QFileSystemWatcher::addPaths(const QStringList & files);
-impl /*struct*/ QFileSystemWatcher {
-  pub fn addPaths<RetType, T: QFileSystemWatcher_addPaths<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.addPaths(self);
-    // return 1;
-  }
-}
-
-pub trait QFileSystemWatcher_addPaths<RetType> {
-  fn addPaths(self , rsthis: & QFileSystemWatcher) -> RetType;
-}
-
-  // proto:  QStringList QFileSystemWatcher::addPaths(const QStringList & files);
-impl<'a> /*trait*/ QFileSystemWatcher_addPaths<QStringList> for (&'a QStringList) {
-  fn addPaths(self , rsthis: & QFileSystemWatcher) -> QStringList {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QFileSystemWatcher8addPathsERK11QStringList()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN18QFileSystemWatcher8addPathsERK11QStringList(rsthis.qclsinst, arg0)};
-    let mut ret1 = QStringList::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QStringList QFileSystemWatcher::removePaths(const QStringList & files);
-impl /*struct*/ QFileSystemWatcher {
-  pub fn removePaths<RetType, T: QFileSystemWatcher_removePaths<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.removePaths(self);
-    // return 1;
-  }
-}
-
-pub trait QFileSystemWatcher_removePaths<RetType> {
-  fn removePaths(self , rsthis: & QFileSystemWatcher) -> RetType;
-}
-
-  // proto:  QStringList QFileSystemWatcher::removePaths(const QStringList & files);
-impl<'a> /*trait*/ QFileSystemWatcher_removePaths<QStringList> for (&'a QStringList) {
-  fn removePaths(self , rsthis: & QFileSystemWatcher) -> QStringList {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QFileSystemWatcher11removePathsERK11QStringList()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN18QFileSystemWatcher11removePathsERK11QStringList(rsthis.qclsinst, arg0)};
-    let mut ret1 = QStringList::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QFileSystemWatcher::QFileSystemWatcher(QObject * parent);
-impl /*struct*/ QFileSystemWatcher {
-  pub fn new<T: QFileSystemWatcher_new>(value: T) -> QFileSystemWatcher {
-    let rsthis = value.new();
+  pub fn QFileSystemWatcher_0<T: QFileSystemWatcher_QFileSystemWatcher_0>(value: T) -> QFileSystemWatcher {
+    let rsthis = value.QFileSystemWatcher_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFileSystemWatcher_new {
-  fn new(self) -> QFileSystemWatcher;
+pub trait QFileSystemWatcher_QFileSystemWatcher_0 {
+  fn QFileSystemWatcher_0(self) -> QFileSystemWatcher;
 }
-
-  // proto:  void QFileSystemWatcher::QFileSystemWatcher(QObject * parent);
-impl<'a> /*trait*/ QFileSystemWatcher_new for (Option<&'a QObject>) {
-  fn new(self) -> QFileSystemWatcher {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QFileSystemWatcher(QObject *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QFileSystemWatcher_QFileSystemWatcher_0 for (usize) {
+  fn QFileSystemWatcher_0(self) -> QFileSystemWatcher {
     // unsafe{_ZN18QFileSystemWatcherC2EP7QObject()};
-    let ctysz: c_int = unsafe{QFileSystemWatcher_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN18QFileSystemWatcherC2EP7QObject(arg0)};
-    let rsthis = QFileSystemWatcher{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QFileSystemWatcherC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QFileSystemWatcher{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  bool QFileSystemWatcher::addPath(const QString & file);
+// /usr/include/qt/QtCore/qfilesystemwatcher.h:59
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QFileSystemWatcher(const QStringList &, QObject *)
+
+/*
+Constructs a new file system watcher object with the given parent.
+*/
+// QFileSystemWatcher(const QStringList &, QObject *) ctx.fn_proto_cpp
 impl /*struct*/ QFileSystemWatcher {
-  pub fn addPath<RetType, T: QFileSystemWatcher_addPath<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.addPath(self);
+  pub fn QFileSystemWatcher_1<T: QFileSystemWatcher_QFileSystemWatcher_1>(value: T) -> QFileSystemWatcher {
+    let rsthis = value.QFileSystemWatcher_1();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QFileSystemWatcher_addPath<RetType> {
-  fn addPath(self , rsthis: & QFileSystemWatcher) -> RetType;
+pub trait QFileSystemWatcher_QFileSystemWatcher_1 {
+  fn QFileSystemWatcher_1(self) -> QFileSystemWatcher;
 }
-
-  // proto:  bool QFileSystemWatcher::addPath(const QString & file);
-impl<'a> /*trait*/ QFileSystemWatcher_addPath<i8> for (&'a QString) {
-  fn addPath(self , rsthis: & QFileSystemWatcher) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QFileSystemWatcher7addPathERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN18QFileSystemWatcher7addPathERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  const QMetaObject * QFileSystemWatcher::metaObject();
-impl /*struct*/ QFileSystemWatcher {
-  pub fn metaObject<RetType, T: QFileSystemWatcher_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.metaObject(self);
-    // return 1;
-  }
-}
-
-pub trait QFileSystemWatcher_metaObject<RetType> {
-  fn metaObject(self , rsthis: & QFileSystemWatcher) -> RetType;
-}
-
-  // proto:  const QMetaObject * QFileSystemWatcher::metaObject();
-impl<'a> /*trait*/ QFileSystemWatcher_metaObject<QMetaObject> for () {
-  fn metaObject(self , rsthis: & QFileSystemWatcher) -> QMetaObject {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK18QFileSystemWatcher10metaObjectEv()};
-    let mut ret = unsafe {C_ZNK18QFileSystemWatcher10metaObjectEv(rsthis.qclsinst)};
-    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QFileSystemWatcher::QFileSystemWatcher(const QStringList & paths, QObject * parent);
-impl<'a> /*trait*/ QFileSystemWatcher_new for (&'a QStringList, Option<&'a QObject>) {
-  fn new(self) -> QFileSystemWatcher {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QFileSystemWatcher(const QStringList &, QObject *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QFileSystemWatcher_QFileSystemWatcher_1 for (usize,usize) {
+  fn QFileSystemWatcher_1(self) -> QFileSystemWatcher {
     // unsafe{_ZN18QFileSystemWatcherC2ERK11QStringListP7QObject()};
-    let ctysz: c_int = unsafe{QFileSystemWatcher_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN18QFileSystemWatcherC2ERK11QStringListP7QObject(arg0, arg1)};
-    let rsthis = QFileSystemWatcher{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QFileSystemWatcherC2ERK11QStringListP7QObject", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QFileSystemWatcher{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-#[derive(Default)] // for QFileSystemWatcher_directoryChanged
-pub struct QFileSystemWatcher_directoryChanged_signal{poi:u64}
-impl /* struct */ QFileSystemWatcher {
-  pub fn directoryChanged(&self) -> QFileSystemWatcher_directoryChanged_signal {
-     return QFileSystemWatcher_directoryChanged_signal{poi:self.qclsinst};
+// /usr/include/qt/QtCore/qfilesystemwatcher.h:60
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QFileSystemWatcher()
+
+/*
+
+*/
+pub fn DeleteQFileSystemWatcher(this :*mut QFileSystemWatcher) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN18QFileSystemWatcherD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 16)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qfilesystemwatcher.h:62
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool addPath(const QString &)
+
+/*
+Adds path to the file system watcher if path exists. The path is not added if it does not exist, or if it is already being monitored by the file system watcher.
+
+If path specifies a directory, the directoryChanged() signal will be emitted when path is modified or removed from disk; otherwise the fileChanged() signal is emitted when path is modified, renamed or removed.
+
+If the watch was successful, true is returned.
+
+Reasons for a watch failure are generally system-dependent, but may include the resource not existing, access failures, or the total watch count limit, if the platform has one.
+
+Note: There may be a system dependent limit to the number of files and directories that can be monitored simultaneously. If this limit is been reached, path will not be monitored, and false is returned.
+
+See also addPaths() and removePath().
+*/
+impl /*struct*/ QFileSystemWatcher {
+  pub fn addPath_0<RetType, T: QFileSystemWatcher_addPath_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.addPath_0(self);
+    // return 1;
   }
 }
-impl /* struct */ QFileSystemWatcher_directoryChanged_signal {
-  pub fn connect<T: QFileSystemWatcher_directoryChanged_signal_connect>(self, overload_args: T) {
-    overload_args.connect(self);
-  }
+pub trait QFileSystemWatcher_addPath_0<RetType> {
+  fn addPath_0(self , rsthis: & QFileSystemWatcher) -> RetType;
 }
-pub trait QFileSystemWatcher_directoryChanged_signal_connect {
-  fn connect(self, sigthis: QFileSystemWatcher_directoryChanged_signal);
+impl<'a> /*trait*/ QFileSystemWatcher_addPath_0<bool> for (usize) {
+  fn addPath_0(self , rsthis: & QFileSystemWatcher) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN18QFileSystemWatcher7addPathERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
 }
 
-#[derive(Default)] // for QFileSystemWatcher_fileChanged
-pub struct QFileSystemWatcher_fileChanged_signal{poi:u64}
-impl /* struct */ QFileSystemWatcher {
-  pub fn fileChanged(&self) -> QFileSystemWatcher_fileChanged_signal {
-     return QFileSystemWatcher_fileChanged_signal{poi:self.qclsinst};
+// /usr/include/qt/QtCore/qfilesystemwatcher.h:63
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList addPaths(const QStringList &)
+
+/*
+Adds each path in paths to the file system watcher. Paths are not added if they not exist, or if they are already being monitored by the file system watcher.
+
+If a path specifies a directory, the directoryChanged() signal will be emitted when the path is modified or removed from disk; otherwise the fileChanged() signal is emitted when the path is modified, renamed, or removed.
+
+The return value is a list of paths that could not be watched.
+
+Reasons for a watch failure are generally system-dependent, but may include the resource not existing, access failures, or the total watch count limit, if the platform has one.
+
+Note: There may be a system dependent limit to the number of files and directories that can be monitored simultaneously. If this limit has been reached, the excess paths will not be monitored, and they will be added to the returned QStringList.
+
+See also addPath() and removePaths().
+*/
+impl /*struct*/ QFileSystemWatcher {
+  pub fn addPaths_0<RetType, T: QFileSystemWatcher_addPaths_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.addPaths_0(self);
+    // return 1;
   }
 }
-impl /* struct */ QFileSystemWatcher_fileChanged_signal {
-  pub fn connect<T: QFileSystemWatcher_fileChanged_signal_connect>(self, overload_args: T) {
-    overload_args.connect(self);
+pub trait QFileSystemWatcher_addPaths_0<RetType> {
+  fn addPaths_0(self , rsthis: & QFileSystemWatcher) -> RetType;
+}
+impl<'a> /*trait*/ QFileSystemWatcher_addPaths_0<usize> for (usize) {
+  fn addPaths_0(self , rsthis: & QFileSystemWatcher) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN18QFileSystemWatcher8addPathsERK11QStringList", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
-pub trait QFileSystemWatcher_fileChanged_signal_connect {
-  fn connect(self, sigthis: QFileSystemWatcher_fileChanged_signal);
+
+// /usr/include/qt/QtCore/qfilesystemwatcher.h:64
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool removePath(const QString &)
+
+/*
+Removes the specified path from the file system watcher.
+
+If the watch is successfully removed, true is returned.
+
+Reasons for watch removal failing are generally system-dependent, but may be due to the path having already been deleted, for example.
+
+See also removePaths() and addPath().
+*/
+impl /*struct*/ QFileSystemWatcher {
+  pub fn removePath_0<RetType, T: QFileSystemWatcher_removePath_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.removePath_0(self);
+    // return 1;
+  }
+}
+pub trait QFileSystemWatcher_removePath_0<RetType> {
+  fn removePath_0(self , rsthis: & QFileSystemWatcher) -> RetType;
+}
+impl<'a> /*trait*/ QFileSystemWatcher_removePath_0<bool> for (usize) {
+  fn removePath_0(self , rsthis: & QFileSystemWatcher) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN18QFileSystemWatcher10removePathERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qfilesystemwatcher.h:65
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList removePaths(const QStringList &)
 
+/*
+Removes the specified paths from the file system watcher.
+
+The return value is a list of paths which were not able to be unwatched successfully.
+
+Reasons for watch removal failing are generally system-dependent, but may be due to the path having already been deleted, for example.
+
+See also removePath() and addPaths().
+*/
+impl /*struct*/ QFileSystemWatcher {
+  pub fn removePaths_0<RetType, T: QFileSystemWatcher_removePaths_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.removePaths_0(self);
+    // return 1;
+  }
+}
+pub trait QFileSystemWatcher_removePaths_0<RetType> {
+  fn removePaths_0(self , rsthis: & QFileSystemWatcher) -> RetType;
+}
+impl<'a> /*trait*/ QFileSystemWatcher_removePaths_0<usize> for (usize) {
+  fn removePaths_0(self , rsthis: & QFileSystemWatcher) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN18QFileSystemWatcher11removePathsERK11QStringList", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfilesystemwatcher.h:67
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList files() const
+
+/*
+Returns a list of paths to files that are being watched.
+
+See also directories().
+*/
+impl /*struct*/ QFileSystemWatcher {
+  pub fn files_0<RetType, T: QFileSystemWatcher_files_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.files_0(self);
+    // return 1;
+  }
+}
+pub trait QFileSystemWatcher_files_0<RetType> {
+  fn files_0(self , rsthis: & QFileSystemWatcher) -> RetType;
+}
+impl<'a> /*trait*/ QFileSystemWatcher_files_0<usize> for () {
+  fn files_0(self , rsthis: & QFileSystemWatcher) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QFileSystemWatcher5filesEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfilesystemwatcher.h:68
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList directories() const
+
+/*
+Returns a list of paths to directories that are being watched.
+
+See also files().
+*/
+impl /*struct*/ QFileSystemWatcher {
+  pub fn directories_0<RetType, T: QFileSystemWatcher_directories_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.directories_0(self);
+    // return 1;
+  }
+}
+pub trait QFileSystemWatcher_directories_0<RetType> {
+  fn directories_0(self , rsthis: & QFileSystemWatcher) -> RetType;
+}
+impl<'a> /*trait*/ QFileSystemWatcher_directories_0<usize> for () {
+  fn directories_0(self , rsthis: & QFileSystemWatcher) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QFileSystemWatcher11directoriesEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+//  body block end
+
+//  keep block begin
+
+//  keep block end

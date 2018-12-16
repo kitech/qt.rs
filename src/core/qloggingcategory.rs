@@ -1,350 +1,457 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qloggingcategory.h
-// dst-file: /src/core/qloggingcategory.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QLoggingCategory
+// package qtcore
+// /usr/include/qt/QtCore/qloggingcategory.h
+// #include <qloggingcategory.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 11
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qstring::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QLoggingCategory_Class_Size() -> c_int;
-  // proto:  void QLoggingCategory::QLoggingCategory(const char * category, QtMsgType severityLevel);
-  fn C_ZN16QLoggingCategoryC2EPKc9QtMsgType(arg0: *mut c_char, arg1: c_int) -> u64;
-  // proto:  bool QLoggingCategory::isDebugEnabled();
-  fn C_ZNK16QLoggingCategory14isDebugEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QLoggingCategory::~QLoggingCategory();
-  fn C_ZN16QLoggingCategoryD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void QLoggingCategory::QLoggingCategory(const char * category);
-  fn C_ZN16QLoggingCategoryC2EPKc(arg0: *mut c_char) -> u64;
-  // proto:  void QLoggingCategory::setEnabled(QtMsgType type, bool enable);
-  fn C_ZN16QLoggingCategory10setEnabledE9QtMsgTypeb(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_char);
-  // proto:  bool QLoggingCategory::isEnabled(QtMsgType type);
-  fn C_ZNK16QLoggingCategory9isEnabledE9QtMsgType(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
-  // proto:  bool QLoggingCategory::isWarningEnabled();
-  fn C_ZNK16QLoggingCategory16isWarningEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  bool QLoggingCategory::isInfoEnabled();
-  fn C_ZNK16QLoggingCategory13isInfoEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  const char * QLoggingCategory::categoryName();
-  fn C_ZNK16QLoggingCategory12categoryNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_char;
-  // proto:  bool QLoggingCategory::isCriticalEnabled();
-  fn C_ZNK16QLoggingCategory17isCriticalEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto: static QLoggingCategory * QLoggingCategory::defaultCategory();
-  fn C_ZN16QLoggingCategory15defaultCategoryEv() -> *mut c_void;
-  // proto: static void QLoggingCategory::setFilterRules(const QString & rules);
-  fn C_ZN16QLoggingCategory14setFilterRulesERK7QString(arg0: *mut c_void);
-} // <= ext block end
 
-// body block begin =>
-// class sizeof(QLoggingCategory)=24
-#[derive(Default)]
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QLoggingCategory)=24
 pub struct QLoggingCategory {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
+  // qbase: none,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QLoggingCategory_ITF interface {
+//    QLoggingCategory_PTR() *QLoggingCategory
+//}
+//func (ptr *QLoggingCategory) QLoggingCategory_PTR() *QLoggingCategory { return ptr }
 
 impl /*struct*/ QLoggingCategory {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QLoggingCategory {
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QLoggingCategory {
     return QLoggingCategory{qclsinst: qthis, ..Default::default()};
   }
 }
-  // proto:  void QLoggingCategory::QLoggingCategory(const char * category, QtMsgType severityLevel);
+//impl Deref for QLoggingCategory {
+//  type Target = QLoggingCategoryBASE;
+//
+//  fn deref(&self) -> &QLoggingCategoryBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QLoggingCategoryBASE> for QLoggingCategory {
+//  fn as_ref(& self) -> & QLoggingCategoryBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qloggingcategory.h:53
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QLoggingCategory(const char *)
+
+/*
+Constructs a QLoggingCategory object with the provided category name. All message types for this category are enabled by default.
+
+If category is 0, the category name is changed to "default".
+*/
+// QLoggingCategory(const char *) ctx.fn_proto_cpp
 impl /*struct*/ QLoggingCategory {
-  pub fn new<T: QLoggingCategory_new>(value: T) -> QLoggingCategory {
-    let rsthis = value.new();
+  pub fn QLoggingCategory_0<T: QLoggingCategory_QLoggingCategory_0>(value: T) -> QLoggingCategory {
+    let rsthis = value.QLoggingCategory_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QLoggingCategory_new {
-  fn new(self) -> QLoggingCategory;
+pub trait QLoggingCategory_QLoggingCategory_0 {
+  fn QLoggingCategory_0(self) -> QLoggingCategory;
 }
-
-  // proto:  void QLoggingCategory::QLoggingCategory(const char * category, QtMsgType severityLevel);
-impl<'a> /*trait*/ QLoggingCategory_new for (&'a  String, i32) {
-  fn new(self) -> QLoggingCategory {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QLoggingCategoryC2EPKc9QtMsgType()};
-    let ctysz: c_int = unsafe{QLoggingCategory_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = self.1  as c_int;
-    let qthis: u64 = unsafe {C_ZN16QLoggingCategoryC2EPKc9QtMsgType(arg0, arg1)};
-    let rsthis = QLoggingCategory{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  bool QLoggingCategory::isDebugEnabled();
-impl /*struct*/ QLoggingCategory {
-  pub fn isDebugEnabled<RetType, T: QLoggingCategory_isDebugEnabled<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isDebugEnabled(self);
-    // return 1;
-  }
-}
-
-pub trait QLoggingCategory_isDebugEnabled<RetType> {
-  fn isDebugEnabled(self , rsthis: & QLoggingCategory) -> RetType;
-}
-
-  // proto:  bool QLoggingCategory::isDebugEnabled();
-impl<'a> /*trait*/ QLoggingCategory_isDebugEnabled<i8> for () {
-  fn isDebugEnabled(self , rsthis: & QLoggingCategory) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK16QLoggingCategory14isDebugEnabledEv()};
-    let mut ret = unsafe {C_ZNK16QLoggingCategory14isDebugEnabledEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QLoggingCategory::~QLoggingCategory();
-impl /*struct*/ QLoggingCategory {
-  pub fn free<RetType, T: QLoggingCategory_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
-    // return 1;
-  }
-}
-
-pub trait QLoggingCategory_free<RetType> {
-  fn free(self , rsthis: & QLoggingCategory) -> RetType;
-}
-
-  // proto:  void QLoggingCategory::~QLoggingCategory();
-impl<'a> /*trait*/ QLoggingCategory_free<()> for () {
-  fn free(self , rsthis: & QLoggingCategory) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QLoggingCategoryD2Ev()};
-     unsafe {C_ZN16QLoggingCategoryD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QLoggingCategory::QLoggingCategory(const char * category);
-impl<'a> /*trait*/ QLoggingCategory_new for (&'a  String) {
-  fn new(self) -> QLoggingCategory {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QLoggingCategory(const char *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QLoggingCategory_QLoggingCategory_0 for (usize) {
+  fn QLoggingCategory_0(self) -> QLoggingCategory {
     // unsafe{_ZN16QLoggingCategoryC2EPKc()};
-    let ctysz: c_int = unsafe{QLoggingCategory_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.as_ptr()  as *mut c_char;
-    let qthis: u64 = unsafe {C_ZN16QLoggingCategoryC2EPKc(arg0)};
+    let arg0 = (self) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QLoggingCategoryC2EPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QLoggingCategory{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QLoggingCategory::setEnabled(QtMsgType type, bool enable);
+// /usr/include/qt/QtCore/qloggingcategory.h:54
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QLoggingCategory(const char *, QtMsgType)
+
+/*
+Constructs a QLoggingCategory object with the provided category name. All message types for this category are enabled by default.
+
+If category is 0, the category name is changed to "default".
+*/
+// QLoggingCategory(const char *, QtMsgType) ctx.fn_proto_cpp
 impl /*struct*/ QLoggingCategory {
-  pub fn setEnabled<RetType, T: QLoggingCategory_setEnabled<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setEnabled(self);
+  pub fn QLoggingCategory_1<T: QLoggingCategory_QLoggingCategory_1>(value: T) -> QLoggingCategory {
+    let rsthis = value.QLoggingCategory_1();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QLoggingCategory_setEnabled<RetType> {
-  fn setEnabled(self , rsthis: & QLoggingCategory) -> RetType;
+pub trait QLoggingCategory_QLoggingCategory_1 {
+  fn QLoggingCategory_1(self) -> QLoggingCategory;
 }
-
-  // proto:  void QLoggingCategory::setEnabled(QtMsgType type, bool enable);
-impl<'a> /*trait*/ QLoggingCategory_setEnabled<()> for (i32, i8) {
-  fn setEnabled(self , rsthis: & QLoggingCategory) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QLoggingCategory10setEnabledE9QtMsgTypeb()};
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_char;
-     unsafe {C_ZN16QLoggingCategory10setEnabledE9QtMsgTypeb(rsthis.qclsinst, arg0, arg1)};
+// QLoggingCategory(const char *, QtMsgType) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QLoggingCategory_QLoggingCategory_1 for (usize,i32) {
+  fn QLoggingCategory_1(self) -> QLoggingCategory {
+    // unsafe{_ZN16QLoggingCategoryC2EPKc9QtMsgType()};
+    let arg0 = (self.0) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QLoggingCategoryC2EPKc9QtMsgType", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QLoggingCategory{qclsinst: qthis, ..Default::default()};
+    return rsthis;
     // return 1;
   }
 }
 
-  // proto:  bool QLoggingCategory::isEnabled(QtMsgType type);
+// /usr/include/qt/QtCore/qloggingcategory.h:55
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void ~QLoggingCategory()
+
+/*
+
+*/
+pub fn DeleteQLoggingCategory(this :*mut QLoggingCategory) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN16QLoggingCategoryD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 24)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qloggingcategory.h:57
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isEnabled(QtMsgType) const
+
+/*
+Returns true if a message of type msgtype for the category should be shown. Returns false otherwise.
+*/
 impl /*struct*/ QLoggingCategory {
-  pub fn isEnabled<RetType, T: QLoggingCategory_isEnabled<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isEnabled(self);
+  pub fn isEnabled_0<RetType, T: QLoggingCategory_isEnabled_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isEnabled_0(self);
     // return 1;
   }
 }
-
-pub trait QLoggingCategory_isEnabled<RetType> {
-  fn isEnabled(self , rsthis: & QLoggingCategory) -> RetType;
+pub trait QLoggingCategory_isEnabled_0<RetType> {
+  fn isEnabled_0(self , rsthis: & QLoggingCategory) -> RetType;
 }
-
-  // proto:  bool QLoggingCategory::isEnabled(QtMsgType type);
-impl<'a> /*trait*/ QLoggingCategory_isEnabled<i8> for (i32) {
-  fn isEnabled(self , rsthis: & QLoggingCategory) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK16QLoggingCategory9isEnabledE9QtMsgType()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZNK16QLoggingCategory9isEnabledE9QtMsgType(rsthis.qclsinst, arg0)};
-    return ret as i8; // 1
+impl<'a> /*trait*/ QLoggingCategory_isEnabled_0<bool> for (i32) {
+  fn isEnabled_0(self , rsthis: & QLoggingCategory) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QLoggingCategory9isEnabledE9QtMsgType", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  bool QLoggingCategory::isWarningEnabled();
+// /usr/include/qt/QtCore/qloggingcategory.h:58
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setEnabled(QtMsgType, bool)
+
+/*
+Changes the message type type for the category to enable.
+
+This method is meant to be used only from inside a filter installed by installFilter(). See Configuring Categories for an overview on how to configure categories globally.
+
+Note: QtFatalMsg cannot be changed. It will always remain true.
+
+See also isEnabled().
+*/
 impl /*struct*/ QLoggingCategory {
-  pub fn isWarningEnabled<RetType, T: QLoggingCategory_isWarningEnabled<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isWarningEnabled(self);
+  pub fn setEnabled_0<RetType, T: QLoggingCategory_setEnabled_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setEnabled_0(self);
+    // return 1;
+  }
+}
+pub trait QLoggingCategory_setEnabled_0<RetType> {
+  fn setEnabled_0(self , rsthis: & QLoggingCategory) -> RetType;
+}
+impl<'a> /*trait*/ QLoggingCategory_setEnabled_0<(/*void*/)> for (i32,bool) {
+  fn setEnabled_0(self , rsthis: & QLoggingCategory) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1) as *const bool as usize;
+     qtrt::InvokeQtFunc6("_ZN16QLoggingCategory10setEnabledE9QtMsgTypeb", 2,qtrt::FFITY_INT,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QLoggingCategory_isWarningEnabled<RetType> {
-  fn isWarningEnabled(self , rsthis: & QLoggingCategory) -> RetType;
-}
+// /usr/include/qt/QtCore/qloggingcategory.h:61
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool isDebugEnabled() const
 
-  // proto:  bool QLoggingCategory::isWarningEnabled();
-impl<'a> /*trait*/ QLoggingCategory_isWarningEnabled<i8> for () {
-  fn isWarningEnabled(self , rsthis: & QLoggingCategory) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK16QLoggingCategory16isWarningEnabledEv()};
-    let mut ret = unsafe {C_ZNK16QLoggingCategory16isWarningEnabledEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
+/*
+Returns true if debug messages should be shown for this category. Returns false otherwise.
 
-  // proto:  bool QLoggingCategory::isInfoEnabled();
+Note: The qCDebug() macro already does this check before executing any code. However, calling this method may be useful to avoid expensive generation of data that is only used for debug output.
+*/
 impl /*struct*/ QLoggingCategory {
-  pub fn isInfoEnabled<RetType, T: QLoggingCategory_isInfoEnabled<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isInfoEnabled(self);
+  pub fn isDebugEnabled_0<RetType, T: QLoggingCategory_isDebugEnabled_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isDebugEnabled_0(self);
     // return 1;
   }
 }
-
-pub trait QLoggingCategory_isInfoEnabled<RetType> {
-  fn isInfoEnabled(self , rsthis: & QLoggingCategory) -> RetType;
+pub trait QLoggingCategory_isDebugEnabled_0<RetType> {
+  fn isDebugEnabled_0(self , rsthis: & QLoggingCategory) -> RetType;
 }
-
-  // proto:  bool QLoggingCategory::isInfoEnabled();
-impl<'a> /*trait*/ QLoggingCategory_isInfoEnabled<i8> for () {
-  fn isInfoEnabled(self , rsthis: & QLoggingCategory) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK16QLoggingCategory13isInfoEnabledEv()};
-    let mut ret = unsafe {C_ZNK16QLoggingCategory13isInfoEnabledEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+impl<'a> /*trait*/ QLoggingCategory_isDebugEnabled_0<bool> for () {
+  fn isDebugEnabled_0(self , rsthis: & QLoggingCategory) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QLoggingCategory14isDebugEnabledEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  const char * QLoggingCategory::categoryName();
+// /usr/include/qt/QtCore/qloggingcategory.h:62
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool isInfoEnabled() const
+
+/*
+Returns true if informational messages should be shown for this category. Returns false otherwise.
+
+Note: The qCInfo() macro already does this check before executing any code. However, calling this method may be useful to avoid expensive generation of data that is only used for debug output.
+
+This function was introduced in  Qt 5.5.
+*/
 impl /*struct*/ QLoggingCategory {
-  pub fn categoryName<RetType, T: QLoggingCategory_categoryName<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.categoryName(self);
+  pub fn isInfoEnabled_0<RetType, T: QLoggingCategory_isInfoEnabled_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isInfoEnabled_0(self);
     // return 1;
   }
 }
-
-pub trait QLoggingCategory_categoryName<RetType> {
-  fn categoryName(self , rsthis: & QLoggingCategory) -> RetType;
+pub trait QLoggingCategory_isInfoEnabled_0<RetType> {
+  fn isInfoEnabled_0(self , rsthis: & QLoggingCategory) -> RetType;
 }
-
-  // proto:  const char * QLoggingCategory::categoryName();
-impl<'a> /*trait*/ QLoggingCategory_categoryName<String> for () {
-  fn categoryName(self , rsthis: & QLoggingCategory) -> String {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK16QLoggingCategory12categoryNameEv()};
-    let mut ret = unsafe {C_ZNK16QLoggingCategory12categoryNameEv(rsthis.qclsinst)};
-    let slen = unsafe {strlen(ret as *const i8)} as usize;
-    return unsafe{String::from_raw_parts(ret as *mut u8, slen, slen+1)};
+impl<'a> /*trait*/ QLoggingCategory_isInfoEnabled_0<bool> for () {
+  fn isInfoEnabled_0(self , rsthis: & QLoggingCategory) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QLoggingCategory13isInfoEnabledEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  bool QLoggingCategory::isCriticalEnabled();
+// /usr/include/qt/QtCore/qloggingcategory.h:63
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool isWarningEnabled() const
+
+/*
+Returns true if warning messages should be shown for this category. Returns false otherwise.
+
+Note: The qCWarning() macro already does this check before executing any code. However, calling this method may be useful to avoid expensive generation of data that is only used for debug output.
+*/
 impl /*struct*/ QLoggingCategory {
-  pub fn isCriticalEnabled<RetType, T: QLoggingCategory_isCriticalEnabled<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isCriticalEnabled(self);
+  pub fn isWarningEnabled_0<RetType, T: QLoggingCategory_isWarningEnabled_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isWarningEnabled_0(self);
     // return 1;
   }
 }
-
-pub trait QLoggingCategory_isCriticalEnabled<RetType> {
-  fn isCriticalEnabled(self , rsthis: & QLoggingCategory) -> RetType;
+pub trait QLoggingCategory_isWarningEnabled_0<RetType> {
+  fn isWarningEnabled_0(self , rsthis: & QLoggingCategory) -> RetType;
 }
-
-  // proto:  bool QLoggingCategory::isCriticalEnabled();
-impl<'a> /*trait*/ QLoggingCategory_isCriticalEnabled<i8> for () {
-  fn isCriticalEnabled(self , rsthis: & QLoggingCategory) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK16QLoggingCategory17isCriticalEnabledEv()};
-    let mut ret = unsafe {C_ZNK16QLoggingCategory17isCriticalEnabledEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+impl<'a> /*trait*/ QLoggingCategory_isWarningEnabled_0<bool> for () {
+  fn isWarningEnabled_0(self , rsthis: & QLoggingCategory) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QLoggingCategory16isWarningEnabledEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto: static QLoggingCategory * QLoggingCategory::defaultCategory();
+// /usr/include/qt/QtCore/qloggingcategory.h:64
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool isCriticalEnabled() const
+
+/*
+Returns true if critical messages should be shown for this category. Returns false otherwise.
+
+Note: The qCCritical() macro already does this check before executing any code. However, calling this method may be useful to avoid expensive generation of data that is only used for debug output.
+*/
 impl /*struct*/ QLoggingCategory {
-  pub fn defaultCategory_s<RetType, T: QLoggingCategory_defaultCategory_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.defaultCategory_s();
+  pub fn isCriticalEnabled_0<RetType, T: QLoggingCategory_isCriticalEnabled_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isCriticalEnabled_0(self);
     // return 1;
   }
 }
-
-pub trait QLoggingCategory_defaultCategory_s<RetType> {
-  fn defaultCategory_s(self ) -> RetType;
+pub trait QLoggingCategory_isCriticalEnabled_0<RetType> {
+  fn isCriticalEnabled_0(self , rsthis: & QLoggingCategory) -> RetType;
 }
-
-  // proto: static QLoggingCategory * QLoggingCategory::defaultCategory();
-impl<'a> /*trait*/ QLoggingCategory_defaultCategory_s<QLoggingCategory> for () {
-  fn defaultCategory_s(self ) -> QLoggingCategory {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QLoggingCategory15defaultCategoryEv()};
-    let mut ret = unsafe {C_ZN16QLoggingCategory15defaultCategoryEv()};
-    let mut ret1 = QLoggingCategory::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QLoggingCategory_isCriticalEnabled_0<bool> for () {
+  fn isCriticalEnabled_0(self , rsthis: & QLoggingCategory) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QLoggingCategory17isCriticalEnabledEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto: static void QLoggingCategory::setFilterRules(const QString & rules);
+// /usr/include/qt/QtCore/qloggingcategory.h:71
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] const char * categoryName() const
+
+/*
+Returns the name of the category.
+*/
 impl /*struct*/ QLoggingCategory {
-  pub fn setFilterRules_s<RetType, T: QLoggingCategory_setFilterRules_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.setFilterRules_s();
+  pub fn categoryName_0<RetType, T: QLoggingCategory_categoryName_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.categoryName_0(self);
+    // return 1;
+  }
+}
+pub trait QLoggingCategory_categoryName_0<RetType> {
+  fn categoryName_0(self , rsthis: & QLoggingCategory) -> RetType;
+}
+impl<'a> /*trait*/ QLoggingCategory_categoryName_0<usize> for () {
+  fn categoryName_0(self , rsthis: & QLoggingCategory) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QLoggingCategory12categoryNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qloggingcategory.h:77
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QLoggingCategory * defaultCategory()
+
+/*
+Returns a pointer to the global category "default" that is used e.g. by qDebug(), qInfo(), qWarning(), qCritical(), qFatal().
+
+Note: The returned pointer may be null during destruction of static objects.
+
+Note: Ownership of the category is not transferred, do not delete the returned pointer.
+*/
+impl /*struct*/ QLoggingCategory {
+  pub fn defaultCategory_0<RetType, T: QLoggingCategory_defaultCategory_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.defaultCategory_0();
+    // return 1;
+  }
+}
+pub trait QLoggingCategory_defaultCategory_0<RetType> {
+  fn defaultCategory_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QLoggingCategory_defaultCategory_0<usize> for () {
+  fn defaultCategory_0(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZN16QLoggingCategory15defaultCategoryEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qloggingcategory.h:82
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] void setFilterRules(const QString &)
+
+/*
+Configures which categories and message types should be enabled through a a set of rules.
+
+Example:
+
+
+      QLoggingCategory::setFilterRules(QStringLiteral("driver.usb.debug=true"));
+
+
+
+Note: The rules might be ignored if a custom category filter is installed with installFilter(), or if the user defined QT_LOGGING_CONF or QT_LOGGING_RULES environment variable.
+*/
+impl /*struct*/ QLoggingCategory {
+  pub fn setFilterRules_0<RetType, T: QLoggingCategory_setFilterRules_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.setFilterRules_0();
+    // return 1;
+  }
+}
+pub trait QLoggingCategory_setFilterRules_0<RetType> {
+  fn setFilterRules_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QLoggingCategory_setFilterRules_0<(/*void*/)> for (usize) {
+  fn setFilterRules_0(self ) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN16QLoggingCategory14setFilterRulesERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QLoggingCategory_setFilterRules_s<RetType> {
-  fn setFilterRules_s(self ) -> RetType;
+
+/*
+
+
+*/
+pub type QLoggingCategory__ = i32;
+// 
+pub const QLoggingCategory__DebugShift :QLoggingCategory__ = 0;
+// 
+pub const QLoggingCategory__WarningShift :QLoggingCategory__ = 8;
+// 
+pub const QLoggingCategory__CriticalShift :QLoggingCategory__ = 16;
+// 
+pub const QLoggingCategory__InfoShift :QLoggingCategory__ = 24;
+pub fn QLoggingCategory_ItemName(val: i32) ->String {
+  match val {
+     QLoggingCategory__DebugShift => // 0
+     {return String::from("DebugShift");}
+     QLoggingCategory__WarningShift => // 8
+     {return String::from("WarningShift");}
+     QLoggingCategory__CriticalShift => // 16
+     {return String::from("CriticalShift");}
+     QLoggingCategory__InfoShift => // 24
+     {return String::from("InfoShift");}
+  _ => {return format!("{}", val);}
+}
+}
+pub fn QLoggingCategory_ItemName_s(val: i32) ->String {
+  //var nilthis *QLoggingCategory
+  //return nilthis.ItemName(val);
+  return QLoggingCategory_ItemName(val);
 }
 
-  // proto: static void QLoggingCategory::setFilterRules(const QString & rules);
-impl<'a> /*trait*/ QLoggingCategory_setFilterRules_s<()> for (&'a QString) {
-  fn setFilterRules_s(self ) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QLoggingCategory14setFilterRulesERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN16QLoggingCategory14setFilterRulesERK7QString(arg0)};
-    // return 1;
-  }
-}
+//  body block end
 
-// <= body block end
+//  keep block begin
 
+//  keep block end

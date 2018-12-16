@@ -5,9 +5,14 @@ authors = ["gzleo"]
 
 [dependencies]
 libc = "0.2"
+libffi-sys = "0.6"
 
 [features]
-default = [ "widgets" ]
-widgets = []
-network = []
-qml = []
+#default = [ "widgets" ]
+#widgets = []
+#network = []
+#qml = []
+#default = ["core"]
+qtrt = []
+core = []
+

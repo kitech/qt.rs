@@ -1,571 +1,1059 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qbitarray.h
-// dst-file: /src/core/qbitarray.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QBitArray
+// package qtcore
+// /usr/include/qt/QtCore/qbitarray.h
+// #include <qbitarray.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 7
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QBitRef_Class_Size() -> c_int;
-  fn QBitArray_Class_Size() -> c_int;
-  // proto:  void QBitArray::QBitArray(int size, bool val);
-  fn C_ZN9QBitArrayC2Eib(arg0: c_int, arg1: c_char) -> u64;
-  // proto:  bool QBitArray::isEmpty();
-  fn C_ZNK9QBitArray7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QBitArray::setBit(int i);
-  fn C_ZN9QBitArray6setBitEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto:  int QBitArray::size();
-  fn C_ZNK9QBitArray4sizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  void QBitArray::swap(QBitArray & other);
-  fn C_ZN9QBitArray4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  int QBitArray::count();
-  fn C_ZNK9QBitArray5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  int QBitArray::count(bool on);
-  fn C_ZNK9QBitArray5countEb(qthis: u64 /* *mut c_void*/, arg0: c_char) -> c_int;
-  // proto:  void QBitArray::detach();
-  fn C_ZN9QBitArray6detachEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QBitArray::QBitArray();
-  fn C_ZN9QBitArrayC2Ev() -> u64;
-  // proto:  bool QBitArray::at(int i);
-  fn C_ZNK9QBitArray2atEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
-  // proto:  void QBitArray::clear();
-  fn C_ZN9QBitArray5clearEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QBitArray::clearBit(int i);
-  fn C_ZN9QBitArray8clearBitEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto:  bool QBitArray::testBit(int i);
-  fn C_ZNK9QBitArray7testBitEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
-  // proto:  void QBitArray::truncate(int pos);
-  fn C_ZN9QBitArray8truncateEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto:  bool QBitArray::toggleBit(int i);
-  fn C_ZN9QBitArray9toggleBitEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
-  // proto:  void QBitArray::QBitArray(const QBitArray & other);
-  fn C_ZN9QBitArrayC2ERKS_(arg0: *mut c_void) -> u64;
-  // proto:  void QBitArray::fill(bool val, int first, int last);
-  fn C_ZN9QBitArray4fillEbii(qthis: u64 /* *mut c_void*/, arg0: c_char, arg1: c_int, arg2: c_int);
-  // proto:  bool QBitArray::isNull();
-  fn C_ZNK9QBitArray6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QBitArray::setBit(int i, bool val);
-  fn C_ZN9QBitArray6setBitEib(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_char);
-  // proto:  void QBitArray::resize(int size);
-  fn C_ZN9QBitArray6resizeEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto:  bool QBitArray::isDetached();
-  fn C_ZNK9QBitArray10isDetachedEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  bool QBitArray::fill(bool val, int size);
-  fn C_ZN9QBitArray4fillEbi(qthis: u64 /* *mut c_void*/, arg0: c_char, arg1: c_int) -> c_char;
-} // <= ext block end
 
-// body block begin =>
-// class sizeof(QBitRef)=16
-#[derive(Default)]
-pub struct QBitRef {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
-}
 
-// class sizeof(QBitArray)=8
-#[derive(Default)]
+/*
+
+*/
+#[derive(Default)] // class sizeof(QBitArray)=8
 pub struct QBitArray {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
+  // qbase: none,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QBitArray_ITF interface {
+//    QBitArray_PTR() *QBitArray
+//}
+//func (ptr *QBitArray) QBitArray_PTR() *QBitArray { return ptr }
 
-impl /*struct*/ QBitRef {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QBitRef {
-    return QBitRef{qclsinst: qthis, ..Default::default()};
-  }
-}
 impl /*struct*/ QBitArray {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QBitArray {
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QBitArray {
     return QBitArray{qclsinst: qthis, ..Default::default()};
   }
 }
-  // proto:  void QBitArray::QBitArray(int size, bool val);
+//impl Deref for QBitArray {
+//  type Target = QBitArrayBASE;
+//
+//  fn deref(&self) -> &QBitArrayBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QBitArrayBASE> for QBitArray {
+//  fn as_ref(& self) -> & QBitArrayBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qbitarray.h:57
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void QBitArray()
+
+/*
+Constructs an empty bit array.
+
+See also isEmpty().
+*/
+// QBitArray() ctx.fn_proto_cpp
 impl /*struct*/ QBitArray {
-  pub fn new<T: QBitArray_new>(value: T) -> QBitArray {
-    let rsthis = value.new();
+  pub fn QBitArray_0<T: QBitArray_QBitArray_0>(value: T) -> QBitArray {
+    let rsthis = value.QBitArray_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QBitArray_new {
-  fn new(self) -> QBitArray;
+pub trait QBitArray_QBitArray_0 {
+  fn QBitArray_0(self) -> QBitArray;
 }
-
-  // proto:  void QBitArray::QBitArray(int size, bool val);
-impl<'a> /*trait*/ QBitArray_new for (i32, Option<i8>) {
-  fn new(self) -> QBitArray {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QBitArrayC2Eib()};
-    let ctysz: c_int = unsafe{QBitArray_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0  as c_int;
-    let arg1 = (if self.1.is_none() {false as i8} else {self.1.unwrap()})  as c_char;
-    let qthis: u64 = unsafe {C_ZN9QBitArrayC2Eib(arg0, arg1)};
-    let rsthis = QBitArray{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  bool QBitArray::isEmpty();
-impl /*struct*/ QBitArray {
-  pub fn isEmpty<RetType, T: QBitArray_isEmpty<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isEmpty(self);
-    // return 1;
-  }
-}
-
-pub trait QBitArray_isEmpty<RetType> {
-  fn isEmpty(self , rsthis: & QBitArray) -> RetType;
-}
-
-  // proto:  bool QBitArray::isEmpty();
-impl<'a> /*trait*/ QBitArray_isEmpty<i8> for () {
-  fn isEmpty(self , rsthis: & QBitArray) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QBitArray7isEmptyEv()};
-    let mut ret = unsafe {C_ZNK9QBitArray7isEmptyEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QBitArray::setBit(int i);
-impl /*struct*/ QBitArray {
-  pub fn setBit<RetType, T: QBitArray_setBit<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setBit(self);
-    // return 1;
-  }
-}
-
-pub trait QBitArray_setBit<RetType> {
-  fn setBit(self , rsthis: & QBitArray) -> RetType;
-}
-
-  // proto:  void QBitArray::setBit(int i);
-impl<'a> /*trait*/ QBitArray_setBit<()> for (i32) {
-  fn setBit(self , rsthis: & QBitArray) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QBitArray6setBitEi()};
-    let arg0 = self  as c_int;
-     unsafe {C_ZN9QBitArray6setBitEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  int QBitArray::size();
-impl /*struct*/ QBitArray {
-  pub fn size<RetType, T: QBitArray_size<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.size(self);
-    // return 1;
-  }
-}
-
-pub trait QBitArray_size<RetType> {
-  fn size(self , rsthis: & QBitArray) -> RetType;
-}
-
-  // proto:  int QBitArray::size();
-impl<'a> /*trait*/ QBitArray_size<i32> for () {
-  fn size(self , rsthis: & QBitArray) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QBitArray4sizeEv()};
-    let mut ret = unsafe {C_ZNK9QBitArray4sizeEv(rsthis.qclsinst)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QBitArray::swap(QBitArray & other);
-impl /*struct*/ QBitArray {
-  pub fn swap<RetType, T: QBitArray_swap<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.swap(self);
-    // return 1;
-  }
-}
-
-pub trait QBitArray_swap<RetType> {
-  fn swap(self , rsthis: & QBitArray) -> RetType;
-}
-
-  // proto:  void QBitArray::swap(QBitArray & other);
-impl<'a> /*trait*/ QBitArray_swap<()> for (&'a QBitArray) {
-  fn swap(self , rsthis: & QBitArray) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QBitArray4swapERS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN9QBitArray4swapERS_(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  int QBitArray::count();
-impl /*struct*/ QBitArray {
-  pub fn count<RetType, T: QBitArray_count<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.count(self);
-    // return 1;
-  }
-}
-
-pub trait QBitArray_count<RetType> {
-  fn count(self , rsthis: & QBitArray) -> RetType;
-}
-
-  // proto:  int QBitArray::count();
-impl<'a> /*trait*/ QBitArray_count<i32> for () {
-  fn count(self , rsthis: & QBitArray) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QBitArray5countEv()};
-    let mut ret = unsafe {C_ZNK9QBitArray5countEv(rsthis.qclsinst)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  int QBitArray::count(bool on);
-impl<'a> /*trait*/ QBitArray_count<i32> for (i8) {
-  fn count(self , rsthis: & QBitArray) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QBitArray5countEb()};
-    let arg0 = self  as c_char;
-    let mut ret = unsafe {C_ZNK9QBitArray5countEb(rsthis.qclsinst, arg0)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QBitArray::detach();
-impl /*struct*/ QBitArray {
-  pub fn detach<RetType, T: QBitArray_detach<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.detach(self);
-    // return 1;
-  }
-}
-
-pub trait QBitArray_detach<RetType> {
-  fn detach(self , rsthis: & QBitArray) -> RetType;
-}
-
-  // proto:  void QBitArray::detach();
-impl<'a> /*trait*/ QBitArray_detach<()> for () {
-  fn detach(self , rsthis: & QBitArray) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QBitArray6detachEv()};
-     unsafe {C_ZN9QBitArray6detachEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QBitArray::QBitArray();
-impl<'a> /*trait*/ QBitArray_new for () {
-  fn new(self) -> QBitArray {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QBitArray() ctx.fn_proto_cpp
+impl<'a> /*trait*/ QBitArray_QBitArray_0 for () {
+  fn QBitArray_0(self) -> QBitArray {
     // unsafe{_ZN9QBitArrayC2Ev()};
-    let ctysz: c_int = unsafe{QBitArray_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let qthis: u64 = unsafe {C_ZN9QBitArrayC2Ev()};
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN9QBitArrayC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QBitArray{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  bool QBitArray::at(int i);
+// /usr/include/qt/QtCore/qbitarray.h:58
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QBitArray(int, bool)
+
+/*
+Constructs an empty bit array.
+
+See also isEmpty().
+*/
+// QBitArray(int, bool) ctx.fn_proto_cpp
 impl /*struct*/ QBitArray {
-  pub fn at<RetType, T: QBitArray_at<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.at(self);
+  pub fn QBitArray_1<T: QBitArray_QBitArray_1>(value: T) -> QBitArray {
+    let rsthis = value.QBitArray_1();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QBitArray_at<RetType> {
-  fn at(self , rsthis: & QBitArray) -> RetType;
+pub trait QBitArray_QBitArray_1 {
+  fn QBitArray_1(self) -> QBitArray;
 }
-
-  // proto:  bool QBitArray::at(int i);
-impl<'a> /*trait*/ QBitArray_at<i8> for (i32) {
-  fn at(self , rsthis: & QBitArray) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QBitArray2atEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZNK9QBitArray2atEi(rsthis.qclsinst, arg0)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QBitArray::clear();
-impl /*struct*/ QBitArray {
-  pub fn clear<RetType, T: QBitArray_clear<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.clear(self);
-    // return 1;
-  }
-}
-
-pub trait QBitArray_clear<RetType> {
-  fn clear(self , rsthis: & QBitArray) -> RetType;
-}
-
-  // proto:  void QBitArray::clear();
-impl<'a> /*trait*/ QBitArray_clear<()> for () {
-  fn clear(self , rsthis: & QBitArray) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QBitArray5clearEv()};
-     unsafe {C_ZN9QBitArray5clearEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QBitArray::clearBit(int i);
-impl /*struct*/ QBitArray {
-  pub fn clearBit<RetType, T: QBitArray_clearBit<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.clearBit(self);
-    // return 1;
-  }
-}
-
-pub trait QBitArray_clearBit<RetType> {
-  fn clearBit(self , rsthis: & QBitArray) -> RetType;
-}
-
-  // proto:  void QBitArray::clearBit(int i);
-impl<'a> /*trait*/ QBitArray_clearBit<()> for (i32) {
-  fn clearBit(self , rsthis: & QBitArray) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QBitArray8clearBitEi()};
-    let arg0 = self  as c_int;
-     unsafe {C_ZN9QBitArray8clearBitEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  bool QBitArray::testBit(int i);
-impl /*struct*/ QBitArray {
-  pub fn testBit<RetType, T: QBitArray_testBit<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.testBit(self);
-    // return 1;
-  }
-}
-
-pub trait QBitArray_testBit<RetType> {
-  fn testBit(self , rsthis: & QBitArray) -> RetType;
-}
-
-  // proto:  bool QBitArray::testBit(int i);
-impl<'a> /*trait*/ QBitArray_testBit<i8> for (i32) {
-  fn testBit(self , rsthis: & QBitArray) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QBitArray7testBitEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZNK9QBitArray7testBitEi(rsthis.qclsinst, arg0)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QBitArray::truncate(int pos);
-impl /*struct*/ QBitArray {
-  pub fn truncate<RetType, T: QBitArray_truncate<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.truncate(self);
-    // return 1;
-  }
-}
-
-pub trait QBitArray_truncate<RetType> {
-  fn truncate(self , rsthis: & QBitArray) -> RetType;
-}
-
-  // proto:  void QBitArray::truncate(int pos);
-impl<'a> /*trait*/ QBitArray_truncate<()> for (i32) {
-  fn truncate(self , rsthis: & QBitArray) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QBitArray8truncateEi()};
-    let arg0 = self  as c_int;
-     unsafe {C_ZN9QBitArray8truncateEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  bool QBitArray::toggleBit(int i);
-impl /*struct*/ QBitArray {
-  pub fn toggleBit<RetType, T: QBitArray_toggleBit<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toggleBit(self);
-    // return 1;
-  }
-}
-
-pub trait QBitArray_toggleBit<RetType> {
-  fn toggleBit(self , rsthis: & QBitArray) -> RetType;
-}
-
-  // proto:  bool QBitArray::toggleBit(int i);
-impl<'a> /*trait*/ QBitArray_toggleBit<i8> for (i32) {
-  fn toggleBit(self , rsthis: & QBitArray) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QBitArray9toggleBitEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZN9QBitArray9toggleBitEi(rsthis.qclsinst, arg0)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QBitArray::QBitArray(const QBitArray & other);
-impl<'a> /*trait*/ QBitArray_new for (&'a QBitArray) {
-  fn new(self) -> QBitArray {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QBitArrayC2ERKS_()};
-    let ctysz: c_int = unsafe{QBitArray_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN9QBitArrayC2ERKS_(arg0)};
+// QBitArray(int, bool) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QBitArray_QBitArray_1 for (i32,bool) {
+  fn QBitArray_1(self) -> QBitArray {
+    // unsafe{_ZN9QBitArrayC2Eib()};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1) as *const bool as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN9QBitArrayC2Eib", 2,qtrt::FFITY_INT,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QBitArray{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QBitArray::fill(bool val, int first, int last);
+// /usr/include/qt/QtCore/qbitarray.h:60
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QBitArray & operator=(const QBitArray &)
+
+/*
+
+*/
 impl /*struct*/ QBitArray {
-  pub fn fill<RetType, T: QBitArray_fill<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.fill(self);
+  pub fn operator_equal_0<RetType, T: QBitArray_operator_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_0(self);
     // return 1;
   }
 }
-
-pub trait QBitArray_fill<RetType> {
-  fn fill(self , rsthis: & QBitArray) -> RetType;
+pub trait QBitArray_operator_equal_0<RetType> {
+  fn operator_equal_0(self , rsthis: & QBitArray) -> RetType;
 }
-
-  // proto:  void QBitArray::fill(bool val, int first, int last);
-impl<'a> /*trait*/ QBitArray_fill<()> for (i8, i32, i32) {
-  fn fill(self , rsthis: & QBitArray) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QBitArray4fillEbii()};
-    let arg0 = self.0  as c_char;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2  as c_int;
-     unsafe {C_ZN9QBitArray4fillEbii(rsthis.qclsinst, arg0, arg1, arg2)};
+impl<'a> /*trait*/ QBitArray_operator_equal_0<usize> for (usize) {
+  fn operator_equal_0(self , rsthis: & QBitArray) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QBitArrayaSERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  bool QBitArray::isNull();
+// /usr/include/qt/QtCore/qbitarray.h:63
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QBitArray & operator=(QBitArray &&)
+
+/*
+
+*/
 impl /*struct*/ QBitArray {
-  pub fn isNull<RetType, T: QBitArray_isNull<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isNull(self);
+  pub fn operator_equal_1<RetType, T: QBitArray_operator_equal_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_1(self);
     // return 1;
   }
 }
-
-pub trait QBitArray_isNull<RetType> {
-  fn isNull(self , rsthis: & QBitArray) -> RetType;
+pub trait QBitArray_operator_equal_1<RetType> {
+  fn operator_equal_1(self , rsthis: & QBitArray) -> RetType;
 }
-
-  // proto:  bool QBitArray::isNull();
-impl<'a> /*trait*/ QBitArray_isNull<i8> for () {
-  fn isNull(self , rsthis: & QBitArray) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QBitArray6isNullEv()};
-    let mut ret = unsafe {C_ZNK9QBitArray6isNullEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+impl<'a> /*trait*/ QBitArray_operator_equal_1<usize> for (usize) {
+  fn operator_equal_1(self , rsthis: & QBitArray) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QBitArrayaSEOS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  void QBitArray::setBit(int i, bool val);
-impl<'a> /*trait*/ QBitArray_setBit<()> for (i32, i8) {
-  fn setBit(self , rsthis: & QBitArray) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QBitArray6setBitEib()};
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_char;
-     unsafe {C_ZN9QBitArray6setBitEib(rsthis.qclsinst, arg0, arg1)};
-    // return 1;
-  }
-}
+// /usr/include/qt/QtCore/qbitarray.h:67
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QBitArray &)
 
-  // proto:  void QBitArray::resize(int size);
+/*
+Swaps bit array other with this bit array. This operation is very fast and never fails.
+
+This function was introduced in  Qt 4.8.
+*/
 impl /*struct*/ QBitArray {
-  pub fn resize<RetType, T: QBitArray_resize<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.resize(self);
+  pub fn swap_0<RetType, T: QBitArray_swap_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.swap_0(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_swap_0<RetType> {
+  fn swap_0(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_swap_0<(/*void*/)> for (usize) {
+  fn swap_0(self , rsthis: & QBitArray) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN9QBitArray4swapERS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QBitArray_resize<RetType> {
-  fn resize(self , rsthis: & QBitArray) -> RetType;
-}
+// /usr/include/qt/QtCore/qbitarray.h:69
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [4] int size() const
 
-  // proto:  void QBitArray::resize(int size);
-impl<'a> /*trait*/ QBitArray_resize<()> for (i32) {
-  fn resize(self , rsthis: & QBitArray) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QBitArray6resizeEi()};
-    let arg0 = self  as c_int;
-     unsafe {C_ZN9QBitArray6resizeEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
+/*
+Returns the number of bits stored in the bit array.
 
-  // proto:  bool QBitArray::isDetached();
+See also resize().
+*/
 impl /*struct*/ QBitArray {
-  pub fn isDetached<RetType, T: QBitArray_isDetached<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isDetached(self);
+  pub fn size_0<RetType, T: QBitArray_size_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.size_0(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_size_0<RetType> {
+  fn size_0(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_size_0<i32> for () {
+  fn size_0(self , rsthis: & QBitArray) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QBitArray4sizeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:70
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [4] int count() const
+
+/*
+Same as size().
+*/
+impl /*struct*/ QBitArray {
+  pub fn count_0<RetType, T: QBitArray_count_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.count_0(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_count_0<RetType> {
+  fn count_0(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_count_0<i32> for () {
+  fn count_0(self , rsthis: & QBitArray) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QBitArray5countEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:71
+// index:1
+// Public Visibility=Default Availability=Available
+// [4] int count(bool) const
+
+/*
+Same as size().
+*/
+impl /*struct*/ QBitArray {
+  pub fn count_1<RetType, T: QBitArray_count_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.count_1(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_count_1<RetType> {
+  fn count_1(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_count_1<i32> for (bool) {
+  fn count_1(self , rsthis: & QBitArray) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const bool as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QBitArray5countEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:73
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool isEmpty() const
+
+/*
+Returns true if this bit array has size 0; otherwise returns false.
+
+See also size().
+*/
+impl /*struct*/ QBitArray {
+  pub fn isEmpty_0<RetType, T: QBitArray_isEmpty_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isEmpty_0(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_isEmpty_0<RetType> {
+  fn isEmpty_0(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_isEmpty_0<bool> for () {
+  fn isEmpty_0(self , rsthis: & QBitArray) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QBitArray7isEmptyEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:74
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool isNull() const
+
+/*
+Returns true if this bit array is null; otherwise returns false.
+
+Example:
+
+
+  QBitArray().isNull();           // returns true
+  QBitArray(0).isNull();          // returns false
+  QBitArray(3).isNull();          // returns false
+
+
+
+Qt makes a distinction between null bit arrays and empty bit arrays for historical reasons. For most applications, what matters is whether or not a bit array contains any data, and this can be determined using isEmpty().
+
+See also isEmpty().
+*/
+impl /*struct*/ QBitArray {
+  pub fn isNull_0<RetType, T: QBitArray_isNull_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isNull_0(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_isNull_0<RetType> {
+  fn isNull_0(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_isNull_0<bool> for () {
+  fn isNull_0(self , rsthis: & QBitArray) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QBitArray6isNullEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:76
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void resize(int)
+
+/*
+Resizes the bit array to size bits.
+
+If size is greater than the current size, the bit array is extended to make it size bits with the extra bits added to the end. The new bits are initialized to false (0).
+
+If size is less than the current size, bits are removed from the end.
+
+See also size().
+*/
+impl /*struct*/ QBitArray {
+  pub fn resize_0<RetType, T: QBitArray_resize_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.resize_0(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_resize_0<RetType> {
+  fn resize_0(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_resize_0<(/*void*/)> for (i32) {
+  fn resize_0(self , rsthis: & QBitArray) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN9QBitArray6resizeEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QBitArray_isDetached<RetType> {
-  fn isDetached(self , rsthis: & QBitArray) -> RetType;
-}
+// /usr/include/qt/QtCore/qbitarray.h:78
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void detach()
 
-  // proto:  bool QBitArray::isDetached();
-impl<'a> /*trait*/ QBitArray_isDetached<i8> for () {
-  fn isDetached(self , rsthis: & QBitArray) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QBitArray10isDetachedEv()};
-    let mut ret = unsafe {C_ZNK9QBitArray10isDetachedEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+/*
+
+*/
+impl /*struct*/ QBitArray {
+  pub fn detach_0<RetType, T: QBitArray_detach_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.detach_0(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_detach_0<RetType> {
+  fn detach_0(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_detach_0<(/*void*/)> for () {
+  fn detach_0(self , rsthis: & QBitArray) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZN9QBitArray6detachEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-  // proto:  bool QBitArray::fill(bool val, int size);
-impl<'a> /*trait*/ QBitArray_fill<i8> for (i8, Option<i32>) {
-  fn fill(self , rsthis: & QBitArray) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QBitArray4fillEbi()};
-    let arg0 = self.0  as c_char;
-    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZN9QBitArray4fillEbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8; // 1
+// /usr/include/qt/QtCore/qbitarray.h:79
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool isDetached() const
+
+/*
+
+*/
+impl /*struct*/ QBitArray {
+  pub fn isDetached_0<RetType, T: QBitArray_isDetached_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isDetached_0(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_isDetached_0<RetType> {
+  fn isDetached_0(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_isDetached_0<bool> for () {
+  fn isDetached_0(self , rsthis: & QBitArray) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QBitArray10isDetachedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:80
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void clear()
+
+/*
+Clears the contents of the bit array and makes it empty.
+
+See also resize() and isEmpty().
+*/
+impl /*struct*/ QBitArray {
+  pub fn clear_0<RetType, T: QBitArray_clear_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.clear_0(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_clear_0<RetType> {
+  fn clear_0(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_clear_0<(/*void*/)> for () {
+  fn clear_0(self , rsthis: & QBitArray) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZN9QBitArray5clearEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qbitarray.h:82
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool testBit(int) const
 
+/*
+Returns true if the bit at index position i is 1; otherwise returns false.
+
+i must be a valid index position in the bit array (i.e., 0 <= i < size()).
+
+See also setBit() and clearBit().
+*/
+impl /*struct*/ QBitArray {
+  pub fn testBit_0<RetType, T: QBitArray_testBit_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.testBit_0(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_testBit_0<RetType> {
+  fn testBit_0(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_testBit_0<bool> for (i32) {
+  fn testBit_0(self , rsthis: & QBitArray) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QBitArray7testBitEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:83
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setBit(int)
+
+/*
+Sets the bit at index position i to 1.
+
+i must be a valid index position in the bit array (i.e., 0 <= i < size()).
+
+See also clearBit() and toggleBit().
+*/
+impl /*struct*/ QBitArray {
+  pub fn setBit_0<RetType, T: QBitArray_setBit_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setBit_0(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_setBit_0<RetType> {
+  fn setBit_0(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_setBit_0<(/*void*/)> for (i32) {
+  fn setBit_0(self , rsthis: & QBitArray) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN9QBitArray6setBitEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:84
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void setBit(int, bool)
+
+/*
+Sets the bit at index position i to 1.
+
+i must be a valid index position in the bit array (i.e., 0 <= i < size()).
+
+See also clearBit() and toggleBit().
+*/
+impl /*struct*/ QBitArray {
+  pub fn setBit_1<RetType, T: QBitArray_setBit_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setBit_1(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_setBit_1<RetType> {
+  fn setBit_1(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_setBit_1<(/*void*/)> for (i32,bool) {
+  fn setBit_1(self , rsthis: & QBitArray) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1) as *const bool as usize;
+     qtrt::InvokeQtFunc6("_ZN9QBitArray6setBitEib", 2,qtrt::FFITY_INT,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:85
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void clearBit(int)
+
+/*
+Sets the bit at index position i to 0.
+
+i must be a valid index position in the bit array (i.e., 0 <= i < size()).
+
+See also setBit() and toggleBit().
+*/
+impl /*struct*/ QBitArray {
+  pub fn clearBit_0<RetType, T: QBitArray_clearBit_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.clearBit_0(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_clearBit_0<RetType> {
+  fn clearBit_0(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_clearBit_0<(/*void*/)> for (i32) {
+  fn clearBit_0(self , rsthis: & QBitArray) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN9QBitArray8clearBitEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:86
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool toggleBit(int)
+
+/*
+Inverts the value of the bit at index position i, returning the previous value of that bit as either true (if it was set) or false (if it was unset).
+
+If the previous value was 0, the new value will be 1. If the previous value was 1, the new value will be 0.
+
+i must be a valid index position in the bit array (i.e., 0 <= i < size()).
+
+See also setBit() and clearBit().
+*/
+impl /*struct*/ QBitArray {
+  pub fn toggleBit_0<RetType, T: QBitArray_toggleBit_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toggleBit_0(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_toggleBit_0<RetType> {
+  fn toggleBit_0(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_toggleBit_0<bool> for (i32) {
+  fn toggleBit_0(self , rsthis: & QBitArray) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QBitArray9toggleBitEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:88
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool at(int) const
+
+/*
+Returns the value of the bit at index position i.
+
+i must be a valid index position in the bit array (i.e., 0 <= i < size()).
+
+See also operator[]().
+*/
+impl /*struct*/ QBitArray {
+  pub fn at_0<RetType, T: QBitArray_at_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.at_0(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_at_0<RetType> {
+  fn at_0(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_at_0<bool> for (i32) {
+  fn at_0(self , rsthis: & QBitArray) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QBitArray2atEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:89
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QBitRef operator[](int)
+
+/*
+
+*/
+impl /*struct*/ QBitArray {
+  pub fn operator_get_index_0<RetType, T: QBitArray_operator_get_index_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_get_index_0(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_operator_get_index_0<RetType> {
+  fn operator_get_index_0(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_operator_get_index_0<usize> for (i32) {
+  fn operator_get_index_0(self , rsthis: & QBitArray) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QBitArrayixEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:90
+// index:1
+// Public Visibility=Default Availability=Available
+// [1] bool operator[](int) const
+
+/*
+
+*/
+impl /*struct*/ QBitArray {
+  pub fn operator_get_index_1<RetType, T: QBitArray_operator_get_index_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_get_index_1(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_operator_get_index_1<RetType> {
+  fn operator_get_index_1(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_operator_get_index_1<bool> for (i32) {
+  fn operator_get_index_1(self , rsthis: & QBitArray) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QBitArrayixEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:91
+// index:2
+// Public Visibility=Default Availability=Available
+// [16] QBitRef operator[](uint)
+
+/*
+
+*/
+impl /*struct*/ QBitArray {
+  pub fn operator_get_index_2<RetType, T: QBitArray_operator_get_index_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_get_index_2(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_operator_get_index_2<RetType> {
+  fn operator_get_index_2(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_operator_get_index_2<usize> for (u32) {
+  fn operator_get_index_2(self , rsthis: & QBitArray) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const u32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QBitArrayixEj", 1,qtrt::FFITY_UINT32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:92
+// index:3
+// Public Visibility=Default Availability=Available
+// [1] bool operator[](uint) const
+
+/*
+
+*/
+impl /*struct*/ QBitArray {
+  pub fn operator_get_index_3<RetType, T: QBitArray_operator_get_index_3<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_get_index_3(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_operator_get_index_3<RetType> {
+  fn operator_get_index_3(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_operator_get_index_3<bool> for (u32) {
+  fn operator_get_index_3(self , rsthis: & QBitArray) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const u32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QBitArrayixEj", 1,qtrt::FFITY_UINT32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:94
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QBitArray & operator&=(const QBitArray &)
+
+/*
+
+*/
+impl /*struct*/ QBitArray {
+  pub fn operator_and_equal_0<RetType, T: QBitArray_operator_and_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_and_equal_0(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_operator_and_equal_0<RetType> {
+  fn operator_and_equal_0(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_operator_and_equal_0<usize> for (usize) {
+  fn operator_and_equal_0(self , rsthis: & QBitArray) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QBitArrayaNERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:95
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QBitArray & operator|=(const QBitArray &)
+
+/*
+
+*/
+impl /*struct*/ QBitArray {
+  pub fn operator_or_equal_0<RetType, T: QBitArray_operator_or_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_or_equal_0(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_operator_or_equal_0<RetType> {
+  fn operator_or_equal_0(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_operator_or_equal_0<usize> for (usize) {
+  fn operator_or_equal_0(self , rsthis: & QBitArray) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QBitArrayoRERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:96
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QBitArray & operator^=(const QBitArray &)
+
+/*
+
+*/
+impl /*struct*/ QBitArray {
+  pub fn operator_caret_equal_0<RetType, T: QBitArray_operator_caret_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_caret_equal_0(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_operator_caret_equal_0<RetType> {
+  fn operator_caret_equal_0(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_operator_caret_equal_0<usize> for (usize) {
+  fn operator_caret_equal_0(self , rsthis: & QBitArray) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QBitArrayeOERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:97
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QBitArray operator~() const
+
+/*
+
+*/
+impl /*struct*/ QBitArray {
+  pub fn operator_around_0<RetType, T: QBitArray_operator_around_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_around_0(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_operator_around_0<RetType> {
+  fn operator_around_0(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_operator_around_0<usize> for () {
+  fn operator_around_0(self , rsthis: & QBitArray) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QBitArraycoEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:99
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator==(const QBitArray &) const
+
+/*
+
+*/
+impl /*struct*/ QBitArray {
+  pub fn operator_equal_equal_0<RetType, T: QBitArray_operator_equal_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_equal_0(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_operator_equal_equal_0<RetType> {
+  fn operator_equal_equal_0(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_operator_equal_equal_0<bool> for (usize) {
+  fn operator_equal_equal_0(self , rsthis: & QBitArray) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QBitArrayeqERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:100
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QBitArray &) const
+
+/*
+
+*/
+impl /*struct*/ QBitArray {
+  pub fn operator_not_equal_0<RetType, T: QBitArray_operator_not_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_not_equal_0(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_operator_not_equal_0<RetType> {
+  fn operator_not_equal_0(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_operator_not_equal_0<bool> for (usize) {
+  fn operator_not_equal_0(self , rsthis: & QBitArray) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QBitArrayneERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:102
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool fill(bool, int)
+
+/*
+Sets every bit in the bit array to value, returning true if successful; otherwise returns false. If size is different from -1 (the default), the bit array is resized to size beforehand.
+
+Example:
+
+
+  QBitArray ba(8);
+  ba.fill(true);
+  // ba: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+
+  ba.fill(false, 2);
+  // ba: [ 0, 0 ]
+
+
+
+See also resize().
+*/
+impl /*struct*/ QBitArray {
+  pub fn fill_0<RetType, T: QBitArray_fill_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.fill_0(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_fill_0<RetType> {
+  fn fill_0(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_fill_0<bool> for (bool,i32) {
+  fn fill_0(self , rsthis: & QBitArray) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const bool as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QBitArray4fillEbi", 2,qtrt::FFITY_SINT8,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:103
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void fill(bool, int, int)
+
+/*
+Sets every bit in the bit array to value, returning true if successful; otherwise returns false. If size is different from -1 (the default), the bit array is resized to size beforehand.
+
+Example:
+
+
+  QBitArray ba(8);
+  ba.fill(true);
+  // ba: [ 1, 1, 1, 1, 1, 1, 1, 1 ]
+
+  ba.fill(false, 2);
+  // ba: [ 0, 0 ]
+
+
+
+See also resize().
+*/
+impl /*struct*/ QBitArray {
+  pub fn fill_1<RetType, T: QBitArray_fill_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.fill_1(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_fill_1<RetType> {
+  fn fill_1(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_fill_1<(/*void*/)> for (bool,i32,i32) {
+  fn fill_1(self , rsthis: & QBitArray) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const bool as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN9QBitArray4fillEbii", 3,qtrt::FFITY_SINT8,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qbitarray.h:105
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void truncate(int)
+
+/*
+Truncates the bit array at index position pos.
+
+If pos is beyond the end of the array, nothing happens.
+
+See also resize().
+*/
+impl /*struct*/ QBitArray {
+  pub fn truncate_0<RetType, T: QBitArray_truncate_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.truncate_0(self);
+    // return 1;
+  }
+}
+pub trait QBitArray_truncate_0<RetType> {
+  fn truncate_0(self , rsthis: & QBitArray) -> RetType;
+}
+impl<'a> /*trait*/ QBitArray_truncate_0<(/*void*/)> for (i32) {
+  fn truncate_0(self , rsthis: & QBitArray) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN9QBitArray8truncateEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+
+pub fn DeleteQBitArray(this :*mut QBitArray) {
+    // rv, err := qtrt::InvokeQtFunc6("_ZN9QBitArrayD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+//  body block end
+
+//  keep block begin
+
+//  keep block end

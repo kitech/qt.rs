@@ -1,265 +1,388 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qpropertyanimation.h
-// dst-file: /src/core/qpropertyanimation.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QPropertyAnimation
+// package qtcore
+// /usr/include/qt/QtCore/qpropertyanimation.h
+// #include <qpropertyanimation.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
-use super::qvariantanimation::*; // 773
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 20
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qbytearray::*; // 773
-use super::qobject::*; // 773
-use super::qobjectdefs::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QPropertyAnimation_Class_Size() -> c_int;
-  // proto:  QByteArray QPropertyAnimation::propertyName();
-  fn C_ZNK18QPropertyAnimation12propertyNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QPropertyAnimation::setTargetObject(QObject * target);
-  fn C_ZN18QPropertyAnimation15setTargetObjectEP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QPropertyAnimation::QPropertyAnimation(QObject * parent);
-  fn C_ZN18QPropertyAnimationC2EP7QObject(arg0: *mut c_void) -> u64;
-  // proto:  void QPropertyAnimation::~QPropertyAnimation();
-  fn C_ZN18QPropertyAnimationD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  QObject * QPropertyAnimation::targetObject();
-  fn C_ZNK18QPropertyAnimation12targetObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  const QMetaObject * QPropertyAnimation::metaObject();
-  fn C_ZNK18QPropertyAnimation10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QPropertyAnimation::QPropertyAnimation(QObject * target, const QByteArray & propertyName, QObject * parent);
-  fn C_ZN18QPropertyAnimationC2EP7QObjectRK10QByteArrayS1_(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> u64;
-  // proto:  void QPropertyAnimation::setPropertyName(const QByteArray & propertyName);
-  fn C_ZN18QPropertyAnimation15setPropertyNameERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-} // <= ext block end
+// bool event(QEvent *)
+// func (this *QPropertyAnimation) InheritEvent(f func(event *QEvent/*777 QEvent **/) bool) {
+//  qtrt.SetAllInheritCallback(this, "event", f)
+// }
 
-// body block begin =>
-// class sizeof(QPropertyAnimation)=1
-#[derive(Default)]
+// void updateCurrentValue(const QVariant &)
+// func (this *QPropertyAnimation) InheritUpdateCurrentValue(f func(value *QVariant) /*void*/) {
+//  qtrt.SetAllInheritCallback(this, "updateCurrentValue", f)
+// }
+
+// void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
+// func (this *QPropertyAnimation) InheritUpdateState(f func(newState int, oldState int) /*void*/) {
+//  qtrt.SetAllInheritCallback(this, "updateState", f)
+// }
+
+
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QPropertyAnimation)=16
 pub struct QPropertyAnimation {
   qbase: QVariantAnimation,
-  pub qclsinst: u64 /* *mut c_void*/,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QPropertyAnimation_ITF interface {
+//    QVariantAnimation_ITF
+//    QPropertyAnimation_PTR() *QPropertyAnimation
+//}
+//func (ptr *QPropertyAnimation) QPropertyAnimation_PTR() *QPropertyAnimation { return ptr }
 
 impl /*struct*/ QPropertyAnimation {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QPropertyAnimation {
-    return QPropertyAnimation{qbase: QVariantAnimation::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QPropertyAnimation {
+    return QPropertyAnimation{qclsinst: qthis, ..Default::default()};
   }
 }
-impl Deref for QPropertyAnimation {
-  type Target = QVariantAnimation;
+//impl Deref for QPropertyAnimation {
+//  type Target = QPropertyAnimationBASE;
+//
+//  fn deref(&self) -> &QPropertyAnimationBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QPropertyAnimationBASE> for QPropertyAnimation {
+//  fn as_ref(& self) -> & QPropertyAnimationBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qpropertyanimation.h:53
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject() const
 
-  fn deref(&self) -> &QVariantAnimation {
-    return & self.qbase;
-  }
-}
-impl AsRef<QVariantAnimation> for QPropertyAnimation {
-  fn as_ref(& self) -> & QVariantAnimation {
-    return & self.qbase;
-  }
-}
-  // proto:  QByteArray QPropertyAnimation::propertyName();
+/*
+
+*/
 impl /*struct*/ QPropertyAnimation {
-  pub fn propertyName<RetType, T: QPropertyAnimation_propertyName<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.propertyName(self);
+  pub fn metaObject_0<RetType, T: QPropertyAnimation_metaObject_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.metaObject_0(self);
     // return 1;
   }
 }
-
-pub trait QPropertyAnimation_propertyName<RetType> {
-  fn propertyName(self , rsthis: & QPropertyAnimation) -> RetType;
+pub trait QPropertyAnimation_metaObject_0<RetType> {
+  fn metaObject_0(self , rsthis: & QPropertyAnimation) -> RetType;
 }
-
-  // proto:  QByteArray QPropertyAnimation::propertyName();
-impl<'a> /*trait*/ QPropertyAnimation_propertyName<QByteArray> for () {
-  fn propertyName(self , rsthis: & QPropertyAnimation) -> QByteArray {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK18QPropertyAnimation12propertyNameEv()};
-    let mut ret = unsafe {C_ZNK18QPropertyAnimation12propertyNameEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QPropertyAnimation_metaObject_0<usize> for () {
+  fn metaObject_0(self , rsthis: & QPropertyAnimation) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QPropertyAnimation10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  void QPropertyAnimation::setTargetObject(QObject * target);
+// /usr/include/qt/QtCore/qpropertyanimation.h:58
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QPropertyAnimation(QObject *)
+
+/*
+Construct a QPropertyAnimation object. parent is passed to QObject's constructor.
+*/
+// QPropertyAnimation(QObject *) ctx.fn_proto_cpp
 impl /*struct*/ QPropertyAnimation {
-  pub fn setTargetObject<RetType, T: QPropertyAnimation_setTargetObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setTargetObject(self);
-    // return 1;
-  }
-}
-
-pub trait QPropertyAnimation_setTargetObject<RetType> {
-  fn setTargetObject(self , rsthis: & QPropertyAnimation) -> RetType;
-}
-
-  // proto:  void QPropertyAnimation::setTargetObject(QObject * target);
-impl<'a> /*trait*/ QPropertyAnimation_setTargetObject<()> for (&'a QObject) {
-  fn setTargetObject(self , rsthis: & QPropertyAnimation) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QPropertyAnimation15setTargetObjectEP7QObject()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN18QPropertyAnimation15setTargetObjectEP7QObject(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QPropertyAnimation::QPropertyAnimation(QObject * parent);
-impl /*struct*/ QPropertyAnimation {
-  pub fn new<T: QPropertyAnimation_new>(value: T) -> QPropertyAnimation {
-    let rsthis = value.new();
+  pub fn QPropertyAnimation_0<T: QPropertyAnimation_QPropertyAnimation_0>(value: T) -> QPropertyAnimation {
+    let rsthis = value.QPropertyAnimation_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPropertyAnimation_new {
-  fn new(self) -> QPropertyAnimation;
+pub trait QPropertyAnimation_QPropertyAnimation_0 {
+  fn QPropertyAnimation_0(self) -> QPropertyAnimation;
 }
-
-  // proto:  void QPropertyAnimation::QPropertyAnimation(QObject * parent);
-impl<'a> /*trait*/ QPropertyAnimation_new for (Option<&'a QObject>) {
-  fn new(self) -> QPropertyAnimation {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QPropertyAnimation(QObject *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QPropertyAnimation_QPropertyAnimation_0 for (usize) {
+  fn QPropertyAnimation_0(self) -> QPropertyAnimation {
     // unsafe{_ZN18QPropertyAnimationC2EP7QObject()};
-    let ctysz: c_int = unsafe{QPropertyAnimation_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN18QPropertyAnimationC2EP7QObject(arg0)};
-    let rsthis = QPropertyAnimation{qbase: QVariantAnimation::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QPropertyAnimationC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QPropertyAnimation{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QPropertyAnimation::~QPropertyAnimation();
+// /usr/include/qt/QtCore/qpropertyanimation.h:59
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QPropertyAnimation(QObject *, const QByteArray &, QObject *)
+
+/*
+Construct a QPropertyAnimation object. parent is passed to QObject's constructor.
+*/
+// QPropertyAnimation(QObject *, const QByteArray &, QObject *) ctx.fn_proto_cpp
 impl /*struct*/ QPropertyAnimation {
-  pub fn free<RetType, T: QPropertyAnimation_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
+  pub fn QPropertyAnimation_1<T: QPropertyAnimation_QPropertyAnimation_1>(value: T) -> QPropertyAnimation {
+    let rsthis = value.QPropertyAnimation_1();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QPropertyAnimation_free<RetType> {
-  fn free(self , rsthis: & QPropertyAnimation) -> RetType;
+pub trait QPropertyAnimation_QPropertyAnimation_1 {
+  fn QPropertyAnimation_1(self) -> QPropertyAnimation;
 }
-
-  // proto:  void QPropertyAnimation::~QPropertyAnimation();
-impl<'a> /*trait*/ QPropertyAnimation_free<()> for () {
-  fn free(self , rsthis: & QPropertyAnimation) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QPropertyAnimationD2Ev()};
-     unsafe {C_ZN18QPropertyAnimationD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  QObject * QPropertyAnimation::targetObject();
-impl /*struct*/ QPropertyAnimation {
-  pub fn targetObject<RetType, T: QPropertyAnimation_targetObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.targetObject(self);
-    // return 1;
-  }
-}
-
-pub trait QPropertyAnimation_targetObject<RetType> {
-  fn targetObject(self , rsthis: & QPropertyAnimation) -> RetType;
-}
-
-  // proto:  QObject * QPropertyAnimation::targetObject();
-impl<'a> /*trait*/ QPropertyAnimation_targetObject<QObject> for () {
-  fn targetObject(self , rsthis: & QPropertyAnimation) -> QObject {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK18QPropertyAnimation12targetObjectEv()};
-    let mut ret = unsafe {C_ZNK18QPropertyAnimation12targetObjectEv(rsthis.qclsinst)};
-    let mut ret1 = QObject::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  const QMetaObject * QPropertyAnimation::metaObject();
-impl /*struct*/ QPropertyAnimation {
-  pub fn metaObject<RetType, T: QPropertyAnimation_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.metaObject(self);
-    // return 1;
-  }
-}
-
-pub trait QPropertyAnimation_metaObject<RetType> {
-  fn metaObject(self , rsthis: & QPropertyAnimation) -> RetType;
-}
-
-  // proto:  const QMetaObject * QPropertyAnimation::metaObject();
-impl<'a> /*trait*/ QPropertyAnimation_metaObject<QMetaObject> for () {
-  fn metaObject(self , rsthis: & QPropertyAnimation) -> QMetaObject {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK18QPropertyAnimation10metaObjectEv()};
-    let mut ret = unsafe {C_ZNK18QPropertyAnimation10metaObjectEv(rsthis.qclsinst)};
-    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QPropertyAnimation::QPropertyAnimation(QObject * target, const QByteArray & propertyName, QObject * parent);
-impl<'a> /*trait*/ QPropertyAnimation_new for (&'a QObject, &'a QByteArray, Option<&'a QObject>) {
-  fn new(self) -> QPropertyAnimation {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QPropertyAnimation(QObject *, const QByteArray &, QObject *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QPropertyAnimation_QPropertyAnimation_1 for (usize,usize,usize) {
+  fn QPropertyAnimation_1(self) -> QPropertyAnimation {
     // unsafe{_ZN18QPropertyAnimationC2EP7QObjectRK10QByteArrayS1_()};
-    let ctysz: c_int = unsafe{QPropertyAnimation_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap().qclsinst})  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN18QPropertyAnimationC2EP7QObjectRK10QByteArrayS1_(arg0, arg1, arg2)};
-    let rsthis = QPropertyAnimation{qbase: QVariantAnimation::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QPropertyAnimationC2EP7QObjectRK10QByteArrayS1_", 3,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QPropertyAnimation{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QPropertyAnimation::setPropertyName(const QByteArray & propertyName);
+// /usr/include/qt/QtCore/qpropertyanimation.h:60
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QPropertyAnimation()
+
+/*
+
+*/
+pub fn DeleteQPropertyAnimation(this :*mut QPropertyAnimation) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN18QPropertyAnimationD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 16)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qpropertyanimation.h:62
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QObject * targetObject() const
+
+/*
+
+*/
 impl /*struct*/ QPropertyAnimation {
-  pub fn setPropertyName<RetType, T: QPropertyAnimation_setPropertyName<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setPropertyName(self);
+  pub fn targetObject_0<RetType, T: QPropertyAnimation_targetObject_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.targetObject_0(self);
+    // return 1;
+  }
+}
+pub trait QPropertyAnimation_targetObject_0<RetType> {
+  fn targetObject_0(self , rsthis: & QPropertyAnimation) -> RetType;
+}
+impl<'a> /*trait*/ QPropertyAnimation_targetObject_0<usize> for () {
+  fn targetObject_0(self , rsthis: & QPropertyAnimation) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QPropertyAnimation12targetObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qpropertyanimation.h:63
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setTargetObject(QObject *)
+
+/*
+
+*/
+impl /*struct*/ QPropertyAnimation {
+  pub fn setTargetObject_0<RetType, T: QPropertyAnimation_setTargetObject_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setTargetObject_0(self);
+    // return 1;
+  }
+}
+pub trait QPropertyAnimation_setTargetObject_0<RetType> {
+  fn setTargetObject_0(self , rsthis: & QPropertyAnimation) -> RetType;
+}
+impl<'a> /*trait*/ QPropertyAnimation_setTargetObject_0<(/*void*/)> for (usize) {
+  fn setTargetObject_0(self , rsthis: & QPropertyAnimation) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN18QPropertyAnimation15setTargetObjectEP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QPropertyAnimation_setPropertyName<RetType> {
-  fn setPropertyName(self , rsthis: & QPropertyAnimation) -> RetType;
+// /usr/include/qt/QtCore/qpropertyanimation.h:65
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QByteArray propertyName() const
+
+/*
+
+*/
+impl /*struct*/ QPropertyAnimation {
+  pub fn propertyName_0<RetType, T: QPropertyAnimation_propertyName_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.propertyName_0(self);
+    // return 1;
+  }
+}
+pub trait QPropertyAnimation_propertyName_0<RetType> {
+  fn propertyName_0(self , rsthis: & QPropertyAnimation) -> RetType;
+}
+impl<'a> /*trait*/ QPropertyAnimation_propertyName_0<usize> for () {
+  fn propertyName_0(self , rsthis: & QPropertyAnimation) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QPropertyAnimation12propertyNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
 }
 
-  // proto:  void QPropertyAnimation::setPropertyName(const QByteArray & propertyName);
-impl<'a> /*trait*/ QPropertyAnimation_setPropertyName<()> for (&'a QByteArray) {
-  fn setPropertyName(self , rsthis: & QPropertyAnimation) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QPropertyAnimation15setPropertyNameERK10QByteArray()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN18QPropertyAnimation15setPropertyNameERK10QByteArray(rsthis.qclsinst, arg0)};
+// /usr/include/qt/QtCore/qpropertyanimation.h:66
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setPropertyName(const QByteArray &)
+
+/*
+
+*/
+impl /*struct*/ QPropertyAnimation {
+  pub fn setPropertyName_0<RetType, T: QPropertyAnimation_setPropertyName_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setPropertyName_0(self);
+    // return 1;
+  }
+}
+pub trait QPropertyAnimation_setPropertyName_0<RetType> {
+  fn setPropertyName_0(self , rsthis: & QPropertyAnimation) -> RetType;
+}
+impl<'a> /*trait*/ QPropertyAnimation_setPropertyName_0<(/*void*/)> for (usize) {
+  fn setPropertyName_0(self , rsthis: & QPropertyAnimation) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN18QPropertyAnimation15setPropertyNameERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qpropertyanimation.h:69
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
 
+/*
+Reimplemented from QObject::event().
+*/
+impl /*struct*/ QPropertyAnimation {
+  pub fn event_0<RetType, T: QPropertyAnimation_event_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.event_0(self);
+    // return 1;
+  }
+}
+pub trait QPropertyAnimation_event_0<RetType> {
+  fn event_0(self , rsthis: & QPropertyAnimation) -> RetType;
+}
+impl<'a> /*trait*/ QPropertyAnimation_event_0<bool> for (usize) {
+  fn event_0(self , rsthis: & QPropertyAnimation) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN18QPropertyAnimation5eventEP6QEvent", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qpropertyanimation.h:70
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void updateCurrentValue(const QVariant &)
+
+/*
+Reimplemented from QVariantAnimation::updateCurrentValue().
+
+This virtual function is called by QVariantAnimation whenever the current value changes. value is the new, updated value. It updates the current value of the property on the target object.
+
+See also currentValue and currentTime.
+*/
+impl /*struct*/ QPropertyAnimation {
+  pub fn updateCurrentValue_0<RetType, T: QPropertyAnimation_updateCurrentValue_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.updateCurrentValue_0(self);
+    // return 1;
+  }
+}
+pub trait QPropertyAnimation_updateCurrentValue_0<RetType> {
+  fn updateCurrentValue_0(self , rsthis: & QPropertyAnimation) -> RetType;
+}
+impl<'a> /*trait*/ QPropertyAnimation_updateCurrentValue_0<(/*void*/)> for (usize) {
+  fn updateCurrentValue_0(self , rsthis: & QPropertyAnimation) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN18QPropertyAnimation18updateCurrentValueERK8QVariant", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qpropertyanimation.h:71
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
+
+/*
+Reimplemented from QAbstractAnimation::updateState().
+
+If the startValue is not defined when the state of the animation changes from Stopped to Running, the current property value is used as the initial value for the animation.
+*/
+impl /*struct*/ QPropertyAnimation {
+  pub fn updateState_0<RetType, T: QPropertyAnimation_updateState_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.updateState_0(self);
+    // return 1;
+  }
+}
+pub trait QPropertyAnimation_updateState_0<RetType> {
+  fn updateState_0(self , rsthis: & QPropertyAnimation) -> RetType;
+}
+impl<'a> /*trait*/ QPropertyAnimation_updateState_0<(/*void*/)> for (i32,i32) {
+  fn updateState_0(self , rsthis: & QPropertyAnimation) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN18QPropertyAnimation11updateStateEN18QAbstractAnimation5StateES1_", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+//  body block end
+
+//  keep block begin
+
+//  keep block end

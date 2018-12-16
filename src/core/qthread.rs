@@ -1,678 +1,1011 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qthread.h
-// dst-file: /src/core/qthread.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QThread
+// package qtcore
+// /usr/include/qt/QtCore/qthread.h
+// #include <qthread.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
-use super::qobject::*; // 773
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 0
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qabstracteventdispatcher::*; // 773
-use super::qobjectdefs::*; // 773
-use super::qcoreevent::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QThread_Class_Size() -> c_int;
-  // proto:  void QThread::QThread(QObject * parent);
-  fn C_ZN7QThreadC2EP7QObject(arg0: *mut c_void) -> u64;
-  // proto:  void QThread::setEventDispatcher(QAbstractEventDispatcher * eventDispatcher);
-  fn C_ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  const QMetaObject * QThread::metaObject();
-  fn C_ZNK7QThread10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto: static void QThread::yieldCurrentThread();
-  fn C_ZN7QThread18yieldCurrentThreadEv();
-  // proto:  bool QThread::isInterruptionRequested();
-  fn C_ZNK7QThread23isInterruptionRequestedEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto: static void QThread::msleep(unsigned long );
-  fn C_ZN7QThread6msleepEm(arg0: c_ulong);
-  // proto:  void QThread::requestInterruption();
-  fn C_ZN7QThread19requestInterruptionEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QThread::exit(int retcode);
-  fn C_ZN7QThread4exitEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto:  bool QThread::event(QEvent * event);
-  fn C_ZN7QThread5eventEP6QEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
-  // proto:  uint QThread::stackSize();
-  fn C_ZNK7QThread9stackSizeEv(qthis: u64 /* *mut c_void*/) -> c_uint;
-  // proto:  QAbstractEventDispatcher * QThread::eventDispatcher();
-  fn C_ZNK7QThread15eventDispatcherEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QThread::setStackSize(uint stackSize);
-  fn C_ZN7QThread12setStackSizeEj(qthis: u64 /* *mut c_void*/, arg0: c_uint);
-  // proto:  bool QThread::isFinished();
-  fn C_ZNK7QThread10isFinishedEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto: static void QThread::sleep(unsigned long );
-  fn C_ZN7QThread5sleepEm(arg0: c_ulong);
-  // proto: static void QThread::usleep(unsigned long );
-  fn C_ZN7QThread6usleepEm(arg0: c_ulong);
-  // proto: static int QThread::idealThreadCount();
-  fn C_ZN7QThread16idealThreadCountEv() -> c_int;
-  // proto:  bool QThread::wait(unsigned long time);
-  fn C_ZN7QThread4waitEm(qthis: u64 /* *mut c_void*/, arg0: c_ulong) -> c_char;
-  // proto: static QThread * QThread::currentThread();
-  fn C_ZN7QThread13currentThreadEv() -> *mut c_void;
-  // proto:  bool QThread::isRunning();
-  fn C_ZNK7QThread9isRunningEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QThread::terminate();
-  fn C_ZN7QThread9terminateEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QThread::~QThread();
-  fn C_ZN7QThreadD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void QThread::quit();
-  fn C_ZN7QThread4quitEv(qthis: u64 /* *mut c_void*/);
-  // proto:  int QThread::loopLevel();
-  fn C_ZNK7QThread9loopLevelEv(qthis: u64 /* *mut c_void*/) -> c_int;
-} // <= ext block end
+// void run()
+// func (this *QThread) InheritRun(f func() /*void*/) {
+//  qtrt.SetAllInheritCallback(this, "run", f)
+// }
 
-// body block begin =>
-// class sizeof(QThread)=1
-#[derive(Default)]
+// int exec()
+// func (this *QThread) InheritExec(f func() int) {
+//  qtrt.SetAllInheritCallback(this, "exec", f)
+// }
+
+// void setTerminationEnabled(bool)
+// func (this *QThread) InheritSetTerminationEnabled(f func(enabled bool) /*void*/) {
+//  qtrt.SetAllInheritCallback(this, "setTerminationEnabled", f)
+// }
+
+
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QThread)=16
 pub struct QThread {
   qbase: QObject,
-  pub qclsinst: u64 /* *mut c_void*/,
-  pub _started: QThread_started_signal,
-  pub _finished: QThread_finished_signal,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QThread_ITF interface {
+//    QObject_ITF
+//    QThread_PTR() *QThread
+//}
+//func (ptr *QThread) QThread_PTR() *QThread { return ptr }
 
 impl /*struct*/ QThread {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QThread {
-    return QThread{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QThread {
+    return QThread{qclsinst: qthis, ..Default::default()};
   }
 }
-impl Deref for QThread {
-  type Target = QObject;
+//impl Deref for QThread {
+//  type Target = QThreadBASE;
+//
+//  fn deref(&self) -> &QThreadBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QThreadBASE> for QThread {
+//  fn as_ref(& self) -> & QThreadBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qthread.h:72
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject() const
 
-  fn deref(&self) -> &QObject {
-    return & self.qbase;
-  }
-}
-impl AsRef<QObject> for QThread {
-  fn as_ref(& self) -> & QObject {
-    return & self.qbase;
-  }
-}
-  // proto:  void QThread::QThread(QObject * parent);
+/*
+
+*/
 impl /*struct*/ QThread {
-  pub fn new<T: QThread_new>(value: T) -> QThread {
-    let rsthis = value.new();
+  pub fn metaObject_0<RetType, T: QThread_metaObject_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.metaObject_0(self);
+    // return 1;
+  }
+}
+pub trait QThread_metaObject_0<RetType> {
+  fn metaObject_0(self , rsthis: & QThread) -> RetType;
+}
+impl<'a> /*trait*/ QThread_metaObject_0<usize> for () {
+  fn metaObject_0(self , rsthis: & QThread) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QThread10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qthread.h:74
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] Qt::HANDLE currentThreadId()
+
+/*
+Returns the thread handle of the currently executing thread.
+
+Warning: The handle returned by this function is used for internal purposes and should not be used in any application code.
+
+Warning: On Windows, the returned value is a pseudo-handle for the current thread. It can't be used for numerical comparison. i.e., this function returns the DWORD (Windows-Thread ID) returned by the Win32 function getCurrentThreadId(), not the HANDLE (Windows-Thread HANDLE) returned by the Win32 function getCurrentThread().
+*/
+impl /*struct*/ QThread {
+  pub fn currentThreadId_0<RetType, T: QThread_currentThreadId_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.currentThreadId_0();
+    // return 1;
+  }
+}
+pub trait QThread_currentThreadId_0<RetType> {
+  fn currentThreadId_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QThread_currentThreadId_0<i32> for () {
+  fn currentThreadId_0(self ) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QThread15currentThreadIdEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qthread.h:75
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QThread * currentThread()
+
+/*
+Returns a pointer to a QThread which manages the currently executing thread.
+*/
+impl /*struct*/ QThread {
+  pub fn currentThread_0<RetType, T: QThread_currentThread_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.currentThread_0();
+    // return 1;
+  }
+}
+pub trait QThread_currentThread_0<RetType> {
+  fn currentThread_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QThread_currentThread_0<usize> for () {
+  fn currentThread_0(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QThread13currentThreadEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qthread.h:76
+// index:0
+// Public static Visibility=Default Availability=Available
+// [4] int idealThreadCount()
+
+/*
+Returns the ideal number of threads that can be run on the system. This is done querying the number of processor cores, both real and logical, in the system. This function returns 1 if the number of processor cores could not be detected.
+*/
+impl /*struct*/ QThread {
+  pub fn idealThreadCount_0<RetType, T: QThread_idealThreadCount_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.idealThreadCount_0();
+    // return 1;
+  }
+}
+pub trait QThread_idealThreadCount_0<RetType> {
+  fn idealThreadCount_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QThread_idealThreadCount_0<i32> for () {
+  fn idealThreadCount_0(self ) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QThread16idealThreadCountEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qthread.h:77
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] void yieldCurrentThread()
+
+/*
+Yields execution of the current thread to another runnable thread, if any. Note that the operating system decides to which thread to switch.
+*/
+impl /*struct*/ QThread {
+  pub fn yieldCurrentThread_0<RetType, T: QThread_yieldCurrentThread_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.yieldCurrentThread_0();
+    // return 1;
+  }
+}
+pub trait QThread_yieldCurrentThread_0<RetType> {
+  fn yieldCurrentThread_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QThread_yieldCurrentThread_0<(/*void*/)> for () {
+  fn yieldCurrentThread_0(self ) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZN7QThread18yieldCurrentThreadEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qthread.h:79
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QThread(QObject *)
+
+/*
+Constructs a new QThread to manage a new thread. The parent takes ownership of the QThread. The thread does not begin executing until start() is called.
+
+See also start().
+*/
+// QThread(QObject *) ctx.fn_proto_cpp
+impl /*struct*/ QThread {
+  pub fn QThread_0<T: QThread_QThread_0>(value: T) -> QThread {
+    let rsthis = value.QThread_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QThread_new {
-  fn new(self) -> QThread;
+pub trait QThread_QThread_0 {
+  fn QThread_0(self) -> QThread;
 }
-
-  // proto:  void QThread::QThread(QObject * parent);
-impl<'a> /*trait*/ QThread_new for (Option<&'a QObject>) {
-  fn new(self) -> QThread {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QThread(QObject *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QThread_QThread_0 for (usize) {
+  fn QThread_0(self) -> QThread {
     // unsafe{_ZN7QThreadC2EP7QObject()};
-    let ctysz: c_int = unsafe{QThread_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN7QThreadC2EP7QObject(arg0)};
-    let rsthis = QThread{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN7QThreadC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QThread{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QThread::setEventDispatcher(QAbstractEventDispatcher * eventDispatcher);
+// /usr/include/qt/QtCore/qthread.h:80
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QThread()
+
+/*
+
+*/
+pub fn DeleteQThread(this :*mut QThread) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN7QThreadD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 16)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qthread.h:96
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setPriority(QThread::Priority)
+
+/*
+This function sets the priority for a running thread. If the thread is not running, this function does nothing and returns immediately. Use start() to start a thread with a specific priority.
+
+The priority argument can be any value in the QThread::Priority enum except for InheritPriorty.
+
+The effect of the priority parameter is dependent on the operating system's scheduling policy. In particular, the priority will be ignored on systems that do not support thread priorities (such as on Linux, see http://linux.die.net/man/2/sched_setscheduler for more details).
+
+This function was introduced in  Qt 4.1.
+
+See also Priority, priority(), and start().
+*/
 impl /*struct*/ QThread {
-  pub fn setEventDispatcher<RetType, T: QThread_setEventDispatcher<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setEventDispatcher(self);
+  pub fn setPriority_0<RetType, T: QThread_setPriority_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setPriority_0(self);
+    // return 1;
+  }
+}
+pub trait QThread_setPriority_0<RetType> {
+  fn setPriority_0(self , rsthis: & QThread) -> RetType;
+}
+impl<'a> /*trait*/ QThread_setPriority_0<(/*void*/)> for (i32) {
+  fn setPriority_0(self , rsthis: & QThread) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN7QThread11setPriorityENS_8PriorityE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QThread_setEventDispatcher<RetType> {
-  fn setEventDispatcher(self , rsthis: & QThread) -> RetType;
-}
+// /usr/include/qt/QtCore/qthread.h:97
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] QThread::Priority priority() const
 
-  // proto:  void QThread::setEventDispatcher(QAbstractEventDispatcher * eventDispatcher);
-impl<'a> /*trait*/ QThread_setEventDispatcher<()> for (&'a QAbstractEventDispatcher) {
-  fn setEventDispatcher(self , rsthis: & QThread) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
+/*
+Returns the priority for a running thread. If the thread is not running, this function returns InheritPriority.
 
-  // proto:  const QMetaObject * QThread::metaObject();
+This function was introduced in  Qt 4.1.
+
+See also Priority, setPriority(), and start().
+*/
 impl /*struct*/ QThread {
-  pub fn metaObject<RetType, T: QThread_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.metaObject(self);
+  pub fn priority_0<RetType, T: QThread_priority_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.priority_0(self);
     // return 1;
   }
 }
-
-pub trait QThread_metaObject<RetType> {
-  fn metaObject(self , rsthis: & QThread) -> RetType;
+pub trait QThread_priority_0<RetType> {
+  fn priority_0(self , rsthis: & QThread) -> RetType;
 }
-
-  // proto:  const QMetaObject * QThread::metaObject();
-impl<'a> /*trait*/ QThread_metaObject<QMetaObject> for () {
-  fn metaObject(self , rsthis: & QThread) -> QMetaObject {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QThread10metaObjectEv()};
-    let mut ret = unsafe {C_ZNK7QThread10metaObjectEv(rsthis.qclsinst)};
-    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QThread_priority_0<i32> for () {
+  fn priority_0(self , rsthis: & QThread) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QThread8priorityEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i32 = Default::default(); return dret;
   }
 }
 
-  // proto: static void QThread::yieldCurrentThread();
+// /usr/include/qt/QtCore/qthread.h:99
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isFinished() const
+
+/*
+Returns true if the thread is finished; otherwise returns false.
+
+See also isRunning().
+*/
 impl /*struct*/ QThread {
-  pub fn yieldCurrentThread_s<RetType, T: QThread_yieldCurrentThread_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.yieldCurrentThread_s();
+  pub fn isFinished_0<RetType, T: QThread_isFinished_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isFinished_0(self);
     // return 1;
   }
 }
-
-pub trait QThread_yieldCurrentThread_s<RetType> {
-  fn yieldCurrentThread_s(self ) -> RetType;
+pub trait QThread_isFinished_0<RetType> {
+  fn isFinished_0(self , rsthis: & QThread) -> RetType;
 }
-
-  // proto: static void QThread::yieldCurrentThread();
-impl<'a> /*trait*/ QThread_yieldCurrentThread_s<()> for () {
-  fn yieldCurrentThread_s(self ) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QThread18yieldCurrentThreadEv()};
-     unsafe {C_ZN7QThread18yieldCurrentThreadEv()};
+impl<'a> /*trait*/ QThread_isFinished_0<bool> for () {
+  fn isFinished_0(self , rsthis: & QThread) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QThread10isFinishedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  bool QThread::isInterruptionRequested();
+// /usr/include/qt/QtCore/qthread.h:100
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isRunning() const
+
+/*
+Returns true if the thread is running; otherwise returns false.
+
+See also isFinished().
+*/
 impl /*struct*/ QThread {
-  pub fn isInterruptionRequested<RetType, T: QThread_isInterruptionRequested<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isInterruptionRequested(self);
+  pub fn isRunning_0<RetType, T: QThread_isRunning_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isRunning_0(self);
     // return 1;
   }
 }
-
-pub trait QThread_isInterruptionRequested<RetType> {
-  fn isInterruptionRequested(self , rsthis: & QThread) -> RetType;
+pub trait QThread_isRunning_0<RetType> {
+  fn isRunning_0(self , rsthis: & QThread) -> RetType;
 }
-
-  // proto:  bool QThread::isInterruptionRequested();
-impl<'a> /*trait*/ QThread_isInterruptionRequested<i8> for () {
-  fn isInterruptionRequested(self , rsthis: & QThread) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QThread23isInterruptionRequestedEv()};
-    let mut ret = unsafe {C_ZNK7QThread23isInterruptionRequestedEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+impl<'a> /*trait*/ QThread_isRunning_0<bool> for () {
+  fn isRunning_0(self , rsthis: & QThread) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QThread9isRunningEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto: static void QThread::msleep(unsigned long );
+// /usr/include/qt/QtCore/qthread.h:102
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void requestInterruption()
+
+/*
+Request the interruption of the thread. That request is advisory and it is up to code running on the thread to decide if and how it should act upon such request. This function does not stop any event loop running on the thread and does not terminate it in any way.
+
+This function was introduced in  Qt 5.2.
+
+See also isInterruptionRequested().
+*/
 impl /*struct*/ QThread {
-  pub fn msleep_s<RetType, T: QThread_msleep_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.msleep_s();
+  pub fn requestInterruption_0<RetType, T: QThread_requestInterruption_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.requestInterruption_0(self);
+    // return 1;
+  }
+}
+pub trait QThread_requestInterruption_0<RetType> {
+  fn requestInterruption_0(self , rsthis: & QThread) -> RetType;
+}
+impl<'a> /*trait*/ QThread_requestInterruption_0<(/*void*/)> for () {
+  fn requestInterruption_0(self , rsthis: & QThread) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZN7QThread19requestInterruptionEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QThread_msleep_s<RetType> {
-  fn msleep_s(self ) -> RetType;
-}
+// /usr/include/qt/QtCore/qthread.h:103
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isInterruptionRequested() const
 
-  // proto: static void QThread::msleep(unsigned long );
-impl<'a> /*trait*/ QThread_msleep_s<()> for (u64) {
-  fn msleep_s(self ) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QThread6msleepEm()};
-    let arg0 = self  as c_ulong;
-     unsafe {C_ZN7QThread6msleepEm(arg0)};
-    // return 1;
+/*
+Return true if the task running on this thread should be stopped. An interruption can be requested by requestInterruption().
+
+This function can be used to make long running tasks cleanly interruptible. Never checking or acting on the value returned by this function is safe, however it is advisable do so regularly in long running functions. Take care not to call it too often, to keep the overhead low.
+
+
+  void long_task() {
+       forever {
+          if ( QThread::currentThread()->isInterruptionRequested() ) {
+              return;
+          }
+      }
   }
-}
 
-  // proto:  void QThread::requestInterruption();
+
+
+This function was introduced in  Qt 5.2.
+
+See also currentThread() and requestInterruption().
+*/
 impl /*struct*/ QThread {
-  pub fn requestInterruption<RetType, T: QThread_requestInterruption<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.requestInterruption(self);
+  pub fn isInterruptionRequested_0<RetType, T: QThread_isInterruptionRequested_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isInterruptionRequested_0(self);
     // return 1;
   }
 }
-
-pub trait QThread_requestInterruption<RetType> {
-  fn requestInterruption(self , rsthis: & QThread) -> RetType;
+pub trait QThread_isInterruptionRequested_0<RetType> {
+  fn isInterruptionRequested_0(self , rsthis: & QThread) -> RetType;
 }
-
-  // proto:  void QThread::requestInterruption();
-impl<'a> /*trait*/ QThread_requestInterruption<()> for () {
-  fn requestInterruption(self , rsthis: & QThread) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QThread19requestInterruptionEv()};
-     unsafe {C_ZN7QThread19requestInterruptionEv(rsthis.qclsinst)};
+impl<'a> /*trait*/ QThread_isInterruptionRequested_0<bool> for () {
+  fn isInterruptionRequested_0(self , rsthis: & QThread) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QThread23isInterruptionRequestedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  void QThread::exit(int retcode);
+// /usr/include/qt/QtCore/qthread.h:105
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setStackSize(uint)
+
+/*
+Sets the maximum stack size for the thread to stackSize. If stackSize is greater than zero, the maximum stack size is set to stackSize bytes, otherwise the maximum stack size is automatically determined by the operating system.
+
+Warning: Most operating systems place minimum and maximum limits on thread stack sizes. The thread will fail to start if the stack size is outside these limits.
+
+See also stackSize().
+*/
 impl /*struct*/ QThread {
-  pub fn exit<RetType, T: QThread_exit<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.exit(self);
+  pub fn setStackSize_0<RetType, T: QThread_setStackSize_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setStackSize_0(self);
+    // return 1;
+  }
+}
+pub trait QThread_setStackSize_0<RetType> {
+  fn setStackSize_0(self , rsthis: & QThread) -> RetType;
+}
+impl<'a> /*trait*/ QThread_setStackSize_0<(/*void*/)> for (u32) {
+  fn setStackSize_0(self , rsthis: & QThread) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const u32 as usize;
+     qtrt::InvokeQtFunc6("_ZN7QThread12setStackSizeEj", 1,qtrt::FFITY_UINT32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QThread_exit<RetType> {
-  fn exit(self , rsthis: & QThread) -> RetType;
-}
+// /usr/include/qt/QtCore/qthread.h:106
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] uint stackSize() const
 
-  // proto:  void QThread::exit(int retcode);
-impl<'a> /*trait*/ QThread_exit<()> for (Option<i32>) {
-  fn exit(self , rsthis: & QThread) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QThread4exitEi()};
-    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_int;
-     unsafe {C_ZN7QThread4exitEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
+/*
+Returns the maximum stack size for the thread (if set with setStackSize()); otherwise returns zero.
 
-  // proto:  bool QThread::event(QEvent * event);
+See also setStackSize().
+*/
 impl /*struct*/ QThread {
-  pub fn event<RetType, T: QThread_event<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.event(self);
+  pub fn stackSize_0<RetType, T: QThread_stackSize_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.stackSize_0(self);
     // return 1;
   }
 }
-
-pub trait QThread_event<RetType> {
-  fn event(self , rsthis: & QThread) -> RetType;
+pub trait QThread_stackSize_0<RetType> {
+  fn stackSize_0(self , rsthis: & QThread) -> RetType;
 }
-
-  // proto:  bool QThread::event(QEvent * event);
-impl<'a> /*trait*/ QThread_event<i8> for (&'a QEvent) {
-  fn event(self , rsthis: & QThread) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QThread5eventEP6QEvent()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN7QThread5eventEP6QEvent(rsthis.qclsinst, arg0)};
-    return ret as i8; // 1
+impl<'a> /*trait*/ QThread_stackSize_0<u32> for () {
+  fn stackSize_0(self , rsthis: & QThread) -> u32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QThread9stackSizeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: u32 = Default::default(); return dret;
   }
 }
 
-  // proto:  uint QThread::stackSize();
+// /usr/include/qt/QtCore/qthread.h:108
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void exit(int)
+
+/*
+Tells the thread's event loop to exit with a return code.
+
+After calling this function, the thread leaves the event loop and returns from the call to QEventLoop::exec(). The QEventLoop::exec() function returns returnCode.
+
+By convention, a returnCode of 0 means success, any non-zero value indicates an error.
+
+Note that unlike the C library function of the same name, this function does return to the caller -- it is event processing that stops.
+
+No QEventLoops will be started anymore in this thread until QThread::exec() has been called again. If the eventloop in QThread::exec() is not running then the next call to QThread::exec() will also return immediately.
+
+See also quit() and QEventLoop.
+*/
 impl /*struct*/ QThread {
-  pub fn stackSize<RetType, T: QThread_stackSize<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.stackSize(self);
+  pub fn exit_0<RetType, T: QThread_exit_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.exit_0(self);
+    // return 1;
+  }
+}
+pub trait QThread_exit_0<RetType> {
+  fn exit_0(self , rsthis: & QThread) -> RetType;
+}
+impl<'a> /*trait*/ QThread_exit_0<(/*void*/)> for (i32) {
+  fn exit_0(self , rsthis: & QThread) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN7QThread4exitEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QThread_stackSize<RetType> {
-  fn stackSize(self , rsthis: & QThread) -> RetType;
-}
+// /usr/include/qt/QtCore/qthread.h:110
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QAbstractEventDispatcher * eventDispatcher() const
 
-  // proto:  uint QThread::stackSize();
-impl<'a> /*trait*/ QThread_stackSize<u32> for () {
-  fn stackSize(self , rsthis: & QThread) -> u32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QThread9stackSizeEv()};
-    let mut ret = unsafe {C_ZNK7QThread9stackSizeEv(rsthis.qclsinst)};
-    return ret as u32; // 1
-    // return 1;
-  }
-}
+/*
+Returns a pointer to the event dispatcher object for the thread. If no event dispatcher exists for the thread, this function returns 0.
 
-  // proto:  QAbstractEventDispatcher * QThread::eventDispatcher();
+This function was introduced in  Qt 5.0.
+
+See also setEventDispatcher().
+*/
 impl /*struct*/ QThread {
-  pub fn eventDispatcher<RetType, T: QThread_eventDispatcher<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.eventDispatcher(self);
+  pub fn eventDispatcher_0<RetType, T: QThread_eventDispatcher_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.eventDispatcher_0(self);
     // return 1;
   }
 }
-
-pub trait QThread_eventDispatcher<RetType> {
-  fn eventDispatcher(self , rsthis: & QThread) -> RetType;
+pub trait QThread_eventDispatcher_0<RetType> {
+  fn eventDispatcher_0(self , rsthis: & QThread) -> RetType;
 }
-
-  // proto:  QAbstractEventDispatcher * QThread::eventDispatcher();
-impl<'a> /*trait*/ QThread_eventDispatcher<QAbstractEventDispatcher> for () {
-  fn eventDispatcher(self , rsthis: & QThread) -> QAbstractEventDispatcher {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QThread15eventDispatcherEv()};
-    let mut ret = unsafe {C_ZNK7QThread15eventDispatcherEv(rsthis.qclsinst)};
-    let mut ret1 = QAbstractEventDispatcher::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QThread_eventDispatcher_0<usize> for () {
+  fn eventDispatcher_0(self , rsthis: & QThread) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QThread15eventDispatcherEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  void QThread::setStackSize(uint stackSize);
+// /usr/include/qt/QtCore/qthread.h:111
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setEventDispatcher(QAbstractEventDispatcher *)
+
+/*
+Sets the event dispatcher for the thread to eventDispatcher. This is only possible as long as there is no event dispatcher installed for the thread yet. That is, before the thread has been started with start() or, in case of the main thread, before QCoreApplication has been instantiated. This method takes ownership of the object.
+
+This function was introduced in  Qt 5.0.
+
+See also eventDispatcher().
+*/
 impl /*struct*/ QThread {
-  pub fn setStackSize<RetType, T: QThread_setStackSize<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setStackSize(self);
+  pub fn setEventDispatcher_0<RetType, T: QThread_setEventDispatcher_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setEventDispatcher_0(self);
+    // return 1;
+  }
+}
+pub trait QThread_setEventDispatcher_0<RetType> {
+  fn setEventDispatcher_0(self , rsthis: & QThread) -> RetType;
+}
+impl<'a> /*trait*/ QThread_setEventDispatcher_0<(/*void*/)> for (usize) {
+  fn setEventDispatcher_0(self , rsthis: & QThread) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QThread_setStackSize<RetType> {
-  fn setStackSize(self , rsthis: & QThread) -> RetType;
-}
+// /usr/include/qt/QtCore/qthread.h:113
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
 
-  // proto:  void QThread::setStackSize(uint stackSize);
-impl<'a> /*trait*/ QThread_setStackSize<()> for (u32) {
-  fn setStackSize(self , rsthis: & QThread) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QThread12setStackSizeEj()};
-    let arg0 = self  as c_uint;
-     unsafe {C_ZN7QThread12setStackSizeEj(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  bool QThread::isFinished();
+/*
+Reimplemented from QObject::event().
+*/
 impl /*struct*/ QThread {
-  pub fn isFinished<RetType, T: QThread_isFinished<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isFinished(self);
+  pub fn event_0<RetType, T: QThread_event_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.event_0(self);
     // return 1;
   }
 }
-
-pub trait QThread_isFinished<RetType> {
-  fn isFinished(self , rsthis: & QThread) -> RetType;
+pub trait QThread_event_0<RetType> {
+  fn event_0(self , rsthis: & QThread) -> RetType;
 }
-
-  // proto:  bool QThread::isFinished();
-impl<'a> /*trait*/ QThread_isFinished<i8> for () {
-  fn isFinished(self , rsthis: & QThread) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QThread10isFinishedEv()};
-    let mut ret = unsafe {C_ZNK7QThread10isFinishedEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+impl<'a> /*trait*/ QThread_event_0<bool> for (usize) {
+  fn event_0(self , rsthis: & QThread) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QThread5eventEP6QEvent", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto: static void QThread::sleep(unsigned long );
+// /usr/include/qt/QtCore/qthread.h:114
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int loopLevel() const
+
+/*
+Returns the current event loop level for the thread.
+
+Note: This can only be called within the thread itself, i.e. when it is the current thread.
+
+This function was introduced in  Qt 5.5.
+*/
 impl /*struct*/ QThread {
-  pub fn sleep_s<RetType, T: QThread_sleep_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.sleep_s();
+  pub fn loopLevel_0<RetType, T: QThread_loopLevel_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.loopLevel_0(self);
     // return 1;
   }
 }
-
-pub trait QThread_sleep_s<RetType> {
-  fn sleep_s(self ) -> RetType;
+pub trait QThread_loopLevel_0<RetType> {
+  fn loopLevel_0(self , rsthis: & QThread) -> RetType;
 }
-
-  // proto: static void QThread::sleep(unsigned long );
-impl<'a> /*trait*/ QThread_sleep_s<()> for (u64) {
-  fn sleep_s(self ) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QThread5sleepEm()};
-    let arg0 = self  as c_ulong;
-     unsafe {C_ZN7QThread5sleepEm(arg0)};
+impl<'a> /*trait*/ QThread_loopLevel_0<i32> for () {
+  fn loopLevel_0(self , rsthis: & QThread) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QThread9loopLevelEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i32 = Default::default(); return dret;
   }
 }
 
-  // proto: static void QThread::usleep(unsigned long );
+// /usr/include/qt/QtCore/qthread.h:134
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void start(QThread::Priority)
+
+/*
+Begins execution of the thread by calling run(). The operating system will schedule the thread according to the priority parameter. If the thread is already running, this function does nothing.
+
+The effect of the priority parameter is dependent on the operating system's scheduling policy. In particular, the priority will be ignored on systems that do not support thread priorities (such as on Linux, see the sched_setscheduler documentation for more details).
+
+See also run() and terminate().
+*/
 impl /*struct*/ QThread {
-  pub fn usleep_s<RetType, T: QThread_usleep_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.usleep_s();
+  pub fn start_0<RetType, T: QThread_start_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.start_0(self);
+    // return 1;
+  }
+}
+pub trait QThread_start_0<RetType> {
+  fn start_0(self , rsthis: & QThread) -> RetType;
+}
+impl<'a> /*trait*/ QThread_start_0<(/*void*/)> for (i32) {
+  fn start_0(self , rsthis: & QThread) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN7QThread5startENS_8PriorityE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QThread_usleep_s<RetType> {
-  fn usleep_s(self ) -> RetType;
-}
+// /usr/include/qt/QtCore/qthread.h:135
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void terminate()
 
-  // proto: static void QThread::usleep(unsigned long );
-impl<'a> /*trait*/ QThread_usleep_s<()> for (u64) {
-  fn usleep_s(self ) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QThread6usleepEm()};
-    let arg0 = self  as c_ulong;
-     unsafe {C_ZN7QThread6usleepEm(arg0)};
-    // return 1;
-  }
-}
+/*
+Terminates the execution of the thread. The thread may or may not be terminated immediately, depending on the operating system's scheduling policies. Use QThread::wait() after terminate(), to be sure.
 
-  // proto: static int QThread::idealThreadCount();
+When the thread is terminated, all threads waiting for the thread to finish will be woken up.
+
+Warning: This function is dangerous and its use is discouraged. The thread can be terminated at any point in its code path. Threads can be terminated while modifying data. There is no chance for the thread to clean up after itself, unlock any held mutexes, etc. In short, use this function only if absolutely necessary.
+
+Termination can be explicitly enabled or disabled by calling QThread::setTerminationEnabled(). Calling this function while termination is disabled results in the termination being deferred, until termination is re-enabled. See the documentation of QThread::setTerminationEnabled() for more information.
+
+See also setTerminationEnabled().
+*/
 impl /*struct*/ QThread {
-  pub fn idealThreadCount_s<RetType, T: QThread_idealThreadCount_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.idealThreadCount_s();
+  pub fn terminate_0<RetType, T: QThread_terminate_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.terminate_0(self);
+    // return 1;
+  }
+}
+pub trait QThread_terminate_0<RetType> {
+  fn terminate_0(self , rsthis: & QThread) -> RetType;
+}
+impl<'a> /*trait*/ QThread_terminate_0<(/*void*/)> for () {
+  fn terminate_0(self , rsthis: & QThread) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZN7QThread9terminateEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QThread_idealThreadCount_s<RetType> {
-  fn idealThreadCount_s(self ) -> RetType;
-}
+// /usr/include/qt/QtCore/qthread.h:136
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void quit()
 
-  // proto: static int QThread::idealThreadCount();
-impl<'a> /*trait*/ QThread_idealThreadCount_s<i32> for () {
-  fn idealThreadCount_s(self ) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QThread16idealThreadCountEv()};
-    let mut ret = unsafe {C_ZN7QThread16idealThreadCountEv()};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
+/*
+Tells the thread's event loop to exit with return code 0 (success). Equivalent to calling QThread::exit(0).
 
-  // proto:  bool QThread::wait(unsigned long time);
+This function does nothing if the thread does not have an event loop.
+
+See also exit() and QEventLoop.
+*/
 impl /*struct*/ QThread {
-  pub fn wait<RetType, T: QThread_wait<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.wait(self);
+  pub fn quit_0<RetType, T: QThread_quit_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.quit_0(self);
+    // return 1;
+  }
+}
+pub trait QThread_quit_0<RetType> {
+  fn quit_0(self , rsthis: & QThread) -> RetType;
+}
+impl<'a> /*trait*/ QThread_quit_0<(/*void*/)> for () {
+  fn quit_0(self , rsthis: & QThread) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZN7QThread4quitEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QThread_wait<RetType> {
-  fn wait(self , rsthis: & QThread) -> RetType;
-}
+// /usr/include/qt/QtCore/qthread.h:140
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool wait(unsigned long)
 
-  // proto:  bool QThread::wait(unsigned long time);
-impl<'a> /*trait*/ QThread_wait<i8> for (Option<u64>) {
-  fn wait(self , rsthis: & QThread) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QThread4waitEm()};
-    let arg0 = (if self.is_none() {i32::max_value() as u64} else {self.unwrap()})  as c_ulong;
-    let mut ret = unsafe {C_ZN7QThread4waitEm(rsthis.qclsinst, arg0)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
+/*
+Blocks the thread until either of these conditions is met:
 
-  // proto: static QThread * QThread::currentThread();
+
+The thread associated with this QThread object has finished execution (i.e. when it returns from run()). This function will return true if the thread has finished. It also returns true if the thread has not been started yet.
+time milliseconds has elapsed. If time is ULONG_MAX (the default), then the wait will never timeout (the thread must return from run()). This function will return false if the wait timed out.
+
+
+This provides similar functionality to the POSIX pthread_join() function.
+
+See also sleep() and terminate().
+*/
 impl /*struct*/ QThread {
-  pub fn currentThread_s<RetType, T: QThread_currentThread_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.currentThread_s();
+  pub fn wait_0<RetType, T: QThread_wait_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.wait_0(self);
     // return 1;
   }
 }
-
-pub trait QThread_currentThread_s<RetType> {
-  fn currentThread_s(self ) -> RetType;
+pub trait QThread_wait_0<RetType> {
+  fn wait_0(self , rsthis: & QThread) -> RetType;
 }
-
-  // proto: static QThread * QThread::currentThread();
-impl<'a> /*trait*/ QThread_currentThread_s<QThread> for () {
-  fn currentThread_s(self ) -> QThread {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QThread13currentThreadEv()};
-    let mut ret = unsafe {C_ZN7QThread13currentThreadEv()};
-    let mut ret1 = QThread::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QThread_wait_0<bool> for (u64) {
+  fn wait_0(self , rsthis: & QThread) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const u64 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QThread4waitEm", 1,qtrt::FFITY_UINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  bool QThread::isRunning();
+// /usr/include/qt/QtCore/qthread.h:142
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] void sleep(unsigned long)
+
+/*
+Forces the current thread to sleep for secs seconds.
+
+See also msleep() and usleep().
+*/
 impl /*struct*/ QThread {
-  pub fn isRunning<RetType, T: QThread_isRunning<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isRunning(self);
+  pub fn sleep_0<RetType, T: QThread_sleep_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.sleep_0();
+    // return 1;
+  }
+}
+pub trait QThread_sleep_0<RetType> {
+  fn sleep_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QThread_sleep_0<(/*void*/)> for (u64) {
+  fn sleep_0(self ) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const u64 as usize;
+     qtrt::InvokeQtFunc6("_ZN7QThread5sleepEm", 1,qtrt::FFITY_UINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QThread_isRunning<RetType> {
-  fn isRunning(self , rsthis: & QThread) -> RetType;
-}
+// /usr/include/qt/QtCore/qthread.h:143
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] void msleep(unsigned long)
 
-  // proto:  bool QThread::isRunning();
-impl<'a> /*trait*/ QThread_isRunning<i8> for () {
-  fn isRunning(self , rsthis: & QThread) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QThread9isRunningEv()};
-    let mut ret = unsafe {C_ZNK7QThread9isRunningEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
+/*
+Forces the current thread to sleep for msecs milliseconds.
 
-  // proto:  void QThread::terminate();
+See also sleep() and usleep().
+*/
 impl /*struct*/ QThread {
-  pub fn terminate<RetType, T: QThread_terminate<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.terminate(self);
+  pub fn msleep_0<RetType, T: QThread_msleep_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.msleep_0();
+    // return 1;
+  }
+}
+pub trait QThread_msleep_0<RetType> {
+  fn msleep_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QThread_msleep_0<(/*void*/)> for (u64) {
+  fn msleep_0(self ) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const u64 as usize;
+     qtrt::InvokeQtFunc6("_ZN7QThread6msleepEm", 1,qtrt::FFITY_UINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QThread_terminate<RetType> {
-  fn terminate(self , rsthis: & QThread) -> RetType;
-}
+// /usr/include/qt/QtCore/qthread.h:144
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] void usleep(unsigned long)
 
-  // proto:  void QThread::terminate();
-impl<'a> /*trait*/ QThread_terminate<()> for () {
-  fn terminate(self , rsthis: & QThread) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QThread9terminateEv()};
-     unsafe {C_ZN7QThread9terminateEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
+/*
+Forces the current thread to sleep for usecs microseconds.
 
-  // proto:  void QThread::~QThread();
+See also sleep() and msleep().
+*/
 impl /*struct*/ QThread {
-  pub fn free<RetType, T: QThread_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
+  pub fn usleep_0<RetType, T: QThread_usleep_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.usleep_0();
+    // return 1;
+  }
+}
+pub trait QThread_usleep_0<RetType> {
+  fn usleep_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QThread_usleep_0<(/*void*/)> for (u64) {
+  fn usleep_0(self ) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const u64 as usize;
+     qtrt::InvokeQtFunc6("_ZN7QThread6usleepEm", 1,qtrt::FFITY_UINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QThread_free<RetType> {
-  fn free(self , rsthis: & QThread) -> RetType;
-}
+// /usr/include/qt/QtCore/qthread.h:151
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void run()
 
-  // proto:  void QThread::~QThread();
-impl<'a> /*trait*/ QThread_free<()> for () {
-  fn free(self , rsthis: & QThread) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QThreadD2Ev()};
-     unsafe {C_ZN7QThreadD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
+/*
+The starting point for the thread. After calling start(), the newly created thread calls this function. The default implementation simply calls exec().
 
-  // proto:  void QThread::quit();
+You can reimplement this function to facilitate advanced thread management. Returning from this method will end the execution of the thread.
+
+See also start() and wait().
+*/
 impl /*struct*/ QThread {
-  pub fn quit<RetType, T: QThread_quit<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.quit(self);
+  pub fn run_0<RetType, T: QThread_run_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.run_0(self);
+    // return 1;
+  }
+}
+pub trait QThread_run_0<RetType> {
+  fn run_0(self , rsthis: & QThread) -> RetType;
+}
+impl<'a> /*trait*/ QThread_run_0<(/*void*/)> for () {
+  fn run_0(self , rsthis: & QThread) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZN7QThread3runEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QThread_quit<RetType> {
-  fn quit(self , rsthis: & QThread) -> RetType;
-}
+// /usr/include/qt/QtCore/qthread.h:152
+// index:0
+// Protected Visibility=Default Availability=Available
+// [4] int exec()
 
-  // proto:  void QThread::quit();
-impl<'a> /*trait*/ QThread_quit<()> for () {
-  fn quit(self , rsthis: & QThread) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QThread4quitEv()};
-     unsafe {C_ZN7QThread4quitEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
+/*
+Enters the event loop and waits until exit() is called, returning the value that was passed to exit(). The value returned is 0 if exit() is called via quit().
 
-  // proto:  int QThread::loopLevel();
+This function is meant to be called from within run(). It is necessary to call this function to start event handling.
+
+See also quit() and exit().
+*/
 impl /*struct*/ QThread {
-  pub fn loopLevel<RetType, T: QThread_loopLevel<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.loopLevel(self);
+  pub fn exec_0<RetType, T: QThread_exec_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.exec_0(self);
+    // return 1;
+  }
+}
+pub trait QThread_exec_0<RetType> {
+  fn exec_0(self , rsthis: & QThread) -> RetType;
+}
+impl<'a> /*trait*/ QThread_exec_0<i32> for () {
+  fn exec_0(self , rsthis: & QThread) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QThread4execEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qthread.h:154
+// index:0
+// Protected static Visibility=Default Availability=Available
+// [-2] void setTerminationEnabled(bool)
+
+/*
+Enables or disables termination of the current thread based on the enabled parameter. The thread must have been started by QThread.
+
+When enabled is false, termination is disabled. Future calls to QThread::terminate() will return immediately without effect. Instead, the termination is deferred until termination is enabled.
+
+When enabled is true, termination is enabled. Future calls to QThread::terminate() will terminate the thread normally. If termination has been deferred (i.e. QThread::terminate() was called with termination disabled), this function will terminate the calling thread immediately. Note that this function will not return in this case.
+
+See also terminate().
+*/
+impl /*struct*/ QThread {
+  pub fn setTerminationEnabled_0<RetType, T: QThread_setTerminationEnabled_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.setTerminationEnabled_0();
+    // return 1;
+  }
+}
+pub trait QThread_setTerminationEnabled_0<RetType> {
+  fn setTerminationEnabled_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QThread_setTerminationEnabled_0<(/*void*/)> for (bool) {
+  fn setTerminationEnabled_0(self ) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const bool as usize;
+     qtrt::InvokeQtFunc6("_ZN7QThread21setTerminationEnabledEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QThread_loopLevel<RetType> {
-  fn loopLevel(self , rsthis: & QThread) -> RetType;
+
+/*
+This enum type indicates how the operating system should schedule newly created threads.
+
+
+*/
+pub type QThread__Priority = i32;
+// scheduled only when no other threads are running.
+pub const QThread__IdlePriority :QThread__Priority = 0;
+// scheduled less often than LowPriority.
+pub const QThread__LowestPriority :QThread__Priority = 1;
+// scheduled less often than NormalPriority.
+pub const QThread__LowPriority :QThread__Priority = 2;
+// the default priority of the operating system.
+pub const QThread__NormalPriority :QThread__Priority = 3;
+// scheduled more often than NormalPriority.
+pub const QThread__HighPriority :QThread__Priority = 4;
+// scheduled more often than HighPriority.
+pub const QThread__HighestPriority :QThread__Priority = 5;
+// scheduled as often as possible.
+pub const QThread__TimeCriticalPriority :QThread__Priority = 6;
+// use the same priority as the creating thread. This is the default.
+pub const QThread__InheritPriority :QThread__Priority = 7;
+pub fn QThread_PriorityItemName(val: i32) ->String {
+  return qtrt::GetClassEnumItemName("QThread", val);
+}
+pub fn QThread_PriorityItemName_s(val: i32) ->String {
+  //var nilthis *QThread
+  //return nilthis.PriorityItemName(val);
+  return QThread_PriorityItemName(val);
 }
 
-  // proto:  int QThread::loopLevel();
-impl<'a> /*trait*/ QThread_loopLevel<i32> for () {
-  fn loopLevel(self , rsthis: & QThread) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QThread9loopLevelEv()};
-    let mut ret = unsafe {C_ZNK7QThread9loopLevelEv(rsthis.qclsinst)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
+//  body block end
 
-#[derive(Default)] // for QThread_started
-pub struct QThread_started_signal{poi:u64}
-impl /* struct */ QThread {
-  pub fn started(&self) -> QThread_started_signal {
-     return QThread_started_signal{poi:self.qclsinst};
-  }
-}
-impl /* struct */ QThread_started_signal {
-  pub fn connect<T: QThread_started_signal_connect>(self, overload_args: T) {
-    overload_args.connect(self);
-  }
-}
-pub trait QThread_started_signal_connect {
-  fn connect(self, sigthis: QThread_started_signal);
-}
+//  keep block begin
 
-#[derive(Default)] // for QThread_finished
-pub struct QThread_finished_signal{poi:u64}
-impl /* struct */ QThread {
-  pub fn finished(&self) -> QThread_finished_signal {
-     return QThread_finished_signal{poi:self.qclsinst};
-  }
-}
-impl /* struct */ QThread_finished_signal {
-  pub fn connect<T: QThread_finished_signal_connect>(self, overload_args: T) {
-    overload_args.connect(self);
-  }
-}
-pub trait QThread_finished_signal_connect {
-  fn connect(self, sigthis: QThread_finished_signal);
-}
-
-// <= body block end
-
+//  keep block end

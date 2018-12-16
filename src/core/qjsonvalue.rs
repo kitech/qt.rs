@@ -1,1026 +1,1283 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qjsonvalue.h
-// dst-file: /src/core/qjsonvalue.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QJsonValue
+// package qtcore
+// /usr/include/qt/QtCore/qjsonvalue.h
+// #include <qjsonvalue.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 7
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qjsonobject::*; // 773
-use super::qstring::*; // 773
-use super::qjsonarray::*; // 773
-use super::qvariant::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QJsonValueRefPtr_Class_Size() -> c_int;
-  fn QJsonValuePtr_Class_Size() -> c_int;
-  fn QJsonValue_Class_Size() -> c_int;
-  // proto:  QJsonObject QJsonValue::toObject();
-  fn C_ZNK10QJsonValue8toObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  bool QJsonValue::isDouble();
-  fn C_ZNK10QJsonValue8isDoubleEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QJsonValue::QJsonValue(const QString & s);
-  fn C_ZN10QJsonValueC2ERK7QString(arg0: *mut c_void) -> u64;
-  // proto:  int QJsonValue::toInt(int defaultValue);
-  fn C_ZNK10QJsonValue5toIntEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
-  // proto:  QJsonArray QJsonValue::toArray();
-  fn C_ZNK10QJsonValue7toArrayEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  bool QJsonValue::isArray();
-  fn C_ZNK10QJsonValue7isArrayEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QJsonValue::QJsonValue(const char * s);
-  fn C_ZN10QJsonValueC2EPKc(arg0: *mut c_char) -> u64;
-  // proto:  QString QJsonValue::toString(const QString & defaultValue);
-  fn C_ZNK10QJsonValue8toStringERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  double QJsonValue::toDouble(double defaultValue);
-  fn C_ZNK10QJsonValue8toDoubleEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> c_double;
-  // proto:  void QJsonValue::~QJsonValue();
-  fn C_ZN10QJsonValueD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  QVariant QJsonValue::toVariant();
-  fn C_ZNK10QJsonValue9toVariantEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  bool QJsonValue::isObject();
-  fn C_ZNK10QJsonValue8isObjectEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto: static QJsonValue QJsonValue::fromVariant(const QVariant & variant);
-  fn C_ZN10QJsonValue11fromVariantERK8QVariant(arg0: *mut c_void) -> *mut c_void;
-  // proto:  bool QJsonValue::toBool(bool defaultValue);
-  fn C_ZNK10QJsonValue6toBoolEb(qthis: u64 /* *mut c_void*/, arg0: c_char) -> c_char;
-  // proto:  void QJsonValue::QJsonValue(double n);
-  fn C_ZN10QJsonValueC2Ed(arg0: c_double) -> u64;
-  // proto:  bool QJsonValue::isBool();
-  fn C_ZNK10QJsonValue6isBoolEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QJsonValue::QJsonValue(bool b);
-  fn C_ZN10QJsonValueC2Eb(arg0: c_char) -> u64;
-  // proto:  bool QJsonValue::isUndefined();
-  fn C_ZNK10QJsonValue11isUndefinedEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  bool QJsonValue::isNull();
-  fn C_ZNK10QJsonValue6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  bool QJsonValue::isString();
-  fn C_ZNK10QJsonValue8isStringEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QJsonValue::QJsonValue(int n);
-  fn C_ZN10QJsonValueC2Ei(arg0: c_int) -> u64;
-  // proto:  void QJsonValue::QJsonValue(qint64 n);
-  fn C_ZN10QJsonValueC2Ex(arg0: c_longlong) -> u64;
-  fn QJsonValueRef_Class_Size() -> c_int;
-  // proto:  QJsonArray QJsonValueRef::toArray();
-  fn C_ZNK13QJsonValueRef7toArrayEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QJsonObject QJsonValueRef::toObject();
-  fn C_ZNK13QJsonValueRef8toObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  bool QJsonValueRef::isBool();
-  fn C_ZNK13QJsonValueRef6isBoolEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  bool QJsonValueRef::isDouble();
-  fn C_ZNK13QJsonValueRef8isDoubleEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  double QJsonValueRef::toDouble();
-  fn C_ZNK13QJsonValueRef8toDoubleEv(qthis: u64 /* *mut c_void*/) -> c_double;
-  // proto:  bool QJsonValueRef::toBool(bool defaultValue);
-  fn C_ZNK13QJsonValueRef6toBoolEb(qthis: u64 /* *mut c_void*/, arg0: c_char) -> c_char;
-  // proto:  double QJsonValueRef::toDouble(double defaultValue);
-  fn C_ZNK13QJsonValueRef8toDoubleEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> c_double;
-  // proto:  bool QJsonValueRef::toBool();
-  fn C_ZNK13QJsonValueRef6toBoolEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  QVariant QJsonValueRef::toVariant();
-  fn C_ZNK13QJsonValueRef9toVariantEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString QJsonValueRef::toString(const QString & defaultValue);
-  fn C_ZNK13QJsonValueRef8toStringERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  bool QJsonValueRef::isObject();
-  fn C_ZNK13QJsonValueRef8isObjectEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  bool QJsonValueRef::isString();
-  fn C_ZNK13QJsonValueRef8isStringEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  QString QJsonValueRef::toString();
-  fn C_ZNK13QJsonValueRef8toStringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  int QJsonValueRef::toInt(int defaultValue);
-  fn C_ZNK13QJsonValueRef5toIntEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
-  // proto:  bool QJsonValueRef::isArray();
-  fn C_ZNK13QJsonValueRef7isArrayEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  bool QJsonValueRef::isNull();
-  fn C_ZNK13QJsonValueRef6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  int QJsonValueRef::toInt();
-  fn C_ZNK13QJsonValueRef5toIntEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  bool QJsonValueRef::isUndefined();
-  fn C_ZNK13QJsonValueRef11isUndefinedEv(qthis: u64 /* *mut c_void*/) -> c_char;
-} // <= ext block end
 
-// body block begin =>
-// class sizeof(QJsonValueRefPtr)=16
-#[derive(Default)]
-pub struct QJsonValueRefPtr {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
-}
 
-// class sizeof(QJsonValuePtr)=24
-#[derive(Default)]
-pub struct QJsonValuePtr {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
-}
+/*
 
-// class sizeof(QJsonValue)=24
-#[derive(Default)]
+*/
+#[derive(Default)] // class sizeof(QJsonValue)=24
 pub struct QJsonValue {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
+  // qbase: none,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QJsonValue_ITF interface {
+//    QJsonValue_PTR() *QJsonValue
+//}
+//func (ptr *QJsonValue) QJsonValue_PTR() *QJsonValue { return ptr }
 
-// class sizeof(QJsonValueRef)=16
-#[derive(Default)]
-pub struct QJsonValueRef {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
-}
-
-impl /*struct*/ QJsonValueRefPtr {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QJsonValueRefPtr {
-    return QJsonValueRefPtr{qclsinst: qthis, ..Default::default()};
-  }
-}
-impl /*struct*/ QJsonValuePtr {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QJsonValuePtr {
-    return QJsonValuePtr{qclsinst: qthis, ..Default::default()};
-  }
-}
 impl /*struct*/ QJsonValue {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QJsonValue {
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QJsonValue {
     return QJsonValue{qclsinst: qthis, ..Default::default()};
   }
 }
-  // proto:  QJsonObject QJsonValue::toObject();
+//impl Deref for QJsonValue {
+//  type Target = QJsonValueBASE;
+//
+//  fn deref(&self) -> &QJsonValueBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QJsonValueBASE> for QJsonValue {
+//  fn as_ref(& self) -> & QJsonValueBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qjsonvalue.h:76
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QJsonValue(QJsonValue::Type)
+
+/*
+Creates a QJsonValue of type type.
+
+The default is to create a Null value.
+*/
+// QJsonValue(QJsonValue::Type) ctx.fn_proto_cpp
 impl /*struct*/ QJsonValue {
-  pub fn toObject<RetType, T: QJsonValue_toObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toObject(self);
-    // return 1;
-  }
-}
-
-pub trait QJsonValue_toObject<RetType> {
-  fn toObject(self , rsthis: & QJsonValue) -> RetType;
-}
-
-  // proto:  QJsonObject QJsonValue::toObject();
-impl<'a> /*trait*/ QJsonValue_toObject<QJsonObject> for () {
-  fn toObject(self , rsthis: & QJsonValue) -> QJsonObject {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QJsonValue8toObjectEv()};
-    let mut ret = unsafe {C_ZNK10QJsonValue8toObjectEv(rsthis.qclsinst)};
-    let mut ret1 = QJsonObject::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  bool QJsonValue::isDouble();
-impl /*struct*/ QJsonValue {
-  pub fn isDouble<RetType, T: QJsonValue_isDouble<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isDouble(self);
-    // return 1;
-  }
-}
-
-pub trait QJsonValue_isDouble<RetType> {
-  fn isDouble(self , rsthis: & QJsonValue) -> RetType;
-}
-
-  // proto:  bool QJsonValue::isDouble();
-impl<'a> /*trait*/ QJsonValue_isDouble<i8> for () {
-  fn isDouble(self , rsthis: & QJsonValue) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QJsonValue8isDoubleEv()};
-    let mut ret = unsafe {C_ZNK10QJsonValue8isDoubleEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QJsonValue::QJsonValue(const QString & s);
-impl /*struct*/ QJsonValue {
-  pub fn new<T: QJsonValue_new>(value: T) -> QJsonValue {
-    let rsthis = value.new();
+  pub fn QJsonValue_0<T: QJsonValue_QJsonValue_0>(value: T) -> QJsonValue {
+    let rsthis = value.QJsonValue_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QJsonValue_new {
-  fn new(self) -> QJsonValue;
+pub trait QJsonValue_QJsonValue_0 {
+  fn QJsonValue_0(self) -> QJsonValue;
 }
-
-  // proto:  void QJsonValue::QJsonValue(const QString & s);
-impl<'a> /*trait*/ QJsonValue_new for (&'a QString) {
-  fn new(self) -> QJsonValue {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QJsonValueC2ERK7QString()};
-    let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN10QJsonValueC2ERK7QString(arg0)};
+// QJsonValue(QJsonValue::Type) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QJsonValue_QJsonValue_0 for (i32) {
+  fn QJsonValue_0(self) -> QJsonValue {
+    // unsafe{_ZN10QJsonValueC2ENS_4TypeE()};
+    let arg0 = (&self) as *const i32 as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN10QJsonValueC2ENS_4TypeE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  int QJsonValue::toInt(int defaultValue);
+// /usr/include/qt/QtCore/qjsonvalue.h:77
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QJsonValue(bool)
+
+/*
+Creates a QJsonValue of type type.
+
+The default is to create a Null value.
+*/
+// QJsonValue(bool) ctx.fn_proto_cpp
 impl /*struct*/ QJsonValue {
-  pub fn toInt<RetType, T: QJsonValue_toInt<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toInt(self);
-    // return 1;
-  }
-}
-
-pub trait QJsonValue_toInt<RetType> {
-  fn toInt(self , rsthis: & QJsonValue) -> RetType;
-}
-
-  // proto:  int QJsonValue::toInt(int defaultValue);
-impl<'a> /*trait*/ QJsonValue_toInt<i32> for (Option<i32>) {
-  fn toInt(self , rsthis: & QJsonValue) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QJsonValue5toIntEi()};
-    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK10QJsonValue5toIntEi(rsthis.qclsinst, arg0)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QJsonArray QJsonValue::toArray();
-impl /*struct*/ QJsonValue {
-  pub fn toArray<RetType, T: QJsonValue_toArray<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toArray(self);
-    // return 1;
-  }
-}
-
-pub trait QJsonValue_toArray<RetType> {
-  fn toArray(self , rsthis: & QJsonValue) -> RetType;
-}
-
-  // proto:  QJsonArray QJsonValue::toArray();
-impl<'a> /*trait*/ QJsonValue_toArray<QJsonArray> for () {
-  fn toArray(self , rsthis: & QJsonValue) -> QJsonArray {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QJsonValue7toArrayEv()};
-    let mut ret = unsafe {C_ZNK10QJsonValue7toArrayEv(rsthis.qclsinst)};
-    let mut ret1 = QJsonArray::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  bool QJsonValue::isArray();
-impl /*struct*/ QJsonValue {
-  pub fn isArray<RetType, T: QJsonValue_isArray<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isArray(self);
-    // return 1;
-  }
-}
-
-pub trait QJsonValue_isArray<RetType> {
-  fn isArray(self , rsthis: & QJsonValue) -> RetType;
-}
-
-  // proto:  bool QJsonValue::isArray();
-impl<'a> /*trait*/ QJsonValue_isArray<i8> for () {
-  fn isArray(self , rsthis: & QJsonValue) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QJsonValue7isArrayEv()};
-    let mut ret = unsafe {C_ZNK10QJsonValue7isArrayEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QJsonValue::QJsonValue(const char * s);
-impl<'a> /*trait*/ QJsonValue_new for (&'a  String) {
-  fn new(self) -> QJsonValue {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QJsonValueC2EPKc()};
-    let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.as_ptr()  as *mut c_char;
-    let qthis: u64 = unsafe {C_ZN10QJsonValueC2EPKc(arg0)};
-    let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
+  pub fn QJsonValue_1<T: QJsonValue_QJsonValue_1>(value: T) -> QJsonValue {
+    let rsthis = value.QJsonValue_1();
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  QString QJsonValue::toString(const QString & defaultValue);
-impl /*struct*/ QJsonValue {
-  pub fn toString<RetType, T: QJsonValue_toString<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toString(self);
-    // return 1;
-  }
+pub trait QJsonValue_QJsonValue_1 {
+  fn QJsonValue_1(self) -> QJsonValue;
 }
-
-pub trait QJsonValue_toString<RetType> {
-  fn toString(self , rsthis: & QJsonValue) -> RetType;
-}
-
-  // proto:  QString QJsonValue::toString(const QString & defaultValue);
-impl<'a> /*trait*/ QJsonValue_toString<QString> for (Option<&'a QString>) {
-  fn toString(self , rsthis: & QJsonValue) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QJsonValue8toStringERK7QString()};
-    let arg0 = (if self.is_none() {QString::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
-    let mut ret = unsafe {C_ZNK10QJsonValue8toStringERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  double QJsonValue::toDouble(double defaultValue);
-impl /*struct*/ QJsonValue {
-  pub fn toDouble<RetType, T: QJsonValue_toDouble<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toDouble(self);
-    // return 1;
-  }
-}
-
-pub trait QJsonValue_toDouble<RetType> {
-  fn toDouble(self , rsthis: & QJsonValue) -> RetType;
-}
-
-  // proto:  double QJsonValue::toDouble(double defaultValue);
-impl<'a> /*trait*/ QJsonValue_toDouble<f64> for (Option<f64>) {
-  fn toDouble(self , rsthis: & QJsonValue) -> f64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QJsonValue8toDoubleEd()};
-    let arg0 = (if self.is_none() {0 as f64} else {self.unwrap()})  as c_double;
-    let mut ret = unsafe {C_ZNK10QJsonValue8toDoubleEd(rsthis.qclsinst, arg0)};
-    return ret as f64; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QJsonValue::~QJsonValue();
-impl /*struct*/ QJsonValue {
-  pub fn free<RetType, T: QJsonValue_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
-    // return 1;
-  }
-}
-
-pub trait QJsonValue_free<RetType> {
-  fn free(self , rsthis: & QJsonValue) -> RetType;
-}
-
-  // proto:  void QJsonValue::~QJsonValue();
-impl<'a> /*trait*/ QJsonValue_free<()> for () {
-  fn free(self , rsthis: & QJsonValue) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QJsonValueD2Ev()};
-     unsafe {C_ZN10QJsonValueD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  QVariant QJsonValue::toVariant();
-impl /*struct*/ QJsonValue {
-  pub fn toVariant<RetType, T: QJsonValue_toVariant<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toVariant(self);
-    // return 1;
-  }
-}
-
-pub trait QJsonValue_toVariant<RetType> {
-  fn toVariant(self , rsthis: & QJsonValue) -> RetType;
-}
-
-  // proto:  QVariant QJsonValue::toVariant();
-impl<'a> /*trait*/ QJsonValue_toVariant<QVariant> for () {
-  fn toVariant(self , rsthis: & QJsonValue) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QJsonValue9toVariantEv()};
-    let mut ret = unsafe {C_ZNK10QJsonValue9toVariantEv(rsthis.qclsinst)};
-    let mut ret1 = QVariant::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  bool QJsonValue::isObject();
-impl /*struct*/ QJsonValue {
-  pub fn isObject<RetType, T: QJsonValue_isObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isObject(self);
-    // return 1;
-  }
-}
-
-pub trait QJsonValue_isObject<RetType> {
-  fn isObject(self , rsthis: & QJsonValue) -> RetType;
-}
-
-  // proto:  bool QJsonValue::isObject();
-impl<'a> /*trait*/ QJsonValue_isObject<i8> for () {
-  fn isObject(self , rsthis: & QJsonValue) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QJsonValue8isObjectEv()};
-    let mut ret = unsafe {C_ZNK10QJsonValue8isObjectEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto: static QJsonValue QJsonValue::fromVariant(const QVariant & variant);
-impl /*struct*/ QJsonValue {
-  pub fn fromVariant_s<RetType, T: QJsonValue_fromVariant_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.fromVariant_s();
-    // return 1;
-  }
-}
-
-pub trait QJsonValue_fromVariant_s<RetType> {
-  fn fromVariant_s(self ) -> RetType;
-}
-
-  // proto: static QJsonValue QJsonValue::fromVariant(const QVariant & variant);
-impl<'a> /*trait*/ QJsonValue_fromVariant_s<QJsonValue> for (&'a QVariant) {
-  fn fromVariant_s(self ) -> QJsonValue {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QJsonValue11fromVariantERK8QVariant()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN10QJsonValue11fromVariantERK8QVariant(arg0)};
-    let mut ret1 = QJsonValue::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  bool QJsonValue::toBool(bool defaultValue);
-impl /*struct*/ QJsonValue {
-  pub fn toBool<RetType, T: QJsonValue_toBool<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toBool(self);
-    // return 1;
-  }
-}
-
-pub trait QJsonValue_toBool<RetType> {
-  fn toBool(self , rsthis: & QJsonValue) -> RetType;
-}
-
-  // proto:  bool QJsonValue::toBool(bool defaultValue);
-impl<'a> /*trait*/ QJsonValue_toBool<i8> for (Option<i8>) {
-  fn toBool(self , rsthis: & QJsonValue) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QJsonValue6toBoolEb()};
-    let arg0 = (if self.is_none() {false as i8} else {self.unwrap()})  as c_char;
-    let mut ret = unsafe {C_ZNK10QJsonValue6toBoolEb(rsthis.qclsinst, arg0)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QJsonValue::QJsonValue(double n);
-impl<'a> /*trait*/ QJsonValue_new for (f64) {
-  fn new(self) -> QJsonValue {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QJsonValueC2Ed()};
-    let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self  as c_double;
-    let qthis: u64 = unsafe {C_ZN10QJsonValueC2Ed(arg0)};
-    let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  bool QJsonValue::isBool();
-impl /*struct*/ QJsonValue {
-  pub fn isBool<RetType, T: QJsonValue_isBool<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isBool(self);
-    // return 1;
-  }
-}
-
-pub trait QJsonValue_isBool<RetType> {
-  fn isBool(self , rsthis: & QJsonValue) -> RetType;
-}
-
-  // proto:  bool QJsonValue::isBool();
-impl<'a> /*trait*/ QJsonValue_isBool<i8> for () {
-  fn isBool(self , rsthis: & QJsonValue) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QJsonValue6isBoolEv()};
-    let mut ret = unsafe {C_ZNK10QJsonValue6isBoolEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QJsonValue::QJsonValue(bool b);
-impl<'a> /*trait*/ QJsonValue_new for (i8) {
-  fn new(self) -> QJsonValue {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QJsonValue(bool) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QJsonValue_QJsonValue_1 for (bool) {
+  fn QJsonValue_1(self) -> QJsonValue {
     // unsafe{_ZN10QJsonValueC2Eb()};
-    let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self  as c_char;
-    let qthis: u64 = unsafe {C_ZN10QJsonValueC2Eb(arg0)};
+    let arg0 = (&self) as *const bool as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN10QJsonValueC2Eb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  bool QJsonValue::isUndefined();
+// /usr/include/qt/QtCore/qjsonvalue.h:78
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QJsonValue(double)
+
+/*
+Creates a QJsonValue of type type.
+
+The default is to create a Null value.
+*/
+// QJsonValue(double) ctx.fn_proto_cpp
 impl /*struct*/ QJsonValue {
-  pub fn isUndefined<RetType, T: QJsonValue_isUndefined<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isUndefined(self);
+  pub fn QJsonValue_2<T: QJsonValue_QJsonValue_2>(value: T) -> QJsonValue {
+    let rsthis = value.QJsonValue_2();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QJsonValue_isUndefined<RetType> {
-  fn isUndefined(self , rsthis: & QJsonValue) -> RetType;
+pub trait QJsonValue_QJsonValue_2 {
+  fn QJsonValue_2(self) -> QJsonValue;
 }
-
-  // proto:  bool QJsonValue::isUndefined();
-impl<'a> /*trait*/ QJsonValue_isUndefined<i8> for () {
-  fn isUndefined(self , rsthis: & QJsonValue) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QJsonValue11isUndefinedEv()};
-    let mut ret = unsafe {C_ZNK10QJsonValue11isUndefinedEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+// QJsonValue(double) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QJsonValue_QJsonValue_2 for (f64) {
+  fn QJsonValue_2(self) -> QJsonValue {
+    // unsafe{_ZN10QJsonValueC2Ed()};
+    let arg0 = (&self) as *const f64 as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN10QJsonValueC2Ed", 1,qtrt::FFITY_DOUBLE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
+    return rsthis;
     // return 1;
   }
 }
 
-  // proto:  bool QJsonValue::isNull();
+// /usr/include/qt/QtCore/qjsonvalue.h:79
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QJsonValue(int)
+
+/*
+Creates a QJsonValue of type type.
+
+The default is to create a Null value.
+*/
+// QJsonValue(int) ctx.fn_proto_cpp
 impl /*struct*/ QJsonValue {
-  pub fn isNull<RetType, T: QJsonValue_isNull<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isNull(self);
+  pub fn QJsonValue_3<T: QJsonValue_QJsonValue_3>(value: T) -> QJsonValue {
+    let rsthis = value.QJsonValue_3();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QJsonValue_isNull<RetType> {
-  fn isNull(self , rsthis: & QJsonValue) -> RetType;
+pub trait QJsonValue_QJsonValue_3 {
+  fn QJsonValue_3(self) -> QJsonValue;
 }
-
-  // proto:  bool QJsonValue::isNull();
-impl<'a> /*trait*/ QJsonValue_isNull<i8> for () {
-  fn isNull(self , rsthis: & QJsonValue) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QJsonValue6isNullEv()};
-    let mut ret = unsafe {C_ZNK10QJsonValue6isNullEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  bool QJsonValue::isString();
-impl /*struct*/ QJsonValue {
-  pub fn isString<RetType, T: QJsonValue_isString<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isString(self);
-    // return 1;
-  }
-}
-
-pub trait QJsonValue_isString<RetType> {
-  fn isString(self , rsthis: & QJsonValue) -> RetType;
-}
-
-  // proto:  bool QJsonValue::isString();
-impl<'a> /*trait*/ QJsonValue_isString<i8> for () {
-  fn isString(self , rsthis: & QJsonValue) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QJsonValue8isStringEv()};
-    let mut ret = unsafe {C_ZNK10QJsonValue8isStringEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QJsonValue::QJsonValue(int n);
-impl<'a> /*trait*/ QJsonValue_new for (i32) {
-  fn new(self) -> QJsonValue {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QJsonValue(int) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QJsonValue_QJsonValue_3 for (i32) {
+  fn QJsonValue_3(self) -> QJsonValue {
     // unsafe{_ZN10QJsonValueC2Ei()};
-    let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self  as c_int;
-    let qthis: u64 = unsafe {C_ZN10QJsonValueC2Ei(arg0)};
+    let arg0 = (&self) as *const i32 as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN10QJsonValueC2Ei", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QJsonValue::QJsonValue(qint64 n);
-impl<'a> /*trait*/ QJsonValue_new for (i64) {
-  fn new(self) -> QJsonValue {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// /usr/include/qt/QtCore/qjsonvalue.h:80
+// index:4
+// Public Visibility=Default Availability=Available
+// [-2] void QJsonValue(qint64)
+
+/*
+Creates a QJsonValue of type type.
+
+The default is to create a Null value.
+*/
+// QJsonValue(qint64) ctx.fn_proto_cpp
+impl /*struct*/ QJsonValue {
+  pub fn QJsonValue_4<T: QJsonValue_QJsonValue_4>(value: T) -> QJsonValue {
+    let rsthis = value.QJsonValue_4();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QJsonValue_QJsonValue_4 {
+  fn QJsonValue_4(self) -> QJsonValue;
+}
+// QJsonValue(qint64) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QJsonValue_QJsonValue_4 for (i64) {
+  fn QJsonValue_4(self) -> QJsonValue {
     // unsafe{_ZN10QJsonValueC2Ex()};
-    let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self  as c_longlong;
-    let qthis: u64 = unsafe {C_ZN10QJsonValueC2Ex(arg0)};
+    let arg0 = (&self) as *const i64 as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN10QJsonValueC2Ex", 1,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-impl /*struct*/ QJsonValueRef {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QJsonValueRef {
-    return QJsonValueRef{qclsinst: qthis, ..Default::default()};
-  }
-}
-  // proto:  QJsonArray QJsonValueRef::toArray();
-impl /*struct*/ QJsonValueRef {
-  pub fn toArray<RetType, T: QJsonValueRef_toArray<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toArray(self);
+// /usr/include/qt/QtCore/qjsonvalue.h:81
+// index:5
+// Public Visibility=Default Availability=Available
+// [-2] void QJsonValue(const QString &)
+
+/*
+Creates a QJsonValue of type type.
+
+The default is to create a Null value.
+*/
+// QJsonValue(const QString &) ctx.fn_proto_cpp
+impl /*struct*/ QJsonValue {
+  pub fn QJsonValue_5<T: QJsonValue_QJsonValue_5>(value: T) -> QJsonValue {
+    let rsthis = value.QJsonValue_5();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QJsonValueRef_toArray<RetType> {
-  fn toArray(self , rsthis: & QJsonValueRef) -> RetType;
+pub trait QJsonValue_QJsonValue_5 {
+  fn QJsonValue_5(self) -> QJsonValue;
 }
-
-  // proto:  QJsonArray QJsonValueRef::toArray();
-impl<'a> /*trait*/ QJsonValueRef_toArray<QJsonArray> for () {
-  fn toArray(self , rsthis: & QJsonValueRef) -> QJsonArray {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QJsonValueRef7toArrayEv()};
-    let mut ret = unsafe {C_ZNK13QJsonValueRef7toArrayEv(rsthis.qclsinst)};
-    let mut ret1 = QJsonArray::inheritFrom(ret as u64);
-    return ret1;
+// QJsonValue(const QString &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QJsonValue_QJsonValue_5 for (usize) {
+  fn QJsonValue_5(self) -> QJsonValue {
+    // unsafe{_ZN10QJsonValueC2ERK7QString()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN10QJsonValueC2ERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
+    return rsthis;
     // return 1;
   }
 }
 
-  // proto:  QJsonObject QJsonValueRef::toObject();
-impl /*struct*/ QJsonValueRef {
-  pub fn toObject<RetType, T: QJsonValueRef_toObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toObject(self);
+// /usr/include/qt/QtCore/qjsonvalue.h:82
+// index:6
+// Public Visibility=Default Availability=Available
+// [-2] void QJsonValue(QLatin1String)
+
+/*
+Creates a QJsonValue of type type.
+
+The default is to create a Null value.
+*/
+// QJsonValue(QLatin1String) ctx.fn_proto_cpp
+impl /*struct*/ QJsonValue {
+  pub fn QJsonValue_6<T: QJsonValue_QJsonValue_6>(value: T) -> QJsonValue {
+    let rsthis = value.QJsonValue_6();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QJsonValueRef_toObject<RetType> {
-  fn toObject(self , rsthis: & QJsonValueRef) -> RetType;
+pub trait QJsonValue_QJsonValue_6 {
+  fn QJsonValue_6(self) -> QJsonValue;
 }
-
-  // proto:  QJsonObject QJsonValueRef::toObject();
-impl<'a> /*trait*/ QJsonValueRef_toObject<QJsonObject> for () {
-  fn toObject(self , rsthis: & QJsonValueRef) -> QJsonObject {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QJsonValueRef8toObjectEv()};
-    let mut ret = unsafe {C_ZNK13QJsonValueRef8toObjectEv(rsthis.qclsinst)};
-    let mut ret1 = QJsonObject::inheritFrom(ret as u64);
-    return ret1;
+// QJsonValue(QLatin1String) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QJsonValue_QJsonValue_6 for (usize) {
+  fn QJsonValue_6(self) -> QJsonValue {
+    // unsafe{_ZN10QJsonValueC2E13QLatin1String()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN10QJsonValueC2E13QLatin1String", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
+    return rsthis;
     // return 1;
   }
 }
 
-  // proto:  bool QJsonValueRef::isBool();
-impl /*struct*/ QJsonValueRef {
-  pub fn isBool<RetType, T: QJsonValueRef_isBool<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isBool(self);
+// /usr/include/qt/QtCore/qjsonvalue.h:84
+// index:7
+// Public inline Visibility=Default Availability=Available
+// [-2] void QJsonValue(const char *)
+
+/*
+Creates a QJsonValue of type type.
+
+The default is to create a Null value.
+*/
+// QJsonValue(const char *) ctx.fn_proto_cpp
+impl /*struct*/ QJsonValue {
+  pub fn QJsonValue_7<T: QJsonValue_QJsonValue_7>(value: T) -> QJsonValue {
+    let rsthis = value.QJsonValue_7();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QJsonValueRef_isBool<RetType> {
-  fn isBool(self , rsthis: & QJsonValueRef) -> RetType;
+pub trait QJsonValue_QJsonValue_7 {
+  fn QJsonValue_7(self) -> QJsonValue;
 }
-
-  // proto:  bool QJsonValueRef::isBool();
-impl<'a> /*trait*/ QJsonValueRef_isBool<i8> for () {
-  fn isBool(self , rsthis: & QJsonValueRef) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QJsonValueRef6isBoolEv()};
-    let mut ret = unsafe {C_ZNK13QJsonValueRef6isBoolEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+// QJsonValue(const char *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QJsonValue_QJsonValue_7 for (usize) {
+  fn QJsonValue_7(self) -> QJsonValue {
+    // unsafe{_ZN10QJsonValueC2EPKc()};
+    let arg0 = (self) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN10QJsonValueC2EPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
+    return rsthis;
     // return 1;
   }
 }
 
-  // proto:  bool QJsonValueRef::isDouble();
-impl /*struct*/ QJsonValueRef {
-  pub fn isDouble<RetType, T: QJsonValueRef_isDouble<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isDouble(self);
+// /usr/include/qt/QtCore/qjsonvalue.h:87
+// index:8
+// Public Visibility=Default Availability=Available
+// [-2] void QJsonValue(const QJsonArray &)
+
+/*
+Creates a QJsonValue of type type.
+
+The default is to create a Null value.
+*/
+// QJsonValue(const QJsonArray &) ctx.fn_proto_cpp
+impl /*struct*/ QJsonValue {
+  pub fn QJsonValue_8<T: QJsonValue_QJsonValue_8>(value: T) -> QJsonValue {
+    let rsthis = value.QJsonValue_8();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QJsonValueRef_isDouble<RetType> {
-  fn isDouble(self , rsthis: & QJsonValueRef) -> RetType;
+pub trait QJsonValue_QJsonValue_8 {
+  fn QJsonValue_8(self) -> QJsonValue;
 }
-
-  // proto:  bool QJsonValueRef::isDouble();
-impl<'a> /*trait*/ QJsonValueRef_isDouble<i8> for () {
-  fn isDouble(self , rsthis: & QJsonValueRef) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QJsonValueRef8isDoubleEv()};
-    let mut ret = unsafe {C_ZNK13QJsonValueRef8isDoubleEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+// QJsonValue(const QJsonArray &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QJsonValue_QJsonValue_8 for (usize) {
+  fn QJsonValue_8(self) -> QJsonValue {
+    // unsafe{_ZN10QJsonValueC2ERK10QJsonArray()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN10QJsonValueC2ERK10QJsonArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
+    return rsthis;
     // return 1;
   }
 }
 
-  // proto:  double QJsonValueRef::toDouble();
-impl /*struct*/ QJsonValueRef {
-  pub fn toDouble<RetType, T: QJsonValueRef_toDouble<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toDouble(self);
+// /usr/include/qt/QtCore/qjsonvalue.h:88
+// index:9
+// Public Visibility=Default Availability=Available
+// [-2] void QJsonValue(const QJsonObject &)
+
+/*
+Creates a QJsonValue of type type.
+
+The default is to create a Null value.
+*/
+// QJsonValue(const QJsonObject &) ctx.fn_proto_cpp
+impl /*struct*/ QJsonValue {
+  pub fn QJsonValue_9<T: QJsonValue_QJsonValue_9>(value: T) -> QJsonValue {
+    let rsthis = value.QJsonValue_9();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QJsonValueRef_toDouble<RetType> {
-  fn toDouble(self , rsthis: & QJsonValueRef) -> RetType;
+pub trait QJsonValue_QJsonValue_9 {
+  fn QJsonValue_9(self) -> QJsonValue;
 }
-
-  // proto:  double QJsonValueRef::toDouble();
-impl<'a> /*trait*/ QJsonValueRef_toDouble<f64> for () {
-  fn toDouble(self , rsthis: & QJsonValueRef) -> f64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QJsonValueRef8toDoubleEv()};
-    let mut ret = unsafe {C_ZNK13QJsonValueRef8toDoubleEv(rsthis.qclsinst)};
-    return ret as f64; // 1
+// QJsonValue(const QJsonObject &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QJsonValue_QJsonValue_9 for (usize) {
+  fn QJsonValue_9(self) -> QJsonValue {
+    // unsafe{_ZN10QJsonValueC2ERK11QJsonObject()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN10QJsonValueC2ERK11QJsonObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
+    return rsthis;
     // return 1;
   }
 }
 
-  // proto:  bool QJsonValueRef::toBool(bool defaultValue);
-impl /*struct*/ QJsonValueRef {
-  pub fn toBool<RetType, T: QJsonValueRef_toBool<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toBool(self);
+// /usr/include/qt/QtCore/qjsonvalue.h:90
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void ~QJsonValue()
+
+/*
+
+*/
+pub fn DeleteQJsonValue(this :*mut QJsonValue) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN10QJsonValueD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 24)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qjsonvalue.h:93
+// index:0
+// Public Visibility=Default Availability=Available
+// [24] QJsonValue & operator=(const QJsonValue &)
+
+/*
+
+*/
+impl /*struct*/ QJsonValue {
+  pub fn operator_equal_0<RetType, T: QJsonValue_operator_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_0(self);
+    // return 1;
+  }
+}
+pub trait QJsonValue_operator_equal_0<RetType> {
+  fn operator_equal_0(self , rsthis: & QJsonValue) -> RetType;
+}
+impl<'a> /*trait*/ QJsonValue_operator_equal_0<usize> for (usize) {
+  fn operator_equal_0(self , rsthis: & QJsonValue) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN10QJsonValueaSERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qjsonvalue.h:105
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [24] QJsonValue & operator=(QJsonValue &&)
+
+/*
+
+*/
+impl /*struct*/ QJsonValue {
+  pub fn operator_equal_1<RetType, T: QJsonValue_operator_equal_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_1(self);
+    // return 1;
+  }
+}
+pub trait QJsonValue_operator_equal_1<RetType> {
+  fn operator_equal_1(self , rsthis: & QJsonValue) -> RetType;
+}
+impl<'a> /*trait*/ QJsonValue_operator_equal_1<usize> for (usize) {
+  fn operator_equal_1(self , rsthis: & QJsonValue) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN10QJsonValueaSEOS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qjsonvalue.h:111
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QJsonValue &)
+
+/*
+Swaps the value other with this. This operation is very fast and never fails.
+
+This function was introduced in  Qt 5.10.
+*/
+impl /*struct*/ QJsonValue {
+  pub fn swap_0<RetType, T: QJsonValue_swap_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.swap_0(self);
+    // return 1;
+  }
+}
+pub trait QJsonValue_swap_0<RetType> {
+  fn swap_0(self , rsthis: & QJsonValue) -> RetType;
+}
+impl<'a> /*trait*/ QJsonValue_swap_0<(/*void*/)> for (usize) {
+  fn swap_0(self , rsthis: & QJsonValue) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN10QJsonValue4swapERS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QJsonValueRef_toBool<RetType> {
-  fn toBool(self , rsthis: & QJsonValueRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qjsonvalue.h:118
+// index:0
+// Public static Visibility=Default Availability=Available
+// [24] QJsonValue fromVariant(const QVariant &)
 
-  // proto:  bool QJsonValueRef::toBool(bool defaultValue);
-impl<'a> /*trait*/ QJsonValueRef_toBool<i8> for (i8) {
-  fn toBool(self , rsthis: & QJsonValueRef) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QJsonValueRef6toBoolEb()};
-    let arg0 = self  as c_char;
-    let mut ret = unsafe {C_ZNK13QJsonValueRef6toBoolEb(rsthis.qclsinst, arg0)};
-    return ret as i8; // 1
+/*
+Converts variant to a QJsonValue and returns it.
+
+The conversion will convert QVariant types as follows:
+
+
+ Source typeDestination type
+
+QMetaType::Nullptr
+
+QJsonValue::Null
+
+QMetaType::Bool
+
+QJsonValue::Bool
+
+QMetaType::Int
+QMetaType::UInt
+QMetaType::LongLong
+QMetaType::ULongLong
+QMetaType::Float
+QMetaType::Double
+
+QJsonValue::Double
+
+QMetaType::QString
+
+QJsonValue::String
+
+QMetaType::QStringList
+QMetaType::QVariantList
+
+QJsonValue::Array
+
+QMetaType::QVariantMap
+QMetaType::QVariantHash
+
+QJsonValue::Object
+
+
+For all other QVariant types a conversion to a QString will be attempted. If the returned string is empty, a Null QJsonValue will be stored, otherwise a String value using the returned QString.
+
+See also toVariant().
+*/
+impl /*struct*/ QJsonValue {
+  pub fn fromVariant_0<RetType, T: QJsonValue_fromVariant_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromVariant_0();
     // return 1;
   }
 }
-
-  // proto:  double QJsonValueRef::toDouble(double defaultValue);
-impl<'a> /*trait*/ QJsonValueRef_toDouble<f64> for (f64) {
-  fn toDouble(self , rsthis: & QJsonValueRef) -> f64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QJsonValueRef8toDoubleEd()};
-    let arg0 = self  as c_double;
-    let mut ret = unsafe {C_ZNK13QJsonValueRef8toDoubleEd(rsthis.qclsinst, arg0)};
-    return ret as f64; // 1
+pub trait QJsonValue_fromVariant_0<RetType> {
+  fn fromVariant_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QJsonValue_fromVariant_0<usize> for (usize) {
+  fn fromVariant_0(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN10QJsonValue11fromVariantERK8QVariant", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  bool QJsonValueRef::toBool();
-impl<'a> /*trait*/ QJsonValueRef_toBool<i8> for () {
-  fn toBool(self , rsthis: & QJsonValueRef) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QJsonValueRef6toBoolEv()};
-    let mut ret = unsafe {C_ZNK13QJsonValueRef6toBoolEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+// /usr/include/qt/QtCore/qjsonvalue.h:119
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QVariant toVariant() const
+
+/*
+Converts the value to a QVariant().
+
+The QJsonValue types will be converted as follows:
+
+ConstantDescription
+NullQMetaType::Nullptr
+BoolQMetaType::Bool
+DoubleQMetaType::Double
+StringQString
+ArrayQVariantList
+ObjectQVariantMap
+UndefinedQVariant()
+
+
+See also fromVariant().
+*/
+impl /*struct*/ QJsonValue {
+  pub fn toVariant_0<RetType, T: QJsonValue_toVariant_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toVariant_0(self);
     // return 1;
   }
 }
-
-  // proto:  QVariant QJsonValueRef::toVariant();
-impl /*struct*/ QJsonValueRef {
-  pub fn toVariant<RetType, T: QJsonValueRef_toVariant<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toVariant(self);
+pub trait QJsonValue_toVariant_0<RetType> {
+  fn toVariant_0(self , rsthis: & QJsonValue) -> RetType;
+}
+impl<'a> /*trait*/ QJsonValue_toVariant_0<usize> for () {
+  fn toVariant_0(self , rsthis: & QJsonValue) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK10QJsonValue9toVariantEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QJsonValueRef_toVariant<RetType> {
-  fn toVariant(self , rsthis: & QJsonValueRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qjsonvalue.h:121
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] QJsonValue::Type type() const
 
-  // proto:  QVariant QJsonValueRef::toVariant();
-impl<'a> /*trait*/ QJsonValueRef_toVariant<QVariant> for () {
-  fn toVariant(self , rsthis: & QJsonValueRef) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QJsonValueRef9toVariantEv()};
-    let mut ret = unsafe {C_ZNK13QJsonValueRef9toVariantEv(rsthis.qclsinst)};
-    let mut ret1 = QVariant::inheritFrom(ret as u64);
-    return ret1;
+/*
+Returns the type of the value.
+
+See also QJsonValue::Type.
+*/
+impl /*struct*/ QJsonValue {
+  pub fn type__0<RetType, T: QJsonValue_type__0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.type__0(self);
     // return 1;
   }
 }
-
-  // proto:  QString QJsonValueRef::toString(const QString & defaultValue);
-impl /*struct*/ QJsonValueRef {
-  pub fn toString<RetType, T: QJsonValueRef_toString<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toString(self);
+pub trait QJsonValue_type__0<RetType> {
+  fn type__0(self , rsthis: & QJsonValue) -> RetType;
+}
+impl<'a> /*trait*/ QJsonValue_type__0<i32> for () {
+  fn type__0(self , rsthis: & QJsonValue) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK10QJsonValue4typeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i32 = Default::default(); return dret;
   }
 }
 
-pub trait QJsonValueRef_toString<RetType> {
-  fn toString(self , rsthis: & QJsonValueRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qjsonvalue.h:122
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool isNull() const
 
-  // proto:  QString QJsonValueRef::toString(const QString & defaultValue);
-impl<'a> /*trait*/ QJsonValueRef_toString<QString> for (&'a QString) {
-  fn toString(self , rsthis: & QJsonValueRef) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QJsonValueRef8toStringERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK13QJsonValueRef8toStringERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+/*
+Returns true if the value is null.
+*/
+impl /*struct*/ QJsonValue {
+  pub fn isNull_0<RetType, T: QJsonValue_isNull_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isNull_0(self);
     // return 1;
   }
 }
-
-  // proto:  bool QJsonValueRef::isObject();
-impl /*struct*/ QJsonValueRef {
-  pub fn isObject<RetType, T: QJsonValueRef_isObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isObject(self);
+pub trait QJsonValue_isNull_0<RetType> {
+  fn isNull_0(self , rsthis: & QJsonValue) -> RetType;
+}
+impl<'a> /*trait*/ QJsonValue_isNull_0<bool> for () {
+  fn isNull_0(self , rsthis: & QJsonValue) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK10QJsonValue6isNullEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-pub trait QJsonValueRef_isObject<RetType> {
-  fn isObject(self , rsthis: & QJsonValueRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qjsonvalue.h:123
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool isBool() const
 
-  // proto:  bool QJsonValueRef::isObject();
-impl<'a> /*trait*/ QJsonValueRef_isObject<i8> for () {
-  fn isObject(self , rsthis: & QJsonValueRef) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QJsonValueRef8isObjectEv()};
-    let mut ret = unsafe {C_ZNK13QJsonValueRef8isObjectEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+/*
+Returns true if the value contains a boolean.
+
+See also toBool().
+*/
+impl /*struct*/ QJsonValue {
+  pub fn isBool_0<RetType, T: QJsonValue_isBool_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isBool_0(self);
     // return 1;
   }
 }
-
-  // proto:  bool QJsonValueRef::isString();
-impl /*struct*/ QJsonValueRef {
-  pub fn isString<RetType, T: QJsonValueRef_isString<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isString(self);
+pub trait QJsonValue_isBool_0<RetType> {
+  fn isBool_0(self , rsthis: & QJsonValue) -> RetType;
+}
+impl<'a> /*trait*/ QJsonValue_isBool_0<bool> for () {
+  fn isBool_0(self , rsthis: & QJsonValue) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK10QJsonValue6isBoolEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-pub trait QJsonValueRef_isString<RetType> {
-  fn isString(self , rsthis: & QJsonValueRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qjsonvalue.h:124
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool isDouble() const
 
-  // proto:  bool QJsonValueRef::isString();
-impl<'a> /*trait*/ QJsonValueRef_isString<i8> for () {
-  fn isString(self , rsthis: & QJsonValueRef) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QJsonValueRef8isStringEv()};
-    let mut ret = unsafe {C_ZNK13QJsonValueRef8isStringEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+/*
+Returns true if the value contains a double.
+
+See also toDouble().
+*/
+impl /*struct*/ QJsonValue {
+  pub fn isDouble_0<RetType, T: QJsonValue_isDouble_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isDouble_0(self);
     // return 1;
   }
 }
-
-  // proto:  QString QJsonValueRef::toString();
-impl<'a> /*trait*/ QJsonValueRef_toString<QString> for () {
-  fn toString(self , rsthis: & QJsonValueRef) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QJsonValueRef8toStringEv()};
-    let mut ret = unsafe {C_ZNK13QJsonValueRef8toStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+pub trait QJsonValue_isDouble_0<RetType> {
+  fn isDouble_0(self , rsthis: & QJsonValue) -> RetType;
+}
+impl<'a> /*trait*/ QJsonValue_isDouble_0<bool> for () {
+  fn isDouble_0(self , rsthis: & QJsonValue) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK10QJsonValue8isDoubleEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  int QJsonValueRef::toInt(int defaultValue);
-impl /*struct*/ QJsonValueRef {
-  pub fn toInt<RetType, T: QJsonValueRef_toInt<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toInt(self);
+// /usr/include/qt/QtCore/qjsonvalue.h:125
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool isString() const
+
+/*
+Returns true if the value contains a string.
+
+See also toString().
+*/
+impl /*struct*/ QJsonValue {
+  pub fn isString_0<RetType, T: QJsonValue_isString_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isString_0(self);
     // return 1;
   }
 }
-
-pub trait QJsonValueRef_toInt<RetType> {
-  fn toInt(self , rsthis: & QJsonValueRef) -> RetType;
+pub trait QJsonValue_isString_0<RetType> {
+  fn isString_0(self , rsthis: & QJsonValue) -> RetType;
 }
-
-  // proto:  int QJsonValueRef::toInt(int defaultValue);
-impl<'a> /*trait*/ QJsonValueRef_toInt<i32> for (i32) {
-  fn toInt(self , rsthis: & QJsonValueRef) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QJsonValueRef5toIntEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZNK13QJsonValueRef5toIntEi(rsthis.qclsinst, arg0)};
-    return ret as i32; // 1
+impl<'a> /*trait*/ QJsonValue_isString_0<bool> for () {
+  fn isString_0(self , rsthis: & QJsonValue) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK10QJsonValue8isStringEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  bool QJsonValueRef::isArray();
-impl /*struct*/ QJsonValueRef {
-  pub fn isArray<RetType, T: QJsonValueRef_isArray<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isArray(self);
+// /usr/include/qt/QtCore/qjsonvalue.h:126
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool isArray() const
+
+/*
+Returns true if the value contains an array.
+
+See also toArray().
+*/
+impl /*struct*/ QJsonValue {
+  pub fn isArray_0<RetType, T: QJsonValue_isArray_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isArray_0(self);
     // return 1;
   }
 }
-
-pub trait QJsonValueRef_isArray<RetType> {
-  fn isArray(self , rsthis: & QJsonValueRef) -> RetType;
+pub trait QJsonValue_isArray_0<RetType> {
+  fn isArray_0(self , rsthis: & QJsonValue) -> RetType;
 }
-
-  // proto:  bool QJsonValueRef::isArray();
-impl<'a> /*trait*/ QJsonValueRef_isArray<i8> for () {
-  fn isArray(self , rsthis: & QJsonValueRef) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QJsonValueRef7isArrayEv()};
-    let mut ret = unsafe {C_ZNK13QJsonValueRef7isArrayEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+impl<'a> /*trait*/ QJsonValue_isArray_0<bool> for () {
+  fn isArray_0(self , rsthis: & QJsonValue) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK10QJsonValue7isArrayEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  bool QJsonValueRef::isNull();
-impl /*struct*/ QJsonValueRef {
-  pub fn isNull<RetType, T: QJsonValueRef_isNull<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isNull(self);
+// /usr/include/qt/QtCore/qjsonvalue.h:127
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool isObject() const
+
+/*
+Returns true if the value contains an object.
+
+See also toObject().
+*/
+impl /*struct*/ QJsonValue {
+  pub fn isObject_0<RetType, T: QJsonValue_isObject_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isObject_0(self);
     // return 1;
   }
 }
-
-pub trait QJsonValueRef_isNull<RetType> {
-  fn isNull(self , rsthis: & QJsonValueRef) -> RetType;
+pub trait QJsonValue_isObject_0<RetType> {
+  fn isObject_0(self , rsthis: & QJsonValue) -> RetType;
 }
-
-  // proto:  bool QJsonValueRef::isNull();
-impl<'a> /*trait*/ QJsonValueRef_isNull<i8> for () {
-  fn isNull(self , rsthis: & QJsonValueRef) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QJsonValueRef6isNullEv()};
-    let mut ret = unsafe {C_ZNK13QJsonValueRef6isNullEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+impl<'a> /*trait*/ QJsonValue_isObject_0<bool> for () {
+  fn isObject_0(self , rsthis: & QJsonValue) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK10QJsonValue8isObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  int QJsonValueRef::toInt();
-impl<'a> /*trait*/ QJsonValueRef_toInt<i32> for () {
-  fn toInt(self , rsthis: & QJsonValueRef) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QJsonValueRef5toIntEv()};
-    let mut ret = unsafe {C_ZNK13QJsonValueRef5toIntEv(rsthis.qclsinst)};
-    return ret as i32; // 1
+// /usr/include/qt/QtCore/qjsonvalue.h:128
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool isUndefined() const
+
+/*
+Returns true if the value is undefined. This can happen in certain error cases as e.g. accessing a non existing key in a QJsonObject.
+*/
+impl /*struct*/ QJsonValue {
+  pub fn isUndefined_0<RetType, T: QJsonValue_isUndefined_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isUndefined_0(self);
     // return 1;
   }
 }
-
-  // proto:  bool QJsonValueRef::isUndefined();
-impl /*struct*/ QJsonValueRef {
-  pub fn isUndefined<RetType, T: QJsonValueRef_isUndefined<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isUndefined(self);
+pub trait QJsonValue_isUndefined_0<RetType> {
+  fn isUndefined_0(self , rsthis: & QJsonValue) -> RetType;
+}
+impl<'a> /*trait*/ QJsonValue_isUndefined_0<bool> for () {
+  fn isUndefined_0(self , rsthis: & QJsonValue) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK10QJsonValue11isUndefinedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-pub trait QJsonValueRef_isUndefined<RetType> {
-  fn isUndefined(self , rsthis: & QJsonValueRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qjsonvalue.h:130
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool toBool(bool) const
 
-  // proto:  bool QJsonValueRef::isUndefined();
-impl<'a> /*trait*/ QJsonValueRef_isUndefined<i8> for () {
-  fn isUndefined(self , rsthis: & QJsonValueRef) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QJsonValueRef11isUndefinedEv()};
-    let mut ret = unsafe {C_ZNK13QJsonValueRef11isUndefinedEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+/*
+Converts the value to a bool and returns it.
+
+If type() is not bool, the defaultValue will be returned.
+*/
+impl /*struct*/ QJsonValue {
+  pub fn toBool_0<RetType, T: QJsonValue_toBool_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toBool_0(self);
     // return 1;
   }
 }
+pub trait QJsonValue_toBool_0<RetType> {
+  fn toBool_0(self , rsthis: & QJsonValue) -> RetType;
+}
+impl<'a> /*trait*/ QJsonValue_toBool_0<bool> for (bool) {
+  fn toBool_0(self , rsthis: & QJsonValue) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const bool as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK10QJsonValue6toBoolEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
 
-// <= body block end
+// /usr/include/qt/QtCore/qjsonvalue.h:131
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int toInt(int) const
 
+/*
+Converts the value to an int and returns it.
+
+If type() is not Double or the value is not a whole number, the defaultValue will be returned.
+*/
+impl /*struct*/ QJsonValue {
+  pub fn toInt_0<RetType, T: QJsonValue_toInt_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toInt_0(self);
+    // return 1;
+  }
+}
+pub trait QJsonValue_toInt_0<RetType> {
+  fn toInt_0(self , rsthis: & QJsonValue) -> RetType;
+}
+impl<'a> /*trait*/ QJsonValue_toInt_0<i32> for (i32) {
+  fn toInt_0(self , rsthis: & QJsonValue) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK10QJsonValue5toIntEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qjsonvalue.h:132
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] double toDouble(double) const
+
+/*
+Converts the value to a double and returns it.
+
+If type() is not Double, the defaultValue will be returned.
+*/
+impl /*struct*/ QJsonValue {
+  pub fn toDouble_0<RetType, T: QJsonValue_toDouble_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toDouble_0(self);
+    // return 1;
+  }
+}
+pub trait QJsonValue_toDouble_0<RetType> {
+  fn toDouble_0(self , rsthis: & QJsonValue) -> RetType;
+}
+impl<'a> /*trait*/ QJsonValue_toDouble_0<f64> for (f64) {
+  fn toDouble_0(self , rsthis: & QJsonValue) -> f64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const f64 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK10QJsonValue8toDoubleEd", 1,qtrt::FFITY_DOUBLE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: f64 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qjsonvalue.h:133
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString toString() const
+
+/*
+Converts the value to a QString and returns it.
+
+If type() is not String, a null QString will be returned.
+
+See also QString::isNull().
+*/
+impl /*struct*/ QJsonValue {
+  pub fn toString_0<RetType, T: QJsonValue_toString_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toString_0(self);
+    // return 1;
+  }
+}
+pub trait QJsonValue_toString_0<RetType> {
+  fn toString_0(self , rsthis: & QJsonValue) -> RetType;
+}
+impl<'a> /*trait*/ QJsonValue_toString_0<usize> for () {
+  fn toString_0(self , rsthis: & QJsonValue) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK10QJsonValue8toStringEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qjsonvalue.h:134
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QString toString(const QString &) const
+
+/*
+Converts the value to a QString and returns it.
+
+If type() is not String, a null QString will be returned.
+
+See also QString::isNull().
+*/
+impl /*struct*/ QJsonValue {
+  pub fn toString_1<RetType, T: QJsonValue_toString_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toString_1(self);
+    // return 1;
+  }
+}
+pub trait QJsonValue_toString_1<RetType> {
+  fn toString_1(self , rsthis: & QJsonValue) -> RetType;
+}
+impl<'a> /*trait*/ QJsonValue_toString_1<usize> for (usize) {
+  fn toString_1(self , rsthis: & QJsonValue) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK10QJsonValue8toStringERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qjsonvalue.h:135
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QJsonArray toArray() const
+
+/*
+Converts the value to an array and returns it.
+
+If type() is not Array, the defaultValue will be returned.
+*/
+impl /*struct*/ QJsonValue {
+  pub fn toArray_0<RetType, T: QJsonValue_toArray_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toArray_0(self);
+    // return 1;
+  }
+}
+pub trait QJsonValue_toArray_0<RetType> {
+  fn toArray_0(self , rsthis: & QJsonValue) -> RetType;
+}
+impl<'a> /*trait*/ QJsonValue_toArray_0<usize> for () {
+  fn toArray_0(self , rsthis: & QJsonValue) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK10QJsonValue7toArrayEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qjsonvalue.h:136
+// index:1
+// Public Visibility=Default Availability=Available
+// [16] QJsonArray toArray(const QJsonArray &) const
+
+/*
+Converts the value to an array and returns it.
+
+If type() is not Array, the defaultValue will be returned.
+*/
+impl /*struct*/ QJsonValue {
+  pub fn toArray_1<RetType, T: QJsonValue_toArray_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toArray_1(self);
+    // return 1;
+  }
+}
+pub trait QJsonValue_toArray_1<RetType> {
+  fn toArray_1(self , rsthis: & QJsonValue) -> RetType;
+}
+impl<'a> /*trait*/ QJsonValue_toArray_1<usize> for (usize) {
+  fn toArray_1(self , rsthis: & QJsonValue) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK10QJsonValue7toArrayERK10QJsonArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qjsonvalue.h:137
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QJsonObject toObject() const
+
+/*
+Converts the value to an object and returns it.
+
+If type() is not Object, the defaultValue will be returned.
+*/
+impl /*struct*/ QJsonValue {
+  pub fn toObject_0<RetType, T: QJsonValue_toObject_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toObject_0(self);
+    // return 1;
+  }
+}
+pub trait QJsonValue_toObject_0<RetType> {
+  fn toObject_0(self , rsthis: & QJsonValue) -> RetType;
+}
+impl<'a> /*trait*/ QJsonValue_toObject_0<usize> for () {
+  fn toObject_0(self , rsthis: & QJsonValue) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK10QJsonValue8toObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qjsonvalue.h:138
+// index:1
+// Public Visibility=Default Availability=Available
+// [16] QJsonObject toObject(const QJsonObject &) const
+
+/*
+Converts the value to an object and returns it.
+
+If type() is not Object, the defaultValue will be returned.
+*/
+impl /*struct*/ QJsonValue {
+  pub fn toObject_1<RetType, T: QJsonValue_toObject_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toObject_1(self);
+    // return 1;
+  }
+}
+pub trait QJsonValue_toObject_1<RetType> {
+  fn toObject_1(self , rsthis: & QJsonValue) -> RetType;
+}
+impl<'a> /*trait*/ QJsonValue_toObject_1<usize> for (usize) {
+  fn toObject_1(self , rsthis: & QJsonValue) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK10QJsonValue8toObjectERK11QJsonObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qjsonvalue.h:140
+// index:0
+// Public Visibility=Default Availability=Available
+// [24] const QJsonValue operator[](const QString &) const
+
+/*
+
+*/
+impl /*struct*/ QJsonValue {
+  pub fn operator_get_index_0<RetType, T: QJsonValue_operator_get_index_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_get_index_0(self);
+    // return 1;
+  }
+}
+pub trait QJsonValue_operator_get_index_0<RetType> {
+  fn operator_get_index_0(self , rsthis: & QJsonValue) -> RetType;
+}
+impl<'a> /*trait*/ QJsonValue_operator_get_index_0<usize> for (usize) {
+  fn operator_get_index_0(self , rsthis: & QJsonValue) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK10QJsonValueixERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qjsonvalue.h:141
+// index:1
+// Public Visibility=Default Availability=Available
+// [24] const QJsonValue operator[](QLatin1String) const
+
+/*
+
+*/
+impl /*struct*/ QJsonValue {
+  pub fn operator_get_index_1<RetType, T: QJsonValue_operator_get_index_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_get_index_1(self);
+    // return 1;
+  }
+}
+pub trait QJsonValue_operator_get_index_1<RetType> {
+  fn operator_get_index_1(self , rsthis: & QJsonValue) -> RetType;
+}
+impl<'a> /*trait*/ QJsonValue_operator_get_index_1<usize> for (usize) {
+  fn operator_get_index_1(self , rsthis: & QJsonValue) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK10QJsonValueixE13QLatin1String", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qjsonvalue.h:142
+// index:2
+// Public Visibility=Default Availability=Available
+// [24] const QJsonValue operator[](int) const
+
+/*
+
+*/
+impl /*struct*/ QJsonValue {
+  pub fn operator_get_index_2<RetType, T: QJsonValue_operator_get_index_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_get_index_2(self);
+    // return 1;
+  }
+}
+pub trait QJsonValue_operator_get_index_2<RetType> {
+  fn operator_get_index_2(self , rsthis: & QJsonValue) -> RetType;
+}
+impl<'a> /*trait*/ QJsonValue_operator_get_index_2<usize> for (i32) {
+  fn operator_get_index_2(self , rsthis: & QJsonValue) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK10QJsonValueixEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qjsonvalue.h:144
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QJsonValue &) const
+
+/*
+
+*/
+impl /*struct*/ QJsonValue {
+  pub fn operator_equal_equal_0<RetType, T: QJsonValue_operator_equal_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_equal_0(self);
+    // return 1;
+  }
+}
+pub trait QJsonValue_operator_equal_equal_0<RetType> {
+  fn operator_equal_equal_0(self , rsthis: & QJsonValue) -> RetType;
+}
+impl<'a> /*trait*/ QJsonValue_operator_equal_equal_0<bool> for (usize) {
+  fn operator_equal_equal_0(self , rsthis: & QJsonValue) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK10QJsonValueeqERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qjsonvalue.h:145
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator!=(const QJsonValue &) const
+
+/*
+
+*/
+impl /*struct*/ QJsonValue {
+  pub fn operator_not_equal_0<RetType, T: QJsonValue_operator_not_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_not_equal_0(self);
+    // return 1;
+  }
+}
+pub trait QJsonValue_operator_not_equal_0<RetType> {
+  fn operator_not_equal_0(self , rsthis: & QJsonValue) -> RetType;
+}
+impl<'a> /*trait*/ QJsonValue_operator_not_equal_0<bool> for (usize) {
+  fn operator_not_equal_0(self , rsthis: & QJsonValue) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK10QJsonValueneERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+
+/*
+This enum describes the type of the JSON value.
+
+
+*/
+pub type QJsonValue__Type = i32;
+// 
+pub const QJsonValue__Null :QJsonValue__Type = 0;
+// 
+pub const QJsonValue__Bool :QJsonValue__Type = 1;
+// 
+pub const QJsonValue__Double :QJsonValue__Type = 2;
+// 
+pub const QJsonValue__String :QJsonValue__Type = 3;
+// 
+pub const QJsonValue__Array :QJsonValue__Type = 4;
+// 
+pub const QJsonValue__Object :QJsonValue__Type = 5;
+// 
+pub const QJsonValue__Undefined :QJsonValue__Type = 128;
+pub fn QJsonValue_TypeItemName(val: i32) ->String {
+  match val {
+     QJsonValue__Null => // 0
+     {return String::from("Null");}
+     QJsonValue__Bool => // 1
+     {return String::from("Bool");}
+     QJsonValue__Double => // 2
+     {return String::from("Double");}
+     QJsonValue__String => // 3
+     {return String::from("String");}
+     QJsonValue__Array => // 4
+     {return String::from("Array");}
+     QJsonValue__Object => // 5
+     {return String::from("Object");}
+     QJsonValue__Undefined => // 128
+     {return String::from("Undefined");}
+  _ => {return format!("{}", val);}
+}
+}
+pub fn QJsonValue_TypeItemName_s(val: i32) ->String {
+  //var nilthis *QJsonValue
+  //return nilthis.TypeItemName(val);
+  return QJsonValue_TypeItemName(val);
+}
+
+//  body block end
+
+//  keep block begin
+
+//  keep block end

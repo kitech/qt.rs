@@ -1,305 +1,416 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qsequentialanimationgroup.h
-// dst-file: /src/core/qsequentialanimationgroup.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QSequentialAnimationGroup
+// package qtcore
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h
+// #include <qsequentialanimationgroup.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
-use super::qanimationgroup::*; // 773
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 7
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qpauseanimation::*; // 773
-use super::qobject::*; // 773
-use super::qobjectdefs::*; // 773
-use super::qabstractanimation::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QSequentialAnimationGroup_Class_Size() -> c_int;
-  // proto:  QPauseAnimation * QSequentialAnimationGroup::insertPause(int index, int msecs);
-  fn C_ZN25QSequentialAnimationGroup11insertPauseEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
-  // proto:  void QSequentialAnimationGroup::QSequentialAnimationGroup(QObject * parent);
-  fn C_ZN25QSequentialAnimationGroupC2EP7QObject(arg0: *mut c_void) -> u64;
-  // proto:  QPauseAnimation * QSequentialAnimationGroup::addPause(int msecs);
-  fn C_ZN25QSequentialAnimationGroup8addPauseEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
-  // proto:  void QSequentialAnimationGroup::~QSequentialAnimationGroup();
-  fn C_ZN25QSequentialAnimationGroupD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  const QMetaObject * QSequentialAnimationGroup::metaObject();
-  fn C_ZNK25QSequentialAnimationGroup10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QAbstractAnimation * QSequentialAnimationGroup::currentAnimation();
-  fn C_ZNK25QSequentialAnimationGroup16currentAnimationEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  int QSequentialAnimationGroup::duration();
-  fn C_ZNK25QSequentialAnimationGroup8durationEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  fn QSequentialAnimationGroup_SlotProxy_connect__ZN25QSequentialAnimationGroup23currentAnimationChangedEP18QAbstractAnimation(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-} // <= ext block end
+// bool event(QEvent *)
+// func (this *QSequentialAnimationGroup) InheritEvent(f func(event *QEvent/*777 QEvent **/) bool) {
+//  qtrt.SetAllInheritCallback(this, "event", f)
+// }
 
-// body block begin =>
-// class sizeof(QSequentialAnimationGroup)=1
-#[derive(Default)]
+// void updateCurrentTime(int)
+// func (this *QSequentialAnimationGroup) InheritUpdateCurrentTime(f func(arg0 int) /*void*/) {
+//  qtrt.SetAllInheritCallback(this, "updateCurrentTime", f)
+// }
+
+// void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
+// func (this *QSequentialAnimationGroup) InheritUpdateState(f func(newState int, oldState int) /*void*/) {
+//  qtrt.SetAllInheritCallback(this, "updateState", f)
+// }
+
+// void updateDirection(QAbstractAnimation::Direction)
+// func (this *QSequentialAnimationGroup) InheritUpdateDirection(f func(direction int) /*void*/) {
+//  qtrt.SetAllInheritCallback(this, "updateDirection", f)
+// }
+
+
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QSequentialAnimationGroup)=16
 pub struct QSequentialAnimationGroup {
   qbase: QAnimationGroup,
-  pub qclsinst: u64 /* *mut c_void*/,
-  pub _currentAnimationChanged: QSequentialAnimationGroup_currentAnimationChanged_signal,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QSequentialAnimationGroup_ITF interface {
+//    QAnimationGroup_ITF
+//    QSequentialAnimationGroup_PTR() *QSequentialAnimationGroup
+//}
+//func (ptr *QSequentialAnimationGroup) QSequentialAnimationGroup_PTR() *QSequentialAnimationGroup { return ptr }
 
 impl /*struct*/ QSequentialAnimationGroup {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QSequentialAnimationGroup {
-    return QSequentialAnimationGroup{qbase: QAnimationGroup::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QSequentialAnimationGroup {
+    return QSequentialAnimationGroup{qclsinst: qthis, ..Default::default()};
   }
 }
-impl Deref for QSequentialAnimationGroup {
-  type Target = QAnimationGroup;
+//impl Deref for QSequentialAnimationGroup {
+//  type Target = QSequentialAnimationGroupBASE;
+//
+//  fn deref(&self) -> &QSequentialAnimationGroupBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QSequentialAnimationGroupBASE> for QSequentialAnimationGroup {
+//  fn as_ref(& self) -> & QSequentialAnimationGroupBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h:55
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject() const
 
-  fn deref(&self) -> &QAnimationGroup {
-    return & self.qbase;
-  }
-}
-impl AsRef<QAnimationGroup> for QSequentialAnimationGroup {
-  fn as_ref(& self) -> & QAnimationGroup {
-    return & self.qbase;
-  }
-}
-  // proto:  QPauseAnimation * QSequentialAnimationGroup::insertPause(int index, int msecs);
+/*
+
+*/
 impl /*struct*/ QSequentialAnimationGroup {
-  pub fn insertPause<RetType, T: QSequentialAnimationGroup_insertPause<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.insertPause(self);
+  pub fn metaObject_0<RetType, T: QSequentialAnimationGroup_metaObject_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.metaObject_0(self);
     // return 1;
   }
 }
-
-pub trait QSequentialAnimationGroup_insertPause<RetType> {
-  fn insertPause(self , rsthis: & QSequentialAnimationGroup) -> RetType;
+pub trait QSequentialAnimationGroup_metaObject_0<RetType> {
+  fn metaObject_0(self , rsthis: & QSequentialAnimationGroup) -> RetType;
 }
-
-  // proto:  QPauseAnimation * QSequentialAnimationGroup::insertPause(int index, int msecs);
-impl<'a> /*trait*/ QSequentialAnimationGroup_insertPause<QPauseAnimation> for (i32, i32) {
-  fn insertPause(self , rsthis: & QSequentialAnimationGroup) -> QPauseAnimation {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN25QSequentialAnimationGroup11insertPauseEii()};
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
-    let mut ret = unsafe {C_ZN25QSequentialAnimationGroup11insertPauseEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QPauseAnimation::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QSequentialAnimationGroup_metaObject_0<usize> for () {
+  fn metaObject_0(self , rsthis: & QSequentialAnimationGroup) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK25QSequentialAnimationGroup10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  void QSequentialAnimationGroup::QSequentialAnimationGroup(QObject * parent);
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h:59
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QSequentialAnimationGroup(QObject *)
+
+/*
+Constructs a QSequentialAnimationGroup. parent is passed to QObject's constructor.
+*/
+// QSequentialAnimationGroup(QObject *) ctx.fn_proto_cpp
 impl /*struct*/ QSequentialAnimationGroup {
-  pub fn new<T: QSequentialAnimationGroup_new>(value: T) -> QSequentialAnimationGroup {
-    let rsthis = value.new();
+  pub fn QSequentialAnimationGroup_0<T: QSequentialAnimationGroup_QSequentialAnimationGroup_0>(value: T) -> QSequentialAnimationGroup {
+    let rsthis = value.QSequentialAnimationGroup_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSequentialAnimationGroup_new {
-  fn new(self) -> QSequentialAnimationGroup;
+pub trait QSequentialAnimationGroup_QSequentialAnimationGroup_0 {
+  fn QSequentialAnimationGroup_0(self) -> QSequentialAnimationGroup;
 }
-
-  // proto:  void QSequentialAnimationGroup::QSequentialAnimationGroup(QObject * parent);
-impl<'a> /*trait*/ QSequentialAnimationGroup_new for (Option<&'a QObject>) {
-  fn new(self) -> QSequentialAnimationGroup {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QSequentialAnimationGroup(QObject *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QSequentialAnimationGroup_QSequentialAnimationGroup_0 for (usize) {
+  fn QSequentialAnimationGroup_0(self) -> QSequentialAnimationGroup {
     // unsafe{_ZN25QSequentialAnimationGroupC2EP7QObject()};
-    let ctysz: c_int = unsafe{QSequentialAnimationGroup_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN25QSequentialAnimationGroupC2EP7QObject(arg0)};
-    let rsthis = QSequentialAnimationGroup{qbase: QAnimationGroup::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN25QSequentialAnimationGroupC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QSequentialAnimationGroup{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  QPauseAnimation * QSequentialAnimationGroup::addPause(int msecs);
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h:60
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QSequentialAnimationGroup()
+
+/*
+
+*/
+pub fn DeleteQSequentialAnimationGroup(this :*mut QSequentialAnimationGroup) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN25QSequentialAnimationGroupD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 16)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h:62
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QPauseAnimation * addPause(int)
+
+/*
+Adds a pause of msecs to this animation group. The pause is considered as a special type of animation, thus animationCount will be increased by one.
+
+See also insertPause() and QAnimationGroup::addAnimation().
+*/
 impl /*struct*/ QSequentialAnimationGroup {
-  pub fn addPause<RetType, T: QSequentialAnimationGroup_addPause<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.addPause(self);
+  pub fn addPause_0<RetType, T: QSequentialAnimationGroup_addPause_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.addPause_0(self);
     // return 1;
   }
 }
-
-pub trait QSequentialAnimationGroup_addPause<RetType> {
-  fn addPause(self , rsthis: & QSequentialAnimationGroup) -> RetType;
+pub trait QSequentialAnimationGroup_addPause_0<RetType> {
+  fn addPause_0(self , rsthis: & QSequentialAnimationGroup) -> RetType;
 }
-
-  // proto:  QPauseAnimation * QSequentialAnimationGroup::addPause(int msecs);
-impl<'a> /*trait*/ QSequentialAnimationGroup_addPause<QPauseAnimation> for (i32) {
-  fn addPause(self , rsthis: & QSequentialAnimationGroup) -> QPauseAnimation {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN25QSequentialAnimationGroup8addPauseEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZN25QSequentialAnimationGroup8addPauseEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPauseAnimation::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QSequentialAnimationGroup_addPause_0<usize> for (i32) {
+  fn addPause_0(self , rsthis: & QSequentialAnimationGroup) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN25QSequentialAnimationGroup8addPauseEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  void QSequentialAnimationGroup::~QSequentialAnimationGroup();
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h:63
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QPauseAnimation * insertPause(int, int)
+
+/*
+Inserts a pause of msecs milliseconds at index in this animation group.
+
+See also addPause() and QAnimationGroup::insertAnimation().
+*/
 impl /*struct*/ QSequentialAnimationGroup {
-  pub fn free<RetType, T: QSequentialAnimationGroup_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
+  pub fn insertPause_0<RetType, T: QSequentialAnimationGroup_insertPause_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.insertPause_0(self);
     // return 1;
   }
 }
-
-pub trait QSequentialAnimationGroup_free<RetType> {
-  fn free(self , rsthis: & QSequentialAnimationGroup) -> RetType;
+pub trait QSequentialAnimationGroup_insertPause_0<RetType> {
+  fn insertPause_0(self , rsthis: & QSequentialAnimationGroup) -> RetType;
 }
-
-  // proto:  void QSequentialAnimationGroup::~QSequentialAnimationGroup();
-impl<'a> /*trait*/ QSequentialAnimationGroup_free<()> for () {
-  fn free(self , rsthis: & QSequentialAnimationGroup) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN25QSequentialAnimationGroupD2Ev()};
-     unsafe {C_ZN25QSequentialAnimationGroupD2Ev(rsthis.qclsinst)};
+impl<'a> /*trait*/ QSequentialAnimationGroup_insertPause_0<usize> for (i32,i32) {
+  fn insertPause_0(self , rsthis: & QSequentialAnimationGroup) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN25QSequentialAnimationGroup11insertPauseEii", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  const QMetaObject * QSequentialAnimationGroup::metaObject();
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h:65
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QAbstractAnimation * currentAnimation() const
+
+/*
+
+*/
 impl /*struct*/ QSequentialAnimationGroup {
-  pub fn metaObject<RetType, T: QSequentialAnimationGroup_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.metaObject(self);
+  pub fn currentAnimation_0<RetType, T: QSequentialAnimationGroup_currentAnimation_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.currentAnimation_0(self);
     // return 1;
   }
 }
-
-pub trait QSequentialAnimationGroup_metaObject<RetType> {
-  fn metaObject(self , rsthis: & QSequentialAnimationGroup) -> RetType;
+pub trait QSequentialAnimationGroup_currentAnimation_0<RetType> {
+  fn currentAnimation_0(self , rsthis: & QSequentialAnimationGroup) -> RetType;
 }
-
-  // proto:  const QMetaObject * QSequentialAnimationGroup::metaObject();
-impl<'a> /*trait*/ QSequentialAnimationGroup_metaObject<QMetaObject> for () {
-  fn metaObject(self , rsthis: & QSequentialAnimationGroup) -> QMetaObject {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK25QSequentialAnimationGroup10metaObjectEv()};
-    let mut ret = unsafe {C_ZNK25QSequentialAnimationGroup10metaObjectEv(rsthis.qclsinst)};
-    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QSequentialAnimationGroup_currentAnimation_0<usize> for () {
+  fn currentAnimation_0(self , rsthis: & QSequentialAnimationGroup) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK25QSequentialAnimationGroup16currentAnimationEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  QAbstractAnimation * QSequentialAnimationGroup::currentAnimation();
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h:66
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [4] int duration() const
+
+/*
+Reimplemented from QAbstractAnimation::duration().
+*/
 impl /*struct*/ QSequentialAnimationGroup {
-  pub fn currentAnimation<RetType, T: QSequentialAnimationGroup_currentAnimation<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.currentAnimation(self);
+  pub fn duration_0<RetType, T: QSequentialAnimationGroup_duration_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.duration_0(self);
     // return 1;
   }
 }
-
-pub trait QSequentialAnimationGroup_currentAnimation<RetType> {
-  fn currentAnimation(self , rsthis: & QSequentialAnimationGroup) -> RetType;
+pub trait QSequentialAnimationGroup_duration_0<RetType> {
+  fn duration_0(self , rsthis: & QSequentialAnimationGroup) -> RetType;
 }
-
-  // proto:  QAbstractAnimation * QSequentialAnimationGroup::currentAnimation();
-impl<'a> /*trait*/ QSequentialAnimationGroup_currentAnimation<QAbstractAnimation> for () {
-  fn currentAnimation(self , rsthis: & QSequentialAnimationGroup) -> QAbstractAnimation {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK25QSequentialAnimationGroup16currentAnimationEv()};
-    let mut ret = unsafe {C_ZNK25QSequentialAnimationGroup16currentAnimationEv(rsthis.qclsinst)};
-    let mut ret1 = QAbstractAnimation::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QSequentialAnimationGroup_duration_0<i32> for () {
+  fn duration_0(self , rsthis: & QSequentialAnimationGroup) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK25QSequentialAnimationGroup8durationEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i32 = Default::default(); return dret;
   }
 }
 
-  // proto:  int QSequentialAnimationGroup::duration();
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h:69
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void currentAnimationChanged(QAbstractAnimation *)
+
+/*
+QSequentialAnimationGroup emits this signal when currentAnimation has been changed. current is the current animation.
+
+Note: Notifier signal for property currentAnimation. 
+
+See also currentAnimation().
+*/
 impl /*struct*/ QSequentialAnimationGroup {
-  pub fn duration<RetType, T: QSequentialAnimationGroup_duration<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.duration(self);
+  pub fn currentAnimationChanged_0<RetType, T: QSequentialAnimationGroup_currentAnimationChanged_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.currentAnimationChanged_0(self);
+    // return 1;
+  }
+}
+pub trait QSequentialAnimationGroup_currentAnimationChanged_0<RetType> {
+  fn currentAnimationChanged_0(self , rsthis: & QSequentialAnimationGroup) -> RetType;
+}
+impl<'a> /*trait*/ QSequentialAnimationGroup_currentAnimationChanged_0<(/*void*/)> for (usize) {
+  fn currentAnimationChanged_0(self , rsthis: & QSequentialAnimationGroup) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN25QSequentialAnimationGroup23currentAnimationChangedEP18QAbstractAnimation", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QSequentialAnimationGroup_duration<RetType> {
-  fn duration(self , rsthis: & QSequentialAnimationGroup) -> RetType;
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h:73
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
+impl /*struct*/ QSequentialAnimationGroup {
+  pub fn event_0<RetType, T: QSequentialAnimationGroup_event_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.event_0(self);
+    // return 1;
+  }
+}
+pub trait QSequentialAnimationGroup_event_0<RetType> {
+  fn event_0(self , rsthis: & QSequentialAnimationGroup) -> RetType;
+}
+impl<'a> /*trait*/ QSequentialAnimationGroup_event_0<bool> for (usize) {
+  fn event_0(self , rsthis: & QSequentialAnimationGroup) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN25QSequentialAnimationGroup5eventEP6QEvent", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
 }
 
-  // proto:  int QSequentialAnimationGroup::duration();
-impl<'a> /*trait*/ QSequentialAnimationGroup_duration<i32> for () {
-  fn duration(self , rsthis: & QSequentialAnimationGroup) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK25QSequentialAnimationGroup8durationEv()};
-    let mut ret = unsafe {C_ZNK25QSequentialAnimationGroup8durationEv(rsthis.qclsinst)};
-    return ret as i32; // 1
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h:75
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void updateCurrentTime(int)
+
+/*
+Reimplemented from QAbstractAnimation::updateCurrentTime().
+*/
+impl /*struct*/ QSequentialAnimationGroup {
+  pub fn updateCurrentTime_0<RetType, T: QSequentialAnimationGroup_updateCurrentTime_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.updateCurrentTime_0(self);
+    // return 1;
+  }
+}
+pub trait QSequentialAnimationGroup_updateCurrentTime_0<RetType> {
+  fn updateCurrentTime_0(self , rsthis: & QSequentialAnimationGroup) -> RetType;
+}
+impl<'a> /*trait*/ QSequentialAnimationGroup_updateCurrentTime_0<(/*void*/)> for (i32) {
+  fn updateCurrentTime_0(self , rsthis: & QSequentialAnimationGroup) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN25QSequentialAnimationGroup17updateCurrentTimeEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-#[derive(Default)] // for QSequentialAnimationGroup_currentAnimationChanged
-pub struct QSequentialAnimationGroup_currentAnimationChanged_signal{poi:u64}
-impl /* struct */ QSequentialAnimationGroup {
-  pub fn currentAnimationChanged(&self) -> QSequentialAnimationGroup_currentAnimationChanged_signal {
-     return QSequentialAnimationGroup_currentAnimationChanged_signal{poi:self.qclsinst};
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h:76
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
+
+/*
+Reimplemented from QAbstractAnimation::updateState().
+*/
+impl /*struct*/ QSequentialAnimationGroup {
+  pub fn updateState_0<RetType, T: QSequentialAnimationGroup_updateState_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.updateState_0(self);
+    // return 1;
   }
 }
-impl /* struct */ QSequentialAnimationGroup_currentAnimationChanged_signal {
-  pub fn connect<T: QSequentialAnimationGroup_currentAnimationChanged_signal_connect>(self, overload_args: T) {
-    overload_args.connect(self);
-  }
+pub trait QSequentialAnimationGroup_updateState_0<RetType> {
+  fn updateState_0(self , rsthis: & QSequentialAnimationGroup) -> RetType;
 }
-pub trait QSequentialAnimationGroup_currentAnimationChanged_signal_connect {
-  fn connect(self, sigthis: QSequentialAnimationGroup_currentAnimationChanged_signal);
+impl<'a> /*trait*/ QSequentialAnimationGroup_updateState_0<(/*void*/)> for (i32,i32) {
+  fn updateState_0(self , rsthis: & QSequentialAnimationGroup) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN25QSequentialAnimationGroup11updateStateEN18QAbstractAnimation5StateES1_", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
 }
 
-// currentAnimationChanged(class QAbstractAnimation *)
-extern fn QSequentialAnimationGroup_currentAnimationChanged_signal_connect_cb_0(rsfptr:fn(QAbstractAnimation), arg0: *mut c_void) {
-  println!("{}:{}", file!(), line!());
-  let rsarg0 = QAbstractAnimation::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
-}
-extern fn QSequentialAnimationGroup_currentAnimationChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QAbstractAnimation)>, arg0: *mut c_void) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  let rsarg0 = QAbstractAnimation::inheritFrom(arg0 as u64);
-  // rsfptr(rsarg0);
-  unsafe{(*rsfptr_raw)(rsarg0)};
-}
-impl /* trait */ QSequentialAnimationGroup_currentAnimationChanged_signal_connect for fn(QAbstractAnimation) {
-  fn connect(self, sigthis: QSequentialAnimationGroup_currentAnimationChanged_signal) {
-    // do smth...
-    // self as u64; // error for Fn, Ok for fn
-    self as *mut c_void as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QSequentialAnimationGroup_currentAnimationChanged_signal_connect_cb_0 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QSequentialAnimationGroup_SlotProxy_connect__ZN25QSequentialAnimationGroup23currentAnimationChangedEP18QAbstractAnimation(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QSequentialAnimationGroup_currentAnimationChanged_signal_connect for Box<Fn(QAbstractAnimation)> {
-  fn connect(self, sigthis: QSequentialAnimationGroup_currentAnimationChanged_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QSequentialAnimationGroup_currentAnimationChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
-    unsafe {QSequentialAnimationGroup_SlotProxy_connect__ZN25QSequentialAnimationGroup23currentAnimationChangedEP18QAbstractAnimation(arg0, arg1, arg2)};
-  }
-}
-// <= body block end
+// /usr/include/qt/QtCore/qsequentialanimationgroup.h:77
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void updateDirection(QAbstractAnimation::Direction)
 
+/*
+Reimplemented from QAbstractAnimation::updateDirection().
+*/
+impl /*struct*/ QSequentialAnimationGroup {
+  pub fn updateDirection_0<RetType, T: QSequentialAnimationGroup_updateDirection_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.updateDirection_0(self);
+    // return 1;
+  }
+}
+pub trait QSequentialAnimationGroup_updateDirection_0<RetType> {
+  fn updateDirection_0(self , rsthis: & QSequentialAnimationGroup) -> RetType;
+}
+impl<'a> /*trait*/ QSequentialAnimationGroup_updateDirection_0<(/*void*/)> for (i32) {
+  fn updateDirection_0(self , rsthis: & QSequentialAnimationGroup) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN25QSequentialAnimationGroup15updateDirectionEN18QAbstractAnimation9DirectionE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+//  body block end
+
+//  keep block begin
+
+//  keep block end

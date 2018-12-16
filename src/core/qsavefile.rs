@@ -1,329 +1,469 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qsavefile.h
-// dst-file: /src/core/qsavefile.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QSaveFile
+// package qtcore
+// /usr/include/qt/QtCore/qsavefile.h
+// #include <qsavefile.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
-use super::qfiledevice::*; // 773
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 21
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qobject::*; // 773
-use super::qstring::*; // 773
-use super::qobjectdefs::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QSaveFile_Class_Size() -> c_int;
-  // proto:  void QSaveFile::cancelWriting();
-  fn C_ZN9QSaveFile13cancelWritingEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QSaveFile::QSaveFile(QObject * parent);
-  fn C_ZN9QSaveFileC2EP7QObject(arg0: *mut c_void) -> u64;
-  // proto:  void QSaveFile::QSaveFile(const QString & name, QObject * parent);
-  fn C_ZN9QSaveFileC2ERK7QStringP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> u64;
-  // proto:  QString QSaveFile::fileName();
-  fn C_ZNK9QSaveFile8fileNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QSaveFile::QSaveFile(const QString & name);
-  fn C_ZN9QSaveFileC2ERK7QString(arg0: *mut c_void) -> u64;
-  // proto:  const QMetaObject * QSaveFile::metaObject();
-  fn C_ZNK9QSaveFile10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  bool QSaveFile::commit();
-  fn C_ZN9QSaveFile6commitEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QSaveFile::~QSaveFile();
-  fn C_ZN9QSaveFileD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void QSaveFile::setFileName(const QString & name);
-  fn C_ZN9QSaveFile11setFileNameERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  bool QSaveFile::directWriteFallback();
-  fn C_ZNK9QSaveFile19directWriteFallbackEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QSaveFile::setDirectWriteFallback(bool enabled);
-  fn C_ZN9QSaveFile22setDirectWriteFallbackEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
-} // <= ext block end
+// long long writeData(const char *, qint64)
+// func (this *QSaveFile) InheritWriteData(f func(data string, len_ int64) int64) {
+//  qtrt.SetAllInheritCallback(this, "writeData", f)
+// }
 
-// body block begin =>
-// class sizeof(QSaveFile)=1
-#[derive(Default)]
+
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QSaveFile)=16
 pub struct QSaveFile {
   qbase: QFileDevice,
-  pub qclsinst: u64 /* *mut c_void*/,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QSaveFile_ITF interface {
+//    QFileDevice_ITF
+//    QSaveFile_PTR() *QSaveFile
+//}
+//func (ptr *QSaveFile) QSaveFile_PTR() *QSaveFile { return ptr }
 
 impl /*struct*/ QSaveFile {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QSaveFile {
-    return QSaveFile{qbase: QFileDevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QSaveFile {
+    return QSaveFile{qclsinst: qthis, ..Default::default()};
   }
 }
-impl Deref for QSaveFile {
-  type Target = QFileDevice;
+//impl Deref for QSaveFile {
+//  type Target = QSaveFileBASE;
+//
+//  fn deref(&self) -> &QSaveFileBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QSaveFileBASE> for QSaveFile {
+//  fn as_ref(& self) -> & QSaveFileBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qsavefile.h:62
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject() const
 
-  fn deref(&self) -> &QFileDevice {
-    return & self.qbase;
-  }
-}
-impl AsRef<QFileDevice> for QSaveFile {
-  fn as_ref(& self) -> & QFileDevice {
-    return & self.qbase;
-  }
-}
-  // proto:  void QSaveFile::cancelWriting();
+/*
+
+*/
 impl /*struct*/ QSaveFile {
-  pub fn cancelWriting<RetType, T: QSaveFile_cancelWriting<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.cancelWriting(self);
+  pub fn metaObject_0<RetType, T: QSaveFile_metaObject_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.metaObject_0(self);
     // return 1;
   }
 }
-
-pub trait QSaveFile_cancelWriting<RetType> {
-  fn cancelWriting(self , rsthis: & QSaveFile) -> RetType;
+pub trait QSaveFile_metaObject_0<RetType> {
+  fn metaObject_0(self , rsthis: & QSaveFile) -> RetType;
 }
-
-  // proto:  void QSaveFile::cancelWriting();
-impl<'a> /*trait*/ QSaveFile_cancelWriting<()> for () {
-  fn cancelWriting(self , rsthis: & QSaveFile) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QSaveFile13cancelWritingEv()};
-     unsafe {C_ZN9QSaveFile13cancelWritingEv(rsthis.qclsinst)};
+impl<'a> /*trait*/ QSaveFile_metaObject_0<usize> for () {
+  fn metaObject_0(self , rsthis: & QSaveFile) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QSaveFile10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  void QSaveFile::QSaveFile(QObject * parent);
+// /usr/include/qt/QtCore/qsavefile.h:68
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QSaveFile(const QString &)
+
+/*
+Constructs a new file object to represent the file with the given name.
+*/
+// QSaveFile(const QString &) ctx.fn_proto_cpp
 impl /*struct*/ QSaveFile {
-  pub fn new<T: QSaveFile_new>(value: T) -> QSaveFile {
-    let rsthis = value.new();
+  pub fn QSaveFile_0<T: QSaveFile_QSaveFile_0>(value: T) -> QSaveFile {
+    let rsthis = value.QSaveFile_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSaveFile_new {
-  fn new(self) -> QSaveFile;
+pub trait QSaveFile_QSaveFile_0 {
+  fn QSaveFile_0(self) -> QSaveFile;
 }
-
-  // proto:  void QSaveFile::QSaveFile(QObject * parent);
-impl<'a> /*trait*/ QSaveFile_new for (Option<&'a QObject>) {
-  fn new(self) -> QSaveFile {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QSaveFileC2EP7QObject()};
-    let ctysz: c_int = unsafe{QSaveFile_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN9QSaveFileC2EP7QObject(arg0)};
-    let rsthis = QSaveFile{qbase: QFileDevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QSaveFile::QSaveFile(const QString & name, QObject * parent);
-impl<'a> /*trait*/ QSaveFile_new for (&'a QString, &'a QObject) {
-  fn new(self) -> QSaveFile {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QSaveFileC2ERK7QStringP7QObject()};
-    let ctysz: c_int = unsafe{QSaveFile_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN9QSaveFileC2ERK7QStringP7QObject(arg0, arg1)};
-    let rsthis = QSaveFile{qbase: QFileDevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  QString QSaveFile::fileName();
-impl /*struct*/ QSaveFile {
-  pub fn fileName<RetType, T: QSaveFile_fileName<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.fileName(self);
-    // return 1;
-  }
-}
-
-pub trait QSaveFile_fileName<RetType> {
-  fn fileName(self , rsthis: & QSaveFile) -> RetType;
-}
-
-  // proto:  QString QSaveFile::fileName();
-impl<'a> /*trait*/ QSaveFile_fileName<QString> for () {
-  fn fileName(self , rsthis: & QSaveFile) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QSaveFile8fileNameEv()};
-    let mut ret = unsafe {C_ZNK9QSaveFile8fileNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QSaveFile::QSaveFile(const QString & name);
-impl<'a> /*trait*/ QSaveFile_new for (&'a QString) {
-  fn new(self) -> QSaveFile {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QSaveFile(const QString &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QSaveFile_QSaveFile_0 for (usize) {
+  fn QSaveFile_0(self) -> QSaveFile {
     // unsafe{_ZN9QSaveFileC2ERK7QString()};
-    let ctysz: c_int = unsafe{QSaveFile_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN9QSaveFileC2ERK7QString(arg0)};
-    let rsthis = QSaveFile{qbase: QFileDevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN9QSaveFileC2ERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QSaveFile{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  const QMetaObject * QSaveFile::metaObject();
+// /usr/include/qt/QtCore/qsavefile.h:70
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QSaveFile(QObject *)
+
+/*
+Constructs a new file object to represent the file with the given name.
+*/
+// QSaveFile(QObject *) ctx.fn_proto_cpp
 impl /*struct*/ QSaveFile {
-  pub fn metaObject<RetType, T: QSaveFile_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.metaObject(self);
+  pub fn QSaveFile_1<T: QSaveFile_QSaveFile_1>(value: T) -> QSaveFile {
+    let rsthis = value.QSaveFile_1();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QSaveFile_metaObject<RetType> {
-  fn metaObject(self , rsthis: & QSaveFile) -> RetType;
+pub trait QSaveFile_QSaveFile_1 {
+  fn QSaveFile_1(self) -> QSaveFile;
 }
-
-  // proto:  const QMetaObject * QSaveFile::metaObject();
-impl<'a> /*trait*/ QSaveFile_metaObject<QMetaObject> for () {
-  fn metaObject(self , rsthis: & QSaveFile) -> QMetaObject {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QSaveFile10metaObjectEv()};
-    let mut ret = unsafe {C_ZNK9QSaveFile10metaObjectEv(rsthis.qclsinst)};
-    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
-    return ret1;
+// QSaveFile(QObject *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QSaveFile_QSaveFile_1 for (usize) {
+  fn QSaveFile_1(self) -> QSaveFile {
+    // unsafe{_ZN9QSaveFileC2EP7QObject()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN9QSaveFileC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QSaveFile{qclsinst: qthis, ..Default::default()};
+    return rsthis;
     // return 1;
   }
 }
 
-  // proto:  bool QSaveFile::commit();
+// /usr/include/qt/QtCore/qsavefile.h:71
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QSaveFile(const QString &, QObject *)
+
+/*
+Constructs a new file object to represent the file with the given name.
+*/
+// QSaveFile(const QString &, QObject *) ctx.fn_proto_cpp
 impl /*struct*/ QSaveFile {
-  pub fn commit<RetType, T: QSaveFile_commit<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.commit(self);
+  pub fn QSaveFile_2<T: QSaveFile_QSaveFile_2>(value: T) -> QSaveFile {
+    let rsthis = value.QSaveFile_2();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QSaveFile_commit<RetType> {
-  fn commit(self , rsthis: & QSaveFile) -> RetType;
+pub trait QSaveFile_QSaveFile_2 {
+  fn QSaveFile_2(self) -> QSaveFile;
 }
-
-  // proto:  bool QSaveFile::commit();
-impl<'a> /*trait*/ QSaveFile_commit<i8> for () {
-  fn commit(self , rsthis: & QSaveFile) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QSaveFile6commitEv()};
-    let mut ret = unsafe {C_ZN9QSaveFile6commitEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+// QSaveFile(const QString &, QObject *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QSaveFile_QSaveFile_2 for (usize,usize) {
+  fn QSaveFile_2(self) -> QSaveFile {
+    // unsafe{_ZN9QSaveFileC2ERK7QStringP7QObject()};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN9QSaveFileC2ERK7QStringP7QObject", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QSaveFile{qclsinst: qthis, ..Default::default()};
+    return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QSaveFile::~QSaveFile();
+// /usr/include/qt/QtCore/qsavefile.h:73
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QSaveFile()
+
+/*
+
+*/
+pub fn DeleteQSaveFile(this :*mut QSaveFile) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN9QSaveFileD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 16)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qsavefile.h:75
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] QString fileName() const
+
+/*
+Reimplemented from QFileDevice::fileName().
+
+Returns the name set by setFileName() or to the QSaveFile constructor.
+
+See also setFileName().
+*/
 impl /*struct*/ QSaveFile {
-  pub fn free<RetType, T: QSaveFile_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
+  pub fn fileName_0<RetType, T: QSaveFile_fileName_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.fileName_0(self);
     // return 1;
   }
 }
-
-pub trait QSaveFile_free<RetType> {
-  fn free(self , rsthis: & QSaveFile) -> RetType;
+pub trait QSaveFile_fileName_0<RetType> {
+  fn fileName_0(self , rsthis: & QSaveFile) -> RetType;
 }
-
-  // proto:  void QSaveFile::~QSaveFile();
-impl<'a> /*trait*/ QSaveFile_free<()> for () {
-  fn free(self , rsthis: & QSaveFile) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QSaveFileD2Ev()};
-     unsafe {C_ZN9QSaveFileD2Ev(rsthis.qclsinst)};
+impl<'a> /*trait*/ QSaveFile_fileName_0<usize> for () {
+  fn fileName_0(self , rsthis: & QSaveFile) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QSaveFile8fileNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  void QSaveFile::setFileName(const QString & name);
+// /usr/include/qt/QtCore/qsavefile.h:76
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setFileName(const QString &)
+
+/*
+Sets the name of the file. The name can have no path, a relative path, or an absolute path.
+
+See also QFile::setFileName() and fileName().
+*/
 impl /*struct*/ QSaveFile {
-  pub fn setFileName<RetType, T: QSaveFile_setFileName<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setFileName(self);
+  pub fn setFileName_0<RetType, T: QSaveFile_setFileName_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setFileName_0(self);
+    // return 1;
+  }
+}
+pub trait QSaveFile_setFileName_0<RetType> {
+  fn setFileName_0(self , rsthis: & QSaveFile) -> RetType;
+}
+impl<'a> /*trait*/ QSaveFile_setFileName_0<(/*void*/)> for (usize) {
+  fn setFileName_0(self , rsthis: & QSaveFile) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN9QSaveFile11setFileNameERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QSaveFile_setFileName<RetType> {
-  fn setFileName(self , rsthis: & QSaveFile) -> RetType;
-}
+// /usr/include/qt/QtCore/qsavefile.h:78
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool open(QIODevice::OpenMode)
 
-  // proto:  void QSaveFile::setFileName(const QString & name);
-impl<'a> /*trait*/ QSaveFile_setFileName<()> for (&'a QString) {
-  fn setFileName(self , rsthis: & QSaveFile) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QSaveFile11setFileNameERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN9QSaveFile11setFileNameERK7QString(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
+/*
+Reimplemented from QIODevice::open().
 
-  // proto:  bool QSaveFile::directWriteFallback();
+Opens the file using OpenMode mode, returning true if successful; otherwise false.
+
+Important: the mode must include QIODevice::WriteOnly. It may also have additional flags, such as QIODevice::Text and QIODevice::Unbuffered.
+
+QIODevice::ReadWrite and QIODevice::Append are not supported at the moment.
+
+See also QIODevice::OpenMode and setFileName().
+*/
 impl /*struct*/ QSaveFile {
-  pub fn directWriteFallback<RetType, T: QSaveFile_directWriteFallback<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.directWriteFallback(self);
+  pub fn open_0<RetType, T: QSaveFile_open_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.open_0(self);
     // return 1;
   }
 }
-
-pub trait QSaveFile_directWriteFallback<RetType> {
-  fn directWriteFallback(self , rsthis: & QSaveFile) -> RetType;
+pub trait QSaveFile_open_0<RetType> {
+  fn open_0(self , rsthis: & QSaveFile) -> RetType;
 }
-
-  // proto:  bool QSaveFile::directWriteFallback();
-impl<'a> /*trait*/ QSaveFile_directWriteFallback<i8> for () {
-  fn directWriteFallback(self , rsthis: & QSaveFile) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QSaveFile19directWriteFallbackEv()};
-    let mut ret = unsafe {C_ZNK9QSaveFile19directWriteFallbackEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+impl<'a> /*trait*/ QSaveFile_open_0<bool> for (i32) {
+  fn open_0(self , rsthis: & QSaveFile) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QSaveFile4openE6QFlagsIN9QIODevice12OpenModeFlagEE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  void QSaveFile::setDirectWriteFallback(bool enabled);
+// /usr/include/qt/QtCore/qsavefile.h:79
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool commit()
+
+/*
+Commits the changes to disk, if all previous writes were successful.
+
+It is mandatory to call this at the end of the saving operation, otherwise the file will be discarded.
+
+If an error happened during writing, deletes the temporary file and returns false. Otherwise, renames it to the final fileName and returns true on success. Finally, closes the device.
+
+See also cancelWriting().
+*/
 impl /*struct*/ QSaveFile {
-  pub fn setDirectWriteFallback<RetType, T: QSaveFile_setDirectWriteFallback<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setDirectWriteFallback(self);
+  pub fn commit_0<RetType, T: QSaveFile_commit_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.commit_0(self);
+    // return 1;
+  }
+}
+pub trait QSaveFile_commit_0<RetType> {
+  fn commit_0(self , rsthis: & QSaveFile) -> RetType;
+}
+impl<'a> /*trait*/ QSaveFile_commit_0<bool> for () {
+  fn commit_0(self , rsthis: & QSaveFile) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QSaveFile6commitEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qsavefile.h:81
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void cancelWriting()
+
+/*
+Cancels writing the new file.
+
+If the application changes its mind while saving, it can call cancelWriting(), which sets an error code so that commit() will discard the temporary file.
+
+Alternatively, it can simply make sure not to call commit().
+
+Further write operations are possible after calling this method, but none of it will have any effect, the written file will be discarded.
+
+This method has no effect when direct write fallback is used. This is the case when saving over an existing file in a readonly directory: no temporary file can be created, so the existing file is overwritten no matter what, and cancelWriting() cannot do anything about that, the contents of the existing file will be lost.
+
+See also commit().
+*/
+impl /*struct*/ QSaveFile {
+  pub fn cancelWriting_0<RetType, T: QSaveFile_cancelWriting_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.cancelWriting_0(self);
+    // return 1;
+  }
+}
+pub trait QSaveFile_cancelWriting_0<RetType> {
+  fn cancelWriting_0(self , rsthis: & QSaveFile) -> RetType;
+}
+impl<'a> /*trait*/ QSaveFile_cancelWriting_0<(/*void*/)> for () {
+  fn cancelWriting_0(self , rsthis: & QSaveFile) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZN9QSaveFile13cancelWritingEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QSaveFile_setDirectWriteFallback<RetType> {
-  fn setDirectWriteFallback(self , rsthis: & QSaveFile) -> RetType;
-}
+// /usr/include/qt/QtCore/qsavefile.h:83
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setDirectWriteFallback(bool)
 
-  // proto:  void QSaveFile::setDirectWriteFallback(bool enabled);
-impl<'a> /*trait*/ QSaveFile_setDirectWriteFallback<()> for (i8) {
-  fn setDirectWriteFallback(self , rsthis: & QSaveFile) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QSaveFile22setDirectWriteFallbackEb()};
-    let arg0 = self  as c_char;
-     unsafe {C_ZN9QSaveFile22setDirectWriteFallbackEb(rsthis.qclsinst, arg0)};
+/*
+Allows writing over the existing file if necessary.
+
+QSaveFile creates a temporary file in the same directory as the final file and atomically renames it. However this is not possible if the directory permissions do not allow creating new files. In order to preserve atomicity guarantees, open() fails when it cannot create the temporary file.
+
+In order to allow users to edit files with write permissions in a directory with restricted permissions, call setDirectWriteFallback() with enabled set to true, and the following calls to open() will fallback to opening the existing file directly and writing into it, without the use of a temporary file. This does not have atomicity guarantees, i.e. an application crash or for instance a power failure could lead to a partially-written file on disk. It also means cancelWriting() has no effect, in such a case.
+
+Typically, to save documents edited by the user, call setDirectWriteFallback(true), and to save application internal files (configuration files, data files, ...), keep the default setting which ensures atomicity.
+
+See also directWriteFallback().
+*/
+impl /*struct*/ QSaveFile {
+  pub fn setDirectWriteFallback_0<RetType, T: QSaveFile_setDirectWriteFallback_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setDirectWriteFallback_0(self);
+    // return 1;
+  }
+}
+pub trait QSaveFile_setDirectWriteFallback_0<RetType> {
+  fn setDirectWriteFallback_0(self , rsthis: & QSaveFile) -> RetType;
+}
+impl<'a> /*trait*/ QSaveFile_setDirectWriteFallback_0<(/*void*/)> for (bool) {
+  fn setDirectWriteFallback_0(self , rsthis: & QSaveFile) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const bool as usize;
+     qtrt::InvokeQtFunc6("_ZN9QSaveFile22setDirectWriteFallbackEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qsavefile.h:84
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool directWriteFallback() const
 
+/*
+Returns true if the fallback solution for saving files in read-only directories is enabled.
+
+See also setDirectWriteFallback().
+*/
+impl /*struct*/ QSaveFile {
+  pub fn directWriteFallback_0<RetType, T: QSaveFile_directWriteFallback_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.directWriteFallback_0(self);
+    // return 1;
+  }
+}
+pub trait QSaveFile_directWriteFallback_0<RetType> {
+  fn directWriteFallback_0(self , rsthis: & QSaveFile) -> RetType;
+}
+impl<'a> /*trait*/ QSaveFile_directWriteFallback_0<bool> for () {
+  fn directWriteFallback_0(self , rsthis: & QSaveFile) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QSaveFile19directWriteFallbackEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qsavefile.h:87
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [8] qint64 writeData(const char *, qint64)
+
+/*
+Reimplemented from QIODevice::writeData().
+*/
+impl /*struct*/ QSaveFile {
+  pub fn writeData_0<RetType, T: QSaveFile_writeData_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.writeData_0(self);
+    // return 1;
+  }
+}
+pub trait QSaveFile_writeData_0<RetType> {
+  fn writeData_0(self , rsthis: & QSaveFile) -> RetType;
+}
+impl<'a> /*trait*/ QSaveFile_writeData_0<i64> for (usize,i64) {
+  fn writeData_0(self , rsthis: & QSaveFile) -> i64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (self.0) as *const usize as usize;
+    let arg1 = (&self.1) as *const i64 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QSaveFile9writeDataEPKcx", 2,qtrt::FFITY_POINTER,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i64 = Default::default(); return dret;
+  }
+}
+
+//  body block end
+
+//  keep block begin
+
+//  keep block end

@@ -1,202 +1,269 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qbasictimer.h
-// dst-file: /src/core/qbasictimer.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QBasicTimer
+// package qtcore
+// /usr/include/qt/QtCore/qbasictimer.h
+// #include <qbasictimer.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 12
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qobject::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QBasicTimer_Class_Size() -> c_int;
-  // proto:  void QBasicTimer::~QBasicTimer();
-  fn C_ZN11QBasicTimerD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void QBasicTimer::stop();
-  fn C_ZN11QBasicTimer4stopEv(qthis: u64 /* *mut c_void*/);
-  // proto:  int QBasicTimer::timerId();
-  fn C_ZNK11QBasicTimer7timerIdEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  bool QBasicTimer::isActive();
-  fn C_ZNK11QBasicTimer8isActiveEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QBasicTimer::QBasicTimer();
-  fn C_ZN11QBasicTimerC2Ev() -> u64;
-  // proto:  void QBasicTimer::start(int msec, QObject * obj);
-  fn C_ZN11QBasicTimer5startEiP7QObject(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
-} // <= ext block end
 
-// body block begin =>
-// class sizeof(QBasicTimer)=4
-#[derive(Default)]
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QBasicTimer)=4
 pub struct QBasicTimer {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
+  // qbase: none,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QBasicTimer_ITF interface {
+//    QBasicTimer_PTR() *QBasicTimer
+//}
+//func (ptr *QBasicTimer) QBasicTimer_PTR() *QBasicTimer { return ptr }
 
 impl /*struct*/ QBasicTimer {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QBasicTimer {
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QBasicTimer {
     return QBasicTimer{qclsinst: qthis, ..Default::default()};
   }
 }
-  // proto:  void QBasicTimer::~QBasicTimer();
+//impl Deref for QBasicTimer {
+//  type Target = QBasicTimerBASE;
+//
+//  fn deref(&self) -> &QBasicTimerBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QBasicTimerBASE> for QBasicTimer {
+//  fn as_ref(& self) -> & QBasicTimerBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qbasictimer.h:55
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void QBasicTimer()
+
+/*
+Contructs a basic timer.
+
+See also start().
+*/
+// QBasicTimer() ctx.fn_proto_cpp
 impl /*struct*/ QBasicTimer {
-  pub fn free<RetType, T: QBasicTimer_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
-    // return 1;
-  }
-}
-
-pub trait QBasicTimer_free<RetType> {
-  fn free(self , rsthis: & QBasicTimer) -> RetType;
-}
-
-  // proto:  void QBasicTimer::~QBasicTimer();
-impl<'a> /*trait*/ QBasicTimer_free<()> for () {
-  fn free(self , rsthis: & QBasicTimer) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QBasicTimerD2Ev()};
-     unsafe {C_ZN11QBasicTimerD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QBasicTimer::stop();
-impl /*struct*/ QBasicTimer {
-  pub fn stop<RetType, T: QBasicTimer_stop<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.stop(self);
-    // return 1;
-  }
-}
-
-pub trait QBasicTimer_stop<RetType> {
-  fn stop(self , rsthis: & QBasicTimer) -> RetType;
-}
-
-  // proto:  void QBasicTimer::stop();
-impl<'a> /*trait*/ QBasicTimer_stop<()> for () {
-  fn stop(self , rsthis: & QBasicTimer) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QBasicTimer4stopEv()};
-     unsafe {C_ZN11QBasicTimer4stopEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  int QBasicTimer::timerId();
-impl /*struct*/ QBasicTimer {
-  pub fn timerId<RetType, T: QBasicTimer_timerId<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.timerId(self);
-    // return 1;
-  }
-}
-
-pub trait QBasicTimer_timerId<RetType> {
-  fn timerId(self , rsthis: & QBasicTimer) -> RetType;
-}
-
-  // proto:  int QBasicTimer::timerId();
-impl<'a> /*trait*/ QBasicTimer_timerId<i32> for () {
-  fn timerId(self , rsthis: & QBasicTimer) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK11QBasicTimer7timerIdEv()};
-    let mut ret = unsafe {C_ZNK11QBasicTimer7timerIdEv(rsthis.qclsinst)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  bool QBasicTimer::isActive();
-impl /*struct*/ QBasicTimer {
-  pub fn isActive<RetType, T: QBasicTimer_isActive<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isActive(self);
-    // return 1;
-  }
-}
-
-pub trait QBasicTimer_isActive<RetType> {
-  fn isActive(self , rsthis: & QBasicTimer) -> RetType;
-}
-
-  // proto:  bool QBasicTimer::isActive();
-impl<'a> /*trait*/ QBasicTimer_isActive<i8> for () {
-  fn isActive(self , rsthis: & QBasicTimer) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK11QBasicTimer8isActiveEv()};
-    let mut ret = unsafe {C_ZNK11QBasicTimer8isActiveEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QBasicTimer::QBasicTimer();
-impl /*struct*/ QBasicTimer {
-  pub fn new<T: QBasicTimer_new>(value: T) -> QBasicTimer {
-    let rsthis = value.new();
+  pub fn QBasicTimer_0<T: QBasicTimer_QBasicTimer_0>(value: T) -> QBasicTimer {
+    let rsthis = value.QBasicTimer_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QBasicTimer_new {
-  fn new(self) -> QBasicTimer;
+pub trait QBasicTimer_QBasicTimer_0 {
+  fn QBasicTimer_0(self) -> QBasicTimer;
 }
-
-  // proto:  void QBasicTimer::QBasicTimer();
-impl<'a> /*trait*/ QBasicTimer_new for () {
-  fn new(self) -> QBasicTimer {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QBasicTimer() ctx.fn_proto_cpp
+impl<'a> /*trait*/ QBasicTimer_QBasicTimer_0 for () {
+  fn QBasicTimer_0(self) -> QBasicTimer {
     // unsafe{_ZN11QBasicTimerC2Ev()};
-    let ctysz: c_int = unsafe{QBasicTimer_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let qthis: u64 = unsafe {C_ZN11QBasicTimerC2Ev()};
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN11QBasicTimerC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QBasicTimer{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QBasicTimer::start(int msec, QObject * obj);
+// /usr/include/qt/QtCore/qbasictimer.h:56
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void ~QBasicTimer()
+
+/*
+
+*/
+pub fn DeleteQBasicTimer(this :*mut QBasicTimer) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN11QBasicTimerD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 4)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qbasictimer.h:58
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool isActive() const
+
+/*
+Returns true if the timer is running and has not been stopped; otherwise returns false.
+
+See also start() and stop().
+*/
 impl /*struct*/ QBasicTimer {
-  pub fn start<RetType, T: QBasicTimer_start<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.start(self);
+  pub fn isActive_0<RetType, T: QBasicTimer_isActive_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isActive_0(self);
+    // return 1;
+  }
+}
+pub trait QBasicTimer_isActive_0<RetType> {
+  fn isActive_0(self , rsthis: & QBasicTimer) -> RetType;
+}
+impl<'a> /*trait*/ QBasicTimer_isActive_0<bool> for () {
+  fn isActive_0(self , rsthis: & QBasicTimer) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QBasicTimer8isActiveEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbasictimer.h:59
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [4] int timerId() const
+
+/*
+Returns the timer's ID.
+
+See also QTimerEvent::timerId().
+*/
+impl /*struct*/ QBasicTimer {
+  pub fn timerId_0<RetType, T: QBasicTimer_timerId_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.timerId_0(self);
+    // return 1;
+  }
+}
+pub trait QBasicTimer_timerId_0<RetType> {
+  fn timerId_0(self , rsthis: & QBasicTimer) -> RetType;
+}
+impl<'a> /*trait*/ QBasicTimer_timerId_0<i32> for () {
+  fn timerId_0(self , rsthis: & QBasicTimer) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QBasicTimer7timerIdEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qbasictimer.h:61
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void start(int, QObject *)
+
+/*
+Starts (or restarts) the timer with a msec milliseconds timeout. The timer will be a Qt::CoarseTimer. See Qt::TimerType for information on the different timer types.
+
+The given object will receive timer events.
+
+See also stop(), isActive(), QObject::timerEvent(), and Qt::CoarseTimer.
+*/
+impl /*struct*/ QBasicTimer {
+  pub fn start_0<RetType, T: QBasicTimer_start_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.start_0(self);
+    // return 1;
+  }
+}
+pub trait QBasicTimer_start_0<RetType> {
+  fn start_0(self , rsthis: & QBasicTimer) -> RetType;
+}
+impl<'a> /*trait*/ QBasicTimer_start_0<(/*void*/)> for (i32,usize) {
+  fn start_0(self , rsthis: & QBasicTimer) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN11QBasicTimer5startEiP7QObject", 2,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QBasicTimer_start<RetType> {
-  fn start(self , rsthis: & QBasicTimer) -> RetType;
-}
+// /usr/include/qt/QtCore/qbasictimer.h:62
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void start(int, Qt::TimerType, QObject *)
 
-  // proto:  void QBasicTimer::start(int msec, QObject * obj);
-impl<'a> /*trait*/ QBasicTimer_start<()> for (i32, &'a QObject) {
-  fn start(self , rsthis: & QBasicTimer) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QBasicTimer5startEiP7QObject()};
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {C_ZN11QBasicTimer5startEiP7QObject(rsthis.qclsinst, arg0, arg1)};
+/*
+Starts (or restarts) the timer with a msec milliseconds timeout. The timer will be a Qt::CoarseTimer. See Qt::TimerType for information on the different timer types.
+
+The given object will receive timer events.
+
+See also stop(), isActive(), QObject::timerEvent(), and Qt::CoarseTimer.
+*/
+impl /*struct*/ QBasicTimer {
+  pub fn start_1<RetType, T: QBasicTimer_start_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.start_1(self);
+    // return 1;
+  }
+}
+pub trait QBasicTimer_start_1<RetType> {
+  fn start_1(self , rsthis: & QBasicTimer) -> RetType;
+}
+impl<'a> /*trait*/ QBasicTimer_start_1<(/*void*/)> for (i32,i32,usize) {
+  fn start_1(self , rsthis: & QBasicTimer) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN11QBasicTimer5startEiN2Qt9TimerTypeEP7QObject", 3,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qbasictimer.h:63
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void stop()
 
+/*
+Stops the timer.
+
+See also start() and isActive().
+*/
+impl /*struct*/ QBasicTimer {
+  pub fn stop_0<RetType, T: QBasicTimer_stop_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.stop_0(self);
+    // return 1;
+  }
+}
+pub trait QBasicTimer_stop_0<RetType> {
+  fn stop_0(self , rsthis: & QBasicTimer) -> RetType;
+}
+impl<'a> /*trait*/ QBasicTimer_stop_0<(/*void*/)> for () {
+  fn stop_0(self , rsthis: & QBasicTimer) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZN11QBasicTimer4stopEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+//  body block end
+
+//  keep block begin
+
+//  keep block end

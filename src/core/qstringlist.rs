@@ -1,353 +1,478 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qstringlist.h
-// dst-file: /src/core/qstringlist.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QStringList
+// package qtcore
+// /usr/include/qt/QtCore/qstringlist.h
+// #include <qstringlist.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 11
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qregularexpression::*; // 773
-use super::qstring::*; // 773
-use super::qregexp::*; // 773
-// use super::qstringlist::QStringList; // 773
-use super::qchar::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QStringList_Class_Size() -> c_int;
-  // proto:  int QStringList::lastIndexOf(const QRegularExpression & re, int from);
-  fn C_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
-  // proto:  void QStringList::QStringList();
-  fn C_ZN11QStringListC2Ev() -> u64;
-  // proto:  int QStringList::indexOf(const QRegExp & rx, int from);
-  fn C_ZNK11QStringList7indexOfERK7QRegExpi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
-  // proto:  int QStringList::indexOf(QRegExp & rx, int from);
-  fn C_ZNK11QStringList7indexOfER7QRegExpi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
-  // proto:  int QStringList::indexOf(const QRegularExpression & re, int from);
-  fn C_ZNK11QStringList7indexOfERK18QRegularExpressioni(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
-  // proto:  int QStringList::lastIndexOf(const QRegExp & rx, int from);
-  fn C_ZNK11QStringList11lastIndexOfERK7QRegExpi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
-  // proto:  int QStringList::lastIndexOf(QRegExp & rx, int from);
-  fn C_ZNK11QStringList11lastIndexOfER7QRegExpi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
-  // proto:  void QStringList::QStringList(const QString & i);
-  fn C_ZN11QStringListC2ERK7QString(arg0: *mut c_void) -> u64;
-  fn QListSpecialMethodsLQStringG_Class_Size() -> c_int;
-  // proto:  QStringList & QListSpecialMethods<QString>::replaceInStrings(const QRegularExpression & re, const QString & after);
-  fn C_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK18QRegularExpressionRKS0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  // proto:  QString QListSpecialMethods<QString>::join(const QString & sep);
-  fn C_ZNK19QListSpecialMethodsI7QStringE4joinERKS0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  QStringList QListSpecialMethods<QString>::filter(const QRegularExpression & re);
-  fn C_ZNK19QListSpecialMethodsI7QStringE6filterERK18QRegularExpression(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  int QListSpecialMethods<QString>::removeDuplicates();
-  fn C_ZN19QListSpecialMethodsI7QStringE16removeDuplicatesEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  QStringList & QListSpecialMethods<QString>::replaceInStrings(const QRegExp & rx, const QString & after);
-  fn C_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK7QRegExpRKS0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  // proto:  QStringList QListSpecialMethods<QString>::filter(const QRegExp & rx);
-  fn C_ZNK19QListSpecialMethodsI7QStringE6filterERK7QRegExp(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  QString QListSpecialMethods<QString>::join(QChar sep);
-  fn C_ZNK19QListSpecialMethodsI7QStringE4joinE5QChar(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-} // <= ext block end
 
-// body block begin =>
-// class sizeof(QStringList)=1
-#[derive(Default)]
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QStringList)=8
 pub struct QStringList {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
+  // qbase: none,
+  pub qclsinst: usize /* *mut c_void*/,
 }
-
-// class sizeof(QListSpecialMethodsLQStringG)=1
-#[derive(Default)]
-pub struct QListSpecialMethodsLQStringG {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
-}
+// type QStringList_ITF interface {
+//    QStringList_PTR() *QStringList
+//}
+//func (ptr *QStringList) QStringList_PTR() *QStringList { return ptr }
 
 impl /*struct*/ QStringList {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QStringList {
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QStringList {
     return QStringList{qclsinst: qthis, ..Default::default()};
   }
 }
-  // proto:  int QStringList::lastIndexOf(const QRegularExpression & re, int from);
+//impl Deref for QStringList {
+//  type Target = QStringListBASE;
+//
+//  fn deref(&self) -> &QStringListBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QStringListBASE> for QStringList {
+//  fn as_ref(& self) -> & QStringListBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qstringlist.h:105
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void QStringList()
+
+/*
+Constructs an empty string list.
+*/
+// QStringList() ctx.fn_proto_cpp
 impl /*struct*/ QStringList {
-  pub fn lastIndexOf<RetType, T: QStringList_lastIndexOf<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.lastIndexOf(self);
-    // return 1;
-  }
-}
-
-pub trait QStringList_lastIndexOf<RetType> {
-  fn lastIndexOf(self , rsthis: & QStringList) -> RetType;
-}
-
-  // proto:  int QStringList::lastIndexOf(const QRegularExpression & re, int from);
-impl<'a> /*trait*/ QStringList_lastIndexOf<i32> for (&'a QRegularExpression, Option<i32>) {
-  fn lastIndexOf(self , rsthis: & QStringList) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QStringList::QStringList();
-impl /*struct*/ QStringList {
-  pub fn new<T: QStringList_new>(value: T) -> QStringList {
-    let rsthis = value.new();
+  pub fn QStringList_0<T: QStringList_QStringList_0>(value: T) -> QStringList {
+    let rsthis = value.QStringList_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QStringList_new {
-  fn new(self) -> QStringList;
+pub trait QStringList_QStringList_0 {
+  fn QStringList_0(self) -> QStringList;
 }
-
-  // proto:  void QStringList::QStringList();
-impl<'a> /*trait*/ QStringList_new for () {
-  fn new(self) -> QStringList {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QStringList() ctx.fn_proto_cpp
+impl<'a> /*trait*/ QStringList_QStringList_0 for () {
+  fn QStringList_0(self) -> QStringList {
     // unsafe{_ZN11QStringListC2Ev()};
-    let ctysz: c_int = unsafe{QStringList_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let qthis: u64 = unsafe {C_ZN11QStringListC2Ev()};
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN11QStringListC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QStringList{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  int QStringList::indexOf(const QRegExp & rx, int from);
+// /usr/include/qt/QtCore/qstringlist.h:106
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [-2] void QStringList(const QString &)
+
+/*
+Constructs an empty string list.
+*/
+// QStringList(const QString &) ctx.fn_proto_cpp
 impl /*struct*/ QStringList {
-  pub fn indexOf<RetType, T: QStringList_indexOf<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.indexOf(self);
+  pub fn QStringList_1<T: QStringList_QStringList_1>(value: T) -> QStringList {
+    let rsthis = value.QStringList_1();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QStringList_indexOf<RetType> {
-  fn indexOf(self , rsthis: & QStringList) -> RetType;
+pub trait QStringList_QStringList_1 {
+  fn QStringList_1(self) -> QStringList;
 }
-
-  // proto:  int QStringList::indexOf(const QRegExp & rx, int from);
-impl<'a> /*trait*/ QStringList_indexOf<i32> for (&'a QRegExp, Option<i32>) {
-  fn indexOf(self , rsthis: & QStringList) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK11QStringList7indexOfERK7QRegExpi()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK11QStringList7indexOfERK7QRegExpi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  int QStringList::indexOf(const QRegularExpression & re, int from);
-impl<'a> /*trait*/ QStringList_indexOf<i32> for (&'a QRegularExpression, Option<i32>) {
-  fn indexOf(self , rsthis: & QStringList) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK11QStringList7indexOfERK18QRegularExpressioni()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK11QStringList7indexOfERK18QRegularExpressioni(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  int QStringList::lastIndexOf(const QRegExp & rx, int from);
-impl<'a> /*trait*/ QStringList_lastIndexOf<i32> for (&'a QRegExp, Option<i32>) {
-  fn lastIndexOf(self , rsthis: & QStringList) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK11QStringList11lastIndexOfERK7QRegExpi()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK11QStringList11lastIndexOfERK7QRegExpi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QStringList::QStringList(const QString & i);
-impl<'a> /*trait*/ QStringList_new for (&'a QString) {
-  fn new(self) -> QStringList {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QStringList(const QString &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QStringList_QStringList_1 for (usize) {
+  fn QStringList_1(self) -> QStringList {
     // unsafe{_ZN11QStringListC2ERK7QString()};
-    let ctysz: c_int = unsafe{QStringList_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN11QStringListC2ERK7QString(arg0)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN11QStringListC2ERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QStringList{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-impl /*struct*/ QListSpecialMethodsLQStringG {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QListSpecialMethodsLQStringG {
-    return QListSpecialMethodsLQStringG{qclsinst: qthis, ..Default::default()};
-  }
-}
-  // proto:  QStringList & QListSpecialMethods<QString>::replaceInStrings(const QRegularExpression & re, const QString & after);
-impl /*struct*/ QListSpecialMethodsLQStringG {
-  pub fn replaceInStrings<RetType, T: QListSpecialMethodsLQStringG_replaceInStrings<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.replaceInStrings(self);
+// /usr/include/qt/QtCore/qstringlist.h:122
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool contains(const QString &, Qt::CaseSensitivity) const
+
+/*
+Returns true if the list contains the string str; otherwise returns false. The search is case insensitive if cs is Qt::CaseInsensitive; the search is case sensitive by default.
+
+See also indexOf(), lastIndexOf(), and QString::contains().
+*/
+impl /*struct*/ QStringList {
+  pub fn contains_0<RetType, T: QStringList_contains_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.contains_0(self);
     // return 1;
   }
 }
-
-pub trait QListSpecialMethodsLQStringG_replaceInStrings<RetType> {
-  fn replaceInStrings(self , rsthis: & QListSpecialMethodsLQStringG) -> RetType;
+pub trait QStringList_contains_0<RetType> {
+  fn contains_0(self , rsthis: & QStringList) -> RetType;
 }
-
-  // proto:  QStringList & QListSpecialMethods<QString>::replaceInStrings(const QRegularExpression & re, const QString & after);
-impl<'a> /*trait*/ QListSpecialMethodsLQStringG_replaceInStrings<QStringList> for (&'a QRegularExpression, &'a QString) {
-  fn replaceInStrings(self , rsthis: & QListSpecialMethodsLQStringG) -> QStringList {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK18QRegularExpressionRKS0_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK18QRegularExpressionRKS0_(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QStringList::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QStringList_contains_0<bool> for (usize,i32) {
+  fn contains_0(self , rsthis: & QStringList) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QStringList8containsERK7QStringN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  QString QListSpecialMethods<QString>::join(const QString & sep);
-impl /*struct*/ QListSpecialMethodsLQStringG {
-  pub fn join<RetType, T: QListSpecialMethodsLQStringG_join<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.join(self);
+// /usr/include/qt/QtCore/qstringlist.h:123
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [1] bool contains(QLatin1String, Qt::CaseSensitivity) const
+
+/*
+Returns true if the list contains the string str; otherwise returns false. The search is case insensitive if cs is Qt::CaseInsensitive; the search is case sensitive by default.
+
+See also indexOf(), lastIndexOf(), and QString::contains().
+*/
+impl /*struct*/ QStringList {
+  pub fn contains_1<RetType, T: QStringList_contains_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.contains_1(self);
     // return 1;
   }
 }
-
-pub trait QListSpecialMethodsLQStringG_join<RetType> {
-  fn join(self , rsthis: & QListSpecialMethodsLQStringG) -> RetType;
+pub trait QStringList_contains_1<RetType> {
+  fn contains_1(self , rsthis: & QStringList) -> RetType;
 }
-
-  // proto:  QString QListSpecialMethods<QString>::join(const QString & sep);
-impl<'a> /*trait*/ QListSpecialMethodsLQStringG_join<QString> for (&'a QString) {
-  fn join(self , rsthis: & QListSpecialMethodsLQStringG) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK19QListSpecialMethodsI7QStringE4joinERKS0_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK19QListSpecialMethodsI7QStringE4joinERKS0_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QStringList_contains_1<bool> for (usize,i32) {
+  fn contains_1(self , rsthis: & QStringList) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QStringList8containsE13QLatin1StringN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  QStringList QListSpecialMethods<QString>::filter(const QRegularExpression & re);
-impl /*struct*/ QListSpecialMethodsLQStringG {
-  pub fn filter<RetType, T: QListSpecialMethodsLQStringG_filter<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.filter(self);
+// /usr/include/qt/QtCore/qstringlist.h:125
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QStringList operator+(const QStringList &) const
+
+/*
+
+*/
+impl /*struct*/ QStringList {
+  pub fn operator_add_0<RetType, T: QStringList_operator_add_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_add_0(self);
     // return 1;
   }
 }
-
-pub trait QListSpecialMethodsLQStringG_filter<RetType> {
-  fn filter(self , rsthis: & QListSpecialMethodsLQStringG) -> RetType;
+pub trait QStringList_operator_add_0<RetType> {
+  fn operator_add_0(self , rsthis: & QStringList) -> RetType;
 }
-
-  // proto:  QStringList QListSpecialMethods<QString>::filter(const QRegularExpression & re);
-impl<'a> /*trait*/ QListSpecialMethodsLQStringG_filter<QStringList> for (&'a QRegularExpression) {
-  fn filter(self , rsthis: & QListSpecialMethodsLQStringG) -> QStringList {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK19QListSpecialMethodsI7QStringE6filterERK18QRegularExpression()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK19QListSpecialMethodsI7QStringE6filterERK18QRegularExpression(rsthis.qclsinst, arg0)};
-    let mut ret1 = QStringList::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QStringList_operator_add_0<usize> for (usize) {
+  fn operator_add_0(self , rsthis: & QStringList) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QStringListplERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  int QListSpecialMethods<QString>::removeDuplicates();
-impl /*struct*/ QListSpecialMethodsLQStringG {
-  pub fn removeDuplicates<RetType, T: QListSpecialMethodsLQStringG_removeDuplicates<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.removeDuplicates(self);
+// /usr/include/qt/QtCore/qstringlist.h:127
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QStringList & operator<<(const QString &)
+
+/*
+
+*/
+impl /*struct*/ QStringList {
+  pub fn operator_left_shift_0<RetType, T: QStringList_operator_left_shift_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_left_shift_0(self);
     // return 1;
   }
 }
-
-pub trait QListSpecialMethodsLQStringG_removeDuplicates<RetType> {
-  fn removeDuplicates(self , rsthis: & QListSpecialMethodsLQStringG) -> RetType;
+pub trait QStringList_operator_left_shift_0<RetType> {
+  fn operator_left_shift_0(self , rsthis: & QStringList) -> RetType;
 }
-
-  // proto:  int QListSpecialMethods<QString>::removeDuplicates();
-impl<'a> /*trait*/ QListSpecialMethodsLQStringG_removeDuplicates<i32> for () {
-  fn removeDuplicates(self , rsthis: & QListSpecialMethodsLQStringG) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QListSpecialMethodsI7QStringE16removeDuplicatesEv()};
-    let mut ret = unsafe {C_ZN19QListSpecialMethodsI7QStringE16removeDuplicatesEv(rsthis.qclsinst)};
-    return ret as i32; // 1
+impl<'a> /*trait*/ QStringList_operator_left_shift_0<usize> for (usize) {
+  fn operator_left_shift_0(self , rsthis: & QStringList) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN11QStringListlsERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  QStringList & QListSpecialMethods<QString>::replaceInStrings(const QRegExp & rx, const QString & after);
-impl<'a> /*trait*/ QListSpecialMethodsLQStringG_replaceInStrings<QStringList> for (&'a QRegExp, &'a QString) {
-  fn replaceInStrings(self , rsthis: & QListSpecialMethodsLQStringG) -> QStringList {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK7QRegExpRKS0_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK7QRegExpRKS0_(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QStringList::inheritFrom(ret as u64);
-    return ret1;
+// /usr/include/qt/QtCore/qstringlist.h:129
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QStringList & operator<<(const QStringList &)
+
+/*
+
+*/
+impl /*struct*/ QStringList {
+  pub fn operator_left_shift_1<RetType, T: QStringList_operator_left_shift_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_left_shift_1(self);
     // return 1;
   }
 }
-
-  // proto:  QStringList QListSpecialMethods<QString>::filter(const QRegExp & rx);
-impl<'a> /*trait*/ QListSpecialMethodsLQStringG_filter<QStringList> for (&'a QRegExp) {
-  fn filter(self , rsthis: & QListSpecialMethodsLQStringG) -> QStringList {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK19QListSpecialMethodsI7QStringE6filterERK7QRegExp()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK19QListSpecialMethodsI7QStringE6filterERK7QRegExp(rsthis.qclsinst, arg0)};
-    let mut ret1 = QStringList::inheritFrom(ret as u64);
-    return ret1;
+pub trait QStringList_operator_left_shift_1<RetType> {
+  fn operator_left_shift_1(self , rsthis: & QStringList) -> RetType;
+}
+impl<'a> /*trait*/ QStringList_operator_left_shift_1<usize> for (usize) {
+  fn operator_left_shift_1(self , rsthis: & QStringList) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN11QStringListlsERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  QString QListSpecialMethods<QString>::join(QChar sep);
-impl<'a> /*trait*/ QListSpecialMethodsLQStringG_join<QString> for (QChar) {
-  fn join(self , rsthis: & QListSpecialMethodsLQStringG) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK19QListSpecialMethodsI7QStringE4joinE5QChar()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK19QListSpecialMethodsI7QStringE4joinE5QChar(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+// /usr/include/qt/QtCore/qstringlist.h:135
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [4] int indexOf(const QRegExp &, int) const
+
+/*
+Returns the index position of the first exact match of rx in the list, searching forward from index position from. Returns -1 if no item matched.
+
+By default, this function is case sensitive.
+
+See also lastIndexOf(), contains(), and QRegExp::exactMatch().
+*/
+impl /*struct*/ QStringList {
+  pub fn indexOf_0<RetType, T: QStringList_indexOf_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.indexOf_0(self);
     // return 1;
   }
 }
+pub trait QStringList_indexOf_0<RetType> {
+  fn indexOf_0(self , rsthis: & QStringList) -> RetType;
+}
+impl<'a> /*trait*/ QStringList_indexOf_0<i32> for (usize,i32) {
+  fn indexOf_0(self , rsthis: & QStringList) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QStringList7indexOfERK7QRegExpi", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
 
-// <= body block end
+// /usr/include/qt/QtCore/qstringlist.h:137
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [4] int indexOf(QRegExp &, int) const
 
+/*
+Returns the index position of the first exact match of rx in the list, searching forward from index position from. Returns -1 if no item matched.
+
+By default, this function is case sensitive.
+
+See also lastIndexOf(), contains(), and QRegExp::exactMatch().
+*/
+impl /*struct*/ QStringList {
+  pub fn indexOf_1<RetType, T: QStringList_indexOf_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.indexOf_1(self);
+    // return 1;
+  }
+}
+pub trait QStringList_indexOf_1<RetType> {
+  fn indexOf_1(self , rsthis: & QStringList) -> RetType;
+}
+impl<'a> /*trait*/ QStringList_indexOf_1<i32> for (usize,i32) {
+  fn indexOf_1(self , rsthis: & QStringList) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QStringList7indexOfER7QRegExpi", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstringlist.h:143
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [4] int indexOf(const QRegularExpression &, int) const
+
+/*
+Returns the index position of the first exact match of rx in the list, searching forward from index position from. Returns -1 if no item matched.
+
+By default, this function is case sensitive.
+
+See also lastIndexOf(), contains(), and QRegExp::exactMatch().
+*/
+impl /*struct*/ QStringList {
+  pub fn indexOf_2<RetType, T: QStringList_indexOf_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.indexOf_2(self);
+    // return 1;
+  }
+}
+pub trait QStringList_indexOf_2<RetType> {
+  fn indexOf_2(self , rsthis: & QStringList) -> RetType;
+}
+impl<'a> /*trait*/ QStringList_indexOf_2<i32> for (usize,i32) {
+  fn indexOf_2(self , rsthis: & QStringList) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QStringList7indexOfERK18QRegularExpressioni", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstringlist.h:136
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [4] int lastIndexOf(const QRegExp &, int) const
+
+/*
+Returns the index position of the last exact match of rx in the list, searching backward from index position from. If from is -1 (the default), the search starts at the last item. Returns -1 if no item matched.
+
+By default, this function is case sensitive.
+
+See also indexOf(), contains(), and QRegExp::exactMatch().
+*/
+impl /*struct*/ QStringList {
+  pub fn lastIndexOf_0<RetType, T: QStringList_lastIndexOf_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.lastIndexOf_0(self);
+    // return 1;
+  }
+}
+pub trait QStringList_lastIndexOf_0<RetType> {
+  fn lastIndexOf_0(self , rsthis: & QStringList) -> RetType;
+}
+impl<'a> /*trait*/ QStringList_lastIndexOf_0<i32> for (usize,i32) {
+  fn lastIndexOf_0(self , rsthis: & QStringList) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QStringList11lastIndexOfERK7QRegExpi", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstringlist.h:138
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [4] int lastIndexOf(QRegExp &, int) const
+
+/*
+Returns the index position of the last exact match of rx in the list, searching backward from index position from. If from is -1 (the default), the search starts at the last item. Returns -1 if no item matched.
+
+By default, this function is case sensitive.
+
+See also indexOf(), contains(), and QRegExp::exactMatch().
+*/
+impl /*struct*/ QStringList {
+  pub fn lastIndexOf_1<RetType, T: QStringList_lastIndexOf_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.lastIndexOf_1(self);
+    // return 1;
+  }
+}
+pub trait QStringList_lastIndexOf_1<RetType> {
+  fn lastIndexOf_1(self , rsthis: & QStringList) -> RetType;
+}
+impl<'a> /*trait*/ QStringList_lastIndexOf_1<i32> for (usize,i32) {
+  fn lastIndexOf_1(self , rsthis: & QStringList) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QStringList11lastIndexOfER7QRegExpi", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstringlist.h:144
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [4] int lastIndexOf(const QRegularExpression &, int) const
+
+/*
+Returns the index position of the last exact match of rx in the list, searching backward from index position from. If from is -1 (the default), the search starts at the last item. Returns -1 if no item matched.
+
+By default, this function is case sensitive.
+
+See also indexOf(), contains(), and QRegExp::exactMatch().
+*/
+impl /*struct*/ QStringList {
+  pub fn lastIndexOf_2<RetType, T: QStringList_lastIndexOf_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.lastIndexOf_2(self);
+    // return 1;
+  }
+}
+pub trait QStringList_lastIndexOf_2<RetType> {
+  fn lastIndexOf_2(self , rsthis: & QStringList) -> RetType;
+}
+impl<'a> /*trait*/ QStringList_lastIndexOf_2<i32> for (usize,i32) {
+  fn lastIndexOf_2(self , rsthis: & QStringList) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+
+pub fn DeleteQStringList(this :*mut QStringList) {
+    // rv, err := qtrt::InvokeQtFunc6("_ZN11QStringListD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+//  body block end
+
+//  keep block begin
+
+//  keep block end

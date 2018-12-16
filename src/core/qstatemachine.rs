@@ -1,665 +1,1030 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qstatemachine.h
-// dst-file: /src/core/qstatemachine.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QStateMachine
+// package qtcore
+// /usr/include/qt/QtCore/qstatemachine.h
+// #include <qstatemachine.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
-use super::qstate::*; // 773
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 18
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qobject::*; // 773
-// use super::qlist::*; // 775
-use super::qcoreevent::*; // 773
-// use super::qset::*; // 775
-use super::qabstractanimation::*; // 773
-use super::qstring::*; // 773
-use super::qobjectdefs::*; // 773
-use super::qabstractstate::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QStateMachine_Class_Size() -> c_int;
-  // proto:  QList<QAbstractAnimation *> QStateMachine::defaultAnimations();
-  fn C_ZNK13QStateMachine17defaultAnimationsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  int QStateMachine::postDelayedEvent(QEvent * event, int delay);
-  fn C_ZN13QStateMachine16postDelayedEventEP6QEventi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
-  // proto:  QSet<QAbstractState *> QStateMachine::configuration();
-  fn C_ZNK13QStateMachine13configurationEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QStateMachine::setRunning(bool running);
-  fn C_ZN13QStateMachine10setRunningEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
-  // proto:  void QStateMachine::addDefaultAnimation(QAbstractAnimation * animation);
-  fn C_ZN13QStateMachine19addDefaultAnimationEP18QAbstractAnimation(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QStateMachine::removeDefaultAnimation(QAbstractAnimation * animation);
-  fn C_ZN13QStateMachine22removeDefaultAnimationEP18QAbstractAnimation(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QStateMachine::setAnimated(bool enabled);
-  fn C_ZN13QStateMachine11setAnimatedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
-  // proto:  void QStateMachine::QStateMachine(QObject * parent);
-  fn C_ZN13QStateMachineC2EP7QObject(arg0: *mut c_void) -> u64;
-  // proto:  QString QStateMachine::errorString();
-  fn C_ZNK13QStateMachine11errorStringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  bool QStateMachine::isRunning();
-  fn C_ZNK13QStateMachine9isRunningEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  bool QStateMachine::cancelDelayedEvent(int id);
-  fn C_ZN13QStateMachine18cancelDelayedEventEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
-  // proto:  void QStateMachine::~QStateMachine();
-  fn C_ZN13QStateMachineD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  const QMetaObject * QStateMachine::metaObject();
-  fn C_ZNK13QStateMachine10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QStateMachine::addState(QAbstractState * state);
-  fn C_ZN13QStateMachine8addStateEP14QAbstractState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QStateMachine::clearError();
-  fn C_ZN13QStateMachine10clearErrorEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QStateMachine::removeState(QAbstractState * state);
-  fn C_ZN13QStateMachine11removeStateEP14QAbstractState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QStateMachine::stop();
-  fn C_ZN13QStateMachine4stopEv(qthis: u64 /* *mut c_void*/);
-  // proto:  bool QStateMachine::isAnimated();
-  fn C_ZNK13QStateMachine10isAnimatedEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QStateMachine::start();
-  fn C_ZN13QStateMachine5startEv(qthis: u64 /* *mut c_void*/);
-  // proto:  bool QStateMachine::eventFilter(QObject * watched, QEvent * event);
-  fn C_ZN13QStateMachine11eventFilterEP7QObjectP6QEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
-  fn QStateMachine_SlotProxy_connect__ZN13QStateMachine14runningChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-} // <= ext block end
+// void onEntry(QEvent *)
+// func (this *QStateMachine) InheritOnEntry(f func(event *QEvent/*777 QEvent **/) /*void*/) {
+//  qtrt.SetAllInheritCallback(this, "onEntry", f)
+// }
 
-// body block begin =>
-// class sizeof(QStateMachine)=1
-#[derive(Default)]
+// void onExit(QEvent *)
+// func (this *QStateMachine) InheritOnExit(f func(event *QEvent/*777 QEvent **/) /*void*/) {
+//  qtrt.SetAllInheritCallback(this, "onExit", f)
+// }
+
+// void beginSelectTransitions(QEvent *)
+// func (this *QStateMachine) InheritBeginSelectTransitions(f func(event *QEvent/*777 QEvent **/) /*void*/) {
+//  qtrt.SetAllInheritCallback(this, "beginSelectTransitions", f)
+// }
+
+// void endSelectTransitions(QEvent *)
+// func (this *QStateMachine) InheritEndSelectTransitions(f func(event *QEvent/*777 QEvent **/) /*void*/) {
+//  qtrt.SetAllInheritCallback(this, "endSelectTransitions", f)
+// }
+
+// void beginMicrostep(QEvent *)
+// func (this *QStateMachine) InheritBeginMicrostep(f func(event *QEvent/*777 QEvent **/) /*void*/) {
+//  qtrt.SetAllInheritCallback(this, "beginMicrostep", f)
+// }
+
+// void endMicrostep(QEvent *)
+// func (this *QStateMachine) InheritEndMicrostep(f func(event *QEvent/*777 QEvent **/) /*void*/) {
+//  qtrt.SetAllInheritCallback(this, "endMicrostep", f)
+// }
+
+// bool event(QEvent *)
+// func (this *QStateMachine) InheritEvent(f func(e *QEvent/*777 QEvent **/) bool) {
+//  qtrt.SetAllInheritCallback(this, "event", f)
+// }
+
+
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QStateMachine)=16
 pub struct QStateMachine {
   qbase: QState,
-  pub qclsinst: u64 /* *mut c_void*/,
-  pub _started: QStateMachine_started_signal,
-  pub _runningChanged: QStateMachine_runningChanged_signal,
-  pub _stopped: QStateMachine_stopped_signal,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QStateMachine_ITF interface {
+//    QState_ITF
+//    QStateMachine_PTR() *QStateMachine
+//}
+//func (ptr *QStateMachine) QStateMachine_PTR() *QStateMachine { return ptr }
 
 impl /*struct*/ QStateMachine {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QStateMachine {
-    return QStateMachine{qbase: QState::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QStateMachine {
+    return QStateMachine{qclsinst: qthis, ..Default::default()};
   }
 }
-impl Deref for QStateMachine {
-  type Target = QState;
+//impl Deref for QStateMachine {
+//  type Target = QStateMachineBASE;
+//
+//  fn deref(&self) -> &QStateMachineBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QStateMachineBASE> for QStateMachine {
+//  fn as_ref(& self) -> & QStateMachineBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qstatemachine.h:59
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject() const
 
-  fn deref(&self) -> &QState {
-    return & self.qbase;
-  }
-}
-impl AsRef<QState> for QStateMachine {
-  fn as_ref(& self) -> & QState {
-    return & self.qbase;
-  }
-}
-  // proto:  QList<QAbstractAnimation *> QStateMachine::defaultAnimations();
+/*
+
+*/
 impl /*struct*/ QStateMachine {
-  pub fn defaultAnimations<RetType, T: QStateMachine_defaultAnimations<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.defaultAnimations(self);
+  pub fn metaObject_0<RetType, T: QStateMachine_metaObject_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.metaObject_0(self);
     // return 1;
   }
 }
-
-pub trait QStateMachine_defaultAnimations<RetType> {
-  fn defaultAnimations(self , rsthis: & QStateMachine) -> RetType;
+pub trait QStateMachine_metaObject_0<RetType> {
+  fn metaObject_0(self , rsthis: & QStateMachine) -> RetType;
 }
-
-  // proto:  QList<QAbstractAnimation *> QStateMachine::defaultAnimations();
-impl<'a> /*trait*/ QStateMachine_defaultAnimations<u64> for () {
-  fn defaultAnimations(self , rsthis: & QStateMachine) -> u64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QStateMachine17defaultAnimationsEv()};
-    let mut ret = unsafe {C_ZNK13QStateMachine17defaultAnimationsEv(rsthis.qclsinst)};
-    return ret as u64; // 5
+impl<'a> /*trait*/ QStateMachine_metaObject_0<usize> for () {
+  fn metaObject_0(self , rsthis: & QStateMachine) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QStateMachine10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  int QStateMachine::postDelayedEvent(QEvent * event, int delay);
+// /usr/include/qt/QtCore/qstatemachine.h:112
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QStateMachine(QObject *)
+
+/*
+Constructs a new state machine with the given parent.
+*/
+// QStateMachine(QObject *) ctx.fn_proto_cpp
 impl /*struct*/ QStateMachine {
-  pub fn postDelayedEvent<RetType, T: QStateMachine_postDelayedEvent<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.postDelayedEvent(self);
-    // return 1;
-  }
-}
-
-pub trait QStateMachine_postDelayedEvent<RetType> {
-  fn postDelayedEvent(self , rsthis: & QStateMachine) -> RetType;
-}
-
-  // proto:  int QStateMachine::postDelayedEvent(QEvent * event, int delay);
-impl<'a> /*trait*/ QStateMachine_postDelayedEvent<i32> for (&'a QEvent, i32) {
-  fn postDelayedEvent(self , rsthis: & QStateMachine) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QStateMachine16postDelayedEventEP6QEventi()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
-    let mut ret = unsafe {C_ZN13QStateMachine16postDelayedEventEP6QEventi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QSet<QAbstractState *> QStateMachine::configuration();
-impl /*struct*/ QStateMachine {
-  pub fn configuration<RetType, T: QStateMachine_configuration<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.configuration(self);
-    // return 1;
-  }
-}
-
-pub trait QStateMachine_configuration<RetType> {
-  fn configuration(self , rsthis: & QStateMachine) -> RetType;
-}
-
-  // proto:  QSet<QAbstractState *> QStateMachine::configuration();
-impl<'a> /*trait*/ QStateMachine_configuration<u64> for () {
-  fn configuration(self , rsthis: & QStateMachine) -> u64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QStateMachine13configurationEv()};
-    let mut ret = unsafe {C_ZNK13QStateMachine13configurationEv(rsthis.qclsinst)};
-    return ret as u64; // 5
-    // return 1;
-  }
-}
-
-  // proto:  void QStateMachine::setRunning(bool running);
-impl /*struct*/ QStateMachine {
-  pub fn setRunning<RetType, T: QStateMachine_setRunning<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setRunning(self);
-    // return 1;
-  }
-}
-
-pub trait QStateMachine_setRunning<RetType> {
-  fn setRunning(self , rsthis: & QStateMachine) -> RetType;
-}
-
-  // proto:  void QStateMachine::setRunning(bool running);
-impl<'a> /*trait*/ QStateMachine_setRunning<()> for (i8) {
-  fn setRunning(self , rsthis: & QStateMachine) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QStateMachine10setRunningEb()};
-    let arg0 = self  as c_char;
-     unsafe {C_ZN13QStateMachine10setRunningEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QStateMachine::addDefaultAnimation(QAbstractAnimation * animation);
-impl /*struct*/ QStateMachine {
-  pub fn addDefaultAnimation<RetType, T: QStateMachine_addDefaultAnimation<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.addDefaultAnimation(self);
-    // return 1;
-  }
-}
-
-pub trait QStateMachine_addDefaultAnimation<RetType> {
-  fn addDefaultAnimation(self , rsthis: & QStateMachine) -> RetType;
-}
-
-  // proto:  void QStateMachine::addDefaultAnimation(QAbstractAnimation * animation);
-impl<'a> /*trait*/ QStateMachine_addDefaultAnimation<()> for (&'a QAbstractAnimation) {
-  fn addDefaultAnimation(self , rsthis: & QStateMachine) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QStateMachine19addDefaultAnimationEP18QAbstractAnimation()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN13QStateMachine19addDefaultAnimationEP18QAbstractAnimation(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QStateMachine::removeDefaultAnimation(QAbstractAnimation * animation);
-impl /*struct*/ QStateMachine {
-  pub fn removeDefaultAnimation<RetType, T: QStateMachine_removeDefaultAnimation<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.removeDefaultAnimation(self);
-    // return 1;
-  }
-}
-
-pub trait QStateMachine_removeDefaultAnimation<RetType> {
-  fn removeDefaultAnimation(self , rsthis: & QStateMachine) -> RetType;
-}
-
-  // proto:  void QStateMachine::removeDefaultAnimation(QAbstractAnimation * animation);
-impl<'a> /*trait*/ QStateMachine_removeDefaultAnimation<()> for (&'a QAbstractAnimation) {
-  fn removeDefaultAnimation(self , rsthis: & QStateMachine) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QStateMachine22removeDefaultAnimationEP18QAbstractAnimation()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN13QStateMachine22removeDefaultAnimationEP18QAbstractAnimation(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QStateMachine::setAnimated(bool enabled);
-impl /*struct*/ QStateMachine {
-  pub fn setAnimated<RetType, T: QStateMachine_setAnimated<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setAnimated(self);
-    // return 1;
-  }
-}
-
-pub trait QStateMachine_setAnimated<RetType> {
-  fn setAnimated(self , rsthis: & QStateMachine) -> RetType;
-}
-
-  // proto:  void QStateMachine::setAnimated(bool enabled);
-impl<'a> /*trait*/ QStateMachine_setAnimated<()> for (i8) {
-  fn setAnimated(self , rsthis: & QStateMachine) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QStateMachine11setAnimatedEb()};
-    let arg0 = self  as c_char;
-     unsafe {C_ZN13QStateMachine11setAnimatedEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QStateMachine::QStateMachine(QObject * parent);
-impl /*struct*/ QStateMachine {
-  pub fn new<T: QStateMachine_new>(value: T) -> QStateMachine {
-    let rsthis = value.new();
+  pub fn QStateMachine_0<T: QStateMachine_QStateMachine_0>(value: T) -> QStateMachine {
+    let rsthis = value.QStateMachine_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QStateMachine_new {
-  fn new(self) -> QStateMachine;
+pub trait QStateMachine_QStateMachine_0 {
+  fn QStateMachine_0(self) -> QStateMachine;
 }
-
-  // proto:  void QStateMachine::QStateMachine(QObject * parent);
-impl<'a> /*trait*/ QStateMachine_new for (Option<&'a QObject>) {
-  fn new(self) -> QStateMachine {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QStateMachine(QObject *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QStateMachine_QStateMachine_0 for (usize) {
+  fn QStateMachine_0(self) -> QStateMachine {
     // unsafe{_ZN13QStateMachineC2EP7QObject()};
-    let ctysz: c_int = unsafe{QStateMachine_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN13QStateMachineC2EP7QObject(arg0)};
-    let rsthis = QStateMachine{qbase: QState::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN13QStateMachineC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QStateMachine{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  QString QStateMachine::errorString();
+// /usr/include/qt/QtCore/qstatemachine.h:113
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QStateMachine(QState::ChildMode, QObject *)
+
+/*
+Constructs a new state machine with the given parent.
+*/
+// QStateMachine(QState::ChildMode, QObject *) ctx.fn_proto_cpp
 impl /*struct*/ QStateMachine {
-  pub fn errorString<RetType, T: QStateMachine_errorString<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.errorString(self);
+  pub fn QStateMachine_1<T: QStateMachine_QStateMachine_1>(value: T) -> QStateMachine {
+    let rsthis = value.QStateMachine_1();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QStateMachine_errorString<RetType> {
-  fn errorString(self , rsthis: & QStateMachine) -> RetType;
+pub trait QStateMachine_QStateMachine_1 {
+  fn QStateMachine_1(self) -> QStateMachine;
 }
-
-  // proto:  QString QStateMachine::errorString();
-impl<'a> /*trait*/ QStateMachine_errorString<QString> for () {
-  fn errorString(self , rsthis: & QStateMachine) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QStateMachine11errorStringEv()};
-    let mut ret = unsafe {C_ZNK13QStateMachine11errorStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+// QStateMachine(QState::ChildMode, QObject *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QStateMachine_QStateMachine_1 for (i32,usize) {
+  fn QStateMachine_1(self) -> QStateMachine {
+    // unsafe{_ZN13QStateMachineC2EN6QState9ChildModeEP7QObject()};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN13QStateMachineC2EN6QState9ChildModeEP7QObject", 2,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QStateMachine{qclsinst: qthis, ..Default::default()};
+    return rsthis;
     // return 1;
   }
 }
 
-  // proto:  bool QStateMachine::isRunning();
+// /usr/include/qt/QtCore/qstatemachine.h:114
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QStateMachine()
+
+/*
+
+*/
+pub fn DeleteQStateMachine(this :*mut QStateMachine) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN13QStateMachineD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 16)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qstatemachine.h:116
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void addState(QAbstractState *)
+
+/*
+Adds the given state to this state machine. The state becomes a top-level state.
+
+If the state is already in a different machine, it will first be removed from its old machine, and then added to this machine.
+
+See also removeState() and setInitialState().
+*/
 impl /*struct*/ QStateMachine {
-  pub fn isRunning<RetType, T: QStateMachine_isRunning<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isRunning(self);
+  pub fn addState_0<RetType, T: QStateMachine_addState_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.addState_0(self);
+    // return 1;
+  }
+}
+pub trait QStateMachine_addState_0<RetType> {
+  fn addState_0(self , rsthis: & QStateMachine) -> RetType;
+}
+impl<'a> /*trait*/ QStateMachine_addState_0<(/*void*/)> for (usize) {
+  fn addState_0(self , rsthis: & QStateMachine) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN13QStateMachine8addStateEP14QAbstractState", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QStateMachine_isRunning<RetType> {
-  fn isRunning(self , rsthis: & QStateMachine) -> RetType;
-}
+// /usr/include/qt/QtCore/qstatemachine.h:117
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void removeState(QAbstractState *)
 
-  // proto:  bool QStateMachine::isRunning();
-impl<'a> /*trait*/ QStateMachine_isRunning<i8> for () {
-  fn isRunning(self , rsthis: & QStateMachine) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QStateMachine9isRunningEv()};
-    let mut ret = unsafe {C_ZNK13QStateMachine9isRunningEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
+/*
+Removes the given state from this state machine. The state machine releases ownership of the state.
 
-  // proto:  bool QStateMachine::cancelDelayedEvent(int id);
+See also addState().
+*/
 impl /*struct*/ QStateMachine {
-  pub fn cancelDelayedEvent<RetType, T: QStateMachine_cancelDelayedEvent<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.cancelDelayedEvent(self);
+  pub fn removeState_0<RetType, T: QStateMachine_removeState_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.removeState_0(self);
+    // return 1;
+  }
+}
+pub trait QStateMachine_removeState_0<RetType> {
+  fn removeState_0(self , rsthis: & QStateMachine) -> RetType;
+}
+impl<'a> /*trait*/ QStateMachine_removeState_0<(/*void*/)> for (usize) {
+  fn removeState_0(self , rsthis: & QStateMachine) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN13QStateMachine11removeStateEP14QAbstractState", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QStateMachine_cancelDelayedEvent<RetType> {
-  fn cancelDelayedEvent(self , rsthis: & QStateMachine) -> RetType;
-}
+// /usr/include/qt/QtCore/qstatemachine.h:119
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] QStateMachine::Error error() const
 
-  // proto:  bool QStateMachine::cancelDelayedEvent(int id);
-impl<'a> /*trait*/ QStateMachine_cancelDelayedEvent<i8> for (i32) {
-  fn cancelDelayedEvent(self , rsthis: & QStateMachine) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QStateMachine18cancelDelayedEventEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZN13QStateMachine18cancelDelayedEventEi(rsthis.qclsinst, arg0)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QStateMachine::~QStateMachine();
+/*
+Returns the error code of the last error that occurred in the state machine.
+*/
 impl /*struct*/ QStateMachine {
-  pub fn free<RetType, T: QStateMachine_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
+  pub fn error_0<RetType, T: QStateMachine_error_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.error_0(self);
     // return 1;
   }
 }
-
-pub trait QStateMachine_free<RetType> {
-  fn free(self , rsthis: & QStateMachine) -> RetType;
+pub trait QStateMachine_error_0<RetType> {
+  fn error_0(self , rsthis: & QStateMachine) -> RetType;
 }
-
-  // proto:  void QStateMachine::~QStateMachine();
-impl<'a> /*trait*/ QStateMachine_free<()> for () {
-  fn free(self , rsthis: & QStateMachine) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QStateMachineD2Ev()};
-     unsafe {C_ZN13QStateMachineD2Ev(rsthis.qclsinst)};
+impl<'a> /*trait*/ QStateMachine_error_0<i32> for () {
+  fn error_0(self , rsthis: & QStateMachine) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QStateMachine5errorEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i32 = Default::default(); return dret;
   }
 }
 
-  // proto:  const QMetaObject * QStateMachine::metaObject();
+// /usr/include/qt/QtCore/qstatemachine.h:120
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString errorString() const
+
+/*
+Returns the error string of the last error that occurred in the state machine.
+
+Note: Getter function for property errorString.
+*/
 impl /*struct*/ QStateMachine {
-  pub fn metaObject<RetType, T: QStateMachine_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.metaObject(self);
+  pub fn errorString_0<RetType, T: QStateMachine_errorString_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.errorString_0(self);
     // return 1;
   }
 }
-
-pub trait QStateMachine_metaObject<RetType> {
-  fn metaObject(self , rsthis: & QStateMachine) -> RetType;
+pub trait QStateMachine_errorString_0<RetType> {
+  fn errorString_0(self , rsthis: & QStateMachine) -> RetType;
 }
-
-  // proto:  const QMetaObject * QStateMachine::metaObject();
-impl<'a> /*trait*/ QStateMachine_metaObject<QMetaObject> for () {
-  fn metaObject(self , rsthis: & QStateMachine) -> QMetaObject {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QStateMachine10metaObjectEv()};
-    let mut ret = unsafe {C_ZNK13QStateMachine10metaObjectEv(rsthis.qclsinst)};
-    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QStateMachine_errorString_0<usize> for () {
+  fn errorString_0(self , rsthis: & QStateMachine) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QStateMachine11errorStringEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  void QStateMachine::addState(QAbstractState * state);
+// /usr/include/qt/QtCore/qstatemachine.h:121
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void clearError()
+
+/*
+Clears the error string and error code of the state machine.
+*/
 impl /*struct*/ QStateMachine {
-  pub fn addState<RetType, T: QStateMachine_addState<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.addState(self);
+  pub fn clearError_0<RetType, T: QStateMachine_clearError_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.clearError_0(self);
+    // return 1;
+  }
+}
+pub trait QStateMachine_clearError_0<RetType> {
+  fn clearError_0(self , rsthis: & QStateMachine) -> RetType;
+}
+impl<'a> /*trait*/ QStateMachine_clearError_0<(/*void*/)> for () {
+  fn clearError_0(self , rsthis: & QStateMachine) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZN13QStateMachine10clearErrorEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QStateMachine_addState<RetType> {
-  fn addState(self , rsthis: & QStateMachine) -> RetType;
-}
+// /usr/include/qt/QtCore/qstatemachine.h:123
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isRunning() const
 
-  // proto:  void QStateMachine::addState(QAbstractState * state);
-impl<'a> /*trait*/ QStateMachine_addState<()> for (&'a QAbstractState) {
-  fn addState(self , rsthis: & QStateMachine) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QStateMachine8addStateEP14QAbstractState()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN13QStateMachine8addStateEP14QAbstractState(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
+/*
 
-  // proto:  void QStateMachine::clearError();
+*/
 impl /*struct*/ QStateMachine {
-  pub fn clearError<RetType, T: QStateMachine_clearError<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.clearError(self);
+  pub fn isRunning_0<RetType, T: QStateMachine_isRunning_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isRunning_0(self);
     // return 1;
   }
 }
-
-pub trait QStateMachine_clearError<RetType> {
-  fn clearError(self , rsthis: & QStateMachine) -> RetType;
+pub trait QStateMachine_isRunning_0<RetType> {
+  fn isRunning_0(self , rsthis: & QStateMachine) -> RetType;
 }
-
-  // proto:  void QStateMachine::clearError();
-impl<'a> /*trait*/ QStateMachine_clearError<()> for () {
-  fn clearError(self , rsthis: & QStateMachine) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QStateMachine10clearErrorEv()};
-     unsafe {C_ZN13QStateMachine10clearErrorEv(rsthis.qclsinst)};
+impl<'a> /*trait*/ QStateMachine_isRunning_0<bool> for () {
+  fn isRunning_0(self , rsthis: & QStateMachine) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QStateMachine9isRunningEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  void QStateMachine::removeState(QAbstractState * state);
+// /usr/include/qt/QtCore/qstatemachine.h:126
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isAnimated() const
+
+/*
+Returns whether animations are enabled for this state machine.
+
+Note: Getter function for property animated.
+*/
 impl /*struct*/ QStateMachine {
-  pub fn removeState<RetType, T: QStateMachine_removeState<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.removeState(self);
+  pub fn isAnimated_0<RetType, T: QStateMachine_isAnimated_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isAnimated_0(self);
     // return 1;
   }
 }
-
-pub trait QStateMachine_removeState<RetType> {
-  fn removeState(self , rsthis: & QStateMachine) -> RetType;
+pub trait QStateMachine_isAnimated_0<RetType> {
+  fn isAnimated_0(self , rsthis: & QStateMachine) -> RetType;
 }
-
-  // proto:  void QStateMachine::removeState(QAbstractState * state);
-impl<'a> /*trait*/ QStateMachine_removeState<()> for (&'a QAbstractState) {
-  fn removeState(self , rsthis: & QStateMachine) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QStateMachine11removeStateEP14QAbstractState()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN13QStateMachine11removeStateEP14QAbstractState(rsthis.qclsinst, arg0)};
+impl<'a> /*trait*/ QStateMachine_isAnimated_0<bool> for () {
+  fn isAnimated_0(self , rsthis: & QStateMachine) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QStateMachine10isAnimatedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  void QStateMachine::stop();
+// /usr/include/qt/QtCore/qstatemachine.h:127
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setAnimated(bool)
+
+/*
+Sets whether animations are enabled for this state machine.
+
+Note: Setter function for property animated. 
+
+See also isAnimated().
+*/
 impl /*struct*/ QStateMachine {
-  pub fn stop<RetType, T: QStateMachine_stop<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.stop(self);
+  pub fn setAnimated_0<RetType, T: QStateMachine_setAnimated_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setAnimated_0(self);
+    // return 1;
+  }
+}
+pub trait QStateMachine_setAnimated_0<RetType> {
+  fn setAnimated_0(self , rsthis: & QStateMachine) -> RetType;
+}
+impl<'a> /*trait*/ QStateMachine_setAnimated_0<(/*void*/)> for (bool) {
+  fn setAnimated_0(self , rsthis: & QStateMachine) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const bool as usize;
+     qtrt::InvokeQtFunc6("_ZN13QStateMachine11setAnimatedEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QStateMachine_stop<RetType> {
-  fn stop(self , rsthis: & QStateMachine) -> RetType;
-}
+// /usr/include/qt/QtCore/qstatemachine.h:129
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void addDefaultAnimation(QAbstractAnimation *)
 
-  // proto:  void QStateMachine::stop();
-impl<'a> /*trait*/ QStateMachine_stop<()> for () {
-  fn stop(self , rsthis: & QStateMachine) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QStateMachine4stopEv()};
-     unsafe {C_ZN13QStateMachine4stopEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  bool QStateMachine::isAnimated();
+/*
+Adds a default animation to be considered for any transition.
+*/
 impl /*struct*/ QStateMachine {
-  pub fn isAnimated<RetType, T: QStateMachine_isAnimated<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isAnimated(self);
+  pub fn addDefaultAnimation_0<RetType, T: QStateMachine_addDefaultAnimation_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.addDefaultAnimation_0(self);
+    // return 1;
+  }
+}
+pub trait QStateMachine_addDefaultAnimation_0<RetType> {
+  fn addDefaultAnimation_0(self , rsthis: & QStateMachine) -> RetType;
+}
+impl<'a> /*trait*/ QStateMachine_addDefaultAnimation_0<(/*void*/)> for (usize) {
+  fn addDefaultAnimation_0(self , rsthis: & QStateMachine) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN13QStateMachine19addDefaultAnimationEP18QAbstractAnimation", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QStateMachine_isAnimated<RetType> {
-  fn isAnimated(self , rsthis: & QStateMachine) -> RetType;
-}
+// /usr/include/qt/QtCore/qstatemachine.h:131
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void removeDefaultAnimation(QAbstractAnimation *)
 
-  // proto:  bool QStateMachine::isAnimated();
-impl<'a> /*trait*/ QStateMachine_isAnimated<i8> for () {
-  fn isAnimated(self , rsthis: & QStateMachine) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QStateMachine10isAnimatedEv()};
-    let mut ret = unsafe {C_ZNK13QStateMachine10isAnimatedEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QStateMachine::start();
+/*
+Removes animation from the list of default animations.
+*/
 impl /*struct*/ QStateMachine {
-  pub fn start<RetType, T: QStateMachine_start<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.start(self);
+  pub fn removeDefaultAnimation_0<RetType, T: QStateMachine_removeDefaultAnimation_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.removeDefaultAnimation_0(self);
+    // return 1;
+  }
+}
+pub trait QStateMachine_removeDefaultAnimation_0<RetType> {
+  fn removeDefaultAnimation_0(self , rsthis: & QStateMachine) -> RetType;
+}
+impl<'a> /*trait*/ QStateMachine_removeDefaultAnimation_0<(/*void*/)> for (usize) {
+  fn removeDefaultAnimation_0(self , rsthis: & QStateMachine) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN13QStateMachine22removeDefaultAnimationEP18QAbstractAnimation", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QStateMachine_start<RetType> {
-  fn start(self , rsthis: & QStateMachine) -> RetType;
-}
+// /usr/include/qt/QtCore/qstatemachine.h:134
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] QState::RestorePolicy globalRestorePolicy() const
 
-  // proto:  void QStateMachine::start();
-impl<'a> /*trait*/ QStateMachine_start<()> for () {
-  fn start(self , rsthis: & QStateMachine) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QStateMachine5startEv()};
-     unsafe {C_ZN13QStateMachine5startEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
+/*
+Returns the restore policy of the state machine.
 
-  // proto:  bool QStateMachine::eventFilter(QObject * watched, QEvent * event);
+Note: Getter function for property globalRestorePolicy. 
+
+See also setGlobalRestorePolicy().
+*/
 impl /*struct*/ QStateMachine {
-  pub fn eventFilter<RetType, T: QStateMachine_eventFilter<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.eventFilter(self);
+  pub fn globalRestorePolicy_0<RetType, T: QStateMachine_globalRestorePolicy_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.globalRestorePolicy_0(self);
+    // return 1;
+  }
+}
+pub trait QStateMachine_globalRestorePolicy_0<RetType> {
+  fn globalRestorePolicy_0(self , rsthis: & QStateMachine) -> RetType;
+}
+impl<'a> /*trait*/ QStateMachine_globalRestorePolicy_0<i32> for () {
+  fn globalRestorePolicy_0(self , rsthis: & QStateMachine) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QStateMachine19globalRestorePolicyEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstatemachine.h:135
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setGlobalRestorePolicy(QState::RestorePolicy)
+
+/*
+Sets the restore policy of the state machine to restorePolicy. The default restore policy is QState::DontRestoreProperties.
+
+Note: Setter function for property globalRestorePolicy. 
+
+See also globalRestorePolicy().
+*/
+impl /*struct*/ QStateMachine {
+  pub fn setGlobalRestorePolicy_0<RetType, T: QStateMachine_setGlobalRestorePolicy_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setGlobalRestorePolicy_0(self);
+    // return 1;
+  }
+}
+pub trait QStateMachine_setGlobalRestorePolicy_0<RetType> {
+  fn setGlobalRestorePolicy_0(self , rsthis: & QStateMachine) -> RetType;
+}
+impl<'a> /*trait*/ QStateMachine_setGlobalRestorePolicy_0<(/*void*/)> for (i32) {
+  fn setGlobalRestorePolicy_0(self , rsthis: & QStateMachine) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN13QStateMachine22setGlobalRestorePolicyEN6QState13RestorePolicyE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QStateMachine_eventFilter<RetType> {
-  fn eventFilter(self , rsthis: & QStateMachine) -> RetType;
-}
+// /usr/include/qt/QtCore/qstatemachine.h:137
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void postEvent(QEvent *, QStateMachine::EventPriority)
 
-  // proto:  bool QStateMachine::eventFilter(QObject * watched, QEvent * event);
-impl<'a> /*trait*/ QStateMachine_eventFilter<i8> for (&'a QObject, &'a QEvent) {
-  fn eventFilter(self , rsthis: & QStateMachine) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QStateMachine11eventFilterEP7QObjectP6QEvent()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN13QStateMachine11eventFilterEP7QObjectP6QEvent(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8; // 1
+/*
+Posts the given event of the given priority for processing by this state machine.
+
+This function returns immediately. The event is added to the state machine's event queue. Events are processed in the order posted. The state machine takes ownership of the event and deletes it once it has been processed.
+
+You can only post events when the state machine is running or when it is starting up.
+
+Note: This function is thread-safe.
+
+See also postDelayedEvent().
+*/
+impl /*struct*/ QStateMachine {
+  pub fn postEvent_0<RetType, T: QStateMachine_postEvent_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.postEvent_0(self);
+    // return 1;
+  }
+}
+pub trait QStateMachine_postEvent_0<RetType> {
+  fn postEvent_0(self , rsthis: & QStateMachine) -> RetType;
+}
+impl<'a> /*trait*/ QStateMachine_postEvent_0<(/*void*/)> for (usize,i32) {
+  fn postEvent_0(self , rsthis: & QStateMachine) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN13QStateMachine9postEventEP6QEventNS_13EventPriorityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-#[derive(Default)] // for QStateMachine_started
-pub struct QStateMachine_started_signal{poi:u64}
-impl /* struct */ QStateMachine {
-  pub fn started(&self) -> QStateMachine_started_signal {
-     return QStateMachine_started_signal{poi:self.qclsinst};
+// /usr/include/qt/QtCore/qstatemachine.h:138
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int postDelayedEvent(QEvent *, int)
+
+/*
+Posts the given event for processing by this state machine, with the given delay in milliseconds. Returns an identifier associated with the delayed event, or -1 if the event could not be posted.
+
+This function returns immediately. When the delay has expired, the event will be added to the state machine's event queue for processing. The state machine takes ownership of the event and deletes it once it has been processed.
+
+You can only post events when the state machine is running.
+
+Note: This function is thread-safe.
+
+See also cancelDelayedEvent() and postEvent().
+*/
+impl /*struct*/ QStateMachine {
+  pub fn postDelayedEvent_0<RetType, T: QStateMachine_postDelayedEvent_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.postDelayedEvent_0(self);
+    // return 1;
   }
 }
-impl /* struct */ QStateMachine_started_signal {
-  pub fn connect<T: QStateMachine_started_signal_connect>(self, overload_args: T) {
-    overload_args.connect(self);
-  }
+pub trait QStateMachine_postDelayedEvent_0<RetType> {
+  fn postDelayedEvent_0(self , rsthis: & QStateMachine) -> RetType;
 }
-pub trait QStateMachine_started_signal_connect {
-  fn connect(self, sigthis: QStateMachine_started_signal);
+impl<'a> /*trait*/ QStateMachine_postDelayedEvent_0<i32> for (usize,i32) {
+  fn postDelayedEvent_0(self , rsthis: & QStateMachine) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN13QStateMachine16postDelayedEventEP6QEventi", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
 }
 
-#[derive(Default)] // for QStateMachine_runningChanged
-pub struct QStateMachine_runningChanged_signal{poi:u64}
-impl /* struct */ QStateMachine {
-  pub fn runningChanged(&self) -> QStateMachine_runningChanged_signal {
-     return QStateMachine_runningChanged_signal{poi:self.qclsinst};
+// /usr/include/qt/QtCore/qstatemachine.h:139
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool cancelDelayedEvent(int)
+
+/*
+Cancels the delayed event identified by the given id. The id should be a value returned by a call to postDelayedEvent(). Returns true if the event was successfully cancelled, otherwise returns false.
+
+Note: This function is thread-safe.
+
+See also postDelayedEvent().
+*/
+impl /*struct*/ QStateMachine {
+  pub fn cancelDelayedEvent_0<RetType, T: QStateMachine_cancelDelayedEvent_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.cancelDelayedEvent_0(self);
+    // return 1;
   }
 }
-impl /* struct */ QStateMachine_runningChanged_signal {
-  pub fn connect<T: QStateMachine_runningChanged_signal_connect>(self, overload_args: T) {
-    overload_args.connect(self);
-  }
+pub trait QStateMachine_cancelDelayedEvent_0<RetType> {
+  fn cancelDelayedEvent_0(self , rsthis: & QStateMachine) -> RetType;
 }
-pub trait QStateMachine_runningChanged_signal_connect {
-  fn connect(self, sigthis: QStateMachine_runningChanged_signal);
+impl<'a> /*trait*/ QStateMachine_cancelDelayedEvent_0<bool> for (i32) {
+  fn cancelDelayedEvent_0(self , rsthis: & QStateMachine) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN13QStateMachine18cancelDelayedEventEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
 }
 
-#[derive(Default)] // for QStateMachine_stopped
-pub struct QStateMachine_stopped_signal{poi:u64}
-impl /* struct */ QStateMachine {
-  pub fn stopped(&self) -> QStateMachine_stopped_signal {
-     return QStateMachine_stopped_signal{poi:self.qclsinst};
+// /usr/include/qt/QtCore/qstatemachine.h:144
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool eventFilter(QObject *, QEvent *)
+
+/*
+Reimplemented from QObject::eventFilter().
+*/
+impl /*struct*/ QStateMachine {
+  pub fn eventFilter_0<RetType, T: QStateMachine_eventFilter_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.eventFilter_0(self);
+    // return 1;
   }
 }
-impl /* struct */ QStateMachine_stopped_signal {
-  pub fn connect<T: QStateMachine_stopped_signal_connect>(self, overload_args: T) {
-    overload_args.connect(self);
-  }
+pub trait QStateMachine_eventFilter_0<RetType> {
+  fn eventFilter_0(self , rsthis: & QStateMachine) -> RetType;
 }
-pub trait QStateMachine_stopped_signal_connect {
-  fn connect(self, sigthis: QStateMachine_stopped_signal);
+impl<'a> /*trait*/ QStateMachine_eventFilter_0<bool> for (usize,usize) {
+  fn eventFilter_0(self , rsthis: & QStateMachine) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN13QStateMachine11eventFilterEP7QObjectP6QEvent", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
 }
 
-// runningChanged(_Bool)
-extern fn QStateMachine_runningChanged_signal_connect_cb_0(rsfptr:fn(i8), arg0: c_char) {
-  println!("{}:{}", file!(), line!());
-  let rsarg0 = arg0 as i8;
-  rsfptr(rsarg0);
-}
-extern fn QStateMachine_runningChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i8)>, arg0: c_char) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  let rsarg0 = arg0 as i8;
-  // rsfptr(rsarg0);
-  unsafe{(*rsfptr_raw)(rsarg0)};
-}
-impl /* trait */ QStateMachine_runningChanged_signal_connect for fn(i8) {
-  fn connect(self, sigthis: QStateMachine_runningChanged_signal) {
-    // do smth...
-    // self as u64; // error for Fn, Ok for fn
-    self as *mut c_void as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QStateMachine_runningChanged_signal_connect_cb_0 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QStateMachine_SlotProxy_connect__ZN13QStateMachine14runningChangedEb(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QStateMachine_runningChanged_signal_connect for Box<Fn(i8)> {
-  fn connect(self, sigthis: QStateMachine_runningChanged_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QStateMachine_runningChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
-    unsafe {QStateMachine_SlotProxy_connect__ZN13QStateMachine14runningChangedEb(arg0, arg1, arg2)};
-  }
-}
-// <= body block end
+// /usr/include/qt/QtCore/qstatemachine.h:148
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void start()
 
+/*
+Starts this state machine. The machine will reset its configuration and transition to the initial state. When a final top-level state (QFinalState) is entered, the machine will emit the finished() signal.
+
+Note: A state machine will not run without a running event loop, such as the main application event loop started with QCoreApplication::exec() or QApplication::exec().
+
+See also started(), finished(), stop(), initialState(), and setRunning().
+*/
+impl /*struct*/ QStateMachine {
+  pub fn start_0<RetType, T: QStateMachine_start_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.start_0(self);
+    // return 1;
+  }
+}
+pub trait QStateMachine_start_0<RetType> {
+  fn start_0(self , rsthis: & QStateMachine) -> RetType;
+}
+impl<'a> /*trait*/ QStateMachine_start_0<(/*void*/)> for () {
+  fn start_0(self , rsthis: & QStateMachine) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZN13QStateMachine5startEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qstatemachine.h:149
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void stop()
+
+/*
+Stops this state machine. The state machine will stop processing events and then emit the stopped() signal.
+
+See also stopped(), start(), and setRunning().
+*/
+impl /*struct*/ QStateMachine {
+  pub fn stop_0<RetType, T: QStateMachine_stop_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.stop_0(self);
+    // return 1;
+  }
+}
+pub trait QStateMachine_stop_0<RetType> {
+  fn stop_0(self , rsthis: & QStateMachine) -> RetType;
+}
+impl<'a> /*trait*/ QStateMachine_stop_0<(/*void*/)> for () {
+  fn stop_0(self , rsthis: & QStateMachine) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZN13QStateMachine4stopEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qstatemachine.h:150
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setRunning(bool)
+
+/*
+
+*/
+impl /*struct*/ QStateMachine {
+  pub fn setRunning_0<RetType, T: QStateMachine_setRunning_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setRunning_0(self);
+    // return 1;
+  }
+}
+pub trait QStateMachine_setRunning_0<RetType> {
+  fn setRunning_0(self , rsthis: & QStateMachine) -> RetType;
+}
+impl<'a> /*trait*/ QStateMachine_setRunning_0<(/*void*/)> for (bool) {
+  fn setRunning_0(self , rsthis: & QStateMachine) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const bool as usize;
+     qtrt::InvokeQtFunc6("_ZN13QStateMachine10setRunningEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qstatemachine.h:155
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void runningChanged(bool)
+
+/*
+This signal is emitted when the running property is changed with running as argument.
+
+This function was introduced in  Qt 5.4.
+
+Note: Notifier signal for property running. 
+
+See also QStateMachine::running.
+*/
+impl /*struct*/ QStateMachine {
+  pub fn runningChanged_0<RetType, T: QStateMachine_runningChanged_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.runningChanged_0(self);
+    // return 1;
+  }
+}
+pub trait QStateMachine_runningChanged_0<RetType> {
+  fn runningChanged_0(self , rsthis: & QStateMachine) -> RetType;
+}
+impl<'a> /*trait*/ QStateMachine_runningChanged_0<(/*void*/)> for (bool) {
+  fn runningChanged_0(self , rsthis: & QStateMachine) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const bool as usize;
+     qtrt::InvokeQtFunc6("_ZN13QStateMachine14runningChangedEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qstatemachine.h:159
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void onEntry(QEvent *)
+
+/*
+Reimplemented from QAbstractState::onEntry().
+
+This function will call start() to start the state machine.
+*/
+impl /*struct*/ QStateMachine {
+  pub fn onEntry_0<RetType, T: QStateMachine_onEntry_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.onEntry_0(self);
+    // return 1;
+  }
+}
+pub trait QStateMachine_onEntry_0<RetType> {
+  fn onEntry_0(self , rsthis: & QStateMachine) -> RetType;
+}
+impl<'a> /*trait*/ QStateMachine_onEntry_0<(/*void*/)> for (usize) {
+  fn onEntry_0(self , rsthis: & QStateMachine) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN13QStateMachine7onEntryEP6QEvent", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qstatemachine.h:160
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void onExit(QEvent *)
+
+/*
+Reimplemented from QAbstractState::onExit().
+
+This function will call stop() to stop the state machine and subsequently emit the stopped() signal.
+*/
+impl /*struct*/ QStateMachine {
+  pub fn onExit_0<RetType, T: QStateMachine_onExit_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.onExit_0(self);
+    // return 1;
+  }
+}
+pub trait QStateMachine_onExit_0<RetType> {
+  fn onExit_0(self , rsthis: & QStateMachine) -> RetType;
+}
+impl<'a> /*trait*/ QStateMachine_onExit_0<(/*void*/)> for (usize) {
+  fn onExit_0(self , rsthis: & QStateMachine) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN13QStateMachine6onExitEP6QEvent", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qstatemachine.h:162
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void beginSelectTransitions(QEvent *)
+
+/*
+
+*/
+impl /*struct*/ QStateMachine {
+  pub fn beginSelectTransitions_0<RetType, T: QStateMachine_beginSelectTransitions_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.beginSelectTransitions_0(self);
+    // return 1;
+  }
+}
+pub trait QStateMachine_beginSelectTransitions_0<RetType> {
+  fn beginSelectTransitions_0(self , rsthis: & QStateMachine) -> RetType;
+}
+impl<'a> /*trait*/ QStateMachine_beginSelectTransitions_0<(/*void*/)> for (usize) {
+  fn beginSelectTransitions_0(self , rsthis: & QStateMachine) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN13QStateMachine22beginSelectTransitionsEP6QEvent", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qstatemachine.h:163
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void endSelectTransitions(QEvent *)
+
+/*
+
+*/
+impl /*struct*/ QStateMachine {
+  pub fn endSelectTransitions_0<RetType, T: QStateMachine_endSelectTransitions_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.endSelectTransitions_0(self);
+    // return 1;
+  }
+}
+pub trait QStateMachine_endSelectTransitions_0<RetType> {
+  fn endSelectTransitions_0(self , rsthis: & QStateMachine) -> RetType;
+}
+impl<'a> /*trait*/ QStateMachine_endSelectTransitions_0<(/*void*/)> for (usize) {
+  fn endSelectTransitions_0(self , rsthis: & QStateMachine) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN13QStateMachine20endSelectTransitionsEP6QEvent", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qstatemachine.h:165
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void beginMicrostep(QEvent *)
+
+/*
+
+*/
+impl /*struct*/ QStateMachine {
+  pub fn beginMicrostep_0<RetType, T: QStateMachine_beginMicrostep_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.beginMicrostep_0(self);
+    // return 1;
+  }
+}
+pub trait QStateMachine_beginMicrostep_0<RetType> {
+  fn beginMicrostep_0(self , rsthis: & QStateMachine) -> RetType;
+}
+impl<'a> /*trait*/ QStateMachine_beginMicrostep_0<(/*void*/)> for (usize) {
+  fn beginMicrostep_0(self , rsthis: & QStateMachine) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN13QStateMachine14beginMicrostepEP6QEvent", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qstatemachine.h:166
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void endMicrostep(QEvent *)
+
+/*
+
+*/
+impl /*struct*/ QStateMachine {
+  pub fn endMicrostep_0<RetType, T: QStateMachine_endMicrostep_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.endMicrostep_0(self);
+    // return 1;
+  }
+}
+pub trait QStateMachine_endMicrostep_0<RetType> {
+  fn endMicrostep_0(self , rsthis: & QStateMachine) -> RetType;
+}
+impl<'a> /*trait*/ QStateMachine_endMicrostep_0<(/*void*/)> for (usize) {
+  fn endMicrostep_0(self , rsthis: & QStateMachine) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN13QStateMachine12endMicrostepEP6QEvent", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qstatemachine.h:168
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
+impl /*struct*/ QStateMachine {
+  pub fn event_0<RetType, T: QStateMachine_event_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.event_0(self);
+    // return 1;
+  }
+}
+pub trait QStateMachine_event_0<RetType> {
+  fn event_0(self , rsthis: & QStateMachine) -> RetType;
+}
+impl<'a> /*trait*/ QStateMachine_event_0<bool> for (usize) {
+  fn event_0(self , rsthis: & QStateMachine) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN13QStateMachine5eventEP6QEvent", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+
+/*
+This enum type specifies the priority of an event posted to the state machine using postEvent().
+
+Events of high priority are processed before events of normal priority.
+
+
+*/
+pub type QStateMachine__EventPriority = i32;
+// The event has normal priority.
+pub const QStateMachine__NormalPriority :QStateMachine__EventPriority = 0;
+// The event has high priority.
+pub const QStateMachine__HighPriority :QStateMachine__EventPriority = 1;
+pub fn QStateMachine_EventPriorityItemName(val: i32) ->String {
+  return qtrt::GetClassEnumItemName("QStateMachine", val);
+}
+pub fn QStateMachine_EventPriorityItemName_s(val: i32) ->String {
+  //var nilthis *QStateMachine
+  //return nilthis.EventPriorityItemName(val);
+  return QStateMachine_EventPriorityItemName(val);
+}
+
+
+/*
+This enum type defines errors that can occur in the state machine at run time. When the state machine encounters an unrecoverable error at run time, it will set the error code returned by error(), the error message returned by errorString(), and enter an error state based on the context of the error.
+
+
+
+See also setErrorState().
+
+*/
+pub type QStateMachine__Error = i32;
+// No error has occurred.
+pub const QStateMachine__NoError :QStateMachine__Error = 0;
+// The machine has entered a QState with children which does not have an initial state set. The context of this error is the state which is missing an initial state.
+pub const QStateMachine__NoInitialStateError :QStateMachine__Error = 1;
+// The machine has entered a QHistoryState which does not have a default state set. The context of this error is the QHistoryState which is missing a default state.
+pub const QStateMachine__NoDefaultStateInHistoryStateError :QStateMachine__Error = 2;
+// The machine has selected a transition whose source and targets are not part of the same tree of states, and thus are not part of the same state machine. Commonly, this could mean that one of the states has not been given any parent or added to any machine. The context of this error is the source state of the transition.
+pub const QStateMachine__NoCommonAncestorForTransitionError :QStateMachine__Error = 3;
+pub fn QStateMachine_ErrorItemName(val: i32) ->String {
+  return qtrt::GetClassEnumItemName("QStateMachine", val);
+}
+pub fn QStateMachine_ErrorItemName_s(val: i32) ->String {
+  //var nilthis *QStateMachine
+  //return nilthis.ErrorItemName(val);
+  return QStateMachine_ErrorItemName(val);
+}
+
+//  body block end
+
+//  keep block begin
+
+//  keep block end

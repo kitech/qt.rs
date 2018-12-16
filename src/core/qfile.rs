@@ -1,761 +1,1121 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qfile.h
-// dst-file: /src/core/qfile.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QFile
+// package qtcore
+// /usr/include/qt/QtCore/qfile.h
+// #include <qfile.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
-use super::qfiledevice::*; // 773
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 25
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qstring::*; // 773
-use super::qobject::*; // 773
-use super::qbytearray::*; // 773
-use super::qobjectdefs::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QFile_Class_Size() -> c_int;
-  // proto:  QString QFile::symLinkTarget();
-  fn C_ZNK5QFile13symLinkTargetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QFile::QFile();
-  fn C_ZN5QFileC2Ev() -> u64;
-  // proto:  void QFile::QFile(QObject * parent);
-  fn C_ZN5QFileC2EP7QObject(arg0: *mut c_void) -> u64;
-  // proto: static bool QFile::link(const QString & oldname, const QString & newName);
-  fn C_ZN5QFile4linkERK7QStringS2_(arg0: *mut c_void, arg1: *mut c_void) -> c_char;
-  // proto: static bool QFile::rename(const QString & oldName, const QString & newName);
-  fn C_ZN5QFile6renameERK7QStringS2_(arg0: *mut c_void, arg1: *mut c_void) -> c_char;
-  // proto:  bool QFile::link(const QString & newName);
-  fn C_ZN5QFile4linkERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
-  // proto: static bool QFile::resize(const QString & filename, qint64 sz);
-  fn C_ZN5QFile6resizeERK7QStringx(arg0: *mut c_void, arg1: c_longlong) -> c_char;
-  // proto: static bool QFile::exists(const QString & fileName);
-  fn C_ZN5QFile6existsERK7QString(arg0: *mut c_void) -> c_char;
-  // proto:  void QFile::~QFile();
-  fn C_ZN5QFileD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto: static bool QFile::copy(const QString & fileName, const QString & newName);
-  fn C_ZN5QFile4copyERK7QStringS2_(arg0: *mut c_void, arg1: *mut c_void) -> c_char;
-  // proto: static QString QFile::readLink(const QString & fileName);
-  fn C_ZN5QFile8readLinkERK7QString(arg0: *mut c_void) -> *mut c_void;
-  // proto:  bool QFile::exists();
-  fn C_ZNK5QFile6existsEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  qint64 QFile::size();
-  fn C_ZNK5QFile4sizeEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
-  // proto:  bool QFile::resize(qint64 sz);
-  fn C_ZN5QFile6resizeEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong) -> c_char;
-  // proto:  void QFile::setFileName(const QString & name);
-  fn C_ZN5QFile11setFileNameERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  bool QFile::remove();
-  fn C_ZN5QFile6removeEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  bool QFile::copy(const QString & newName);
-  fn C_ZN5QFile4copyERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
-  // proto: static QByteArray QFile::encodeName(const QString & fileName);
-  fn C_ZN5QFile10encodeNameERK7QString(arg0: *mut c_void) -> *mut c_void;
-  // proto: static QString QFile::decodeName(const QByteArray & localFileName);
-  fn C_ZN5QFile10decodeNameERK10QByteArray(arg0: *mut c_void) -> *mut c_void;
-  // proto:  bool QFile::rename(const QString & newName);
-  fn C_ZN5QFile6renameERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
-  // proto:  QString QFile::fileName();
-  fn C_ZNK5QFile8fileNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto: static QString QFile::decodeName(const char * localFileName);
-  fn C_ZN5QFile10decodeNameEPKc(arg0: *mut c_char) -> *mut c_void;
-  // proto:  const QMetaObject * QFile::metaObject();
-  fn C_ZNK5QFile10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QFile::QFile(const QString & name, QObject * parent);
-  fn C_ZN5QFileC2ERK7QStringP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> u64;
-  // proto: static QString QFile::symLinkTarget(const QString & fileName);
-  fn C_ZN5QFile13symLinkTargetERK7QString(arg0: *mut c_void) -> *mut c_void;
-  // proto: static bool QFile::remove(const QString & fileName);
-  fn C_ZN5QFile6removeERK7QString(arg0: *mut c_void) -> c_char;
-  // proto:  void QFile::QFile(const QString & name);
-  fn C_ZN5QFileC2ERK7QString(arg0: *mut c_void) -> u64;
-  // proto:  QString QFile::readLink();
-  fn C_ZNK5QFile8readLinkEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-} // <= ext block end
 
-// body block begin =>
-// class sizeof(QFile)=1
-#[derive(Default)]
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QFile)=16
 pub struct QFile {
   qbase: QFileDevice,
-  pub qclsinst: u64 /* *mut c_void*/,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QFile_ITF interface {
+//    QFileDevice_ITF
+//    QFile_PTR() *QFile
+//}
+//func (ptr *QFile) QFile_PTR() *QFile { return ptr }
 
 impl /*struct*/ QFile {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QFile {
-    return QFile{qbase: QFileDevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QFile {
+    return QFile{qclsinst: qthis, ..Default::default()};
   }
 }
-impl Deref for QFile {
-  type Target = QFileDevice;
+//impl Deref for QFile {
+//  type Target = QFileBASE;
+//
+//  fn deref(&self) -> &QFileBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QFileBASE> for QFile {
+//  fn as_ref(& self) -> & QFileBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qfile.h:60
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject() const
 
-  fn deref(&self) -> &QFileDevice {
-    return & self.qbase;
-  }
-}
-impl AsRef<QFileDevice> for QFile {
-  fn as_ref(& self) -> & QFileDevice {
-    return & self.qbase;
-  }
-}
-  // proto:  QString QFile::symLinkTarget();
+/*
+
+*/
 impl /*struct*/ QFile {
-  pub fn symLinkTarget<RetType, T: QFile_symLinkTarget<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.symLinkTarget(self);
+  pub fn metaObject_0<RetType, T: QFile_metaObject_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.metaObject_0(self);
     // return 1;
   }
 }
-
-pub trait QFile_symLinkTarget<RetType> {
-  fn symLinkTarget(self , rsthis: & QFile) -> RetType;
+pub trait QFile_metaObject_0<RetType> {
+  fn metaObject_0(self , rsthis: & QFile) -> RetType;
 }
-
-  // proto:  QString QFile::symLinkTarget();
-impl<'a> /*trait*/ QFile_symLinkTarget<QString> for () {
-  fn symLinkTarget(self , rsthis: & QFile) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QFile13symLinkTargetEv()};
-    let mut ret = unsafe {C_ZNK5QFile13symLinkTargetEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QFile_metaObject_0<usize> for () {
+  fn metaObject_0(self , rsthis: & QFile) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QFile10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  void QFile::QFile();
+// /usr/include/qt/QtCore/qfile.h:65
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QFile()
+
+/*
+Constructs a QFile object.
+*/
+// QFile() ctx.fn_proto_cpp
 impl /*struct*/ QFile {
-  pub fn new<T: QFile_new>(value: T) -> QFile {
-    let rsthis = value.new();
+  pub fn QFile_0<T: QFile_QFile_0>(value: T) -> QFile {
+    let rsthis = value.QFile_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFile_new {
-  fn new(self) -> QFile;
+pub trait QFile_QFile_0 {
+  fn QFile_0(self) -> QFile;
 }
-
-  // proto:  void QFile::QFile();
-impl<'a> /*trait*/ QFile_new for () {
-  fn new(self) -> QFile {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QFile() ctx.fn_proto_cpp
+impl<'a> /*trait*/ QFile_QFile_0 for () {
+  fn QFile_0(self) -> QFile {
     // unsafe{_ZN5QFileC2Ev()};
-    let ctysz: c_int = unsafe{QFile_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let qthis: u64 = unsafe {C_ZN5QFileC2Ev()};
-    let rsthis = QFile{qbase: QFileDevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN5QFileC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QFile{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QFile::QFile(QObject * parent);
-impl<'a> /*trait*/ QFile_new for (&'a QObject) {
-  fn new(self) -> QFile {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QFileC2EP7QObject()};
-    let ctysz: c_int = unsafe{QFile_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN5QFileC2EP7QObject(arg0)};
-    let rsthis = QFile{qbase: QFileDevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+// /usr/include/qt/QtCore/qfile.h:66
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QFile(const QString &)
+
+/*
+Constructs a QFile object.
+*/
+// QFile(const QString &) ctx.fn_proto_cpp
+impl /*struct*/ QFile {
+  pub fn QFile_1<T: QFile_QFile_1>(value: T) -> QFile {
+    let rsthis = value.QFile_1();
     return rsthis;
     // return 1;
   }
 }
 
-  // proto: static bool QFile::link(const QString & oldname, const QString & newName);
-impl /*struct*/ QFile {
-  pub fn link_s<RetType, T: QFile_link_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.link_s();
-    // return 1;
-  }
-}
-
-pub trait QFile_link_s<RetType> {
-  fn link_s(self ) -> RetType;
-}
-
-  // proto: static bool QFile::link(const QString & oldname, const QString & newName);
-impl<'a> /*trait*/ QFile_link_s<i8> for (&'a QString, &'a QString) {
-  fn link_s(self ) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QFile4linkERK7QStringS2_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN5QFile4linkERK7QStringS2_(arg0, arg1)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto: static bool QFile::rename(const QString & oldName, const QString & newName);
-impl /*struct*/ QFile {
-  pub fn rename_s<RetType, T: QFile_rename_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.rename_s();
-    // return 1;
-  }
-}
-
-pub trait QFile_rename_s<RetType> {
-  fn rename_s(self ) -> RetType;
-}
-
-  // proto: static bool QFile::rename(const QString & oldName, const QString & newName);
-impl<'a> /*trait*/ QFile_rename_s<i8> for (&'a QString, &'a QString) {
-  fn rename_s(self ) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QFile6renameERK7QStringS2_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN5QFile6renameERK7QStringS2_(arg0, arg1)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  bool QFile::link(const QString & newName);
-impl /*struct*/ QFile {
-  pub fn link<RetType, T: QFile_link<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.link(self);
-    // return 1;
-  }
-}
-
-pub trait QFile_link<RetType> {
-  fn link(self , rsthis: & QFile) -> RetType;
-}
-
-  // proto:  bool QFile::link(const QString & newName);
-impl<'a> /*trait*/ QFile_link<i8> for (&'a QString) {
-  fn link(self , rsthis: & QFile) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QFile4linkERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN5QFile4linkERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto: static bool QFile::resize(const QString & filename, qint64 sz);
-impl /*struct*/ QFile {
-  pub fn resize_s<RetType, T: QFile_resize_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.resize_s();
-    // return 1;
-  }
-}
-
-pub trait QFile_resize_s<RetType> {
-  fn resize_s(self ) -> RetType;
-}
-
-  // proto: static bool QFile::resize(const QString & filename, qint64 sz);
-impl<'a> /*trait*/ QFile_resize_s<i8> for (&'a QString, i64) {
-  fn resize_s(self ) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QFile6resizeERK7QStringx()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_longlong;
-    let mut ret = unsafe {C_ZN5QFile6resizeERK7QStringx(arg0, arg1)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto: static bool QFile::exists(const QString & fileName);
-impl /*struct*/ QFile {
-  pub fn exists_s<RetType, T: QFile_exists_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.exists_s();
-    // return 1;
-  }
-}
-
-pub trait QFile_exists_s<RetType> {
-  fn exists_s(self ) -> RetType;
-}
-
-  // proto: static bool QFile::exists(const QString & fileName);
-impl<'a> /*trait*/ QFile_exists_s<i8> for (&'a QString) {
-  fn exists_s(self ) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QFile6existsERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN5QFile6existsERK7QString(arg0)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QFile::~QFile();
-impl /*struct*/ QFile {
-  pub fn free<RetType, T: QFile_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
-    // return 1;
-  }
-}
-
-pub trait QFile_free<RetType> {
-  fn free(self , rsthis: & QFile) -> RetType;
-}
-
-  // proto:  void QFile::~QFile();
-impl<'a> /*trait*/ QFile_free<()> for () {
-  fn free(self , rsthis: & QFile) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QFileD2Ev()};
-     unsafe {C_ZN5QFileD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto: static bool QFile::copy(const QString & fileName, const QString & newName);
-impl /*struct*/ QFile {
-  pub fn copy_s<RetType, T: QFile_copy_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.copy_s();
-    // return 1;
-  }
-}
-
-pub trait QFile_copy_s<RetType> {
-  fn copy_s(self ) -> RetType;
-}
-
-  // proto: static bool QFile::copy(const QString & fileName, const QString & newName);
-impl<'a> /*trait*/ QFile_copy_s<i8> for (&'a QString, &'a QString) {
-  fn copy_s(self ) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QFile4copyERK7QStringS2_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN5QFile4copyERK7QStringS2_(arg0, arg1)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto: static QString QFile::readLink(const QString & fileName);
-impl /*struct*/ QFile {
-  pub fn readLink_s<RetType, T: QFile_readLink_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.readLink_s();
-    // return 1;
-  }
-}
-
-pub trait QFile_readLink_s<RetType> {
-  fn readLink_s(self ) -> RetType;
-}
-
-  // proto: static QString QFile::readLink(const QString & fileName);
-impl<'a> /*trait*/ QFile_readLink_s<QString> for (&'a QString) {
-  fn readLink_s(self ) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QFile8readLinkERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN5QFile8readLinkERK7QString(arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  bool QFile::exists();
-impl /*struct*/ QFile {
-  pub fn exists<RetType, T: QFile_exists<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.exists(self);
-    // return 1;
-  }
-}
-
-pub trait QFile_exists<RetType> {
-  fn exists(self , rsthis: & QFile) -> RetType;
-}
-
-  // proto:  bool QFile::exists();
-impl<'a> /*trait*/ QFile_exists<i8> for () {
-  fn exists(self , rsthis: & QFile) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QFile6existsEv()};
-    let mut ret = unsafe {C_ZNK5QFile6existsEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  qint64 QFile::size();
-impl /*struct*/ QFile {
-  pub fn size<RetType, T: QFile_size<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.size(self);
-    // return 1;
-  }
-}
-
-pub trait QFile_size<RetType> {
-  fn size(self , rsthis: & QFile) -> RetType;
-}
-
-  // proto:  qint64 QFile::size();
-impl<'a> /*trait*/ QFile_size<i64> for () {
-  fn size(self , rsthis: & QFile) -> i64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QFile4sizeEv()};
-    let mut ret = unsafe {C_ZNK5QFile4sizeEv(rsthis.qclsinst)};
-    return ret as i64; // 1
-    // return 1;
-  }
-}
-
-  // proto:  bool QFile::resize(qint64 sz);
-impl /*struct*/ QFile {
-  pub fn resize<RetType, T: QFile_resize<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.resize(self);
-    // return 1;
-  }
-}
-
-pub trait QFile_resize<RetType> {
-  fn resize(self , rsthis: & QFile) -> RetType;
-}
-
-  // proto:  bool QFile::resize(qint64 sz);
-impl<'a> /*trait*/ QFile_resize<i8> for (i64) {
-  fn resize(self , rsthis: & QFile) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QFile6resizeEx()};
-    let arg0 = self  as c_longlong;
-    let mut ret = unsafe {C_ZN5QFile6resizeEx(rsthis.qclsinst, arg0)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QFile::setFileName(const QString & name);
-impl /*struct*/ QFile {
-  pub fn setFileName<RetType, T: QFile_setFileName<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setFileName(self);
-    // return 1;
-  }
-}
-
-pub trait QFile_setFileName<RetType> {
-  fn setFileName(self , rsthis: & QFile) -> RetType;
-}
-
-  // proto:  void QFile::setFileName(const QString & name);
-impl<'a> /*trait*/ QFile_setFileName<()> for (&'a QString) {
-  fn setFileName(self , rsthis: & QFile) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QFile11setFileNameERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN5QFile11setFileNameERK7QString(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  bool QFile::remove();
-impl /*struct*/ QFile {
-  pub fn remove<RetType, T: QFile_remove<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.remove(self);
-    // return 1;
-  }
-}
-
-pub trait QFile_remove<RetType> {
-  fn remove(self , rsthis: & QFile) -> RetType;
-}
-
-  // proto:  bool QFile::remove();
-impl<'a> /*trait*/ QFile_remove<i8> for () {
-  fn remove(self , rsthis: & QFile) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QFile6removeEv()};
-    let mut ret = unsafe {C_ZN5QFile6removeEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  bool QFile::copy(const QString & newName);
-impl /*struct*/ QFile {
-  pub fn copy<RetType, T: QFile_copy<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.copy(self);
-    // return 1;
-  }
-}
-
-pub trait QFile_copy<RetType> {
-  fn copy(self , rsthis: & QFile) -> RetType;
-}
-
-  // proto:  bool QFile::copy(const QString & newName);
-impl<'a> /*trait*/ QFile_copy<i8> for (&'a QString) {
-  fn copy(self , rsthis: & QFile) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QFile4copyERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN5QFile4copyERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto: static QByteArray QFile::encodeName(const QString & fileName);
-impl /*struct*/ QFile {
-  pub fn encodeName_s<RetType, T: QFile_encodeName_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.encodeName_s();
-    // return 1;
-  }
-}
-
-pub trait QFile_encodeName_s<RetType> {
-  fn encodeName_s(self ) -> RetType;
-}
-
-  // proto: static QByteArray QFile::encodeName(const QString & fileName);
-impl<'a> /*trait*/ QFile_encodeName_s<QByteArray> for (&'a QString) {
-  fn encodeName_s(self ) -> QByteArray {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QFile10encodeNameERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN5QFile10encodeNameERK7QString(arg0)};
-    let mut ret1 = QByteArray::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto: static QString QFile::decodeName(const QByteArray & localFileName);
-impl /*struct*/ QFile {
-  pub fn decodeName_s<RetType, T: QFile_decodeName_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.decodeName_s();
-    // return 1;
-  }
-}
-
-pub trait QFile_decodeName_s<RetType> {
-  fn decodeName_s(self ) -> RetType;
-}
-
-  // proto: static QString QFile::decodeName(const QByteArray & localFileName);
-impl<'a> /*trait*/ QFile_decodeName_s<QString> for (&'a QByteArray) {
-  fn decodeName_s(self ) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QFile10decodeNameERK10QByteArray()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN5QFile10decodeNameERK10QByteArray(arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  bool QFile::rename(const QString & newName);
-impl /*struct*/ QFile {
-  pub fn rename<RetType, T: QFile_rename<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.rename(self);
-    // return 1;
-  }
-}
-
-pub trait QFile_rename<RetType> {
-  fn rename(self , rsthis: & QFile) -> RetType;
-}
-
-  // proto:  bool QFile::rename(const QString & newName);
-impl<'a> /*trait*/ QFile_rename<i8> for (&'a QString) {
-  fn rename(self , rsthis: & QFile) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QFile6renameERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN5QFile6renameERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QString QFile::fileName();
-impl /*struct*/ QFile {
-  pub fn fileName<RetType, T: QFile_fileName<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.fileName(self);
-    // return 1;
-  }
-}
-
-pub trait QFile_fileName<RetType> {
-  fn fileName(self , rsthis: & QFile) -> RetType;
-}
-
-  // proto:  QString QFile::fileName();
-impl<'a> /*trait*/ QFile_fileName<QString> for () {
-  fn fileName(self , rsthis: & QFile) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QFile8fileNameEv()};
-    let mut ret = unsafe {C_ZNK5QFile8fileNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto: static QString QFile::decodeName(const char * localFileName);
-impl<'a> /*trait*/ QFile_decodeName_s<QString> for (&'a  String) {
-  fn decodeName_s(self ) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QFile10decodeNameEPKc()};
-    let arg0 = self.as_ptr()  as *mut c_char;
-    let mut ret = unsafe {C_ZN5QFile10decodeNameEPKc(arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  const QMetaObject * QFile::metaObject();
-impl /*struct*/ QFile {
-  pub fn metaObject<RetType, T: QFile_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.metaObject(self);
-    // return 1;
-  }
-}
-
-pub trait QFile_metaObject<RetType> {
-  fn metaObject(self , rsthis: & QFile) -> RetType;
-}
-
-  // proto:  const QMetaObject * QFile::metaObject();
-impl<'a> /*trait*/ QFile_metaObject<QMetaObject> for () {
-  fn metaObject(self , rsthis: & QFile) -> QMetaObject {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QFile10metaObjectEv()};
-    let mut ret = unsafe {C_ZNK5QFile10metaObjectEv(rsthis.qclsinst)};
-    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QFile::QFile(const QString & name, QObject * parent);
-impl<'a> /*trait*/ QFile_new for (&'a QString, &'a QObject) {
-  fn new(self) -> QFile {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QFileC2ERK7QStringP7QObject()};
-    let ctysz: c_int = unsafe{QFile_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN5QFileC2ERK7QStringP7QObject(arg0, arg1)};
-    let rsthis = QFile{qbase: QFileDevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto: static QString QFile::symLinkTarget(const QString & fileName);
-impl /*struct*/ QFile {
-  pub fn symLinkTarget_s<RetType, T: QFile_symLinkTarget_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.symLinkTarget_s();
-    // return 1;
-  }
-}
-
-pub trait QFile_symLinkTarget_s<RetType> {
-  fn symLinkTarget_s(self ) -> RetType;
-}
-
-  // proto: static QString QFile::symLinkTarget(const QString & fileName);
-impl<'a> /*trait*/ QFile_symLinkTarget_s<QString> for (&'a QString) {
-  fn symLinkTarget_s(self ) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QFile13symLinkTargetERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN5QFile13symLinkTargetERK7QString(arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto: static bool QFile::remove(const QString & fileName);
-impl /*struct*/ QFile {
-  pub fn remove_s<RetType, T: QFile_remove_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.remove_s();
-    // return 1;
-  }
-}
-
-pub trait QFile_remove_s<RetType> {
-  fn remove_s(self ) -> RetType;
-}
-
-  // proto: static bool QFile::remove(const QString & fileName);
-impl<'a> /*trait*/ QFile_remove_s<i8> for (&'a QString) {
-  fn remove_s(self ) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QFile6removeERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN5QFile6removeERK7QString(arg0)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QFile::QFile(const QString & name);
-impl<'a> /*trait*/ QFile_new for (&'a QString) {
-  fn new(self) -> QFile {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+pub trait QFile_QFile_1 {
+  fn QFile_1(self) -> QFile;
+}
+// QFile(const QString &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QFile_QFile_1 for (usize) {
+  fn QFile_1(self) -> QFile {
     // unsafe{_ZN5QFileC2ERK7QString()};
-    let ctysz: c_int = unsafe{QFile_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN5QFileC2ERK7QString(arg0)};
-    let rsthis = QFile{qbase: QFileDevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN5QFileC2ERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QFile{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  QString QFile::readLink();
+// /usr/include/qt/QtCore/qfile.h:68
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QFile(QObject *)
+
+/*
+Constructs a QFile object.
+*/
+// QFile(QObject *) ctx.fn_proto_cpp
 impl /*struct*/ QFile {
-  pub fn readLink<RetType, T: QFile_readLink<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.readLink(self);
+  pub fn QFile_2<T: QFile_QFile_2>(value: T) -> QFile {
+    let rsthis = value.QFile_2();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QFile_readLink<RetType> {
-  fn readLink(self , rsthis: & QFile) -> RetType;
+pub trait QFile_QFile_2 {
+  fn QFile_2(self) -> QFile;
 }
-
-  // proto:  QString QFile::readLink();
-impl<'a> /*trait*/ QFile_readLink<QString> for () {
-  fn readLink(self , rsthis: & QFile) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QFile8readLinkEv()};
-    let mut ret = unsafe {C_ZNK5QFile8readLinkEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+// QFile(QObject *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QFile_QFile_2 for (usize) {
+  fn QFile_2(self) -> QFile {
+    // unsafe{_ZN5QFileC2EP7QObject()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN5QFileC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QFile{qclsinst: qthis, ..Default::default()};
+    return rsthis;
     // return 1;
   }
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qfile.h:69
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QFile(const QString &, QObject *)
 
+/*
+Constructs a QFile object.
+*/
+// QFile(const QString &, QObject *) ctx.fn_proto_cpp
+impl /*struct*/ QFile {
+  pub fn QFile_3<T: QFile_QFile_3>(value: T) -> QFile {
+    let rsthis = value.QFile_3();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QFile_QFile_3 {
+  fn QFile_3(self) -> QFile;
+}
+// QFile(const QString &, QObject *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QFile_QFile_3 for (usize,usize) {
+  fn QFile_3(self) -> QFile {
+    // unsafe{_ZN5QFileC2ERK7QStringP7QObject()};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN5QFileC2ERK7QStringP7QObject", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QFile{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:71
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QFile()
+
+/*
+
+*/
+pub fn DeleteQFile(this :*mut QFile) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN5QFileD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 16)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qfile.h:73
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] QString fileName() const
+
+/*
+Reimplemented from QFileDevice::fileName().
+
+Returns the name set by setFileName() or to the QFile constructors.
+
+See also setFileName() and QFileInfo::fileName().
+*/
+impl /*struct*/ QFile {
+  pub fn fileName_0<RetType, T: QFile_fileName_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.fileName_0(self);
+    // return 1;
+  }
+}
+pub trait QFile_fileName_0<RetType> {
+  fn fileName_0(self , rsthis: & QFile) -> RetType;
+}
+impl<'a> /*trait*/ QFile_fileName_0<usize> for () {
+  fn fileName_0(self , rsthis: & QFile) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QFile8fileNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:74
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setFileName(const QString &)
+
+/*
+Sets the name of the file. The name can have no path, a relative path, or an absolute path.
+
+Do not call this function if the file has already been opened.
+
+If the file name has no path or a relative path, the path used will be the application's current directory path at the time of the open() call.
+
+Example:
+
+
+  QFile file;
+  QDir::setCurrent("/tmp");
+  file.setFileName("readme.txt");
+  QDir::setCurrent("/home");
+  file.open(QIODevice::ReadOnly);      // opens "/home/readme.txt" under Unix
+
+
+
+Note that the directory separator "/" works for all operating systems supported by Qt.
+
+See also fileName(), QFileInfo, and QDir.
+*/
+impl /*struct*/ QFile {
+  pub fn setFileName_0<RetType, T: QFile_setFileName_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setFileName_0(self);
+    // return 1;
+  }
+}
+pub trait QFile_setFileName_0<RetType> {
+  fn setFileName_0(self , rsthis: & QFile) -> RetType;
+}
+impl<'a> /*trait*/ QFile_setFileName_0<(/*void*/)> for (usize) {
+  fn setFileName_0(self , rsthis: & QFile) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN5QFile11setFileNameERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:88
+// index:0
+// Public static inline Visibility=Default Availability=Available
+// [8] QByteArray encodeName(const QString &)
+
+/*
+Converts fileName to the local 8-bit encoding determined by the user's locale. This is sufficient for file names that the user chooses. File names hard-coded into the application should only use 7-bit ASCII filename characters.
+
+See also decodeName().
+*/
+impl /*struct*/ QFile {
+  pub fn encodeName_0<RetType, T: QFile_encodeName_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.encodeName_0();
+    // return 1;
+  }
+}
+pub trait QFile_encodeName_0<RetType> {
+  fn encodeName_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QFile_encodeName_0<usize> for (usize) {
+  fn encodeName_0(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN5QFile10encodeNameERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:92
+// index:0
+// Public static inline Visibility=Default Availability=Available
+// [8] QString decodeName(const QByteArray &)
+
+/*
+This does the reverse of QFile::encodeName() using localFileName.
+
+See also encodeName().
+*/
+impl /*struct*/ QFile {
+  pub fn decodeName_0<RetType, T: QFile_decodeName_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.decodeName_0();
+    // return 1;
+  }
+}
+pub trait QFile_decodeName_0<RetType> {
+  fn decodeName_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QFile_decodeName_0<usize> for (usize) {
+  fn decodeName_0(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN5QFile10decodeNameERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:97
+// index:1
+// Public static inline Visibility=Default Availability=Available
+// [8] QString decodeName(const char *)
+
+/*
+This does the reverse of QFile::encodeName() using localFileName.
+
+See also encodeName().
+*/
+impl /*struct*/ QFile {
+  pub fn decodeName_1<RetType, T: QFile_decodeName_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.decodeName_1();
+    // return 1;
+  }
+}
+pub trait QFile_decodeName_1<RetType> {
+  fn decodeName_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QFile_decodeName_1<usize> for (usize) {
+  fn decodeName_1(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN5QFile10decodeNameEPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:107
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool exists() const
+
+/*
+Returns true if the file specified by fileName exists; otherwise returns false.
+
+Note: If fileName is a symlink that points to a non-existing file, false is returned.
+*/
+impl /*struct*/ QFile {
+  pub fn exists_0<RetType, T: QFile_exists_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.exists_0(self);
+    // return 1;
+  }
+}
+pub trait QFile_exists_0<RetType> {
+  fn exists_0(self , rsthis: & QFile) -> RetType;
+}
+impl<'a> /*trait*/ QFile_exists_0<bool> for () {
+  fn exists_0(self , rsthis: & QFile) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QFile6existsEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:108
+// index:1
+// Public static Visibility=Default Availability=Available
+// [1] bool exists(const QString &)
+
+/*
+Returns true if the file specified by fileName exists; otherwise returns false.
+
+Note: If fileName is a symlink that points to a non-existing file, false is returned.
+*/
+impl /*struct*/ QFile {
+  pub fn exists_1<RetType, T: QFile_exists_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.exists_1();
+    // return 1;
+  }
+}
+pub trait QFile_exists_1<RetType> {
+  fn exists_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QFile_exists_1<bool> for (usize) {
+  fn exists_1(self ) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN5QFile6existsERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:110
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString readLink() const
+
+/*
+
+*/
+impl /*struct*/ QFile {
+  pub fn readLink_0<RetType, T: QFile_readLink_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.readLink_0(self);
+    // return 1;
+  }
+}
+pub trait QFile_readLink_0<RetType> {
+  fn readLink_0(self , rsthis: & QFile) -> RetType;
+}
+impl<'a> /*trait*/ QFile_readLink_0<usize> for () {
+  fn readLink_0(self , rsthis: & QFile) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QFile8readLinkEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:111
+// index:1
+// Public static Visibility=Default Availability=Available
+// [8] QString readLink(const QString &)
+
+/*
+
+*/
+impl /*struct*/ QFile {
+  pub fn readLink_1<RetType, T: QFile_readLink_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.readLink_1();
+    // return 1;
+  }
+}
+pub trait QFile_readLink_1<RetType> {
+  fn readLink_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QFile_readLink_1<usize> for (usize) {
+  fn readLink_1(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN5QFile8readLinkERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:112
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QString symLinkTarget() const
+
+/*
+Returns the absolute path of the file or directory referred to by the symlink (or shortcut on Windows) specified by fileName, or returns an empty string if the fileName does not correspond to a symbolic link.
+
+This name may not represent an existing file; it is only a string. QFile::exists() returns true if the symlink points to an existing file.
+
+This function was introduced in  Qt 4.2.
+*/
+impl /*struct*/ QFile {
+  pub fn symLinkTarget_0<RetType, T: QFile_symLinkTarget_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.symLinkTarget_0(self);
+    // return 1;
+  }
+}
+pub trait QFile_symLinkTarget_0<RetType> {
+  fn symLinkTarget_0(self , rsthis: & QFile) -> RetType;
+}
+impl<'a> /*trait*/ QFile_symLinkTarget_0<usize> for () {
+  fn symLinkTarget_0(self , rsthis: & QFile) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QFile13symLinkTargetEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:113
+// index:1
+// Public static inline Visibility=Default Availability=Available
+// [8] QString symLinkTarget(const QString &)
+
+/*
+Returns the absolute path of the file or directory referred to by the symlink (or shortcut on Windows) specified by fileName, or returns an empty string if the fileName does not correspond to a symbolic link.
+
+This name may not represent an existing file; it is only a string. QFile::exists() returns true if the symlink points to an existing file.
+
+This function was introduced in  Qt 4.2.
+*/
+impl /*struct*/ QFile {
+  pub fn symLinkTarget_1<RetType, T: QFile_symLinkTarget_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.symLinkTarget_1();
+    // return 1;
+  }
+}
+pub trait QFile_symLinkTarget_1<RetType> {
+  fn symLinkTarget_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QFile_symLinkTarget_1<usize> for (usize) {
+  fn symLinkTarget_1(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN5QFile13symLinkTargetERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:115
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool remove()
+
+/*
+Removes the file specified by fileName(). Returns true if successful; otherwise returns false.
+
+The file is closed before it is removed.
+
+See also setFileName().
+*/
+impl /*struct*/ QFile {
+  pub fn remove_0<RetType, T: QFile_remove_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.remove_0(self);
+    // return 1;
+  }
+}
+pub trait QFile_remove_0<RetType> {
+  fn remove_0(self , rsthis: & QFile) -> RetType;
+}
+impl<'a> /*trait*/ QFile_remove_0<bool> for () {
+  fn remove_0(self , rsthis: & QFile) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZN5QFile6removeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:116
+// index:1
+// Public static Visibility=Default Availability=Available
+// [1] bool remove(const QString &)
+
+/*
+Removes the file specified by fileName(). Returns true if successful; otherwise returns false.
+
+The file is closed before it is removed.
+
+See also setFileName().
+*/
+impl /*struct*/ QFile {
+  pub fn remove_1<RetType, T: QFile_remove_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.remove_1();
+    // return 1;
+  }
+}
+pub trait QFile_remove_1<RetType> {
+  fn remove_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QFile_remove_1<bool> for (usize) {
+  fn remove_1(self ) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN5QFile6removeERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:118
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool rename(const QString &)
+
+/*
+Renames the file currently specified by fileName() to newName. Returns true if successful; otherwise returns false.
+
+If a file with the name newName already exists, rename() returns false (i.e., QFile will not overwrite it).
+
+The file is closed before it is renamed.
+
+If the rename operation fails, Qt will attempt to copy this file's contents to newName, and then remove this file, keeping only newName. If that copy operation fails or this file can't be removed, the destination file newName is removed to restore the old state.
+
+See also setFileName().
+*/
+impl /*struct*/ QFile {
+  pub fn rename_0<RetType, T: QFile_rename_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.rename_0(self);
+    // return 1;
+  }
+}
+pub trait QFile_rename_0<RetType> {
+  fn rename_0(self , rsthis: & QFile) -> RetType;
+}
+impl<'a> /*trait*/ QFile_rename_0<bool> for (usize) {
+  fn rename_0(self , rsthis: & QFile) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN5QFile6renameERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:119
+// index:1
+// Public static Visibility=Default Availability=Available
+// [1] bool rename(const QString &, const QString &)
+
+/*
+Renames the file currently specified by fileName() to newName. Returns true if successful; otherwise returns false.
+
+If a file with the name newName already exists, rename() returns false (i.e., QFile will not overwrite it).
+
+The file is closed before it is renamed.
+
+If the rename operation fails, Qt will attempt to copy this file's contents to newName, and then remove this file, keeping only newName. If that copy operation fails or this file can't be removed, the destination file newName is removed to restore the old state.
+
+See also setFileName().
+*/
+impl /*struct*/ QFile {
+  pub fn rename_1<RetType, T: QFile_rename_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.rename_1();
+    // return 1;
+  }
+}
+pub trait QFile_rename_1<RetType> {
+  fn rename_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QFile_rename_1<bool> for (usize,usize) {
+  fn rename_1(self ) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN5QFile6renameERK7QStringS2_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:121
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool link(const QString &)
+
+/*
+Creates a link named linkName that points to the file currently specified by fileName(). What a link is depends on the underlying filesystem (be it a shortcut on Windows or a symbolic link on Unix). Returns true if successful; otherwise returns false.
+
+This function will not overwrite an already existing entity in the file system; in this case, link() will return false and set error() to return RenameError.
+
+Note: To create a valid link on Windows, linkName must have a .lnk file extension.
+
+See also setFileName().
+*/
+impl /*struct*/ QFile {
+  pub fn link_0<RetType, T: QFile_link_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.link_0(self);
+    // return 1;
+  }
+}
+pub trait QFile_link_0<RetType> {
+  fn link_0(self , rsthis: & QFile) -> RetType;
+}
+impl<'a> /*trait*/ QFile_link_0<bool> for (usize) {
+  fn link_0(self , rsthis: & QFile) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN5QFile4linkERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:122
+// index:1
+// Public static Visibility=Default Availability=Available
+// [1] bool link(const QString &, const QString &)
+
+/*
+Creates a link named linkName that points to the file currently specified by fileName(). What a link is depends on the underlying filesystem (be it a shortcut on Windows or a symbolic link on Unix). Returns true if successful; otherwise returns false.
+
+This function will not overwrite an already existing entity in the file system; in this case, link() will return false and set error() to return RenameError.
+
+Note: To create a valid link on Windows, linkName must have a .lnk file extension.
+
+See also setFileName().
+*/
+impl /*struct*/ QFile {
+  pub fn link_1<RetType, T: QFile_link_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.link_1();
+    // return 1;
+  }
+}
+pub trait QFile_link_1<RetType> {
+  fn link_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QFile_link_1<bool> for (usize,usize) {
+  fn link_1(self ) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN5QFile4linkERK7QStringS2_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:124
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool copy(const QString &)
+
+/*
+Copies the file currently specified by fileName() to a file called newName. Returns true if successful; otherwise returns false.
+
+Note that if a file with the name newName already exists, copy() returns false (i.e. QFile will not overwrite it).
+
+The source file is closed before it is copied.
+
+See also setFileName().
+*/
+impl /*struct*/ QFile {
+  pub fn copy_0<RetType, T: QFile_copy_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.copy_0(self);
+    // return 1;
+  }
+}
+pub trait QFile_copy_0<RetType> {
+  fn copy_0(self , rsthis: & QFile) -> RetType;
+}
+impl<'a> /*trait*/ QFile_copy_0<bool> for (usize) {
+  fn copy_0(self , rsthis: & QFile) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN5QFile4copyERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:125
+// index:1
+// Public static Visibility=Default Availability=Available
+// [1] bool copy(const QString &, const QString &)
+
+/*
+Copies the file currently specified by fileName() to a file called newName. Returns true if successful; otherwise returns false.
+
+Note that if a file with the name newName already exists, copy() returns false (i.e. QFile will not overwrite it).
+
+The source file is closed before it is copied.
+
+See also setFileName().
+*/
+impl /*struct*/ QFile {
+  pub fn copy_1<RetType, T: QFile_copy_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.copy_1();
+    // return 1;
+  }
+}
+pub trait QFile_copy_1<RetType> {
+  fn copy_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QFile_copy_1<bool> for (usize,usize) {
+  fn copy_1(self ) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN5QFile4copyERK7QStringS2_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:127
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool open(QIODevice::OpenMode)
+
+/*
+Reimplemented from QIODevice::open().
+
+Opens the file using OpenMode mode, returning true if successful; otherwise false.
+
+The mode must be QIODevice::ReadOnly, QIODevice::WriteOnly, or QIODevice::ReadWrite. It may also have additional flags, such as QIODevice::Text and QIODevice::Unbuffered.
+
+Note: In WriteOnly or ReadWrite mode, if the relevant file does not already exist, this function will try to create a new file before opening it.
+
+See also QIODevice::OpenMode and setFileName().
+*/
+impl /*struct*/ QFile {
+  pub fn open_0<RetType, T: QFile_open_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.open_0(self);
+    // return 1;
+  }
+}
+pub trait QFile_open_0<RetType> {
+  fn open_0(self , rsthis: & QFile) -> RetType;
+}
+impl<'a> /*trait*/ QFile_open_0<bool> for (i32) {
+  fn open_0(self , rsthis: & QFile) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN5QFile4openE6QFlagsIN9QIODevice12OpenModeFlagEE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:129
+// index:1
+// Public Visibility=Default Availability=Available
+// [1] bool open(int, QIODevice::OpenMode, QFileDevice::FileHandleFlags)
+
+/*
+Reimplemented from QIODevice::open().
+
+Opens the file using OpenMode mode, returning true if successful; otherwise false.
+
+The mode must be QIODevice::ReadOnly, QIODevice::WriteOnly, or QIODevice::ReadWrite. It may also have additional flags, such as QIODevice::Text and QIODevice::Unbuffered.
+
+Note: In WriteOnly or ReadWrite mode, if the relevant file does not already exist, this function will try to create a new file before opening it.
+
+See also QIODevice::OpenMode and setFileName().
+*/
+impl /*struct*/ QFile {
+  pub fn open_1<RetType, T: QFile_open_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.open_1(self);
+    // return 1;
+  }
+}
+pub trait QFile_open_1<RetType> {
+  fn open_1(self , rsthis: & QFile) -> RetType;
+}
+impl<'a> /*trait*/ QFile_open_1<bool> for (i32,i32,i32) {
+  fn open_1(self , rsthis: & QFile) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN5QFile4openEi6QFlagsIN9QIODevice12OpenModeFlagEES0_IN11QFileDevice14FileHandleFlagEE", 3,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:131
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] qint64 size() const
+
+/*
+Reimplemented from QIODevice::size().
+*/
+impl /*struct*/ QFile {
+  pub fn size_0<RetType, T: QFile_size_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.size_0(self);
+    // return 1;
+  }
+}
+pub trait QFile_size_0<RetType> {
+  fn size_0(self , rsthis: & QFile) -> RetType;
+}
+impl<'a> /*trait*/ QFile_size_0<i64> for () {
+  fn size_0(self , rsthis: & QFile) -> i64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QFile4sizeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i64 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:133
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool resize(qint64)
+
+/*
+Reimplemented from QFileDevice::resize().
+*/
+impl /*struct*/ QFile {
+  pub fn resize_0<RetType, T: QFile_resize_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.resize_0(self);
+    // return 1;
+  }
+}
+pub trait QFile_resize_0<RetType> {
+  fn resize_0(self , rsthis: & QFile) -> RetType;
+}
+impl<'a> /*trait*/ QFile_resize_0<bool> for (i64) {
+  fn resize_0(self , rsthis: & QFile) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i64 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN5QFile6resizeEx", 1,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:134
+// index:1
+// Public static Visibility=Default Availability=Available
+// [1] bool resize(const QString &, qint64)
+
+/*
+Reimplemented from QFileDevice::resize().
+*/
+impl /*struct*/ QFile {
+  pub fn resize_1<RetType, T: QFile_resize_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.resize_1();
+    // return 1;
+  }
+}
+pub trait QFile_resize_1<RetType> {
+  fn resize_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QFile_resize_1<bool> for (usize,i64) {
+  fn resize_1(self ) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i64 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN5QFile6resizeERK7QStringx", 2,qtrt::FFITY_POINTER,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:136
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [4] QFileDevice::Permissions permissions() const
+
+/*
+Reimplemented from QFileDevice::permissions().
+
+See also setPermissions().
+*/
+impl /*struct*/ QFile {
+  pub fn permissions_0<RetType, T: QFile_permissions_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.permissions_0(self);
+    // return 1;
+  }
+}
+pub trait QFile_permissions_0<RetType> {
+  fn permissions_0(self , rsthis: & QFile) -> RetType;
+}
+impl<'a> /*trait*/ QFile_permissions_0<i32> for () {
+  fn permissions_0(self , rsthis: & QFile) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QFile11permissionsEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:137
+// index:1
+// Public static Visibility=Default Availability=Available
+// [4] QFileDevice::Permissions permissions(const QString &)
+
+/*
+Reimplemented from QFileDevice::permissions().
+
+See also setPermissions().
+*/
+impl /*struct*/ QFile {
+  pub fn permissions_1<RetType, T: QFile_permissions_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.permissions_1();
+    // return 1;
+  }
+}
+pub trait QFile_permissions_1<RetType> {
+  fn permissions_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QFile_permissions_1<i32> for (usize) {
+  fn permissions_1(self ) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN5QFile11permissionsERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:138
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [1] bool setPermissions(QFileDevice::Permissions)
+
+/*
+Reimplemented from QFileDevice::setPermissions().
+
+Sets the permissions for the file to the permissions specified. Returns true if successful, or false if the permissions cannot be modified.
+
+Warning: This function does not manipulate ACLs, which may limit its effectiveness.
+
+See also permissions() and setFileName().
+*/
+impl /*struct*/ QFile {
+  pub fn setPermissions_0<RetType, T: QFile_setPermissions_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setPermissions_0(self);
+    // return 1;
+  }
+}
+pub trait QFile_setPermissions_0<RetType> {
+  fn setPermissions_0(self , rsthis: & QFile) -> RetType;
+}
+impl<'a> /*trait*/ QFile_setPermissions_0<bool> for (i32) {
+  fn setPermissions_0(self , rsthis: & QFile) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN5QFile14setPermissionsE6QFlagsIN11QFileDevice10PermissionEE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfile.h:139
+// index:1
+// Public static Visibility=Default Availability=Available
+// [1] bool setPermissions(const QString &, QFileDevice::Permissions)
+
+/*
+Reimplemented from QFileDevice::setPermissions().
+
+Sets the permissions for the file to the permissions specified. Returns true if successful, or false if the permissions cannot be modified.
+
+Warning: This function does not manipulate ACLs, which may limit its effectiveness.
+
+See also permissions() and setFileName().
+*/
+impl /*struct*/ QFile {
+  pub fn setPermissions_1<RetType, T: QFile_setPermissions_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.setPermissions_1();
+    // return 1;
+  }
+}
+pub trait QFile_setPermissions_1<RetType> {
+  fn setPermissions_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QFile_setPermissions_1<bool> for (usize,i32) {
+  fn setPermissions_1(self ) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN5QFile14setPermissionsERK7QString6QFlagsIN11QFileDevice10PermissionEE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+//  body block end
+
+//  keep block begin
+
+//  keep block end

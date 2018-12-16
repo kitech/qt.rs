@@ -1,2328 +1,3706 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qvariant.h
-// dst-file: /src/core/qvariant.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QVariant
+// package qtcore
+// /usr/include/qt/QtCore/qvariant.h
+// #include <qvariant.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 0
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-// use super::qvariant::QVariant; // 773
-use super::qpoint::*; // 773
-use super::qsize::*; // 773
-use super::qstring::*; // 773
-use super::qbytearray::*; // 773
-use super::qlocale::*; // 773
-use super::qurl::*; // 773
-use super::qline::*; // 773
-use super::qjsonarray::*; // 773
-use super::qstringlist::*; // 773
-// use super::qlist::*; // 775
-use super::quuid::*; // 773
-use super::qabstractitemmodel::*; // 773
-use super::qjsondocument::*; // 773
-use super::qdatastream::*; // 773
-use super::qregexp::*; // 773
-// use super::qhash::*; // 775
-// use super::qmap::*; // 775
-use super::qrect::*; // 773
-use super::qjsonobject::*; // 773
-use super::qchar::*; // 773
-use super::qdatetime::*; // 773
-use super::qbitarray::*; // 773
-use super::qeasingcurve::*; // 773
-use super::qjsonvalue::*; // 773
-use super::qregularexpression::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QVariantComparisonHelper_Class_Size() -> c_int;
-  // proto:  void QVariantComparisonHelper::QVariantComparisonHelper(const QVariant & var);
-  fn C_ZN24QVariantComparisonHelperC2ERK8QVariant(arg0: *mut c_void) -> u64;
-  fn QVariant_Class_Size() -> c_int;
-  // proto:  double QVariant::toDouble(bool * ok);
-  fn C_ZNK8QVariant8toDoubleEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_double;
-  // proto:  void QVariant::QVariant(const char * str);
-  fn C_ZN8QVariantC2EPKc(arg0: *mut c_char) -> u64;
-  // proto:  qlonglong QVariant::toLongLong(bool * ok);
-  fn C_ZNK8QVariant10toLongLongEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_longlong;
-  // proto:  void QVariant::QVariant(const QPointF & pt);
-  fn C_ZN8QVariantC2ERK7QPointF(arg0: *mut c_void) -> u64;
-  // proto:  void QVariant::QVariant(const QPoint & pt);
-  fn C_ZN8QVariantC2ERK6QPoint(arg0: *mut c_void) -> u64;
-  // proto:  QSize QVariant::toSize();
-  fn C_ZNK8QVariant6toSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString QVariant::toString();
-  fn C_ZNK8QVariant8toStringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  qreal QVariant::toReal(bool * ok);
-  fn C_ZNK8QVariant6toRealEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_double;
-  // proto:  float QVariant::toFloat(bool * ok);
-  fn C_ZNK8QVariant7toFloatEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_float;
-  // proto:  void QVariant::QVariant(const QString & string);
-  fn C_ZN8QVariantC2ERK7QString(arg0: *mut c_void) -> u64;
-  // proto:  QByteArray QVariant::toByteArray();
-  fn C_ZNK8QVariant11toByteArrayEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QLocale QVariant::toLocale();
-  fn C_ZNK8QVariant8toLocaleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QUrl QVariant::toUrl();
-  fn C_ZNK8QVariant5toUrlEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QLine QVariant::toLine();
-  fn C_ZNK8QVariant6toLineEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QVariant::QVariant(const QSize & size);
-  fn C_ZN8QVariantC2ERK5QSize(arg0: *mut c_void) -> u64;
-  // proto:  void QVariant::QVariant(const QLineF & line);
-  fn C_ZN8QVariantC2ERK6QLineF(arg0: *mut c_void) -> u64;
-  // proto:  const char * QVariant::typeName();
-  fn C_ZNK8QVariant8typeNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_char;
-  // proto:  QJsonArray QVariant::toJsonArray();
-  fn C_ZNK8QVariant11toJsonArrayEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QVariant::QVariant(const QLocale & locale);
-  fn C_ZN8QVariantC2ERK7QLocale(arg0: *mut c_void) -> u64;
-  // proto:  QStringList QVariant::toStringList();
-  fn C_ZNK8QVariant12toStringListEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QList<QVariant> QVariant::toList();
-  fn C_ZNK8QVariant6toListEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  uint QVariant::toUInt(bool * ok);
-  fn C_ZNK8QVariant6toUIntEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_uint;
-  // proto:  QUuid QVariant::toUuid();
-  fn C_ZNK8QVariant6toUuidEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QVariant::QVariant(const QPersistentModelIndex & modelIndex);
-  fn C_ZN8QVariantC2ERK21QPersistentModelIndex(arg0: *mut c_void) -> u64;
-  // proto:  QJsonDocument QVariant::toJsonDocument();
-  fn C_ZNK8QVariant14toJsonDocumentEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QVariant::QVariant(QDataStream & s);
-  fn C_ZN8QVariantC2ER11QDataStream(arg0: *mut c_void) -> u64;
-  // proto:  QPoint QVariant::toPoint();
-  fn C_ZNK8QVariant7toPointEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  int QVariant::toInt(bool * ok);
-  fn C_ZNK8QVariant5toIntEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_int;
-  // proto:  bool QVariant::isValid();
-  fn C_ZNK8QVariant7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QVariant::QVariant(const QUuid & uuid);
-  fn C_ZN8QVariantC2ERK5QUuid(arg0: *mut c_void) -> u64;
-  // proto:  void QVariant::detach();
-  fn C_ZN8QVariant6detachEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QVariant::QVariant(const QRegExp & regExp);
-  fn C_ZN8QVariantC2ERK7QRegExp(arg0: *mut c_void) -> u64;
-  // proto:  QModelIndex QVariant::toModelIndex();
-  fn C_ZNK8QVariant12toModelIndexEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QHash<QString, QVariant> QVariant::toHash();
-  fn C_ZNK8QVariant6toHashEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QMap<QString, QVariant> QVariant::toMap();
-  fn C_ZNK8QVariant5toMapEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  bool QVariant::canConvert(int targetTypeId);
-  fn C_ZNK8QVariant10canConvertEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
-  // proto:  void QVariant::QVariant(const QRectF & rect);
-  fn C_ZN8QVariantC2ERK6QRectF(arg0: *mut c_void) -> u64;
-  // proto:  void QVariant::QVariant(const QRect & rect);
-  fn C_ZN8QVariantC2ERK5QRect(arg0: *mut c_void) -> u64;
-  // proto:  int QVariant::userType();
-  fn C_ZNK8QVariant8userTypeEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  const void * QVariant::constData();
-  fn C_ZNK8QVariant9constDataEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QPersistentModelIndex QVariant::toPersistentModelIndex();
-  fn C_ZNK8QVariant22toPersistentModelIndexEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QVariant::QVariant(int typeId, const void * copy, uint flags);
-  fn C_ZN8QVariantC2EiPKvj(arg0: c_int, arg1: *mut c_void, arg2: c_uint) -> u64;
-  // proto:  QLineF QVariant::toLineF();
-  fn C_ZNK8QVariant7toLineFEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QJsonObject QVariant::toJsonObject();
-  fn C_ZNK8QVariant12toJsonObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QVariant::load(QDataStream & ds);
-  fn C_ZN8QVariant4loadER11QDataStream(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QVariant::QVariant(const QSizeF & size);
-  fn C_ZN8QVariantC2ERK6QSizeF(arg0: *mut c_void) -> u64;
-  // proto:  QChar QVariant::toChar();
-  fn C_ZNK8QVariant6toCharEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  bool QVariant::isNull();
-  fn C_ZNK8QVariant6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QVariant::QVariant(const QDate & date);
-  fn C_ZN8QVariantC2ERK5QDate(arg0: *mut c_void) -> u64;
-  // proto:  QRectF QVariant::toRectF();
-  fn C_ZNK8QVariant7toRectFEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QVariant::QVariant(const QBitArray & bitarray);
-  fn C_ZN8QVariantC2ERK9QBitArray(arg0: *mut c_void) -> u64;
-  // proto:  QDate QVariant::toDate();
-  fn C_ZNK8QVariant6toDateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QVariant::QVariant(const QModelIndex & modelIndex);
-  fn C_ZN8QVariantC2ERK11QModelIndex(arg0: *mut c_void) -> u64;
-  // proto:  void QVariant::~QVariant();
-  fn C_ZN8QVariantD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void QVariant::save(QDataStream & ds);
-  fn C_ZNK8QVariant4saveER11QDataStream(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  QTime QVariant::toTime();
-  fn C_ZNK8QVariant6toTimeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QVariant::QVariant(const QLine & line);
-  fn C_ZN8QVariantC2ERK5QLine(arg0: *mut c_void) -> u64;
-  // proto:  void * QVariant::data();
-  fn C_ZN8QVariant4dataEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QVariant::QVariant(const QTime & time);
-  fn C_ZN8QVariantC2ERK5QTime(arg0: *mut c_void) -> u64;
-  // proto:  void QVariant::QVariant(const QDateTime & datetime);
-  fn C_ZN8QVariantC2ERK9QDateTime(arg0: *mut c_void) -> u64;
-  // proto:  bool QVariant::convert(int targetTypeId);
-  fn C_ZN8QVariant7convertEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
-  // proto:  QRegExp QVariant::toRegExp();
-  fn C_ZNK8QVariant8toRegExpEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QPointF QVariant::toPointF();
-  fn C_ZNK8QVariant8toPointFEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QVariant::QVariant(QChar qchar);
-  fn C_ZN8QVariantC2E5QChar(arg0: *mut c_void) -> u64;
-  // proto: static const char * QVariant::typeToName(int typeId);
-  fn C_ZN8QVariant10typeToNameEi(arg0: c_int) -> *mut c_char;
-  // proto:  QSizeF QVariant::toSizeF();
-  fn C_ZNK8QVariant7toSizeFEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QVariant::swap(QVariant & other);
-  fn C_ZN8QVariant4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QVariant::QVariant(int typeId, const void * copy);
-  fn C_ZN8QVariantC2EiPKv(arg0: c_int, arg1: *mut c_void) -> u64;
-  // proto:  void QVariant::QVariant(const QEasingCurve & easing);
-  fn C_ZN8QVariantC2ERK12QEasingCurve(arg0: *mut c_void) -> u64;
-  // proto:  void QVariant::clear();
-  fn C_ZN8QVariant5clearEv(qthis: u64 /* *mut c_void*/);
-  // proto:  QRect QVariant::toRect();
-  fn C_ZNK8QVariant6toRectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QVariant::QVariant(const QByteArray & bytearray);
-  fn C_ZN8QVariantC2ERK10QByteArray(arg0: *mut c_void) -> u64;
-  // proto:  void QVariant::QVariant(qlonglong ll);
-  fn C_ZN8QVariantC2Ex(arg0: c_longlong) -> u64;
-  // proto:  void QVariant::QVariant(qulonglong ull);
-  fn C_ZN8QVariantC2Ey(arg0: c_ulonglong) -> u64;
-  // proto:  void QVariant::QVariant();
-  fn C_ZN8QVariantC2Ev() -> u64;
-  // proto:  bool QVariant::toBool();
-  fn C_ZNK8QVariant6toBoolEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QVariant::QVariant(uint ui);
-  fn C_ZN8QVariantC2Ej(arg0: c_uint) -> u64;
-  // proto:  void QVariant::QVariant(int i);
-  fn C_ZN8QVariantC2Ei(arg0: c_int) -> u64;
-  // proto:  void QVariant::QVariant(float f);
-  fn C_ZN8QVariantC2Ef(arg0: c_float) -> u64;
-  // proto:  void QVariant::QVariant(double d);
-  fn C_ZN8QVariantC2Ed(arg0: c_double) -> u64;
-  // proto:  void QVariant::QVariant(bool b);
-  fn C_ZN8QVariantC2Eb(arg0: c_char) -> u64;
-  // proto:  qulonglong QVariant::toULongLong(bool * ok);
-  fn C_ZNK8QVariant11toULongLongEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_ulonglong;
-  // proto:  QJsonValue QVariant::toJsonValue();
-  fn C_ZNK8QVariant11toJsonValueEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QDateTime QVariant::toDateTime();
-  fn C_ZNK8QVariant10toDateTimeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  bool QVariant::isDetached();
-  fn C_ZNK8QVariant10isDetachedEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  QEasingCurve QVariant::toEasingCurve();
-  fn C_ZNK8QVariant13toEasingCurveEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QVariant::QVariant(const QUrl & url);
-  fn C_ZN8QVariantC2ERK4QUrl(arg0: *mut c_void) -> u64;
-  // proto:  void QVariant::QVariant(const QVariant & other);
-  fn C_ZN8QVariantC2ERKS_(arg0: *mut c_void) -> u64;
-  // proto:  QBitArray QVariant::toBitArray();
-  fn C_ZNK8QVariant10toBitArrayEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QRegularExpression QVariant::toRegularExpression();
-  fn C_ZNK8QVariant19toRegularExpressionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QVariant::QVariant(const QRegularExpression & re);
-  fn C_ZN8QVariantC2ERK18QRegularExpression(arg0: *mut c_void) -> u64;
-  // proto:  void QVariant::QVariant(const QStringList & stringlist);
-  fn C_ZN8QVariantC2ERK11QStringList(arg0: *mut c_void) -> u64;
-  fn QSequentialIterable_Class_Size() -> c_int;
-  // proto:  int QSequentialIterable::size();
-  fn C_ZNK19QSequentialIterable4sizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  bool QSequentialIterable::canReverseIterate();
-  fn C_ZNK19QSequentialIterable17canReverseIterateEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  QVariant QSequentialIterable::at(int idx);
-  fn C_ZNK19QSequentialIterable2atEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
-  fn QAssociativeIterable_Class_Size() -> c_int;
-  // proto:  int QAssociativeIterable::size();
-  fn C_ZNK20QAssociativeIterable4sizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  QVariant QAssociativeIterable::value(const QVariant & key);
-  fn C_ZNK20QAssociativeIterable5valueERK8QVariant(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-} // <= ext block end
+// void create(int, const void *)
+// func (this *QVariant) InheritCreate(f func(type_ int, copy unsafe.Pointer /*666*/) /*void*/) {
+//  qtrt.SetAllInheritCallback(this, "create", f)
+// }
 
-// body block begin =>
-// class sizeof(QVariantComparisonHelper)=8
-#[derive(Default)]
-pub struct QVariantComparisonHelper {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
-}
+// bool cmp(const QVariant &)
+// func (this *QVariant) InheritCmp(f func(other *QVariant) bool) {
+//  qtrt.SetAllInheritCallback(this, "cmp", f)
+// }
 
-// class sizeof(QVariant)=16
-#[derive(Default)]
+// int compare(const QVariant &)
+// func (this *QVariant) InheritCompare(f func(other *QVariant) int) {
+//  qtrt.SetAllInheritCallback(this, "compare", f)
+// }
+
+// bool convert(const int, void *)
+// func (this *QVariant) InheritConvert(f func(t int, ptr unsafe.Pointer /*666*/) bool) {
+//  qtrt.SetAllInheritCallback(this, "convert", f)
+// }
+
+
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QVariant)=16
 pub struct QVariant {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
+  // qbase: none,
+  pub qclsinst: usize /* *mut c_void*/,
 }
-
-// class sizeof(QSequentialIterable)=104
-#[derive(Default)]
-pub struct QSequentialIterable {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
-}
-
-// class sizeof(QAssociativeIterable)=112
-#[derive(Default)]
-pub struct QAssociativeIterable {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
-}
-
-impl /*struct*/ QVariantComparisonHelper {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QVariantComparisonHelper {
-    return QVariantComparisonHelper{qclsinst: qthis, ..Default::default()};
-  }
-}
-  // proto:  void QVariantComparisonHelper::QVariantComparisonHelper(const QVariant & var);
-impl /*struct*/ QVariantComparisonHelper {
-  pub fn new<T: QVariantComparisonHelper_new>(value: T) -> QVariantComparisonHelper {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QVariantComparisonHelper_new {
-  fn new(self) -> QVariantComparisonHelper;
-}
-
-  // proto:  void QVariantComparisonHelper::QVariantComparisonHelper(const QVariant & var);
-impl<'a> /*trait*/ QVariantComparisonHelper_new for (&'a QVariant) {
-  fn new(self) -> QVariantComparisonHelper {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN24QVariantComparisonHelperC2ERK8QVariant()};
-    let ctysz: c_int = unsafe{QVariantComparisonHelper_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN24QVariantComparisonHelperC2ERK8QVariant(arg0)};
-    let rsthis = QVariantComparisonHelper{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
+// type QVariant_ITF interface {
+//    QVariant_PTR() *QVariant
+//}
+//func (ptr *QVariant) QVariant_PTR() *QVariant { return ptr }
 
 impl /*struct*/ QVariant {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QVariant {
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QVariant {
     return QVariant{qclsinst: qthis, ..Default::default()};
   }
 }
-  // proto:  double QVariant::toDouble(bool * ok);
+//impl Deref for QVariant {
+//  type Target = QVariantBASE;
+//
+//  fn deref(&self) -> &QVariantBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QVariantBASE> for QVariant {
+//  fn as_ref(& self) -> & QVariantBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qvariant.h:199
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void QVariant()
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant() ctx.fn_proto_cpp
 impl /*struct*/ QVariant {
-  pub fn toDouble<RetType, T: QVariant_toDouble<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toDouble(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toDouble<RetType> {
-  fn toDouble(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  double QVariant::toDouble(bool * ok);
-impl<'a> /*trait*/ QVariant_toDouble<f64> for (Option<&'a mut Vec<i8>>) {
-  fn toDouble(self , rsthis: & QVariant) -> f64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant8toDoubleEPb()};
-    let arg0 = (if self.is_none() {0 as *const i8} else {self.unwrap().as_ptr()})  as *mut c_char;
-    let mut ret = unsafe {C_ZNK8QVariant8toDoubleEPb(rsthis.qclsinst, arg0)};
-    return ret as f64; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(const char * str);
-impl /*struct*/ QVariant {
-  pub fn new<T: QVariant_new>(value: T) -> QVariant {
-    let rsthis = value.new();
+  pub fn QVariant_0<T: QVariant_QVariant_0>(value: T) -> QVariant {
+    let rsthis = value.QVariant_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QVariant_new {
-  fn new(self) -> QVariant;
-}
-
-  // proto:  void QVariant::QVariant(const char * str);
-impl<'a> /*trait*/ QVariant_new for (&'a  String) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2EPKc()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.as_ptr()  as *mut c_char;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2EPKc(arg0)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  qlonglong QVariant::toLongLong(bool * ok);
-impl /*struct*/ QVariant {
-  pub fn toLongLong<RetType, T: QVariant_toLongLong<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toLongLong(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toLongLong<RetType> {
-  fn toLongLong(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  qlonglong QVariant::toLongLong(bool * ok);
-impl<'a> /*trait*/ QVariant_toLongLong<i64> for (Option<&'a mut Vec<i8>>) {
-  fn toLongLong(self , rsthis: & QVariant) -> i64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant10toLongLongEPb()};
-    let arg0 = (if self.is_none() {0 as *const i8} else {self.unwrap().as_ptr()})  as *mut c_char;
-    let mut ret = unsafe {C_ZNK8QVariant10toLongLongEPb(rsthis.qclsinst, arg0)};
-    return ret as i64; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(const QPointF & pt);
-impl<'a> /*trait*/ QVariant_new for (&'a QPointF) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2ERK7QPointF()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK7QPointF(arg0)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(const QPoint & pt);
-impl<'a> /*trait*/ QVariant_new for (&'a QPoint) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2ERK6QPoint()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK6QPoint(arg0)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  QSize QVariant::toSize();
-impl /*struct*/ QVariant {
-  pub fn toSize<RetType, T: QVariant_toSize<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toSize(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toSize<RetType> {
-  fn toSize(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QSize QVariant::toSize();
-impl<'a> /*trait*/ QVariant_toSize<QSize> for () {
-  fn toSize(self , rsthis: & QVariant) -> QSize {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant6toSizeEv()};
-    let mut ret = unsafe {C_ZNK8QVariant6toSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString QVariant::toString();
-impl /*struct*/ QVariant {
-  pub fn toString<RetType, T: QVariant_toString<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toString(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toString<RetType> {
-  fn toString(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QString QVariant::toString();
-impl<'a> /*trait*/ QVariant_toString<QString> for () {
-  fn toString(self , rsthis: & QVariant) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant8toStringEv()};
-    let mut ret = unsafe {C_ZNK8QVariant8toStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  qreal QVariant::toReal(bool * ok);
-impl /*struct*/ QVariant {
-  pub fn toReal<RetType, T: QVariant_toReal<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toReal(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toReal<RetType> {
-  fn toReal(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  qreal QVariant::toReal(bool * ok);
-impl<'a> /*trait*/ QVariant_toReal<f64> for (Option<&'a mut Vec<i8>>) {
-  fn toReal(self , rsthis: & QVariant) -> f64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant6toRealEPb()};
-    let arg0 = (if self.is_none() {0 as *const i8} else {self.unwrap().as_ptr()})  as *mut c_char;
-    let mut ret = unsafe {C_ZNK8QVariant6toRealEPb(rsthis.qclsinst, arg0)};
-    return ret as f64; // 1
-    // return 1;
-  }
-}
-
-  // proto:  float QVariant::toFloat(bool * ok);
-impl /*struct*/ QVariant {
-  pub fn toFloat<RetType, T: QVariant_toFloat<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toFloat(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toFloat<RetType> {
-  fn toFloat(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  float QVariant::toFloat(bool * ok);
-impl<'a> /*trait*/ QVariant_toFloat<f32> for (Option<&'a mut Vec<i8>>) {
-  fn toFloat(self , rsthis: & QVariant) -> f32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant7toFloatEPb()};
-    let arg0 = (if self.is_none() {0 as *const i8} else {self.unwrap().as_ptr()})  as *mut c_char;
-    let mut ret = unsafe {C_ZNK8QVariant7toFloatEPb(rsthis.qclsinst, arg0)};
-    return ret as f32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(const QString & string);
-impl<'a> /*trait*/ QVariant_new for (&'a QString) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2ERK7QString()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK7QString(arg0)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  QByteArray QVariant::toByteArray();
-impl /*struct*/ QVariant {
-  pub fn toByteArray<RetType, T: QVariant_toByteArray<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toByteArray(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toByteArray<RetType> {
-  fn toByteArray(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QByteArray QVariant::toByteArray();
-impl<'a> /*trait*/ QVariant_toByteArray<QByteArray> for () {
-  fn toByteArray(self , rsthis: & QVariant) -> QByteArray {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant11toByteArrayEv()};
-    let mut ret = unsafe {C_ZNK8QVariant11toByteArrayEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QLocale QVariant::toLocale();
-impl /*struct*/ QVariant {
-  pub fn toLocale<RetType, T: QVariant_toLocale<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toLocale(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toLocale<RetType> {
-  fn toLocale(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QLocale QVariant::toLocale();
-impl<'a> /*trait*/ QVariant_toLocale<QLocale> for () {
-  fn toLocale(self , rsthis: & QVariant) -> QLocale {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant8toLocaleEv()};
-    let mut ret = unsafe {C_ZNK8QVariant8toLocaleEv(rsthis.qclsinst)};
-    let mut ret1 = QLocale::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QUrl QVariant::toUrl();
-impl /*struct*/ QVariant {
-  pub fn toUrl<RetType, T: QVariant_toUrl<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toUrl(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toUrl<RetType> {
-  fn toUrl(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QUrl QVariant::toUrl();
-impl<'a> /*trait*/ QVariant_toUrl<QUrl> for () {
-  fn toUrl(self , rsthis: & QVariant) -> QUrl {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant5toUrlEv()};
-    let mut ret = unsafe {C_ZNK8QVariant5toUrlEv(rsthis.qclsinst)};
-    let mut ret1 = QUrl::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QLine QVariant::toLine();
-impl /*struct*/ QVariant {
-  pub fn toLine<RetType, T: QVariant_toLine<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toLine(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toLine<RetType> {
-  fn toLine(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QLine QVariant::toLine();
-impl<'a> /*trait*/ QVariant_toLine<QLine> for () {
-  fn toLine(self , rsthis: & QVariant) -> QLine {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant6toLineEv()};
-    let mut ret = unsafe {C_ZNK8QVariant6toLineEv(rsthis.qclsinst)};
-    let mut ret1 = QLine::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(const QSize & size);
-impl<'a> /*trait*/ QVariant_new for (&'a QSize) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2ERK5QSize()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK5QSize(arg0)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(const QLineF & line);
-impl<'a> /*trait*/ QVariant_new for (&'a QLineF) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2ERK6QLineF()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK6QLineF(arg0)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  const char * QVariant::typeName();
-impl /*struct*/ QVariant {
-  pub fn typeName<RetType, T: QVariant_typeName<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.typeName(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_typeName<RetType> {
-  fn typeName(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  const char * QVariant::typeName();
-impl<'a> /*trait*/ QVariant_typeName<String> for () {
-  fn typeName(self , rsthis: & QVariant) -> String {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant8typeNameEv()};
-    let mut ret = unsafe {C_ZNK8QVariant8typeNameEv(rsthis.qclsinst)};
-    let slen = unsafe {strlen(ret as *const i8)} as usize;
-    return unsafe{String::from_raw_parts(ret as *mut u8, slen, slen+1)};
-    // return 1;
-  }
-}
-
-  // proto:  QJsonArray QVariant::toJsonArray();
-impl /*struct*/ QVariant {
-  pub fn toJsonArray<RetType, T: QVariant_toJsonArray<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toJsonArray(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toJsonArray<RetType> {
-  fn toJsonArray(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QJsonArray QVariant::toJsonArray();
-impl<'a> /*trait*/ QVariant_toJsonArray<QJsonArray> for () {
-  fn toJsonArray(self , rsthis: & QVariant) -> QJsonArray {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant11toJsonArrayEv()};
-    let mut ret = unsafe {C_ZNK8QVariant11toJsonArrayEv(rsthis.qclsinst)};
-    let mut ret1 = QJsonArray::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(const QLocale & locale);
-impl<'a> /*trait*/ QVariant_new for (&'a QLocale) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2ERK7QLocale()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK7QLocale(arg0)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  QStringList QVariant::toStringList();
-impl /*struct*/ QVariant {
-  pub fn toStringList<RetType, T: QVariant_toStringList<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toStringList(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toStringList<RetType> {
-  fn toStringList(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QStringList QVariant::toStringList();
-impl<'a> /*trait*/ QVariant_toStringList<QStringList> for () {
-  fn toStringList(self , rsthis: & QVariant) -> QStringList {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant12toStringListEv()};
-    let mut ret = unsafe {C_ZNK8QVariant12toStringListEv(rsthis.qclsinst)};
-    let mut ret1 = QStringList::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QList<QVariant> QVariant::toList();
-impl /*struct*/ QVariant {
-  pub fn toList<RetType, T: QVariant_toList<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toList(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toList<RetType> {
-  fn toList(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QList<QVariant> QVariant::toList();
-impl<'a> /*trait*/ QVariant_toList<u64> for () {
-  fn toList(self , rsthis: & QVariant) -> u64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant6toListEv()};
-    let mut ret = unsafe {C_ZNK8QVariant6toListEv(rsthis.qclsinst)};
-    return ret as u64; // 5
-    // return 1;
-  }
-}
-
-  // proto:  uint QVariant::toUInt(bool * ok);
-impl /*struct*/ QVariant {
-  pub fn toUInt<RetType, T: QVariant_toUInt<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toUInt(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toUInt<RetType> {
-  fn toUInt(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  uint QVariant::toUInt(bool * ok);
-impl<'a> /*trait*/ QVariant_toUInt<u32> for (Option<&'a mut Vec<i8>>) {
-  fn toUInt(self , rsthis: & QVariant) -> u32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant6toUIntEPb()};
-    let arg0 = (if self.is_none() {0 as *const i8} else {self.unwrap().as_ptr()})  as *mut c_char;
-    let mut ret = unsafe {C_ZNK8QVariant6toUIntEPb(rsthis.qclsinst, arg0)};
-    return ret as u32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QUuid QVariant::toUuid();
-impl /*struct*/ QVariant {
-  pub fn toUuid<RetType, T: QVariant_toUuid<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toUuid(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toUuid<RetType> {
-  fn toUuid(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QUuid QVariant::toUuid();
-impl<'a> /*trait*/ QVariant_toUuid<QUuid> for () {
-  fn toUuid(self , rsthis: & QVariant) -> QUuid {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant6toUuidEv()};
-    let mut ret = unsafe {C_ZNK8QVariant6toUuidEv(rsthis.qclsinst)};
-    let mut ret1 = QUuid::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(const QPersistentModelIndex & modelIndex);
-impl<'a> /*trait*/ QVariant_new for (&'a QPersistentModelIndex) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2ERK21QPersistentModelIndex()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK21QPersistentModelIndex(arg0)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  QJsonDocument QVariant::toJsonDocument();
-impl /*struct*/ QVariant {
-  pub fn toJsonDocument<RetType, T: QVariant_toJsonDocument<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toJsonDocument(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toJsonDocument<RetType> {
-  fn toJsonDocument(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QJsonDocument QVariant::toJsonDocument();
-impl<'a> /*trait*/ QVariant_toJsonDocument<QJsonDocument> for () {
-  fn toJsonDocument(self , rsthis: & QVariant) -> QJsonDocument {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant14toJsonDocumentEv()};
-    let mut ret = unsafe {C_ZNK8QVariant14toJsonDocumentEv(rsthis.qclsinst)};
-    let mut ret1 = QJsonDocument::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(QDataStream & s);
-impl<'a> /*trait*/ QVariant_new for (&'a QDataStream) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2ER11QDataStream()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2ER11QDataStream(arg0)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  QPoint QVariant::toPoint();
-impl /*struct*/ QVariant {
-  pub fn toPoint<RetType, T: QVariant_toPoint<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toPoint(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toPoint<RetType> {
-  fn toPoint(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QPoint QVariant::toPoint();
-impl<'a> /*trait*/ QVariant_toPoint<QPoint> for () {
-  fn toPoint(self , rsthis: & QVariant) -> QPoint {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant7toPointEv()};
-    let mut ret = unsafe {C_ZNK8QVariant7toPointEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  int QVariant::toInt(bool * ok);
-impl /*struct*/ QVariant {
-  pub fn toInt<RetType, T: QVariant_toInt<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toInt(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toInt<RetType> {
-  fn toInt(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  int QVariant::toInt(bool * ok);
-impl<'a> /*trait*/ QVariant_toInt<i32> for (Option<&'a mut Vec<i8>>) {
-  fn toInt(self , rsthis: & QVariant) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant5toIntEPb()};
-    let arg0 = (if self.is_none() {0 as *const i8} else {self.unwrap().as_ptr()})  as *mut c_char;
-    let mut ret = unsafe {C_ZNK8QVariant5toIntEPb(rsthis.qclsinst, arg0)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  bool QVariant::isValid();
-impl /*struct*/ QVariant {
-  pub fn isValid<RetType, T: QVariant_isValid<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isValid(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_isValid<RetType> {
-  fn isValid(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  bool QVariant::isValid();
-impl<'a> /*trait*/ QVariant_isValid<i8> for () {
-  fn isValid(self , rsthis: & QVariant) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant7isValidEv()};
-    let mut ret = unsafe {C_ZNK8QVariant7isValidEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(const QUuid & uuid);
-impl<'a> /*trait*/ QVariant_new for (&'a QUuid) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2ERK5QUuid()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK5QUuid(arg0)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::detach();
-impl /*struct*/ QVariant {
-  pub fn detach<RetType, T: QVariant_detach<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.detach(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_detach<RetType> {
-  fn detach(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  void QVariant::detach();
-impl<'a> /*trait*/ QVariant_detach<()> for () {
-  fn detach(self , rsthis: & QVariant) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariant6detachEv()};
-     unsafe {C_ZN8QVariant6detachEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(const QRegExp & regExp);
-impl<'a> /*trait*/ QVariant_new for (&'a QRegExp) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2ERK7QRegExp()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK7QRegExp(arg0)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  QModelIndex QVariant::toModelIndex();
-impl /*struct*/ QVariant {
-  pub fn toModelIndex<RetType, T: QVariant_toModelIndex<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toModelIndex(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toModelIndex<RetType> {
-  fn toModelIndex(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QModelIndex QVariant::toModelIndex();
-impl<'a> /*trait*/ QVariant_toModelIndex<QModelIndex> for () {
-  fn toModelIndex(self , rsthis: & QVariant) -> QModelIndex {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant12toModelIndexEv()};
-    let mut ret = unsafe {C_ZNK8QVariant12toModelIndexEv(rsthis.qclsinst)};
-    let mut ret1 = QModelIndex::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QHash<QString, QVariant> QVariant::toHash();
-impl /*struct*/ QVariant {
-  pub fn toHash<RetType, T: QVariant_toHash<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toHash(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toHash<RetType> {
-  fn toHash(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QHash<QString, QVariant> QVariant::toHash();
-impl<'a> /*trait*/ QVariant_toHash<u64> for () {
-  fn toHash(self , rsthis: & QVariant) -> u64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant6toHashEv()};
-    let mut ret = unsafe {C_ZNK8QVariant6toHashEv(rsthis.qclsinst)};
-    return ret as u64; // 5
-    // return 1;
-  }
-}
-
-  // proto:  QMap<QString, QVariant> QVariant::toMap();
-impl /*struct*/ QVariant {
-  pub fn toMap<RetType, T: QVariant_toMap<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toMap(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toMap<RetType> {
-  fn toMap(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QMap<QString, QVariant> QVariant::toMap();
-impl<'a> /*trait*/ QVariant_toMap<u64> for () {
-  fn toMap(self , rsthis: & QVariant) -> u64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant5toMapEv()};
-    let mut ret = unsafe {C_ZNK8QVariant5toMapEv(rsthis.qclsinst)};
-    return ret as u64; // 5
-    // return 1;
-  }
-}
-
-  // proto:  bool QVariant::canConvert(int targetTypeId);
-impl /*struct*/ QVariant {
-  pub fn canConvert<RetType, T: QVariant_canConvert<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.canConvert(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_canConvert<RetType> {
-  fn canConvert(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  bool QVariant::canConvert(int targetTypeId);
-impl<'a> /*trait*/ QVariant_canConvert<i8> for (i32) {
-  fn canConvert(self , rsthis: & QVariant) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant10canConvertEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZNK8QVariant10canConvertEi(rsthis.qclsinst, arg0)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(const QRectF & rect);
-impl<'a> /*trait*/ QVariant_new for (&'a QRectF) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2ERK6QRectF()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK6QRectF(arg0)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(const QRect & rect);
-impl<'a> /*trait*/ QVariant_new for (&'a QRect) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2ERK5QRect()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK5QRect(arg0)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  int QVariant::userType();
-impl /*struct*/ QVariant {
-  pub fn userType<RetType, T: QVariant_userType<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.userType(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_userType<RetType> {
-  fn userType(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  int QVariant::userType();
-impl<'a> /*trait*/ QVariant_userType<i32> for () {
-  fn userType(self , rsthis: & QVariant) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant8userTypeEv()};
-    let mut ret = unsafe {C_ZNK8QVariant8userTypeEv(rsthis.qclsinst)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  const void * QVariant::constData();
-impl /*struct*/ QVariant {
-  pub fn constData<RetType, T: QVariant_constData<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.constData(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_constData<RetType> {
-  fn constData(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  const void * QVariant::constData();
-impl<'a> /*trait*/ QVariant_constData<*mut c_void> for () {
-  fn constData(self , rsthis: & QVariant) -> *mut c_void {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant9constDataEv()};
-    let mut ret = unsafe {C_ZNK8QVariant9constDataEv(rsthis.qclsinst)};
-    return ret as *mut c_void; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QPersistentModelIndex QVariant::toPersistentModelIndex();
-impl /*struct*/ QVariant {
-  pub fn toPersistentModelIndex<RetType, T: QVariant_toPersistentModelIndex<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toPersistentModelIndex(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toPersistentModelIndex<RetType> {
-  fn toPersistentModelIndex(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QPersistentModelIndex QVariant::toPersistentModelIndex();
-impl<'a> /*trait*/ QVariant_toPersistentModelIndex<QPersistentModelIndex> for () {
-  fn toPersistentModelIndex(self , rsthis: & QVariant) -> QPersistentModelIndex {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant22toPersistentModelIndexEv()};
-    let mut ret = unsafe {C_ZNK8QVariant22toPersistentModelIndexEv(rsthis.qclsinst)};
-    let mut ret1 = QPersistentModelIndex::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(int typeId, const void * copy, uint flags);
-impl<'a> /*trait*/ QVariant_new for (i32, *mut c_void, u32) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2EiPKvj()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1  as *mut c_void;
-    let arg2 = self.2  as c_uint;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2EiPKvj(arg0, arg1, arg2)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  QLineF QVariant::toLineF();
-impl /*struct*/ QVariant {
-  pub fn toLineF<RetType, T: QVariant_toLineF<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toLineF(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toLineF<RetType> {
-  fn toLineF(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QLineF QVariant::toLineF();
-impl<'a> /*trait*/ QVariant_toLineF<QLineF> for () {
-  fn toLineF(self , rsthis: & QVariant) -> QLineF {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant7toLineFEv()};
-    let mut ret = unsafe {C_ZNK8QVariant7toLineFEv(rsthis.qclsinst)};
-    let mut ret1 = QLineF::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QJsonObject QVariant::toJsonObject();
-impl /*struct*/ QVariant {
-  pub fn toJsonObject<RetType, T: QVariant_toJsonObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toJsonObject(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toJsonObject<RetType> {
-  fn toJsonObject(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QJsonObject QVariant::toJsonObject();
-impl<'a> /*trait*/ QVariant_toJsonObject<QJsonObject> for () {
-  fn toJsonObject(self , rsthis: & QVariant) -> QJsonObject {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant12toJsonObjectEv()};
-    let mut ret = unsafe {C_ZNK8QVariant12toJsonObjectEv(rsthis.qclsinst)};
-    let mut ret1 = QJsonObject::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::load(QDataStream & ds);
-impl /*struct*/ QVariant {
-  pub fn load<RetType, T: QVariant_load<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.load(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_load<RetType> {
-  fn load(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  void QVariant::load(QDataStream & ds);
-impl<'a> /*trait*/ QVariant_load<()> for (&'a QDataStream) {
-  fn load(self , rsthis: & QVariant) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariant4loadER11QDataStream()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN8QVariant4loadER11QDataStream(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(const QSizeF & size);
-impl<'a> /*trait*/ QVariant_new for (&'a QSizeF) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2ERK6QSizeF()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK6QSizeF(arg0)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  QChar QVariant::toChar();
-impl /*struct*/ QVariant {
-  pub fn toChar<RetType, T: QVariant_toChar<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toChar(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toChar<RetType> {
-  fn toChar(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QChar QVariant::toChar();
-impl<'a> /*trait*/ QVariant_toChar<QChar> for () {
-  fn toChar(self , rsthis: & QVariant) -> QChar {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant6toCharEv()};
-    let mut ret = unsafe {C_ZNK8QVariant6toCharEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  bool QVariant::isNull();
-impl /*struct*/ QVariant {
-  pub fn isNull<RetType, T: QVariant_isNull<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isNull(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_isNull<RetType> {
-  fn isNull(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  bool QVariant::isNull();
-impl<'a> /*trait*/ QVariant_isNull<i8> for () {
-  fn isNull(self , rsthis: & QVariant) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant6isNullEv()};
-    let mut ret = unsafe {C_ZNK8QVariant6isNullEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(const QDate & date);
-impl<'a> /*trait*/ QVariant_new for (&'a QDate) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2ERK5QDate()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK5QDate(arg0)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  QRectF QVariant::toRectF();
-impl /*struct*/ QVariant {
-  pub fn toRectF<RetType, T: QVariant_toRectF<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toRectF(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toRectF<RetType> {
-  fn toRectF(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QRectF QVariant::toRectF();
-impl<'a> /*trait*/ QVariant_toRectF<QRectF> for () {
-  fn toRectF(self , rsthis: & QVariant) -> QRectF {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant7toRectFEv()};
-    let mut ret = unsafe {C_ZNK8QVariant7toRectFEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(const QBitArray & bitarray);
-impl<'a> /*trait*/ QVariant_new for (&'a QBitArray) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2ERK9QBitArray()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK9QBitArray(arg0)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  QDate QVariant::toDate();
-impl /*struct*/ QVariant {
-  pub fn toDate<RetType, T: QVariant_toDate<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toDate(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toDate<RetType> {
-  fn toDate(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QDate QVariant::toDate();
-impl<'a> /*trait*/ QVariant_toDate<QDate> for () {
-  fn toDate(self , rsthis: & QVariant) -> QDate {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant6toDateEv()};
-    let mut ret = unsafe {C_ZNK8QVariant6toDateEv(rsthis.qclsinst)};
-    let mut ret1 = QDate::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(const QModelIndex & modelIndex);
-impl<'a> /*trait*/ QVariant_new for (&'a QModelIndex) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2ERK11QModelIndex()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK11QModelIndex(arg0)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::~QVariant();
-impl /*struct*/ QVariant {
-  pub fn free<RetType, T: QVariant_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_free<RetType> {
-  fn free(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  void QVariant::~QVariant();
-impl<'a> /*trait*/ QVariant_free<()> for () {
-  fn free(self , rsthis: & QVariant) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantD2Ev()};
-     unsafe {C_ZN8QVariantD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::save(QDataStream & ds);
-impl /*struct*/ QVariant {
-  pub fn save<RetType, T: QVariant_save<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.save(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_save<RetType> {
-  fn save(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  void QVariant::save(QDataStream & ds);
-impl<'a> /*trait*/ QVariant_save<()> for (&'a QDataStream) {
-  fn save(self , rsthis: & QVariant) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant4saveER11QDataStream()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZNK8QVariant4saveER11QDataStream(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  QTime QVariant::toTime();
-impl /*struct*/ QVariant {
-  pub fn toTime<RetType, T: QVariant_toTime<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toTime(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toTime<RetType> {
-  fn toTime(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QTime QVariant::toTime();
-impl<'a> /*trait*/ QVariant_toTime<QTime> for () {
-  fn toTime(self , rsthis: & QVariant) -> QTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant6toTimeEv()};
-    let mut ret = unsafe {C_ZNK8QVariant6toTimeEv(rsthis.qclsinst)};
-    let mut ret1 = QTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(const QLine & line);
-impl<'a> /*trait*/ QVariant_new for (&'a QLine) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2ERK5QLine()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK5QLine(arg0)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void * QVariant::data();
-impl /*struct*/ QVariant {
-  pub fn data<RetType, T: QVariant_data<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.data(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_data<RetType> {
-  fn data(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  void * QVariant::data();
-impl<'a> /*trait*/ QVariant_data<*mut c_void> for () {
-  fn data(self , rsthis: & QVariant) -> *mut c_void {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariant4dataEv()};
-    let mut ret = unsafe {C_ZN8QVariant4dataEv(rsthis.qclsinst)};
-    return ret as *mut c_void; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(const QTime & time);
-impl<'a> /*trait*/ QVariant_new for (&'a QTime) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2ERK5QTime()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK5QTime(arg0)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(const QDateTime & datetime);
-impl<'a> /*trait*/ QVariant_new for (&'a QDateTime) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2ERK9QDateTime()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK9QDateTime(arg0)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  bool QVariant::convert(int targetTypeId);
-impl /*struct*/ QVariant {
-  pub fn convert<RetType, T: QVariant_convert<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.convert(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_convert<RetType> {
-  fn convert(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  bool QVariant::convert(int targetTypeId);
-impl<'a> /*trait*/ QVariant_convert<i8> for (i32) {
-  fn convert(self , rsthis: & QVariant) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariant7convertEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZN8QVariant7convertEi(rsthis.qclsinst, arg0)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QRegExp QVariant::toRegExp();
-impl /*struct*/ QVariant {
-  pub fn toRegExp<RetType, T: QVariant_toRegExp<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toRegExp(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toRegExp<RetType> {
-  fn toRegExp(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QRegExp QVariant::toRegExp();
-impl<'a> /*trait*/ QVariant_toRegExp<QRegExp> for () {
-  fn toRegExp(self , rsthis: & QVariant) -> QRegExp {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant8toRegExpEv()};
-    let mut ret = unsafe {C_ZNK8QVariant8toRegExpEv(rsthis.qclsinst)};
-    let mut ret1 = QRegExp::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QPointF QVariant::toPointF();
-impl /*struct*/ QVariant {
-  pub fn toPointF<RetType, T: QVariant_toPointF<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toPointF(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toPointF<RetType> {
-  fn toPointF(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QPointF QVariant::toPointF();
-impl<'a> /*trait*/ QVariant_toPointF<QPointF> for () {
-  fn toPointF(self , rsthis: & QVariant) -> QPointF {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant8toPointFEv()};
-    let mut ret = unsafe {C_ZNK8QVariant8toPointFEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(QChar qchar);
-impl<'a> /*trait*/ QVariant_new for (QChar) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2E5QChar()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2E5QChar(arg0)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto: static const char * QVariant::typeToName(int typeId);
-impl /*struct*/ QVariant {
-  pub fn typeToName_s<RetType, T: QVariant_typeToName_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.typeToName_s();
-    // return 1;
-  }
-}
-
-pub trait QVariant_typeToName_s<RetType> {
-  fn typeToName_s(self ) -> RetType;
-}
-
-  // proto: static const char * QVariant::typeToName(int typeId);
-impl<'a> /*trait*/ QVariant_typeToName_s<String> for (i32) {
-  fn typeToName_s(self ) -> String {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariant10typeToNameEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZN8QVariant10typeToNameEi(arg0)};
-    let slen = unsafe {strlen(ret as *const i8)} as usize;
-    return unsafe{String::from_raw_parts(ret as *mut u8, slen, slen+1)};
-    // return 1;
-  }
-}
-
-  // proto:  QSizeF QVariant::toSizeF();
-impl /*struct*/ QVariant {
-  pub fn toSizeF<RetType, T: QVariant_toSizeF<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toSizeF(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toSizeF<RetType> {
-  fn toSizeF(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QSizeF QVariant::toSizeF();
-impl<'a> /*trait*/ QVariant_toSizeF<QSizeF> for () {
-  fn toSizeF(self , rsthis: & QVariant) -> QSizeF {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant7toSizeFEv()};
-    let mut ret = unsafe {C_ZNK8QVariant7toSizeFEv(rsthis.qclsinst)};
-    let mut ret1 = QSizeF::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::swap(QVariant & other);
-impl /*struct*/ QVariant {
-  pub fn swap<RetType, T: QVariant_swap<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.swap(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_swap<RetType> {
-  fn swap(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  void QVariant::swap(QVariant & other);
-impl<'a> /*trait*/ QVariant_swap<()> for (&'a QVariant) {
-  fn swap(self , rsthis: & QVariant) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariant4swapERS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN8QVariant4swapERS_(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(int typeId, const void * copy);
-impl<'a> /*trait*/ QVariant_new for (i32, *mut c_void) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2EiPKv()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2EiPKv(arg0, arg1)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(const QEasingCurve & easing);
-impl<'a> /*trait*/ QVariant_new for (&'a QEasingCurve) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2ERK12QEasingCurve()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK12QEasingCurve(arg0)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::clear();
-impl /*struct*/ QVariant {
-  pub fn clear<RetType, T: QVariant_clear<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.clear(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_clear<RetType> {
-  fn clear(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  void QVariant::clear();
-impl<'a> /*trait*/ QVariant_clear<()> for () {
-  fn clear(self , rsthis: & QVariant) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariant5clearEv()};
-     unsafe {C_ZN8QVariant5clearEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  QRect QVariant::toRect();
-impl /*struct*/ QVariant {
-  pub fn toRect<RetType, T: QVariant_toRect<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toRect(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toRect<RetType> {
-  fn toRect(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QRect QVariant::toRect();
-impl<'a> /*trait*/ QVariant_toRect<QRect> for () {
-  fn toRect(self , rsthis: & QVariant) -> QRect {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant6toRectEv()};
-    let mut ret = unsafe {C_ZNK8QVariant6toRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(const QByteArray & bytearray);
-impl<'a> /*trait*/ QVariant_new for (&'a QByteArray) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2ERK10QByteArray()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK10QByteArray(arg0)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(qlonglong ll);
-impl<'a> /*trait*/ QVariant_new for (i64) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2Ex()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self  as c_longlong;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2Ex(arg0)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(qulonglong ull);
-impl<'a> /*trait*/ QVariant_new for (u64) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2Ey()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self  as c_ulonglong;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2Ey(arg0)};
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant();
-impl<'a> /*trait*/ QVariant_new for () {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+pub trait QVariant_QVariant_0 {
+  fn QVariant_0(self) -> QVariant;
+}
+// QVariant() ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_0 for () {
+  fn QVariant_0(self) -> QVariant {
     // unsafe{_ZN8QVariantC2Ev()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2Ev()};
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  bool QVariant::toBool();
+// /usr/include/qt/QtCore/qvariant.h:201
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(QVariant::Type)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(QVariant::Type) ctx.fn_proto_cpp
 impl /*struct*/ QVariant {
-  pub fn toBool<RetType, T: QVariant_toBool<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toBool(self);
+  pub fn QVariant_1<T: QVariant_QVariant_1>(value: T) -> QVariant {
+    let rsthis = value.QVariant_1();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QVariant_toBool<RetType> {
-  fn toBool(self , rsthis: & QVariant) -> RetType;
+pub trait QVariant_QVariant_1 {
+  fn QVariant_1(self) -> QVariant;
 }
-
-  // proto:  bool QVariant::toBool();
-impl<'a> /*trait*/ QVariant_toBool<i8> for () {
-  fn toBool(self , rsthis: & QVariant) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant6toBoolEv()};
-    let mut ret = unsafe {C_ZNK8QVariant6toBoolEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(uint ui);
-impl<'a> /*trait*/ QVariant_new for (u32) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2Ej()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self  as c_uint;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2Ej(arg0)};
+// QVariant(QVariant::Type) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_1 for (i32) {
+  fn QVariant_1(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ENS_4TypeE()};
+    let arg0 = (&self) as *const i32 as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ENS_4TypeE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QVariant::QVariant(int i);
-impl<'a> /*trait*/ QVariant_new for (i32) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// /usr/include/qt/QtCore/qvariant.h:202
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(int, const void *)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(int, const void *) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_2<T: QVariant_QVariant_2>(value: T) -> QVariant {
+    let rsthis = value.QVariant_2();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_2 {
+  fn QVariant_2(self) -> QVariant;
+}
+// QVariant(int, const void *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_2 for (i32,usize) {
+  fn QVariant_2(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2EiPKv()};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2EiPKv", 2,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:203
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(int, const void *, uint)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(int, const void *, uint) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_3<T: QVariant_QVariant_3>(value: T) -> QVariant {
+    let rsthis = value.QVariant_3();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_3 {
+  fn QVariant_3(self) -> QVariant;
+}
+// QVariant(int, const void *, uint) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_3 for (i32,usize,u32) {
+  fn QVariant_3(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2EiPKvj()};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1) as *const usize as usize;
+    let arg2 = (&self.2) as *const u32 as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2EiPKvj", 3,qtrt::FFITY_INT,qtrt::FFITY_POINTER,qtrt::FFITY_UINT32,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:207
+// index:4
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(QDataStream &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(QDataStream &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_4<T: QVariant_QVariant_4>(value: T) -> QVariant {
+    let rsthis = value.QVariant_4();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_4 {
+  fn QVariant_4(self) -> QVariant;
+}
+// QVariant(QDataStream &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_4 for (usize) {
+  fn QVariant_4(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ER11QDataStream()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ER11QDataStream", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:210
+// index:5
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(int)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(int) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_5<T: QVariant_QVariant_5>(value: T) -> QVariant {
+    let rsthis = value.QVariant_5();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_5 {
+  fn QVariant_5(self) -> QVariant;
+}
+// QVariant(int) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_5 for (i32) {
+  fn QVariant_5(self) -> QVariant {
     // unsafe{_ZN8QVariantC2Ei()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self  as c_int;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2Ei(arg0)};
+    let arg0 = (&self) as *const i32 as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2Ei", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QVariant::QVariant(float f);
-impl<'a> /*trait*/ QVariant_new for (f32) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2Ef()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self  as c_float;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2Ef(arg0)};
+// /usr/include/qt/QtCore/qvariant.h:211
+// index:6
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(uint)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(uint) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_6<T: QVariant_QVariant_6>(value: T) -> QVariant {
+    let rsthis = value.QVariant_6();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_6 {
+  fn QVariant_6(self) -> QVariant;
+}
+// QVariant(uint) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_6 for (u32) {
+  fn QVariant_6(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2Ej()};
+    let arg0 = (&self) as *const u32 as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2Ej", 1,qtrt::FFITY_UINT32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QVariant::QVariant(double d);
-impl<'a> /*trait*/ QVariant_new for (f64) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2Ed()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self  as c_double;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2Ed(arg0)};
+// /usr/include/qt/QtCore/qvariant.h:212
+// index:7
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(qlonglong)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(qlonglong) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_7<T: QVariant_QVariant_7>(value: T) -> QVariant {
+    let rsthis = value.QVariant_7();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_7 {
+  fn QVariant_7(self) -> QVariant;
+}
+// QVariant(qlonglong) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_7 for (i64) {
+  fn QVariant_7(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2Ex()};
+    let arg0 = (&self) as *const i64 as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2Ex", 1,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QVariant::QVariant(bool b);
-impl<'a> /*trait*/ QVariant_new for (i8) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// /usr/include/qt/QtCore/qvariant.h:213
+// index:8
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(qulonglong)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(qulonglong) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_8<T: QVariant_QVariant_8>(value: T) -> QVariant {
+    let rsthis = value.QVariant_8();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_8 {
+  fn QVariant_8(self) -> QVariant;
+}
+// QVariant(qulonglong) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_8 for (u64) {
+  fn QVariant_8(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2Ey()};
+    let arg0 = (&self) as *const u64 as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2Ey", 1,qtrt::FFITY_UINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:214
+// index:9
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(bool)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(bool) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_9<T: QVariant_QVariant_9>(value: T) -> QVariant {
+    let rsthis = value.QVariant_9();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_9 {
+  fn QVariant_9(self) -> QVariant;
+}
+// QVariant(bool) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_9 for (bool) {
+  fn QVariant_9(self) -> QVariant {
     // unsafe{_ZN8QVariantC2Eb()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self  as c_char;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2Eb(arg0)};
+    let arg0 = (&self) as *const bool as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2Eb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  qulonglong QVariant::toULongLong(bool * ok);
+// /usr/include/qt/QtCore/qvariant.h:215
+// index:10
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(double)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(double) ctx.fn_proto_cpp
 impl /*struct*/ QVariant {
-  pub fn toULongLong<RetType, T: QVariant_toULongLong<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toULongLong(self);
+  pub fn QVariant_10<T: QVariant_QVariant_10>(value: T) -> QVariant {
+    let rsthis = value.QVariant_10();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QVariant_toULongLong<RetType> {
-  fn toULongLong(self , rsthis: & QVariant) -> RetType;
+pub trait QVariant_QVariant_10 {
+  fn QVariant_10(self) -> QVariant;
 }
-
-  // proto:  qulonglong QVariant::toULongLong(bool * ok);
-impl<'a> /*trait*/ QVariant_toULongLong<u64> for (Option<&'a mut Vec<i8>>) {
-  fn toULongLong(self , rsthis: & QVariant) -> u64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant11toULongLongEPb()};
-    let arg0 = (if self.is_none() {0 as *const i8} else {self.unwrap().as_ptr()})  as *mut c_char;
-    let mut ret = unsafe {C_ZNK8QVariant11toULongLongEPb(rsthis.qclsinst, arg0)};
-    return ret as u64; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QJsonValue QVariant::toJsonValue();
-impl /*struct*/ QVariant {
-  pub fn toJsonValue<RetType, T: QVariant_toJsonValue<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toJsonValue(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toJsonValue<RetType> {
-  fn toJsonValue(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QJsonValue QVariant::toJsonValue();
-impl<'a> /*trait*/ QVariant_toJsonValue<QJsonValue> for () {
-  fn toJsonValue(self , rsthis: & QVariant) -> QJsonValue {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant11toJsonValueEv()};
-    let mut ret = unsafe {C_ZNK8QVariant11toJsonValueEv(rsthis.qclsinst)};
-    let mut ret1 = QJsonValue::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QDateTime QVariant::toDateTime();
-impl /*struct*/ QVariant {
-  pub fn toDateTime<RetType, T: QVariant_toDateTime<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toDateTime(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toDateTime<RetType> {
-  fn toDateTime(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QDateTime QVariant::toDateTime();
-impl<'a> /*trait*/ QVariant_toDateTime<QDateTime> for () {
-  fn toDateTime(self , rsthis: & QVariant) -> QDateTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant10toDateTimeEv()};
-    let mut ret = unsafe {C_ZNK8QVariant10toDateTimeEv(rsthis.qclsinst)};
-    let mut ret1 = QDateTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  bool QVariant::isDetached();
-impl /*struct*/ QVariant {
-  pub fn isDetached<RetType, T: QVariant_isDetached<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isDetached(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_isDetached<RetType> {
-  fn isDetached(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  bool QVariant::isDetached();
-impl<'a> /*trait*/ QVariant_isDetached<i8> for () {
-  fn isDetached(self , rsthis: & QVariant) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant10isDetachedEv()};
-    let mut ret = unsafe {C_ZNK8QVariant10isDetachedEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QEasingCurve QVariant::toEasingCurve();
-impl /*struct*/ QVariant {
-  pub fn toEasingCurve<RetType, T: QVariant_toEasingCurve<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toEasingCurve(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toEasingCurve<RetType> {
-  fn toEasingCurve(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QEasingCurve QVariant::toEasingCurve();
-impl<'a> /*trait*/ QVariant_toEasingCurve<QEasingCurve> for () {
-  fn toEasingCurve(self , rsthis: & QVariant) -> QEasingCurve {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant13toEasingCurveEv()};
-    let mut ret = unsafe {C_ZNK8QVariant13toEasingCurveEv(rsthis.qclsinst)};
-    let mut ret1 = QEasingCurve::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(const QUrl & url);
-impl<'a> /*trait*/ QVariant_new for (&'a QUrl) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2ERK4QUrl()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK4QUrl(arg0)};
+// QVariant(double) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_10 for (f64) {
+  fn QVariant_10(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2Ed()};
+    let arg0 = (&self) as *const f64 as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2Ed", 1,qtrt::FFITY_DOUBLE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QVariant::QVariant(const QVariant & other);
-impl<'a> /*trait*/ QVariant_new for (&'a QVariant) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2ERKS_()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2ERKS_(arg0)};
+// /usr/include/qt/QtCore/qvariant.h:216
+// index:11
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(float)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(float) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_11<T: QVariant_QVariant_11>(value: T) -> QVariant {
+    let rsthis = value.QVariant_11();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_11 {
+  fn QVariant_11(self) -> QVariant;
+}
+// QVariant(float) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_11 for (f32) {
+  fn QVariant_11(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2Ef()};
+    let arg0 = (&self) as *const f32 as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2Ef", 1,qtrt::FFITY_FLOAT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  QBitArray QVariant::toBitArray();
+// /usr/include/qt/QtCore/qvariant.h:218
+// index:12
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const char *)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const char *) ctx.fn_proto_cpp
 impl /*struct*/ QVariant {
-  pub fn toBitArray<RetType, T: QVariant_toBitArray<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toBitArray(self);
+  pub fn QVariant_12<T: QVariant_QVariant_12>(value: T) -> QVariant {
+    let rsthis = value.QVariant_12();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QVariant_toBitArray<RetType> {
-  fn toBitArray(self , rsthis: & QVariant) -> RetType;
+pub trait QVariant_QVariant_12 {
+  fn QVariant_12(self) -> QVariant;
 }
-
-  // proto:  QBitArray QVariant::toBitArray();
-impl<'a> /*trait*/ QVariant_toBitArray<QBitArray> for () {
-  fn toBitArray(self , rsthis: & QVariant) -> QBitArray {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant10toBitArrayEv()};
-    let mut ret = unsafe {C_ZNK8QVariant10toBitArrayEv(rsthis.qclsinst)};
-    let mut ret1 = QBitArray::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QRegularExpression QVariant::toRegularExpression();
-impl /*struct*/ QVariant {
-  pub fn toRegularExpression<RetType, T: QVariant_toRegularExpression<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toRegularExpression(self);
-    // return 1;
-  }
-}
-
-pub trait QVariant_toRegularExpression<RetType> {
-  fn toRegularExpression(self , rsthis: & QVariant) -> RetType;
-}
-
-  // proto:  QRegularExpression QVariant::toRegularExpression();
-impl<'a> /*trait*/ QVariant_toRegularExpression<QRegularExpression> for () {
-  fn toRegularExpression(self , rsthis: & QVariant) -> QRegularExpression {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QVariant19toRegularExpressionEv()};
-    let mut ret = unsafe {C_ZNK8QVariant19toRegularExpressionEv(rsthis.qclsinst)};
-    let mut ret1 = QRegularExpression::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(const QRegularExpression & re);
-impl<'a> /*trait*/ QVariant_new for (&'a QRegularExpression) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2ERK18QRegularExpression()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK18QRegularExpression(arg0)};
+// QVariant(const char *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_12 for (usize) {
+  fn QVariant_12(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2EPKc()};
+    let arg0 = (self) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2EPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QVariant::QVariant(const QStringList & stringlist);
-impl<'a> /*trait*/ QVariant_new for (&'a QStringList) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// /usr/include/qt/QtCore/qvariant.h:221
+// index:13
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QByteArray &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QByteArray &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_13<T: QVariant_QVariant_13>(value: T) -> QVariant {
+    let rsthis = value.QVariant_13();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_13 {
+  fn QVariant_13(self) -> QVariant;
+}
+// QVariant(const QByteArray &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_13 for (usize) {
+  fn QVariant_13(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK10QByteArray()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:222
+// index:14
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QBitArray &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QBitArray &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_14<T: QVariant_QVariant_14>(value: T) -> QVariant {
+    let rsthis = value.QVariant_14();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_14 {
+  fn QVariant_14(self) -> QVariant;
+}
+// QVariant(const QBitArray &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_14 for (usize) {
+  fn QVariant_14(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK9QBitArray()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK9QBitArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:223
+// index:15
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QString &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QString &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_15<T: QVariant_QVariant_15>(value: T) -> QVariant {
+    let rsthis = value.QVariant_15();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_15 {
+  fn QVariant_15(self) -> QVariant;
+}
+// QVariant(const QString &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_15 for (usize) {
+  fn QVariant_15(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK7QString()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:224
+// index:16
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(QLatin1String)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(QLatin1String) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_16<T: QVariant_QVariant_16>(value: T) -> QVariant {
+    let rsthis = value.QVariant_16();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_16 {
+  fn QVariant_16(self) -> QVariant;
+}
+// QVariant(QLatin1String) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_16 for (usize) {
+  fn QVariant_16(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2E13QLatin1String()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2E13QLatin1String", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:225
+// index:17
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QStringList &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QStringList &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_17<T: QVariant_QVariant_17>(value: T) -> QVariant {
+    let rsthis = value.QVariant_17();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_17 {
+  fn QVariant_17(self) -> QVariant;
+}
+// QVariant(const QStringList &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_17 for (usize) {
+  fn QVariant_17(self) -> QVariant {
     // unsafe{_ZN8QVariantC2ERK11QStringList()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK11QStringList(arg0)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK11QStringList", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-impl /*struct*/ QSequentialIterable {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QSequentialIterable {
-    return QSequentialIterable{qclsinst: qthis, ..Default::default()};
-  }
-}
-  // proto:  int QSequentialIterable::size();
-impl /*struct*/ QSequentialIterable {
-  pub fn size<RetType, T: QSequentialIterable_size<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.size(self);
+// /usr/include/qt/QtCore/qvariant.h:226
+// index:18
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(QChar)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(QChar) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_18<T: QVariant_QVariant_18>(value: T) -> QVariant {
+    let rsthis = value.QVariant_18();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QSequentialIterable_size<RetType> {
-  fn size(self , rsthis: & QSequentialIterable) -> RetType;
+pub trait QVariant_QVariant_18 {
+  fn QVariant_18(self) -> QVariant;
 }
-
-  // proto:  int QSequentialIterable::size();
-impl<'a> /*trait*/ QSequentialIterable_size<i32> for () {
-  fn size(self , rsthis: & QSequentialIterable) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 104)};
-    // unsafe{_ZNK19QSequentialIterable4sizeEv()};
-    let mut ret = unsafe {C_ZNK19QSequentialIterable4sizeEv(rsthis.qclsinst)};
-    return ret as i32; // 1
+// QVariant(QChar) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_18 for (usize) {
+  fn QVariant_18(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2E5QChar()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2E5QChar", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
     // return 1;
   }
 }
 
-  // proto:  bool QSequentialIterable::canReverseIterate();
-impl /*struct*/ QSequentialIterable {
-  pub fn canReverseIterate<RetType, T: QSequentialIterable_canReverseIterate<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.canReverseIterate(self);
+// /usr/include/qt/QtCore/qvariant.h:227
+// index:19
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QDate &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QDate &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_19<T: QVariant_QVariant_19>(value: T) -> QVariant {
+    let rsthis = value.QVariant_19();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QSequentialIterable_canReverseIterate<RetType> {
-  fn canReverseIterate(self , rsthis: & QSequentialIterable) -> RetType;
+pub trait QVariant_QVariant_19 {
+  fn QVariant_19(self) -> QVariant;
 }
-
-  // proto:  bool QSequentialIterable::canReverseIterate();
-impl<'a> /*trait*/ QSequentialIterable_canReverseIterate<i8> for () {
-  fn canReverseIterate(self , rsthis: & QSequentialIterable) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 104)};
-    // unsafe{_ZNK19QSequentialIterable17canReverseIterateEv()};
-    let mut ret = unsafe {C_ZNK19QSequentialIterable17canReverseIterateEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+// QVariant(const QDate &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_19 for (usize) {
+  fn QVariant_19(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK5QDate()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK5QDate", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
     // return 1;
   }
 }
 
-  // proto:  QVariant QSequentialIterable::at(int idx);
-impl /*struct*/ QSequentialIterable {
-  pub fn at<RetType, T: QSequentialIterable_at<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.at(self);
+// /usr/include/qt/QtCore/qvariant.h:228
+// index:20
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QTime &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QTime &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_20<T: QVariant_QVariant_20>(value: T) -> QVariant {
+    let rsthis = value.QVariant_20();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QSequentialIterable_at<RetType> {
-  fn at(self , rsthis: & QSequentialIterable) -> RetType;
+pub trait QVariant_QVariant_20 {
+  fn QVariant_20(self) -> QVariant;
 }
-
-  // proto:  QVariant QSequentialIterable::at(int idx);
-impl<'a> /*trait*/ QSequentialIterable_at<QVariant> for (i32) {
-  fn at(self , rsthis: & QSequentialIterable) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 104)};
-    // unsafe{_ZNK19QSequentialIterable2atEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZNK19QSequentialIterable2atEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QVariant::inheritFrom(ret as u64);
-    return ret1;
+// QVariant(const QTime &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_20 for (usize) {
+  fn QVariant_20(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK5QTime()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK5QTime", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
     // return 1;
   }
 }
 
-impl /*struct*/ QAssociativeIterable {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QAssociativeIterable {
-    return QAssociativeIterable{qclsinst: qthis, ..Default::default()};
-  }
-}
-  // proto:  int QAssociativeIterable::size();
-impl /*struct*/ QAssociativeIterable {
-  pub fn size<RetType, T: QAssociativeIterable_size<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.size(self);
+// /usr/include/qt/QtCore/qvariant.h:229
+// index:21
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QDateTime &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QDateTime &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_21<T: QVariant_QVariant_21>(value: T) -> QVariant {
+    let rsthis = value.QVariant_21();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QAssociativeIterable_size<RetType> {
-  fn size(self , rsthis: & QAssociativeIterable) -> RetType;
+pub trait QVariant_QVariant_21 {
+  fn QVariant_21(self) -> QVariant;
 }
-
-  // proto:  int QAssociativeIterable::size();
-impl<'a> /*trait*/ QAssociativeIterable_size<i32> for () {
-  fn size(self , rsthis: & QAssociativeIterable) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 112)};
-    // unsafe{_ZNK20QAssociativeIterable4sizeEv()};
-    let mut ret = unsafe {C_ZNK20QAssociativeIterable4sizeEv(rsthis.qclsinst)};
-    return ret as i32; // 1
+// QVariant(const QDateTime &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_21 for (usize) {
+  fn QVariant_21(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK9QDateTime()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK9QDateTime", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
     // return 1;
   }
 }
 
-  // proto:  QVariant QAssociativeIterable::value(const QVariant & key);
-impl /*struct*/ QAssociativeIterable {
-  pub fn value<RetType, T: QAssociativeIterable_value<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.value(self);
+// /usr/include/qt/QtCore/qvariant.h:234
+// index:22
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QSize &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QSize &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_22<T: QVariant_QVariant_22>(value: T) -> QVariant {
+    let rsthis = value.QVariant_22();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QAssociativeIterable_value<RetType> {
-  fn value(self , rsthis: & QAssociativeIterable) -> RetType;
+pub trait QVariant_QVariant_22 {
+  fn QVariant_22(self) -> QVariant;
 }
-
-  // proto:  QVariant QAssociativeIterable::value(const QVariant & key);
-impl<'a> /*trait*/ QAssociativeIterable_value<QVariant> for (&'a QVariant) {
-  fn value(self , rsthis: & QAssociativeIterable) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 112)};
-    // unsafe{_ZNK20QAssociativeIterable5valueERK8QVariant()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK20QAssociativeIterable5valueERK8QVariant(rsthis.qclsinst, arg0)};
-    let mut ret1 = QVariant::inheritFrom(ret as u64);
-    return ret1;
+// QVariant(const QSize &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_22 for (usize) {
+  fn QVariant_22(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK5QSize()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK5QSize", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
     // return 1;
   }
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qvariant.h:235
+// index:23
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QSizeF &)
 
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QSizeF &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_23<T: QVariant_QVariant_23>(value: T) -> QVariant {
+    let rsthis = value.QVariant_23();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_23 {
+  fn QVariant_23(self) -> QVariant;
+}
+// QVariant(const QSizeF &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_23 for (usize) {
+  fn QVariant_23(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK6QSizeF()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK6QSizeF", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:236
+// index:24
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QPoint &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QPoint &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_24<T: QVariant_QVariant_24>(value: T) -> QVariant {
+    let rsthis = value.QVariant_24();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_24 {
+  fn QVariant_24(self) -> QVariant;
+}
+// QVariant(const QPoint &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_24 for (usize) {
+  fn QVariant_24(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK6QPoint()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK6QPoint", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:237
+// index:25
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QPointF &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QPointF &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_25<T: QVariant_QVariant_25>(value: T) -> QVariant {
+    let rsthis = value.QVariant_25();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_25 {
+  fn QVariant_25(self) -> QVariant;
+}
+// QVariant(const QPointF &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_25 for (usize) {
+  fn QVariant_25(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK7QPointF()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK7QPointF", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:238
+// index:26
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QLine &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QLine &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_26<T: QVariant_QVariant_26>(value: T) -> QVariant {
+    let rsthis = value.QVariant_26();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_26 {
+  fn QVariant_26(self) -> QVariant;
+}
+// QVariant(const QLine &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_26 for (usize) {
+  fn QVariant_26(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK5QLine()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK5QLine", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:239
+// index:27
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QLineF &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QLineF &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_27<T: QVariant_QVariant_27>(value: T) -> QVariant {
+    let rsthis = value.QVariant_27();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_27 {
+  fn QVariant_27(self) -> QVariant;
+}
+// QVariant(const QLineF &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_27 for (usize) {
+  fn QVariant_27(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK6QLineF()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK6QLineF", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:240
+// index:28
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QRect &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QRect &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_28<T: QVariant_QVariant_28>(value: T) -> QVariant {
+    let rsthis = value.QVariant_28();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_28 {
+  fn QVariant_28(self) -> QVariant;
+}
+// QVariant(const QRect &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_28 for (usize) {
+  fn QVariant_28(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK5QRect()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK5QRect", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:241
+// index:29
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QRectF &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QRectF &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_29<T: QVariant_QVariant_29>(value: T) -> QVariant {
+    let rsthis = value.QVariant_29();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_29 {
+  fn QVariant_29(self) -> QVariant;
+}
+// QVariant(const QRectF &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_29 for (usize) {
+  fn QVariant_29(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK6QRectF()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK6QRectF", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:243
+// index:30
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QLocale &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QLocale &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_30<T: QVariant_QVariant_30>(value: T) -> QVariant {
+    let rsthis = value.QVariant_30();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_30 {
+  fn QVariant_30(self) -> QVariant;
+}
+// QVariant(const QLocale &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_30 for (usize) {
+  fn QVariant_30(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK7QLocale()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK7QLocale", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:245
+// index:31
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QRegExp &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QRegExp &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_31<T: QVariant_QVariant_31>(value: T) -> QVariant {
+    let rsthis = value.QVariant_31();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_31 {
+  fn QVariant_31(self) -> QVariant;
+}
+// QVariant(const QRegExp &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_31 for (usize) {
+  fn QVariant_31(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK7QRegExp()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK7QRegExp", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:249
+// index:32
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QRegularExpression &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QRegularExpression &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_32<T: QVariant_QVariant_32>(value: T) -> QVariant {
+    let rsthis = value.QVariant_32();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_32 {
+  fn QVariant_32(self) -> QVariant;
+}
+// QVariant(const QRegularExpression &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_32 for (usize) {
+  fn QVariant_32(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK18QRegularExpression()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK18QRegularExpression", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:251
+// index:33
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QUrl &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QUrl &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_33<T: QVariant_QVariant_33>(value: T) -> QVariant {
+    let rsthis = value.QVariant_33();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_33 {
+  fn QVariant_33(self) -> QVariant;
+}
+// QVariant(const QUrl &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_33 for (usize) {
+  fn QVariant_33(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK4QUrl()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK4QUrl", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:252
+// index:34
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QEasingCurve &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QEasingCurve &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_34<T: QVariant_QVariant_34>(value: T) -> QVariant {
+    let rsthis = value.QVariant_34();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_34 {
+  fn QVariant_34(self) -> QVariant;
+}
+// QVariant(const QEasingCurve &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_34 for (usize) {
+  fn QVariant_34(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK12QEasingCurve()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK12QEasingCurve", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:253
+// index:35
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QUuid &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QUuid &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_35<T: QVariant_QVariant_35>(value: T) -> QVariant {
+    let rsthis = value.QVariant_35();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_35 {
+  fn QVariant_35(self) -> QVariant;
+}
+// QVariant(const QUuid &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_35 for (usize) {
+  fn QVariant_35(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK5QUuid()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK5QUuid", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:254
+// index:36
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QModelIndex &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QModelIndex &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_36<T: QVariant_QVariant_36>(value: T) -> QVariant {
+    let rsthis = value.QVariant_36();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_36 {
+  fn QVariant_36(self) -> QVariant;
+}
+// QVariant(const QModelIndex &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_36 for (usize) {
+  fn QVariant_36(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK11QModelIndex()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK11QModelIndex", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:255
+// index:37
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QPersistentModelIndex &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QPersistentModelIndex &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_37<T: QVariant_QVariant_37>(value: T) -> QVariant {
+    let rsthis = value.QVariant_37();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_37 {
+  fn QVariant_37(self) -> QVariant;
+}
+// QVariant(const QPersistentModelIndex &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_37 for (usize) {
+  fn QVariant_37(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK21QPersistentModelIndex()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK21QPersistentModelIndex", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:256
+// index:38
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QJsonValue &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QJsonValue &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_38<T: QVariant_QVariant_38>(value: T) -> QVariant {
+    let rsthis = value.QVariant_38();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_38 {
+  fn QVariant_38(self) -> QVariant;
+}
+// QVariant(const QJsonValue &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_38 for (usize) {
+  fn QVariant_38(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK10QJsonValue()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK10QJsonValue", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:257
+// index:39
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QJsonObject &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QJsonObject &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_39<T: QVariant_QVariant_39>(value: T) -> QVariant {
+    let rsthis = value.QVariant_39();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_39 {
+  fn QVariant_39(self) -> QVariant;
+}
+// QVariant(const QJsonObject &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_39 for (usize) {
+  fn QVariant_39(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK11QJsonObject()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK11QJsonObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:258
+// index:40
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QJsonArray &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QJsonArray &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_40<T: QVariant_QVariant_40>(value: T) -> QVariant {
+    let rsthis = value.QVariant_40();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_40 {
+  fn QVariant_40(self) -> QVariant;
+}
+// QVariant(const QJsonArray &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_40 for (usize) {
+  fn QVariant_40(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK10QJsonArray()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK10QJsonArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:259
+// index:41
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const QJsonDocument &)
+
+/*
+Constructs an invalid variant.
+*/
+// QVariant(const QJsonDocument &) ctx.fn_proto_cpp
+impl /*struct*/ QVariant {
+  pub fn QVariant_41<T: QVariant_QVariant_41>(value: T) -> QVariant {
+    let rsthis = value.QVariant_41();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariant_QVariant_41 {
+  fn QVariant_41(self) -> QVariant;
+}
+// QVariant(const QJsonDocument &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariant_QVariant_41 for (usize) {
+  fn QVariant_41(self) -> QVariant {
+    // unsafe{_ZN8QVariantC2ERK13QJsonDocument()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QVariantC2ERK13QJsonDocument", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:200
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void ~QVariant()
+
+/*
+
+*/
+pub fn DeleteQVariant(this :*mut QVariant) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN8QVariantD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 16)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qvariant.h:262
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QVariant & operator=(const QVariant &)
+
+/*
+
+*/
+impl /*struct*/ QVariant {
+  pub fn operator_equal_0<RetType, T: QVariant_operator_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_operator_equal_0<RetType> {
+  fn operator_equal_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_operator_equal_0<usize> for (usize) {
+  fn operator_equal_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN8QVariantaSERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:266
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [16] QVariant & operator=(QVariant &&)
+
+/*
+
+*/
+impl /*struct*/ QVariant {
+  pub fn operator_equal_1<RetType, T: QVariant_operator_equal_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_1(self);
+    // return 1;
+  }
+}
+pub trait QVariant_operator_equal_1<RetType> {
+  fn operator_equal_1(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_operator_equal_1<usize> for (usize) {
+  fn operator_equal_1(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN8QVariantaSEOS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:270
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QVariant &)
+
+/*
+Swaps variant other with this variant. This operation is very fast and never fails.
+
+This function was introduced in  Qt 4.8.
+*/
+impl /*struct*/ QVariant {
+  pub fn swap_0<RetType, T: QVariant_swap_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.swap_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_swap_0<RetType> {
+  fn swap_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_swap_0<(/*void*/)> for (usize) {
+  fn swap_0(self , rsthis: & QVariant) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN8QVariant4swapERS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:272
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] QVariant::Type type() const
+
+/*
+Returns the storage type of the value stored in the variant. Although this function is declared as returning QVariant::Type, the return value should be interpreted as QMetaType::Type. In particular, QVariant::UserType is returned here only if the value is equal or greater than QMetaType::User.
+
+Note that return values in the ranges QVariant::Char through QVariant::RegExp and QVariant::Font through QVariant::Transform correspond to the values in the ranges QMetaType::QChar through QMetaType::QRegExp and QMetaType::QFont through QMetaType::QQuaternion.
+
+Pay particular attention when working with char and QChar variants. Note that there is no QVariant constructor specifically for type char, but there is one for QChar. For a variant of type QChar, this function returns QVariant::Char, which is the same as QMetaType::QChar, but for a variant of type char, this function returns QMetaType::Char, which is not the same as QVariant::Char.
+
+Also note that the types void*, long, short, unsigned long, unsigned short, unsigned char, float, QObject*, and QWidget* are represented in QMetaType::Type but not in QVariant::Type, and they can be returned by this function. However, they are considered to be user defined types when tested against QVariant::Type.
+
+To test whether an instance of QVariant contains a data type that is compatible with the data type you are interested in, use canConvert().
+*/
+impl /*struct*/ QVariant {
+  pub fn type__0<RetType, T: QVariant_type__0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.type__0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_type__0<RetType> {
+  fn type__0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_type__0<i32> for () {
+  fn type__0(self , rsthis: & QVariant) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant4typeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:273
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int userType() const
+
+/*
+Returns the storage type of the value stored in the variant. For non-user types, this is the same as type().
+
+See also type().
+*/
+impl /*struct*/ QVariant {
+  pub fn userType_0<RetType, T: QVariant_userType_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.userType_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_userType_0<RetType> {
+  fn userType_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_userType_0<i32> for () {
+  fn userType_0(self , rsthis: & QVariant) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant8userTypeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:274
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] const char * typeName() const
+
+/*
+Returns the name of the type stored in the variant. The returned strings describe the C++ datatype used to store the data: for example, "QFont", "QString", or "QVariantList". An Invalid variant returns 0.
+*/
+impl /*struct*/ QVariant {
+  pub fn typeName_0<RetType, T: QVariant_typeName_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.typeName_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_typeName_0<RetType> {
+  fn typeName_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_typeName_0<usize> for () {
+  fn typeName_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant8typeNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:276
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool canConvert(int) const
+
+/*
+Returns true if the variant's type can be cast to the requested type, targetTypeId. Such casting is done automatically when calling the toInt(), toBool(), ... methods.
+
+The following casts are done automatically:
+
+
+ TypeAutomatically Cast To
+QMetaType::BoolQMetaType::QChar, QMetaType::Double, QMetaType::Int, QMetaType::LongLong, QMetaType::QString, QMetaType::UInt, QMetaType::ULongLong
+QMetaType::QByteArrayQMetaType::Double, QMetaType::Int, QMetaType::LongLong, QMetaType::QString, QMetaType::UInt, QMetaType::ULongLong, QMetaType::QUuid
+QMetaType::QCharQMetaType::Bool, QMetaType::Int, QMetaType::UInt, QMetaType::LongLong, QMetaType::ULongLong
+QMetaType::QColorQMetaType::QString
+QMetaType::QDateQMetaType::QDateTime, QMetaType::QString
+QMetaType::QDateTimeQMetaType::QDate, QMetaType::QString, QMetaType::QTime
+QMetaType::DoubleQMetaType::Bool, QMetaType::Int, QMetaType::LongLong, QMetaType::QString, QMetaType::UInt, QMetaType::ULongLong
+QMetaType::QFontQMetaType::QString
+QMetaType::IntQMetaType::Bool, QMetaType::QChar, QMetaType::Double, QMetaType::LongLong, QMetaType::QString, QMetaType::UInt, QMetaType::ULongLong
+QMetaType::QKeySequenceQMetaType::Int, QMetaType::QString
+QMetaType::QVariantListQMetaType::QStringList (if the list's items can be converted to QStrings)
+QMetaType::LongLongQMetaType::Bool, QMetaType::QByteArray, QMetaType::QChar, QMetaType::Double, QMetaType::Int, QMetaType::QString, QMetaType::UInt, QMetaType::ULongLong
+QMetaType::QPointQMetaType::QPointF
+QMetaType::QRectQMetaType::QRectF
+QMetaType::QStringQMetaType::Bool, QMetaType::QByteArray, QMetaType::QChar, QMetaType::QColor, QMetaType::QDate, QMetaType::QDateTime, QMetaType::Double, QMetaType::QFont, QMetaType::Int, QMetaType::QKeySequence, QMetaType::LongLong, QMetaType::QStringList, QMetaType::QTime, QMetaType::UInt, QMetaType::ULongLong, QMetaType::QUuid
+QMetaType::QStringListQMetaType::QVariantList, QMetaType::QString (if the list contains exactly one item)
+QMetaType::QTimeQMetaType::QString
+QMetaType::UIntQMetaType::Bool, QMetaType::QChar, QMetaType::Double, QMetaType::Int, QMetaType::LongLong, QMetaType::QString, QMetaType::ULongLong
+QMetaType::ULongLongQMetaType::Bool, QMetaType::QChar, QMetaType::Double, QMetaType::Int, QMetaType::LongLong, QMetaType::QString, QMetaType::UInt
+QMetaType::QUuidQMetaType::QByteArray, QMetaType::QString
+
+
+A QVariant containing a pointer to a type derived from QObject will also return true for this function if a qobject_cast to the type described by targetTypeId would succeed. Note that this only works for QObject subclasses which use the Q_OBJECT macro.
+
+A QVariant containing a sequential container will also return true for this function if the targetTypeId is QVariantList. It is possible to iterate over the contents of the container without extracting it as a (copied) QVariantList:
+
+
+  QList<int> intList = {7, 11, 42};
+
+  QVariant variant = QVariant::fromValue(intList);
+  if (variant.canConvert<QVariantList>()) {
+      QSequentialIterable iterable = variant.value<QSequentialIterable>();
+      // Can use foreach:
+      foreach (const QVariant &v, iterable) {
+          qDebug() << v;
+      }
+      // Can use C++11 range-for:
+      for (const QVariant &v : iterable) {
+          qDebug() << v;
+      }
+      // Can use iterators:
+      QSequentialIterable::const_iterator it = iterable.begin();
+      const QSequentialIterable::const_iterator end = iterable.end();
+      for ( ; it != end; ++it) {
+          qDebug() << *it;
+      }
+  }
+
+
+
+This requires that the value_type of the container is itself a metatype.
+
+Similarly, a QVariant containing a sequential container will also return true for this function the targetTypeId is QVariantHash or QVariantMap. It is possible to iterate over the contents of the container without extracting it as a (copied) QVariantHash or QVariantMap:
+
+
+  QHash<int, QString> mapping;
+  mapping.insert(7, "Seven");
+  mapping.insert(11, "Eleven");
+  mapping.insert(42, "Forty-two");
+
+  QVariant variant = QVariant::fromValue(mapping);
+  if (variant.canConvert<QVariantHash>()) {
+      QAssociativeIterable iterable = variant.value<QAssociativeIterable>();
+      // Can use foreach over the values:
+      foreach (const QVariant &v, iterable) {
+          qDebug() << v;
+      }
+      // Can use C++11 range-for over the values:
+      for (const QVariant &v : iterable) {
+          qDebug() << v;
+      }
+      // Can use iterators:
+      QAssociativeIterable::const_iterator it = iterable.begin();
+      const QAssociativeIterable::const_iterator end = iterable.end();
+      for ( ; it != end; ++it) {
+          qDebug() << *it; // The current value
+          qDebug() << it.key();
+          qDebug() << it.value();
+      }
+  }
+
+
+
+See also convert(), QSequentialIterable, Q_DECLARE_SEQUENTIAL_CONTAINER_METATYPE(), QAssociativeIterable, and Q_DECLARE_ASSOCIATIVE_CONTAINER_METATYPE().
+*/
+impl /*struct*/ QVariant {
+  pub fn canConvert_0<RetType, T: QVariant_canConvert_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.canConvert_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_canConvert_0<RetType> {
+  fn canConvert_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_canConvert_0<bool> for (i32) {
+  fn canConvert_0(self , rsthis: & QVariant) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant10canConvertEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:277
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool convert(int)
+
+/*
+Casts the variant to the requested type, targetTypeId. If the cast cannot be done, the variant is still changed to the requested type, but is left in a cleared null state similar to that constructed by QVariant(Type).
+
+Returns true if the current type of the variant was successfully cast; otherwise returns false.
+
+A QVariant containing a pointer to a type derived from QObject will also convert and return true for this function if a qobject_cast to the type described by targetTypeId would succeed. Note that this only works for QObject subclasses which use the Q_OBJECT macro.
+
+Note: converting QVariants that are null due to not being initialized or having failed a previous conversion will always fail, changing the type, remaining null, and returning false.
+
+See also canConvert() and clear().
+*/
+impl /*struct*/ QVariant {
+  pub fn convert_0<RetType, T: QVariant_convert_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.convert_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_convert_0<RetType> {
+  fn convert_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_convert_0<bool> for (i32) {
+  fn convert_0(self , rsthis: & QVariant) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN8QVariant7convertEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:467
+// index:1
+// Protected Visibility=Default Availability=Available
+// [1] bool convert(const int, void *) const
+
+/*
+Casts the variant to the requested type, targetTypeId. If the cast cannot be done, the variant is still changed to the requested type, but is left in a cleared null state similar to that constructed by QVariant(Type).
+
+Returns true if the current type of the variant was successfully cast; otherwise returns false.
+
+A QVariant containing a pointer to a type derived from QObject will also convert and return true for this function if a qobject_cast to the type described by targetTypeId would succeed. Note that this only works for QObject subclasses which use the Q_OBJECT macro.
+
+Note: converting QVariants that are null due to not being initialized or having failed a previous conversion will always fail, changing the type, remaining null, and returning false.
+
+See also canConvert() and clear().
+*/
+impl /*struct*/ QVariant {
+  pub fn convert_1<RetType, T: QVariant_convert_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.convert_1(self);
+    // return 1;
+  }
+}
+pub trait QVariant_convert_1<RetType> {
+  fn convert_1(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_convert_1<bool> for (i32,usize) {
+  fn convert_1(self , rsthis: & QVariant) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant7convertEiPv", 2,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:279
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool isValid() const
+
+/*
+Returns true if the storage type of this variant is not QMetaType::UnknownType; otherwise returns false.
+*/
+impl /*struct*/ QVariant {
+  pub fn isValid_0<RetType, T: QVariant_isValid_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isValid_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_isValid_0<RetType> {
+  fn isValid_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_isValid_0<bool> for () {
+  fn isValid_0(self , rsthis: & QVariant) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant7isValidEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:280
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isNull() const
+
+/*
+Returns true if this is a null variant, false otherwise. A variant is considered null if it contains no initialized value, or the contained value is a null pointer or is an instance of a built-in type that has an isNull method, in which case the result would be the same as calling isNull on the wrapped object.
+
+Warning: Null variants is not a single state and two null variants may easily return false on the == operator if they do not contain similar null values.
+
+See also QVariant(Type) and convert(int).
+*/
+impl /*struct*/ QVariant {
+  pub fn isNull_0<RetType, T: QVariant_isNull_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isNull_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_isNull_0<RetType> {
+  fn isNull_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_isNull_0<bool> for () {
+  fn isNull_0(self , rsthis: & QVariant) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant6isNullEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:282
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void clear()
+
+/*
+Convert this variant to type QMetaType::UnknownType and free up any resources used.
+*/
+impl /*struct*/ QVariant {
+  pub fn clear_0<RetType, T: QVariant_clear_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.clear_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_clear_0<RetType> {
+  fn clear_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_clear_0<(/*void*/)> for () {
+  fn clear_0(self , rsthis: & QVariant) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZN8QVariant5clearEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:284
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void detach()
+
+/*
+
+*/
+impl /*struct*/ QVariant {
+  pub fn detach_0<RetType, T: QVariant_detach_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.detach_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_detach_0<RetType> {
+  fn detach_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_detach_0<(/*void*/)> for () {
+  fn detach_0(self , rsthis: & QVariant) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZN8QVariant6detachEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:285
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool isDetached() const
+
+/*
+
+*/
+impl /*struct*/ QVariant {
+  pub fn isDetached_0<RetType, T: QVariant_isDetached_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isDetached_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_isDetached_0<RetType> {
+  fn isDetached_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_isDetached_0<bool> for () {
+  fn isDetached_0(self , rsthis: & QVariant) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant10isDetachedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:287
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int toInt(bool *) const
+
+/*
+Returns the variant as an int if the variant has userType() QMetaType::Int, QMetaType::Bool, QMetaType::QByteArray, QMetaType::QChar, QMetaType::Double, QMetaType::LongLong, QMetaType::QString, QMetaType::UInt, or QMetaType::ULongLong; otherwise returns 0.
+
+If ok is non-null: *ok is set to true if the value could be converted to an int; otherwise *ok is set to false.
+
+Warning: If the value is convertible to a QMetaType::LongLong but is too large to be represented in an int, the resulting arithmetic overflow will not be reflected in ok. A simple workaround is to use QString::toInt().
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toInt_0<RetType, T: QVariant_toInt_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toInt_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toInt_0<RetType> {
+  fn toInt_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toInt_0<i32> for (usize) {
+  fn toInt_0(self , rsthis: & QVariant) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant5toIntEPb", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:288
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] uint toUInt(bool *) const
+
+/*
+Returns the variant as an unsigned int if the variant has userType() QMetaType::UInt, QMetaType::Bool, QMetaType::QByteArray, QMetaType::QChar, QMetaType::Double, QMetaType::Int, QMetaType::LongLong, QMetaType::QString, or QMetaType::ULongLong; otherwise returns 0.
+
+If ok is non-null: *ok is set to true if the value could be converted to an unsigned int; otherwise *ok is set to false.
+
+Warning: If the value is convertible to a QMetaType::ULongLong but is too large to be represented in an unsigned int, the resulting arithmetic overflow will not be reflected in ok. A simple workaround is to use QString::toUInt().
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toUInt_0<RetType, T: QVariant_toUInt_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toUInt_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toUInt_0<RetType> {
+  fn toUInt_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toUInt_0<u32> for (usize) {
+  fn toUInt_0(self , rsthis: & QVariant) -> u32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant6toUIntEPb", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: u32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:289
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] qlonglong toLongLong(bool *) const
+
+/*
+Returns the variant as a long long int if the variant has userType() QMetaType::LongLong, QMetaType::Bool, QMetaType::QByteArray, QMetaType::QChar, QMetaType::Double, QMetaType::Int, QMetaType::QString, QMetaType::UInt, or QMetaType::ULongLong; otherwise returns 0.
+
+If ok is non-null: *ok is set to true if the value could be converted to an int; otherwise *ok is set to false.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toLongLong_0<RetType, T: QVariant_toLongLong_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toLongLong_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toLongLong_0<RetType> {
+  fn toLongLong_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toLongLong_0<i64> for (usize) {
+  fn toLongLong_0(self , rsthis: & QVariant) -> i64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant10toLongLongEPb", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i64 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:290
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] qulonglong toULongLong(bool *) const
+
+/*
+Returns the variant as an unsigned long long int if the variant has type() QMetaType::ULongLong, QMetaType::Bool, QMetaType::QByteArray, QMetaType::QChar, QMetaType::Double, QMetaType::Int, QMetaType::LongLong, QMetaType::QString, or QMetaType::UInt; otherwise returns 0.
+
+If ok is non-null: *ok is set to true if the value could be converted to an int; otherwise *ok is set to false.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toULongLong_0<RetType, T: QVariant_toULongLong_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toULongLong_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toULongLong_0<RetType> {
+  fn toULongLong_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toULongLong_0<u64> for (usize) {
+  fn toULongLong_0(self , rsthis: & QVariant) -> u64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant11toULongLongEPb", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: u64 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:291
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool toBool() const
+
+/*
+Returns the variant as a bool if the variant has userType() Bool.
+
+Returns true if the variant has userType() QMetaType::Bool, QMetaType::QChar, QMetaType::Double, QMetaType::Int, QMetaType::LongLong, QMetaType::UInt, or QMetaType::ULongLong and the value is non-zero, or if the variant has type QMetaType::QString or QMetaType::QByteArray and its lower-case content is not one of the following: empty, "0" or "false"; otherwise returns false.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toBool_0<RetType, T: QVariant_toBool_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toBool_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toBool_0<RetType> {
+  fn toBool_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toBool_0<bool> for () {
+  fn toBool_0(self , rsthis: & QVariant) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant6toBoolEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:292
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] double toDouble(bool *) const
+
+/*
+Returns the variant as a double if the variant has userType() QMetaType::Double, QMetaType::Float, QMetaType::Bool, QMetaType::QByteArray, QMetaType::Int, QMetaType::LongLong, QMetaType::QString, QMetaType::UInt, or QMetaType::ULongLong; otherwise returns 0.0.
+
+If ok is non-null: *ok is set to true if the value could be converted to a double; otherwise *ok is set to false.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toDouble_0<RetType, T: QVariant_toDouble_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toDouble_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toDouble_0<RetType> {
+  fn toDouble_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toDouble_0<f64> for (usize) {
+  fn toDouble_0(self , rsthis: & QVariant) -> f64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant8toDoubleEPb", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: f64 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:293
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] float toFloat(bool *) const
+
+/*
+Returns the variant as a float if the variant has userType() QMetaType::Double, QMetaType::Float, QMetaType::Bool, QMetaType::QByteArray, QMetaType::Int, QMetaType::LongLong, QMetaType::QString, QMetaType::UInt, or QMetaType::ULongLong; otherwise returns 0.0.
+
+If ok is non-null: *ok is set to true if the value could be converted to a double; otherwise *ok is set to false.
+
+This function was introduced in  Qt 4.6.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toFloat_0<RetType, T: QVariant_toFloat_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toFloat_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toFloat_0<RetType> {
+  fn toFloat_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toFloat_0<f32> for (usize) {
+  fn toFloat_0(self , rsthis: & QVariant) -> f32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant7toFloatEPb", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: f32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:294
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] qreal toReal(bool *) const
+
+/*
+Returns the variant as a qreal if the variant has userType() QMetaType::Double, QMetaType::Float, QMetaType::Bool, QMetaType::QByteArray, QMetaType::Int, QMetaType::LongLong, QMetaType::QString, QMetaType::UInt, or QMetaType::ULongLong; otherwise returns 0.0.
+
+If ok is non-null: *ok is set to true if the value could be converted to a double; otherwise *ok is set to false.
+
+This function was introduced in  Qt 4.6.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toReal_0<RetType, T: QVariant_toReal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toReal_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toReal_0<RetType> {
+  fn toReal_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toReal_0<f64> for (usize) {
+  fn toReal_0(self , rsthis: & QVariant) -> f64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant6toRealEPb", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: f64 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:295
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QByteArray toByteArray() const
+
+/*
+Returns the variant as a QByteArray if the variant has userType() QMetaType::QByteArray or QMetaType::QString (converted using QString::fromUtf8()); otherwise returns an empty byte array.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toByteArray_0<RetType, T: QVariant_toByteArray_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toByteArray_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toByteArray_0<RetType> {
+  fn toByteArray_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toByteArray_0<usize> for () {
+  fn toByteArray_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant11toByteArrayEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:296
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QBitArray toBitArray() const
+
+/*
+Returns the variant as a QBitArray if the variant has userType() QMetaType::QBitArray; otherwise returns an empty bit array.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toBitArray_0<RetType, T: QVariant_toBitArray_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toBitArray_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toBitArray_0<RetType> {
+  fn toBitArray_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toBitArray_0<usize> for () {
+  fn toBitArray_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant10toBitArrayEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:297
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString toString() const
+
+/*
+Returns the variant as a QString if the variant has userType() QMetaType::QString, QMetaType::Bool, QMetaType::QByteArray, QMetaType::QChar, QMetaType::QDate, QMetaType::QDateTime, QMetaType::Double, QMetaType::Int, QMetaType::LongLong, QMetaType::QStringList, QMetaType::QTime, QMetaType::UInt, or QMetaType::ULongLong; otherwise returns an empty string.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toString_0<RetType, T: QVariant_toString_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toString_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toString_0<RetType> {
+  fn toString_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toString_0<usize> for () {
+  fn toString_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant8toStringEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:298
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList toStringList() const
+
+/*
+Returns the variant as a QStringList if the variant has userType() QMetaType::QStringList, QMetaType::QString, or QMetaType::QVariantList of a type that can be converted to QString; otherwise returns an empty list.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toStringList_0<RetType, T: QVariant_toStringList_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toStringList_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toStringList_0<RetType> {
+  fn toStringList_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toStringList_0<usize> for () {
+  fn toStringList_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant12toStringListEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:299
+// index:0
+// Public Visibility=Default Availability=Available
+// [2] QChar toChar() const
+
+/*
+Returns the variant as a QChar if the variant has userType() QMetaType::QChar, QMetaType::Int, or QMetaType::UInt; otherwise returns an invalid QChar.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toChar_0<RetType, T: QVariant_toChar_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toChar_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toChar_0<RetType> {
+  fn toChar_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toChar_0<usize> for () {
+  fn toChar_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant6toCharEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:300
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QDate toDate() const
+
+/*
+Returns the variant as a QDate if the variant has userType() QMetaType::QDate, QMetaType::QDateTime, or QMetaType::QString; otherwise returns an invalid date.
+
+If the type() is QMetaType::QString, an invalid date will be returned if the string cannot be parsed as a Qt::ISODate format date.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toDate_0<RetType, T: QVariant_toDate_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toDate_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toDate_0<RetType> {
+  fn toDate_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toDate_0<usize> for () {
+  fn toDate_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant6toDateEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:301
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] QTime toTime() const
+
+/*
+Returns the variant as a QTime if the variant has userType() QMetaType::QTime, QMetaType::QDateTime, or QMetaType::QString; otherwise returns an invalid time.
+
+If the type() is QMetaType::QString, an invalid time will be returned if the string cannot be parsed as a Qt::ISODate format time.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toTime_0<RetType, T: QVariant_toTime_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toTime_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toTime_0<RetType> {
+  fn toTime_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toTime_0<usize> for () {
+  fn toTime_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant6toTimeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:302
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QDateTime toDateTime() const
+
+/*
+Returns the variant as a QDateTime if the variant has userType() QMetaType::QDateTime, QMetaType::QDate, or QMetaType::QString; otherwise returns an invalid date/time.
+
+If the type() is QMetaType::QString, an invalid date/time will be returned if the string cannot be parsed as a Qt::ISODate format date/time.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toDateTime_0<RetType, T: QVariant_toDateTime_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toDateTime_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toDateTime_0<RetType> {
+  fn toDateTime_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toDateTime_0<usize> for () {
+  fn toDateTime_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant10toDateTimeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:308
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QPoint toPoint() const
+
+/*
+Returns the variant as a QPoint if the variant has userType() QMetaType::QPoint or QMetaType::QPointF; otherwise returns a null QPoint.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toPoint_0<RetType, T: QVariant_toPoint_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toPoint_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toPoint_0<RetType> {
+  fn toPoint_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toPoint_0<usize> for () {
+  fn toPoint_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant7toPointEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:309
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QPointF toPointF() const
+
+/*
+Returns the variant as a QPointF if the variant has userType() QMetaType::QPoint or QMetaType::QPointF; otherwise returns a null QPointF.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toPointF_0<RetType, T: QVariant_toPointF_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toPointF_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toPointF_0<RetType> {
+  fn toPointF_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toPointF_0<usize> for () {
+  fn toPointF_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant8toPointFEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:310
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QRect toRect() const
+
+/*
+Returns the variant as a QRect if the variant has userType() QMetaType::QRect; otherwise returns an invalid QRect.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toRect_0<RetType, T: QVariant_toRect_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toRect_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toRect_0<RetType> {
+  fn toRect_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toRect_0<usize> for () {
+  fn toRect_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant6toRectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:311
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QSize toSize() const
+
+/*
+Returns the variant as a QSize if the variant has userType() QMetaType::QSize; otherwise returns an invalid QSize.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toSize_0<RetType, T: QVariant_toSize_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toSize_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toSize_0<RetType> {
+  fn toSize_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toSize_0<usize> for () {
+  fn toSize_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant6toSizeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:312
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QSizeF toSizeF() const
+
+/*
+Returns the variant as a QSizeF if the variant has userType() QMetaType::QSizeF; otherwise returns an invalid QSizeF.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toSizeF_0<RetType, T: QVariant_toSizeF_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toSizeF_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toSizeF_0<RetType> {
+  fn toSizeF_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toSizeF_0<usize> for () {
+  fn toSizeF_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant7toSizeFEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:313
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QLine toLine() const
+
+/*
+Returns the variant as a QLine if the variant has userType() QMetaType::QLine; otherwise returns an invalid QLine.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toLine_0<RetType, T: QVariant_toLine_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toLine_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toLine_0<RetType> {
+  fn toLine_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toLine_0<usize> for () {
+  fn toLine_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant6toLineEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:314
+// index:0
+// Public Visibility=Default Availability=Available
+// [32] QLineF toLineF() const
+
+/*
+Returns the variant as a QLineF if the variant has userType() QMetaType::QLineF; otherwise returns an invalid QLineF.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toLineF_0<RetType, T: QVariant_toLineF_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toLineF_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toLineF_0<RetType> {
+  fn toLineF_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toLineF_0<usize> for () {
+  fn toLineF_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant7toLineFEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:315
+// index:0
+// Public Visibility=Default Availability=Available
+// [32] QRectF toRectF() const
+
+/*
+Returns the variant as a QRectF if the variant has userType() QMetaType::QRect or QMetaType::QRectF; otherwise returns an invalid QRectF.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toRectF_0<RetType, T: QVariant_toRectF_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toRectF_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toRectF_0<RetType> {
+  fn toRectF_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toRectF_0<usize> for () {
+  fn toRectF_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant7toRectFEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:317
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QLocale toLocale() const
+
+/*
+Returns the variant as a QLocale if the variant has userType() QMetaType::QLocale; otherwise returns an invalid QLocale.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toLocale_0<RetType, T: QVariant_toLocale_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toLocale_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toLocale_0<RetType> {
+  fn toLocale_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toLocale_0<usize> for () {
+  fn toLocale_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant8toLocaleEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:319
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QRegExp toRegExp() const
+
+/*
+Returns the variant as a QRegExp if the variant has userType() QMetaType::QRegExp; otherwise returns an empty QRegExp.
+
+This function was introduced in  Qt 4.1.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toRegExp_0<RetType, T: QVariant_toRegExp_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toRegExp_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toRegExp_0<RetType> {
+  fn toRegExp_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toRegExp_0<usize> for () {
+  fn toRegExp_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant8toRegExpEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:323
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QRegularExpression toRegularExpression() const
+
+/*
+Returns the variant as a QRegularExpression if the variant has userType() QRegularExpression; otherwise returns an empty QRegularExpression.
+
+This function was introduced in  Qt 5.0.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toRegularExpression_0<RetType, T: QVariant_toRegularExpression_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toRegularExpression_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toRegularExpression_0<RetType> {
+  fn toRegularExpression_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toRegularExpression_0<usize> for () {
+  fn toRegularExpression_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant19toRegularExpressionEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:325
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QUrl toUrl() const
+
+/*
+Returns the variant as a QUrl if the variant has userType() QMetaType::QUrl; otherwise returns an invalid QUrl.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toUrl_0<RetType, T: QVariant_toUrl_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toUrl_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toUrl_0<RetType> {
+  fn toUrl_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toUrl_0<usize> for () {
+  fn toUrl_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant5toUrlEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:326
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QEasingCurve toEasingCurve() const
+
+/*
+Returns the variant as a QEasingCurve if the variant has userType() QMetaType::QEasingCurve; otherwise returns a default easing curve.
+
+This function was introduced in  Qt 4.7.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toEasingCurve_0<RetType, T: QVariant_toEasingCurve_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toEasingCurve_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toEasingCurve_0<RetType> {
+  fn toEasingCurve_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toEasingCurve_0<usize> for () {
+  fn toEasingCurve_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant13toEasingCurveEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:327
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QUuid toUuid() const
+
+/*
+Returns the variant as a QUuid if the variant has type() QMetaType::QUuid, QMetaType::QByteArray or QMetaType::QString; otherwise returns a default-constructed QUuid.
+
+This function was introduced in  Qt 5.0.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toUuid_0<RetType, T: QVariant_toUuid_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toUuid_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toUuid_0<RetType> {
+  fn toUuid_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toUuid_0<usize> for () {
+  fn toUuid_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant6toUuidEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:328
+// index:0
+// Public Visibility=Default Availability=Available
+// [24] QModelIndex toModelIndex() const
+
+/*
+Returns the variant as a QModelIndex if the variant has userType() QModelIndex; otherwise returns a default constructed QModelIndex.
+
+This function was introduced in  Qt 5.0.
+
+See also canConvert(), convert(), and toPersistentModelIndex().
+*/
+impl /*struct*/ QVariant {
+  pub fn toModelIndex_0<RetType, T: QVariant_toModelIndex_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toModelIndex_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toModelIndex_0<RetType> {
+  fn toModelIndex_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toModelIndex_0<usize> for () {
+  fn toModelIndex_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant12toModelIndexEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:329
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QPersistentModelIndex toPersistentModelIndex() const
+
+/*
+Returns the variant as a QPersistentModelIndex if the variant has userType() QPersistentModelIndex; otherwise returns a default constructed QPersistentModelIndex.
+
+This function was introduced in  Qt 5.5.
+
+See also canConvert(), convert(), and toModelIndex().
+*/
+impl /*struct*/ QVariant {
+  pub fn toPersistentModelIndex_0<RetType, T: QVariant_toPersistentModelIndex_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toPersistentModelIndex_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toPersistentModelIndex_0<RetType> {
+  fn toPersistentModelIndex_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toPersistentModelIndex_0<usize> for () {
+  fn toPersistentModelIndex_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant22toPersistentModelIndexEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:330
+// index:0
+// Public Visibility=Default Availability=Available
+// [24] QJsonValue toJsonValue() const
+
+/*
+Returns the variant as a QJsonValue if the variant has userType() QJsonValue; otherwise returns a default constructed QJsonValue.
+
+This function was introduced in  Qt 5.0.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toJsonValue_0<RetType, T: QVariant_toJsonValue_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toJsonValue_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toJsonValue_0<RetType> {
+  fn toJsonValue_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toJsonValue_0<usize> for () {
+  fn toJsonValue_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant11toJsonValueEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:331
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QJsonObject toJsonObject() const
+
+/*
+Returns the variant as a QJsonObject if the variant has userType() QJsonObject; otherwise returns a default constructed QJsonObject.
+
+This function was introduced in  Qt 5.0.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toJsonObject_0<RetType, T: QVariant_toJsonObject_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toJsonObject_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toJsonObject_0<RetType> {
+  fn toJsonObject_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toJsonObject_0<usize> for () {
+  fn toJsonObject_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant12toJsonObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:332
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QJsonArray toJsonArray() const
+
+/*
+Returns the variant as a QJsonArray if the variant has userType() QJsonArray; otherwise returns a default constructed QJsonArray.
+
+This function was introduced in  Qt 5.0.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toJsonArray_0<RetType, T: QVariant_toJsonArray_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toJsonArray_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toJsonArray_0<RetType> {
+  fn toJsonArray_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toJsonArray_0<usize> for () {
+  fn toJsonArray_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant11toJsonArrayEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:333
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QJsonDocument toJsonDocument() const
+
+/*
+Returns the variant as a QJsonDocument if the variant has userType() QJsonDocument; otherwise returns a default constructed QJsonDocument.
+
+This function was introduced in  Qt 5.0.
+
+See also canConvert() and convert().
+*/
+impl /*struct*/ QVariant {
+  pub fn toJsonDocument_0<RetType, T: QVariant_toJsonDocument_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toJsonDocument_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_toJsonDocument_0<RetType> {
+  fn toJsonDocument_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_toJsonDocument_0<usize> for () {
+  fn toJsonDocument_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant14toJsonDocumentEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:337
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void load(QDataStream &)
+
+/*
+
+*/
+impl /*struct*/ QVariant {
+  pub fn load_0<RetType, T: QVariant_load_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.load_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_load_0<RetType> {
+  fn load_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_load_0<(/*void*/)> for (usize) {
+  fn load_0(self , rsthis: & QVariant) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN8QVariant4loadER11QDataStream", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:338
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void save(QDataStream &) const
+
+/*
+
+*/
+impl /*struct*/ QVariant {
+  pub fn save_0<RetType, T: QVariant_save_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.save_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_save_0<RetType> {
+  fn save_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_save_0<(/*void*/)> for (usize) {
+  fn save_0(self , rsthis: & QVariant) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZNK8QVariant4saveER11QDataStream", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:340
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] const char * typeToName(int)
+
+/*
+Converts the int representation of the storage type, typeId, to its string representation.
+
+Returns a null pointer if the type is QMetaType::UnknownType or doesn't exist.
+*/
+impl /*struct*/ QVariant {
+  pub fn typeToName_0<RetType, T: QVariant_typeToName_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.typeToName_0();
+    // return 1;
+  }
+}
+pub trait QVariant_typeToName_0<RetType> {
+  fn typeToName_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_typeToName_0<usize> for (i32) {
+  fn typeToName_0(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN8QVariant10typeToNameEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:341
+// index:0
+// Public static Visibility=Default Availability=Available
+// [4] QVariant::Type nameToType(const char *)
+
+/*
+Converts the string representation of the storage type given in name, to its enum representation.
+
+If the string representation cannot be converted to any enum representation, the variant is set to Invalid.
+*/
+impl /*struct*/ QVariant {
+  pub fn nameToType_0<RetType, T: QVariant_nameToType_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.nameToType_0();
+    // return 1;
+  }
+}
+pub trait QVariant_nameToType_0<RetType> {
+  fn nameToType_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_nameToType_0<i32> for (usize) {
+  fn nameToType_0(self ) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN8QVariant10nameToTypeEPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:343
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] void * data()
+
+/*
+
+*/
+impl /*struct*/ QVariant {
+  pub fn data_0<RetType, T: QVariant_data_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.data_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_data_0<RetType> {
+  fn data_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_data_0<usize> for () {
+  fn data_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZN8QVariant4dataEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:345
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] const void * data() const
+
+/*
+
+*/
+impl /*struct*/ QVariant {
+  pub fn data_1<RetType, T: QVariant_data_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.data_1(self);
+    // return 1;
+  }
+}
+pub trait QVariant_data_1<RetType> {
+  fn data_1(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_data_1<usize> for () {
+  fn data_1(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant4dataEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:344
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] const void * constData() const
+
+/*
+
+*/
+impl /*struct*/ QVariant {
+  pub fn constData_0<RetType, T: QVariant_constData_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.constData_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_constData_0<RetType> {
+  fn constData_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_constData_0<usize> for () {
+  fn constData_0(self , rsthis: & QVariant) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant9constDataEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:436
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator==(const QVariant &) const
+
+/*
+
+*/
+impl /*struct*/ QVariant {
+  pub fn operator_equal_equal_0<RetType, T: QVariant_operator_equal_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_equal_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_operator_equal_equal_0<RetType> {
+  fn operator_equal_equal_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_operator_equal_equal_0<bool> for (usize) {
+  fn operator_equal_equal_0(self , rsthis: & QVariant) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVarianteqERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:438
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QVariant &) const
+
+/*
+
+*/
+impl /*struct*/ QVariant {
+  pub fn operator_not_equal_0<RetType, T: QVariant_operator_not_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_not_equal_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_operator_not_equal_0<RetType> {
+  fn operator_not_equal_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_operator_not_equal_0<bool> for (usize) {
+  fn operator_not_equal_0(self , rsthis: & QVariant) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariantneERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:440
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator<(const QVariant &) const
+
+/*
+
+*/
+impl /*struct*/ QVariant {
+  pub fn operator_less_than_0<RetType, T: QVariant_operator_less_than_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_less_than_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_operator_less_than_0<RetType> {
+  fn operator_less_than_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_operator_less_than_0<bool> for (usize) {
+  fn operator_less_than_0(self , rsthis: & QVariant) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariantltERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:442
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator<=(const QVariant &) const
+
+/*
+
+*/
+impl /*struct*/ QVariant {
+  pub fn operator_less_than_equal_0<RetType, T: QVariant_operator_less_than_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_less_than_equal_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_operator_less_than_equal_0<RetType> {
+  fn operator_less_than_equal_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_operator_less_than_equal_0<bool> for (usize) {
+  fn operator_less_than_equal_0(self , rsthis: & QVariant) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariantleERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:444
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator>(const QVariant &) const
+
+/*
+
+*/
+impl /*struct*/ QVariant {
+  pub fn operator_greater_than_0<RetType, T: QVariant_operator_greater_than_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_greater_than_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_operator_greater_than_0<RetType> {
+  fn operator_greater_than_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_operator_greater_than_0<bool> for (usize) {
+  fn operator_greater_than_0(self , rsthis: & QVariant) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariantgtERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:446
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator>=(const QVariant &) const
+
+/*
+
+*/
+impl /*struct*/ QVariant {
+  pub fn operator_greater_than_equal_0<RetType, T: QVariant_operator_greater_than_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_greater_than_equal_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_operator_greater_than_equal_0<RetType> {
+  fn operator_greater_than_equal_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_operator_greater_than_equal_0<bool> for (usize) {
+  fn operator_greater_than_equal_0(self , rsthis: & QVariant) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariantgeERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:464
+// index:0
+// Protected Visibility=Default Availability=Available
+// [-2] void create(int, const void *)
+
+/*
+
+*/
+impl /*struct*/ QVariant {
+  pub fn create_0<RetType, T: QVariant_create_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.create_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_create_0<RetType> {
+  fn create_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_create_0<(/*void*/)> for (i32,usize) {
+  fn create_0(self , rsthis: & QVariant) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN8QVariant6createEiPKv", 2,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:465
+// index:0
+// Protected Visibility=Default Availability=Available
+// [1] bool cmp(const QVariant &) const
+
+/*
+
+*/
+impl /*struct*/ QVariant {
+  pub fn cmp_0<RetType, T: QVariant_cmp_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.cmp_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_cmp_0<RetType> {
+  fn cmp_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_cmp_0<bool> for (usize) {
+  fn cmp_0(self , rsthis: & QVariant) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant3cmpERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariant.h:466
+// index:0
+// Protected Visibility=Default Availability=Available
+// [4] int compare(const QVariant &) const
+
+/*
+
+*/
+impl /*struct*/ QVariant {
+  pub fn compare_0<RetType, T: QVariant_compare_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.compare_0(self);
+    // return 1;
+  }
+}
+pub trait QVariant_compare_0<RetType> {
+  fn compare_0(self , rsthis: & QVariant) -> RetType;
+}
+impl<'a> /*trait*/ QVariant_compare_0<i32> for (usize) {
+  fn compare_0(self , rsthis: & QVariant) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QVariant7compareERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+
+/*
+
+
+*/
+pub type QVariant__Type = i32;
+// 
+pub const QVariant__Invalid :QVariant__Type = 0;
+// 
+pub const QVariant__Bool :QVariant__Type = 1;
+// 
+pub const QVariant__Int :QVariant__Type = 2;
+// 
+pub const QVariant__UInt :QVariant__Type = 3;
+// 
+pub const QVariant__LongLong :QVariant__Type = 4;
+// 
+pub const QVariant__ULongLong :QVariant__Type = 5;
+// 
+pub const QVariant__Double :QVariant__Type = 6;
+// 
+pub const QVariant__Char :QVariant__Type = 7;
+// 
+pub const QVariant__Map :QVariant__Type = 8;
+// 
+pub const QVariant__List :QVariant__Type = 9;
+// 
+pub const QVariant__String :QVariant__Type = 10;
+// 
+pub const QVariant__StringList :QVariant__Type = 11;
+// 
+pub const QVariant__ByteArray :QVariant__Type = 12;
+// 
+pub const QVariant__BitArray :QVariant__Type = 13;
+// 
+pub const QVariant__Date :QVariant__Type = 14;
+// 
+pub const QVariant__Time :QVariant__Type = 15;
+// 
+pub const QVariant__DateTime :QVariant__Type = 16;
+// 
+pub const QVariant__Url :QVariant__Type = 17;
+// 
+pub const QVariant__Locale :QVariant__Type = 18;
+// 
+pub const QVariant__Rect :QVariant__Type = 19;
+// 
+pub const QVariant__RectF :QVariant__Type = 20;
+// 
+pub const QVariant__Size :QVariant__Type = 21;
+// 
+pub const QVariant__SizeF :QVariant__Type = 22;
+// 
+pub const QVariant__Line :QVariant__Type = 23;
+// 
+pub const QVariant__LineF :QVariant__Type = 24;
+// 
+pub const QVariant__Point :QVariant__Type = 25;
+// 
+pub const QVariant__PointF :QVariant__Type = 26;
+// 
+pub const QVariant__RegExp :QVariant__Type = 27;
+// 
+pub const QVariant__RegularExpression :QVariant__Type = 44;
+// 
+pub const QVariant__Hash :QVariant__Type = 28;
+// 
+pub const QVariant__EasingCurve :QVariant__Type = 29;
+// 
+pub const QVariant__Uuid :QVariant__Type = 30;
+// 
+pub const QVariant__ModelIndex :QVariant__Type = 42;
+// 
+pub const QVariant__PersistentModelIndex :QVariant__Type = 50;
+// 
+pub const QVariant__LastCoreType :QVariant__Type = 51;
+// 
+pub const QVariant__Font :QVariant__Type = 64;
+// 
+pub const QVariant__Pixmap :QVariant__Type = 65;
+// 
+pub const QVariant__Brush :QVariant__Type = 66;
+// 
+pub const QVariant__Color :QVariant__Type = 67;
+// 
+pub const QVariant__Palette :QVariant__Type = 68;
+// 
+pub const QVariant__Image :QVariant__Type = 70;
+// 
+pub const QVariant__Polygon :QVariant__Type = 71;
+// 
+pub const QVariant__Region :QVariant__Type = 72;
+// 
+pub const QVariant__Bitmap :QVariant__Type = 73;
+// 
+pub const QVariant__Cursor :QVariant__Type = 74;
+// 
+pub const QVariant__KeySequence :QVariant__Type = 75;
+// 
+pub const QVariant__Pen :QVariant__Type = 76;
+// 
+pub const QVariant__TextLength :QVariant__Type = 77;
+// 
+pub const QVariant__TextFormat :QVariant__Type = 78;
+// 
+pub const QVariant__Matrix :QVariant__Type = 79;
+// 
+pub const QVariant__Transform :QVariant__Type = 80;
+// 
+pub const QVariant__Matrix4x4 :QVariant__Type = 81;
+// 
+pub const QVariant__Vector2D :QVariant__Type = 82;
+// 
+pub const QVariant__Vector3D :QVariant__Type = 83;
+// 
+pub const QVariant__Vector4D :QVariant__Type = 84;
+// 
+pub const QVariant__Quaternion :QVariant__Type = 85;
+// 
+pub const QVariant__PolygonF :QVariant__Type = 86;
+// 
+pub const QVariant__Icon :QVariant__Type = 69;
+// 
+pub const QVariant__LastGuiType :QVariant__Type = 86;
+// 
+pub const QVariant__SizePolicy :QVariant__Type = 121;
+// 
+pub const QVariant__UserType :QVariant__Type = 1024;
+// 
+pub const QVariant__LastType :QVariant__Type = -1;
+pub fn QVariant_TypeItemName(val: i32) ->String {
+  match val {
+     QVariant__Invalid => // 0
+     {return String::from("Invalid");}
+     QVariant__Bool => // 1
+     {return String::from("Bool");}
+     QVariant__Int => // 2
+     {return String::from("Int");}
+     QVariant__UInt => // 3
+     {return String::from("UInt");}
+     QVariant__LongLong => // 4
+     {return String::from("LongLong");}
+     QVariant__ULongLong => // 5
+     {return String::from("ULongLong");}
+     QVariant__Double => // 6
+     {return String::from("Double");}
+     QVariant__Char => // 7
+     {return String::from("Char");}
+     QVariant__Map => // 8
+     {return String::from("Map");}
+     QVariant__List => // 9
+     {return String::from("List");}
+     QVariant__String => // 10
+     {return String::from("String");}
+     QVariant__StringList => // 11
+     {return String::from("StringList");}
+     QVariant__ByteArray => // 12
+     {return String::from("ByteArray");}
+     QVariant__BitArray => // 13
+     {return String::from("BitArray");}
+     QVariant__Date => // 14
+     {return String::from("Date");}
+     QVariant__Time => // 15
+     {return String::from("Time");}
+     QVariant__DateTime => // 16
+     {return String::from("DateTime");}
+     QVariant__Url => // 17
+     {return String::from("Url");}
+     QVariant__Locale => // 18
+     {return String::from("Locale");}
+     QVariant__Rect => // 19
+     {return String::from("Rect");}
+     QVariant__RectF => // 20
+     {return String::from("RectF");}
+     QVariant__Size => // 21
+     {return String::from("Size");}
+     QVariant__SizeF => // 22
+     {return String::from("SizeF");}
+     QVariant__Line => // 23
+     {return String::from("Line");}
+     QVariant__LineF => // 24
+     {return String::from("LineF");}
+     QVariant__Point => // 25
+     {return String::from("Point");}
+     QVariant__PointF => // 26
+     {return String::from("PointF");}
+     QVariant__RegExp => // 27
+     {return String::from("RegExp");}
+     QVariant__RegularExpression => // 44
+     {return String::from("RegularExpression");}
+     QVariant__Hash => // 28
+     {return String::from("Hash");}
+     QVariant__EasingCurve => // 29
+     {return String::from("EasingCurve");}
+     QVariant__Uuid => // 30
+     {return String::from("Uuid");}
+     QVariant__ModelIndex => // 42
+     {return String::from("ModelIndex");}
+     QVariant__PersistentModelIndex => // 50
+     {return String::from("PersistentModelIndex");}
+     QVariant__LastCoreType => // 51
+     {return String::from("LastCoreType");}
+     QVariant__Font => // 64
+     {return String::from("Font");}
+     QVariant__Pixmap => // 65
+     {return String::from("Pixmap");}
+     QVariant__Brush => // 66
+     {return String::from("Brush");}
+     QVariant__Color => // 67
+     {return String::from("Color");}
+     QVariant__Palette => // 68
+     {return String::from("Palette");}
+     QVariant__Image => // 70
+     {return String::from("Image");}
+     QVariant__Polygon => // 71
+     {return String::from("Polygon");}
+     QVariant__Region => // 72
+     {return String::from("Region");}
+     QVariant__Bitmap => // 73
+     {return String::from("Bitmap");}
+     QVariant__Cursor => // 74
+     {return String::from("Cursor");}
+     QVariant__KeySequence => // 75
+     {return String::from("KeySequence");}
+     QVariant__Pen => // 76
+     {return String::from("Pen");}
+     QVariant__TextLength => // 77
+     {return String::from("TextLength");}
+     QVariant__TextFormat => // 78
+     {return String::from("TextFormat");}
+     QVariant__Matrix => // 79
+     {return String::from("Matrix");}
+     QVariant__Transform => // 80
+     {return String::from("Transform");}
+     QVariant__Matrix4x4 => // 81
+     {return String::from("Matrix4x4");}
+     QVariant__Vector2D => // 82
+     {return String::from("Vector2D");}
+     QVariant__Vector3D => // 83
+     {return String::from("Vector3D");}
+     QVariant__Vector4D => // 84
+     {return String::from("Vector4D");}
+     QVariant__Quaternion => // 85
+     {return String::from("Quaternion");}
+     QVariant__PolygonF => // 86
+     {return String::from("PolygonF,LastGuiType");}
+     QVariant__Icon => // 69
+     {return String::from("Icon");}
+    // QVariant__LastGuiType => // 86
+    // {return String::from("");}
+     QVariant__SizePolicy => // 121
+     {return String::from("SizePolicy");}
+     QVariant__UserType => // 1024
+     {return String::from("UserType");}
+     QVariant__LastType => // -1
+     {return String::from("LastType");}
+  _ => {return format!("{}", val);}
+}
+}
+pub fn QVariant_TypeItemName_s(val: i32) ->String {
+  //var nilthis *QVariant
+  //return nilthis.TypeItemName(val);
+  return QVariant_TypeItemName(val);
+}
+
+//  body block end
+
+//  keep block begin
+
+//  keep block end

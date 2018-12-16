@@ -1,1076 +1,897 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qregularexpression.h
-// dst-file: /src/core/qregularexpression.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QRegularExpression
+// package qtcore
+// /usr/include/qt/QtCore/qregularexpression.h
+// #include <qregularexpression.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 74
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-// use super::qregularexpression::QRegularExpressionMatch; // 773
-// use super::qregularexpression::QRegularExpression; // 773
-use super::qstring::*; // 773
-use super::qstringlist::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QRegularExpressionMatchIterator_Class_Size() -> c_int;
-  // proto:  bool QRegularExpressionMatchIterator::hasNext();
-  fn C_ZNK31QRegularExpressionMatchIterator7hasNextEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  bool QRegularExpressionMatchIterator::isValid();
-  fn C_ZNK31QRegularExpressionMatchIterator7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  QRegularExpressionMatch QRegularExpressionMatchIterator::peekNext();
-  fn C_ZNK31QRegularExpressionMatchIterator8peekNextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QRegularExpressionMatchIterator::QRegularExpressionMatchIterator();
-  fn C_ZN31QRegularExpressionMatchIteratorC2Ev() -> u64;
-  // proto:  QRegularExpression QRegularExpressionMatchIterator::regularExpression();
-  fn C_ZNK31QRegularExpressionMatchIterator17regularExpressionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QRegularExpressionMatchIterator::QRegularExpressionMatchIterator(const QRegularExpressionMatchIterator & iterator);
-  fn C_ZN31QRegularExpressionMatchIteratorC2ERKS_(arg0: *mut c_void) -> u64;
-  // proto:  void QRegularExpressionMatchIterator::~QRegularExpressionMatchIterator();
-  fn C_ZN31QRegularExpressionMatchIteratorD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  QRegularExpressionMatch QRegularExpressionMatchIterator::next();
-  fn C_ZN31QRegularExpressionMatchIterator4nextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QRegularExpressionMatchIterator::swap(QRegularExpressionMatchIterator & other);
-  fn C_ZN31QRegularExpressionMatchIterator4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  fn QRegularExpression_Class_Size() -> c_int;
-  // proto:  int QRegularExpression::patternErrorOffset();
-  fn C_ZNK18QRegularExpression18patternErrorOffsetEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  QString QRegularExpression::pattern();
-  fn C_ZNK18QRegularExpression7patternEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QRegularExpression::~QRegularExpression();
-  fn C_ZN18QRegularExpressionD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void QRegularExpression::optimize();
-  fn C_ZNK18QRegularExpression8optimizeEv(qthis: u64 /* *mut c_void*/);
-  // proto: static QString QRegularExpression::escape(const QString & str);
-  fn C_ZN18QRegularExpression6escapeERK7QString(arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QRegularExpression::QRegularExpression();
-  fn C_ZN18QRegularExpressionC2Ev() -> u64;
-  // proto:  void QRegularExpression::swap(QRegularExpression & other);
-  fn C_ZN18QRegularExpression4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  QString QRegularExpression::errorString();
-  fn C_ZNK18QRegularExpression11errorStringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  bool QRegularExpression::isValid();
-  fn C_ZNK18QRegularExpression7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QRegularExpression::QRegularExpression(const QRegularExpression & re);
-  fn C_ZN18QRegularExpressionC2ERKS_(arg0: *mut c_void) -> u64;
-  // proto:  QStringList QRegularExpression::namedCaptureGroups();
-  fn C_ZNK18QRegularExpression18namedCaptureGroupsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  int QRegularExpression::captureCount();
-  fn C_ZNK18QRegularExpression12captureCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  void QRegularExpression::setPattern(const QString & pattern);
-  fn C_ZN18QRegularExpression10setPatternERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  fn QRegularExpressionMatch_Class_Size() -> c_int;
-  // proto:  int QRegularExpressionMatch::lastCapturedIndex();
-  fn C_ZNK23QRegularExpressionMatch17lastCapturedIndexEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  void QRegularExpressionMatch::QRegularExpressionMatch();
-  fn C_ZN23QRegularExpressionMatchC2Ev() -> u64;
-  // proto:  bool QRegularExpressionMatch::isValid();
-  fn C_ZNK23QRegularExpressionMatch7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  int QRegularExpressionMatch::capturedLength(int nth);
-  fn C_ZNK23QRegularExpressionMatch14capturedLengthEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
-  // proto:  int QRegularExpressionMatch::capturedLength(const QString & name);
-  fn C_ZNK23QRegularExpressionMatch14capturedLengthERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
-  // proto:  QStringRef QRegularExpressionMatch::capturedRef(int nth);
-  fn C_ZNK23QRegularExpressionMatch11capturedRefEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
-  // proto:  int QRegularExpressionMatch::capturedEnd(const QString & name);
-  fn C_ZNK23QRegularExpressionMatch11capturedEndERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
-  // proto:  QString QRegularExpressionMatch::captured(const QString & name);
-  fn C_ZNK23QRegularExpressionMatch8capturedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  QStringList QRegularExpressionMatch::capturedTexts();
-  fn C_ZNK23QRegularExpressionMatch13capturedTextsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QRegularExpressionMatch::QRegularExpressionMatch(const QRegularExpressionMatch & match);
-  fn C_ZN23QRegularExpressionMatchC2ERKS_(arg0: *mut c_void) -> u64;
-  // proto:  void QRegularExpressionMatch::swap(QRegularExpressionMatch & other);
-  fn C_ZN23QRegularExpressionMatch4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QRegularExpressionMatch::~QRegularExpressionMatch();
-  fn C_ZN23QRegularExpressionMatchD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  int QRegularExpressionMatch::capturedEnd(int nth);
-  fn C_ZNK23QRegularExpressionMatch11capturedEndEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
-  // proto:  QStringRef QRegularExpressionMatch::capturedRef(const QString & name);
-  fn C_ZNK23QRegularExpressionMatch11capturedRefERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  bool QRegularExpressionMatch::hasMatch();
-  fn C_ZNK23QRegularExpressionMatch8hasMatchEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  int QRegularExpressionMatch::capturedStart(const QString & name);
-  fn C_ZNK23QRegularExpressionMatch13capturedStartERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
-  // proto:  QRegularExpression QRegularExpressionMatch::regularExpression();
-  fn C_ZNK23QRegularExpressionMatch17regularExpressionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString QRegularExpressionMatch::captured(int nth);
-  fn C_ZNK23QRegularExpressionMatch8capturedEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
-  // proto:  int QRegularExpressionMatch::capturedStart(int nth);
-  fn C_ZNK23QRegularExpressionMatch13capturedStartEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
-  // proto:  bool QRegularExpressionMatch::hasPartialMatch();
-  fn C_ZNK23QRegularExpressionMatch15hasPartialMatchEv(qthis: u64 /* *mut c_void*/) -> c_char;
-} // <= ext block end
 
-// body block begin =>
-// class sizeof(QRegularExpressionMatchIterator)=1
-#[derive(Default)]
-pub struct QRegularExpressionMatchIterator {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
-}
 
-// class sizeof(QRegularExpression)=1
-#[derive(Default)]
+/*
+
+*/
+#[derive(Default)] // class sizeof(QRegularExpression)=8
 pub struct QRegularExpression {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
+  // qbase: none,
+  pub qclsinst: usize /* *mut c_void*/,
 }
-
-// class sizeof(QRegularExpressionMatch)=1
-#[derive(Default)]
-pub struct QRegularExpressionMatch {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
-}
-
-impl /*struct*/ QRegularExpressionMatchIterator {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QRegularExpressionMatchIterator {
-    return QRegularExpressionMatchIterator{qclsinst: qthis, ..Default::default()};
-  }
-}
-  // proto:  bool QRegularExpressionMatchIterator::hasNext();
-impl /*struct*/ QRegularExpressionMatchIterator {
-  pub fn hasNext<RetType, T: QRegularExpressionMatchIterator_hasNext<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.hasNext(self);
-    // return 1;
-  }
-}
-
-pub trait QRegularExpressionMatchIterator_hasNext<RetType> {
-  fn hasNext(self , rsthis: & QRegularExpressionMatchIterator) -> RetType;
-}
-
-  // proto:  bool QRegularExpressionMatchIterator::hasNext();
-impl<'a> /*trait*/ QRegularExpressionMatchIterator_hasNext<i8> for () {
-  fn hasNext(self , rsthis: & QRegularExpressionMatchIterator) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK31QRegularExpressionMatchIterator7hasNextEv()};
-    let mut ret = unsafe {C_ZNK31QRegularExpressionMatchIterator7hasNextEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  bool QRegularExpressionMatchIterator::isValid();
-impl /*struct*/ QRegularExpressionMatchIterator {
-  pub fn isValid<RetType, T: QRegularExpressionMatchIterator_isValid<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isValid(self);
-    // return 1;
-  }
-}
-
-pub trait QRegularExpressionMatchIterator_isValid<RetType> {
-  fn isValid(self , rsthis: & QRegularExpressionMatchIterator) -> RetType;
-}
-
-  // proto:  bool QRegularExpressionMatchIterator::isValid();
-impl<'a> /*trait*/ QRegularExpressionMatchIterator_isValid<i8> for () {
-  fn isValid(self , rsthis: & QRegularExpressionMatchIterator) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK31QRegularExpressionMatchIterator7isValidEv()};
-    let mut ret = unsafe {C_ZNK31QRegularExpressionMatchIterator7isValidEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QRegularExpressionMatch QRegularExpressionMatchIterator::peekNext();
-impl /*struct*/ QRegularExpressionMatchIterator {
-  pub fn peekNext<RetType, T: QRegularExpressionMatchIterator_peekNext<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.peekNext(self);
-    // return 1;
-  }
-}
-
-pub trait QRegularExpressionMatchIterator_peekNext<RetType> {
-  fn peekNext(self , rsthis: & QRegularExpressionMatchIterator) -> RetType;
-}
-
-  // proto:  QRegularExpressionMatch QRegularExpressionMatchIterator::peekNext();
-impl<'a> /*trait*/ QRegularExpressionMatchIterator_peekNext<QRegularExpressionMatch> for () {
-  fn peekNext(self , rsthis: & QRegularExpressionMatchIterator) -> QRegularExpressionMatch {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK31QRegularExpressionMatchIterator8peekNextEv()};
-    let mut ret = unsafe {C_ZNK31QRegularExpressionMatchIterator8peekNextEv(rsthis.qclsinst)};
-    let mut ret1 = QRegularExpressionMatch::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QRegularExpressionMatchIterator::QRegularExpressionMatchIterator();
-impl /*struct*/ QRegularExpressionMatchIterator {
-  pub fn new<T: QRegularExpressionMatchIterator_new>(value: T) -> QRegularExpressionMatchIterator {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QRegularExpressionMatchIterator_new {
-  fn new(self) -> QRegularExpressionMatchIterator;
-}
-
-  // proto:  void QRegularExpressionMatchIterator::QRegularExpressionMatchIterator();
-impl<'a> /*trait*/ QRegularExpressionMatchIterator_new for () {
-  fn new(self) -> QRegularExpressionMatchIterator {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN31QRegularExpressionMatchIteratorC2Ev()};
-    let ctysz: c_int = unsafe{QRegularExpressionMatchIterator_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let qthis: u64 = unsafe {C_ZN31QRegularExpressionMatchIteratorC2Ev()};
-    let rsthis = QRegularExpressionMatchIterator{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  QRegularExpression QRegularExpressionMatchIterator::regularExpression();
-impl /*struct*/ QRegularExpressionMatchIterator {
-  pub fn regularExpression<RetType, T: QRegularExpressionMatchIterator_regularExpression<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.regularExpression(self);
-    // return 1;
-  }
-}
-
-pub trait QRegularExpressionMatchIterator_regularExpression<RetType> {
-  fn regularExpression(self , rsthis: & QRegularExpressionMatchIterator) -> RetType;
-}
-
-  // proto:  QRegularExpression QRegularExpressionMatchIterator::regularExpression();
-impl<'a> /*trait*/ QRegularExpressionMatchIterator_regularExpression<QRegularExpression> for () {
-  fn regularExpression(self , rsthis: & QRegularExpressionMatchIterator) -> QRegularExpression {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK31QRegularExpressionMatchIterator17regularExpressionEv()};
-    let mut ret = unsafe {C_ZNK31QRegularExpressionMatchIterator17regularExpressionEv(rsthis.qclsinst)};
-    let mut ret1 = QRegularExpression::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QRegularExpressionMatchIterator::QRegularExpressionMatchIterator(const QRegularExpressionMatchIterator & iterator);
-impl<'a> /*trait*/ QRegularExpressionMatchIterator_new for (&'a QRegularExpressionMatchIterator) {
-  fn new(self) -> QRegularExpressionMatchIterator {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN31QRegularExpressionMatchIteratorC2ERKS_()};
-    let ctysz: c_int = unsafe{QRegularExpressionMatchIterator_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN31QRegularExpressionMatchIteratorC2ERKS_(arg0)};
-    let rsthis = QRegularExpressionMatchIterator{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QRegularExpressionMatchIterator::~QRegularExpressionMatchIterator();
-impl /*struct*/ QRegularExpressionMatchIterator {
-  pub fn free<RetType, T: QRegularExpressionMatchIterator_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
-    // return 1;
-  }
-}
-
-pub trait QRegularExpressionMatchIterator_free<RetType> {
-  fn free(self , rsthis: & QRegularExpressionMatchIterator) -> RetType;
-}
-
-  // proto:  void QRegularExpressionMatchIterator::~QRegularExpressionMatchIterator();
-impl<'a> /*trait*/ QRegularExpressionMatchIterator_free<()> for () {
-  fn free(self , rsthis: & QRegularExpressionMatchIterator) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN31QRegularExpressionMatchIteratorD2Ev()};
-     unsafe {C_ZN31QRegularExpressionMatchIteratorD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  QRegularExpressionMatch QRegularExpressionMatchIterator::next();
-impl /*struct*/ QRegularExpressionMatchIterator {
-  pub fn next<RetType, T: QRegularExpressionMatchIterator_next<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.next(self);
-    // return 1;
-  }
-}
-
-pub trait QRegularExpressionMatchIterator_next<RetType> {
-  fn next(self , rsthis: & QRegularExpressionMatchIterator) -> RetType;
-}
-
-  // proto:  QRegularExpressionMatch QRegularExpressionMatchIterator::next();
-impl<'a> /*trait*/ QRegularExpressionMatchIterator_next<QRegularExpressionMatch> for () {
-  fn next(self , rsthis: & QRegularExpressionMatchIterator) -> QRegularExpressionMatch {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN31QRegularExpressionMatchIterator4nextEv()};
-    let mut ret = unsafe {C_ZN31QRegularExpressionMatchIterator4nextEv(rsthis.qclsinst)};
-    let mut ret1 = QRegularExpressionMatch::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QRegularExpressionMatchIterator::swap(QRegularExpressionMatchIterator & other);
-impl /*struct*/ QRegularExpressionMatchIterator {
-  pub fn swap<RetType, T: QRegularExpressionMatchIterator_swap<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.swap(self);
-    // return 1;
-  }
-}
-
-pub trait QRegularExpressionMatchIterator_swap<RetType> {
-  fn swap(self , rsthis: & QRegularExpressionMatchIterator) -> RetType;
-}
-
-  // proto:  void QRegularExpressionMatchIterator::swap(QRegularExpressionMatchIterator & other);
-impl<'a> /*trait*/ QRegularExpressionMatchIterator_swap<()> for (&'a QRegularExpressionMatchIterator) {
-  fn swap(self , rsthis: & QRegularExpressionMatchIterator) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN31QRegularExpressionMatchIterator4swapERS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN31QRegularExpressionMatchIterator4swapERS_(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
+// type QRegularExpression_ITF interface {
+//    QRegularExpression_PTR() *QRegularExpression
+//}
+//func (ptr *QRegularExpression) QRegularExpression_PTR() *QRegularExpression { return ptr }
 
 impl /*struct*/ QRegularExpression {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QRegularExpression {
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QRegularExpression {
     return QRegularExpression{qclsinst: qthis, ..Default::default()};
   }
 }
-  // proto:  int QRegularExpression::patternErrorOffset();
+//impl Deref for QRegularExpression {
+//  type Target = QRegularExpressionBASE;
+//
+//  fn deref(&self) -> &QRegularExpressionBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QRegularExpressionBASE> for QRegularExpression {
+//  fn as_ref(& self) -> & QRegularExpressionBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qregularexpression.h:81
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] QRegularExpression::PatternOptions patternOptions() const
+
+/*
+Returns the pattern options for the regular expression.
+
+See also setPatternOptions() and pattern().
+*/
 impl /*struct*/ QRegularExpression {
-  pub fn patternErrorOffset<RetType, T: QRegularExpression_patternErrorOffset<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.patternErrorOffset(self);
+  pub fn patternOptions_0<RetType, T: QRegularExpression_patternOptions_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.patternOptions_0(self);
     // return 1;
   }
 }
-
-pub trait QRegularExpression_patternErrorOffset<RetType> {
-  fn patternErrorOffset(self , rsthis: & QRegularExpression) -> RetType;
+pub trait QRegularExpression_patternOptions_0<RetType> {
+  fn patternOptions_0(self , rsthis: & QRegularExpression) -> RetType;
 }
-
-  // proto:  int QRegularExpression::patternErrorOffset();
-impl<'a> /*trait*/ QRegularExpression_patternErrorOffset<i32> for () {
-  fn patternErrorOffset(self , rsthis: & QRegularExpression) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK18QRegularExpression18patternErrorOffsetEv()};
-    let mut ret = unsafe {C_ZNK18QRegularExpression18patternErrorOffsetEv(rsthis.qclsinst)};
-    return ret as i32; // 1
+impl<'a> /*trait*/ QRegularExpression_patternOptions_0<i32> for () {
+  fn patternOptions_0(self , rsthis: & QRegularExpression) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QRegularExpression14patternOptionsEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i32 = Default::default(); return dret;
   }
 }
 
-  // proto:  QString QRegularExpression::pattern();
+// /usr/include/qt/QtCore/qregularexpression.h:82
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setPatternOptions(QRegularExpression::PatternOptions)
+
+/*
+Sets the given options as the pattern options of the regular expression. The pattern string is left unchanged.
+
+See also patternOptions() and setPattern().
+*/
 impl /*struct*/ QRegularExpression {
-  pub fn pattern<RetType, T: QRegularExpression_pattern<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.pattern(self);
+  pub fn setPatternOptions_0<RetType, T: QRegularExpression_setPatternOptions_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setPatternOptions_0(self);
+    // return 1;
+  }
+}
+pub trait QRegularExpression_setPatternOptions_0<RetType> {
+  fn setPatternOptions_0(self , rsthis: & QRegularExpression) -> RetType;
+}
+impl<'a> /*trait*/ QRegularExpression_setPatternOptions_0<(/*void*/)> for (i32) {
+  fn setPatternOptions_0(self , rsthis: & QRegularExpression) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN18QRegularExpression17setPatternOptionsE6QFlagsINS_13PatternOptionEE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QRegularExpression_pattern<RetType> {
-  fn pattern(self , rsthis: & QRegularExpression) -> RetType;
-}
+// /usr/include/qt/QtCore/qregularexpression.h:84
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QRegularExpression()
 
-  // proto:  QString QRegularExpression::pattern();
-impl<'a> /*trait*/ QRegularExpression_pattern<QString> for () {
-  fn pattern(self , rsthis: & QRegularExpression) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK18QRegularExpression7patternEv()};
-    let mut ret = unsafe {C_ZNK18QRegularExpression7patternEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
+/*
+Constructs a QRegularExpression object with an empty pattern and no pattern options.
 
-  // proto:  void QRegularExpression::~QRegularExpression();
+See also setPattern() and setPatternOptions().
+*/
+// QRegularExpression() ctx.fn_proto_cpp
 impl /*struct*/ QRegularExpression {
-  pub fn free<RetType, T: QRegularExpression_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
-    // return 1;
-  }
-}
-
-pub trait QRegularExpression_free<RetType> {
-  fn free(self , rsthis: & QRegularExpression) -> RetType;
-}
-
-  // proto:  void QRegularExpression::~QRegularExpression();
-impl<'a> /*trait*/ QRegularExpression_free<()> for () {
-  fn free(self , rsthis: & QRegularExpression) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QRegularExpressionD2Ev()};
-     unsafe {C_ZN18QRegularExpressionD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QRegularExpression::optimize();
-impl /*struct*/ QRegularExpression {
-  pub fn optimize<RetType, T: QRegularExpression_optimize<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.optimize(self);
-    // return 1;
-  }
-}
-
-pub trait QRegularExpression_optimize<RetType> {
-  fn optimize(self , rsthis: & QRegularExpression) -> RetType;
-}
-
-  // proto:  void QRegularExpression::optimize();
-impl<'a> /*trait*/ QRegularExpression_optimize<()> for () {
-  fn optimize(self , rsthis: & QRegularExpression) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK18QRegularExpression8optimizeEv()};
-     unsafe {C_ZNK18QRegularExpression8optimizeEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto: static QString QRegularExpression::escape(const QString & str);
-impl /*struct*/ QRegularExpression {
-  pub fn escape_s<RetType, T: QRegularExpression_escape_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.escape_s();
-    // return 1;
-  }
-}
-
-pub trait QRegularExpression_escape_s<RetType> {
-  fn escape_s(self ) -> RetType;
-}
-
-  // proto: static QString QRegularExpression::escape(const QString & str);
-impl<'a> /*trait*/ QRegularExpression_escape_s<QString> for (&'a QString) {
-  fn escape_s(self ) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QRegularExpression6escapeERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN18QRegularExpression6escapeERK7QString(arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QRegularExpression::QRegularExpression();
-impl /*struct*/ QRegularExpression {
-  pub fn new<T: QRegularExpression_new>(value: T) -> QRegularExpression {
-    let rsthis = value.new();
+  pub fn QRegularExpression_0<T: QRegularExpression_QRegularExpression_0>(value: T) -> QRegularExpression {
+    let rsthis = value.QRegularExpression_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QRegularExpression_new {
-  fn new(self) -> QRegularExpression;
+pub trait QRegularExpression_QRegularExpression_0 {
+  fn QRegularExpression_0(self) -> QRegularExpression;
 }
-
-  // proto:  void QRegularExpression::QRegularExpression();
-impl<'a> /*trait*/ QRegularExpression_new for () {
-  fn new(self) -> QRegularExpression {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QRegularExpression() ctx.fn_proto_cpp
+impl<'a> /*trait*/ QRegularExpression_QRegularExpression_0 for () {
+  fn QRegularExpression_0(self) -> QRegularExpression {
     // unsafe{_ZN18QRegularExpressionC2Ev()};
-    let ctysz: c_int = unsafe{QRegularExpression_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let qthis: u64 = unsafe {C_ZN18QRegularExpressionC2Ev()};
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QRegularExpressionC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QRegularExpression{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QRegularExpression::swap(QRegularExpression & other);
+// /usr/include/qt/QtCore/qregularexpression.h:85
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QRegularExpression(const QString &, QRegularExpression::PatternOptions)
+
+/*
+Constructs a QRegularExpression object with an empty pattern and no pattern options.
+
+See also setPattern() and setPatternOptions().
+*/
+// QRegularExpression(const QString &, QRegularExpression::PatternOptions) ctx.fn_proto_cpp
 impl /*struct*/ QRegularExpression {
-  pub fn swap<RetType, T: QRegularExpression_swap<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.swap(self);
+  pub fn QRegularExpression_1<T: QRegularExpression_QRegularExpression_1>(value: T) -> QRegularExpression {
+    let rsthis = value.QRegularExpression_1();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QRegularExpression_swap<RetType> {
-  fn swap(self , rsthis: & QRegularExpression) -> RetType;
+pub trait QRegularExpression_QRegularExpression_1 {
+  fn QRegularExpression_1(self) -> QRegularExpression;
 }
-
-  // proto:  void QRegularExpression::swap(QRegularExpression & other);
-impl<'a> /*trait*/ QRegularExpression_swap<()> for (&'a QRegularExpression) {
-  fn swap(self , rsthis: & QRegularExpression) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QRegularExpression4swapERS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN18QRegularExpression4swapERS_(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  QString QRegularExpression::errorString();
-impl /*struct*/ QRegularExpression {
-  pub fn errorString<RetType, T: QRegularExpression_errorString<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.errorString(self);
-    // return 1;
-  }
-}
-
-pub trait QRegularExpression_errorString<RetType> {
-  fn errorString(self , rsthis: & QRegularExpression) -> RetType;
-}
-
-  // proto:  QString QRegularExpression::errorString();
-impl<'a> /*trait*/ QRegularExpression_errorString<QString> for () {
-  fn errorString(self , rsthis: & QRegularExpression) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK18QRegularExpression11errorStringEv()};
-    let mut ret = unsafe {C_ZNK18QRegularExpression11errorStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  bool QRegularExpression::isValid();
-impl /*struct*/ QRegularExpression {
-  pub fn isValid<RetType, T: QRegularExpression_isValid<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isValid(self);
-    // return 1;
-  }
-}
-
-pub trait QRegularExpression_isValid<RetType> {
-  fn isValid(self , rsthis: & QRegularExpression) -> RetType;
-}
-
-  // proto:  bool QRegularExpression::isValid();
-impl<'a> /*trait*/ QRegularExpression_isValid<i8> for () {
-  fn isValid(self , rsthis: & QRegularExpression) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK18QRegularExpression7isValidEv()};
-    let mut ret = unsafe {C_ZNK18QRegularExpression7isValidEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QRegularExpression::QRegularExpression(const QRegularExpression & re);
-impl<'a> /*trait*/ QRegularExpression_new for (&'a QRegularExpression) {
-  fn new(self) -> QRegularExpression {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QRegularExpressionC2ERKS_()};
-    let ctysz: c_int = unsafe{QRegularExpression_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN18QRegularExpressionC2ERKS_(arg0)};
+// QRegularExpression(const QString &, QRegularExpression::PatternOptions) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QRegularExpression_QRegularExpression_1 for (usize,i32) {
+  fn QRegularExpression_1(self) -> QRegularExpression {
+    // unsafe{_ZN18QRegularExpressionC2ERK7QString6QFlagsINS_13PatternOptionEE()};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QRegularExpressionC2ERK7QString6QFlagsINS_13PatternOptionEE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QRegularExpression{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  QStringList QRegularExpression::namedCaptureGroups();
+// /usr/include/qt/QtCore/qregularexpression.h:87
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void ~QRegularExpression()
+
+/*
+
+*/
+pub fn DeleteQRegularExpression(this :*mut QRegularExpression) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN18QRegularExpressionD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 8)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qregularexpression.h:88
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QRegularExpression & operator=(const QRegularExpression &)
+
+/*
+
+*/
 impl /*struct*/ QRegularExpression {
-  pub fn namedCaptureGroups<RetType, T: QRegularExpression_namedCaptureGroups<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.namedCaptureGroups(self);
+  pub fn operator_equal_0<RetType, T: QRegularExpression_operator_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_0(self);
     // return 1;
   }
 }
-
-pub trait QRegularExpression_namedCaptureGroups<RetType> {
-  fn namedCaptureGroups(self , rsthis: & QRegularExpression) -> RetType;
+pub trait QRegularExpression_operator_equal_0<RetType> {
+  fn operator_equal_0(self , rsthis: & QRegularExpression) -> RetType;
 }
-
-  // proto:  QStringList QRegularExpression::namedCaptureGroups();
-impl<'a> /*trait*/ QRegularExpression_namedCaptureGroups<QStringList> for () {
-  fn namedCaptureGroups(self , rsthis: & QRegularExpression) -> QStringList {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK18QRegularExpression18namedCaptureGroupsEv()};
-    let mut ret = unsafe {C_ZNK18QRegularExpression18namedCaptureGroupsEv(rsthis.qclsinst)};
-    let mut ret1 = QStringList::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QRegularExpression_operator_equal_0<usize> for (usize) {
+  fn operator_equal_0(self , rsthis: & QRegularExpression) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN18QRegularExpressionaSERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  int QRegularExpression::captureCount();
+// /usr/include/qt/QtCore/qregularexpression.h:91
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QRegularExpression & operator=(QRegularExpression &&)
+
+/*
+
+*/
 impl /*struct*/ QRegularExpression {
-  pub fn captureCount<RetType, T: QRegularExpression_captureCount<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.captureCount(self);
+  pub fn operator_equal_1<RetType, T: QRegularExpression_operator_equal_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_1(self);
     // return 1;
   }
 }
-
-pub trait QRegularExpression_captureCount<RetType> {
-  fn captureCount(self , rsthis: & QRegularExpression) -> RetType;
+pub trait QRegularExpression_operator_equal_1<RetType> {
+  fn operator_equal_1(self , rsthis: & QRegularExpression) -> RetType;
 }
-
-  // proto:  int QRegularExpression::captureCount();
-impl<'a> /*trait*/ QRegularExpression_captureCount<i32> for () {
-  fn captureCount(self , rsthis: & QRegularExpression) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK18QRegularExpression12captureCountEv()};
-    let mut ret = unsafe {C_ZNK18QRegularExpression12captureCountEv(rsthis.qclsinst)};
-    return ret as i32; // 1
+impl<'a> /*trait*/ QRegularExpression_operator_equal_1<usize> for (usize) {
+  fn operator_equal_1(self , rsthis: & QRegularExpression) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN18QRegularExpressionaSEOS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  void QRegularExpression::setPattern(const QString & pattern);
+// /usr/include/qt/QtCore/qregularexpression.h:95
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QRegularExpression &)
+
+/*
+Swaps the regular expression other with this regular expression. This operation is very fast and never fails.
+*/
 impl /*struct*/ QRegularExpression {
-  pub fn setPattern<RetType, T: QRegularExpression_setPattern<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setPattern(self);
+  pub fn swap_0<RetType, T: QRegularExpression_swap_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.swap_0(self);
+    // return 1;
+  }
+}
+pub trait QRegularExpression_swap_0<RetType> {
+  fn swap_0(self , rsthis: & QRegularExpression) -> RetType;
+}
+impl<'a> /*trait*/ QRegularExpression_swap_0<(/*void*/)> for (usize) {
+  fn swap_0(self , rsthis: & QRegularExpression) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN18QRegularExpression4swapERS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QRegularExpression_setPattern<RetType> {
-  fn setPattern(self , rsthis: & QRegularExpression) -> RetType;
+// /usr/include/qt/QtCore/qregularexpression.h:97
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString pattern() const
+
+/*
+Returns the pattern string of the regular expression.
+
+See also setPattern() and patternOptions().
+*/
+impl /*struct*/ QRegularExpression {
+  pub fn pattern_0<RetType, T: QRegularExpression_pattern_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.pattern_0(self);
+    // return 1;
+  }
+}
+pub trait QRegularExpression_pattern_0<RetType> {
+  fn pattern_0(self , rsthis: & QRegularExpression) -> RetType;
+}
+impl<'a> /*trait*/ QRegularExpression_pattern_0<usize> for () {
+  fn pattern_0(self , rsthis: & QRegularExpression) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QRegularExpression7patternEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
 }
 
-  // proto:  void QRegularExpression::setPattern(const QString & pattern);
-impl<'a> /*trait*/ QRegularExpression_setPattern<()> for (&'a QString) {
-  fn setPattern(self , rsthis: & QRegularExpression) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QRegularExpression10setPatternERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN18QRegularExpression10setPatternERK7QString(rsthis.qclsinst, arg0)};
+// /usr/include/qt/QtCore/qregularexpression.h:98
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setPattern(const QString &)
+
+/*
+Sets the pattern string of the regular expression to pattern. The pattern options are left unchanged.
+
+See also pattern() and setPatternOptions().
+*/
+impl /*struct*/ QRegularExpression {
+  pub fn setPattern_0<RetType, T: QRegularExpression_setPattern_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setPattern_0(self);
+    // return 1;
+  }
+}
+pub trait QRegularExpression_setPattern_0<RetType> {
+  fn setPattern_0(self , rsthis: & QRegularExpression) -> RetType;
+}
+impl<'a> /*trait*/ QRegularExpression_setPattern_0<(/*void*/)> for (usize) {
+  fn setPattern_0(self , rsthis: & QRegularExpression) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN18QRegularExpression10setPatternERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-impl /*struct*/ QRegularExpressionMatch {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QRegularExpressionMatch {
-    return QRegularExpressionMatch{qclsinst: qthis, ..Default::default()};
+// /usr/include/qt/QtCore/qregularexpression.h:100
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isValid() const
+
+/*
+Returns true if the regular expression is a valid regular expression (that is, it contains no syntax errors, etc.), or false otherwise. Use errorString() to obtain a textual description of the error.
+
+See also errorString() and patternErrorOffset().
+*/
+impl /*struct*/ QRegularExpression {
+  pub fn isValid_0<RetType, T: QRegularExpression_isValid_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isValid_0(self);
+    // return 1;
   }
 }
-  // proto:  int QRegularExpressionMatch::lastCapturedIndex();
-impl /*struct*/ QRegularExpressionMatch {
-  pub fn lastCapturedIndex<RetType, T: QRegularExpressionMatch_lastCapturedIndex<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.lastCapturedIndex(self);
+pub trait QRegularExpression_isValid_0<RetType> {
+  fn isValid_0(self , rsthis: & QRegularExpression) -> RetType;
+}
+impl<'a> /*trait*/ QRegularExpression_isValid_0<bool> for () {
+  fn isValid_0(self , rsthis: & QRegularExpression) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QRegularExpression7isValidEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qregularexpression.h:101
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int patternErrorOffset() const
+
+/*
+Returns the offset, inside the pattern string, at which an error was found when checking the validity of the regular expression. If no error was found, then -1 is returned.
+
+See also pattern(), isValid(), and errorString().
+*/
+impl /*struct*/ QRegularExpression {
+  pub fn patternErrorOffset_0<RetType, T: QRegularExpression_patternErrorOffset_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.patternErrorOffset_0(self);
+    // return 1;
+  }
+}
+pub trait QRegularExpression_patternErrorOffset_0<RetType> {
+  fn patternErrorOffset_0(self , rsthis: & QRegularExpression) -> RetType;
+}
+impl<'a> /*trait*/ QRegularExpression_patternErrorOffset_0<i32> for () {
+  fn patternErrorOffset_0(self , rsthis: & QRegularExpression) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QRegularExpression18patternErrorOffsetEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qregularexpression.h:102
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString errorString() const
+
+/*
+Returns a textual description of the error found when checking the validity of the regular expression, or "no error" if no error was found.
+
+See also isValid() and patternErrorOffset().
+*/
+impl /*struct*/ QRegularExpression {
+  pub fn errorString_0<RetType, T: QRegularExpression_errorString_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.errorString_0(self);
+    // return 1;
+  }
+}
+pub trait QRegularExpression_errorString_0<RetType> {
+  fn errorString_0(self , rsthis: & QRegularExpression) -> RetType;
+}
+impl<'a> /*trait*/ QRegularExpression_errorString_0<usize> for () {
+  fn errorString_0(self , rsthis: & QRegularExpression) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QRegularExpression11errorStringEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qregularexpression.h:104
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int captureCount() const
+
+/*
+Returns the number of capturing groups inside the pattern string, or -1 if the regular expression is not valid.
+
+Note: The implicit capturing group 0 is not included in the returned number.
+
+See also isValid().
+*/
+impl /*struct*/ QRegularExpression {
+  pub fn captureCount_0<RetType, T: QRegularExpression_captureCount_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.captureCount_0(self);
+    // return 1;
+  }
+}
+pub trait QRegularExpression_captureCount_0<RetType> {
+  fn captureCount_0(self , rsthis: & QRegularExpression) -> RetType;
+}
+impl<'a> /*trait*/ QRegularExpression_captureCount_0<i32> for () {
+  fn captureCount_0(self , rsthis: & QRegularExpression) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QRegularExpression12captureCountEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qregularexpression.h:105
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList namedCaptureGroups() const
+
+/*
+Returns a list of captureCount() + 1 elements, containing the names of the named capturing groups in the pattern string. The list is sorted such that the element of the list at position i is the name of the i-th capturing group, if it has a name, or an empty string if that capturing group is unnamed.
+
+For instance, given the regular expression
+
+
+  (?<day>\d\d)-(?<month>\d\d)-(?<year>\d\d\d\d) (\w+) (?<name>\w+)
+
+
+
+namedCaptureGroups() will return the following list:
+
+
+  ("", "day", "month", "year", "", "name")
+
+
+
+which corresponds to the fact that the capturing group #0 (corresponding to the whole match) has no name, the capturing group #1 has name "day", the capturing group #2 has name "month", etc.
+
+If the regular expression is not valid, returns an empty list.
+
+This function was introduced in  Qt 5.1.
+
+See also isValid(), QRegularExpressionMatch::captured(), and QString::isEmpty().
+*/
+impl /*struct*/ QRegularExpression {
+  pub fn namedCaptureGroups_0<RetType, T: QRegularExpression_namedCaptureGroups_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.namedCaptureGroups_0(self);
+    // return 1;
+  }
+}
+pub trait QRegularExpression_namedCaptureGroups_0<RetType> {
+  fn namedCaptureGroups_0(self , rsthis: & QRegularExpression) -> RetType;
+}
+impl<'a> /*trait*/ QRegularExpression_namedCaptureGroups_0<usize> for () {
+  fn namedCaptureGroups_0(self , rsthis: & QRegularExpression) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QRegularExpression18namedCaptureGroupsEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qregularexpression.h:121
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QRegularExpressionMatch match(const QString &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
+
+/*
+Attempts to match the regular expression against the given subject string, starting at the position offset inside the subject, using a match of type matchType and honoring the given matchOptions.
+
+The returned QRegularExpressionMatch object contains the results of the match.
+
+See also QRegularExpressionMatch and normal matching.
+*/
+impl /*struct*/ QRegularExpression {
+  pub fn match__0<RetType, T: QRegularExpression_match__0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.match__0(self);
+    // return 1;
+  }
+}
+pub trait QRegularExpression_match__0<RetType> {
+  fn match__0(self , rsthis: & QRegularExpression) -> RetType;
+}
+impl<'a> /*trait*/ QRegularExpression_match__0<usize> for (usize,i32,i32,i32) {
+  fn match__0(self , rsthis: & QRegularExpression) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let arg3 = (&self.3) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QRegularExpression5matchERK7QStringiNS_9MatchTypeE6QFlagsINS_11MatchOptionEE", 4,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qregularexpression.h:126
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QRegularExpressionMatch match(const QStringRef &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
+
+/*
+Attempts to match the regular expression against the given subject string, starting at the position offset inside the subject, using a match of type matchType and honoring the given matchOptions.
+
+The returned QRegularExpressionMatch object contains the results of the match.
+
+See also QRegularExpressionMatch and normal matching.
+*/
+impl /*struct*/ QRegularExpression {
+  pub fn match__1<RetType, T: QRegularExpression_match__1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.match__1(self);
+    // return 1;
+  }
+}
+pub trait QRegularExpression_match__1<RetType> {
+  fn match__1(self , rsthis: & QRegularExpression) -> RetType;
+}
+impl<'a> /*trait*/ QRegularExpression_match__1<usize> for (usize,i32,i32,i32) {
+  fn match__1(self , rsthis: & QRegularExpression) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let arg3 = (&self.3) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QRegularExpression5matchERK10QStringRefiNS_9MatchTypeE6QFlagsINS_11MatchOptionEE", 4,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qregularexpression.h:131
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QRegularExpressionMatchIterator globalMatch(const QString &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
+
+/*
+Attempts to perform a global match of the regular expression against the given subject string, starting at the position offset inside the subject, using a match of type matchType and honoring the given matchOptions.
+
+The returned QRegularExpressionMatchIterator is positioned before the first match result (if any).
+
+See also QRegularExpressionMatchIterator and global matching.
+*/
+impl /*struct*/ QRegularExpression {
+  pub fn globalMatch_0<RetType, T: QRegularExpression_globalMatch_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.globalMatch_0(self);
+    // return 1;
+  }
+}
+pub trait QRegularExpression_globalMatch_0<RetType> {
+  fn globalMatch_0(self , rsthis: & QRegularExpression) -> RetType;
+}
+impl<'a> /*trait*/ QRegularExpression_globalMatch_0<usize> for (usize,i32,i32,i32) {
+  fn globalMatch_0(self , rsthis: & QRegularExpression) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let arg3 = (&self.3) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QRegularExpression11globalMatchERK7QStringiNS_9MatchTypeE6QFlagsINS_11MatchOptionEE", 4,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qregularexpression.h:136
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QRegularExpressionMatchIterator globalMatch(const QStringRef &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
+
+/*
+Attempts to perform a global match of the regular expression against the given subject string, starting at the position offset inside the subject, using a match of type matchType and honoring the given matchOptions.
+
+The returned QRegularExpressionMatchIterator is positioned before the first match result (if any).
+
+See also QRegularExpressionMatchIterator and global matching.
+*/
+impl /*struct*/ QRegularExpression {
+  pub fn globalMatch_1<RetType, T: QRegularExpression_globalMatch_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.globalMatch_1(self);
+    // return 1;
+  }
+}
+pub trait QRegularExpression_globalMatch_1<RetType> {
+  fn globalMatch_1(self , rsthis: & QRegularExpression) -> RetType;
+}
+impl<'a> /*trait*/ QRegularExpression_globalMatch_1<usize> for (usize,i32,i32,i32) {
+  fn globalMatch_1(self , rsthis: & QRegularExpression) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let arg3 = (&self.3) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QRegularExpression11globalMatchERK10QStringRefiNS_9MatchTypeE6QFlagsINS_11MatchOptionEE", 4,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qregularexpression.h:141
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void optimize() const
+
+/*
+Forces an immediate optimization of the pattern, including JIT-compiling it (if the JIT compiler is enabled).
+
+Patterns are normally optimized only after a certain number of usages. If you can predict that this QRegularExpression object is going to be used for several matches, it may be convenient to optimize it in advance by calling this function.
+
+This function was introduced in  Qt 5.4.
+
+See also QRegularExpression::OptimizeOnFirstUsageOption.
+*/
+impl /*struct*/ QRegularExpression {
+  pub fn optimize_0<RetType, T: QRegularExpression_optimize_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.optimize_0(self);
+    // return 1;
+  }
+}
+pub trait QRegularExpression_optimize_0<RetType> {
+  fn optimize_0(self , rsthis: & QRegularExpression) -> RetType;
+}
+impl<'a> /*trait*/ QRegularExpression_optimize_0<(/*void*/)> for () {
+  fn optimize_0(self , rsthis: & QRegularExpression) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZNK18QRegularExpression8optimizeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QRegularExpressionMatch_lastCapturedIndex<RetType> {
-  fn lastCapturedIndex(self , rsthis: & QRegularExpressionMatch) -> RetType;
-}
+// /usr/include/qt/QtCore/qregularexpression.h:143
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QString escape(const QString &)
 
-  // proto:  int QRegularExpressionMatch::lastCapturedIndex();
-impl<'a> /*trait*/ QRegularExpressionMatch_lastCapturedIndex<i32> for () {
-  fn lastCapturedIndex(self , rsthis: & QRegularExpressionMatch) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK23QRegularExpressionMatch17lastCapturedIndexEv()};
-    let mut ret = unsafe {C_ZNK23QRegularExpressionMatch17lastCapturedIndexEv(rsthis.qclsinst)};
-    return ret as i32; // 1
+/*
+Escapes all characters of str so that they no longer have any special meaning when used as a regular expression pattern string, and returns the escaped string. For instance:
+
+
+  QString escaped = QRegularExpression::escape("a(x) = f(x) + g(x)");
+  // escaped == "a\\(x\\)\\ \\=\\ f\\(x\\)\\ \\+\\ g\\(x\\)"
+
+
+
+This is very convenient in order to build patterns from arbitrary strings:
+
+
+  QString pattern = "(" + QRegularExpression::escape(name) +
+                    "|" + QRegularExpression::escape(nickname) + ")";
+  QRegularExpression re(pattern);
+
+
+
+Note: This function implements Perl's quotemeta algorithm and escapes with a backslash all characters in str, except for the characters in the [A-Z], [a-z] and [0-9] ranges, as well as the underscore (_) character. The only difference with Perl is that a literal NUL inside str is escaped with the sequence "\\0" (backslash + '0'), instead of "\\\0" (backslash + NUL).
+*/
+impl /*struct*/ QRegularExpression {
+  pub fn escape_0<RetType, T: QRegularExpression_escape_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.escape_0();
     // return 1;
   }
 }
-
-  // proto:  void QRegularExpressionMatch::QRegularExpressionMatch();
-impl /*struct*/ QRegularExpressionMatch {
-  pub fn new<T: QRegularExpressionMatch_new>(value: T) -> QRegularExpressionMatch {
-    let rsthis = value.new();
-    return rsthis;
+pub trait QRegularExpression_escape_0<RetType> {
+  fn escape_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QRegularExpression_escape_0<usize> for (usize) {
+  fn escape_0(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN18QRegularExpression6escapeERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QRegularExpressionMatch_new {
-  fn new(self) -> QRegularExpressionMatch;
-}
+// /usr/include/qt/QtCore/qregularexpression.h:145
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QRegularExpression &) const
 
-  // proto:  void QRegularExpressionMatch::QRegularExpressionMatch();
-impl<'a> /*trait*/ QRegularExpressionMatch_new for () {
-  fn new(self) -> QRegularExpressionMatch {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN23QRegularExpressionMatchC2Ev()};
-    let ctysz: c_int = unsafe{QRegularExpressionMatch_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let qthis: u64 = unsafe {C_ZN23QRegularExpressionMatchC2Ev()};
-    let rsthis = QRegularExpressionMatch{qclsinst: qthis, ..Default::default()};
-    return rsthis;
+/*
+
+*/
+impl /*struct*/ QRegularExpression {
+  pub fn operator_equal_equal_0<RetType, T: QRegularExpression_operator_equal_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_equal_0(self);
     // return 1;
   }
 }
-
-  // proto:  bool QRegularExpressionMatch::isValid();
-impl /*struct*/ QRegularExpressionMatch {
-  pub fn isValid<RetType, T: QRegularExpressionMatch_isValid<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isValid(self);
+pub trait QRegularExpression_operator_equal_equal_0<RetType> {
+  fn operator_equal_equal_0(self , rsthis: & QRegularExpression) -> RetType;
+}
+impl<'a> /*trait*/ QRegularExpression_operator_equal_equal_0<bool> for (usize) {
+  fn operator_equal_equal_0(self , rsthis: & QRegularExpression) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QRegularExpressioneqERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-pub trait QRegularExpressionMatch_isValid<RetType> {
-  fn isValid(self , rsthis: & QRegularExpressionMatch) -> RetType;
-}
+// /usr/include/qt/QtCore/qregularexpression.h:146
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QRegularExpression &) const
 
-  // proto:  bool QRegularExpressionMatch::isValid();
-impl<'a> /*trait*/ QRegularExpressionMatch_isValid<i8> for () {
-  fn isValid(self , rsthis: & QRegularExpressionMatch) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK23QRegularExpressionMatch7isValidEv()};
-    let mut ret = unsafe {C_ZNK23QRegularExpressionMatch7isValidEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+/*
+
+*/
+impl /*struct*/ QRegularExpression {
+  pub fn operator_not_equal_0<RetType, T: QRegularExpression_operator_not_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_not_equal_0(self);
     // return 1;
   }
 }
-
-  // proto:  int QRegularExpressionMatch::capturedLength(int nth);
-impl /*struct*/ QRegularExpressionMatch {
-  pub fn capturedLength<RetType, T: QRegularExpressionMatch_capturedLength<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.capturedLength(self);
+pub trait QRegularExpression_operator_not_equal_0<RetType> {
+  fn operator_not_equal_0(self , rsthis: & QRegularExpression) -> RetType;
+}
+impl<'a> /*trait*/ QRegularExpression_operator_not_equal_0<bool> for (usize) {
+  fn operator_not_equal_0(self , rsthis: & QRegularExpression) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QRegularExpressionneERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-pub trait QRegularExpressionMatch_capturedLength<RetType> {
-  fn capturedLength(self , rsthis: & QRegularExpressionMatch) -> RetType;
+
+/*
+
+
+*/
+pub type QRegularExpression__PatternOption = i32;
+// 
+pub const QRegularExpression__NoPatternOption :QRegularExpression__PatternOption = 0;
+// 
+pub const QRegularExpression__CaseInsensitiveOption :QRegularExpression__PatternOption = 1;
+// 
+pub const QRegularExpression__DotMatchesEverythingOption :QRegularExpression__PatternOption = 2;
+// 
+pub const QRegularExpression__MultilineOption :QRegularExpression__PatternOption = 4;
+// 
+pub const QRegularExpression__ExtendedPatternSyntaxOption :QRegularExpression__PatternOption = 8;
+// 
+pub const QRegularExpression__InvertedGreedinessOption :QRegularExpression__PatternOption = 16;
+// 
+pub const QRegularExpression__DontCaptureOption :QRegularExpression__PatternOption = 32;
+// 
+pub const QRegularExpression__UseUnicodePropertiesOption :QRegularExpression__PatternOption = 64;
+// 
+pub const QRegularExpression__OptimizeOnFirstUsageOption :QRegularExpression__PatternOption = 128;
+// 
+pub const QRegularExpression__DontAutomaticallyOptimizeOption :QRegularExpression__PatternOption = 256;
+pub fn QRegularExpression_PatternOptionItemName(val: i32) ->String {
+  match val {
+     QRegularExpression__NoPatternOption => // 0
+     {return String::from("NoPatternOption");}
+     QRegularExpression__CaseInsensitiveOption => // 1
+     {return String::from("CaseInsensitiveOption");}
+     QRegularExpression__DotMatchesEverythingOption => // 2
+     {return String::from("DotMatchesEverythingOption");}
+     QRegularExpression__MultilineOption => // 4
+     {return String::from("MultilineOption");}
+     QRegularExpression__ExtendedPatternSyntaxOption => // 8
+     {return String::from("ExtendedPatternSyntaxOption");}
+     QRegularExpression__InvertedGreedinessOption => // 16
+     {return String::from("InvertedGreedinessOption");}
+     QRegularExpression__DontCaptureOption => // 32
+     {return String::from("DontCaptureOption");}
+     QRegularExpression__UseUnicodePropertiesOption => // 64
+     {return String::from("UseUnicodePropertiesOption");}
+     QRegularExpression__OptimizeOnFirstUsageOption => // 128
+     {return String::from("OptimizeOnFirstUsageOption");}
+     QRegularExpression__DontAutomaticallyOptimizeOption => // 256
+     {return String::from("DontAutomaticallyOptimizeOption");}
+  _ => {return format!("{}", val);}
+}
+}
+pub fn QRegularExpression_PatternOptionItemName_s(val: i32) ->String {
+  //var nilthis *QRegularExpression
+  //return nilthis.PatternOptionItemName(val);
+  return QRegularExpression_PatternOptionItemName(val);
 }
 
-  // proto:  int QRegularExpressionMatch::capturedLength(int nth);
-impl<'a> /*trait*/ QRegularExpressionMatch_capturedLength<i32> for (Option<i32>) {
-  fn capturedLength(self , rsthis: & QRegularExpressionMatch) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK23QRegularExpressionMatch14capturedLengthEi()};
-    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK23QRegularExpressionMatch14capturedLengthEi(rsthis.qclsinst, arg0)};
-    return ret as i32; // 1
-    // return 1;
-  }
+
+/*
+The MatchType enum defines the type of the match that should be attempted against the subject string.
+
+
+*/
+pub type QRegularExpression__MatchType = i32;
+// A normal match is done.
+pub const QRegularExpression__NormalMatch :QRegularExpression__MatchType = 0;
+// The pattern string is matched partially against the subject string. If a partial match is found, then it is recorded, and other matching alternatives are tried as usual. If a complete match is then found, then it's preferred to the partial match; in this case only the complete match is reported. If instead no complete match is found (but only the partial one), then the partial one is reported.
+pub const QRegularExpression__PartialPreferCompleteMatch :QRegularExpression__MatchType = 1;
+// The pattern string is matched partially against the subject string. If a partial match is found, then matching stops and the partial match is reported. In this case, other matching alternatives (potentially leading to a complete match) are not tried. Moreover, this match type assumes that the subject string only a substring of a larger text, and that (in this text) there are other characters beyond the end of the subject string. This can lead to surprising results; see the discussion in the partial matching section for more details.
+pub const QRegularExpression__PartialPreferFirstMatch :QRegularExpression__MatchType = 2;
+// 
+pub const QRegularExpression__NoMatch :QRegularExpression__MatchType = 3;
+pub fn QRegularExpression_MatchTypeItemName(val: i32) ->String {
+  match val {
+     QRegularExpression__NormalMatch => // 0
+     {return String::from("NormalMatch");}
+     QRegularExpression__PartialPreferCompleteMatch => // 1
+     {return String::from("PartialPreferCompleteMatch");}
+     QRegularExpression__PartialPreferFirstMatch => // 2
+     {return String::from("PartialPreferFirstMatch");}
+     QRegularExpression__NoMatch => // 3
+     {return String::from("NoMatch");}
+  _ => {return format!("{}", val);}
+}
+}
+pub fn QRegularExpression_MatchTypeItemName_s(val: i32) ->String {
+  //var nilthis *QRegularExpression
+  //return nilthis.MatchTypeItemName(val);
+  return QRegularExpression_MatchTypeItemName(val);
 }
 
-  // proto:  int QRegularExpressionMatch::capturedLength(const QString & name);
-impl<'a> /*trait*/ QRegularExpressionMatch_capturedLength<i32> for (&'a QString) {
-  fn capturedLength(self , rsthis: & QRegularExpressionMatch) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK23QRegularExpressionMatch14capturedLengthERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK23QRegularExpressionMatch14capturedLengthERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i32; // 1
-    // return 1;
-  }
+
+/*
+
+
+*/
+pub type QRegularExpression__MatchOption = i32;
+// 
+pub const QRegularExpression__NoMatchOption :QRegularExpression__MatchOption = 0;
+// 
+pub const QRegularExpression__AnchoredMatchOption :QRegularExpression__MatchOption = 1;
+// 
+pub const QRegularExpression__DontCheckSubjectStringMatchOption :QRegularExpression__MatchOption = 2;
+pub fn QRegularExpression_MatchOptionItemName(val: i32) ->String {
+  match val {
+     QRegularExpression__NoMatchOption => // 0
+     {return String::from("NoMatchOption");}
+     QRegularExpression__AnchoredMatchOption => // 1
+     {return String::from("AnchoredMatchOption");}
+     QRegularExpression__DontCheckSubjectStringMatchOption => // 2
+     {return String::from("DontCheckSubjectStringMatchOption");}
+  _ => {return format!("{}", val);}
+}
+}
+pub fn QRegularExpression_MatchOptionItemName_s(val: i32) ->String {
+  //var nilthis *QRegularExpression
+  //return nilthis.MatchOptionItemName(val);
+  return QRegularExpression_MatchOptionItemName(val);
 }
 
-  // proto:  QStringRef QRegularExpressionMatch::capturedRef(int nth);
-impl /*struct*/ QRegularExpressionMatch {
-  pub fn capturedRef<RetType, T: QRegularExpressionMatch_capturedRef<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.capturedRef(self);
-    // return 1;
-  }
-}
+//  body block end
 
-pub trait QRegularExpressionMatch_capturedRef<RetType> {
-  fn capturedRef(self , rsthis: & QRegularExpressionMatch) -> RetType;
-}
+//  keep block begin
 
-  // proto:  QStringRef QRegularExpressionMatch::capturedRef(int nth);
-impl<'a> /*trait*/ QRegularExpressionMatch_capturedRef<QStringRef> for (Option<i32>) {
-  fn capturedRef(self , rsthis: & QRegularExpressionMatch) -> QStringRef {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK23QRegularExpressionMatch11capturedRefEi()};
-    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK23QRegularExpressionMatch11capturedRefEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QStringRef::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  int QRegularExpressionMatch::capturedEnd(const QString & name);
-impl /*struct*/ QRegularExpressionMatch {
-  pub fn capturedEnd<RetType, T: QRegularExpressionMatch_capturedEnd<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.capturedEnd(self);
-    // return 1;
-  }
-}
-
-pub trait QRegularExpressionMatch_capturedEnd<RetType> {
-  fn capturedEnd(self , rsthis: & QRegularExpressionMatch) -> RetType;
-}
-
-  // proto:  int QRegularExpressionMatch::capturedEnd(const QString & name);
-impl<'a> /*trait*/ QRegularExpressionMatch_capturedEnd<i32> for (&'a QString) {
-  fn capturedEnd(self , rsthis: & QRegularExpressionMatch) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK23QRegularExpressionMatch11capturedEndERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK23QRegularExpressionMatch11capturedEndERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QString QRegularExpressionMatch::captured(const QString & name);
-impl /*struct*/ QRegularExpressionMatch {
-  pub fn captured<RetType, T: QRegularExpressionMatch_captured<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.captured(self);
-    // return 1;
-  }
-}
-
-pub trait QRegularExpressionMatch_captured<RetType> {
-  fn captured(self , rsthis: & QRegularExpressionMatch) -> RetType;
-}
-
-  // proto:  QString QRegularExpressionMatch::captured(const QString & name);
-impl<'a> /*trait*/ QRegularExpressionMatch_captured<QString> for (&'a QString) {
-  fn captured(self , rsthis: & QRegularExpressionMatch) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK23QRegularExpressionMatch8capturedERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK23QRegularExpressionMatch8capturedERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QStringList QRegularExpressionMatch::capturedTexts();
-impl /*struct*/ QRegularExpressionMatch {
-  pub fn capturedTexts<RetType, T: QRegularExpressionMatch_capturedTexts<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.capturedTexts(self);
-    // return 1;
-  }
-}
-
-pub trait QRegularExpressionMatch_capturedTexts<RetType> {
-  fn capturedTexts(self , rsthis: & QRegularExpressionMatch) -> RetType;
-}
-
-  // proto:  QStringList QRegularExpressionMatch::capturedTexts();
-impl<'a> /*trait*/ QRegularExpressionMatch_capturedTexts<QStringList> for () {
-  fn capturedTexts(self , rsthis: & QRegularExpressionMatch) -> QStringList {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK23QRegularExpressionMatch13capturedTextsEv()};
-    let mut ret = unsafe {C_ZNK23QRegularExpressionMatch13capturedTextsEv(rsthis.qclsinst)};
-    let mut ret1 = QStringList::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QRegularExpressionMatch::QRegularExpressionMatch(const QRegularExpressionMatch & match);
-impl<'a> /*trait*/ QRegularExpressionMatch_new for (&'a QRegularExpressionMatch) {
-  fn new(self) -> QRegularExpressionMatch {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN23QRegularExpressionMatchC2ERKS_()};
-    let ctysz: c_int = unsafe{QRegularExpressionMatch_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN23QRegularExpressionMatchC2ERKS_(arg0)};
-    let rsthis = QRegularExpressionMatch{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QRegularExpressionMatch::swap(QRegularExpressionMatch & other);
-impl /*struct*/ QRegularExpressionMatch {
-  pub fn swap<RetType, T: QRegularExpressionMatch_swap<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.swap(self);
-    // return 1;
-  }
-}
-
-pub trait QRegularExpressionMatch_swap<RetType> {
-  fn swap(self , rsthis: & QRegularExpressionMatch) -> RetType;
-}
-
-  // proto:  void QRegularExpressionMatch::swap(QRegularExpressionMatch & other);
-impl<'a> /*trait*/ QRegularExpressionMatch_swap<()> for (&'a QRegularExpressionMatch) {
-  fn swap(self , rsthis: & QRegularExpressionMatch) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN23QRegularExpressionMatch4swapERS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN23QRegularExpressionMatch4swapERS_(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QRegularExpressionMatch::~QRegularExpressionMatch();
-impl /*struct*/ QRegularExpressionMatch {
-  pub fn free<RetType, T: QRegularExpressionMatch_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
-    // return 1;
-  }
-}
-
-pub trait QRegularExpressionMatch_free<RetType> {
-  fn free(self , rsthis: & QRegularExpressionMatch) -> RetType;
-}
-
-  // proto:  void QRegularExpressionMatch::~QRegularExpressionMatch();
-impl<'a> /*trait*/ QRegularExpressionMatch_free<()> for () {
-  fn free(self , rsthis: & QRegularExpressionMatch) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN23QRegularExpressionMatchD2Ev()};
-     unsafe {C_ZN23QRegularExpressionMatchD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  int QRegularExpressionMatch::capturedEnd(int nth);
-impl<'a> /*trait*/ QRegularExpressionMatch_capturedEnd<i32> for (Option<i32>) {
-  fn capturedEnd(self , rsthis: & QRegularExpressionMatch) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK23QRegularExpressionMatch11capturedEndEi()};
-    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK23QRegularExpressionMatch11capturedEndEi(rsthis.qclsinst, arg0)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QStringRef QRegularExpressionMatch::capturedRef(const QString & name);
-impl<'a> /*trait*/ QRegularExpressionMatch_capturedRef<QStringRef> for (&'a QString) {
-  fn capturedRef(self , rsthis: & QRegularExpressionMatch) -> QStringRef {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK23QRegularExpressionMatch11capturedRefERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK23QRegularExpressionMatch11capturedRefERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QStringRef::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  bool QRegularExpressionMatch::hasMatch();
-impl /*struct*/ QRegularExpressionMatch {
-  pub fn hasMatch<RetType, T: QRegularExpressionMatch_hasMatch<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.hasMatch(self);
-    // return 1;
-  }
-}
-
-pub trait QRegularExpressionMatch_hasMatch<RetType> {
-  fn hasMatch(self , rsthis: & QRegularExpressionMatch) -> RetType;
-}
-
-  // proto:  bool QRegularExpressionMatch::hasMatch();
-impl<'a> /*trait*/ QRegularExpressionMatch_hasMatch<i8> for () {
-  fn hasMatch(self , rsthis: & QRegularExpressionMatch) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK23QRegularExpressionMatch8hasMatchEv()};
-    let mut ret = unsafe {C_ZNK23QRegularExpressionMatch8hasMatchEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  int QRegularExpressionMatch::capturedStart(const QString & name);
-impl /*struct*/ QRegularExpressionMatch {
-  pub fn capturedStart<RetType, T: QRegularExpressionMatch_capturedStart<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.capturedStart(self);
-    // return 1;
-  }
-}
-
-pub trait QRegularExpressionMatch_capturedStart<RetType> {
-  fn capturedStart(self , rsthis: & QRegularExpressionMatch) -> RetType;
-}
-
-  // proto:  int QRegularExpressionMatch::capturedStart(const QString & name);
-impl<'a> /*trait*/ QRegularExpressionMatch_capturedStart<i32> for (&'a QString) {
-  fn capturedStart(self , rsthis: & QRegularExpressionMatch) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK23QRegularExpressionMatch13capturedStartERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK23QRegularExpressionMatch13capturedStartERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QRegularExpression QRegularExpressionMatch::regularExpression();
-impl /*struct*/ QRegularExpressionMatch {
-  pub fn regularExpression<RetType, T: QRegularExpressionMatch_regularExpression<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.regularExpression(self);
-    // return 1;
-  }
-}
-
-pub trait QRegularExpressionMatch_regularExpression<RetType> {
-  fn regularExpression(self , rsthis: & QRegularExpressionMatch) -> RetType;
-}
-
-  // proto:  QRegularExpression QRegularExpressionMatch::regularExpression();
-impl<'a> /*trait*/ QRegularExpressionMatch_regularExpression<QRegularExpression> for () {
-  fn regularExpression(self , rsthis: & QRegularExpressionMatch) -> QRegularExpression {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK23QRegularExpressionMatch17regularExpressionEv()};
-    let mut ret = unsafe {C_ZNK23QRegularExpressionMatch17regularExpressionEv(rsthis.qclsinst)};
-    let mut ret1 = QRegularExpression::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString QRegularExpressionMatch::captured(int nth);
-impl<'a> /*trait*/ QRegularExpressionMatch_captured<QString> for (Option<i32>) {
-  fn captured(self , rsthis: & QRegularExpressionMatch) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK23QRegularExpressionMatch8capturedEi()};
-    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK23QRegularExpressionMatch8capturedEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  int QRegularExpressionMatch::capturedStart(int nth);
-impl<'a> /*trait*/ QRegularExpressionMatch_capturedStart<i32> for (Option<i32>) {
-  fn capturedStart(self , rsthis: & QRegularExpressionMatch) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK23QRegularExpressionMatch13capturedStartEi()};
-    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK23QRegularExpressionMatch13capturedStartEi(rsthis.qclsinst, arg0)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  bool QRegularExpressionMatch::hasPartialMatch();
-impl /*struct*/ QRegularExpressionMatch {
-  pub fn hasPartialMatch<RetType, T: QRegularExpressionMatch_hasPartialMatch<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.hasPartialMatch(self);
-    // return 1;
-  }
-}
-
-pub trait QRegularExpressionMatch_hasPartialMatch<RetType> {
-  fn hasPartialMatch(self , rsthis: & QRegularExpressionMatch) -> RetType;
-}
-
-  // proto:  bool QRegularExpressionMatch::hasPartialMatch();
-impl<'a> /*trait*/ QRegularExpressionMatch_hasPartialMatch<i8> for () {
-  fn hasPartialMatch(self , rsthis: & QRegularExpressionMatch) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK23QRegularExpressionMatch15hasPartialMatchEv()};
-    let mut ret = unsafe {C_ZNK23QRegularExpressionMatch15hasPartialMatchEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-// <= body block end
-
+//  keep block end

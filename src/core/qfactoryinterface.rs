@@ -1,99 +1,116 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qfactoryinterface.h
-// dst-file: /src/core/qfactoryinterface.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QFactoryInterface
+// package qtcore
+// /usr/include/qt/QtCore/qfactoryinterface.h
+// #include <qfactoryinterface.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 11
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qstringlist::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QFactoryInterface_Class_Size() -> c_int;
-  // proto:  void QFactoryInterface::~QFactoryInterface();
-  fn C_ZN17QFactoryInterfaceD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  QStringList QFactoryInterface::keys();
-  fn C_ZNK17QFactoryInterface4keysEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-} // <= ext block end
 
-// body block begin =>
-// class sizeof(QFactoryInterface)=8
-#[derive(Default)]
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QFactoryInterface)=8
 pub struct QFactoryInterface {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
+  // qbase: none,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QFactoryInterface_ITF interface {
+//    QFactoryInterface_PTR() *QFactoryInterface
+//}
+//func (ptr *QFactoryInterface) QFactoryInterface_PTR() *QFactoryInterface { return ptr }
 
 impl /*struct*/ QFactoryInterface {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QFactoryInterface {
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QFactoryInterface {
     return QFactoryInterface{qclsinst: qthis, ..Default::default()};
   }
 }
-  // proto:  void QFactoryInterface::~QFactoryInterface();
+//impl Deref for QFactoryInterface {
+//  type Target = QFactoryInterfaceBASE;
+//
+//  fn deref(&self) -> &QFactoryInterfaceBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QFactoryInterfaceBASE> for QFactoryInterface {
+//  fn as_ref(& self) -> & QFactoryInterfaceBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qfactoryinterface.h:51
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QFactoryInterface()
+
+/*
+
+*/
+pub fn DeleteQFactoryInterface(this :*mut QFactoryInterface) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN17QFactoryInterfaceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 8)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qfactoryinterface.h:52
+// index:0
+// Public purevirtual virtual Visibility=Default Availability=Available
+// [8] QStringList keys() const
+
+/*
+
+*/
 impl /*struct*/ QFactoryInterface {
-  pub fn free<RetType, T: QFactoryInterface_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
+  pub fn keys_0<RetType, T: QFactoryInterface_keys_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.keys_0(self);
     // return 1;
   }
 }
-
-pub trait QFactoryInterface_free<RetType> {
-  fn free(self , rsthis: & QFactoryInterface) -> RetType;
+pub trait QFactoryInterface_keys_0<RetType> {
+  fn keys_0(self , rsthis: & QFactoryInterface) -> RetType;
 }
-
-  // proto:  void QFactoryInterface::~QFactoryInterface();
-impl<'a> /*trait*/ QFactoryInterface_free<()> for () {
-  fn free(self , rsthis: & QFactoryInterface) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QFactoryInterfaceD2Ev()};
-     unsafe {C_ZN17QFactoryInterfaceD2Ev(rsthis.qclsinst)};
+impl<'a> /*trait*/ QFactoryInterface_keys_0<usize> for () {
+  fn keys_0(self , rsthis: & QFactoryInterface) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK17QFactoryInterface4keysEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  QStringList QFactoryInterface::keys();
-impl /*struct*/ QFactoryInterface {
-  pub fn keys<RetType, T: QFactoryInterface_keys<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.keys(self);
-    // return 1;
-  }
-}
+//  body block end
 
-pub trait QFactoryInterface_keys<RetType> {
-  fn keys(self , rsthis: & QFactoryInterface) -> RetType;
-}
+//  keep block begin
 
-  // proto:  QStringList QFactoryInterface::keys();
-impl<'a> /*trait*/ QFactoryInterface_keys<QStringList> for () {
-  fn keys(self , rsthis: & QFactoryInterface) -> QStringList {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK17QFactoryInterface4keysEv()};
-    let mut ret = unsafe {C_ZNK17QFactoryInterface4keysEv(rsthis.qclsinst)};
-    let mut ret1 = QStringList::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-// <= body block end
-
+//  keep block end

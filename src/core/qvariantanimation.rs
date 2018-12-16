@@ -1,507 +1,641 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qvariantanimation.h
-// dst-file: /src/core/qvariantanimation.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QVariantAnimation
+// package qtcore
+// /usr/include/qt/QtCore/qvariantanimation.h
+// #include <qvariantanimation.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
-use super::qabstractanimation::*; // 773
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 67
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qvariant::*; // 773
-// use super::qvector::*; // 775
-use super::qobjectdefs::*; // 773
-use super::qeasingcurve::*; // 773
-use super::qobject::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QVariantAnimation_Class_Size() -> c_int;
-  // proto:  void QVariantAnimation::setDuration(int msecs);
-  fn C_ZN17QVariantAnimation11setDurationEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto:  void QVariantAnimation::setKeyValueAt(qreal step, const QVariant & value);
-  fn C_ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: *mut c_void);
-  // proto:  QVariant QVariantAnimation::endValue();
-  fn C_ZNK17QVariantAnimation8endValueEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QVariant QVariantAnimation::keyValueAt(qreal step);
-  fn C_ZNK17QVariantAnimation10keyValueAtEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> *mut c_void;
-  // proto:  void QVariantAnimation::~QVariantAnimation();
-  fn C_ZN17QVariantAnimationD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  QVariant QVariantAnimation::currentValue();
-  fn C_ZNK17QVariantAnimation12currentValueEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  int QVariantAnimation::duration();
-  fn C_ZNK17QVariantAnimation8durationEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  KeyValues QVariantAnimation::keyValues();
-  fn C_ZNK17QVariantAnimation9keyValuesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QVariantAnimation::setStartValue(const QVariant & value);
-  fn C_ZN17QVariantAnimation13setStartValueERK8QVariant(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  QVariant QVariantAnimation::startValue();
-  fn C_ZNK17QVariantAnimation10startValueEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  const QMetaObject * QVariantAnimation::metaObject();
-  fn C_ZNK17QVariantAnimation10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QVariantAnimation::setEndValue(const QVariant & value);
-  fn C_ZN17QVariantAnimation11setEndValueERK8QVariant(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  QEasingCurve QVariantAnimation::easingCurve();
-  fn C_ZNK17QVariantAnimation11easingCurveEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QVariantAnimation::QVariantAnimation(QObject * parent);
-  fn C_ZN17QVariantAnimationC2EP7QObject(arg0: *mut c_void) -> u64;
-  // proto:  void QVariantAnimation::setEasingCurve(const QEasingCurve & easing);
-  fn C_ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  fn QVariantAnimation_SlotProxy_connect__ZN17QVariantAnimation12valueChangedERK8QVariant(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-} // <= ext block end
+// bool event(QEvent *)
+// func (this *QVariantAnimation) InheritEvent(f func(event *QEvent/*777 QEvent **/) bool) {
+//  qtrt.SetAllInheritCallback(this, "event", f)
+// }
 
-// body block begin =>
-// class sizeof(QVariantAnimation)=1
-#[derive(Default)]
+// void updateCurrentTime(int)
+// func (this *QVariantAnimation) InheritUpdateCurrentTime(f func(arg0 int) /*void*/) {
+//  qtrt.SetAllInheritCallback(this, "updateCurrentTime", f)
+// }
+
+// void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
+// func (this *QVariantAnimation) InheritUpdateState(f func(newState int, oldState int) /*void*/) {
+//  qtrt.SetAllInheritCallback(this, "updateState", f)
+// }
+
+// void updateCurrentValue(const QVariant &)
+// func (this *QVariantAnimation) InheritUpdateCurrentValue(f func(value *QVariant) /*void*/) {
+//  qtrt.SetAllInheritCallback(this, "updateCurrentValue", f)
+// }
+
+// QVariant interpolated(const QVariant &, const QVariant &, qreal)
+// func (this *QVariantAnimation) InheritInterpolated(f func(from *QVariant, to *QVariant, progress float64) unsafe.Pointer) {
+//  qtrt.SetAllInheritCallback(this, "interpolated", f)
+// }
+
+
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QVariantAnimation)=16
 pub struct QVariantAnimation {
   qbase: QAbstractAnimation,
-  pub qclsinst: u64 /* *mut c_void*/,
-  pub _valueChanged: QVariantAnimation_valueChanged_signal,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QVariantAnimation_ITF interface {
+//    QAbstractAnimation_ITF
+//    QVariantAnimation_PTR() *QVariantAnimation
+//}
+//func (ptr *QVariantAnimation) QVariantAnimation_PTR() *QVariantAnimation { return ptr }
 
 impl /*struct*/ QVariantAnimation {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QVariantAnimation {
-    return QVariantAnimation{qbase: QAbstractAnimation::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QVariantAnimation {
+    return QVariantAnimation{qclsinst: qthis, ..Default::default()};
   }
 }
-impl Deref for QVariantAnimation {
-  type Target = QAbstractAnimation;
+//impl Deref for QVariantAnimation {
+//  type Target = QVariantAnimationBASE;
+//
+//  fn deref(&self) -> &QVariantAnimationBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QVariantAnimationBASE> for QVariantAnimation {
+//  fn as_ref(& self) -> & QVariantAnimationBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qvariantanimation.h:57
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject() const
 
-  fn deref(&self) -> &QAbstractAnimation {
-    return & self.qbase;
-  }
-}
-impl AsRef<QAbstractAnimation> for QVariantAnimation {
-  fn as_ref(& self) -> & QAbstractAnimation {
-    return & self.qbase;
-  }
-}
-  // proto:  void QVariantAnimation::setDuration(int msecs);
+/*
+
+*/
 impl /*struct*/ QVariantAnimation {
-  pub fn setDuration<RetType, T: QVariantAnimation_setDuration<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setDuration(self);
+  pub fn metaObject_0<RetType, T: QVariantAnimation_metaObject_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.metaObject_0(self);
     // return 1;
   }
 }
-
-pub trait QVariantAnimation_setDuration<RetType> {
-  fn setDuration(self , rsthis: & QVariantAnimation) -> RetType;
+pub trait QVariantAnimation_metaObject_0<RetType> {
+  fn metaObject_0(self , rsthis: & QVariantAnimation) -> RetType;
 }
-
-  // proto:  void QVariantAnimation::setDuration(int msecs);
-impl<'a> /*trait*/ QVariantAnimation_setDuration<()> for (i32) {
-  fn setDuration(self , rsthis: & QVariantAnimation) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QVariantAnimation11setDurationEi()};
-    let arg0 = self  as c_int;
-     unsafe {C_ZN17QVariantAnimation11setDurationEi(rsthis.qclsinst, arg0)};
+impl<'a> /*trait*/ QVariantAnimation_metaObject_0<usize> for () {
+  fn metaObject_0(self , rsthis: & QVariantAnimation) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK17QVariantAnimation10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  void QVariantAnimation::setKeyValueAt(qreal step, const QVariant & value);
+// /usr/include/qt/QtCore/qvariantanimation.h:68
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QVariantAnimation(QObject *)
+
+/*
+Construct a QVariantAnimation object. parent is passed to QAbstractAnimation's constructor.
+*/
+// QVariantAnimation(QObject *) ctx.fn_proto_cpp
 impl /*struct*/ QVariantAnimation {
-  pub fn setKeyValueAt<RetType, T: QVariantAnimation_setKeyValueAt<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setKeyValueAt(self);
-    // return 1;
-  }
-}
-
-pub trait QVariantAnimation_setKeyValueAt<RetType> {
-  fn setKeyValueAt(self , rsthis: & QVariantAnimation) -> RetType;
-}
-
-  // proto:  void QVariantAnimation::setKeyValueAt(qreal step, const QVariant & value);
-impl<'a> /*trait*/ QVariantAnimation_setKeyValueAt<()> for (f64, &'a QVariant) {
-  fn setKeyValueAt(self , rsthis: & QVariantAnimation) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant()};
-    let arg0 = self.0  as c_double;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {C_ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant(rsthis.qclsinst, arg0, arg1)};
-    // return 1;
-  }
-}
-
-  // proto:  QVariant QVariantAnimation::endValue();
-impl /*struct*/ QVariantAnimation {
-  pub fn endValue<RetType, T: QVariantAnimation_endValue<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.endValue(self);
-    // return 1;
-  }
-}
-
-pub trait QVariantAnimation_endValue<RetType> {
-  fn endValue(self , rsthis: & QVariantAnimation) -> RetType;
-}
-
-  // proto:  QVariant QVariantAnimation::endValue();
-impl<'a> /*trait*/ QVariantAnimation_endValue<QVariant> for () {
-  fn endValue(self , rsthis: & QVariantAnimation) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK17QVariantAnimation8endValueEv()};
-    let mut ret = unsafe {C_ZNK17QVariantAnimation8endValueEv(rsthis.qclsinst)};
-    let mut ret1 = QVariant::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QVariant QVariantAnimation::keyValueAt(qreal step);
-impl /*struct*/ QVariantAnimation {
-  pub fn keyValueAt<RetType, T: QVariantAnimation_keyValueAt<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.keyValueAt(self);
-    // return 1;
-  }
-}
-
-pub trait QVariantAnimation_keyValueAt<RetType> {
-  fn keyValueAt(self , rsthis: & QVariantAnimation) -> RetType;
-}
-
-  // proto:  QVariant QVariantAnimation::keyValueAt(qreal step);
-impl<'a> /*trait*/ QVariantAnimation_keyValueAt<QVariant> for (f64) {
-  fn keyValueAt(self , rsthis: & QVariantAnimation) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK17QVariantAnimation10keyValueAtEd()};
-    let arg0 = self  as c_double;
-    let mut ret = unsafe {C_ZNK17QVariantAnimation10keyValueAtEd(rsthis.qclsinst, arg0)};
-    let mut ret1 = QVariant::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariantAnimation::~QVariantAnimation();
-impl /*struct*/ QVariantAnimation {
-  pub fn free<RetType, T: QVariantAnimation_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
-    // return 1;
-  }
-}
-
-pub trait QVariantAnimation_free<RetType> {
-  fn free(self , rsthis: & QVariantAnimation) -> RetType;
-}
-
-  // proto:  void QVariantAnimation::~QVariantAnimation();
-impl<'a> /*trait*/ QVariantAnimation_free<()> for () {
-  fn free(self , rsthis: & QVariantAnimation) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QVariantAnimationD2Ev()};
-     unsafe {C_ZN17QVariantAnimationD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  QVariant QVariantAnimation::currentValue();
-impl /*struct*/ QVariantAnimation {
-  pub fn currentValue<RetType, T: QVariantAnimation_currentValue<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.currentValue(self);
-    // return 1;
-  }
-}
-
-pub trait QVariantAnimation_currentValue<RetType> {
-  fn currentValue(self , rsthis: & QVariantAnimation) -> RetType;
-}
-
-  // proto:  QVariant QVariantAnimation::currentValue();
-impl<'a> /*trait*/ QVariantAnimation_currentValue<QVariant> for () {
-  fn currentValue(self , rsthis: & QVariantAnimation) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK17QVariantAnimation12currentValueEv()};
-    let mut ret = unsafe {C_ZNK17QVariantAnimation12currentValueEv(rsthis.qclsinst)};
-    let mut ret1 = QVariant::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  int QVariantAnimation::duration();
-impl /*struct*/ QVariantAnimation {
-  pub fn duration<RetType, T: QVariantAnimation_duration<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.duration(self);
-    // return 1;
-  }
-}
-
-pub trait QVariantAnimation_duration<RetType> {
-  fn duration(self , rsthis: & QVariantAnimation) -> RetType;
-}
-
-  // proto:  int QVariantAnimation::duration();
-impl<'a> /*trait*/ QVariantAnimation_duration<i32> for () {
-  fn duration(self , rsthis: & QVariantAnimation) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK17QVariantAnimation8durationEv()};
-    let mut ret = unsafe {C_ZNK17QVariantAnimation8durationEv(rsthis.qclsinst)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  KeyValues QVariantAnimation::keyValues();
-impl /*struct*/ QVariantAnimation {
-  pub fn keyValues<RetType, T: QVariantAnimation_keyValues<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.keyValues(self);
-    // return 1;
-  }
-}
-
-pub trait QVariantAnimation_keyValues<RetType> {
-  fn keyValues(self , rsthis: & QVariantAnimation) -> RetType;
-}
-
-  // proto:  KeyValues QVariantAnimation::keyValues();
-impl<'a> /*trait*/ QVariantAnimation_keyValues<u64> for () {
-  fn keyValues(self , rsthis: & QVariantAnimation) -> u64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK17QVariantAnimation9keyValuesEv()};
-    let mut ret = unsafe {C_ZNK17QVariantAnimation9keyValuesEv(rsthis.qclsinst)};
-    return ret as u64; // 5
-    // return 1;
-  }
-}
-
-  // proto:  void QVariantAnimation::setStartValue(const QVariant & value);
-impl /*struct*/ QVariantAnimation {
-  pub fn setStartValue<RetType, T: QVariantAnimation_setStartValue<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setStartValue(self);
-    // return 1;
-  }
-}
-
-pub trait QVariantAnimation_setStartValue<RetType> {
-  fn setStartValue(self , rsthis: & QVariantAnimation) -> RetType;
-}
-
-  // proto:  void QVariantAnimation::setStartValue(const QVariant & value);
-impl<'a> /*trait*/ QVariantAnimation_setStartValue<()> for (&'a QVariant) {
-  fn setStartValue(self , rsthis: & QVariantAnimation) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QVariantAnimation13setStartValueERK8QVariant()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN17QVariantAnimation13setStartValueERK8QVariant(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  QVariant QVariantAnimation::startValue();
-impl /*struct*/ QVariantAnimation {
-  pub fn startValue<RetType, T: QVariantAnimation_startValue<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.startValue(self);
-    // return 1;
-  }
-}
-
-pub trait QVariantAnimation_startValue<RetType> {
-  fn startValue(self , rsthis: & QVariantAnimation) -> RetType;
-}
-
-  // proto:  QVariant QVariantAnimation::startValue();
-impl<'a> /*trait*/ QVariantAnimation_startValue<QVariant> for () {
-  fn startValue(self , rsthis: & QVariantAnimation) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK17QVariantAnimation10startValueEv()};
-    let mut ret = unsafe {C_ZNK17QVariantAnimation10startValueEv(rsthis.qclsinst)};
-    let mut ret1 = QVariant::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  const QMetaObject * QVariantAnimation::metaObject();
-impl /*struct*/ QVariantAnimation {
-  pub fn metaObject<RetType, T: QVariantAnimation_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.metaObject(self);
-    // return 1;
-  }
-}
-
-pub trait QVariantAnimation_metaObject<RetType> {
-  fn metaObject(self , rsthis: & QVariantAnimation) -> RetType;
-}
-
-  // proto:  const QMetaObject * QVariantAnimation::metaObject();
-impl<'a> /*trait*/ QVariantAnimation_metaObject<QMetaObject> for () {
-  fn metaObject(self , rsthis: & QVariantAnimation) -> QMetaObject {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK17QVariantAnimation10metaObjectEv()};
-    let mut ret = unsafe {C_ZNK17QVariantAnimation10metaObjectEv(rsthis.qclsinst)};
-    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariantAnimation::setEndValue(const QVariant & value);
-impl /*struct*/ QVariantAnimation {
-  pub fn setEndValue<RetType, T: QVariantAnimation_setEndValue<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setEndValue(self);
-    // return 1;
-  }
-}
-
-pub trait QVariantAnimation_setEndValue<RetType> {
-  fn setEndValue(self , rsthis: & QVariantAnimation) -> RetType;
-}
-
-  // proto:  void QVariantAnimation::setEndValue(const QVariant & value);
-impl<'a> /*trait*/ QVariantAnimation_setEndValue<()> for (&'a QVariant) {
-  fn setEndValue(self , rsthis: & QVariantAnimation) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QVariantAnimation11setEndValueERK8QVariant()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN17QVariantAnimation11setEndValueERK8QVariant(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  QEasingCurve QVariantAnimation::easingCurve();
-impl /*struct*/ QVariantAnimation {
-  pub fn easingCurve<RetType, T: QVariantAnimation_easingCurve<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.easingCurve(self);
-    // return 1;
-  }
-}
-
-pub trait QVariantAnimation_easingCurve<RetType> {
-  fn easingCurve(self , rsthis: & QVariantAnimation) -> RetType;
-}
-
-  // proto:  QEasingCurve QVariantAnimation::easingCurve();
-impl<'a> /*trait*/ QVariantAnimation_easingCurve<QEasingCurve> for () {
-  fn easingCurve(self , rsthis: & QVariantAnimation) -> QEasingCurve {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK17QVariantAnimation11easingCurveEv()};
-    let mut ret = unsafe {C_ZNK17QVariantAnimation11easingCurveEv(rsthis.qclsinst)};
-    let mut ret1 = QEasingCurve::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QVariantAnimation::QVariantAnimation(QObject * parent);
-impl /*struct*/ QVariantAnimation {
-  pub fn new<T: QVariantAnimation_new>(value: T) -> QVariantAnimation {
-    let rsthis = value.new();
+  pub fn QVariantAnimation_0<T: QVariantAnimation_QVariantAnimation_0>(value: T) -> QVariantAnimation {
+    let rsthis = value.QVariantAnimation_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QVariantAnimation_new {
-  fn new(self) -> QVariantAnimation;
+pub trait QVariantAnimation_QVariantAnimation_0 {
+  fn QVariantAnimation_0(self) -> QVariantAnimation;
 }
-
-  // proto:  void QVariantAnimation::QVariantAnimation(QObject * parent);
-impl<'a> /*trait*/ QVariantAnimation_new for (Option<&'a QObject>) {
-  fn new(self) -> QVariantAnimation {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QVariantAnimation(QObject *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QVariantAnimation_QVariantAnimation_0 for (usize) {
+  fn QVariantAnimation_0(self) -> QVariantAnimation {
     // unsafe{_ZN17QVariantAnimationC2EP7QObject()};
-    let ctysz: c_int = unsafe{QVariantAnimation_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN17QVariantAnimationC2EP7QObject(arg0)};
-    let rsthis = QVariantAnimation{qbase: QAbstractAnimation::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN17QVariantAnimationC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QVariantAnimation{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QVariantAnimation::setEasingCurve(const QEasingCurve & easing);
+// /usr/include/qt/QtCore/qvariantanimation.h:69
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QVariantAnimation()
+
+/*
+
+*/
+pub fn DeleteQVariantAnimation(this :*mut QVariantAnimation) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN17QVariantAnimationD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 16)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qvariantanimation.h:71
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QVariant startValue() const
+
+/*
+
+*/
 impl /*struct*/ QVariantAnimation {
-  pub fn setEasingCurve<RetType, T: QVariantAnimation_setEasingCurve<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setEasingCurve(self);
+  pub fn startValue_0<RetType, T: QVariantAnimation_startValue_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.startValue_0(self);
+    // return 1;
+  }
+}
+pub trait QVariantAnimation_startValue_0<RetType> {
+  fn startValue_0(self , rsthis: & QVariantAnimation) -> RetType;
+}
+impl<'a> /*trait*/ QVariantAnimation_startValue_0<usize> for () {
+  fn startValue_0(self , rsthis: & QVariantAnimation) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK17QVariantAnimation10startValueEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariantanimation.h:72
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setStartValue(const QVariant &)
+
+/*
+
+*/
+impl /*struct*/ QVariantAnimation {
+  pub fn setStartValue_0<RetType, T: QVariantAnimation_setStartValue_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setStartValue_0(self);
+    // return 1;
+  }
+}
+pub trait QVariantAnimation_setStartValue_0<RetType> {
+  fn setStartValue_0(self , rsthis: & QVariantAnimation) -> RetType;
+}
+impl<'a> /*trait*/ QVariantAnimation_setStartValue_0<(/*void*/)> for (usize) {
+  fn setStartValue_0(self , rsthis: & QVariantAnimation) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN17QVariantAnimation13setStartValueERK8QVariant", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QVariantAnimation_setEasingCurve<RetType> {
-  fn setEasingCurve(self , rsthis: & QVariantAnimation) -> RetType;
+// /usr/include/qt/QtCore/qvariantanimation.h:74
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QVariant endValue() const
+
+/*
+
+*/
+impl /*struct*/ QVariantAnimation {
+  pub fn endValue_0<RetType, T: QVariantAnimation_endValue_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.endValue_0(self);
+    // return 1;
+  }
+}
+pub trait QVariantAnimation_endValue_0<RetType> {
+  fn endValue_0(self , rsthis: & QVariantAnimation) -> RetType;
+}
+impl<'a> /*trait*/ QVariantAnimation_endValue_0<usize> for () {
+  fn endValue_0(self , rsthis: & QVariantAnimation) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK17QVariantAnimation8endValueEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
 }
 
-  // proto:  void QVariantAnimation::setEasingCurve(const QEasingCurve & easing);
-impl<'a> /*trait*/ QVariantAnimation_setEasingCurve<()> for (&'a QEasingCurve) {
-  fn setEasingCurve(self , rsthis: & QVariantAnimation) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve(rsthis.qclsinst, arg0)};
+// /usr/include/qt/QtCore/qvariantanimation.h:75
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setEndValue(const QVariant &)
+
+/*
+
+*/
+impl /*struct*/ QVariantAnimation {
+  pub fn setEndValue_0<RetType, T: QVariantAnimation_setEndValue_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setEndValue_0(self);
+    // return 1;
+  }
+}
+pub trait QVariantAnimation_setEndValue_0<RetType> {
+  fn setEndValue_0(self , rsthis: & QVariantAnimation) -> RetType;
+}
+impl<'a> /*trait*/ QVariantAnimation_setEndValue_0<(/*void*/)> for (usize) {
+  fn setEndValue_0(self , rsthis: & QVariantAnimation) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN17QVariantAnimation11setEndValueERK8QVariant", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-#[derive(Default)] // for QVariantAnimation_valueChanged
-pub struct QVariantAnimation_valueChanged_signal{poi:u64}
-impl /* struct */ QVariantAnimation {
-  pub fn valueChanged(&self) -> QVariantAnimation_valueChanged_signal {
-     return QVariantAnimation_valueChanged_signal{poi:self.qclsinst};
+// /usr/include/qt/QtCore/qvariantanimation.h:77
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QVariant keyValueAt(qreal) const
+
+/*
+Returns the key frame value for the given step. The given step must be in the range 0 to 1. If there is no KeyValue for step, it returns an invalid QVariant.
+
+See also keyValues() and setKeyValueAt().
+*/
+impl /*struct*/ QVariantAnimation {
+  pub fn keyValueAt_0<RetType, T: QVariantAnimation_keyValueAt_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.keyValueAt_0(self);
+    // return 1;
   }
 }
-impl /* struct */ QVariantAnimation_valueChanged_signal {
-  pub fn connect<T: QVariantAnimation_valueChanged_signal_connect>(self, overload_args: T) {
-    overload_args.connect(self);
-  }
+pub trait QVariantAnimation_keyValueAt_0<RetType> {
+  fn keyValueAt_0(self , rsthis: & QVariantAnimation) -> RetType;
 }
-pub trait QVariantAnimation_valueChanged_signal_connect {
-  fn connect(self, sigthis: QVariantAnimation_valueChanged_signal);
+impl<'a> /*trait*/ QVariantAnimation_keyValueAt_0<usize> for (f64) {
+  fn keyValueAt_0(self , rsthis: & QVariantAnimation) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const f64 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK17QVariantAnimation10keyValueAtEd", 1,qtrt::FFITY_DOUBLE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
 }
 
-// valueChanged(const class QVariant &)
-extern fn QVariantAnimation_valueChanged_signal_connect_cb_0(rsfptr:fn(QVariant), arg0: *mut c_void) {
-  println!("{}:{}", file!(), line!());
-  let rsarg0 = QVariant::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
-}
-extern fn QVariantAnimation_valueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QVariant)>, arg0: *mut c_void) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  let rsarg0 = QVariant::inheritFrom(arg0 as u64);
-  // rsfptr(rsarg0);
-  unsafe{(*rsfptr_raw)(rsarg0)};
-}
-impl /* trait */ QVariantAnimation_valueChanged_signal_connect for fn(QVariant) {
-  fn connect(self, sigthis: QVariantAnimation_valueChanged_signal) {
-    // do smth...
-    // self as u64; // error for Fn, Ok for fn
-    self as *mut c_void as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QVariantAnimation_valueChanged_signal_connect_cb_0 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QVariantAnimation_SlotProxy_connect__ZN17QVariantAnimation12valueChangedERK8QVariant(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QVariantAnimation_valueChanged_signal_connect for Box<Fn(QVariant)> {
-  fn connect(self, sigthis: QVariantAnimation_valueChanged_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QVariantAnimation_valueChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
-    unsafe {QVariantAnimation_SlotProxy_connect__ZN17QVariantAnimation12valueChangedERK8QVariant(arg0, arg1, arg2)};
-  }
-}
-// <= body block end
+// /usr/include/qt/QtCore/qvariantanimation.h:78
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setKeyValueAt(qreal, const QVariant &)
 
+/*
+Creates a key frame at the given step with the given value. The given step must be in the range 0 to 1.
+
+See also setKeyValues() and keyValueAt().
+*/
+impl /*struct*/ QVariantAnimation {
+  pub fn setKeyValueAt_0<RetType, T: QVariantAnimation_setKeyValueAt_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setKeyValueAt_0(self);
+    // return 1;
+  }
+}
+pub trait QVariantAnimation_setKeyValueAt_0<RetType> {
+  fn setKeyValueAt_0(self , rsthis: & QVariantAnimation) -> RetType;
+}
+impl<'a> /*trait*/ QVariantAnimation_setKeyValueAt_0<(/*void*/)> for (f64,usize) {
+  fn setKeyValueAt_0(self , rsthis: & QVariantAnimation) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const f64 as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant", 2,qtrt::FFITY_DOUBLE,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariantanimation.h:83
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QVariant currentValue() const
+
+/*
+
+*/
+impl /*struct*/ QVariantAnimation {
+  pub fn currentValue_0<RetType, T: QVariantAnimation_currentValue_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.currentValue_0(self);
+    // return 1;
+  }
+}
+pub trait QVariantAnimation_currentValue_0<RetType> {
+  fn currentValue_0(self , rsthis: & QVariantAnimation) -> RetType;
+}
+impl<'a> /*trait*/ QVariantAnimation_currentValue_0<usize> for () {
+  fn currentValue_0(self , rsthis: & QVariantAnimation) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK17QVariantAnimation12currentValueEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariantanimation.h:85
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [4] int duration() const
+
+/*
+
+*/
+impl /*struct*/ QVariantAnimation {
+  pub fn duration_0<RetType, T: QVariantAnimation_duration_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.duration_0(self);
+    // return 1;
+  }
+}
+pub trait QVariantAnimation_duration_0<RetType> {
+  fn duration_0(self , rsthis: & QVariantAnimation) -> RetType;
+}
+impl<'a> /*trait*/ QVariantAnimation_duration_0<i32> for () {
+  fn duration_0(self , rsthis: & QVariantAnimation) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK17QVariantAnimation8durationEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariantanimation.h:86
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setDuration(int)
+
+/*
+
+*/
+impl /*struct*/ QVariantAnimation {
+  pub fn setDuration_0<RetType, T: QVariantAnimation_setDuration_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setDuration_0(self);
+    // return 1;
+  }
+}
+pub trait QVariantAnimation_setDuration_0<RetType> {
+  fn setDuration_0(self , rsthis: & QVariantAnimation) -> RetType;
+}
+impl<'a> /*trait*/ QVariantAnimation_setDuration_0<(/*void*/)> for (i32) {
+  fn setDuration_0(self , rsthis: & QVariantAnimation) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN17QVariantAnimation11setDurationEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariantanimation.h:88
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QEasingCurve easingCurve() const
+
+/*
+
+*/
+impl /*struct*/ QVariantAnimation {
+  pub fn easingCurve_0<RetType, T: QVariantAnimation_easingCurve_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.easingCurve_0(self);
+    // return 1;
+  }
+}
+pub trait QVariantAnimation_easingCurve_0<RetType> {
+  fn easingCurve_0(self , rsthis: & QVariantAnimation) -> RetType;
+}
+impl<'a> /*trait*/ QVariantAnimation_easingCurve_0<usize> for () {
+  fn easingCurve_0(self , rsthis: & QVariantAnimation) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK17QVariantAnimation11easingCurveEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariantanimation.h:89
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setEasingCurve(const QEasingCurve &)
+
+/*
+
+*/
+impl /*struct*/ QVariantAnimation {
+  pub fn setEasingCurve_0<RetType, T: QVariantAnimation_setEasingCurve_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setEasingCurve_0(self);
+    // return 1;
+  }
+}
+pub trait QVariantAnimation_setEasingCurve_0<RetType> {
+  fn setEasingCurve_0(self , rsthis: & QVariantAnimation) -> RetType;
+}
+impl<'a> /*trait*/ QVariantAnimation_setEasingCurve_0<(/*void*/)> for (usize) {
+  fn setEasingCurve_0(self , rsthis: & QVariantAnimation) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariantanimation.h:94
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void valueChanged(const QVariant &)
+
+/*
+QVariantAnimation emits this signal whenever the current value changes.
+
+Note: Notifier signal for property currentValue. 
+
+See also currentValue, startValue, and endValue.
+*/
+impl /*struct*/ QVariantAnimation {
+  pub fn valueChanged_0<RetType, T: QVariantAnimation_valueChanged_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.valueChanged_0(self);
+    // return 1;
+  }
+}
+pub trait QVariantAnimation_valueChanged_0<RetType> {
+  fn valueChanged_0(self , rsthis: & QVariantAnimation) -> RetType;
+}
+impl<'a> /*trait*/ QVariantAnimation_valueChanged_0<(/*void*/)> for (usize) {
+  fn valueChanged_0(self , rsthis: & QVariantAnimation) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN17QVariantAnimation12valueChangedERK8QVariant", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariantanimation.h:98
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
+impl /*struct*/ QVariantAnimation {
+  pub fn event_0<RetType, T: QVariantAnimation_event_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.event_0(self);
+    // return 1;
+  }
+}
+pub trait QVariantAnimation_event_0<RetType> {
+  fn event_0(self , rsthis: & QVariantAnimation) -> RetType;
+}
+impl<'a> /*trait*/ QVariantAnimation_event_0<bool> for (usize) {
+  fn event_0(self , rsthis: & QVariantAnimation) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN17QVariantAnimation5eventEP6QEvent", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariantanimation.h:100
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void updateCurrentTime(int)
+
+/*
+Reimplemented from QAbstractAnimation::updateCurrentTime().
+*/
+impl /*struct*/ QVariantAnimation {
+  pub fn updateCurrentTime_0<RetType, T: QVariantAnimation_updateCurrentTime_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.updateCurrentTime_0(self);
+    // return 1;
+  }
+}
+pub trait QVariantAnimation_updateCurrentTime_0<RetType> {
+  fn updateCurrentTime_0(self , rsthis: & QVariantAnimation) -> RetType;
+}
+impl<'a> /*trait*/ QVariantAnimation_updateCurrentTime_0<(/*void*/)> for (i32) {
+  fn updateCurrentTime_0(self , rsthis: & QVariantAnimation) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN17QVariantAnimation17updateCurrentTimeEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariantanimation.h:101
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void updateState(QAbstractAnimation::State, QAbstractAnimation::State)
+
+/*
+Reimplemented from QAbstractAnimation::updateState().
+*/
+impl /*struct*/ QVariantAnimation {
+  pub fn updateState_0<RetType, T: QVariantAnimation_updateState_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.updateState_0(self);
+    // return 1;
+  }
+}
+pub trait QVariantAnimation_updateState_0<RetType> {
+  fn updateState_0(self , rsthis: & QVariantAnimation) -> RetType;
+}
+impl<'a> /*trait*/ QVariantAnimation_updateState_0<(/*void*/)> for (i32,i32) {
+  fn updateState_0(self , rsthis: & QVariantAnimation) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN17QVariantAnimation11updateStateEN18QAbstractAnimation5StateES1_", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariantanimation.h:103
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void updateCurrentValue(const QVariant &)
+
+/*
+This virtual function is called every time the animation's current value changes. The value argument is the new current value.
+
+The base class implementation does nothing.
+
+See also currentValue.
+*/
+impl /*struct*/ QVariantAnimation {
+  pub fn updateCurrentValue_0<RetType, T: QVariantAnimation_updateCurrentValue_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.updateCurrentValue_0(self);
+    // return 1;
+  }
+}
+pub trait QVariantAnimation_updateCurrentValue_0<RetType> {
+  fn updateCurrentValue_0(self , rsthis: & QVariantAnimation) -> RetType;
+}
+impl<'a> /*trait*/ QVariantAnimation_updateCurrentValue_0<(/*void*/)> for (usize) {
+  fn updateCurrentValue_0(self , rsthis: & QVariantAnimation) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN17QVariantAnimation18updateCurrentValueERK8QVariant", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qvariantanimation.h:104
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [16] QVariant interpolated(const QVariant &, const QVariant &, qreal) const
+
+/*
+This virtual function returns the linear interpolation between variants from and to, at progress, usually a value between 0 and 1. You can reimplement this function in a subclass of QVariantAnimation to provide your own interpolation algorithm.
+
+Note that in order for the interpolation to work with a QEasingCurve that return a value smaller than 0 or larger than 1 (such as QEasingCurve::InBack) you should make sure that it can extrapolate. If the semantic of the datatype does not allow extrapolation this function should handle that gracefully.
+
+You should call the QVariantAnimation implementation of this function if you want your class to handle the types already supported by Qt (see class QVariantAnimation description for a list of supported types).
+
+See also QEasingCurve.
+*/
+impl /*struct*/ QVariantAnimation {
+  pub fn interpolated_0<RetType, T: QVariantAnimation_interpolated_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.interpolated_0(self);
+    // return 1;
+  }
+}
+pub trait QVariantAnimation_interpolated_0<RetType> {
+  fn interpolated_0(self , rsthis: & QVariantAnimation) -> RetType;
+}
+impl<'a> /*trait*/ QVariantAnimation_interpolated_0<usize> for (usize,usize,f64) {
+  fn interpolated_0(self , rsthis: & QVariantAnimation) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2) as *const f64 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK17QVariantAnimation12interpolatedERK8QVariantS2_d", 3,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_DOUBLE,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+//  body block end
+
+//  keep block begin
+
+//  keep block end

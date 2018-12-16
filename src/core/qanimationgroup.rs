@@ -1,348 +1,414 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qanimationgroup.h
-// dst-file: /src/core/qanimationgroup.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QAnimationGroup
+// package qtcore
+// /usr/include/qt/QtCore/qanimationgroup.h
+// #include <qanimationgroup.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
-use super::qabstractanimation::*; // 773
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 14
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qobject::*; // 773
-use super::qobjectdefs::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QAnimationGroup_Class_Size() -> c_int;
-  // proto:  QAbstractAnimation * QAnimationGroup::animationAt(int index);
-  fn C_ZNK15QAnimationGroup11animationAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
-  // proto:  void QAnimationGroup::~QAnimationGroup();
-  fn C_ZN15QAnimationGroupD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void QAnimationGroup::removeAnimation(QAbstractAnimation * animation);
-  fn C_ZN15QAnimationGroup15removeAnimationEP18QAbstractAnimation(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QAnimationGroup::QAnimationGroup(QObject * parent);
-  fn C_ZN15QAnimationGroupC2EP7QObject(arg0: *mut c_void) -> u64;
-  // proto:  int QAnimationGroup::animationCount();
-  fn C_ZNK15QAnimationGroup14animationCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  void QAnimationGroup::addAnimation(QAbstractAnimation * animation);
-  fn C_ZN15QAnimationGroup12addAnimationEP18QAbstractAnimation(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QAnimationGroup::clear();
-  fn C_ZN15QAnimationGroup5clearEv(qthis: u64 /* *mut c_void*/);
-  // proto:  QAbstractAnimation * QAnimationGroup::takeAnimation(int index);
-  fn C_ZN15QAnimationGroup13takeAnimationEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
-  // proto:  void QAnimationGroup::insertAnimation(int index, QAbstractAnimation * animation);
-  fn C_ZN15QAnimationGroup15insertAnimationEiP18QAbstractAnimation(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
-  // proto:  const QMetaObject * QAnimationGroup::metaObject();
-  fn C_ZNK15QAnimationGroup10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  int QAnimationGroup::indexOfAnimation(QAbstractAnimation * animation);
-  fn C_ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
-} // <= ext block end
+// bool event(QEvent *)
+// func (this *QAnimationGroup) InheritEvent(f func(event *QEvent/*777 QEvent **/) bool) {
+//  qtrt.SetAllInheritCallback(this, "event", f)
+// }
 
-// body block begin =>
-// class sizeof(QAnimationGroup)=1
-#[derive(Default)]
+
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QAnimationGroup)=16
 pub struct QAnimationGroup {
   qbase: QAbstractAnimation,
-  pub qclsinst: u64 /* *mut c_void*/,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QAnimationGroup_ITF interface {
+//    QAbstractAnimation_ITF
+//    QAnimationGroup_PTR() *QAnimationGroup
+//}
+//func (ptr *QAnimationGroup) QAnimationGroup_PTR() *QAnimationGroup { return ptr }
 
 impl /*struct*/ QAnimationGroup {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QAnimationGroup {
-    return QAnimationGroup{qbase: QAbstractAnimation::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QAnimationGroup {
+    return QAnimationGroup{qclsinst: qthis, ..Default::default()};
   }
 }
-impl Deref for QAnimationGroup {
-  type Target = QAbstractAnimation;
+//impl Deref for QAnimationGroup {
+//  type Target = QAnimationGroupBASE;
+//
+//  fn deref(&self) -> &QAnimationGroupBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QAnimationGroupBASE> for QAnimationGroup {
+//  fn as_ref(& self) -> & QAnimationGroupBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qanimationgroup.h:53
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject() const
 
-  fn deref(&self) -> &QAbstractAnimation {
-    return & self.qbase;
-  }
-}
-impl AsRef<QAbstractAnimation> for QAnimationGroup {
-  fn as_ref(& self) -> & QAbstractAnimation {
-    return & self.qbase;
-  }
-}
-  // proto:  QAbstractAnimation * QAnimationGroup::animationAt(int index);
+/*
+
+*/
 impl /*struct*/ QAnimationGroup {
-  pub fn animationAt<RetType, T: QAnimationGroup_animationAt<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.animationAt(self);
+  pub fn metaObject_0<RetType, T: QAnimationGroup_metaObject_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.metaObject_0(self);
     // return 1;
   }
 }
-
-pub trait QAnimationGroup_animationAt<RetType> {
-  fn animationAt(self , rsthis: & QAnimationGroup) -> RetType;
+pub trait QAnimationGroup_metaObject_0<RetType> {
+  fn metaObject_0(self , rsthis: & QAnimationGroup) -> RetType;
 }
-
-  // proto:  QAbstractAnimation * QAnimationGroup::animationAt(int index);
-impl<'a> /*trait*/ QAnimationGroup_animationAt<QAbstractAnimation> for (i32) {
-  fn animationAt(self , rsthis: & QAnimationGroup) -> QAbstractAnimation {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK15QAnimationGroup11animationAtEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZNK15QAnimationGroup11animationAtEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QAbstractAnimation::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QAnimationGroup_metaObject_0<usize> for () {
+  fn metaObject_0(self , rsthis: & QAnimationGroup) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK15QAnimationGroup10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  void QAnimationGroup::~QAnimationGroup();
+// /usr/include/qt/QtCore/qanimationgroup.h:56
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QAnimationGroup(QObject *)
+
+/*
+Constructs a QAnimationGroup. parent is passed to QObject's constructor.
+*/
+// QAnimationGroup(QObject *) ctx.fn_proto_cpp
 impl /*struct*/ QAnimationGroup {
-  pub fn free<RetType, T: QAnimationGroup_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
-    // return 1;
-  }
-}
-
-pub trait QAnimationGroup_free<RetType> {
-  fn free(self , rsthis: & QAnimationGroup) -> RetType;
-}
-
-  // proto:  void QAnimationGroup::~QAnimationGroup();
-impl<'a> /*trait*/ QAnimationGroup_free<()> for () {
-  fn free(self , rsthis: & QAnimationGroup) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QAnimationGroupD2Ev()};
-     unsafe {C_ZN15QAnimationGroupD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QAnimationGroup::removeAnimation(QAbstractAnimation * animation);
-impl /*struct*/ QAnimationGroup {
-  pub fn removeAnimation<RetType, T: QAnimationGroup_removeAnimation<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.removeAnimation(self);
-    // return 1;
-  }
-}
-
-pub trait QAnimationGroup_removeAnimation<RetType> {
-  fn removeAnimation(self , rsthis: & QAnimationGroup) -> RetType;
-}
-
-  // proto:  void QAnimationGroup::removeAnimation(QAbstractAnimation * animation);
-impl<'a> /*trait*/ QAnimationGroup_removeAnimation<()> for (&'a QAbstractAnimation) {
-  fn removeAnimation(self , rsthis: & QAnimationGroup) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QAnimationGroup15removeAnimationEP18QAbstractAnimation()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN15QAnimationGroup15removeAnimationEP18QAbstractAnimation(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QAnimationGroup::QAnimationGroup(QObject * parent);
-impl /*struct*/ QAnimationGroup {
-  pub fn new<T: QAnimationGroup_new>(value: T) -> QAnimationGroup {
-    let rsthis = value.new();
+  pub fn QAnimationGroup_0<T: QAnimationGroup_QAnimationGroup_0>(value: T) -> QAnimationGroup {
+    let rsthis = value.QAnimationGroup_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAnimationGroup_new {
-  fn new(self) -> QAnimationGroup;
+pub trait QAnimationGroup_QAnimationGroup_0 {
+  fn QAnimationGroup_0(self) -> QAnimationGroup;
 }
-
-  // proto:  void QAnimationGroup::QAnimationGroup(QObject * parent);
-impl<'a> /*trait*/ QAnimationGroup_new for (Option<&'a QObject>) {
-  fn new(self) -> QAnimationGroup {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QAnimationGroup(QObject *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QAnimationGroup_QAnimationGroup_0 for (usize) {
+  fn QAnimationGroup_0(self) -> QAnimationGroup {
     // unsafe{_ZN15QAnimationGroupC2EP7QObject()};
-    let ctysz: c_int = unsafe{QAnimationGroup_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN15QAnimationGroupC2EP7QObject(arg0)};
-    let rsthis = QAnimationGroup{qbase: QAbstractAnimation::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN15QAnimationGroupC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QAnimationGroup{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  int QAnimationGroup::animationCount();
+// /usr/include/qt/QtCore/qanimationgroup.h:57
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QAnimationGroup()
+
+/*
+
+*/
+pub fn DeleteQAnimationGroup(this :*mut QAnimationGroup) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN15QAnimationGroupD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 16)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qanimationgroup.h:59
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QAbstractAnimation * animationAt(int) const
+
+/*
+Returns a pointer to the animation at index in this group. This function is useful when you need access to a particular animation. index is between 0 and animationCount() - 1.
+
+See also animationCount() and indexOfAnimation().
+*/
 impl /*struct*/ QAnimationGroup {
-  pub fn animationCount<RetType, T: QAnimationGroup_animationCount<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.animationCount(self);
+  pub fn animationAt_0<RetType, T: QAnimationGroup_animationAt_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.animationAt_0(self);
     // return 1;
   }
 }
-
-pub trait QAnimationGroup_animationCount<RetType> {
-  fn animationCount(self , rsthis: & QAnimationGroup) -> RetType;
+pub trait QAnimationGroup_animationAt_0<RetType> {
+  fn animationAt_0(self , rsthis: & QAnimationGroup) -> RetType;
 }
-
-  // proto:  int QAnimationGroup::animationCount();
-impl<'a> /*trait*/ QAnimationGroup_animationCount<i32> for () {
-  fn animationCount(self , rsthis: & QAnimationGroup) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK15QAnimationGroup14animationCountEv()};
-    let mut ret = unsafe {C_ZNK15QAnimationGroup14animationCountEv(rsthis.qclsinst)};
-    return ret as i32; // 1
+impl<'a> /*trait*/ QAnimationGroup_animationAt_0<usize> for (i32) {
+  fn animationAt_0(self , rsthis: & QAnimationGroup) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK15QAnimationGroup11animationAtEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  void QAnimationGroup::addAnimation(QAbstractAnimation * animation);
+// /usr/include/qt/QtCore/qanimationgroup.h:60
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int animationCount() const
+
+/*
+Returns the number of animations managed by this group.
+
+See also indexOfAnimation(), addAnimation(), and animationAt().
+*/
 impl /*struct*/ QAnimationGroup {
-  pub fn addAnimation<RetType, T: QAnimationGroup_addAnimation<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.addAnimation(self);
+  pub fn animationCount_0<RetType, T: QAnimationGroup_animationCount_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.animationCount_0(self);
     // return 1;
   }
 }
-
-pub trait QAnimationGroup_addAnimation<RetType> {
-  fn addAnimation(self , rsthis: & QAnimationGroup) -> RetType;
+pub trait QAnimationGroup_animationCount_0<RetType> {
+  fn animationCount_0(self , rsthis: & QAnimationGroup) -> RetType;
 }
-
-  // proto:  void QAnimationGroup::addAnimation(QAbstractAnimation * animation);
-impl<'a> /*trait*/ QAnimationGroup_addAnimation<()> for (&'a QAbstractAnimation) {
-  fn addAnimation(self , rsthis: & QAnimationGroup) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QAnimationGroup12addAnimationEP18QAbstractAnimation()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN15QAnimationGroup12addAnimationEP18QAbstractAnimation(rsthis.qclsinst, arg0)};
+impl<'a> /*trait*/ QAnimationGroup_animationCount_0<i32> for () {
+  fn animationCount_0(self , rsthis: & QAnimationGroup) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK15QAnimationGroup14animationCountEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i32 = Default::default(); return dret;
   }
 }
 
-  // proto:  void QAnimationGroup::clear();
+// /usr/include/qt/QtCore/qanimationgroup.h:61
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int indexOfAnimation(QAbstractAnimation *) const
+
+/*
+Returns the index of animation. The returned index can be passed to the other functions that take an index as an argument.
+
+See also insertAnimation(), animationAt(), and takeAnimation().
+*/
 impl /*struct*/ QAnimationGroup {
-  pub fn clear<RetType, T: QAnimationGroup_clear<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.clear(self);
+  pub fn indexOfAnimation_0<RetType, T: QAnimationGroup_indexOfAnimation_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.indexOfAnimation_0(self);
     // return 1;
   }
 }
-
-pub trait QAnimationGroup_clear<RetType> {
-  fn clear(self , rsthis: & QAnimationGroup) -> RetType;
+pub trait QAnimationGroup_indexOfAnimation_0<RetType> {
+  fn indexOfAnimation_0(self , rsthis: & QAnimationGroup) -> RetType;
 }
-
-  // proto:  void QAnimationGroup::clear();
-impl<'a> /*trait*/ QAnimationGroup_clear<()> for () {
-  fn clear(self , rsthis: & QAnimationGroup) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QAnimationGroup5clearEv()};
-     unsafe {C_ZN15QAnimationGroup5clearEv(rsthis.qclsinst)};
+impl<'a> /*trait*/ QAnimationGroup_indexOfAnimation_0<i32> for (usize) {
+  fn indexOfAnimation_0(self , rsthis: & QAnimationGroup) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i32 = Default::default(); return dret;
   }
 }
 
-  // proto:  QAbstractAnimation * QAnimationGroup::takeAnimation(int index);
+// /usr/include/qt/QtCore/qanimationgroup.h:62
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void addAnimation(QAbstractAnimation *)
+
+/*
+Adds animation to this group. This will call insertAnimation with index equals to animationCount().
+
+Note: The group takes ownership of the animation.
+
+See also removeAnimation().
+*/
 impl /*struct*/ QAnimationGroup {
-  pub fn takeAnimation<RetType, T: QAnimationGroup_takeAnimation<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.takeAnimation(self);
+  pub fn addAnimation_0<RetType, T: QAnimationGroup_addAnimation_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.addAnimation_0(self);
+    // return 1;
+  }
+}
+pub trait QAnimationGroup_addAnimation_0<RetType> {
+  fn addAnimation_0(self , rsthis: & QAnimationGroup) -> RetType;
+}
+impl<'a> /*trait*/ QAnimationGroup_addAnimation_0<(/*void*/)> for (usize) {
+  fn addAnimation_0(self , rsthis: & QAnimationGroup) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN15QAnimationGroup12addAnimationEP18QAbstractAnimation", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QAnimationGroup_takeAnimation<RetType> {
-  fn takeAnimation(self , rsthis: & QAnimationGroup) -> RetType;
-}
+// /usr/include/qt/QtCore/qanimationgroup.h:63
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void insertAnimation(int, QAbstractAnimation *)
 
-  // proto:  QAbstractAnimation * QAnimationGroup::takeAnimation(int index);
-impl<'a> /*trait*/ QAnimationGroup_takeAnimation<QAbstractAnimation> for (i32) {
-  fn takeAnimation(self , rsthis: & QAnimationGroup) -> QAbstractAnimation {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QAnimationGroup13takeAnimationEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZN15QAnimationGroup13takeAnimationEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QAbstractAnimation::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
+/*
+Inserts animation into this animation group at index. If index is 0 the animation is inserted at the beginning. If index is animationCount(), the animation is inserted at the end.
 
-  // proto:  void QAnimationGroup::insertAnimation(int index, QAbstractAnimation * animation);
+Note: The group takes ownership of the animation.
+
+See also takeAnimation(), addAnimation(), indexOfAnimation(), and removeAnimation().
+*/
 impl /*struct*/ QAnimationGroup {
-  pub fn insertAnimation<RetType, T: QAnimationGroup_insertAnimation<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.insertAnimation(self);
+  pub fn insertAnimation_0<RetType, T: QAnimationGroup_insertAnimation_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.insertAnimation_0(self);
+    // return 1;
+  }
+}
+pub trait QAnimationGroup_insertAnimation_0<RetType> {
+  fn insertAnimation_0(self , rsthis: & QAnimationGroup) -> RetType;
+}
+impl<'a> /*trait*/ QAnimationGroup_insertAnimation_0<(/*void*/)> for (i32,usize) {
+  fn insertAnimation_0(self , rsthis: & QAnimationGroup) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN15QAnimationGroup15insertAnimationEiP18QAbstractAnimation", 2,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QAnimationGroup_insertAnimation<RetType> {
-  fn insertAnimation(self , rsthis: & QAnimationGroup) -> RetType;
-}
+// /usr/include/qt/QtCore/qanimationgroup.h:64
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void removeAnimation(QAbstractAnimation *)
 
-  // proto:  void QAnimationGroup::insertAnimation(int index, QAbstractAnimation * animation);
-impl<'a> /*trait*/ QAnimationGroup_insertAnimation<()> for (i32, &'a QAbstractAnimation) {
-  fn insertAnimation(self , rsthis: & QAnimationGroup) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QAnimationGroup15insertAnimationEiP18QAbstractAnimation()};
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {C_ZN15QAnimationGroup15insertAnimationEiP18QAbstractAnimation(rsthis.qclsinst, arg0, arg1)};
-    // return 1;
-  }
-}
+/*
+Removes animation from this group. The ownership of animation is transferred to the caller.
 
-  // proto:  const QMetaObject * QAnimationGroup::metaObject();
+See also takeAnimation(), insertAnimation(), and addAnimation().
+*/
 impl /*struct*/ QAnimationGroup {
-  pub fn metaObject<RetType, T: QAnimationGroup_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.metaObject(self);
+  pub fn removeAnimation_0<RetType, T: QAnimationGroup_removeAnimation_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.removeAnimation_0(self);
+    // return 1;
+  }
+}
+pub trait QAnimationGroup_removeAnimation_0<RetType> {
+  fn removeAnimation_0(self , rsthis: & QAnimationGroup) -> RetType;
+}
+impl<'a> /*trait*/ QAnimationGroup_removeAnimation_0<(/*void*/)> for (usize) {
+  fn removeAnimation_0(self , rsthis: & QAnimationGroup) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN15QAnimationGroup15removeAnimationEP18QAbstractAnimation", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QAnimationGroup_metaObject<RetType> {
-  fn metaObject(self , rsthis: & QAnimationGroup) -> RetType;
-}
+// /usr/include/qt/QtCore/qanimationgroup.h:65
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QAbstractAnimation * takeAnimation(int)
 
-  // proto:  const QMetaObject * QAnimationGroup::metaObject();
-impl<'a> /*trait*/ QAnimationGroup_metaObject<QMetaObject> for () {
-  fn metaObject(self , rsthis: & QAnimationGroup) -> QMetaObject {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK15QAnimationGroup10metaObjectEv()};
-    let mut ret = unsafe {C_ZNK15QAnimationGroup10metaObjectEv(rsthis.qclsinst)};
-    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
+/*
+Returns the animation at index and removes it from the animation group.
 
-  // proto:  int QAnimationGroup::indexOfAnimation(QAbstractAnimation * animation);
+Note: The ownership of the animation is transferred to the caller.
+
+See also removeAnimation(), addAnimation(), insertAnimation(), and indexOfAnimation().
+*/
 impl /*struct*/ QAnimationGroup {
-  pub fn indexOfAnimation<RetType, T: QAnimationGroup_indexOfAnimation<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.indexOfAnimation(self);
+  pub fn takeAnimation_0<RetType, T: QAnimationGroup_takeAnimation_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.takeAnimation_0(self);
+    // return 1;
+  }
+}
+pub trait QAnimationGroup_takeAnimation_0<RetType> {
+  fn takeAnimation_0(self , rsthis: & QAnimationGroup) -> RetType;
+}
+impl<'a> /*trait*/ QAnimationGroup_takeAnimation_0<usize> for (i32) {
+  fn takeAnimation_0(self , rsthis: & QAnimationGroup) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN15QAnimationGroup13takeAnimationEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qanimationgroup.h:66
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void clear()
+
+/*
+Removes and deletes all animations in this animation group, and resets the current time to 0.
+
+See also addAnimation() and removeAnimation().
+*/
+impl /*struct*/ QAnimationGroup {
+  pub fn clear_0<RetType, T: QAnimationGroup_clear_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.clear_0(self);
+    // return 1;
+  }
+}
+pub trait QAnimationGroup_clear_0<RetType> {
+  fn clear_0(self , rsthis: & QAnimationGroup) -> RetType;
+}
+impl<'a> /*trait*/ QAnimationGroup_clear_0<(/*void*/)> for () {
+  fn clear_0(self , rsthis: & QAnimationGroup) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZN15QAnimationGroup5clearEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QAnimationGroup_indexOfAnimation<RetType> {
-  fn indexOfAnimation(self , rsthis: & QAnimationGroup) -> RetType;
-}
+// /usr/include/qt/QtCore/qanimationgroup.h:70
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
 
-  // proto:  int QAnimationGroup::indexOfAnimation(QAbstractAnimation * animation);
-impl<'a> /*trait*/ QAnimationGroup_indexOfAnimation<i32> for (&'a QAbstractAnimation) {
-  fn indexOfAnimation(self , rsthis: & QAnimationGroup) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation(rsthis.qclsinst, arg0)};
-    return ret as i32; // 1
+/*
+Reimplemented from QObject::event().
+*/
+impl /*struct*/ QAnimationGroup {
+  pub fn event_0<RetType, T: QAnimationGroup_event_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.event_0(self);
     // return 1;
   }
 }
+pub trait QAnimationGroup_event_0<RetType> {
+  fn event_0(self , rsthis: & QAnimationGroup) -> RetType;
+}
+impl<'a> /*trait*/ QAnimationGroup_event_0<bool> for (usize) {
+  fn event_0(self , rsthis: & QAnimationGroup) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN15QAnimationGroup5eventEP6QEvent", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
 
-// <= body block end
+//  body block end
 
+//  keep block begin
+
+//  keep block end

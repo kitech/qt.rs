@@ -1,193 +1,305 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qwaitcondition.h
-// dst-file: /src/core/qwaitcondition.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QWaitCondition
+// package qtcore
+// /usr/include/qt/QtCore/qwaitcondition.h
+// #include <qwaitcondition.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 23
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qreadwritelock::*; // 773
-use super::qmutex::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QWaitCondition_Class_Size() -> c_int;
-  // proto:  bool QWaitCondition::wait(QReadWriteLock * lockedReadWriteLock, unsigned long time);
-  fn C_ZN14QWaitCondition4waitEP14QReadWriteLockm(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_ulong) -> c_char;
-  // proto:  bool QWaitCondition::wait(QMutex * lockedMutex, unsigned long time);
-  fn C_ZN14QWaitCondition4waitEP6QMutexm(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_ulong) -> c_char;
-  // proto:  void QWaitCondition::wakeAll();
-  fn C_ZN14QWaitCondition7wakeAllEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QWaitCondition::wakeOne();
-  fn C_ZN14QWaitCondition7wakeOneEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QWaitCondition::~QWaitCondition();
-  fn C_ZN14QWaitConditionD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void QWaitCondition::QWaitCondition();
-  fn C_ZN14QWaitConditionC2Ev() -> u64;
-} // <= ext block end
 
-// body block begin =>
-// class sizeof(QWaitCondition)=8
-#[derive(Default)]
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QWaitCondition)=8
 pub struct QWaitCondition {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
+  // qbase: none,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QWaitCondition_ITF interface {
+//    QWaitCondition_PTR() *QWaitCondition
+//}
+//func (ptr *QWaitCondition) QWaitCondition_PTR() *QWaitCondition { return ptr }
 
 impl /*struct*/ QWaitCondition {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QWaitCondition {
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QWaitCondition {
     return QWaitCondition{qclsinst: qthis, ..Default::default()};
   }
 }
-  // proto:  bool QWaitCondition::wait(QReadWriteLock * lockedReadWriteLock, unsigned long time);
+//impl Deref for QWaitCondition {
+//  type Target = QWaitConditionBASE;
+//
+//  fn deref(&self) -> &QWaitConditionBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QWaitConditionBASE> for QWaitCondition {
+//  fn as_ref(& self) -> & QWaitConditionBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qwaitcondition.h:59
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QWaitCondition()
+
+/*
+Constructs a new wait condition object.
+*/
+// QWaitCondition() ctx.fn_proto_cpp
 impl /*struct*/ QWaitCondition {
-  pub fn wait<RetType, T: QWaitCondition_wait<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.wait(self);
-    // return 1;
-  }
-}
-
-pub trait QWaitCondition_wait<RetType> {
-  fn wait(self , rsthis: & QWaitCondition) -> RetType;
-}
-
-  // proto:  bool QWaitCondition::wait(QReadWriteLock * lockedReadWriteLock, unsigned long time);
-impl<'a> /*trait*/ QWaitCondition_wait<i8> for (&'a QReadWriteLock, Option<u64>) {
-  fn wait(self , rsthis: & QWaitCondition) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QWaitCondition4waitEP14QReadWriteLockm()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = (if self.1.is_none() {i32::max_value() as u64} else {self.1.unwrap()})  as c_ulong;
-    let mut ret = unsafe {C_ZN14QWaitCondition4waitEP14QReadWriteLockm(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  bool QWaitCondition::wait(QMutex * lockedMutex, unsigned long time);
-impl<'a> /*trait*/ QWaitCondition_wait<i8> for (&'a QMutex, Option<u64>) {
-  fn wait(self , rsthis: & QWaitCondition) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QWaitCondition4waitEP6QMutexm()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = (if self.1.is_none() {i32::max_value() as u64} else {self.1.unwrap()})  as c_ulong;
-    let mut ret = unsafe {C_ZN14QWaitCondition4waitEP6QMutexm(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QWaitCondition::wakeAll();
-impl /*struct*/ QWaitCondition {
-  pub fn wakeAll<RetType, T: QWaitCondition_wakeAll<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.wakeAll(self);
-    // return 1;
-  }
-}
-
-pub trait QWaitCondition_wakeAll<RetType> {
-  fn wakeAll(self , rsthis: & QWaitCondition) -> RetType;
-}
-
-  // proto:  void QWaitCondition::wakeAll();
-impl<'a> /*trait*/ QWaitCondition_wakeAll<()> for () {
-  fn wakeAll(self , rsthis: & QWaitCondition) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QWaitCondition7wakeAllEv()};
-     unsafe {C_ZN14QWaitCondition7wakeAllEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QWaitCondition::wakeOne();
-impl /*struct*/ QWaitCondition {
-  pub fn wakeOne<RetType, T: QWaitCondition_wakeOne<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.wakeOne(self);
-    // return 1;
-  }
-}
-
-pub trait QWaitCondition_wakeOne<RetType> {
-  fn wakeOne(self , rsthis: & QWaitCondition) -> RetType;
-}
-
-  // proto:  void QWaitCondition::wakeOne();
-impl<'a> /*trait*/ QWaitCondition_wakeOne<()> for () {
-  fn wakeOne(self , rsthis: & QWaitCondition) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QWaitCondition7wakeOneEv()};
-     unsafe {C_ZN14QWaitCondition7wakeOneEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QWaitCondition::~QWaitCondition();
-impl /*struct*/ QWaitCondition {
-  pub fn free<RetType, T: QWaitCondition_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
-    // return 1;
-  }
-}
-
-pub trait QWaitCondition_free<RetType> {
-  fn free(self , rsthis: & QWaitCondition) -> RetType;
-}
-
-  // proto:  void QWaitCondition::~QWaitCondition();
-impl<'a> /*trait*/ QWaitCondition_free<()> for () {
-  fn free(self , rsthis: & QWaitCondition) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QWaitConditionD2Ev()};
-     unsafe {C_ZN14QWaitConditionD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QWaitCondition::QWaitCondition();
-impl /*struct*/ QWaitCondition {
-  pub fn new<T: QWaitCondition_new>(value: T) -> QWaitCondition {
-    let rsthis = value.new();
+  pub fn QWaitCondition_0<T: QWaitCondition_QWaitCondition_0>(value: T) -> QWaitCondition {
+    let rsthis = value.QWaitCondition_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QWaitCondition_new {
-  fn new(self) -> QWaitCondition;
+pub trait QWaitCondition_QWaitCondition_0 {
+  fn QWaitCondition_0(self) -> QWaitCondition;
 }
-
-  // proto:  void QWaitCondition::QWaitCondition();
-impl<'a> /*trait*/ QWaitCondition_new for () {
-  fn new(self) -> QWaitCondition {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QWaitCondition() ctx.fn_proto_cpp
+impl<'a> /*trait*/ QWaitCondition_QWaitCondition_0 for () {
+  fn QWaitCondition_0(self) -> QWaitCondition {
     // unsafe{_ZN14QWaitConditionC2Ev()};
-    let ctysz: c_int = unsafe{QWaitCondition_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let qthis: u64 = unsafe {C_ZN14QWaitConditionC2Ev()};
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN14QWaitConditionC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QWaitCondition{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qwaitcondition.h:60
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void ~QWaitCondition()
 
+/*
+
+*/
+pub fn DeleteQWaitCondition(this :*mut QWaitCondition) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN14QWaitConditionD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 8)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qwaitcondition.h:62
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool wait(QMutex *, unsigned long)
+
+/*
+Releases the lockedMutex and waits on the wait condition. The lockedMutex must be initially locked by the calling thread. If lockedMutex is not in a locked state, the behavior is undefined. If lockedMutex is a recursive mutex, this function returns immediately. The lockedMutex will be unlocked, and the calling thread will block until either of these conditions is met:
+
+
+Another thread signals it using wakeOne() or wakeAll(). This function will return true in this case.
+time milliseconds has elapsed. If time is ULONG_MAX (the default), then the wait will never timeout (the event must be signalled). This function will return false if the wait timed out.
+
+
+The lockedMutex will be returned to the same locked state. This function is provided to allow the atomic transition from the locked state to the wait state.
+
+See also wakeOne() and wakeAll().
+*/
+impl /*struct*/ QWaitCondition {
+  pub fn wait_0<RetType, T: QWaitCondition_wait_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.wait_0(self);
+    // return 1;
+  }
+}
+pub trait QWaitCondition_wait_0<RetType> {
+  fn wait_0(self , rsthis: & QWaitCondition) -> RetType;
+}
+impl<'a> /*trait*/ QWaitCondition_wait_0<bool> for (usize,u64) {
+  fn wait_0(self , rsthis: & QWaitCondition) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const u64 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN14QWaitCondition4waitEP6QMutexm", 2,qtrt::FFITY_POINTER,qtrt::FFITY_UINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qwaitcondition.h:63
+// index:1
+// Public Visibility=Default Availability=Available
+// [1] bool wait(QReadWriteLock *, unsigned long)
+
+/*
+Releases the lockedMutex and waits on the wait condition. The lockedMutex must be initially locked by the calling thread. If lockedMutex is not in a locked state, the behavior is undefined. If lockedMutex is a recursive mutex, this function returns immediately. The lockedMutex will be unlocked, and the calling thread will block until either of these conditions is met:
+
+
+Another thread signals it using wakeOne() or wakeAll(). This function will return true in this case.
+time milliseconds has elapsed. If time is ULONG_MAX (the default), then the wait will never timeout (the event must be signalled). This function will return false if the wait timed out.
+
+
+The lockedMutex will be returned to the same locked state. This function is provided to allow the atomic transition from the locked state to the wait state.
+
+See also wakeOne() and wakeAll().
+*/
+impl /*struct*/ QWaitCondition {
+  pub fn wait_1<RetType, T: QWaitCondition_wait_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.wait_1(self);
+    // return 1;
+  }
+}
+pub trait QWaitCondition_wait_1<RetType> {
+  fn wait_1(self , rsthis: & QWaitCondition) -> RetType;
+}
+impl<'a> /*trait*/ QWaitCondition_wait_1<bool> for (usize,u64) {
+  fn wait_1(self , rsthis: & QWaitCondition) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const u64 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN14QWaitCondition4waitEP14QReadWriteLockm", 2,qtrt::FFITY_POINTER,qtrt::FFITY_UINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qwaitcondition.h:65
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void wakeOne()
+
+/*
+Wakes one thread waiting on the wait condition. The thread that is woken up depends on the operating system's scheduling policies, and cannot be controlled or predicted.
+
+If you want to wake up a specific thread, the solution is typically to use different wait conditions and have different threads wait on different conditions.
+
+See also wakeAll().
+*/
+impl /*struct*/ QWaitCondition {
+  pub fn wakeOne_0<RetType, T: QWaitCondition_wakeOne_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.wakeOne_0(self);
+    // return 1;
+  }
+}
+pub trait QWaitCondition_wakeOne_0<RetType> {
+  fn wakeOne_0(self , rsthis: & QWaitCondition) -> RetType;
+}
+impl<'a> /*trait*/ QWaitCondition_wakeOne_0<(/*void*/)> for () {
+  fn wakeOne_0(self , rsthis: & QWaitCondition) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZN14QWaitCondition7wakeOneEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qwaitcondition.h:66
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void wakeAll()
+
+/*
+Wakes all threads waiting on the wait condition. The order in which the threads are woken up depends on the operating system's scheduling policies and cannot be controlled or predicted.
+
+See also wakeOne().
+*/
+impl /*struct*/ QWaitCondition {
+  pub fn wakeAll_0<RetType, T: QWaitCondition_wakeAll_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.wakeAll_0(self);
+    // return 1;
+  }
+}
+pub trait QWaitCondition_wakeAll_0<RetType> {
+  fn wakeAll_0(self , rsthis: & QWaitCondition) -> RetType;
+}
+impl<'a> /*trait*/ QWaitCondition_wakeAll_0<(/*void*/)> for () {
+  fn wakeAll_0(self , rsthis: & QWaitCondition) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZN14QWaitCondition7wakeAllEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qwaitcondition.h:68
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void notify_one()
+
+/*
+This function is provided for STL compatibility. It is equivalent to wakeOne().
+
+This function was introduced in  Qt 5.8.
+*/
+impl /*struct*/ QWaitCondition {
+  pub fn notify_one_0<RetType, T: QWaitCondition_notify_one_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.notify_one_0(self);
+    // return 1;
+  }
+}
+pub trait QWaitCondition_notify_one_0<RetType> {
+  fn notify_one_0(self , rsthis: & QWaitCondition) -> RetType;
+}
+impl<'a> /*trait*/ QWaitCondition_notify_one_0<(/*void*/)> for () {
+  fn notify_one_0(self , rsthis: & QWaitCondition) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZN14QWaitCondition10notify_oneEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qwaitcondition.h:69
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void notify_all()
+
+/*
+This function is provided for STL compatibility. It is equivalent to wakeAll().
+
+This function was introduced in  Qt 5.8.
+*/
+impl /*struct*/ QWaitCondition {
+  pub fn notify_all_0<RetType, T: QWaitCondition_notify_all_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.notify_all_0(self);
+    // return 1;
+  }
+}
+pub trait QWaitCondition_notify_all_0<RetType> {
+  fn notify_all_0(self , rsthis: & QWaitCondition) -> RetType;
+}
+impl<'a> /*trait*/ QWaitCondition_notify_all_0<(/*void*/)> for () {
+  fn notify_all_0(self , rsthis: & QWaitCondition) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZN14QWaitCondition10notify_allEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+//  body block end
+
+//  keep block begin
+
+//  keep block end

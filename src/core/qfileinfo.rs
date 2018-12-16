@@ -1,1322 +1,1997 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qfileinfo.h
-// dst-file: /src/core/qfileinfo.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QFileInfo
+// package qtcore
+// /usr/include/qt/QtCore/qfileinfo.h
+// #include <qfileinfo.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 34
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qstring::*; // 773
-use super::qfile::*; // 773
-use super::qdatetime::*; // 773
-use super::qdir::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QFileInfo_Class_Size() -> c_int;
-  // proto:  bool QFileInfo::isHidden();
-  fn C_ZNK9QFileInfo8isHiddenEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QFileInfo::QFileInfo();
-  fn C_ZN9QFileInfoC2Ev() -> u64;
-  // proto:  QString QFileInfo::completeSuffix();
-  fn C_ZNK9QFileInfo14completeSuffixEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString QFileInfo::canonicalPath();
-  fn C_ZNK9QFileInfo13canonicalPathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto: static bool QFileInfo::exists(const QString & file);
-  fn C_ZN9QFileInfo6existsERK7QString(arg0: *mut c_void) -> c_char;
-  // proto:  bool QFileInfo::makeAbsolute();
-  fn C_ZN9QFileInfo12makeAbsoluteEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  bool QFileInfo::isRoot();
-  fn C_ZNK9QFileInfo6isRootEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  QString QFileInfo::canonicalFilePath();
-  fn C_ZNK9QFileInfo17canonicalFilePathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  bool QFileInfo::isDir();
-  fn C_ZNK9QFileInfo5isDirEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QFileInfo::QFileInfo(const QString & file);
-  fn C_ZN9QFileInfoC2ERK7QString(arg0: *mut c_void) -> u64;
-  // proto:  QString QFileInfo::symLinkTarget();
-  fn C_ZNK9QFileInfo13symLinkTargetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QFileInfo::setFile(const QString & file);
-  fn C_ZN9QFileInfo7setFileERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  bool QFileInfo::isFile();
-  fn C_ZNK9QFileInfo6isFileEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QFileInfo::QFileInfo(const QFile & file);
-  fn C_ZN9QFileInfoC2ERK5QFile(arg0: *mut c_void) -> u64;
-  // proto:  void QFileInfo::setFile(const QFile & file);
-  fn C_ZN9QFileInfo7setFileERK5QFile(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  uint QFileInfo::ownerId();
-  fn C_ZNK9QFileInfo7ownerIdEv(qthis: u64 /* *mut c_void*/) -> c_uint;
-  // proto:  QString QFileInfo::readLink();
-  fn C_ZNK9QFileInfo8readLinkEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString QFileInfo::filePath();
-  fn C_ZNK9QFileInfo8filePathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QFileInfo::QFileInfo(const QFileInfo & fileinfo);
-  fn C_ZN9QFileInfoC2ERKS_(arg0: *mut c_void) -> u64;
-  // proto:  bool QFileInfo::isSymLink();
-  fn C_ZNK9QFileInfo9isSymLinkEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  QDateTime QFileInfo::lastRead();
-  fn C_ZNK9QFileInfo8lastReadEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QFileInfo::refresh();
-  fn C_ZN9QFileInfo7refreshEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QFileInfo::QFileInfo(const QDir & dir, const QString & file);
-  fn C_ZN9QFileInfoC2ERK4QDirRK7QString(arg0: *mut c_void, arg1: *mut c_void) -> u64;
-  // proto:  QString QFileInfo::path();
-  fn C_ZNK9QFileInfo4pathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QDir QFileInfo::absoluteDir();
-  fn C_ZNK9QFileInfo11absoluteDirEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  bool QFileInfo::isBundle();
-  fn C_ZNK9QFileInfo8isBundleEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QFileInfo::setFile(const QDir & dir, const QString & file);
-  fn C_ZN9QFileInfo7setFileERK4QDirRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
-  // proto:  bool QFileInfo::isRelative();
-  fn C_ZNK9QFileInfo10isRelativeEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QFileInfo::setCaching(bool on);
-  fn C_ZN9QFileInfo10setCachingEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
-  // proto:  QDateTime QFileInfo::created();
-  fn C_ZNK9QFileInfo7createdEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  bool QFileInfo::caching();
-  fn C_ZNK9QFileInfo7cachingEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QFileInfo::~QFileInfo();
-  fn C_ZN9QFileInfoD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  QString QFileInfo::completeBaseName();
-  fn C_ZNK9QFileInfo16completeBaseNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString QFileInfo::baseName();
-  fn C_ZNK9QFileInfo8baseNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  bool QFileInfo::isExecutable();
-  fn C_ZNK9QFileInfo12isExecutableEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  QString QFileInfo::bundleName();
-  fn C_ZNK9QFileInfo10bundleNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  uint QFileInfo::groupId();
-  fn C_ZNK9QFileInfo7groupIdEv(qthis: u64 /* *mut c_void*/) -> c_uint;
-  // proto:  QString QFileInfo::fileName();
-  fn C_ZNK9QFileInfo8fileNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  qint64 QFileInfo::size();
-  fn C_ZNK9QFileInfo4sizeEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
-  // proto:  QString QFileInfo::absoluteFilePath();
-  fn C_ZNK9QFileInfo16absoluteFilePathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString QFileInfo::suffix();
-  fn C_ZNK9QFileInfo6suffixEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString QFileInfo::group();
-  fn C_ZNK9QFileInfo5groupEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  bool QFileInfo::isAbsolute();
-  fn C_ZNK9QFileInfo10isAbsoluteEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  bool QFileInfo::isNativePath();
-  fn C_ZNK9QFileInfo12isNativePathEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  bool QFileInfo::isWritable();
-  fn C_ZNK9QFileInfo10isWritableEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  QString QFileInfo::owner();
-  fn C_ZNK9QFileInfo5ownerEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  bool QFileInfo::isReadable();
-  fn C_ZNK9QFileInfo10isReadableEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  QDir QFileInfo::dir();
-  fn C_ZNK9QFileInfo3dirEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QFileInfo::swap(QFileInfo & other);
-  fn C_ZN9QFileInfo4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  bool QFileInfo::exists();
-  fn C_ZNK9QFileInfo6existsEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  QDateTime QFileInfo::lastModified();
-  fn C_ZNK9QFileInfo12lastModifiedEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString QFileInfo::absolutePath();
-  fn C_ZNK9QFileInfo12absolutePathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-} // <= ext block end
 
-// body block begin =>
-// class sizeof(QFileInfo)=1
-#[derive(Default)]
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QFileInfo)=8
 pub struct QFileInfo {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
+  // qbase: none,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QFileInfo_ITF interface {
+//    QFileInfo_PTR() *QFileInfo
+//}
+//func (ptr *QFileInfo) QFileInfo_PTR() *QFileInfo { return ptr }
 
 impl /*struct*/ QFileInfo {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QFileInfo {
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QFileInfo {
     return QFileInfo{qclsinst: qthis, ..Default::default()};
   }
 }
-  // proto:  bool QFileInfo::isHidden();
+//impl Deref for QFileInfo {
+//  type Target = QFileInfoBASE;
+//
+//  fn deref(&self) -> &QFileInfoBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QFileInfoBASE> for QFileInfo {
+//  fn as_ref(& self) -> & QFileInfoBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qfileinfo.h:62
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QFileInfo()
+
+/*
+Constructs an empty QFileInfo object.
+
+Note that an empty QFileInfo object contain no file reference.
+
+See also setFile().
+*/
+// QFileInfo() ctx.fn_proto_cpp
 impl /*struct*/ QFileInfo {
-  pub fn isHidden<RetType, T: QFileInfo_isHidden<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isHidden(self);
-    // return 1;
-  }
-}
-
-pub trait QFileInfo_isHidden<RetType> {
-  fn isHidden(self , rsthis: & QFileInfo) -> RetType;
-}
-
-  // proto:  bool QFileInfo::isHidden();
-impl<'a> /*trait*/ QFileInfo_isHidden<i8> for () {
-  fn isHidden(self , rsthis: & QFileInfo) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo8isHiddenEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo8isHiddenEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QFileInfo::QFileInfo();
-impl /*struct*/ QFileInfo {
-  pub fn new<T: QFileInfo_new>(value: T) -> QFileInfo {
-    let rsthis = value.new();
+  pub fn QFileInfo_0<T: QFileInfo_QFileInfo_0>(value: T) -> QFileInfo {
+    let rsthis = value.QFileInfo_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFileInfo_new {
-  fn new(self) -> QFileInfo;
+pub trait QFileInfo_QFileInfo_0 {
+  fn QFileInfo_0(self) -> QFileInfo;
 }
-
-  // proto:  void QFileInfo::QFileInfo();
-impl<'a> /*trait*/ QFileInfo_new for () {
-  fn new(self) -> QFileInfo {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QFileInfo() ctx.fn_proto_cpp
+impl<'a> /*trait*/ QFileInfo_QFileInfo_0 for () {
+  fn QFileInfo_0(self) -> QFileInfo {
     // unsafe{_ZN9QFileInfoC2Ev()};
-    let ctysz: c_int = unsafe{QFileInfo_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let qthis: u64 = unsafe {C_ZN9QFileInfoC2Ev()};
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN9QFileInfoC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QFileInfo{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  QString QFileInfo::completeSuffix();
+// /usr/include/qt/QtCore/qfileinfo.h:63
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QFileInfo(const QString &)
+
+/*
+Constructs an empty QFileInfo object.
+
+Note that an empty QFileInfo object contain no file reference.
+
+See also setFile().
+*/
+// QFileInfo(const QString &) ctx.fn_proto_cpp
 impl /*struct*/ QFileInfo {
-  pub fn completeSuffix<RetType, T: QFileInfo_completeSuffix<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.completeSuffix(self);
+  pub fn QFileInfo_1<T: QFileInfo_QFileInfo_1>(value: T) -> QFileInfo {
+    let rsthis = value.QFileInfo_1();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QFileInfo_completeSuffix<RetType> {
-  fn completeSuffix(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_QFileInfo_1 {
+  fn QFileInfo_1(self) -> QFileInfo;
 }
-
-  // proto:  QString QFileInfo::completeSuffix();
-impl<'a> /*trait*/ QFileInfo_completeSuffix<QString> for () {
-  fn completeSuffix(self , rsthis: & QFileInfo) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo14completeSuffixEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo14completeSuffixEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString QFileInfo::canonicalPath();
-impl /*struct*/ QFileInfo {
-  pub fn canonicalPath<RetType, T: QFileInfo_canonicalPath<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.canonicalPath(self);
-    // return 1;
-  }
-}
-
-pub trait QFileInfo_canonicalPath<RetType> {
-  fn canonicalPath(self , rsthis: & QFileInfo) -> RetType;
-}
-
-  // proto:  QString QFileInfo::canonicalPath();
-impl<'a> /*trait*/ QFileInfo_canonicalPath<QString> for () {
-  fn canonicalPath(self , rsthis: & QFileInfo) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo13canonicalPathEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo13canonicalPathEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto: static bool QFileInfo::exists(const QString & file);
-impl /*struct*/ QFileInfo {
-  pub fn exists_s<RetType, T: QFileInfo_exists_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.exists_s();
-    // return 1;
-  }
-}
-
-pub trait QFileInfo_exists_s<RetType> {
-  fn exists_s(self ) -> RetType;
-}
-
-  // proto: static bool QFileInfo::exists(const QString & file);
-impl<'a> /*trait*/ QFileInfo_exists_s<i8> for (&'a QString) {
-  fn exists_s(self ) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QFileInfo6existsERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN9QFileInfo6existsERK7QString(arg0)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  bool QFileInfo::makeAbsolute();
-impl /*struct*/ QFileInfo {
-  pub fn makeAbsolute<RetType, T: QFileInfo_makeAbsolute<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.makeAbsolute(self);
-    // return 1;
-  }
-}
-
-pub trait QFileInfo_makeAbsolute<RetType> {
-  fn makeAbsolute(self , rsthis: & QFileInfo) -> RetType;
-}
-
-  // proto:  bool QFileInfo::makeAbsolute();
-impl<'a> /*trait*/ QFileInfo_makeAbsolute<i8> for () {
-  fn makeAbsolute(self , rsthis: & QFileInfo) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QFileInfo12makeAbsoluteEv()};
-    let mut ret = unsafe {C_ZN9QFileInfo12makeAbsoluteEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  bool QFileInfo::isRoot();
-impl /*struct*/ QFileInfo {
-  pub fn isRoot<RetType, T: QFileInfo_isRoot<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isRoot(self);
-    // return 1;
-  }
-}
-
-pub trait QFileInfo_isRoot<RetType> {
-  fn isRoot(self , rsthis: & QFileInfo) -> RetType;
-}
-
-  // proto:  bool QFileInfo::isRoot();
-impl<'a> /*trait*/ QFileInfo_isRoot<i8> for () {
-  fn isRoot(self , rsthis: & QFileInfo) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo6isRootEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo6isRootEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QString QFileInfo::canonicalFilePath();
-impl /*struct*/ QFileInfo {
-  pub fn canonicalFilePath<RetType, T: QFileInfo_canonicalFilePath<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.canonicalFilePath(self);
-    // return 1;
-  }
-}
-
-pub trait QFileInfo_canonicalFilePath<RetType> {
-  fn canonicalFilePath(self , rsthis: & QFileInfo) -> RetType;
-}
-
-  // proto:  QString QFileInfo::canonicalFilePath();
-impl<'a> /*trait*/ QFileInfo_canonicalFilePath<QString> for () {
-  fn canonicalFilePath(self , rsthis: & QFileInfo) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo17canonicalFilePathEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo17canonicalFilePathEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  bool QFileInfo::isDir();
-impl /*struct*/ QFileInfo {
-  pub fn isDir<RetType, T: QFileInfo_isDir<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isDir(self);
-    // return 1;
-  }
-}
-
-pub trait QFileInfo_isDir<RetType> {
-  fn isDir(self , rsthis: & QFileInfo) -> RetType;
-}
-
-  // proto:  bool QFileInfo::isDir();
-impl<'a> /*trait*/ QFileInfo_isDir<i8> for () {
-  fn isDir(self , rsthis: & QFileInfo) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo5isDirEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo5isDirEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QFileInfo::QFileInfo(const QString & file);
-impl<'a> /*trait*/ QFileInfo_new for (&'a QString) {
-  fn new(self) -> QFileInfo {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QFileInfo(const QString &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QFileInfo_QFileInfo_1 for (usize) {
+  fn QFileInfo_1(self) -> QFileInfo {
     // unsafe{_ZN9QFileInfoC2ERK7QString()};
-    let ctysz: c_int = unsafe{QFileInfo_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN9QFileInfoC2ERK7QString(arg0)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN9QFileInfoC2ERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QFileInfo{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  QString QFileInfo::symLinkTarget();
+// /usr/include/qt/QtCore/qfileinfo.h:64
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QFileInfo(const QFile &)
+
+/*
+Constructs an empty QFileInfo object.
+
+Note that an empty QFileInfo object contain no file reference.
+
+See also setFile().
+*/
+// QFileInfo(const QFile &) ctx.fn_proto_cpp
 impl /*struct*/ QFileInfo {
-  pub fn symLinkTarget<RetType, T: QFileInfo_symLinkTarget<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.symLinkTarget(self);
+  pub fn QFileInfo_2<T: QFileInfo_QFileInfo_2>(value: T) -> QFileInfo {
+    let rsthis = value.QFileInfo_2();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QFileInfo_symLinkTarget<RetType> {
-  fn symLinkTarget(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_QFileInfo_2 {
+  fn QFileInfo_2(self) -> QFileInfo;
 }
-
-  // proto:  QString QFileInfo::symLinkTarget();
-impl<'a> /*trait*/ QFileInfo_symLinkTarget<QString> for () {
-  fn symLinkTarget(self , rsthis: & QFileInfo) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo13symLinkTargetEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo13symLinkTargetEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QFileInfo::setFile(const QString & file);
-impl /*struct*/ QFileInfo {
-  pub fn setFile<RetType, T: QFileInfo_setFile<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setFile(self);
-    // return 1;
-  }
-}
-
-pub trait QFileInfo_setFile<RetType> {
-  fn setFile(self , rsthis: & QFileInfo) -> RetType;
-}
-
-  // proto:  void QFileInfo::setFile(const QString & file);
-impl<'a> /*trait*/ QFileInfo_setFile<()> for (&'a QString) {
-  fn setFile(self , rsthis: & QFileInfo) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QFileInfo7setFileERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN9QFileInfo7setFileERK7QString(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  bool QFileInfo::isFile();
-impl /*struct*/ QFileInfo {
-  pub fn isFile<RetType, T: QFileInfo_isFile<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isFile(self);
-    // return 1;
-  }
-}
-
-pub trait QFileInfo_isFile<RetType> {
-  fn isFile(self , rsthis: & QFileInfo) -> RetType;
-}
-
-  // proto:  bool QFileInfo::isFile();
-impl<'a> /*trait*/ QFileInfo_isFile<i8> for () {
-  fn isFile(self , rsthis: & QFileInfo) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo6isFileEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo6isFileEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QFileInfo::QFileInfo(const QFile & file);
-impl<'a> /*trait*/ QFileInfo_new for (&'a QFile) {
-  fn new(self) -> QFileInfo {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QFileInfo(const QFile &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QFileInfo_QFileInfo_2 for (usize) {
+  fn QFileInfo_2(self) -> QFileInfo {
     // unsafe{_ZN9QFileInfoC2ERK5QFile()};
-    let ctysz: c_int = unsafe{QFileInfo_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN9QFileInfoC2ERK5QFile(arg0)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN9QFileInfoC2ERK5QFile", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QFileInfo{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QFileInfo::setFile(const QFile & file);
-impl<'a> /*trait*/ QFileInfo_setFile<()> for (&'a QFile) {
-  fn setFile(self , rsthis: & QFileInfo) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QFileInfo7setFileERK5QFile()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN9QFileInfo7setFileERK5QFile(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
+// /usr/include/qt/QtCore/qfileinfo.h:65
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QFileInfo(const QDir &, const QString &)
 
-  // proto:  uint QFileInfo::ownerId();
+/*
+Constructs an empty QFileInfo object.
+
+Note that an empty QFileInfo object contain no file reference.
+
+See also setFile().
+*/
+// QFileInfo(const QDir &, const QString &) ctx.fn_proto_cpp
 impl /*struct*/ QFileInfo {
-  pub fn ownerId<RetType, T: QFileInfo_ownerId<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.ownerId(self);
-    // return 1;
-  }
-}
-
-pub trait QFileInfo_ownerId<RetType> {
-  fn ownerId(self , rsthis: & QFileInfo) -> RetType;
-}
-
-  // proto:  uint QFileInfo::ownerId();
-impl<'a> /*trait*/ QFileInfo_ownerId<u32> for () {
-  fn ownerId(self , rsthis: & QFileInfo) -> u32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo7ownerIdEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo7ownerIdEv(rsthis.qclsinst)};
-    return ret as u32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QString QFileInfo::readLink();
-impl /*struct*/ QFileInfo {
-  pub fn readLink<RetType, T: QFileInfo_readLink<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.readLink(self);
-    // return 1;
-  }
-}
-
-pub trait QFileInfo_readLink<RetType> {
-  fn readLink(self , rsthis: & QFileInfo) -> RetType;
-}
-
-  // proto:  QString QFileInfo::readLink();
-impl<'a> /*trait*/ QFileInfo_readLink<QString> for () {
-  fn readLink(self , rsthis: & QFileInfo) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo8readLinkEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo8readLinkEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString QFileInfo::filePath();
-impl /*struct*/ QFileInfo {
-  pub fn filePath<RetType, T: QFileInfo_filePath<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.filePath(self);
-    // return 1;
-  }
-}
-
-pub trait QFileInfo_filePath<RetType> {
-  fn filePath(self , rsthis: & QFileInfo) -> RetType;
-}
-
-  // proto:  QString QFileInfo::filePath();
-impl<'a> /*trait*/ QFileInfo_filePath<QString> for () {
-  fn filePath(self , rsthis: & QFileInfo) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo8filePathEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo8filePathEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QFileInfo::QFileInfo(const QFileInfo & fileinfo);
-impl<'a> /*trait*/ QFileInfo_new for (&'a QFileInfo) {
-  fn new(self) -> QFileInfo {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QFileInfoC2ERKS_()};
-    let ctysz: c_int = unsafe{QFileInfo_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN9QFileInfoC2ERKS_(arg0)};
-    let rsthis = QFileInfo{qclsinst: qthis, ..Default::default()};
+  pub fn QFileInfo_3<T: QFileInfo_QFileInfo_3>(value: T) -> QFileInfo {
+    let rsthis = value.QFileInfo_3();
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  bool QFileInfo::isSymLink();
-impl /*struct*/ QFileInfo {
-  pub fn isSymLink<RetType, T: QFileInfo_isSymLink<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isSymLink(self);
-    // return 1;
-  }
+pub trait QFileInfo_QFileInfo_3 {
+  fn QFileInfo_3(self) -> QFileInfo;
 }
-
-pub trait QFileInfo_isSymLink<RetType> {
-  fn isSymLink(self , rsthis: & QFileInfo) -> RetType;
-}
-
-  // proto:  bool QFileInfo::isSymLink();
-impl<'a> /*trait*/ QFileInfo_isSymLink<i8> for () {
-  fn isSymLink(self , rsthis: & QFileInfo) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo9isSymLinkEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo9isSymLinkEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QDateTime QFileInfo::lastRead();
-impl /*struct*/ QFileInfo {
-  pub fn lastRead<RetType, T: QFileInfo_lastRead<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.lastRead(self);
-    // return 1;
-  }
-}
-
-pub trait QFileInfo_lastRead<RetType> {
-  fn lastRead(self , rsthis: & QFileInfo) -> RetType;
-}
-
-  // proto:  QDateTime QFileInfo::lastRead();
-impl<'a> /*trait*/ QFileInfo_lastRead<QDateTime> for () {
-  fn lastRead(self , rsthis: & QFileInfo) -> QDateTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo8lastReadEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo8lastReadEv(rsthis.qclsinst)};
-    let mut ret1 = QDateTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QFileInfo::refresh();
-impl /*struct*/ QFileInfo {
-  pub fn refresh<RetType, T: QFileInfo_refresh<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.refresh(self);
-    // return 1;
-  }
-}
-
-pub trait QFileInfo_refresh<RetType> {
-  fn refresh(self , rsthis: & QFileInfo) -> RetType;
-}
-
-  // proto:  void QFileInfo::refresh();
-impl<'a> /*trait*/ QFileInfo_refresh<()> for () {
-  fn refresh(self , rsthis: & QFileInfo) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QFileInfo7refreshEv()};
-     unsafe {C_ZN9QFileInfo7refreshEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QFileInfo::QFileInfo(const QDir & dir, const QString & file);
-impl<'a> /*trait*/ QFileInfo_new for (&'a QDir, &'a QString) {
-  fn new(self) -> QFileInfo {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QFileInfo(const QDir &, const QString &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QFileInfo_QFileInfo_3 for (usize,usize) {
+  fn QFileInfo_3(self) -> QFileInfo {
     // unsafe{_ZN9QFileInfoC2ERK4QDirRK7QString()};
-    let ctysz: c_int = unsafe{QFileInfo_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN9QFileInfoC2ERK4QDirRK7QString(arg0, arg1)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN9QFileInfoC2ERK4QDirRK7QString", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QFileInfo{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  QString QFileInfo::path();
+// /usr/include/qt/QtCore/qfileinfo.h:67
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void ~QFileInfo()
+
+/*
+
+*/
+pub fn DeleteQFileInfo(this :*mut QFileInfo) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN9QFileInfoD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 8)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qfileinfo.h:69
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QFileInfo & operator=(const QFileInfo &)
+
+/*
+
+*/
 impl /*struct*/ QFileInfo {
-  pub fn path<RetType, T: QFileInfo_path<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.path(self);
+  pub fn operator_equal_0<RetType, T: QFileInfo_operator_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_0(self);
     // return 1;
   }
 }
-
-pub trait QFileInfo_path<RetType> {
-  fn path(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_operator_equal_0<RetType> {
+  fn operator_equal_0(self , rsthis: & QFileInfo) -> RetType;
 }
-
-  // proto:  QString QFileInfo::path();
-impl<'a> /*trait*/ QFileInfo_path<QString> for () {
-  fn path(self , rsthis: & QFileInfo) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo4pathEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo4pathEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QFileInfo_operator_equal_0<usize> for (usize) {
+  fn operator_equal_0(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QFileInfoaSERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  QDir QFileInfo::absoluteDir();
+// /usr/include/qt/QtCore/qfileinfo.h:71
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QFileInfo & operator=(QFileInfo &&)
+
+/*
+
+*/
 impl /*struct*/ QFileInfo {
-  pub fn absoluteDir<RetType, T: QFileInfo_absoluteDir<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.absoluteDir(self);
+  pub fn operator_equal_1<RetType, T: QFileInfo_operator_equal_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_1(self);
     // return 1;
   }
 }
-
-pub trait QFileInfo_absoluteDir<RetType> {
-  fn absoluteDir(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_operator_equal_1<RetType> {
+  fn operator_equal_1(self , rsthis: & QFileInfo) -> RetType;
 }
-
-  // proto:  QDir QFileInfo::absoluteDir();
-impl<'a> /*trait*/ QFileInfo_absoluteDir<QDir> for () {
-  fn absoluteDir(self , rsthis: & QFileInfo) -> QDir {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo11absoluteDirEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo11absoluteDirEv(rsthis.qclsinst)};
-    let mut ret1 = QDir::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QFileInfo_operator_equal_1<usize> for (usize) {
+  fn operator_equal_1(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QFileInfoaSEOS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  bool QFileInfo::isBundle();
+// /usr/include/qt/QtCore/qfileinfo.h:74
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QFileInfo &)
+
+/*
+Swaps this file info with other. This function is very fast and never fails.
+
+This function was introduced in  Qt 5.0.
+*/
 impl /*struct*/ QFileInfo {
-  pub fn isBundle<RetType, T: QFileInfo_isBundle<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isBundle(self);
+  pub fn swap_0<RetType, T: QFileInfo_swap_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.swap_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_swap_0<RetType> {
+  fn swap_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_swap_0<(/*void*/)> for (usize) {
+  fn swap_0(self , rsthis: & QFileInfo) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN9QFileInfo4swapERS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QFileInfo_isBundle<RetType> {
-  fn isBundle(self , rsthis: & QFileInfo) -> RetType;
-}
+// /usr/include/qt/QtCore/qfileinfo.h:77
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QFileInfo &) const
 
-  // proto:  bool QFileInfo::isBundle();
-impl<'a> /*trait*/ QFileInfo_isBundle<i8> for () {
-  fn isBundle(self , rsthis: & QFileInfo) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo8isBundleEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo8isBundleEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
+/*
 
-  // proto:  void QFileInfo::setFile(const QDir & dir, const QString & file);
-impl<'a> /*trait*/ QFileInfo_setFile<()> for (&'a QDir, &'a QString) {
-  fn setFile(self , rsthis: & QFileInfo) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QFileInfo7setFileERK4QDirRK7QString()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {C_ZN9QFileInfo7setFileERK4QDirRK7QString(rsthis.qclsinst, arg0, arg1)};
-    // return 1;
-  }
-}
-
-  // proto:  bool QFileInfo::isRelative();
+*/
 impl /*struct*/ QFileInfo {
-  pub fn isRelative<RetType, T: QFileInfo_isRelative<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isRelative(self);
+  pub fn operator_equal_equal_0<RetType, T: QFileInfo_operator_equal_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_equal_0(self);
     // return 1;
   }
 }
-
-pub trait QFileInfo_isRelative<RetType> {
-  fn isRelative(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_operator_equal_equal_0<RetType> {
+  fn operator_equal_equal_0(self , rsthis: & QFileInfo) -> RetType;
 }
-
-  // proto:  bool QFileInfo::isRelative();
-impl<'a> /*trait*/ QFileInfo_isRelative<i8> for () {
-  fn isRelative(self , rsthis: & QFileInfo) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo10isRelativeEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo10isRelativeEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+impl<'a> /*trait*/ QFileInfo_operator_equal_equal_0<bool> for (usize) {
+  fn operator_equal_equal_0(self , rsthis: & QFileInfo) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfoeqERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  void QFileInfo::setCaching(bool on);
+// /usr/include/qt/QtCore/qfileinfo.h:78
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QFileInfo &) const
+
+/*
+
+*/
 impl /*struct*/ QFileInfo {
-  pub fn setCaching<RetType, T: QFileInfo_setCaching<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setCaching(self);
+  pub fn operator_not_equal_0<RetType, T: QFileInfo_operator_not_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_not_equal_0(self);
     // return 1;
   }
 }
-
-pub trait QFileInfo_setCaching<RetType> {
-  fn setCaching(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_operator_not_equal_0<RetType> {
+  fn operator_not_equal_0(self , rsthis: & QFileInfo) -> RetType;
 }
-
-  // proto:  void QFileInfo::setCaching(bool on);
-impl<'a> /*trait*/ QFileInfo_setCaching<()> for (i8) {
-  fn setCaching(self , rsthis: & QFileInfo) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QFileInfo10setCachingEb()};
-    let arg0 = self  as c_char;
-     unsafe {C_ZN9QFileInfo10setCachingEb(rsthis.qclsinst, arg0)};
+impl<'a> /*trait*/ QFileInfo_operator_not_equal_0<bool> for (usize) {
+  fn operator_not_equal_0(self , rsthis: & QFileInfo) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfoneERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  QDateTime QFileInfo::created();
+// /usr/include/qt/QtCore/qfileinfo.h:80
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setFile(const QString &)
+
+/*
+Sets the file that the QFileInfo provides information about to file.
+
+The file can also include an absolute or relative file path. Absolute paths begin with the directory separator (e.g. "/" under Unix) or a drive specification (under Windows). Relative file names begin with a directory name or a file name and specify a path relative to the current directory.
+
+Example:
+
+
+  QString absolute = "/local/bin";
+  QString relative = "local/bin";
+  QFileInfo absFile(absolute);
+  QFileInfo relFile(relative);
+
+  QDir::setCurrent(QDir::rootPath());
+  // absFile and relFile now point to the same file
+
+  QDir::setCurrent("/tmp");
+  // absFile now points to "/local/bin",
+  // while relFile points to "/tmp/local/bin"
+
+
+
+See also isFile(), isRelative(), QDir::setCurrent(), and QDir::isRelativePath().
+*/
 impl /*struct*/ QFileInfo {
-  pub fn created<RetType, T: QFileInfo_created<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.created(self);
+  pub fn setFile_0<RetType, T: QFileInfo_setFile_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setFile_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_setFile_0<RetType> {
+  fn setFile_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_setFile_0<(/*void*/)> for (usize) {
+  fn setFile_0(self , rsthis: & QFileInfo) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN9QFileInfo7setFileERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QFileInfo_created<RetType> {
-  fn created(self , rsthis: & QFileInfo) -> RetType;
-}
+// /usr/include/qt/QtCore/qfileinfo.h:81
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void setFile(const QFile &)
 
-  // proto:  QDateTime QFileInfo::created();
-impl<'a> /*trait*/ QFileInfo_created<QDateTime> for () {
-  fn created(self , rsthis: & QFileInfo) -> QDateTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo7createdEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo7createdEv(rsthis.qclsinst)};
-    let mut ret1 = QDateTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
+/*
+Sets the file that the QFileInfo provides information about to file.
 
-  // proto:  bool QFileInfo::caching();
+The file can also include an absolute or relative file path. Absolute paths begin with the directory separator (e.g. "/" under Unix) or a drive specification (under Windows). Relative file names begin with a directory name or a file name and specify a path relative to the current directory.
+
+Example:
+
+
+  QString absolute = "/local/bin";
+  QString relative = "local/bin";
+  QFileInfo absFile(absolute);
+  QFileInfo relFile(relative);
+
+  QDir::setCurrent(QDir::rootPath());
+  // absFile and relFile now point to the same file
+
+  QDir::setCurrent("/tmp");
+  // absFile now points to "/local/bin",
+  // while relFile points to "/tmp/local/bin"
+
+
+
+See also isFile(), isRelative(), QDir::setCurrent(), and QDir::isRelativePath().
+*/
 impl /*struct*/ QFileInfo {
-  pub fn caching<RetType, T: QFileInfo_caching<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.caching(self);
+  pub fn setFile_1<RetType, T: QFileInfo_setFile_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setFile_1(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_setFile_1<RetType> {
+  fn setFile_1(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_setFile_1<(/*void*/)> for (usize) {
+  fn setFile_1(self , rsthis: & QFileInfo) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN9QFileInfo7setFileERK5QFile", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QFileInfo_caching<RetType> {
-  fn caching(self , rsthis: & QFileInfo) -> RetType;
-}
+// /usr/include/qt/QtCore/qfileinfo.h:82
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void setFile(const QDir &, const QString &)
 
-  // proto:  bool QFileInfo::caching();
-impl<'a> /*trait*/ QFileInfo_caching<i8> for () {
-  fn caching(self , rsthis: & QFileInfo) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo7cachingEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo7cachingEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
+/*
+Sets the file that the QFileInfo provides information about to file.
 
-  // proto:  void QFileInfo::~QFileInfo();
+The file can also include an absolute or relative file path. Absolute paths begin with the directory separator (e.g. "/" under Unix) or a drive specification (under Windows). Relative file names begin with a directory name or a file name and specify a path relative to the current directory.
+
+Example:
+
+
+  QString absolute = "/local/bin";
+  QString relative = "local/bin";
+  QFileInfo absFile(absolute);
+  QFileInfo relFile(relative);
+
+  QDir::setCurrent(QDir::rootPath());
+  // absFile and relFile now point to the same file
+
+  QDir::setCurrent("/tmp");
+  // absFile now points to "/local/bin",
+  // while relFile points to "/tmp/local/bin"
+
+
+
+See also isFile(), isRelative(), QDir::setCurrent(), and QDir::isRelativePath().
+*/
 impl /*struct*/ QFileInfo {
-  pub fn free<RetType, T: QFileInfo_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
+  pub fn setFile_2<RetType, T: QFileInfo_setFile_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setFile_2(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_setFile_2<RetType> {
+  fn setFile_2(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_setFile_2<(/*void*/)> for (usize,usize) {
+  fn setFile_2(self , rsthis: & QFileInfo) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN9QFileInfo7setFileERK4QDirRK7QString", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QFileInfo_free<RetType> {
-  fn free(self , rsthis: & QFileInfo) -> RetType;
-}
+// /usr/include/qt/QtCore/qfileinfo.h:83
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool exists() const
 
-  // proto:  void QFileInfo::~QFileInfo();
-impl<'a> /*trait*/ QFileInfo_free<()> for () {
-  fn free(self , rsthis: & QFileInfo) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QFileInfoD2Ev()};
-     unsafe {C_ZN9QFileInfoD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
+/*
+Returns true if the file exists; otherwise returns false.
 
-  // proto:  QString QFileInfo::completeBaseName();
+Note: If the file is a symlink that points to a non-existing file, false is returned.
+*/
 impl /*struct*/ QFileInfo {
-  pub fn completeBaseName<RetType, T: QFileInfo_completeBaseName<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.completeBaseName(self);
+  pub fn exists_0<RetType, T: QFileInfo_exists_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.exists_0(self);
     // return 1;
   }
 }
-
-pub trait QFileInfo_completeBaseName<RetType> {
-  fn completeBaseName(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_exists_0<RetType> {
+  fn exists_0(self , rsthis: & QFileInfo) -> RetType;
 }
-
-  // proto:  QString QFileInfo::completeBaseName();
-impl<'a> /*trait*/ QFileInfo_completeBaseName<QString> for () {
-  fn completeBaseName(self , rsthis: & QFileInfo) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo16completeBaseNameEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo16completeBaseNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QFileInfo_exists_0<bool> for () {
+  fn exists_0(self , rsthis: & QFileInfo) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo6existsEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  QString QFileInfo::baseName();
+// /usr/include/qt/QtCore/qfileinfo.h:84
+// index:1
+// Public static Visibility=Default Availability=Available
+// [1] bool exists(const QString &)
+
+/*
+Returns true if the file exists; otherwise returns false.
+
+Note: If the file is a symlink that points to a non-existing file, false is returned.
+*/
 impl /*struct*/ QFileInfo {
-  pub fn baseName<RetType, T: QFileInfo_baseName<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.baseName(self);
+  pub fn exists_1<RetType, T: QFileInfo_exists_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.exists_1();
     // return 1;
   }
 }
-
-pub trait QFileInfo_baseName<RetType> {
-  fn baseName(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_exists_1<RetType> {
+  fn exists_1(self ) -> RetType;
 }
-
-  // proto:  QString QFileInfo::baseName();
-impl<'a> /*trait*/ QFileInfo_baseName<QString> for () {
-  fn baseName(self , rsthis: & QFileInfo) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo8baseNameEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo8baseNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QFileInfo_exists_1<bool> for (usize) {
+  fn exists_1(self ) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QFileInfo6existsERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  bool QFileInfo::isExecutable();
+// /usr/include/qt/QtCore/qfileinfo.h:85
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void refresh()
+
+/*
+Refreshes the information about the file, i.e. reads in information from the file system the next time a cached property is fetched.
+*/
 impl /*struct*/ QFileInfo {
-  pub fn isExecutable<RetType, T: QFileInfo_isExecutable<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isExecutable(self);
+  pub fn refresh_0<RetType, T: QFileInfo_refresh_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.refresh_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_refresh_0<RetType> {
+  fn refresh_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_refresh_0<(/*void*/)> for () {
+  fn refresh_0(self , rsthis: & QFileInfo) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZN9QFileInfo7refreshEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QFileInfo_isExecutable<RetType> {
-  fn isExecutable(self , rsthis: & QFileInfo) -> RetType;
-}
+// /usr/include/qt/QtCore/qfileinfo.h:87
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString filePath() const
 
-  // proto:  bool QFileInfo::isExecutable();
-impl<'a> /*trait*/ QFileInfo_isExecutable<i8> for () {
-  fn isExecutable(self , rsthis: & QFileInfo) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo12isExecutableEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo12isExecutableEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
+/*
+Returns the file name, including the path (which may be absolute or relative).
 
-  // proto:  QString QFileInfo::bundleName();
+See also absoluteFilePath(), canonicalFilePath(), and isRelative().
+*/
 impl /*struct*/ QFileInfo {
-  pub fn bundleName<RetType, T: QFileInfo_bundleName<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.bundleName(self);
+  pub fn filePath_0<RetType, T: QFileInfo_filePath_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.filePath_0(self);
     // return 1;
   }
 }
-
-pub trait QFileInfo_bundleName<RetType> {
-  fn bundleName(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_filePath_0<RetType> {
+  fn filePath_0(self , rsthis: & QFileInfo) -> RetType;
 }
-
-  // proto:  QString QFileInfo::bundleName();
-impl<'a> /*trait*/ QFileInfo_bundleName<QString> for () {
-  fn bundleName(self , rsthis: & QFileInfo) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo10bundleNameEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo10bundleNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QFileInfo_filePath_0<usize> for () {
+  fn filePath_0(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo8filePathEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  uint QFileInfo::groupId();
+// /usr/include/qt/QtCore/qfileinfo.h:88
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString absoluteFilePath() const
+
+/*
+Returns an absolute path including the file name.
+
+The absolute path name consists of the full path and the file name. On Unix this will always begin with the root, '/', directory. On Windows this will always begin 'D:/' where D is a drive letter, except for network shares that are not mapped to a drive letter, in which case the path will begin '//sharename/'. QFileInfo will uppercase drive letters. Note that QDir does not do this. The code snippet below shows this.
+
+
+      QFileInfo fi("c:/temp/foo"); => fi.absoluteFilePath() => "C:/temp/foo"
+
+
+
+This function returns the same as filePath(), unless isRelative() is true. In contrast to canonicalFilePath(), symbolic links or redundant "." or ".." elements are not necessarily removed.
+
+Warning: If filePath() is empty the behavior of this function is undefined.
+
+See also filePath(), canonicalFilePath(), and isRelative().
+*/
 impl /*struct*/ QFileInfo {
-  pub fn groupId<RetType, T: QFileInfo_groupId<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.groupId(self);
+  pub fn absoluteFilePath_0<RetType, T: QFileInfo_absoluteFilePath_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.absoluteFilePath_0(self);
     // return 1;
   }
 }
-
-pub trait QFileInfo_groupId<RetType> {
-  fn groupId(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_absoluteFilePath_0<RetType> {
+  fn absoluteFilePath_0(self , rsthis: & QFileInfo) -> RetType;
 }
-
-  // proto:  uint QFileInfo::groupId();
-impl<'a> /*trait*/ QFileInfo_groupId<u32> for () {
-  fn groupId(self , rsthis: & QFileInfo) -> u32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo7groupIdEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo7groupIdEv(rsthis.qclsinst)};
-    return ret as u32; // 1
+impl<'a> /*trait*/ QFileInfo_absoluteFilePath_0<usize> for () {
+  fn absoluteFilePath_0(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo16absoluteFilePathEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  QString QFileInfo::fileName();
+// /usr/include/qt/QtCore/qfileinfo.h:89
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString canonicalFilePath() const
+
+/*
+Returns the canonical path including the file name, i.e. an absolute path without symbolic links or redundant "." or ".." elements.
+
+If the file does not exist, canonicalFilePath() returns an empty string.
+
+See also filePath(), absoluteFilePath(), and dir().
+*/
 impl /*struct*/ QFileInfo {
-  pub fn fileName<RetType, T: QFileInfo_fileName<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.fileName(self);
+  pub fn canonicalFilePath_0<RetType, T: QFileInfo_canonicalFilePath_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.canonicalFilePath_0(self);
     // return 1;
   }
 }
-
-pub trait QFileInfo_fileName<RetType> {
-  fn fileName(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_canonicalFilePath_0<RetType> {
+  fn canonicalFilePath_0(self , rsthis: & QFileInfo) -> RetType;
 }
-
-  // proto:  QString QFileInfo::fileName();
-impl<'a> /*trait*/ QFileInfo_fileName<QString> for () {
-  fn fileName(self , rsthis: & QFileInfo) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo8fileNameEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo8fileNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QFileInfo_canonicalFilePath_0<usize> for () {
+  fn canonicalFilePath_0(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo17canonicalFilePathEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  qint64 QFileInfo::size();
+// /usr/include/qt/QtCore/qfileinfo.h:90
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString fileName() const
+
+/*
+Returns the name of the file, excluding the path.
+
+Example:
+
+
+  QFileInfo fi("/tmp/archive.tar.gz");
+  QString name = fi.fileName();                // name = "archive.tar.gz"
+
+
+
+Note that, if this QFileInfo object is given a path ending in a slash, the name of the file is considered empty.
+
+See also isRelative(), filePath(), baseName(), and suffix().
+*/
 impl /*struct*/ QFileInfo {
-  pub fn size<RetType, T: QFileInfo_size<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.size(self);
+  pub fn fileName_0<RetType, T: QFileInfo_fileName_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.fileName_0(self);
     // return 1;
   }
 }
-
-pub trait QFileInfo_size<RetType> {
-  fn size(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_fileName_0<RetType> {
+  fn fileName_0(self , rsthis: & QFileInfo) -> RetType;
 }
-
-  // proto:  qint64 QFileInfo::size();
-impl<'a> /*trait*/ QFileInfo_size<i64> for () {
-  fn size(self , rsthis: & QFileInfo) -> i64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo4sizeEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo4sizeEv(rsthis.qclsinst)};
-    return ret as i64; // 1
+impl<'a> /*trait*/ QFileInfo_fileName_0<usize> for () {
+  fn fileName_0(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo8fileNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  QString QFileInfo::absoluteFilePath();
+// /usr/include/qt/QtCore/qfileinfo.h:91
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString baseName() const
+
+/*
+Returns the base name of the file without the path.
+
+The base name consists of all characters in the file up to (but not including) the first '.' character.
+
+Example:
+
+
+  QFileInfo fi("/tmp/archive.tar.gz");
+  QString base = fi.baseName();  // base = "archive"
+
+
+
+The base name of a file is computed equally on all platforms, independent of file naming conventions (e.g., ".bashrc" on Unix has an empty base name, and the suffix is "bashrc").
+
+See also fileName(), suffix(), completeSuffix(), and completeBaseName().
+*/
 impl /*struct*/ QFileInfo {
-  pub fn absoluteFilePath<RetType, T: QFileInfo_absoluteFilePath<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.absoluteFilePath(self);
+  pub fn baseName_0<RetType, T: QFileInfo_baseName_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.baseName_0(self);
     // return 1;
   }
 }
-
-pub trait QFileInfo_absoluteFilePath<RetType> {
-  fn absoluteFilePath(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_baseName_0<RetType> {
+  fn baseName_0(self , rsthis: & QFileInfo) -> RetType;
 }
-
-  // proto:  QString QFileInfo::absoluteFilePath();
-impl<'a> /*trait*/ QFileInfo_absoluteFilePath<QString> for () {
-  fn absoluteFilePath(self , rsthis: & QFileInfo) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo16absoluteFilePathEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo16absoluteFilePathEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QFileInfo_baseName_0<usize> for () {
+  fn baseName_0(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo8baseNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  QString QFileInfo::suffix();
+// /usr/include/qt/QtCore/qfileinfo.h:92
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString completeBaseName() const
+
+/*
+Returns the complete base name of the file without the path.
+
+The complete base name consists of all characters in the file up to (but not including) the last '.' character.
+
+Example:
+
+
+  QFileInfo fi("/tmp/archive.tar.gz");
+  QString base = fi.completeBaseName();  // base = "archive.tar"
+
+
+
+See also fileName(), suffix(), completeSuffix(), and baseName().
+*/
 impl /*struct*/ QFileInfo {
-  pub fn suffix<RetType, T: QFileInfo_suffix<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.suffix(self);
+  pub fn completeBaseName_0<RetType, T: QFileInfo_completeBaseName_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.completeBaseName_0(self);
     // return 1;
   }
 }
-
-pub trait QFileInfo_suffix<RetType> {
-  fn suffix(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_completeBaseName_0<RetType> {
+  fn completeBaseName_0(self , rsthis: & QFileInfo) -> RetType;
 }
-
-  // proto:  QString QFileInfo::suffix();
-impl<'a> /*trait*/ QFileInfo_suffix<QString> for () {
-  fn suffix(self , rsthis: & QFileInfo) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo6suffixEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo6suffixEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QFileInfo_completeBaseName_0<usize> for () {
+  fn completeBaseName_0(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo16completeBaseNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  QString QFileInfo::group();
+// /usr/include/qt/QtCore/qfileinfo.h:93
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString suffix() const
+
+/*
+Returns the suffix (extension) of the file.
+
+The suffix consists of all characters in the file after (but not including) the last '.'.
+
+Example:
+
+
+  QFileInfo fi("/tmp/archive.tar.gz");
+  QString ext = fi.suffix();  // ext = "gz"
+
+
+
+The suffix of a file is computed equally on all platforms, independent of file naming conventions (e.g., ".bashrc" on Unix has an empty base name, and the suffix is "bashrc").
+
+See also fileName(), completeSuffix(), baseName(), and completeBaseName().
+*/
 impl /*struct*/ QFileInfo {
-  pub fn group<RetType, T: QFileInfo_group<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.group(self);
+  pub fn suffix_0<RetType, T: QFileInfo_suffix_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.suffix_0(self);
     // return 1;
   }
 }
-
-pub trait QFileInfo_group<RetType> {
-  fn group(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_suffix_0<RetType> {
+  fn suffix_0(self , rsthis: & QFileInfo) -> RetType;
 }
-
-  // proto:  QString QFileInfo::group();
-impl<'a> /*trait*/ QFileInfo_group<QString> for () {
-  fn group(self , rsthis: & QFileInfo) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo5groupEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo5groupEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QFileInfo_suffix_0<usize> for () {
+  fn suffix_0(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo6suffixEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  bool QFileInfo::isAbsolute();
+// /usr/include/qt/QtCore/qfileinfo.h:94
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString bundleName() const
+
+/*
+Returns the name of the bundle.
+
+On macOS and iOS this returns the proper localized name for a bundle if the path isBundle(). On all other platforms an empty QString is returned.
+
+Example:
+
+
+  QFileInfo fi("/Applications/Safari.app");
+  QString bundle = fi.bundleName();                // name = "Safari"
+
+
+
+This function was introduced in  Qt 4.3.
+
+See also isBundle(), filePath(), baseName(), and suffix().
+*/
 impl /*struct*/ QFileInfo {
-  pub fn isAbsolute<RetType, T: QFileInfo_isAbsolute<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isAbsolute(self);
+  pub fn bundleName_0<RetType, T: QFileInfo_bundleName_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.bundleName_0(self);
     // return 1;
   }
 }
-
-pub trait QFileInfo_isAbsolute<RetType> {
-  fn isAbsolute(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_bundleName_0<RetType> {
+  fn bundleName_0(self , rsthis: & QFileInfo) -> RetType;
 }
-
-  // proto:  bool QFileInfo::isAbsolute();
-impl<'a> /*trait*/ QFileInfo_isAbsolute<i8> for () {
-  fn isAbsolute(self , rsthis: & QFileInfo) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo10isAbsoluteEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo10isAbsoluteEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+impl<'a> /*trait*/ QFileInfo_bundleName_0<usize> for () {
+  fn bundleName_0(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo10bundleNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  bool QFileInfo::isNativePath();
+// /usr/include/qt/QtCore/qfileinfo.h:95
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString completeSuffix() const
+
+/*
+Returns the complete suffix (extension) of the file.
+
+The complete suffix consists of all characters in the file after (but not including) the first '.'.
+
+Example:
+
+
+  QFileInfo fi("/tmp/archive.tar.gz");
+  QString ext = fi.completeSuffix();  // ext = "tar.gz"
+
+
+
+See also fileName(), suffix(), baseName(), and completeBaseName().
+*/
 impl /*struct*/ QFileInfo {
-  pub fn isNativePath<RetType, T: QFileInfo_isNativePath<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isNativePath(self);
+  pub fn completeSuffix_0<RetType, T: QFileInfo_completeSuffix_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.completeSuffix_0(self);
     // return 1;
   }
 }
-
-pub trait QFileInfo_isNativePath<RetType> {
-  fn isNativePath(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_completeSuffix_0<RetType> {
+  fn completeSuffix_0(self , rsthis: & QFileInfo) -> RetType;
 }
-
-  // proto:  bool QFileInfo::isNativePath();
-impl<'a> /*trait*/ QFileInfo_isNativePath<i8> for () {
-  fn isNativePath(self , rsthis: & QFileInfo) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo12isNativePathEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo12isNativePathEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+impl<'a> /*trait*/ QFileInfo_completeSuffix_0<usize> for () {
+  fn completeSuffix_0(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo14completeSuffixEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  bool QFileInfo::isWritable();
+// /usr/include/qt/QtCore/qfileinfo.h:97
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString path() const
+
+/*
+Returns the file's path. This doesn't include the file name.
+
+Note that, if this QFileInfo object is given a path ending in a slash, the name of the file is considered empty and this function will return the entire path.
+
+See also filePath(), absolutePath(), canonicalPath(), dir(), fileName(), and isRelative().
+*/
 impl /*struct*/ QFileInfo {
-  pub fn isWritable<RetType, T: QFileInfo_isWritable<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isWritable(self);
+  pub fn path_0<RetType, T: QFileInfo_path_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.path_0(self);
     // return 1;
   }
 }
-
-pub trait QFileInfo_isWritable<RetType> {
-  fn isWritable(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_path_0<RetType> {
+  fn path_0(self , rsthis: & QFileInfo) -> RetType;
 }
-
-  // proto:  bool QFileInfo::isWritable();
-impl<'a> /*trait*/ QFileInfo_isWritable<i8> for () {
-  fn isWritable(self , rsthis: & QFileInfo) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo10isWritableEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo10isWritableEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+impl<'a> /*trait*/ QFileInfo_path_0<usize> for () {
+  fn path_0(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo4pathEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  QString QFileInfo::owner();
+// /usr/include/qt/QtCore/qfileinfo.h:98
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString absolutePath() const
+
+/*
+Returns a file's path absolute path. This doesn't include the file name.
+
+On Unix the absolute path will always begin with the root, '/', directory. On Windows this will always begin 'D:/' where D is a drive letter, except for network shares that are not mapped to a drive letter, in which case the path will begin '//sharename/'.
+
+In contrast to canonicalPath() symbolic links or redundant "." or ".." elements are not necessarily removed.
+
+Warning: If filePath() is empty the behavior of this function is undefined.
+
+See also absoluteFilePath(), path(), canonicalPath(), fileName(), and isRelative().
+*/
 impl /*struct*/ QFileInfo {
-  pub fn owner<RetType, T: QFileInfo_owner<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.owner(self);
+  pub fn absolutePath_0<RetType, T: QFileInfo_absolutePath_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.absolutePath_0(self);
     // return 1;
   }
 }
-
-pub trait QFileInfo_owner<RetType> {
-  fn owner(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_absolutePath_0<RetType> {
+  fn absolutePath_0(self , rsthis: & QFileInfo) -> RetType;
 }
-
-  // proto:  QString QFileInfo::owner();
-impl<'a> /*trait*/ QFileInfo_owner<QString> for () {
-  fn owner(self , rsthis: & QFileInfo) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo5ownerEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo5ownerEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QFileInfo_absolutePath_0<usize> for () {
+  fn absolutePath_0(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo12absolutePathEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  bool QFileInfo::isReadable();
+// /usr/include/qt/QtCore/qfileinfo.h:99
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString canonicalPath() const
+
+/*
+Returns the file's path canonical path (excluding the file name), i.e. an absolute path without symbolic links or redundant "." or ".." elements.
+
+If the file does not exist, canonicalPath() returns an empty string.
+
+See also path() and absolutePath().
+*/
 impl /*struct*/ QFileInfo {
-  pub fn isReadable<RetType, T: QFileInfo_isReadable<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isReadable(self);
+  pub fn canonicalPath_0<RetType, T: QFileInfo_canonicalPath_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.canonicalPath_0(self);
     // return 1;
   }
 }
-
-pub trait QFileInfo_isReadable<RetType> {
-  fn isReadable(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_canonicalPath_0<RetType> {
+  fn canonicalPath_0(self , rsthis: & QFileInfo) -> RetType;
 }
-
-  // proto:  bool QFileInfo::isReadable();
-impl<'a> /*trait*/ QFileInfo_isReadable<i8> for () {
-  fn isReadable(self , rsthis: & QFileInfo) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo10isReadableEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo10isReadableEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+impl<'a> /*trait*/ QFileInfo_canonicalPath_0<usize> for () {
+  fn canonicalPath_0(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo13canonicalPathEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  QDir QFileInfo::dir();
+// /usr/include/qt/QtCore/qfileinfo.h:100
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QDir dir() const
+
+/*
+Returns the path of the object's parent directory as a QDir object.
+
+Note: The QDir returned always corresponds to the object's parent directory, even if the QFileInfo represents a directory.
+
+For each of the following, dir() returns the QDir "~/examples/191697".
+
+
+      QFileInfo fileInfo1("~/examples/191697/.");
+      QFileInfo fileInfo2("~/examples/191697/..");
+      QFileInfo fileInfo3("~/examples/191697/main.cpp");
+
+
+
+For each of the following, dir() returns the QDir ".".
+
+
+      QFileInfo fileInfo4(".");
+      QFileInfo fileInfo5("..");
+      QFileInfo fileInfo6("main.cpp");
+
+
+
+See also absolutePath(), filePath(), fileName(), isRelative(), and absoluteDir().
+*/
 impl /*struct*/ QFileInfo {
-  pub fn dir<RetType, T: QFileInfo_dir<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.dir(self);
+  pub fn dir_0<RetType, T: QFileInfo_dir_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.dir_0(self);
     // return 1;
   }
 }
-
-pub trait QFileInfo_dir<RetType> {
-  fn dir(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_dir_0<RetType> {
+  fn dir_0(self , rsthis: & QFileInfo) -> RetType;
 }
-
-  // proto:  QDir QFileInfo::dir();
-impl<'a> /*trait*/ QFileInfo_dir<QDir> for () {
-  fn dir(self , rsthis: & QFileInfo) -> QDir {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo3dirEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo3dirEv(rsthis.qclsinst)};
-    let mut ret1 = QDir::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QFileInfo_dir_0<usize> for () {
+  fn dir_0(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo3dirEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  void QFileInfo::swap(QFileInfo & other);
+// /usr/include/qt/QtCore/qfileinfo.h:101
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QDir absoluteDir() const
+
+/*
+Returns the file's absolute path as a QDir object.
+
+See also dir(), filePath(), fileName(), and isRelative().
+*/
 impl /*struct*/ QFileInfo {
-  pub fn swap<RetType, T: QFileInfo_swap<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.swap(self);
+  pub fn absoluteDir_0<RetType, T: QFileInfo_absoluteDir_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.absoluteDir_0(self);
     // return 1;
   }
 }
-
-pub trait QFileInfo_swap<RetType> {
-  fn swap(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_absoluteDir_0<RetType> {
+  fn absoluteDir_0(self , rsthis: & QFileInfo) -> RetType;
 }
-
-  // proto:  void QFileInfo::swap(QFileInfo & other);
-impl<'a> /*trait*/ QFileInfo_swap<()> for (&'a QFileInfo) {
-  fn swap(self , rsthis: & QFileInfo) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QFileInfo4swapERS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN9QFileInfo4swapERS_(rsthis.qclsinst, arg0)};
+impl<'a> /*trait*/ QFileInfo_absoluteDir_0<usize> for () {
+  fn absoluteDir_0(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo11absoluteDirEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  bool QFileInfo::exists();
+// /usr/include/qt/QtCore/qfileinfo.h:103
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isReadable() const
+
+/*
+Returns true if the user can read the file; otherwise returns false.
+
+Note: If the NTFS permissions check has not been enabled, the result on Windows will merely reflect whether the file exists.
+
+See also isWritable(), isExecutable(), and permission().
+*/
 impl /*struct*/ QFileInfo {
-  pub fn exists<RetType, T: QFileInfo_exists<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.exists(self);
+  pub fn isReadable_0<RetType, T: QFileInfo_isReadable_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isReadable_0(self);
     // return 1;
   }
 }
-
-pub trait QFileInfo_exists<RetType> {
-  fn exists(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_isReadable_0<RetType> {
+  fn isReadable_0(self , rsthis: & QFileInfo) -> RetType;
 }
-
-  // proto:  bool QFileInfo::exists();
-impl<'a> /*trait*/ QFileInfo_exists<i8> for () {
-  fn exists(self , rsthis: & QFileInfo) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo6existsEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo6existsEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+impl<'a> /*trait*/ QFileInfo_isReadable_0<bool> for () {
+  fn isReadable_0(self , rsthis: & QFileInfo) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo10isReadableEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  QDateTime QFileInfo::lastModified();
+// /usr/include/qt/QtCore/qfileinfo.h:104
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isWritable() const
+
+/*
+Returns true if the user can write to the file; otherwise returns false.
+
+Note: If the NTFS permissions check has not been enabled, the result on Windows will merely reflect whether the file is marked as Read Only.
+
+See also isReadable(), isExecutable(), and permission().
+*/
 impl /*struct*/ QFileInfo {
-  pub fn lastModified<RetType, T: QFileInfo_lastModified<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.lastModified(self);
+  pub fn isWritable_0<RetType, T: QFileInfo_isWritable_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isWritable_0(self);
     // return 1;
   }
 }
-
-pub trait QFileInfo_lastModified<RetType> {
-  fn lastModified(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_isWritable_0<RetType> {
+  fn isWritable_0(self , rsthis: & QFileInfo) -> RetType;
 }
-
-  // proto:  QDateTime QFileInfo::lastModified();
-impl<'a> /*trait*/ QFileInfo_lastModified<QDateTime> for () {
-  fn lastModified(self , rsthis: & QFileInfo) -> QDateTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo12lastModifiedEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo12lastModifiedEv(rsthis.qclsinst)};
-    let mut ret1 = QDateTime::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QFileInfo_isWritable_0<bool> for () {
+  fn isWritable_0(self , rsthis: & QFileInfo) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo10isWritableEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  QString QFileInfo::absolutePath();
+// /usr/include/qt/QtCore/qfileinfo.h:105
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isExecutable() const
+
+/*
+Returns true if the file is executable; otherwise returns false.
+
+See also isReadable(), isWritable(), and permission().
+*/
 impl /*struct*/ QFileInfo {
-  pub fn absolutePath<RetType, T: QFileInfo_absolutePath<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.absolutePath(self);
+  pub fn isExecutable_0<RetType, T: QFileInfo_isExecutable_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isExecutable_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_isExecutable_0<RetType> {
+  fn isExecutable_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_isExecutable_0<bool> for () {
+  fn isExecutable_0(self , rsthis: & QFileInfo) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo12isExecutableEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:106
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isHidden() const
+
+/*
+Returns true if this is a `hidden' file; otherwise returns false.
+
+Note: This function returns true for the special entries "." and ".." on Unix, even though QDir::entryList threats them as shown.
+*/
+impl /*struct*/ QFileInfo {
+  pub fn isHidden_0<RetType, T: QFileInfo_isHidden_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isHidden_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_isHidden_0<RetType> {
+  fn isHidden_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_isHidden_0<bool> for () {
+  fn isHidden_0(self , rsthis: & QFileInfo) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo8isHiddenEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:107
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isNativePath() const
+
+/*
+Returns true if the file path can be used directly with native APIs. Returns false if the file is otherwise supported by a virtual file system inside Qt, such as the Qt Resource System.
+
+Note: Native paths may still require conversion of path separators and character encoding, depending on platform and input requirements of the native API.
+
+This function was introduced in  Qt 5.0.
+
+See also QDir::toNativeSeparators(), QFile::encodeName(), filePath(), absoluteFilePath(), and canonicalFilePath().
+*/
+impl /*struct*/ QFileInfo {
+  pub fn isNativePath_0<RetType, T: QFileInfo_isNativePath_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isNativePath_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_isNativePath_0<RetType> {
+  fn isNativePath_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_isNativePath_0<bool> for () {
+  fn isNativePath_0(self , rsthis: & QFileInfo) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo12isNativePathEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:109
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isRelative() const
+
+/*
+Returns true if the file path name is relative, otherwise returns false if the path is absolute (e.g. under Unix a path is absolute if it begins with a "/").
+
+See also isAbsolute().
+*/
+impl /*struct*/ QFileInfo {
+  pub fn isRelative_0<RetType, T: QFileInfo_isRelative_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isRelative_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_isRelative_0<RetType> {
+  fn isRelative_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_isRelative_0<bool> for () {
+  fn isRelative_0(self , rsthis: & QFileInfo) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo10isRelativeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:110
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool isAbsolute() const
+
+/*
+Returns true if the file path name is absolute, otherwise returns false if the path is relative.
+
+See also isRelative().
+*/
+impl /*struct*/ QFileInfo {
+  pub fn isAbsolute_0<RetType, T: QFileInfo_isAbsolute_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isAbsolute_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_isAbsolute_0<RetType> {
+  fn isAbsolute_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_isAbsolute_0<bool> for () {
+  fn isAbsolute_0(self , rsthis: & QFileInfo) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo10isAbsoluteEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:111
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool makeAbsolute()
+
+/*
+Converts the file's path to an absolute path if it is not already in that form. Returns true to indicate that the path was converted; otherwise returns false to indicate that the path was already absolute.
+
+See also filePath() and isRelative().
+*/
+impl /*struct*/ QFileInfo {
+  pub fn makeAbsolute_0<RetType, T: QFileInfo_makeAbsolute_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.makeAbsolute_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_makeAbsolute_0<RetType> {
+  fn makeAbsolute_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_makeAbsolute_0<bool> for () {
+  fn makeAbsolute_0(self , rsthis: & QFileInfo) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QFileInfo12makeAbsoluteEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:113
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isFile() const
+
+/*
+Returns true if this object points to a file or to a symbolic link to a file. Returns false if the object points to something which isn't a file, such as a directory.
+
+See also isDir(), isSymLink(), and isBundle().
+*/
+impl /*struct*/ QFileInfo {
+  pub fn isFile_0<RetType, T: QFileInfo_isFile_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isFile_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_isFile_0<RetType> {
+  fn isFile_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_isFile_0<bool> for () {
+  fn isFile_0(self , rsthis: & QFileInfo) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo6isFileEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:114
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isDir() const
+
+/*
+Returns true if this object points to a directory or to a symbolic link to a directory; otherwise returns false.
+
+See also isFile(), isSymLink(), and isBundle().
+*/
+impl /*struct*/ QFileInfo {
+  pub fn isDir_0<RetType, T: QFileInfo_isDir_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isDir_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_isDir_0<RetType> {
+  fn isDir_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_isDir_0<bool> for () {
+  fn isDir_0(self , rsthis: & QFileInfo) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo5isDirEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:115
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isSymLink() const
+
+/*
+Returns true if this object points to a symbolic link; otherwise returns false.
+
+Symbolic links exist on Unix (including macOS and iOS) and Windows and are typically created by the ln -s or mklink commands, respectively. Opening a symbolic link effectively opens the link's target.
+
+In addition, true will be returned for shortcuts (*.lnk files) on Windows. Opening those will open the .lnk file itself.
+
+Example:
+
+
+  QFileInfo info(fileName);
+  if (info.isSymLink())
+      fileName = info.symLinkTarget();
+
+
+
+Note: If the symlink points to a non existing file, exists() returns false.
+
+See also isFile(), isDir(), and symLinkTarget().
+*/
+impl /*struct*/ QFileInfo {
+  pub fn isSymLink_0<RetType, T: QFileInfo_isSymLink_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isSymLink_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_isSymLink_0<RetType> {
+  fn isSymLink_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_isSymLink_0<bool> for () {
+  fn isSymLink_0(self , rsthis: & QFileInfo) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo9isSymLinkEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:116
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isRoot() const
+
+/*
+Returns true if the object points to a directory or to a symbolic link to a directory, and that directory is the root directory; otherwise returns false.
+*/
+impl /*struct*/ QFileInfo {
+  pub fn isRoot_0<RetType, T: QFileInfo_isRoot_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isRoot_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_isRoot_0<RetType> {
+  fn isRoot_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_isRoot_0<bool> for () {
+  fn isRoot_0(self , rsthis: & QFileInfo) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo6isRootEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:117
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isBundle() const
+
+/*
+Returns true if this object points to a bundle or to a symbolic link to a bundle on macOS and iOS; otherwise returns false.
+
+This function was introduced in  Qt 4.3.
+
+See also isDir(), isSymLink(), and isFile().
+*/
+impl /*struct*/ QFileInfo {
+  pub fn isBundle_0<RetType, T: QFileInfo_isBundle_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isBundle_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_isBundle_0<RetType> {
+  fn isBundle_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_isBundle_0<bool> for () {
+  fn isBundle_0(self , rsthis: & QFileInfo) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo8isBundleEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:119
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString readLink() const
+
+/*
+
+*/
+impl /*struct*/ QFileInfo {
+  pub fn readLink_0<RetType, T: QFileInfo_readLink_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.readLink_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_readLink_0<RetType> {
+  fn readLink_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_readLink_0<usize> for () {
+  fn readLink_0(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo8readLinkEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:120
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QString symLinkTarget() const
+
+/*
+Returns the absolute path to the file or directory a symbolic link points to, or an empty string if the object isn't a symbolic link.
+
+This name may not represent an existing file; it is only a string. QFileInfo::exists() returns true if the symlink points to an existing file.
+
+This function was introduced in  Qt 4.2.
+
+See also exists(), isSymLink(), isDir(), and isFile().
+*/
+impl /*struct*/ QFileInfo {
+  pub fn symLinkTarget_0<RetType, T: QFileInfo_symLinkTarget_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.symLinkTarget_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_symLinkTarget_0<RetType> {
+  fn symLinkTarget_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_symLinkTarget_0<usize> for () {
+  fn symLinkTarget_0(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo13symLinkTargetEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:122
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString owner() const
+
+/*
+Returns the owner of the file. On systems where files do not have owners, or if an error occurs, an empty string is returned.
+
+This function can be time consuming under Unix (in the order of milliseconds). On Windows, it will return an empty string unless the NTFS permissions check has been enabled.
+
+See also ownerId(), group(), and groupId().
+*/
+impl /*struct*/ QFileInfo {
+  pub fn owner_0<RetType, T: QFileInfo_owner_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.owner_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_owner_0<RetType> {
+  fn owner_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_owner_0<usize> for () {
+  fn owner_0(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo5ownerEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:123
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] uint ownerId() const
+
+/*
+Returns the id of the owner of the file.
+
+On Windows and on systems where files do not have owners this function returns ((uint) -2).
+
+See also owner(), group(), and groupId().
+*/
+impl /*struct*/ QFileInfo {
+  pub fn ownerId_0<RetType, T: QFileInfo_ownerId_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.ownerId_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_ownerId_0<RetType> {
+  fn ownerId_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_ownerId_0<u32> for () {
+  fn ownerId_0(self , rsthis: & QFileInfo) -> u32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo7ownerIdEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: u32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:124
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString group() const
+
+/*
+Returns the group of the file. On Windows, on systems where files do not have groups, or if an error occurs, an empty string is returned.
+
+This function can be time consuming under Unix (in the order of milliseconds).
+
+See also groupId(), owner(), and ownerId().
+*/
+impl /*struct*/ QFileInfo {
+  pub fn group_0<RetType, T: QFileInfo_group_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.group_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_group_0<RetType> {
+  fn group_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_group_0<usize> for () {
+  fn group_0(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo5groupEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:125
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] uint groupId() const
+
+/*
+Returns the id of the group the file belongs to.
+
+On Windows and on systems where files do not have groups this function always returns (uint) -2.
+
+See also group(), owner(), and ownerId().
+*/
+impl /*struct*/ QFileInfo {
+  pub fn groupId_0<RetType, T: QFileInfo_groupId_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.groupId_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_groupId_0<RetType> {
+  fn groupId_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_groupId_0<u32> for () {
+  fn groupId_0(self , rsthis: & QFileInfo) -> u32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo7groupIdEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: u32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:127
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool permission(QFile::Permissions) const
+
+/*
+Tests for file permissions. The permissions argument can be several flags of type QFile::Permissions OR-ed together to check for permission combinations.
+
+On systems where files do not have permissions this function always returns true.
+
+Note: The result might be inaccurate on Windows if the NTFS permissions check has not been enabled.
+
+Example:
+
+
+  QFileInfo fi("/tmp/archive.tar.gz");
+  if (fi.permission(QFile::WriteUser | QFile::ReadGroup))
+      qWarning("I can change the file; my group can read the file");
+  if (fi.permission(QFile::WriteGroup | QFile::WriteOther))
+      qWarning("The group or others can change the file");
+
+
+
+See also isReadable(), isWritable(), and isExecutable().
+*/
+impl /*struct*/ QFileInfo {
+  pub fn permission_0<RetType, T: QFileInfo_permission_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.permission_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_permission_0<RetType> {
+  fn permission_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_permission_0<bool> for (i32) {
+  fn permission_0(self , rsthis: & QFileInfo) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo10permissionE6QFlagsIN11QFileDevice10PermissionEE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:128
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] QFile::Permissions permissions() const
+
+/*
+Returns the complete OR-ed together combination of QFile::Permissions for the file.
+
+Note: The result might be inaccurate on Windows if the NTFS permissions check has not been enabled.
+*/
+impl /*struct*/ QFileInfo {
+  pub fn permissions_0<RetType, T: QFileInfo_permissions_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.permissions_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_permissions_0<RetType> {
+  fn permissions_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_permissions_0<i32> for () {
+  fn permissions_0(self , rsthis: & QFileInfo) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo11permissionsEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:130
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] qint64 size() const
+
+/*
+Returns the file size in bytes. If the file does not exist or cannot be fetched, 0 is returned.
+
+See also exists().
+*/
+impl /*struct*/ QFileInfo {
+  pub fn size_0<RetType, T: QFileInfo_size_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.size_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_size_0<RetType> {
+  fn size_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_size_0<i64> for () {
+  fn size_0(self , rsthis: & QFileInfo) -> i64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo4sizeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i64 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:135
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QDateTime created() const
+
+/*
+
+*/
+impl /*struct*/ QFileInfo {
+  pub fn created_0<RetType, T: QFileInfo_created_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.created_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_created_0<RetType> {
+  fn created_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_created_0<usize> for () {
+  fn created_0(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo7createdEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:137
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QDateTime birthTime() const
+
+/*
+Returns the date and time when the file was created / born.
+
+If the file birth time is not available, this function returns an invalid QDateTime.
+
+This function was introduced in  Qt 5.10.
+
+See also lastModified(), lastRead(), and metadataChangeTime().
+*/
+impl /*struct*/ QFileInfo {
+  pub fn birthTime_0<RetType, T: QFileInfo_birthTime_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.birthTime_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_birthTime_0<RetType> {
+  fn birthTime_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_birthTime_0<usize> for () {
+  fn birthTime_0(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo9birthTimeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:138
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QDateTime metadataChangeTime() const
+
+/*
+Returns the date and time when the file metadata was changed. A metadata change occurs when the file is created, but it also occurs whenever the user writes or sets inode information (for example, changing the file permissions).
+
+This function was introduced in  Qt 5.10.
+
+See also lastModified() and lastRead().
+*/
+impl /*struct*/ QFileInfo {
+  pub fn metadataChangeTime_0<RetType, T: QFileInfo_metadataChangeTime_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.metadataChangeTime_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_metadataChangeTime_0<RetType> {
+  fn metadataChangeTime_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_metadataChangeTime_0<usize> for () {
+  fn metadataChangeTime_0(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo18metadataChangeTimeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:139
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QDateTime lastModified() const
+
+/*
+Returns the date and local time when the file was last modified.
+
+See also birthTime(), lastRead(), metadataChangeTime(), and fileTime().
+*/
+impl /*struct*/ QFileInfo {
+  pub fn lastModified_0<RetType, T: QFileInfo_lastModified_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.lastModified_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_lastModified_0<RetType> {
+  fn lastModified_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_lastModified_0<usize> for () {
+  fn lastModified_0(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo12lastModifiedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:140
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QDateTime lastRead() const
+
+/*
+Returns the date and local time when the file was last read (accessed).
+
+On platforms where this information is not available, returns the same as lastModified().
+
+See also birthTime(), lastModified(), metadataChangeTime(), and fileTime().
+*/
+impl /*struct*/ QFileInfo {
+  pub fn lastRead_0<RetType, T: QFileInfo_lastRead_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.lastRead_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_lastRead_0<RetType> {
+  fn lastRead_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_lastRead_0<usize> for () {
+  fn lastRead_0(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo8lastReadEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:141
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QDateTime fileTime(QFile::FileTime) const
+
+/*
+Returns the file time specified by time. If the time cannot be determined, an invalid date time is returned.
+
+This function was introduced in  Qt 5.10.
+
+See also QFile::FileTime and QDateTime::isValid().
+*/
+impl /*struct*/ QFileInfo {
+  pub fn fileTime_0<RetType, T: QFileInfo_fileTime_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.fileTime_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_fileTime_0<RetType> {
+  fn fileTime_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_fileTime_0<usize> for (i32) {
+  fn fileTime_0(self , rsthis: & QFileInfo) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo8fileTimeEN11QFileDevice8FileTimeE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:143
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool caching() const
+
+/*
+Returns true if caching is enabled; otherwise returns false.
+
+See also setCaching() and refresh().
+*/
+impl /*struct*/ QFileInfo {
+  pub fn caching_0<RetType, T: QFileInfo_caching_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.caching_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_caching_0<RetType> {
+  fn caching_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_caching_0<bool> for () {
+  fn caching_0(self , rsthis: & QFileInfo) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QFileInfo7cachingEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileinfo.h:144
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setCaching(bool)
+
+/*
+If enable is true, enables caching of file information. If enable is false caching is disabled.
+
+When caching is enabled, QFileInfo reads the file information from the file system the first time it's needed, but generally not later.
+
+Caching is enabled by default.
+
+See also refresh() and caching().
+*/
+impl /*struct*/ QFileInfo {
+  pub fn setCaching_0<RetType, T: QFileInfo_setCaching_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setCaching_0(self);
+    // return 1;
+  }
+}
+pub trait QFileInfo_setCaching_0<RetType> {
+  fn setCaching_0(self , rsthis: & QFileInfo) -> RetType;
+}
+impl<'a> /*trait*/ QFileInfo_setCaching_0<(/*void*/)> for (bool) {
+  fn setCaching_0(self , rsthis: & QFileInfo) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const bool as usize;
+     qtrt::InvokeQtFunc6("_ZN9QFileInfo10setCachingEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QFileInfo_absolutePath<RetType> {
-  fn absolutePath(self , rsthis: & QFileInfo) -> RetType;
-}
+//  body block end
 
-  // proto:  QString QFileInfo::absolutePath();
-impl<'a> /*trait*/ QFileInfo_absolutePath<QString> for () {
-  fn absolutePath(self , rsthis: & QFileInfo) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo12absolutePathEv()};
-    let mut ret = unsafe {C_ZNK9QFileInfo12absolutePathEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
+//  keep block begin
 
-// <= body block end
-
+//  keep block end

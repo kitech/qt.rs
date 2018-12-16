@@ -1,468 +1,643 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qstate.h
-// dst-file: /src/core/qstate.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QState
+// package qtcore
+// /usr/include/qt/QtCore/qstate.h
+// #include <qstate.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
-use super::qabstractstate::*; // 773
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 9
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qobject::*; // 773
-use super::qvariant::*; // 773
-use super::qobjectdefs::*; // 773
-use super::qabstracttransition::*; // 773
-use super::qsignaltransition::*; // 773
-// use super::qlist::*; // 775
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QState_Class_Size() -> c_int;
-  // proto:  QAbstractState * QState::errorState();
-  fn C_ZNK6QState10errorStateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QAbstractState * QState::initialState();
-  fn C_ZNK6QState12initialStateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QState::~QState();
-  fn C_ZN6QStateD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void QState::assignProperty(QObject * object, const char * name, const QVariant & value);
-  fn C_ZN6QState14assignPropertyEP7QObjectPKcRK8QVariant(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_char, arg2: *mut c_void);
-  // proto:  void QState::QState(QState * parent);
-  fn C_ZN6QStateC2EPS_(arg0: *mut c_void) -> u64;
-  // proto:  const QMetaObject * QState::metaObject();
-  fn C_ZNK6QState10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QState::setErrorState(QAbstractState * state);
-  fn C_ZN6QState13setErrorStateEP14QAbstractState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QState::addTransition(QAbstractTransition * transition);
-  fn C_ZN6QState13addTransitionEP19QAbstractTransition(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QState::removeTransition(QAbstractTransition * transition);
-  fn C_ZN6QState16removeTransitionEP19QAbstractTransition(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  QSignalTransition * QState::addTransition(const QObject * sender, const char * signal, QAbstractState * target);
-  fn C_ZN6QState13addTransitionEPK7QObjectPKcP14QAbstractState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_char, arg2: *mut c_void) -> *mut c_void;
-  // proto:  QAbstractTransition * QState::addTransition(QAbstractState * target);
-  fn C_ZN6QState13addTransitionEP14QAbstractState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  QList<QAbstractTransition *> QState::transitions();
-  fn C_ZNK6QState11transitionsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QState::setInitialState(QAbstractState * state);
-  fn C_ZN6QState15setInitialStateEP14QAbstractState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-} // <= ext block end
+// void onEntry(QEvent *)
+// func (this *QState) InheritOnEntry(f func(event *QEvent/*777 QEvent **/) /*void*/) {
+//  qtrt.SetAllInheritCallback(this, "onEntry", f)
+// }
 
-// body block begin =>
-// class sizeof(QState)=1
-#[derive(Default)]
+// void onExit(QEvent *)
+// func (this *QState) InheritOnExit(f func(event *QEvent/*777 QEvent **/) /*void*/) {
+//  qtrt.SetAllInheritCallback(this, "onExit", f)
+// }
+
+// bool event(QEvent *)
+// func (this *QState) InheritEvent(f func(e *QEvent/*777 QEvent **/) bool) {
+//  qtrt.SetAllInheritCallback(this, "event", f)
+// }
+
+
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QState)=16
 pub struct QState {
   qbase: QAbstractState,
-  pub qclsinst: u64 /* *mut c_void*/,
-  pub _childModeChanged: QState_childModeChanged_signal,
-  pub _errorStateChanged: QState_errorStateChanged_signal,
-  pub _finished: QState_finished_signal,
-  pub _propertiesAssigned: QState_propertiesAssigned_signal,
-  pub _initialStateChanged: QState_initialStateChanged_signal,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QState_ITF interface {
+//    QAbstractState_ITF
+//    QState_PTR() *QState
+//}
+//func (ptr *QState) QState_PTR() *QState { return ptr }
 
 impl /*struct*/ QState {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QState {
-    return QState{qbase: QAbstractState::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QState {
+    return QState{qclsinst: qthis, ..Default::default()};
   }
 }
-impl Deref for QState {
-  type Target = QAbstractState;
+//impl Deref for QState {
+//  type Target = QStateBASE;
+//
+//  fn deref(&self) -> &QStateBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QStateBASE> for QState {
+//  fn as_ref(& self) -> & QStateBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qstate.h:57
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject() const
 
-  fn deref(&self) -> &QAbstractState {
-    return & self.qbase;
-  }
-}
-impl AsRef<QAbstractState> for QState {
-  fn as_ref(& self) -> & QAbstractState {
-    return & self.qbase;
-  }
-}
-  // proto:  QAbstractState * QState::errorState();
+/*
+
+*/
 impl /*struct*/ QState {
-  pub fn errorState<RetType, T: QState_errorState<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.errorState(self);
+  pub fn metaObject_0<RetType, T: QState_metaObject_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.metaObject_0(self);
     // return 1;
   }
 }
-
-pub trait QState_errorState<RetType> {
-  fn errorState(self , rsthis: & QState) -> RetType;
+pub trait QState_metaObject_0<RetType> {
+  fn metaObject_0(self , rsthis: & QState) -> RetType;
 }
-
-  // proto:  QAbstractState * QState::errorState();
-impl<'a> /*trait*/ QState_errorState<QAbstractState> for () {
-  fn errorState(self , rsthis: & QState) -> QAbstractState {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK6QState10errorStateEv()};
-    let mut ret = unsafe {C_ZNK6QState10errorStateEv(rsthis.qclsinst)};
-    let mut ret1 = QAbstractState::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QState_metaObject_0<usize> for () {
+  fn metaObject_0(self , rsthis: & QState) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QState10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  QAbstractState * QState::initialState();
+// /usr/include/qt/QtCore/qstate.h:74
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QState(QState *)
+
+/*
+Constructs a new state with the given parent state.
+*/
+// QState(QState *) ctx.fn_proto_cpp
 impl /*struct*/ QState {
-  pub fn initialState<RetType, T: QState_initialState<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.initialState(self);
-    // return 1;
-  }
-}
-
-pub trait QState_initialState<RetType> {
-  fn initialState(self , rsthis: & QState) -> RetType;
-}
-
-  // proto:  QAbstractState * QState::initialState();
-impl<'a> /*trait*/ QState_initialState<QAbstractState> for () {
-  fn initialState(self , rsthis: & QState) -> QAbstractState {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK6QState12initialStateEv()};
-    let mut ret = unsafe {C_ZNK6QState12initialStateEv(rsthis.qclsinst)};
-    let mut ret1 = QAbstractState::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QState::~QState();
-impl /*struct*/ QState {
-  pub fn free<RetType, T: QState_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
-    // return 1;
-  }
-}
-
-pub trait QState_free<RetType> {
-  fn free(self , rsthis: & QState) -> RetType;
-}
-
-  // proto:  void QState::~QState();
-impl<'a> /*trait*/ QState_free<()> for () {
-  fn free(self , rsthis: & QState) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QStateD2Ev()};
-     unsafe {C_ZN6QStateD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QState::assignProperty(QObject * object, const char * name, const QVariant & value);
-impl /*struct*/ QState {
-  pub fn assignProperty<RetType, T: QState_assignProperty<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.assignProperty(self);
-    // return 1;
-  }
-}
-
-pub trait QState_assignProperty<RetType> {
-  fn assignProperty(self , rsthis: & QState) -> RetType;
-}
-
-  // proto:  void QState::assignProperty(QObject * object, const char * name, const QVariant & value);
-impl<'a> /*trait*/ QState_assignProperty<()> for (&'a QObject, &'a  String, &'a QVariant) {
-  fn assignProperty(self , rsthis: & QState) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QState14assignPropertyEP7QObjectPKcRK8QVariant()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.as_ptr()  as *mut c_char;
-    let arg2 = self.2.qclsinst  as *mut c_void;
-     unsafe {C_ZN6QState14assignPropertyEP7QObjectPKcRK8QVariant(rsthis.qclsinst, arg0, arg1, arg2)};
-    // return 1;
-  }
-}
-
-  // proto:  void QState::QState(QState * parent);
-impl /*struct*/ QState {
-  pub fn new<T: QState_new>(value: T) -> QState {
-    let rsthis = value.new();
+  pub fn QState_0<T: QState_QState_0>(value: T) -> QState {
+    let rsthis = value.QState_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QState_new {
-  fn new(self) -> QState;
+pub trait QState_QState_0 {
+  fn QState_0(self) -> QState;
 }
-
-  // proto:  void QState::QState(QState * parent);
-impl<'a> /*trait*/ QState_new for (Option<&'a QState>) {
-  fn new(self) -> QState {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QState(QState *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QState_QState_0 for (usize) {
+  fn QState_0(self) -> QState {
     // unsafe{_ZN6QStateC2EPS_()};
-    let ctysz: c_int = unsafe{QState_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN6QStateC2EPS_(arg0)};
-    let rsthis = QState{qbase: QAbstractState::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN6QStateC2EPS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QState{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  const QMetaObject * QState::metaObject();
+// /usr/include/qt/QtCore/qstate.h:75
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QState(QState::ChildMode, QState *)
+
+/*
+Constructs a new state with the given parent state.
+*/
+// QState(QState::ChildMode, QState *) ctx.fn_proto_cpp
 impl /*struct*/ QState {
-  pub fn metaObject<RetType, T: QState_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.metaObject(self);
+  pub fn QState_1<T: QState_QState_1>(value: T) -> QState {
+    let rsthis = value.QState_1();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QState_metaObject<RetType> {
-  fn metaObject(self , rsthis: & QState) -> RetType;
+pub trait QState_QState_1 {
+  fn QState_1(self) -> QState;
 }
-
-  // proto:  const QMetaObject * QState::metaObject();
-impl<'a> /*trait*/ QState_metaObject<QMetaObject> for () {
-  fn metaObject(self , rsthis: & QState) -> QMetaObject {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK6QState10metaObjectEv()};
-    let mut ret = unsafe {C_ZNK6QState10metaObjectEv(rsthis.qclsinst)};
-    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
-    return ret1;
+// QState(QState::ChildMode, QState *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QState_QState_1 for (i32,usize) {
+  fn QState_1(self) -> QState {
+    // unsafe{_ZN6QStateC2ENS_9ChildModeEPS_()};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN6QStateC2ENS_9ChildModeEPS_", 2,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QState{qclsinst: qthis, ..Default::default()};
+    return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QState::setErrorState(QAbstractState * state);
+// /usr/include/qt/QtCore/qstate.h:76
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QState()
+
+/*
+
+*/
+pub fn DeleteQState(this :*mut QState) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN6QStateD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 16)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qstate.h:78
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QAbstractState * errorState() const
+
+/*
+Returns this state's error state.
+
+Note: Getter function for property errorState. 
+
+See also setErrorState() and QStateMachine::error().
+*/
 impl /*struct*/ QState {
-  pub fn setErrorState<RetType, T: QState_setErrorState<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setErrorState(self);
+  pub fn errorState_0<RetType, T: QState_errorState_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.errorState_0(self);
     // return 1;
   }
 }
-
-pub trait QState_setErrorState<RetType> {
-  fn setErrorState(self , rsthis: & QState) -> RetType;
+pub trait QState_errorState_0<RetType> {
+  fn errorState_0(self , rsthis: & QState) -> RetType;
 }
-
-  // proto:  void QState::setErrorState(QAbstractState * state);
-impl<'a> /*trait*/ QState_setErrorState<()> for (&'a QAbstractState) {
-  fn setErrorState(self , rsthis: & QState) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QState13setErrorStateEP14QAbstractState()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN6QState13setErrorStateEP14QAbstractState(rsthis.qclsinst, arg0)};
+impl<'a> /*trait*/ QState_errorState_0<usize> for () {
+  fn errorState_0(self , rsthis: & QState) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QState10errorStateEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  void QState::addTransition(QAbstractTransition * transition);
+// /usr/include/qt/QtCore/qstate.h:79
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setErrorState(QAbstractState *)
+
+/*
+Sets this state's error state to be the given state. If the error state is not set, or if it is set to 0, the state will inherit its parent's error state recursively. If no error state is set for the state itself or any of its ancestors, an error will cause the machine to stop executing and an error will be printed to the console.
+
+Note: Setter function for property errorState. 
+
+See also errorState().
+*/
 impl /*struct*/ QState {
-  pub fn addTransition<RetType, T: QState_addTransition<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.addTransition(self);
+  pub fn setErrorState_0<RetType, T: QState_setErrorState_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setErrorState_0(self);
+    // return 1;
+  }
+}
+pub trait QState_setErrorState_0<RetType> {
+  fn setErrorState_0(self , rsthis: & QState) -> RetType;
+}
+impl<'a> /*trait*/ QState_setErrorState_0<(/*void*/)> for (usize) {
+  fn setErrorState_0(self , rsthis: & QState) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN6QState13setErrorStateEP14QAbstractState", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QState_addTransition<RetType> {
-  fn addTransition(self , rsthis: & QState) -> RetType;
-}
+// /usr/include/qt/QtCore/qstate.h:81
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void addTransition(QAbstractTransition *)
 
-  // proto:  void QState::addTransition(QAbstractTransition * transition);
-impl<'a> /*trait*/ QState_addTransition<()> for (&'a QAbstractTransition) {
-  fn addTransition(self , rsthis: & QState) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QState13addTransitionEP19QAbstractTransition()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN6QState13addTransitionEP19QAbstractTransition(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QState::removeTransition(QAbstractTransition * transition);
+/*
+Adds the given transition. The transition has this state as the source. This state takes ownership of the transition.
+*/
 impl /*struct*/ QState {
-  pub fn removeTransition<RetType, T: QState_removeTransition<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.removeTransition(self);
+  pub fn addTransition_0<RetType, T: QState_addTransition_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.addTransition_0(self);
+    // return 1;
+  }
+}
+pub trait QState_addTransition_0<RetType> {
+  fn addTransition_0(self , rsthis: & QState) -> RetType;
+}
+impl<'a> /*trait*/ QState_addTransition_0<(/*void*/)> for (usize) {
+  fn addTransition_0(self , rsthis: & QState) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN6QState13addTransitionEP19QAbstractTransition", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QState_removeTransition<RetType> {
-  fn removeTransition(self , rsthis: & QState) -> RetType;
-}
+// /usr/include/qt/QtCore/qstate.h:82
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QSignalTransition * addTransition(const QObject *, const char *, QAbstractState *)
 
-  // proto:  void QState::removeTransition(QAbstractTransition * transition);
-impl<'a> /*trait*/ QState_removeTransition<()> for (&'a QAbstractTransition) {
-  fn removeTransition(self , rsthis: & QState) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QState16removeTransitionEP19QAbstractTransition()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN6QState16removeTransitionEP19QAbstractTransition(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  QSignalTransition * QState::addTransition(const QObject * sender, const char * signal, QAbstractState * target);
-impl<'a> /*trait*/ QState_addTransition<QSignalTransition> for (&'a QObject, &'a  String, &'a QAbstractState) {
-  fn addTransition(self , rsthis: & QState) -> QSignalTransition {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QState13addTransitionEPK7QObjectPKcP14QAbstractState()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.as_ptr()  as *mut c_char;
-    let arg2 = self.2.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN6QState13addTransitionEPK7QObjectPKcP14QAbstractState(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QSignalTransition::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QAbstractTransition * QState::addTransition(QAbstractState * target);
-impl<'a> /*trait*/ QState_addTransition<QAbstractTransition> for (&'a QAbstractState) {
-  fn addTransition(self , rsthis: & QState) -> QAbstractTransition {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QState13addTransitionEP14QAbstractState()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN6QState13addTransitionEP14QAbstractState(rsthis.qclsinst, arg0)};
-    let mut ret1 = QAbstractTransition::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QList<QAbstractTransition *> QState::transitions();
+/*
+Adds the given transition. The transition has this state as the source. This state takes ownership of the transition.
+*/
 impl /*struct*/ QState {
-  pub fn transitions<RetType, T: QState_transitions<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.transitions(self);
+  pub fn addTransition_1<RetType, T: QState_addTransition_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.addTransition_1(self);
     // return 1;
   }
 }
-
-pub trait QState_transitions<RetType> {
-  fn transitions(self , rsthis: & QState) -> RetType;
+pub trait QState_addTransition_1<RetType> {
+  fn addTransition_1(self , rsthis: & QState) -> RetType;
 }
-
-  // proto:  QList<QAbstractTransition *> QState::transitions();
-impl<'a> /*trait*/ QState_transitions<u64> for () {
-  fn transitions(self , rsthis: & QState) -> u64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK6QState11transitionsEv()};
-    let mut ret = unsafe {C_ZNK6QState11transitionsEv(rsthis.qclsinst)};
-    return ret as u64; // 5
+impl<'a> /*trait*/ QState_addTransition_1<usize> for (usize,usize,usize) {
+  fn addTransition_1(self , rsthis: & QState) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (self.1) as *const usize as usize;
+    let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN6QState13addTransitionEPK7QObjectPKcP14QAbstractState", 3,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  void QState::setInitialState(QAbstractState * state);
+// /usr/include/qt/QtCore/qstate.h:96
+// index:2
+// Public Visibility=Default Availability=Available
+// [8] QAbstractTransition * addTransition(QAbstractState *)
+
+/*
+Adds the given transition. The transition has this state as the source. This state takes ownership of the transition.
+*/
 impl /*struct*/ QState {
-  pub fn setInitialState<RetType, T: QState_setInitialState<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setInitialState(self);
+  pub fn addTransition_2<RetType, T: QState_addTransition_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.addTransition_2(self);
+    // return 1;
+  }
+}
+pub trait QState_addTransition_2<RetType> {
+  fn addTransition_2(self , rsthis: & QState) -> RetType;
+}
+impl<'a> /*trait*/ QState_addTransition_2<usize> for (usize) {
+  fn addTransition_2(self , rsthis: & QState) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN6QState13addTransitionEP14QAbstractState", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstate.h:97
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void removeTransition(QAbstractTransition *)
+
+/*
+Removes the given transition from this state. The state releases ownership of the transition.
+
+See also addTransition().
+*/
+impl /*struct*/ QState {
+  pub fn removeTransition_0<RetType, T: QState_removeTransition_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.removeTransition_0(self);
+    // return 1;
+  }
+}
+pub trait QState_removeTransition_0<RetType> {
+  fn removeTransition_0(self , rsthis: & QState) -> RetType;
+}
+impl<'a> /*trait*/ QState_removeTransition_0<(/*void*/)> for (usize) {
+  fn removeTransition_0(self , rsthis: & QState) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN6QState16removeTransitionEP19QAbstractTransition", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QState_setInitialState<RetType> {
-  fn setInitialState(self , rsthis: & QState) -> RetType;
+// /usr/include/qt/QtCore/qstate.h:100
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QAbstractState * initialState() const
+
+/*
+Returns this state's initial state, or 0 if the state has no initial state.
+
+Note: Getter function for property initialState. 
+
+See also setInitialState().
+*/
+impl /*struct*/ QState {
+  pub fn initialState_0<RetType, T: QState_initialState_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.initialState_0(self);
+    // return 1;
+  }
+}
+pub trait QState_initialState_0<RetType> {
+  fn initialState_0(self , rsthis: & QState) -> RetType;
+}
+impl<'a> /*trait*/ QState_initialState_0<usize> for () {
+  fn initialState_0(self , rsthis: & QState) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QState12initialStateEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
 }
 
-  // proto:  void QState::setInitialState(QAbstractState * state);
-impl<'a> /*trait*/ QState_setInitialState<()> for (&'a QAbstractState) {
-  fn setInitialState(self , rsthis: & QState) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QState15setInitialStateEP14QAbstractState()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN6QState15setInitialStateEP14QAbstractState(rsthis.qclsinst, arg0)};
+// /usr/include/qt/QtCore/qstate.h:101
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setInitialState(QAbstractState *)
+
+/*
+Sets this state's initial state to be the given state. state has to be a child of this state.
+
+Note: Setter function for property initialState. 
+
+See also initialState().
+*/
+impl /*struct*/ QState {
+  pub fn setInitialState_0<RetType, T: QState_setInitialState_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setInitialState_0(self);
+    // return 1;
+  }
+}
+pub trait QState_setInitialState_0<RetType> {
+  fn setInitialState_0(self , rsthis: & QState) -> RetType;
+}
+impl<'a> /*trait*/ QState_setInitialState_0<(/*void*/)> for (usize) {
+  fn setInitialState_0(self , rsthis: & QState) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN6QState15setInitialStateEP14QAbstractState", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-#[derive(Default)] // for QState_childModeChanged
-pub struct QState_childModeChanged_signal{poi:u64}
-impl /* struct */ QState {
-  pub fn childModeChanged(&self) -> QState_childModeChanged_signal {
-     return QState_childModeChanged_signal{poi:self.qclsinst};
+// /usr/include/qt/QtCore/qstate.h:103
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] QState::ChildMode childMode() const
+
+/*
+Returns the child mode of this state.
+
+Note: Getter function for property childMode. 
+
+See also setChildMode().
+*/
+impl /*struct*/ QState {
+  pub fn childMode_0<RetType, T: QState_childMode_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.childMode_0(self);
+    // return 1;
   }
 }
-impl /* struct */ QState_childModeChanged_signal {
-  pub fn connect<T: QState_childModeChanged_signal_connect>(self, overload_args: T) {
-    overload_args.connect(self);
-  }
+pub trait QState_childMode_0<RetType> {
+  fn childMode_0(self , rsthis: & QState) -> RetType;
 }
-pub trait QState_childModeChanged_signal_connect {
-  fn connect(self, sigthis: QState_childModeChanged_signal);
+impl<'a> /*trait*/ QState_childMode_0<i32> for () {
+  fn childMode_0(self , rsthis: & QState) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QState9childModeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
 }
 
-#[derive(Default)] // for QState_errorStateChanged
-pub struct QState_errorStateChanged_signal{poi:u64}
-impl /* struct */ QState {
-  pub fn errorStateChanged(&self) -> QState_errorStateChanged_signal {
-     return QState_errorStateChanged_signal{poi:self.qclsinst};
+// /usr/include/qt/QtCore/qstate.h:104
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setChildMode(QState::ChildMode)
+
+/*
+Sets the child mode of this state.
+
+Note: Setter function for property childMode. 
+
+See also childMode().
+*/
+impl /*struct*/ QState {
+  pub fn setChildMode_0<RetType, T: QState_setChildMode_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setChildMode_0(self);
+    // return 1;
   }
 }
-impl /* struct */ QState_errorStateChanged_signal {
-  pub fn connect<T: QState_errorStateChanged_signal_connect>(self, overload_args: T) {
-    overload_args.connect(self);
-  }
+pub trait QState_setChildMode_0<RetType> {
+  fn setChildMode_0(self , rsthis: & QState) -> RetType;
 }
-pub trait QState_errorStateChanged_signal_connect {
-  fn connect(self, sigthis: QState_errorStateChanged_signal);
+impl<'a> /*trait*/ QState_setChildMode_0<(/*void*/)> for (i32) {
+  fn setChildMode_0(self , rsthis: & QState) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN6QState12setChildModeENS_9ChildModeE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
 }
 
-#[derive(Default)] // for QState_finished
-pub struct QState_finished_signal{poi:u64}
-impl /* struct */ QState {
-  pub fn finished(&self) -> QState_finished_signal {
-     return QState_finished_signal{poi:self.qclsinst};
+// /usr/include/qt/QtCore/qstate.h:107
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void assignProperty(QObject *, const char *, const QVariant &)
+
+/*
+Instructs this state to set the property with the given name of the given object to the given value when the state is entered.
+
+See also propertiesAssigned().
+*/
+impl /*struct*/ QState {
+  pub fn assignProperty_0<RetType, T: QState_assignProperty_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.assignProperty_0(self);
+    // return 1;
   }
 }
-impl /* struct */ QState_finished_signal {
-  pub fn connect<T: QState_finished_signal_connect>(self, overload_args: T) {
-    overload_args.connect(self);
-  }
+pub trait QState_assignProperty_0<RetType> {
+  fn assignProperty_0(self , rsthis: & QState) -> RetType;
 }
-pub trait QState_finished_signal_connect {
-  fn connect(self, sigthis: QState_finished_signal);
+impl<'a> /*trait*/ QState_assignProperty_0<(/*void*/)> for (usize,usize,usize) {
+  fn assignProperty_0(self , rsthis: & QState) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (self.1) as *const usize as usize;
+    let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN6QState14assignPropertyEP7QObjectPKcRK8QVariant", 3,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
 }
 
-#[derive(Default)] // for QState_propertiesAssigned
-pub struct QState_propertiesAssigned_signal{poi:u64}
-impl /* struct */ QState {
-  pub fn propertiesAssigned(&self) -> QState_propertiesAssigned_signal {
-     return QState_propertiesAssigned_signal{poi:self.qclsinst};
+// /usr/include/qt/QtCore/qstate.h:119
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void onEntry(QEvent *)
+
+/*
+Reimplemented from QAbstractState::onEntry().
+*/
+impl /*struct*/ QState {
+  pub fn onEntry_0<RetType, T: QState_onEntry_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.onEntry_0(self);
+    // return 1;
   }
 }
-impl /* struct */ QState_propertiesAssigned_signal {
-  pub fn connect<T: QState_propertiesAssigned_signal_connect>(self, overload_args: T) {
-    overload_args.connect(self);
-  }
+pub trait QState_onEntry_0<RetType> {
+  fn onEntry_0(self , rsthis: & QState) -> RetType;
 }
-pub trait QState_propertiesAssigned_signal_connect {
-  fn connect(self, sigthis: QState_propertiesAssigned_signal);
+impl<'a> /*trait*/ QState_onEntry_0<(/*void*/)> for (usize) {
+  fn onEntry_0(self , rsthis: & QState) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN6QState7onEntryEP6QEvent", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
 }
 
-#[derive(Default)] // for QState_initialStateChanged
-pub struct QState_initialStateChanged_signal{poi:u64}
-impl /* struct */ QState {
-  pub fn initialStateChanged(&self) -> QState_initialStateChanged_signal {
-     return QState_initialStateChanged_signal{poi:self.qclsinst};
+// /usr/include/qt/QtCore/qstate.h:120
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void onExit(QEvent *)
+
+/*
+Reimplemented from QAbstractState::onExit().
+*/
+impl /*struct*/ QState {
+  pub fn onExit_0<RetType, T: QState_onExit_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.onExit_0(self);
+    // return 1;
   }
 }
-impl /* struct */ QState_initialStateChanged_signal {
-  pub fn connect<T: QState_initialStateChanged_signal_connect>(self, overload_args: T) {
-    overload_args.connect(self);
+pub trait QState_onExit_0<RetType> {
+  fn onExit_0(self , rsthis: & QState) -> RetType;
+}
+impl<'a> /*trait*/ QState_onExit_0<(/*void*/)> for (usize) {
+  fn onExit_0(self , rsthis: & QState) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN6QState6onExitEP6QEvent", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
   }
 }
-pub trait QState_initialStateChanged_signal_connect {
-  fn connect(self, sigthis: QState_initialStateChanged_signal);
+
+// /usr/include/qt/QtCore/qstate.h:122
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
+
+/*
+Reimplemented from QObject::event().
+*/
+impl /*struct*/ QState {
+  pub fn event_0<RetType, T: QState_event_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.event_0(self);
+    // return 1;
+  }
+}
+pub trait QState_event_0<RetType> {
+  fn event_0(self , rsthis: & QState) -> RetType;
+}
+impl<'a> /*trait*/ QState_event_0<bool> for (usize) {
+  fn event_0(self , rsthis: & QState) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN6QState5eventEP6QEvent", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
 }
 
-// <= body block end
 
+/*
+This enum specifies how a state's child states are treated.
+
+
+*/
+pub type QState__ChildMode = i32;
+// The child states are mutually exclusive and an initial state must be set by calling QState::setInitialState().
+pub const QState__ExclusiveStates :QState__ChildMode = 0;
+// The child states are parallel. When the parent state is entered, all its child states are entered in parallel.
+pub const QState__ParallelStates :QState__ChildMode = 1;
+pub fn QState_ChildModeItemName(val: i32) ->String {
+  return qtrt::GetClassEnumItemName("QState", val);
+}
+pub fn QState_ChildModeItemName_s(val: i32) ->String {
+  //var nilthis *QState
+  //return nilthis.ChildModeItemName(val);
+  return QState_ChildModeItemName(val);
+}
+
+
+/*
+This enum specifies the restore policy type. The restore policy takes effect when the machine enters a state which sets one or more properties. If the restore policy is set to RestoreProperties, the state machine will save the original value of the property before the new value is set.
+
+Later, when the machine either enters a state which does not set a value for the given property, the property will automatically be restored to its initial value.
+
+Only one initial value will be saved for any given property. If a value for a property has already been saved by the state machine, it will not be overwritten until the property has been successfully restored.
+
+
+
+See also QStateMachine::globalRestorePolicy and QState::assignProperty().
+
+*/
+pub type QState__RestorePolicy = i32;
+// The state machine should not save the initial values of properties and restore them later.
+pub const QState__DontRestoreProperties :QState__RestorePolicy = 0;
+// The state machine should save the initial values of properties and restore them later.
+pub const QState__RestoreProperties :QState__RestorePolicy = 1;
+pub fn QState_RestorePolicyItemName(val: i32) ->String {
+  return qtrt::GetClassEnumItemName("QState", val);
+}
+pub fn QState_RestorePolicyItemName_s(val: i32) ->String {
+  //var nilthis *QState
+  //return nilthis.RestorePolicyItemName(val);
+  return QState_RestorePolicyItemName(val);
+}
+
+//  body block end
+
+//  keep block begin
+
+//  keep block end

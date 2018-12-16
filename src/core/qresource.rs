@@ -1,470 +1,672 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qresource.h
-// dst-file: /src/core/qresource.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QResource
+// package qtcore
+// /usr/include/qt/QtCore/qresource.h
+// #include <qresource.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 12
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qstring::*; // 773
-use super::qlocale::*; // 773
-use super::qstringlist::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QResource_Class_Size() -> c_int;
-  // proto:  void QResource::QResource(const QString & file, const QLocale & locale);
-  fn C_ZN9QResourceC2ERK7QStringRK7QLocale(arg0: *mut c_void, arg1: *mut c_void) -> u64;
-  // proto:  QLocale QResource::locale();
-  fn C_ZNK9QResource6localeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QResource::setLocale(const QLocale & locale);
-  fn C_ZN9QResource9setLocaleERK7QLocale(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto: static bool QResource::registerResource(const uchar * rccData, const QString & resourceRoot);
-  fn C_ZN9QResource16registerResourceEPKhRK7QString(arg0: *mut c_uchar, arg1: *mut c_void) -> c_char;
-  // proto:  const uchar * QResource::data();
-  fn C_ZNK9QResource4dataEv(qthis: u64 /* *mut c_void*/) -> *mut c_uchar;
-  // proto: static QStringList QResource::searchPaths();
-  fn C_ZN9QResource11searchPathsEv() -> *mut c_void;
-  // proto:  QString QResource::fileName();
-  fn C_ZNK9QResource8fileNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString QResource::absoluteFilePath();
-  fn C_ZNK9QResource16absoluteFilePathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto: static bool QResource::unregisterResource(const uchar * rccData, const QString & resourceRoot);
-  fn C_ZN9QResource18unregisterResourceEPKhRK7QString(arg0: *mut c_uchar, arg1: *mut c_void) -> c_char;
-  // proto: static bool QResource::registerResource(const QString & rccFilename, const QString & resourceRoot);
-  fn C_ZN9QResource16registerResourceERK7QStringS2_(arg0: *mut c_void, arg1: *mut c_void) -> c_char;
-  // proto: static void QResource::addSearchPath(const QString & path);
-  fn C_ZN9QResource13addSearchPathERK7QString(arg0: *mut c_void);
-  // proto:  qint64 QResource::size();
-  fn C_ZNK9QResource4sizeEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
-  // proto:  void QResource::~QResource();
-  fn C_ZN9QResourceD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  bool QResource::isValid();
-  fn C_ZNK9QResource7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QResource::setFileName(const QString & file);
-  fn C_ZN9QResource11setFileNameERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto: static bool QResource::unregisterResource(const QString & rccFilename, const QString & resourceRoot);
-  fn C_ZN9QResource18unregisterResourceERK7QStringS2_(arg0: *mut c_void, arg1: *mut c_void) -> c_char;
-  // proto:  bool QResource::isCompressed();
-  fn C_ZNK9QResource12isCompressedEv(qthis: u64 /* *mut c_void*/) -> c_char;
-} // <= ext block end
+// bool isDir()
+// func (this *QResource) InheritIsDir(f func() bool) {
+//  qtrt.SetAllInheritCallback(this, "isDir", f)
+// }
 
-// body block begin =>
-// class sizeof(QResource)=1
-#[derive(Default)]
+// bool isFile()
+// func (this *QResource) InheritIsFile(f func() bool) {
+//  qtrt.SetAllInheritCallback(this, "isFile", f)
+// }
+
+// QStringList children()
+// func (this *QResource) InheritChildren(f func() unsafe.Pointer) {
+//  qtrt.SetAllInheritCallback(this, "children", f)
+// }
+
+
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QResource)=8
 pub struct QResource {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
+  // qbase: none,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QResource_ITF interface {
+//    QResource_PTR() *QResource
+//}
+//func (ptr *QResource) QResource_PTR() *QResource { return ptr }
 
 impl /*struct*/ QResource {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QResource {
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QResource {
     return QResource{qclsinst: qthis, ..Default::default()};
   }
 }
-  // proto:  void QResource::QResource(const QString & file, const QLocale & locale);
+//impl Deref for QResource {
+//  type Target = QResourceBASE;
+//
+//  fn deref(&self) -> &QResourceBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QResourceBASE> for QResource {
+//  fn as_ref(& self) -> & QResourceBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qresource.h:57
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QResource(const QString &, const QLocale &)
+
+/*
+Constructs a QResource pointing to file. locale is used to load a specific localization of a resource data.
+
+See also QFileInfo, QDir::searchPaths(), setFileName(), and setLocale().
+*/
+// QResource(const QString &, const QLocale &) ctx.fn_proto_cpp
 impl /*struct*/ QResource {
-  pub fn new<T: QResource_new>(value: T) -> QResource {
-    let rsthis = value.new();
+  pub fn QResource_0<T: QResource_QResource_0>(value: T) -> QResource {
+    let rsthis = value.QResource_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QResource_new {
-  fn new(self) -> QResource;
+pub trait QResource_QResource_0 {
+  fn QResource_0(self) -> QResource;
 }
-
-  // proto:  void QResource::QResource(const QString & file, const QLocale & locale);
-impl<'a> /*trait*/ QResource_new for (Option<&'a QString>, Option<&'a QLocale>) {
-  fn new(self) -> QResource {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QResource(const QString &, const QLocale &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QResource_QResource_0 for (usize,usize) {
+  fn QResource_0(self) -> QResource {
     // unsafe{_ZN9QResourceC2ERK7QStringRK7QLocale()};
-    let ctysz: c_int = unsafe{QResource_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = (if self.0.is_none() {QString::new(()).qclsinst} else {self.0.unwrap().qclsinst})  as *mut c_void;
-    let arg1 = (if self.1.is_none() {QLocale::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN9QResourceC2ERK7QStringRK7QLocale(arg0, arg1)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN9QResourceC2ERK7QStringRK7QLocale", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QResource{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  QLocale QResource::locale();
+// /usr/include/qt/QtCore/qresource.h:58
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void ~QResource()
+
+/*
+
+*/
+pub fn DeleteQResource(this :*mut QResource) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN9QResourceD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 8)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qresource.h:60
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setFileName(const QString &)
+
+/*
+Sets a QResource to point to file. file can either be absolute, in which case it is opened directly, if relative then the file will be tried to be found in QDir::searchPaths().
+
+See also fileName() and absoluteFilePath().
+*/
 impl /*struct*/ QResource {
-  pub fn locale<RetType, T: QResource_locale<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.locale(self);
+  pub fn setFileName_0<RetType, T: QResource_setFileName_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setFileName_0(self);
+    // return 1;
+  }
+}
+pub trait QResource_setFileName_0<RetType> {
+  fn setFileName_0(self , rsthis: & QResource) -> RetType;
+}
+impl<'a> /*trait*/ QResource_setFileName_0<(/*void*/)> for (usize) {
+  fn setFileName_0(self , rsthis: & QResource) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN9QResource11setFileNameERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QResource_locale<RetType> {
-  fn locale(self , rsthis: & QResource) -> RetType;
-}
+// /usr/include/qt/QtCore/qresource.h:61
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString fileName() const
 
-  // proto:  QLocale QResource::locale();
-impl<'a> /*trait*/ QResource_locale<QLocale> for () {
-  fn locale(self , rsthis: & QResource) -> QLocale {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QResource6localeEv()};
-    let mut ret = unsafe {C_ZNK9QResource6localeEv(rsthis.qclsinst)};
-    let mut ret1 = QLocale::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
+/*
+Returns the full path to the file that this QResource represents as it was passed.
 
-  // proto:  void QResource::setLocale(const QLocale & locale);
+See also setFileName() and absoluteFilePath().
+*/
 impl /*struct*/ QResource {
-  pub fn setLocale<RetType, T: QResource_setLocale<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setLocale(self);
+  pub fn fileName_0<RetType, T: QResource_fileName_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.fileName_0(self);
     // return 1;
   }
 }
-
-pub trait QResource_setLocale<RetType> {
-  fn setLocale(self , rsthis: & QResource) -> RetType;
+pub trait QResource_fileName_0<RetType> {
+  fn fileName_0(self , rsthis: & QResource) -> RetType;
 }
-
-  // proto:  void QResource::setLocale(const QLocale & locale);
-impl<'a> /*trait*/ QResource_setLocale<()> for (&'a QLocale) {
-  fn setLocale(self , rsthis: & QResource) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QResource9setLocaleERK7QLocale()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN9QResource9setLocaleERK7QLocale(rsthis.qclsinst, arg0)};
+impl<'a> /*trait*/ QResource_fileName_0<usize> for () {
+  fn fileName_0(self , rsthis: & QResource) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QResource8fileNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto: static bool QResource::registerResource(const uchar * rccData, const QString & resourceRoot);
+// /usr/include/qt/QtCore/qresource.h:62
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString absoluteFilePath() const
+
+/*
+Returns the real path that this QResource represents, if the resource was found via the QDir::searchPaths() it will be indicated in the path.
+
+See also fileName().
+*/
 impl /*struct*/ QResource {
-  pub fn registerResource_s<RetType, T: QResource_registerResource_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.registerResource_s();
+  pub fn absoluteFilePath_0<RetType, T: QResource_absoluteFilePath_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.absoluteFilePath_0(self);
     // return 1;
   }
 }
-
-pub trait QResource_registerResource_s<RetType> {
-  fn registerResource_s(self ) -> RetType;
+pub trait QResource_absoluteFilePath_0<RetType> {
+  fn absoluteFilePath_0(self , rsthis: & QResource) -> RetType;
 }
-
-  // proto: static bool QResource::registerResource(const uchar * rccData, const QString & resourceRoot);
-impl<'a> /*trait*/ QResource_registerResource_s<i8> for (&'a  String, Option<&'a QString>) {
-  fn registerResource_s(self ) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QResource16registerResourceEPKhRK7QString()};
-    let arg0 = self.0.as_ptr()  as *mut c_uchar;
-    let arg1 = (if self.1.is_none() {QString::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
-    let mut ret = unsafe {C_ZN9QResource16registerResourceEPKhRK7QString(arg0, arg1)};
-    return ret as i8; // 1
+impl<'a> /*trait*/ QResource_absoluteFilePath_0<usize> for () {
+  fn absoluteFilePath_0(self , rsthis: & QResource) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QResource16absoluteFilePathEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  const uchar * QResource::data();
+// /usr/include/qt/QtCore/qresource.h:64
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setLocale(const QLocale &)
+
+/*
+Sets a QResource to only load the localization of resource to for locale. If a resource for the specific locale is not found then the C locale is used.
+
+See also locale() and setFileName().
+*/
 impl /*struct*/ QResource {
-  pub fn data<RetType, T: QResource_data<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.data(self);
+  pub fn setLocale_0<RetType, T: QResource_setLocale_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setLocale_0(self);
+    // return 1;
+  }
+}
+pub trait QResource_setLocale_0<RetType> {
+  fn setLocale_0(self , rsthis: & QResource) -> RetType;
+}
+impl<'a> /*trait*/ QResource_setLocale_0<(/*void*/)> for (usize) {
+  fn setLocale_0(self , rsthis: & QResource) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN9QResource9setLocaleERK7QLocale", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QResource_data<RetType> {
-  fn data(self , rsthis: & QResource) -> RetType;
-}
+// /usr/include/qt/QtCore/qresource.h:65
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QLocale locale() const
 
-  // proto:  const uchar * QResource::data();
-impl<'a> /*trait*/ QResource_data<String> for () {
-  fn data(self , rsthis: & QResource) -> String {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QResource4dataEv()};
-    let mut ret = unsafe {C_ZNK9QResource4dataEv(rsthis.qclsinst)};
-    let slen = unsafe {strlen(ret as *const i8)} as usize;
-    return unsafe{String::from_raw_parts(ret as *mut u8, slen, slen+1)};
-    // return 1;
-  }
-}
+/*
+Returns the locale used to locate the data for the QResource.
 
-  // proto: static QStringList QResource::searchPaths();
+See also setLocale().
+*/
 impl /*struct*/ QResource {
-  pub fn searchPaths_s<RetType, T: QResource_searchPaths_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.searchPaths_s();
+  pub fn locale_0<RetType, T: QResource_locale_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.locale_0(self);
     // return 1;
   }
 }
-
-pub trait QResource_searchPaths_s<RetType> {
-  fn searchPaths_s(self ) -> RetType;
+pub trait QResource_locale_0<RetType> {
+  fn locale_0(self , rsthis: & QResource) -> RetType;
 }
-
-  // proto: static QStringList QResource::searchPaths();
-impl<'a> /*trait*/ QResource_searchPaths_s<QStringList> for () {
-  fn searchPaths_s(self ) -> QStringList {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QResource11searchPathsEv()};
-    let mut ret = unsafe {C_ZN9QResource11searchPathsEv()};
-    let mut ret1 = QStringList::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QResource_locale_0<usize> for () {
+  fn locale_0(self , rsthis: & QResource) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QResource6localeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  QString QResource::fileName();
+// /usr/include/qt/QtCore/qresource.h:67
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isValid() const
+
+/*
+Returns true if the resource really exists in the resource hierarchy, false otherwise.
+*/
 impl /*struct*/ QResource {
-  pub fn fileName<RetType, T: QResource_fileName<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.fileName(self);
+  pub fn isValid_0<RetType, T: QResource_isValid_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isValid_0(self);
     // return 1;
   }
 }
-
-pub trait QResource_fileName<RetType> {
-  fn fileName(self , rsthis: & QResource) -> RetType;
+pub trait QResource_isValid_0<RetType> {
+  fn isValid_0(self , rsthis: & QResource) -> RetType;
 }
-
-  // proto:  QString QResource::fileName();
-impl<'a> /*trait*/ QResource_fileName<QString> for () {
-  fn fileName(self , rsthis: & QResource) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QResource8fileNameEv()};
-    let mut ret = unsafe {C_ZNK9QResource8fileNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QResource_isValid_0<bool> for () {
+  fn isValid_0(self , rsthis: & QResource) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QResource7isValidEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  QString QResource::absoluteFilePath();
+// /usr/include/qt/QtCore/qresource.h:69
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isCompressed() const
+
+/*
+Returns true if the resource represents a file and the data backing it is in a compressed format, false otherwise.
+
+See also data() and isFile().
+*/
 impl /*struct*/ QResource {
-  pub fn absoluteFilePath<RetType, T: QResource_absoluteFilePath<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.absoluteFilePath(self);
+  pub fn isCompressed_0<RetType, T: QResource_isCompressed_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isCompressed_0(self);
     // return 1;
   }
 }
-
-pub trait QResource_absoluteFilePath<RetType> {
-  fn absoluteFilePath(self , rsthis: & QResource) -> RetType;
+pub trait QResource_isCompressed_0<RetType> {
+  fn isCompressed_0(self , rsthis: & QResource) -> RetType;
 }
-
-  // proto:  QString QResource::absoluteFilePath();
-impl<'a> /*trait*/ QResource_absoluteFilePath<QString> for () {
-  fn absoluteFilePath(self , rsthis: & QResource) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QResource16absoluteFilePathEv()};
-    let mut ret = unsafe {C_ZNK9QResource16absoluteFilePathEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QResource_isCompressed_0<bool> for () {
+  fn isCompressed_0(self , rsthis: & QResource) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QResource12isCompressedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto: static bool QResource::unregisterResource(const uchar * rccData, const QString & resourceRoot);
+// /usr/include/qt/QtCore/qresource.h:70
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] qint64 size() const
+
+/*
+Returns the size of the data backing the resource.
+
+See also data() and isFile().
+*/
 impl /*struct*/ QResource {
-  pub fn unregisterResource_s<RetType, T: QResource_unregisterResource_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.unregisterResource_s();
+  pub fn size_0<RetType, T: QResource_size_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.size_0(self);
     // return 1;
   }
 }
-
-pub trait QResource_unregisterResource_s<RetType> {
-  fn unregisterResource_s(self ) -> RetType;
+pub trait QResource_size_0<RetType> {
+  fn size_0(self , rsthis: & QResource) -> RetType;
 }
-
-  // proto: static bool QResource::unregisterResource(const uchar * rccData, const QString & resourceRoot);
-impl<'a> /*trait*/ QResource_unregisterResource_s<i8> for (&'a  String, Option<&'a QString>) {
-  fn unregisterResource_s(self ) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QResource18unregisterResourceEPKhRK7QString()};
-    let arg0 = self.0.as_ptr()  as *mut c_uchar;
-    let arg1 = (if self.1.is_none() {QString::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
-    let mut ret = unsafe {C_ZN9QResource18unregisterResourceEPKhRK7QString(arg0, arg1)};
-    return ret as i8; // 1
+impl<'a> /*trait*/ QResource_size_0<i64> for () {
+  fn size_0(self , rsthis: & QResource) -> i64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QResource4sizeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i64 = Default::default(); return dret;
   }
 }
 
-  // proto: static bool QResource::registerResource(const QString & rccFilename, const QString & resourceRoot);
-impl<'a> /*trait*/ QResource_registerResource_s<i8> for (&'a QString, Option<&'a QString>) {
-  fn registerResource_s(self ) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QResource16registerResourceERK7QStringS2_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = (if self.1.is_none() {QString::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
-    let mut ret = unsafe {C_ZN9QResource16registerResourceERK7QStringS2_(arg0, arg1)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
+// /usr/include/qt/QtCore/qresource.h:71
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] const uchar * data() const
 
-  // proto: static void QResource::addSearchPath(const QString & path);
+/*
+Returns direct access to a read only segment of data that this resource represents. If the resource is compressed the data returns is compressed and qUncompress() must be used to access the data. If the resource is a directory 0 is returned.
+
+See also size(), isCompressed(), and isFile().
+*/
 impl /*struct*/ QResource {
-  pub fn addSearchPath_s<RetType, T: QResource_addSearchPath_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.addSearchPath_s();
+  pub fn data_0<RetType, T: QResource_data_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.data_0(self);
     // return 1;
   }
 }
-
-pub trait QResource_addSearchPath_s<RetType> {
-  fn addSearchPath_s(self ) -> RetType;
+pub trait QResource_data_0<RetType> {
+  fn data_0(self , rsthis: & QResource) -> RetType;
 }
-
-  // proto: static void QResource::addSearchPath(const QString & path);
-impl<'a> /*trait*/ QResource_addSearchPath_s<()> for (&'a QString) {
-  fn addSearchPath_s(self ) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QResource13addSearchPathERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN9QResource13addSearchPathERK7QString(arg0)};
+impl<'a> /*trait*/ QResource_data_0<usize> for () {
+  fn data_0(self , rsthis: & QResource) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QResource4dataEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  qint64 QResource::size();
+// /usr/include/qt/QtCore/qresource.h:72
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QDateTime lastModified() const
+
+/*
+Returns the date and time when the file was last modified before packaging into a resource.
+*/
 impl /*struct*/ QResource {
-  pub fn size<RetType, T: QResource_size<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.size(self);
+  pub fn lastModified_0<RetType, T: QResource_lastModified_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.lastModified_0(self);
     // return 1;
   }
 }
-
-pub trait QResource_size<RetType> {
-  fn size(self , rsthis: & QResource) -> RetType;
+pub trait QResource_lastModified_0<RetType> {
+  fn lastModified_0(self , rsthis: & QResource) -> RetType;
 }
-
-  // proto:  qint64 QResource::size();
-impl<'a> /*trait*/ QResource_size<i64> for () {
-  fn size(self , rsthis: & QResource) -> i64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QResource4sizeEv()};
-    let mut ret = unsafe {C_ZNK9QResource4sizeEv(rsthis.qclsinst)};
-    return ret as i64; // 1
+impl<'a> /*trait*/ QResource_lastModified_0<usize> for () {
+  fn lastModified_0(self , rsthis: & QResource) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QResource12lastModifiedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  void QResource::~QResource();
+// /usr/include/qt/QtCore/qresource.h:74
+// index:0
+// Public static Visibility=Default Availability=Available
+// [-2] void addSearchPath(const QString &)
+
+/*
+
+*/
 impl /*struct*/ QResource {
-  pub fn free<RetType, T: QResource_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
+  pub fn addSearchPath_0<RetType, T: QResource_addSearchPath_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.addSearchPath_0();
+    // return 1;
+  }
+}
+pub trait QResource_addSearchPath_0<RetType> {
+  fn addSearchPath_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QResource_addSearchPath_0<(/*void*/)> for (usize) {
+  fn addSearchPath_0(self ) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN9QResource13addSearchPathERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QResource_free<RetType> {
-  fn free(self , rsthis: & QResource) -> RetType;
-}
+// /usr/include/qt/QtCore/qresource.h:75
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QStringList searchPaths()
 
-  // proto:  void QResource::~QResource();
-impl<'a> /*trait*/ QResource_free<()> for () {
-  fn free(self , rsthis: & QResource) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QResourceD2Ev()};
-     unsafe {C_ZN9QResourceD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
+/*
 
-  // proto:  bool QResource::isValid();
+*/
 impl /*struct*/ QResource {
-  pub fn isValid<RetType, T: QResource_isValid<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isValid(self);
+  pub fn searchPaths_0<RetType, T: QResource_searchPaths_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.searchPaths_0();
     // return 1;
   }
 }
-
-pub trait QResource_isValid<RetType> {
-  fn isValid(self , rsthis: & QResource) -> RetType;
+pub trait QResource_searchPaths_0<RetType> {
+  fn searchPaths_0(self ) -> RetType;
 }
-
-  // proto:  bool QResource::isValid();
-impl<'a> /*trait*/ QResource_isValid<i8> for () {
-  fn isValid(self , rsthis: & QResource) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QResource7isValidEv()};
-    let mut ret = unsafe {C_ZNK9QResource7isValidEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+impl<'a> /*trait*/ QResource_searchPaths_0<usize> for () {
+  fn searchPaths_0(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QResource11searchPathsEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  void QResource::setFileName(const QString & file);
+// /usr/include/qt/QtCore/qresource.h:77
+// index:0
+// Public static Visibility=Default Availability=Available
+// [1] bool registerResource(const QString &, const QString &)
+
+/*
+Registers the resource with the given rccFileName at the location in the resource tree specified by mapRoot, and returns true if the file is successfully opened; otherwise returns false.
+
+See also unregisterResource().
+*/
 impl /*struct*/ QResource {
-  pub fn setFileName<RetType, T: QResource_setFileName<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setFileName(self);
+  pub fn registerResource_0<RetType, T: QResource_registerResource_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.registerResource_0();
     // return 1;
   }
 }
-
-pub trait QResource_setFileName<RetType> {
-  fn setFileName(self , rsthis: & QResource) -> RetType;
+pub trait QResource_registerResource_0<RetType> {
+  fn registerResource_0(self ) -> RetType;
 }
-
-  // proto:  void QResource::setFileName(const QString & file);
-impl<'a> /*trait*/ QResource_setFileName<()> for (&'a QString) {
-  fn setFileName(self , rsthis: & QResource) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QResource11setFileNameERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN9QResource11setFileNameERK7QString(rsthis.qclsinst, arg0)};
+impl<'a> /*trait*/ QResource_registerResource_0<bool> for (usize,usize) {
+  fn registerResource_0(self ) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QResource16registerResourceERK7QStringS2_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto: static bool QResource::unregisterResource(const QString & rccFilename, const QString & resourceRoot);
-impl<'a> /*trait*/ QResource_unregisterResource_s<i8> for (&'a QString, Option<&'a QString>) {
-  fn unregisterResource_s(self ) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QResource18unregisterResourceERK7QStringS2_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = (if self.1.is_none() {QString::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
-    let mut ret = unsafe {C_ZN9QResource18unregisterResourceERK7QStringS2_(arg0, arg1)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
+// /usr/include/qt/QtCore/qresource.h:80
+// index:1
+// Public static Visibility=Default Availability=Available
+// [1] bool registerResource(const uchar *, const QString &)
 
-  // proto:  bool QResource::isCompressed();
+/*
+Registers the resource with the given rccFileName at the location in the resource tree specified by mapRoot, and returns true if the file is successfully opened; otherwise returns false.
+
+See also unregisterResource().
+*/
 impl /*struct*/ QResource {
-  pub fn isCompressed<RetType, T: QResource_isCompressed<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isCompressed(self);
+  pub fn registerResource_1<RetType, T: QResource_registerResource_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.registerResource_1();
     // return 1;
   }
 }
-
-pub trait QResource_isCompressed<RetType> {
-  fn isCompressed(self , rsthis: & QResource) -> RetType;
+pub trait QResource_registerResource_1<RetType> {
+  fn registerResource_1(self ) -> RetType;
 }
-
-  // proto:  bool QResource::isCompressed();
-impl<'a> /*trait*/ QResource_isCompressed<i8> for () {
-  fn isCompressed(self , rsthis: & QResource) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QResource12isCompressedEv()};
-    let mut ret = unsafe {C_ZNK9QResource12isCompressedEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+impl<'a> /*trait*/ QResource_registerResource_1<bool> for (usize,usize) {
+  fn registerResource_1(self ) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QResource16registerResourceEPKhRK7QString", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qresource.h:78
+// index:0
+// Public static Visibility=Default Availability=Available
+// [1] bool unregisterResource(const QString &, const QString &)
 
+/*
+Unregisters the resource with the given rccFileName at the location in the resource tree specified by mapRoot, and returns true if the resource is successfully unloaded and no references exist for the resource; otherwise returns false.
+
+See also registerResource().
+*/
+impl /*struct*/ QResource {
+  pub fn unregisterResource_0<RetType, T: QResource_unregisterResource_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.unregisterResource_0();
+    // return 1;
+  }
+}
+pub trait QResource_unregisterResource_0<RetType> {
+  fn unregisterResource_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QResource_unregisterResource_0<bool> for (usize,usize) {
+  fn unregisterResource_0(self ) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QResource18unregisterResourceERK7QStringS2_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qresource.h:81
+// index:1
+// Public static Visibility=Default Availability=Available
+// [1] bool unregisterResource(const uchar *, const QString &)
+
+/*
+Unregisters the resource with the given rccFileName at the location in the resource tree specified by mapRoot, and returns true if the resource is successfully unloaded and no references exist for the resource; otherwise returns false.
+
+See also registerResource().
+*/
+impl /*struct*/ QResource {
+  pub fn unregisterResource_1<RetType, T: QResource_unregisterResource_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.unregisterResource_1();
+    // return 1;
+  }
+}
+pub trait QResource_unregisterResource_1<RetType> {
+  fn unregisterResource_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QResource_unregisterResource_1<bool> for (usize,usize) {
+  fn unregisterResource_1(self ) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QResource18unregisterResourceEPKhRK7QString", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qresource.h:86
+// index:0
+// Protected Visibility=Default Availability=Available
+// [1] bool isDir() const
+
+/*
+Returns true if the resource represents a directory and thus may have children() in it, false if it represents a file.
+
+See also isFile().
+*/
+impl /*struct*/ QResource {
+  pub fn isDir_0<RetType, T: QResource_isDir_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isDir_0(self);
+    // return 1;
+  }
+}
+pub trait QResource_isDir_0<RetType> {
+  fn isDir_0(self , rsthis: & QResource) -> RetType;
+}
+impl<'a> /*trait*/ QResource_isDir_0<bool> for () {
+  fn isDir_0(self , rsthis: & QResource) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QResource5isDirEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qresource.h:87
+// index:0
+// Protected inline Visibility=Default Availability=Available
+// [1] bool isFile() const
+
+/*
+Returns true if the resource represents a file and thus has data backing it, false if it represents a directory.
+
+See also isDir().
+*/
+impl /*struct*/ QResource {
+  pub fn isFile_0<RetType, T: QResource_isFile_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isFile_0(self);
+    // return 1;
+  }
+}
+pub trait QResource_isFile_0<RetType> {
+  fn isFile_0(self , rsthis: & QResource) -> RetType;
+}
+impl<'a> /*trait*/ QResource_isFile_0<bool> for () {
+  fn isFile_0(self , rsthis: & QResource) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QResource6isFileEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qresource.h:88
+// index:0
+// Protected Visibility=Default Availability=Available
+// [8] QStringList children() const
+
+/*
+Returns a list of all resources in this directory, if the resource represents a file the list will be empty.
+
+See also isDir().
+*/
+impl /*struct*/ QResource {
+  pub fn children_0<RetType, T: QResource_children_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.children_0(self);
+    // return 1;
+  }
+}
+pub trait QResource_children_0<RetType> {
+  fn children_0(self , rsthis: & QResource) -> RetType;
+}
+impl<'a> /*trait*/ QResource_children_0<usize> for () {
+  fn children_0(self , rsthis: & QResource) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QResource8childrenEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+//  body block end
+
+//  keep block begin
+
+//  keep block end

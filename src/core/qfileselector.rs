@@ -1,264 +1,297 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qfileselector.h
-// dst-file: /src/core/qfileselector.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QFileSelector
+// package qtcore
+// /usr/include/qt/QtCore/qfileselector.h
+// #include <qfileselector.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
-use super::qobject::*; // 773
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 2
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qstringlist::*; // 773
-use super::qobjectdefs::*; // 773
-use super::qurl::*; // 773
-use super::qstring::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QFileSelector_Class_Size() -> c_int;
-  // proto:  QStringList QFileSelector::allSelectors();
-  fn C_ZNK13QFileSelector12allSelectorsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  const QMetaObject * QFileSelector::metaObject();
-  fn C_ZNK13QFileSelector10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QUrl QFileSelector::select(const QUrl & filePath);
-  fn C_ZNK13QFileSelector6selectERK4QUrl(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QFileSelector::QFileSelector(QObject * parent);
-  fn C_ZN13QFileSelectorC2EP7QObject(arg0: *mut c_void) -> u64;
-  // proto:  void QFileSelector::setExtraSelectors(const QStringList & list);
-  fn C_ZN13QFileSelector17setExtraSelectorsERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  QString QFileSelector::select(const QString & filePath);
-  fn C_ZNK13QFileSelector6selectERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QFileSelector::~QFileSelector();
-  fn C_ZN13QFileSelectorD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  QStringList QFileSelector::extraSelectors();
-  fn C_ZNK13QFileSelector14extraSelectorsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-} // <= ext block end
 
-// body block begin =>
-// class sizeof(QFileSelector)=1
-#[derive(Default)]
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QFileSelector)=16
 pub struct QFileSelector {
   qbase: QObject,
-  pub qclsinst: u64 /* *mut c_void*/,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QFileSelector_ITF interface {
+//    QObject_ITF
+//    QFileSelector_PTR() *QFileSelector
+//}
+//func (ptr *QFileSelector) QFileSelector_PTR() *QFileSelector { return ptr }
 
 impl /*struct*/ QFileSelector {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QFileSelector {
-    return QFileSelector{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QFileSelector {
+    return QFileSelector{qclsinst: qthis, ..Default::default()};
   }
 }
-impl Deref for QFileSelector {
-  type Target = QObject;
+//impl Deref for QFileSelector {
+//  type Target = QFileSelectorBASE;
+//
+//  fn deref(&self) -> &QFileSelectorBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QFileSelectorBASE> for QFileSelector {
+//  fn as_ref(& self) -> & QFileSelectorBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qfileselector.h:51
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject() const
 
-  fn deref(&self) -> &QObject {
-    return & self.qbase;
-  }
-}
-impl AsRef<QObject> for QFileSelector {
-  fn as_ref(& self) -> & QObject {
-    return & self.qbase;
-  }
-}
-  // proto:  QStringList QFileSelector::allSelectors();
+/*
+
+*/
 impl /*struct*/ QFileSelector {
-  pub fn allSelectors<RetType, T: QFileSelector_allSelectors<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.allSelectors(self);
+  pub fn metaObject_0<RetType, T: QFileSelector_metaObject_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.metaObject_0(self);
     // return 1;
   }
 }
-
-pub trait QFileSelector_allSelectors<RetType> {
-  fn allSelectors(self , rsthis: & QFileSelector) -> RetType;
+pub trait QFileSelector_metaObject_0<RetType> {
+  fn metaObject_0(self , rsthis: & QFileSelector) -> RetType;
 }
-
-  // proto:  QStringList QFileSelector::allSelectors();
-impl<'a> /*trait*/ QFileSelector_allSelectors<QStringList> for () {
-  fn allSelectors(self , rsthis: & QFileSelector) -> QStringList {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QFileSelector12allSelectorsEv()};
-    let mut ret = unsafe {C_ZNK13QFileSelector12allSelectorsEv(rsthis.qclsinst)};
-    let mut ret1 = QStringList::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QFileSelector_metaObject_0<usize> for () {
+  fn metaObject_0(self , rsthis: & QFileSelector) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QFileSelector10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  const QMetaObject * QFileSelector::metaObject();
+// /usr/include/qt/QtCore/qfileselector.h:53
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QFileSelector(QObject *)
+
+/*
+Create a QFileSelector instance. This instance will have the same static selectors as other QFileSelector instances, but its own set of extra selectors.
+
+If supplied, it will have the given QObject parent.
+*/
+// QFileSelector(QObject *) ctx.fn_proto_cpp
 impl /*struct*/ QFileSelector {
-  pub fn metaObject<RetType, T: QFileSelector_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.metaObject(self);
-    // return 1;
-  }
-}
-
-pub trait QFileSelector_metaObject<RetType> {
-  fn metaObject(self , rsthis: & QFileSelector) -> RetType;
-}
-
-  // proto:  const QMetaObject * QFileSelector::metaObject();
-impl<'a> /*trait*/ QFileSelector_metaObject<QMetaObject> for () {
-  fn metaObject(self , rsthis: & QFileSelector) -> QMetaObject {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QFileSelector10metaObjectEv()};
-    let mut ret = unsafe {C_ZNK13QFileSelector10metaObjectEv(rsthis.qclsinst)};
-    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QUrl QFileSelector::select(const QUrl & filePath);
-impl /*struct*/ QFileSelector {
-  pub fn select<RetType, T: QFileSelector_select<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.select(self);
-    // return 1;
-  }
-}
-
-pub trait QFileSelector_select<RetType> {
-  fn select(self , rsthis: & QFileSelector) -> RetType;
-}
-
-  // proto:  QUrl QFileSelector::select(const QUrl & filePath);
-impl<'a> /*trait*/ QFileSelector_select<QUrl> for (&'a QUrl) {
-  fn select(self , rsthis: & QFileSelector) -> QUrl {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QFileSelector6selectERK4QUrl()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK13QFileSelector6selectERK4QUrl(rsthis.qclsinst, arg0)};
-    let mut ret1 = QUrl::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QFileSelector::QFileSelector(QObject * parent);
-impl /*struct*/ QFileSelector {
-  pub fn new<T: QFileSelector_new>(value: T) -> QFileSelector {
-    let rsthis = value.new();
+  pub fn QFileSelector_0<T: QFileSelector_QFileSelector_0>(value: T) -> QFileSelector {
+    let rsthis = value.QFileSelector_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFileSelector_new {
-  fn new(self) -> QFileSelector;
+pub trait QFileSelector_QFileSelector_0 {
+  fn QFileSelector_0(self) -> QFileSelector;
 }
-
-  // proto:  void QFileSelector::QFileSelector(QObject * parent);
-impl<'a> /*trait*/ QFileSelector_new for (Option<&'a QObject>) {
-  fn new(self) -> QFileSelector {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QFileSelector(QObject *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QFileSelector_QFileSelector_0 for (usize) {
+  fn QFileSelector_0(self) -> QFileSelector {
     // unsafe{_ZN13QFileSelectorC2EP7QObject()};
-    let ctysz: c_int = unsafe{QFileSelector_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN13QFileSelectorC2EP7QObject(arg0)};
-    let rsthis = QFileSelector{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN13QFileSelectorC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QFileSelector{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QFileSelector::setExtraSelectors(const QStringList & list);
+// /usr/include/qt/QtCore/qfileselector.h:54
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QFileSelector()
+
+/*
+
+*/
+pub fn DeleteQFileSelector(this :*mut QFileSelector) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN13QFileSelectorD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 16)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qfileselector.h:56
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString select(const QString &) const
+
+/*
+This function returns the selected version of the path, based on the conditions at runtime. If no selectable files are present, returns the original filePath.
+
+If the original file does not exist, the original filePath is returned. This means that you must have a base file to fall back on, you cannot have only files in selectable sub-directories.
+
+See the class overview for the selection algorithm.
+*/
 impl /*struct*/ QFileSelector {
-  pub fn setExtraSelectors<RetType, T: QFileSelector_setExtraSelectors<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setExtraSelectors(self);
+  pub fn select__0<RetType, T: QFileSelector_select__0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.select__0(self);
     // return 1;
   }
 }
-
-pub trait QFileSelector_setExtraSelectors<RetType> {
-  fn setExtraSelectors(self , rsthis: & QFileSelector) -> RetType;
+pub trait QFileSelector_select__0<RetType> {
+  fn select__0(self , rsthis: & QFileSelector) -> RetType;
 }
-
-  // proto:  void QFileSelector::setExtraSelectors(const QStringList & list);
-impl<'a> /*trait*/ QFileSelector_setExtraSelectors<()> for (&'a QStringList) {
-  fn setExtraSelectors(self , rsthis: & QFileSelector) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QFileSelector17setExtraSelectorsERK11QStringList()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN13QFileSelector17setExtraSelectorsERK11QStringList(rsthis.qclsinst, arg0)};
+impl<'a> /*trait*/ QFileSelector_select__0<usize> for (usize) {
+  fn select__0(self , rsthis: & QFileSelector) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QFileSelector6selectERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  QString QFileSelector::select(const QString & filePath);
-impl<'a> /*trait*/ QFileSelector_select<QString> for (&'a QString) {
-  fn select(self , rsthis: & QFileSelector) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QFileSelector6selectERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK13QFileSelector6selectERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
+// /usr/include/qt/QtCore/qfileselector.h:57
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QUrl select(const QUrl &) const
 
-  // proto:  void QFileSelector::~QFileSelector();
+/*
+This function returns the selected version of the path, based on the conditions at runtime. If no selectable files are present, returns the original filePath.
+
+If the original file does not exist, the original filePath is returned. This means that you must have a base file to fall back on, you cannot have only files in selectable sub-directories.
+
+See the class overview for the selection algorithm.
+*/
 impl /*struct*/ QFileSelector {
-  pub fn free<RetType, T: QFileSelector_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
+  pub fn select__1<RetType, T: QFileSelector_select__1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.select__1(self);
     // return 1;
   }
 }
-
-pub trait QFileSelector_free<RetType> {
-  fn free(self , rsthis: & QFileSelector) -> RetType;
+pub trait QFileSelector_select__1<RetType> {
+  fn select__1(self , rsthis: & QFileSelector) -> RetType;
 }
-
-  // proto:  void QFileSelector::~QFileSelector();
-impl<'a> /*trait*/ QFileSelector_free<()> for () {
-  fn free(self , rsthis: & QFileSelector) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QFileSelectorD2Ev()};
-     unsafe {C_ZN13QFileSelectorD2Ev(rsthis.qclsinst)};
+impl<'a> /*trait*/ QFileSelector_select__1<usize> for (usize) {
+  fn select__1(self , rsthis: & QFileSelector) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QFileSelector6selectERK4QUrl", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  QStringList QFileSelector::extraSelectors();
+// /usr/include/qt/QtCore/qfileselector.h:59
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList extraSelectors() const
+
+/*
+Returns the list of extra selectors which have been added programmatically to this instance.
+
+See also setExtraSelectors().
+*/
 impl /*struct*/ QFileSelector {
-  pub fn extraSelectors<RetType, T: QFileSelector_extraSelectors<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.extraSelectors(self);
+  pub fn extraSelectors_0<RetType, T: QFileSelector_extraSelectors_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.extraSelectors_0(self);
+    // return 1;
+  }
+}
+pub trait QFileSelector_extraSelectors_0<RetType> {
+  fn extraSelectors_0(self , rsthis: & QFileSelector) -> RetType;
+}
+impl<'a> /*trait*/ QFileSelector_extraSelectors_0<usize> for () {
+  fn extraSelectors_0(self , rsthis: & QFileSelector) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QFileSelector14extraSelectorsEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfileselector.h:60
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setExtraSelectors(const QStringList &)
+
+/*
+Sets the list of extra selectors which have been added programmatically to this instance.
+
+These selectors have priority over any which have been automatically picked up.
+
+See also extraSelectors().
+*/
+impl /*struct*/ QFileSelector {
+  pub fn setExtraSelectors_0<RetType, T: QFileSelector_setExtraSelectors_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setExtraSelectors_0(self);
+    // return 1;
+  }
+}
+pub trait QFileSelector_setExtraSelectors_0<RetType> {
+  fn setExtraSelectors_0(self , rsthis: & QFileSelector) -> RetType;
+}
+impl<'a> /*trait*/ QFileSelector_setExtraSelectors_0<(/*void*/)> for (usize) {
+  fn setExtraSelectors_0(self , rsthis: & QFileSelector) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN13QFileSelector17setExtraSelectorsERK11QStringList", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QFileSelector_extraSelectors<RetType> {
-  fn extraSelectors(self , rsthis: & QFileSelector) -> RetType;
-}
+// /usr/include/qt/QtCore/qfileselector.h:62
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList allSelectors() const
 
-  // proto:  QStringList QFileSelector::extraSelectors();
-impl<'a> /*trait*/ QFileSelector_extraSelectors<QStringList> for () {
-  fn extraSelectors(self , rsthis: & QFileSelector) -> QStringList {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QFileSelector14extraSelectorsEv()};
-    let mut ret = unsafe {C_ZNK13QFileSelector14extraSelectorsEv(rsthis.qclsinst)};
-    let mut ret1 = QStringList::inheritFrom(ret as u64);
-    return ret1;
+/*
+Returns the complete, ordered list of selectors used by this instance
+*/
+impl /*struct*/ QFileSelector {
+  pub fn allSelectors_0<RetType, T: QFileSelector_allSelectors_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.allSelectors_0(self);
     // return 1;
   }
 }
+pub trait QFileSelector_allSelectors_0<RetType> {
+  fn allSelectors_0(self , rsthis: & QFileSelector) -> RetType;
+}
+impl<'a> /*trait*/ QFileSelector_allSelectors_0<usize> for () {
+  fn allSelectors_0(self , rsthis: & QFileSelector) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QFileSelector12allSelectorsEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
 
-// <= body block end
+//  body block end
 
+//  keep block begin
+
+//  keep block end

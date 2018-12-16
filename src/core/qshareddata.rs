@@ -1,94 +1,113 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qshareddata.h
-// dst-file: /src/core/qshareddata.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QSharedData
+// package qtcore
+// /usr/include/qt/QtCore/qshareddata.h
+// #include <qshareddata.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 2
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QSharedData_Class_Size() -> c_int;
-  // proto:  void QSharedData::QSharedData();
-  fn C_ZN11QSharedDataC2Ev() -> u64;
-  // proto:  void QSharedData::QSharedData(const QSharedData & );
-  fn C_ZN11QSharedDataC2ERKS_(arg0: *mut c_void) -> u64;
-} // <= ext block end
 
-// body block begin =>
-// class sizeof(QSharedData)=1
-#[derive(Default)]
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QSharedData)=4
 pub struct QSharedData {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
+  // qbase: none,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QSharedData_ITF interface {
+//    QSharedData_PTR() *QSharedData
+//}
+//func (ptr *QSharedData) QSharedData_PTR() *QSharedData { return ptr }
 
 impl /*struct*/ QSharedData {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QSharedData {
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QSharedData {
     return QSharedData{qclsinst: qthis, ..Default::default()};
   }
 }
-  // proto:  void QSharedData::QSharedData();
+//impl Deref for QSharedData {
+//  type Target = QSharedDataBASE;
+//
+//  fn deref(&self) -> &QSharedDataBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QSharedDataBASE> for QSharedData {
+//  fn as_ref(& self) -> & QSharedDataBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qshareddata.h:60
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void QSharedData()
+
+/*
+Constructs a QSharedData object with a reference count of 0.
+*/
+// QSharedData() ctx.fn_proto_cpp
 impl /*struct*/ QSharedData {
-  pub fn new<T: QSharedData_new>(value: T) -> QSharedData {
-    let rsthis = value.new();
+  pub fn QSharedData_0<T: QSharedData_QSharedData_0>(value: T) -> QSharedData {
+    let rsthis = value.QSharedData_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSharedData_new {
-  fn new(self) -> QSharedData;
+pub trait QSharedData_QSharedData_0 {
+  fn QSharedData_0(self) -> QSharedData;
 }
-
-  // proto:  void QSharedData::QSharedData();
-impl<'a> /*trait*/ QSharedData_new for () {
-  fn new(self) -> QSharedData {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QSharedData() ctx.fn_proto_cpp
+impl<'a> /*trait*/ QSharedData_QSharedData_0 for () {
+  fn QSharedData_0(self) -> QSharedData {
     // unsafe{_ZN11QSharedDataC2Ev()};
-    let ctysz: c_int = unsafe{QSharedData_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let qthis: u64 = unsafe {C_ZN11QSharedDataC2Ev()};
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN11QSharedDataC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QSharedData{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QSharedData::QSharedData(const QSharedData & );
-impl<'a> /*trait*/ QSharedData_new for (&'a QSharedData) {
-  fn new(self) -> QSharedData {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QSharedDataC2ERKS_()};
-    let ctysz: c_int = unsafe{QSharedData_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN11QSharedDataC2ERKS_(arg0)};
-    let rsthis = QSharedData{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
+
+pub fn DeleteQSharedData(this :*mut QSharedData) {
+    // rv, err := qtrt::InvokeQtFunc6("_ZN11QSharedDataD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
 }
+//  body block end
 
-// <= body block end
+//  keep block begin
 
+//  keep block end

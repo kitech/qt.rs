@@ -1,503 +1,834 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qlibrary.h
-// dst-file: /src/core/qlibrary.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QLibrary
+// package qtcore
+// /usr/include/qt/QtCore/qlibrary.h
+// #include <qlibrary.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
-use super::qobject::*; // 773
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 35
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qstring::*; // 773
-// use super::qfunctionpointer::*; // 775
-use super::qobjectdefs::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QLibrary_Class_Size() -> c_int;
-  // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, const QString & version, const char * symbol);
-  fn C_ZN8QLibrary7resolveERK7QStringS2_PKc(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_char) -> *mut c_void;
-  // proto:  void QLibrary::QLibrary(const QString & fileName, const QString & version, QObject * parent);
-  fn C_ZN8QLibraryC2ERK7QStringS2_P7QObject(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> u64;
-  // proto:  const QMetaObject * QLibrary::metaObject();
-  fn C_ZNK8QLibrary10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, const char * symbol);
-  fn C_ZN8QLibrary7resolveERK7QStringPKc(arg0: *mut c_void, arg1: *mut c_char) -> *mut c_void;
-  // proto:  void QLibrary::QLibrary(QObject * parent);
-  fn C_ZN8QLibraryC2EP7QObject(arg0: *mut c_void) -> u64;
-  // proto:  bool QLibrary::isLoaded();
-  fn C_ZNK8QLibrary8isLoadedEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  bool QLibrary::load();
-  fn C_ZN8QLibrary4loadEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QLibrary::QLibrary(const QString & fileName, QObject * parent);
-  fn C_ZN8QLibraryC2ERK7QStringP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> u64;
-  // proto:  QString QLibrary::fileName();
-  fn C_ZNK8QLibrary8fileNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QLibrary::setFileName(const QString & fileName);
-  fn C_ZN8QLibrary11setFileNameERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto: static bool QLibrary::isLibrary(const QString & fileName);
-  fn C_ZN8QLibrary9isLibraryERK7QString(arg0: *mut c_void) -> c_char;
-  // proto:  bool QLibrary::unload();
-  fn C_ZN8QLibrary6unloadEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  QFunctionPointer QLibrary::resolve(const char * symbol);
-  fn C_ZN8QLibrary7resolveEPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> *mut c_void;
-  // proto:  void QLibrary::setFileNameAndVersion(const QString & fileName, const QString & version);
-  fn C_ZN8QLibrary21setFileNameAndVersionERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
-  // proto:  void QLibrary::setFileNameAndVersion(const QString & fileName, int verNum);
-  fn C_ZN8QLibrary21setFileNameAndVersionERK7QStringi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
-  // proto:  void QLibrary::QLibrary(const QString & fileName, int verNum, QObject * parent);
-  fn C_ZN8QLibraryC2ERK7QStringiP7QObject(arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> u64;
-  // proto:  void QLibrary::~QLibrary();
-  fn C_ZN8QLibraryD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  QString QLibrary::errorString();
-  fn C_ZNK8QLibrary11errorStringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, int verNum, const char * symbol);
-  fn C_ZN8QLibrary7resolveERK7QStringiPKc(arg0: *mut c_void, arg1: c_int, arg2: *mut c_char) -> *mut c_void;
-} // <= ext block end
 
-// body block begin =>
-// class sizeof(QLibrary)=1
-#[derive(Default)]
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QLibrary)=32
 pub struct QLibrary {
   qbase: QObject,
-  pub qclsinst: u64 /* *mut c_void*/,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QLibrary_ITF interface {
+//    QObject_ITF
+//    QLibrary_PTR() *QLibrary
+//}
+//func (ptr *QLibrary) QLibrary_PTR() *QLibrary { return ptr }
 
 impl /*struct*/ QLibrary {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QLibrary {
-    return QLibrary{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QLibrary {
+    return QLibrary{qclsinst: qthis, ..Default::default()};
   }
 }
-impl Deref for QLibrary {
-  type Target = QObject;
+//impl Deref for QLibrary {
+//  type Target = QLibraryBASE;
+//
+//  fn deref(&self) -> &QLibraryBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QLibraryBASE> for QLibrary {
+//  fn as_ref(& self) -> & QLibraryBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qlibrary.h:53
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject() const
 
-  fn deref(&self) -> &QObject {
-    return & self.qbase;
-  }
-}
-impl AsRef<QObject> for QLibrary {
-  fn as_ref(& self) -> & QObject {
-    return & self.qbase;
-  }
-}
-  // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, const QString & version, const char * symbol);
+/*
+
+*/
 impl /*struct*/ QLibrary {
-  pub fn resolve_s<RetType, T: QLibrary_resolve_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.resolve_s();
+  pub fn metaObject_0<RetType, T: QLibrary_metaObject_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.metaObject_0(self);
     // return 1;
   }
 }
-
-pub trait QLibrary_resolve_s<RetType> {
-  fn resolve_s(self ) -> RetType;
+pub trait QLibrary_metaObject_0<RetType> {
+  fn metaObject_0(self , rsthis: & QLibrary) -> RetType;
 }
-
-  // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, const QString & version, const char * symbol);
-impl<'a> /*trait*/ QLibrary_resolve_s<u64> for (&'a QString, &'a QString, &'a  String) {
-  fn resolve_s(self ) -> u64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QLibrary7resolveERK7QStringS2_PKc()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.as_ptr()  as *mut c_char;
-    let mut ret = unsafe {C_ZN8QLibrary7resolveERK7QStringS2_PKc(arg0, arg1, arg2)};
-    return ret as u64; // 3
+impl<'a> /*trait*/ QLibrary_metaObject_0<usize> for () {
+  fn metaObject_0(self , rsthis: & QLibrary) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QLibrary10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  void QLibrary::QLibrary(const QString & fileName, const QString & version, QObject * parent);
+// /usr/include/qt/QtCore/qlibrary.h:68
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QLibrary(QObject *)
+
+/*
+Constructs a library with the given parent.
+*/
+// QLibrary(QObject *) ctx.fn_proto_cpp
 impl /*struct*/ QLibrary {
-  pub fn new<T: QLibrary_new>(value: T) -> QLibrary {
-    let rsthis = value.new();
+  pub fn QLibrary_0<T: QLibrary_QLibrary_0>(value: T) -> QLibrary {
+    let rsthis = value.QLibrary_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QLibrary_new {
-  fn new(self) -> QLibrary;
+pub trait QLibrary_QLibrary_0 {
+  fn QLibrary_0(self) -> QLibrary;
 }
-
-  // proto:  void QLibrary::QLibrary(const QString & fileName, const QString & version, QObject * parent);
-impl<'a> /*trait*/ QLibrary_new for (&'a QString, &'a QString, Option<&'a QObject>) {
-  fn new(self) -> QLibrary {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QLibraryC2ERK7QStringS2_P7QObject()};
-    let ctysz: c_int = unsafe{QLibrary_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap().qclsinst})  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QLibraryC2ERK7QStringS2_P7QObject(arg0, arg1, arg2)};
-    let rsthis = QLibrary{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  const QMetaObject * QLibrary::metaObject();
-impl /*struct*/ QLibrary {
-  pub fn metaObject<RetType, T: QLibrary_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.metaObject(self);
-    // return 1;
-  }
-}
-
-pub trait QLibrary_metaObject<RetType> {
-  fn metaObject(self , rsthis: & QLibrary) -> RetType;
-}
-
-  // proto:  const QMetaObject * QLibrary::metaObject();
-impl<'a> /*trait*/ QLibrary_metaObject<QMetaObject> for () {
-  fn metaObject(self , rsthis: & QLibrary) -> QMetaObject {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QLibrary10metaObjectEv()};
-    let mut ret = unsafe {C_ZNK8QLibrary10metaObjectEv(rsthis.qclsinst)};
-    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, const char * symbol);
-impl<'a> /*trait*/ QLibrary_resolve_s<u64> for (&'a QString, &'a  String) {
-  fn resolve_s(self ) -> u64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QLibrary7resolveERK7QStringPKc()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.as_ptr()  as *mut c_char;
-    let mut ret = unsafe {C_ZN8QLibrary7resolveERK7QStringPKc(arg0, arg1)};
-    return ret as u64; // 3
-    // return 1;
-  }
-}
-
-  // proto:  void QLibrary::QLibrary(QObject * parent);
-impl<'a> /*trait*/ QLibrary_new for (Option<&'a QObject>) {
-  fn new(self) -> QLibrary {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QLibrary(QObject *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QLibrary_QLibrary_0 for (usize) {
+  fn QLibrary_0(self) -> QLibrary {
     // unsafe{_ZN8QLibraryC2EP7QObject()};
-    let ctysz: c_int = unsafe{QLibrary_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QLibraryC2EP7QObject(arg0)};
-    let rsthis = QLibrary{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QLibraryC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QLibrary{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  bool QLibrary::isLoaded();
+// /usr/include/qt/QtCore/qlibrary.h:69
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QLibrary(const QString &, QObject *)
+
+/*
+Constructs a library with the given parent.
+*/
+// QLibrary(const QString &, QObject *) ctx.fn_proto_cpp
 impl /*struct*/ QLibrary {
-  pub fn isLoaded<RetType, T: QLibrary_isLoaded<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isLoaded(self);
+  pub fn QLibrary_1<T: QLibrary_QLibrary_1>(value: T) -> QLibrary {
+    let rsthis = value.QLibrary_1();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QLibrary_isLoaded<RetType> {
-  fn isLoaded(self , rsthis: & QLibrary) -> RetType;
+pub trait QLibrary_QLibrary_1 {
+  fn QLibrary_1(self) -> QLibrary;
 }
-
-  // proto:  bool QLibrary::isLoaded();
-impl<'a> /*trait*/ QLibrary_isLoaded<i8> for () {
-  fn isLoaded(self , rsthis: & QLibrary) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QLibrary8isLoadedEv()};
-    let mut ret = unsafe {C_ZNK8QLibrary8isLoadedEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  bool QLibrary::load();
-impl /*struct*/ QLibrary {
-  pub fn load<RetType, T: QLibrary_load<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.load(self);
-    // return 1;
-  }
-}
-
-pub trait QLibrary_load<RetType> {
-  fn load(self , rsthis: & QLibrary) -> RetType;
-}
-
-  // proto:  bool QLibrary::load();
-impl<'a> /*trait*/ QLibrary_load<i8> for () {
-  fn load(self , rsthis: & QLibrary) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QLibrary4loadEv()};
-    let mut ret = unsafe {C_ZN8QLibrary4loadEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QLibrary::QLibrary(const QString & fileName, QObject * parent);
-impl<'a> /*trait*/ QLibrary_new for (&'a QString, Option<&'a QObject>) {
-  fn new(self) -> QLibrary {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QLibrary(const QString &, QObject *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QLibrary_QLibrary_1 for (usize,usize) {
+  fn QLibrary_1(self) -> QLibrary {
     // unsafe{_ZN8QLibraryC2ERK7QStringP7QObject()};
-    let ctysz: c_int = unsafe{QLibrary_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QLibraryC2ERK7QStringP7QObject(arg0, arg1)};
-    let rsthis = QLibrary{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QLibraryC2ERK7QStringP7QObject", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QLibrary{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  QString QLibrary::fileName();
+// /usr/include/qt/QtCore/qlibrary.h:70
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QLibrary(const QString &, int, QObject *)
+
+/*
+Constructs a library with the given parent.
+*/
+// QLibrary(const QString &, int, QObject *) ctx.fn_proto_cpp
 impl /*struct*/ QLibrary {
-  pub fn fileName<RetType, T: QLibrary_fileName<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.fileName(self);
+  pub fn QLibrary_2<T: QLibrary_QLibrary_2>(value: T) -> QLibrary {
+    let rsthis = value.QLibrary_2();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QLibrary_fileName<RetType> {
-  fn fileName(self , rsthis: & QLibrary) -> RetType;
+pub trait QLibrary_QLibrary_2 {
+  fn QLibrary_2(self) -> QLibrary;
 }
-
-  // proto:  QString QLibrary::fileName();
-impl<'a> /*trait*/ QLibrary_fileName<QString> for () {
-  fn fileName(self , rsthis: & QLibrary) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QLibrary8fileNameEv()};
-    let mut ret = unsafe {C_ZNK8QLibrary8fileNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QLibrary::setFileName(const QString & fileName);
-impl /*struct*/ QLibrary {
-  pub fn setFileName<RetType, T: QLibrary_setFileName<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setFileName(self);
-    // return 1;
-  }
-}
-
-pub trait QLibrary_setFileName<RetType> {
-  fn setFileName(self , rsthis: & QLibrary) -> RetType;
-}
-
-  // proto:  void QLibrary::setFileName(const QString & fileName);
-impl<'a> /*trait*/ QLibrary_setFileName<()> for (&'a QString) {
-  fn setFileName(self , rsthis: & QLibrary) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QLibrary11setFileNameERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN8QLibrary11setFileNameERK7QString(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto: static bool QLibrary::isLibrary(const QString & fileName);
-impl /*struct*/ QLibrary {
-  pub fn isLibrary_s<RetType, T: QLibrary_isLibrary_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.isLibrary_s();
-    // return 1;
-  }
-}
-
-pub trait QLibrary_isLibrary_s<RetType> {
-  fn isLibrary_s(self ) -> RetType;
-}
-
-  // proto: static bool QLibrary::isLibrary(const QString & fileName);
-impl<'a> /*trait*/ QLibrary_isLibrary_s<i8> for (&'a QString) {
-  fn isLibrary_s(self ) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QLibrary9isLibraryERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN8QLibrary9isLibraryERK7QString(arg0)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  bool QLibrary::unload();
-impl /*struct*/ QLibrary {
-  pub fn unload<RetType, T: QLibrary_unload<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.unload(self);
-    // return 1;
-  }
-}
-
-pub trait QLibrary_unload<RetType> {
-  fn unload(self , rsthis: & QLibrary) -> RetType;
-}
-
-  // proto:  bool QLibrary::unload();
-impl<'a> /*trait*/ QLibrary_unload<i8> for () {
-  fn unload(self , rsthis: & QLibrary) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QLibrary6unloadEv()};
-    let mut ret = unsafe {C_ZN8QLibrary6unloadEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QFunctionPointer QLibrary::resolve(const char * symbol);
-impl /*struct*/ QLibrary {
-  pub fn resolve<RetType, T: QLibrary_resolve<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.resolve(self);
-    // return 1;
-  }
-}
-
-pub trait QLibrary_resolve<RetType> {
-  fn resolve(self , rsthis: & QLibrary) -> RetType;
-}
-
-  // proto:  QFunctionPointer QLibrary::resolve(const char * symbol);
-impl<'a> /*trait*/ QLibrary_resolve<u64> for (&'a  String) {
-  fn resolve(self , rsthis: & QLibrary) -> u64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QLibrary7resolveEPKc()};
-    let arg0 = self.as_ptr()  as *mut c_char;
-    let mut ret = unsafe {C_ZN8QLibrary7resolveEPKc(rsthis.qclsinst, arg0)};
-    return ret as u64; // 3
-    // return 1;
-  }
-}
-
-  // proto:  void QLibrary::setFileNameAndVersion(const QString & fileName, const QString & version);
-impl /*struct*/ QLibrary {
-  pub fn setFileNameAndVersion<RetType, T: QLibrary_setFileNameAndVersion<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setFileNameAndVersion(self);
-    // return 1;
-  }
-}
-
-pub trait QLibrary_setFileNameAndVersion<RetType> {
-  fn setFileNameAndVersion(self , rsthis: & QLibrary) -> RetType;
-}
-
-  // proto:  void QLibrary::setFileNameAndVersion(const QString & fileName, const QString & version);
-impl<'a> /*trait*/ QLibrary_setFileNameAndVersion<()> for (&'a QString, &'a QString) {
-  fn setFileNameAndVersion(self , rsthis: & QLibrary) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QLibrary21setFileNameAndVersionERK7QStringS2_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {C_ZN8QLibrary21setFileNameAndVersionERK7QStringS2_(rsthis.qclsinst, arg0, arg1)};
-    // return 1;
-  }
-}
-
-  // proto:  void QLibrary::setFileNameAndVersion(const QString & fileName, int verNum);
-impl<'a> /*trait*/ QLibrary_setFileNameAndVersion<()> for (&'a QString, i32) {
-  fn setFileNameAndVersion(self , rsthis: & QLibrary) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QLibrary21setFileNameAndVersionERK7QStringi()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
-     unsafe {C_ZN8QLibrary21setFileNameAndVersionERK7QStringi(rsthis.qclsinst, arg0, arg1)};
-    // return 1;
-  }
-}
-
-  // proto:  void QLibrary::QLibrary(const QString & fileName, int verNum, QObject * parent);
-impl<'a> /*trait*/ QLibrary_new for (&'a QString, i32, Option<&'a QObject>) {
-  fn new(self) -> QLibrary {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QLibrary(const QString &, int, QObject *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QLibrary_QLibrary_2 for (usize,i32,usize) {
+  fn QLibrary_2(self) -> QLibrary {
     // unsafe{_ZN8QLibraryC2ERK7QStringiP7QObject()};
-    let ctysz: c_int = unsafe{QLibrary_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
-    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap().qclsinst})  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN8QLibraryC2ERK7QStringiP7QObject(arg0, arg1, arg2)};
-    let rsthis = QLibrary{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QLibraryC2ERK7QStringiP7QObject", 3,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QLibrary{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QLibrary::~QLibrary();
+// /usr/include/qt/QtCore/qlibrary.h:71
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QLibrary(const QString &, const QString &, QObject *)
+
+/*
+Constructs a library with the given parent.
+*/
+// QLibrary(const QString &, const QString &, QObject *) ctx.fn_proto_cpp
 impl /*struct*/ QLibrary {
-  pub fn free<RetType, T: QLibrary_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
+  pub fn QLibrary_3<T: QLibrary_QLibrary_3>(value: T) -> QLibrary {
+    let rsthis = value.QLibrary_3();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QLibrary_free<RetType> {
-  fn free(self , rsthis: & QLibrary) -> RetType;
+pub trait QLibrary_QLibrary_3 {
+  fn QLibrary_3(self) -> QLibrary;
 }
-
-  // proto:  void QLibrary::~QLibrary();
-impl<'a> /*trait*/ QLibrary_free<()> for () {
-  fn free(self , rsthis: & QLibrary) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QLibraryD2Ev()};
-     unsafe {C_ZN8QLibraryD2Ev(rsthis.qclsinst)};
+// QLibrary(const QString &, const QString &, QObject *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QLibrary_QLibrary_3 for (usize,usize,usize) {
+  fn QLibrary_3(self) -> QLibrary {
+    // unsafe{_ZN8QLibraryC2ERK7QStringS2_P7QObject()};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN8QLibraryC2ERK7QStringS2_P7QObject", 3,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QLibrary{qclsinst: qthis, ..Default::default()};
+    return rsthis;
     // return 1;
   }
 }
 
-  // proto:  QString QLibrary::errorString();
+// /usr/include/qt/QtCore/qlibrary.h:72
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QLibrary()
+
+/*
+
+*/
+pub fn DeleteQLibrary(this :*mut QLibrary) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN8QLibraryD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 32)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qlibrary.h:74
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QFunctionPointer resolve(const char *)
+
+/*
+Returns the address of the exported symbol symbol. The library is loaded if necessary. The function returns 0 if the symbol could not be resolved or if the library could not be loaded.
+
+Example:
+
+
+  typedef int (*AvgFunction)(int, int);
+
+  AvgFunction avg = (AvgFunction) library->resolve("avg");
+  if (avg)
+      return avg(5, 8);
+  else
+      return -1;
+
+
+
+The symbol must be exported as a C function from the library. This means that the function must be wrapped in an extern "C" if the library is compiled with a C++ compiler. On Windows you must also explicitly export the function from the DLL using the __declspec(dllexport) compiler directive, for example:
+
+
+  extern "C" MY_EXPORT int avg(int a, int b)
+  {
+      return (a + b) / 2;
+  }
+
+
+
+with MY_EXPORT defined as
+
+
+  #ifdef Q_OS_WIN
+  #define MY_EXPORT __declspec(dllexport)
+  #else
+  #define MY_EXPORT
+  #endif
+*/
 impl /*struct*/ QLibrary {
-  pub fn errorString<RetType, T: QLibrary_errorString<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.errorString(self);
+  pub fn resolve_0<RetType, T: QLibrary_resolve_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.resolve_0(self);
+    // return 1;
+  }
+}
+pub trait QLibrary_resolve_0<RetType> {
+  fn resolve_0(self , rsthis: & QLibrary) -> RetType;
+}
+impl<'a> /*trait*/ QLibrary_resolve_0<usize> for (usize) {
+  fn resolve_0(self , rsthis: & QLibrary) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN8QLibrary7resolveEPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qlibrary.h:75
+// index:1
+// Public static Visibility=Default Availability=Available
+// [8] QFunctionPointer resolve(const QString &, const char *)
+
+/*
+Returns the address of the exported symbol symbol. The library is loaded if necessary. The function returns 0 if the symbol could not be resolved or if the library could not be loaded.
+
+Example:
+
+
+  typedef int (*AvgFunction)(int, int);
+
+  AvgFunction avg = (AvgFunction) library->resolve("avg");
+  if (avg)
+      return avg(5, 8);
+  else
+      return -1;
+
+
+
+The symbol must be exported as a C function from the library. This means that the function must be wrapped in an extern "C" if the library is compiled with a C++ compiler. On Windows you must also explicitly export the function from the DLL using the __declspec(dllexport) compiler directive, for example:
+
+
+  extern "C" MY_EXPORT int avg(int a, int b)
+  {
+      return (a + b) / 2;
+  }
+
+
+
+with MY_EXPORT defined as
+
+
+  #ifdef Q_OS_WIN
+  #define MY_EXPORT __declspec(dllexport)
+  #else
+  #define MY_EXPORT
+  #endif
+*/
+impl /*struct*/ QLibrary {
+  pub fn resolve_1<RetType, T: QLibrary_resolve_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.resolve_1();
+    // return 1;
+  }
+}
+pub trait QLibrary_resolve_1<RetType> {
+  fn resolve_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QLibrary_resolve_1<usize> for (usize,usize) {
+  fn resolve_1(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (self.1) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN8QLibrary7resolveERK7QStringPKc", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qlibrary.h:76
+// index:2
+// Public static Visibility=Default Availability=Available
+// [8] QFunctionPointer resolve(const QString &, int, const char *)
+
+/*
+Returns the address of the exported symbol symbol. The library is loaded if necessary. The function returns 0 if the symbol could not be resolved or if the library could not be loaded.
+
+Example:
+
+
+  typedef int (*AvgFunction)(int, int);
+
+  AvgFunction avg = (AvgFunction) library->resolve("avg");
+  if (avg)
+      return avg(5, 8);
+  else
+      return -1;
+
+
+
+The symbol must be exported as a C function from the library. This means that the function must be wrapped in an extern "C" if the library is compiled with a C++ compiler. On Windows you must also explicitly export the function from the DLL using the __declspec(dllexport) compiler directive, for example:
+
+
+  extern "C" MY_EXPORT int avg(int a, int b)
+  {
+      return (a + b) / 2;
+  }
+
+
+
+with MY_EXPORT defined as
+
+
+  #ifdef Q_OS_WIN
+  #define MY_EXPORT __declspec(dllexport)
+  #else
+  #define MY_EXPORT
+  #endif
+*/
+impl /*struct*/ QLibrary {
+  pub fn resolve_2<RetType, T: QLibrary_resolve_2<RetType>>( overload_args: T) -> RetType {
+    return overload_args.resolve_2();
+    // return 1;
+  }
+}
+pub trait QLibrary_resolve_2<RetType> {
+  fn resolve_2(self ) -> RetType;
+}
+impl<'a> /*trait*/ QLibrary_resolve_2<usize> for (usize,i32,usize) {
+  fn resolve_2(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (self.2) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN8QLibrary7resolveERK7QStringiPKc", 3,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qlibrary.h:77
+// index:3
+// Public static Visibility=Default Availability=Available
+// [8] QFunctionPointer resolve(const QString &, const QString &, const char *)
+
+/*
+Returns the address of the exported symbol symbol. The library is loaded if necessary. The function returns 0 if the symbol could not be resolved or if the library could not be loaded.
+
+Example:
+
+
+  typedef int (*AvgFunction)(int, int);
+
+  AvgFunction avg = (AvgFunction) library->resolve("avg");
+  if (avg)
+      return avg(5, 8);
+  else
+      return -1;
+
+
+
+The symbol must be exported as a C function from the library. This means that the function must be wrapped in an extern "C" if the library is compiled with a C++ compiler. On Windows you must also explicitly export the function from the DLL using the __declspec(dllexport) compiler directive, for example:
+
+
+  extern "C" MY_EXPORT int avg(int a, int b)
+  {
+      return (a + b) / 2;
+  }
+
+
+
+with MY_EXPORT defined as
+
+
+  #ifdef Q_OS_WIN
+  #define MY_EXPORT __declspec(dllexport)
+  #else
+  #define MY_EXPORT
+  #endif
+*/
+impl /*struct*/ QLibrary {
+  pub fn resolve_3<RetType, T: QLibrary_resolve_3<RetType>>( overload_args: T) -> RetType {
+    return overload_args.resolve_3();
+    // return 1;
+  }
+}
+pub trait QLibrary_resolve_3<RetType> {
+  fn resolve_3(self ) -> RetType;
+}
+impl<'a> /*trait*/ QLibrary_resolve_3<usize> for (usize,usize,usize) {
+  fn resolve_3(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (self.2) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN8QLibrary7resolveERK7QStringS2_PKc", 3,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qlibrary.h:79
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool load()
+
+/*
+Loads the library and returns true if the library was loaded successfully; otherwise returns false. Since resolve() always calls this function before resolving any symbols it is not necessary to call it explicitly. In some situations you might want the library loaded in advance, in which case you would use this function.
+
+See also unload().
+*/
+impl /*struct*/ QLibrary {
+  pub fn load_0<RetType, T: QLibrary_load_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.load_0(self);
+    // return 1;
+  }
+}
+pub trait QLibrary_load_0<RetType> {
+  fn load_0(self , rsthis: & QLibrary) -> RetType;
+}
+impl<'a> /*trait*/ QLibrary_load_0<bool> for () {
+  fn load_0(self , rsthis: & QLibrary) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZN8QLibrary4loadEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qlibrary.h:80
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool unload()
+
+/*
+Unloads the library and returns true if the library could be unloaded; otherwise returns false.
+
+This happens automatically on application termination, so you shouldn't normally need to call this function.
+
+If other instances of QLibrary are using the same library, the call will fail, and unloading will only happen when every instance has called unload().
+
+Note that on Mac OS X 10.3 (Panther), dynamic libraries cannot be unloaded.
+
+See also resolve() and load().
+*/
+impl /*struct*/ QLibrary {
+  pub fn unload_0<RetType, T: QLibrary_unload_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.unload_0(self);
+    // return 1;
+  }
+}
+pub trait QLibrary_unload_0<RetType> {
+  fn unload_0(self , rsthis: & QLibrary) -> RetType;
+}
+impl<'a> /*trait*/ QLibrary_unload_0<bool> for () {
+  fn unload_0(self , rsthis: & QLibrary) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZN8QLibrary6unloadEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qlibrary.h:81
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isLoaded() const
+
+/*
+Returns true if the library is loaded; otherwise returns false.
+
+See also load().
+*/
+impl /*struct*/ QLibrary {
+  pub fn isLoaded_0<RetType, T: QLibrary_isLoaded_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isLoaded_0(self);
+    // return 1;
+  }
+}
+pub trait QLibrary_isLoaded_0<RetType> {
+  fn isLoaded_0(self , rsthis: & QLibrary) -> RetType;
+}
+impl<'a> /*trait*/ QLibrary_isLoaded_0<bool> for () {
+  fn isLoaded_0(self , rsthis: & QLibrary) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QLibrary8isLoadedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qlibrary.h:83
+// index:0
+// Public static Visibility=Default Availability=Available
+// [1] bool isLibrary(const QString &)
+
+/*
+Returns true if fileName has a valid suffix for a loadable library; otherwise returns false.
+
+
+ PlatformValid suffixes
+Windows.dll, .DLL
+Unix/Linux.so
+AIX.a
+HP-UX.sl, .so (HP-UXi)
+macOS and iOS.dylib, .bundle, .so
+
+
+Trailing versioning numbers on Unix are ignored.
+*/
+impl /*struct*/ QLibrary {
+  pub fn isLibrary_0<RetType, T: QLibrary_isLibrary_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.isLibrary_0();
+    // return 1;
+  }
+}
+pub trait QLibrary_isLibrary_0<RetType> {
+  fn isLibrary_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QLibrary_isLibrary_0<bool> for (usize) {
+  fn isLibrary_0(self ) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN8QLibrary9isLibraryERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qlibrary.h:85
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setFileName(const QString &)
+
+/*
+
+*/
+impl /*struct*/ QLibrary {
+  pub fn setFileName_0<RetType, T: QLibrary_setFileName_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setFileName_0(self);
+    // return 1;
+  }
+}
+pub trait QLibrary_setFileName_0<RetType> {
+  fn setFileName_0(self , rsthis: & QLibrary) -> RetType;
+}
+impl<'a> /*trait*/ QLibrary_setFileName_0<(/*void*/)> for (usize) {
+  fn setFileName_0(self , rsthis: & QLibrary) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN8QLibrary11setFileNameERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QLibrary_errorString<RetType> {
-  fn errorString(self , rsthis: & QLibrary) -> RetType;
+// /usr/include/qt/QtCore/qlibrary.h:86
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString fileName() const
+
+/*
+
+*/
+impl /*struct*/ QLibrary {
+  pub fn fileName_0<RetType, T: QLibrary_fileName_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.fileName_0(self);
+    // return 1;
+  }
+}
+pub trait QLibrary_fileName_0<RetType> {
+  fn fileName_0(self , rsthis: & QLibrary) -> RetType;
+}
+impl<'a> /*trait*/ QLibrary_fileName_0<usize> for () {
+  fn fileName_0(self , rsthis: & QLibrary) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QLibrary8fileNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
 }
 
-  // proto:  QString QLibrary::errorString();
-impl<'a> /*trait*/ QLibrary_errorString<QString> for () {
-  fn errorString(self , rsthis: & QLibrary) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QLibrary11errorStringEv()};
-    let mut ret = unsafe {C_ZNK8QLibrary11errorStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+// /usr/include/qt/QtCore/qlibrary.h:88
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setFileNameAndVersion(const QString &, int)
+
+/*
+Sets the fileName property and major version number to fileName and versionNumber respectively. The versionNumber is ignored on Windows.
+
+See also setFileName().
+*/
+impl /*struct*/ QLibrary {
+  pub fn setFileNameAndVersion_0<RetType, T: QLibrary_setFileNameAndVersion_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setFileNameAndVersion_0(self);
+    // return 1;
+  }
+}
+pub trait QLibrary_setFileNameAndVersion_0<RetType> {
+  fn setFileNameAndVersion_0(self , rsthis: & QLibrary) -> RetType;
+}
+impl<'a> /*trait*/ QLibrary_setFileNameAndVersion_0<(/*void*/)> for (usize,i32) {
+  fn setFileNameAndVersion_0(self , rsthis: & QLibrary) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN8QLibrary21setFileNameAndVersionERK7QStringi", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-  // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, int verNum, const char * symbol);
-impl<'a> /*trait*/ QLibrary_resolve_s<u64> for (&'a QString, i32, &'a  String) {
-  fn resolve_s(self ) -> u64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QLibrary7resolveERK7QStringiPKc()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2.as_ptr()  as *mut c_char;
-    let mut ret = unsafe {C_ZN8QLibrary7resolveERK7QStringiPKc(arg0, arg1, arg2)};
-    return ret as u64; // 3
+// /usr/include/qt/QtCore/qlibrary.h:89
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void setFileNameAndVersion(const QString &, const QString &)
+
+/*
+Sets the fileName property and major version number to fileName and versionNumber respectively. The versionNumber is ignored on Windows.
+
+See also setFileName().
+*/
+impl /*struct*/ QLibrary {
+  pub fn setFileNameAndVersion_1<RetType, T: QLibrary_setFileNameAndVersion_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setFileNameAndVersion_1(self);
+    // return 1;
+  }
+}
+pub trait QLibrary_setFileNameAndVersion_1<RetType> {
+  fn setFileNameAndVersion_1(self , rsthis: & QLibrary) -> RetType;
+}
+impl<'a> /*trait*/ QLibrary_setFileNameAndVersion_1<(/*void*/)> for (usize,usize) {
+  fn setFileNameAndVersion_1(self , rsthis: & QLibrary) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN8QLibrary21setFileNameAndVersionERK7QStringS2_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qlibrary.h:90
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString errorString() const
 
+/*
+Returns a text string with the description of the last error that occurred. Currently, errorString will only be set if load(), unload() or resolve() for some reason fails.
+
+This function was introduced in  Qt 4.2.
+*/
+impl /*struct*/ QLibrary {
+  pub fn errorString_0<RetType, T: QLibrary_errorString_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.errorString_0(self);
+    // return 1;
+  }
+}
+pub trait QLibrary_errorString_0<RetType> {
+  fn errorString_0(self , rsthis: & QLibrary) -> RetType;
+}
+impl<'a> /*trait*/ QLibrary_errorString_0<usize> for () {
+  fn errorString_0(self , rsthis: & QLibrary) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QLibrary11errorStringEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qlibrary.h:92
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setLoadHints(QLibrary::LoadHints)
+
+/*
+
+*/
+impl /*struct*/ QLibrary {
+  pub fn setLoadHints_0<RetType, T: QLibrary_setLoadHints_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setLoadHints_0(self);
+    // return 1;
+  }
+}
+pub trait QLibrary_setLoadHints_0<RetType> {
+  fn setLoadHints_0(self , rsthis: & QLibrary) -> RetType;
+}
+impl<'a> /*trait*/ QLibrary_setLoadHints_0<(/*void*/)> for (i32) {
+  fn setLoadHints_0(self , rsthis: & QLibrary) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN8QLibrary12setLoadHintsE6QFlagsINS_8LoadHintEE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qlibrary.h:93
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] QLibrary::LoadHints loadHints() const
+
+/*
+
+*/
+impl /*struct*/ QLibrary {
+  pub fn loadHints_0<RetType, T: QLibrary_loadHints_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.loadHints_0(self);
+    // return 1;
+  }
+}
+pub trait QLibrary_loadHints_0<RetType> {
+  fn loadHints_0(self , rsthis: & QLibrary) -> RetType;
+}
+impl<'a> /*trait*/ QLibrary_loadHints_0<i32> for () {
+  fn loadHints_0(self , rsthis: & QLibrary) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK8QLibrary9loadHintsEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+
+/*
+
+
+*/
+pub type QLibrary__LoadHint = i32;
+// 
+pub const QLibrary__ResolveAllSymbolsHint :QLibrary__LoadHint = 1;
+// 
+pub const QLibrary__ExportExternalSymbolsHint :QLibrary__LoadHint = 2;
+// 
+pub const QLibrary__LoadArchiveMemberHint :QLibrary__LoadHint = 4;
+// 
+pub const QLibrary__PreventUnloadHint :QLibrary__LoadHint = 8;
+// 
+pub const QLibrary__DeepBindHint :QLibrary__LoadHint = 16;
+pub fn QLibrary_LoadHintItemName(val: i32) ->String {
+  return qtrt::GetClassEnumItemName("QLibrary", val);
+}
+pub fn QLibrary_LoadHintItemName_s(val: i32) ->String {
+  //var nilthis *QLibrary
+  //return nilthis.LoadHintItemName(val);
+  return QLibrary_LoadHintItemName(val);
+}
+
+//  body block end
+
+//  keep block begin
+
+//  keep block end

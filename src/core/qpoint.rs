@@ -1,653 +1,605 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qpoint.h
-// dst-file: /src/core/qpoint.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QPoint
+// package qtcore
+// /usr/include/qt/QtCore/qpoint.h
+// #include <qpoint.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 19
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-// use super::qpoint::QPoint; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QPoint_Class_Size() -> c_int;
-  // proto:  int & QPoint::ry();
-  fn C_ZN6QPoint2ryEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto: static int QPoint::dotProduct(const QPoint & p1, const QPoint & p2);
-  fn C_ZN6QPoint10dotProductERKS_S1_(arg0: *mut c_void, arg1: *mut c_void) -> c_int;
-  // proto:  int QPoint::x();
-  fn C_ZNK6QPoint1xEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  void QPoint::QPoint(int xpos, int ypos);
-  fn C_ZN6QPointC2Eii(arg0: c_int, arg1: c_int) -> u64;
-  // proto:  int QPoint::y();
-  fn C_ZNK6QPoint1yEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  void QPoint::setX(int x);
-  fn C_ZN6QPoint4setXEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto:  bool QPoint::isNull();
-  fn C_ZNK6QPoint6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QPoint::QPoint();
-  fn C_ZN6QPointC2Ev() -> u64;
-  // proto:  void QPoint::setY(int y);
-  fn C_ZN6QPoint4setYEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto:  int & QPoint::rx();
-  fn C_ZN6QPoint2rxEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  int QPoint::manhattanLength();
-  fn C_ZNK6QPoint15manhattanLengthEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  fn QPointF_Class_Size() -> c_int;
-  // proto:  void QPointF::QPointF(qreal xpos, qreal ypos);
-  fn C_ZN7QPointFC2Edd(arg0: c_double, arg1: c_double) -> u64;
-  // proto:  void QPointF::QPointF();
-  fn C_ZN7QPointFC2Ev() -> u64;
-  // proto:  qreal QPointF::manhattanLength();
-  fn C_ZNK7QPointF15manhattanLengthEv(qthis: u64 /* *mut c_void*/) -> c_double;
-  // proto:  QPoint QPointF::toPoint();
-  fn C_ZNK7QPointF7toPointEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  qreal & QPointF::rx();
-  fn C_ZN7QPointF2rxEv(qthis: u64 /* *mut c_void*/) -> c_double;
-  // proto:  qreal QPointF::y();
-  fn C_ZNK7QPointF1yEv(qthis: u64 /* *mut c_void*/) -> c_double;
-  // proto:  bool QPointF::isNull();
-  fn C_ZNK7QPointF6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  qreal QPointF::x();
-  fn C_ZNK7QPointF1xEv(qthis: u64 /* *mut c_void*/) -> c_double;
-  // proto:  void QPointF::QPointF(const QPoint & p);
-  fn C_ZN7QPointFC2ERK6QPoint(arg0: *mut c_void) -> u64;
-  // proto:  void QPointF::setX(qreal x);
-  fn C_ZN7QPointF4setXEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
-  // proto:  qreal & QPointF::ry();
-  fn C_ZN7QPointF2ryEv(qthis: u64 /* *mut c_void*/) -> c_double;
-  // proto: static qreal QPointF::dotProduct(const QPointF & p1, const QPointF & p2);
-  fn C_ZN7QPointF10dotProductERKS_S1_(arg0: *mut c_void, arg1: *mut c_void) -> c_double;
-  // proto:  void QPointF::setY(qreal y);
-  fn C_ZN7QPointF4setYEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
-} // <= ext block end
 
-// body block begin =>
-// class sizeof(QPoint)=8
-#[derive(Default)]
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QPoint)=8
 pub struct QPoint {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
+  // qbase: none,
+  pub qclsinst: usize /* *mut c_void*/,
 }
-
-// class sizeof(QPointF)=16
-#[derive(Default)]
-pub struct QPointF {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
-}
+// type QPoint_ITF interface {
+//    QPoint_PTR() *QPoint
+//}
+//func (ptr *QPoint) QPoint_PTR() *QPoint { return ptr }
 
 impl /*struct*/ QPoint {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QPoint {
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QPoint {
     return QPoint{qclsinst: qthis, ..Default::default()};
   }
 }
-  // proto:  int & QPoint::ry();
+//impl Deref for QPoint {
+//  type Target = QPointBASE;
+//
+//  fn deref(&self) -> &QPointBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QPointBASE> for QPoint {
+//  fn as_ref(& self) -> & QPointBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qpoint.h:55
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void QPoint()
+
+/*
+Constructs a null point, i.e. with coordinates (0, 0)
+
+See also isNull().
+*/
+// QPoint() ctx.fn_proto_cpp
 impl /*struct*/ QPoint {
-  pub fn ry<RetType, T: QPoint_ry<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.ry(self);
-    // return 1;
-  }
-}
-
-pub trait QPoint_ry<RetType> {
-  fn ry(self , rsthis: & QPoint) -> RetType;
-}
-
-  // proto:  int & QPoint::ry();
-impl<'a> /*trait*/ QPoint_ry<i32> for () {
-  fn ry(self , rsthis: & QPoint) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QPoint2ryEv()};
-    let mut ret = unsafe {C_ZN6QPoint2ryEv(rsthis.qclsinst)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto: static int QPoint::dotProduct(const QPoint & p1, const QPoint & p2);
-impl /*struct*/ QPoint {
-  pub fn dotProduct_s<RetType, T: QPoint_dotProduct_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.dotProduct_s();
-    // return 1;
-  }
-}
-
-pub trait QPoint_dotProduct_s<RetType> {
-  fn dotProduct_s(self ) -> RetType;
-}
-
-  // proto: static int QPoint::dotProduct(const QPoint & p1, const QPoint & p2);
-impl<'a> /*trait*/ QPoint_dotProduct_s<i32> for (&'a QPoint, &'a QPoint) {
-  fn dotProduct_s(self ) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QPoint10dotProductERKS_S1_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN6QPoint10dotProductERKS_S1_(arg0, arg1)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  int QPoint::x();
-impl /*struct*/ QPoint {
-  pub fn x<RetType, T: QPoint_x<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.x(self);
-    // return 1;
-  }
-}
-
-pub trait QPoint_x<RetType> {
-  fn x(self , rsthis: & QPoint) -> RetType;
-}
-
-  // proto:  int QPoint::x();
-impl<'a> /*trait*/ QPoint_x<i32> for () {
-  fn x(self , rsthis: & QPoint) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK6QPoint1xEv()};
-    let mut ret = unsafe {C_ZNK6QPoint1xEv(rsthis.qclsinst)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QPoint::QPoint(int xpos, int ypos);
-impl /*struct*/ QPoint {
-  pub fn new<T: QPoint_new>(value: T) -> QPoint {
-    let rsthis = value.new();
+  pub fn QPoint_0<T: QPoint_QPoint_0>(value: T) -> QPoint {
+    let rsthis = value.QPoint_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPoint_new {
-  fn new(self) -> QPoint;
+pub trait QPoint_QPoint_0 {
+  fn QPoint_0(self) -> QPoint;
 }
-
-  // proto:  void QPoint::QPoint(int xpos, int ypos);
-impl<'a> /*trait*/ QPoint_new for (i32, i32) {
-  fn new(self) -> QPoint {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QPointC2Eii()};
-    let ctysz: c_int = unsafe{QPoint_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
-    let qthis: u64 = unsafe {C_ZN6QPointC2Eii(arg0, arg1)};
-    let rsthis = QPoint{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  int QPoint::y();
-impl /*struct*/ QPoint {
-  pub fn y<RetType, T: QPoint_y<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.y(self);
-    // return 1;
-  }
-}
-
-pub trait QPoint_y<RetType> {
-  fn y(self , rsthis: & QPoint) -> RetType;
-}
-
-  // proto:  int QPoint::y();
-impl<'a> /*trait*/ QPoint_y<i32> for () {
-  fn y(self , rsthis: & QPoint) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK6QPoint1yEv()};
-    let mut ret = unsafe {C_ZNK6QPoint1yEv(rsthis.qclsinst)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QPoint::setX(int x);
-impl /*struct*/ QPoint {
-  pub fn setX<RetType, T: QPoint_setX<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setX(self);
-    // return 1;
-  }
-}
-
-pub trait QPoint_setX<RetType> {
-  fn setX(self , rsthis: & QPoint) -> RetType;
-}
-
-  // proto:  void QPoint::setX(int x);
-impl<'a> /*trait*/ QPoint_setX<()> for (i32) {
-  fn setX(self , rsthis: & QPoint) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QPoint4setXEi()};
-    let arg0 = self  as c_int;
-     unsafe {C_ZN6QPoint4setXEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  bool QPoint::isNull();
-impl /*struct*/ QPoint {
-  pub fn isNull<RetType, T: QPoint_isNull<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isNull(self);
-    // return 1;
-  }
-}
-
-pub trait QPoint_isNull<RetType> {
-  fn isNull(self , rsthis: & QPoint) -> RetType;
-}
-
-  // proto:  bool QPoint::isNull();
-impl<'a> /*trait*/ QPoint_isNull<i8> for () {
-  fn isNull(self , rsthis: & QPoint) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK6QPoint6isNullEv()};
-    let mut ret = unsafe {C_ZNK6QPoint6isNullEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QPoint::QPoint();
-impl<'a> /*trait*/ QPoint_new for () {
-  fn new(self) -> QPoint {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QPoint() ctx.fn_proto_cpp
+impl<'a> /*trait*/ QPoint_QPoint_0 for () {
+  fn QPoint_0(self) -> QPoint {
     // unsafe{_ZN6QPointC2Ev()};
-    let ctysz: c_int = unsafe{QPoint_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let qthis: u64 = unsafe {C_ZN6QPointC2Ev()};
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN6QPointC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QPoint{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QPoint::setY(int y);
+// /usr/include/qt/QtCore/qpoint.h:56
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [-2] void QPoint(int, int)
+
+/*
+Constructs a null point, i.e. with coordinates (0, 0)
+
+See also isNull().
+*/
+// QPoint(int, int) ctx.fn_proto_cpp
 impl /*struct*/ QPoint {
-  pub fn setY<RetType, T: QPoint_setY<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setY(self);
+  pub fn QPoint_1<T: QPoint_QPoint_1>(value: T) -> QPoint {
+    let rsthis = value.QPoint_1();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QPoint_setY<RetType> {
-  fn setY(self , rsthis: & QPoint) -> RetType;
+pub trait QPoint_QPoint_1 {
+  fn QPoint_1(self) -> QPoint;
 }
-
-  // proto:  void QPoint::setY(int y);
-impl<'a> /*trait*/ QPoint_setY<()> for (i32) {
-  fn setY(self , rsthis: & QPoint) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QPoint4setYEi()};
-    let arg0 = self  as c_int;
-     unsafe {C_ZN6QPoint4setYEi(rsthis.qclsinst, arg0)};
+// QPoint(int, int) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QPoint_QPoint_1 for (i32,i32) {
+  fn QPoint_1(self) -> QPoint {
+    // unsafe{_ZN6QPointC2Eii()};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN6QPointC2Eii", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QPoint{qclsinst: qthis, ..Default::default()};
+    return rsthis;
     // return 1;
   }
 }
 
-  // proto:  int & QPoint::rx();
+// /usr/include/qt/QtCore/qpoint.h:58
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool isNull() const
+
+/*
+Returns true if both the x and y coordinates are set to 0, otherwise returns false.
+*/
 impl /*struct*/ QPoint {
-  pub fn rx<RetType, T: QPoint_rx<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.rx(self);
+  pub fn isNull_0<RetType, T: QPoint_isNull_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isNull_0(self);
     // return 1;
   }
 }
-
-pub trait QPoint_rx<RetType> {
-  fn rx(self , rsthis: & QPoint) -> RetType;
+pub trait QPoint_isNull_0<RetType> {
+  fn isNull_0(self , rsthis: & QPoint) -> RetType;
 }
-
-  // proto:  int & QPoint::rx();
-impl<'a> /*trait*/ QPoint_rx<i32> for () {
-  fn rx(self , rsthis: & QPoint) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QPoint2rxEv()};
-    let mut ret = unsafe {C_ZN6QPoint2rxEv(rsthis.qclsinst)};
-    return ret as i32; // 1
+impl<'a> /*trait*/ QPoint_isNull_0<bool> for () {
+  fn isNull_0(self , rsthis: & QPoint) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QPoint6isNullEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  int QPoint::manhattanLength();
+// /usr/include/qt/QtCore/qpoint.h:60
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [4] int x() const
+
+/*
+Returns the x coordinate of this point.
+
+See also setX() and rx().
+*/
 impl /*struct*/ QPoint {
-  pub fn manhattanLength<RetType, T: QPoint_manhattanLength<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.manhattanLength(self);
+  pub fn x_0<RetType, T: QPoint_x_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.x_0(self);
+    // return 1;
+  }
+}
+pub trait QPoint_x_0<RetType> {
+  fn x_0(self , rsthis: & QPoint) -> RetType;
+}
+impl<'a> /*trait*/ QPoint_x_0<i32> for () {
+  fn x_0(self , rsthis: & QPoint) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QPoint1xEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qpoint.h:61
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [4] int y() const
+
+/*
+Returns the y coordinate of this point.
+
+See also setY() and ry().
+*/
+impl /*struct*/ QPoint {
+  pub fn y_0<RetType, T: QPoint_y_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.y_0(self);
+    // return 1;
+  }
+}
+pub trait QPoint_y_0<RetType> {
+  fn y_0(self , rsthis: & QPoint) -> RetType;
+}
+impl<'a> /*trait*/ QPoint_y_0<i32> for () {
+  fn y_0(self , rsthis: & QPoint) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QPoint1yEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qpoint.h:62
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void setX(int)
+
+/*
+Sets the x coordinate of this point to the given x coordinate.
+
+See also x() and setY().
+*/
+impl /*struct*/ QPoint {
+  pub fn setX_0<RetType, T: QPoint_setX_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setX_0(self);
+    // return 1;
+  }
+}
+pub trait QPoint_setX_0<RetType> {
+  fn setX_0(self , rsthis: & QPoint) -> RetType;
+}
+impl<'a> /*trait*/ QPoint_setX_0<(/*void*/)> for (i32) {
+  fn setX_0(self , rsthis: & QPoint) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN6QPoint4setXEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QPoint_manhattanLength<RetType> {
-  fn manhattanLength(self , rsthis: & QPoint) -> RetType;
-}
+// /usr/include/qt/QtCore/qpoint.h:63
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void setY(int)
 
-  // proto:  int QPoint::manhattanLength();
-impl<'a> /*trait*/ QPoint_manhattanLength<i32> for () {
-  fn manhattanLength(self , rsthis: & QPoint) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK6QPoint15manhattanLengthEv()};
-    let mut ret = unsafe {C_ZNK6QPoint15manhattanLengthEv(rsthis.qclsinst)};
-    return ret as i32; // 1
+/*
+Sets the y coordinate of this point to the given y coordinate.
+
+See also y() and setX().
+*/
+impl /*struct*/ QPoint {
+  pub fn setY_0<RetType, T: QPoint_setY_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setY_0(self);
+    // return 1;
+  }
+}
+pub trait QPoint_setY_0<RetType> {
+  fn setY_0(self , rsthis: & QPoint) -> RetType;
+}
+impl<'a> /*trait*/ QPoint_setY_0<(/*void*/)> for (i32) {
+  fn setY_0(self , rsthis: & QPoint) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN6QPoint4setYEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-impl /*struct*/ QPointF {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QPointF {
-    return QPointF{qclsinst: qthis, ..Default::default()};
+// /usr/include/qt/QtCore/qpoint.h:65
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [4] int manhattanLength() const
+
+/*
+Returns the sum of the absolute values of x() and y(), traditionally known as the "Manhattan length" of the vector from the origin to the point. For example:
+
+
+  QPoint oldPosition;
+
+  MyWidget::mouseMoveEvent(QMouseEvent *event)
+  {
+      QPoint point = event->pos() - oldPosition;
+      if (point.manhattanLength() > 3)
+          // the mouse has moved more than 3 pixels since the oldPosition
   }
-}
-  // proto:  void QPointF::QPointF(qreal xpos, qreal ypos);
-impl /*struct*/ QPointF {
-  pub fn new<T: QPointF_new>(value: T) -> QPointF {
-    let rsthis = value.new();
-    return rsthis;
+
+
+
+This is a useful, and quick to calculate, approximation to the true length:
+
+
+  double trueLength = std::sqrt(std::pow(x(), 2) + std::pow(y(), 2));
+
+
+
+The tradition of "Manhattan length" arises because such distances apply to travelers who can only travel on a rectangular grid, like the streets of Manhattan.
+*/
+impl /*struct*/ QPoint {
+  pub fn manhattanLength_0<RetType, T: QPoint_manhattanLength_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.manhattanLength_0(self);
     // return 1;
   }
 }
-
-pub trait QPointF_new {
-  fn new(self) -> QPointF;
+pub trait QPoint_manhattanLength_0<RetType> {
+  fn manhattanLength_0(self , rsthis: & QPoint) -> RetType;
 }
-
-  // proto:  void QPointF::QPointF(qreal xpos, qreal ypos);
-impl<'a> /*trait*/ QPointF_new for (f64, f64) {
-  fn new(self) -> QPointF {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QPointFC2Edd()};
-    let ctysz: c_int = unsafe{QPointF_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0  as c_double;
-    let arg1 = self.1  as c_double;
-    let qthis: u64 = unsafe {C_ZN7QPointFC2Edd(arg0, arg1)};
-    let rsthis = QPointF{qclsinst: qthis, ..Default::default()};
-    return rsthis;
+impl<'a> /*trait*/ QPoint_manhattanLength_0<i32> for () {
+  fn manhattanLength_0(self , rsthis: & QPoint) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QPoint15manhattanLengthEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i32 = Default::default(); return dret;
   }
 }
 
-  // proto:  void QPointF::QPointF();
-impl<'a> /*trait*/ QPointF_new for () {
-  fn new(self) -> QPointF {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QPointFC2Ev()};
-    let ctysz: c_int = unsafe{QPointF_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let qthis: u64 = unsafe {C_ZN7QPointFC2Ev()};
-    let rsthis = QPointF{qclsinst: qthis, ..Default::default()};
-    return rsthis;
+// /usr/include/qt/QtCore/qpoint.h:67
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [4] int & rx()
+
+/*
+Returns a reference to the x coordinate of this point.
+
+Using a reference makes it possible to directly manipulate x. For example:
+
+
+  QPoint p(1, 2);
+  p.rx()--;   // p becomes (0, 2)
+
+
+
+See also x() and setX().
+*/
+impl /*struct*/ QPoint {
+  pub fn rx_0<RetType, T: QPoint_rx_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.rx_0(self);
     // return 1;
   }
 }
-
-  // proto:  qreal QPointF::manhattanLength();
-impl /*struct*/ QPointF {
-  pub fn manhattanLength<RetType, T: QPointF_manhattanLength<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.manhattanLength(self);
+pub trait QPoint_rx_0<RetType> {
+  fn rx_0(self , rsthis: & QPoint) -> RetType;
+}
+impl<'a> /*trait*/ QPoint_rx_0<usize> for () {
+  fn rx_0(self , rsthis: & QPoint) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZN6QPoint2rxEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QPointF_manhattanLength<RetType> {
-  fn manhattanLength(self , rsthis: & QPointF) -> RetType;
-}
+// /usr/include/qt/QtCore/qpoint.h:68
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [4] int & ry()
 
-  // proto:  qreal QPointF::manhattanLength();
-impl<'a> /*trait*/ QPointF_manhattanLength<f64> for () {
-  fn manhattanLength(self , rsthis: & QPointF) -> f64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QPointF15manhattanLengthEv()};
-    let mut ret = unsafe {C_ZNK7QPointF15manhattanLengthEv(rsthis.qclsinst)};
-    return ret as f64; // 1
+/*
+Returns a reference to the y coordinate of this point.
+
+Using a reference makes it possible to directly manipulate y. For example:
+
+
+  QPoint p(1, 2);
+  p.ry()++;   // p becomes (1, 3)
+
+
+
+See also y() and setY().
+*/
+impl /*struct*/ QPoint {
+  pub fn ry_0<RetType, T: QPoint_ry_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.ry_0(self);
     // return 1;
   }
 }
-
-  // proto:  QPoint QPointF::toPoint();
-impl /*struct*/ QPointF {
-  pub fn toPoint<RetType, T: QPointF_toPoint<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toPoint(self);
+pub trait QPoint_ry_0<RetType> {
+  fn ry_0(self , rsthis: & QPoint) -> RetType;
+}
+impl<'a> /*trait*/ QPoint_ry_0<usize> for () {
+  fn ry_0(self , rsthis: & QPoint) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZN6QPoint2ryEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QPointF_toPoint<RetType> {
-  fn toPoint(self , rsthis: & QPointF) -> RetType;
-}
+// /usr/include/qt/QtCore/qpoint.h:70
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QPoint & operator+=(const QPoint &)
 
-  // proto:  QPoint QPointF::toPoint();
-impl<'a> /*trait*/ QPointF_toPoint<QPoint> for () {
-  fn toPoint(self , rsthis: & QPointF) -> QPoint {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QPointF7toPointEv()};
-    let mut ret = unsafe {C_ZNK7QPointF7toPointEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint::inheritFrom(ret as u64);
-    return ret1;
+/*
+
+*/
+impl /*struct*/ QPoint {
+  pub fn operator_add_equal_0<RetType, T: QPoint_operator_add_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_add_equal_0(self);
     // return 1;
   }
 }
-
-  // proto:  qreal & QPointF::rx();
-impl /*struct*/ QPointF {
-  pub fn rx<RetType, T: QPointF_rx<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.rx(self);
+pub trait QPoint_operator_add_equal_0<RetType> {
+  fn operator_add_equal_0(self , rsthis: & QPoint) -> RetType;
+}
+impl<'a> /*trait*/ QPoint_operator_add_equal_0<usize> for (usize) {
+  fn operator_add_equal_0(self , rsthis: & QPoint) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN6QPointpLERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QPointF_rx<RetType> {
-  fn rx(self , rsthis: & QPointF) -> RetType;
-}
+// /usr/include/qt/QtCore/qpoint.h:71
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QPoint & operator-=(const QPoint &)
 
-  // proto:  qreal & QPointF::rx();
-impl<'a> /*trait*/ QPointF_rx<f64> for () {
-  fn rx(self , rsthis: & QPointF) -> f64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QPointF2rxEv()};
-    let mut ret = unsafe {C_ZN7QPointF2rxEv(rsthis.qclsinst)};
-    return ret as f64; // 1
+/*
+
+*/
+impl /*struct*/ QPoint {
+  pub fn operator_minus_equal_0<RetType, T: QPoint_operator_minus_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_minus_equal_0(self);
     // return 1;
   }
 }
-
-  // proto:  qreal QPointF::y();
-impl /*struct*/ QPointF {
-  pub fn y<RetType, T: QPointF_y<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.y(self);
+pub trait QPoint_operator_minus_equal_0<RetType> {
+  fn operator_minus_equal_0(self , rsthis: & QPoint) -> RetType;
+}
+impl<'a> /*trait*/ QPoint_operator_minus_equal_0<usize> for (usize) {
+  fn operator_minus_equal_0(self , rsthis: & QPoint) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN6QPointmIERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QPointF_y<RetType> {
-  fn y(self , rsthis: & QPointF) -> RetType;
-}
+// /usr/include/qt/QtCore/qpoint.h:73
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QPoint & operator*=(float)
 
-  // proto:  qreal QPointF::y();
-impl<'a> /*trait*/ QPointF_y<f64> for () {
-  fn y(self , rsthis: & QPointF) -> f64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QPointF1yEv()};
-    let mut ret = unsafe {C_ZNK7QPointF1yEv(rsthis.qclsinst)};
-    return ret as f64; // 1
+/*
+
+*/
+impl /*struct*/ QPoint {
+  pub fn operator_mul_equal_0<RetType, T: QPoint_operator_mul_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_mul_equal_0(self);
     // return 1;
   }
 }
-
-  // proto:  bool QPointF::isNull();
-impl /*struct*/ QPointF {
-  pub fn isNull<RetType, T: QPointF_isNull<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isNull(self);
+pub trait QPoint_operator_mul_equal_0<RetType> {
+  fn operator_mul_equal_0(self , rsthis: & QPoint) -> RetType;
+}
+impl<'a> /*trait*/ QPoint_operator_mul_equal_0<usize> for (f32) {
+  fn operator_mul_equal_0(self , rsthis: & QPoint) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const f32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN6QPointmLEf", 1,qtrt::FFITY_FLOAT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QPointF_isNull<RetType> {
-  fn isNull(self , rsthis: & QPointF) -> RetType;
-}
+// /usr/include/qt/QtCore/qpoint.h:74
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QPoint & operator*=(double)
 
-  // proto:  bool QPointF::isNull();
-impl<'a> /*trait*/ QPointF_isNull<i8> for () {
-  fn isNull(self , rsthis: & QPointF) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QPointF6isNullEv()};
-    let mut ret = unsafe {C_ZNK7QPointF6isNullEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+/*
+
+*/
+impl /*struct*/ QPoint {
+  pub fn operator_mul_equal_1<RetType, T: QPoint_operator_mul_equal_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_mul_equal_1(self);
     // return 1;
   }
 }
-
-  // proto:  qreal QPointF::x();
-impl /*struct*/ QPointF {
-  pub fn x<RetType, T: QPointF_x<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.x(self);
+pub trait QPoint_operator_mul_equal_1<RetType> {
+  fn operator_mul_equal_1(self , rsthis: & QPoint) -> RetType;
+}
+impl<'a> /*trait*/ QPoint_operator_mul_equal_1<usize> for (f64) {
+  fn operator_mul_equal_1(self , rsthis: & QPoint) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const f64 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN6QPointmLEd", 1,qtrt::FFITY_DOUBLE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QPointF_x<RetType> {
-  fn x(self , rsthis: & QPointF) -> RetType;
-}
+// /usr/include/qt/QtCore/qpoint.h:75
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [8] QPoint & operator*=(int)
 
-  // proto:  qreal QPointF::x();
-impl<'a> /*trait*/ QPointF_x<f64> for () {
-  fn x(self , rsthis: & QPointF) -> f64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QPointF1xEv()};
-    let mut ret = unsafe {C_ZNK7QPointF1xEv(rsthis.qclsinst)};
-    return ret as f64; // 1
+/*
+
+*/
+impl /*struct*/ QPoint {
+  pub fn operator_mul_equal_2<RetType, T: QPoint_operator_mul_equal_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_mul_equal_2(self);
     // return 1;
   }
 }
-
-  // proto:  void QPointF::QPointF(const QPoint & p);
-impl<'a> /*trait*/ QPointF_new for (&'a QPoint) {
-  fn new(self) -> QPointF {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QPointFC2ERK6QPoint()};
-    let ctysz: c_int = unsafe{QPointF_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN7QPointFC2ERK6QPoint(arg0)};
-    let rsthis = QPointF{qclsinst: qthis, ..Default::default()};
-    return rsthis;
+pub trait QPoint_operator_mul_equal_2<RetType> {
+  fn operator_mul_equal_2(self , rsthis: & QPoint) -> RetType;
+}
+impl<'a> /*trait*/ QPoint_operator_mul_equal_2<usize> for (i32) {
+  fn operator_mul_equal_2(self , rsthis: & QPoint) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN6QPointmLEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  void QPointF::setX(qreal x);
-impl /*struct*/ QPointF {
-  pub fn setX<RetType, T: QPointF_setX<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setX(self);
+// /usr/include/qt/QtCore/qpoint.h:77
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QPoint & operator/=(qreal)
+
+/*
+
+*/
+impl /*struct*/ QPoint {
+  pub fn operator_div_equal_0<RetType, T: QPoint_operator_div_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_div_equal_0(self);
     // return 1;
   }
 }
-
-pub trait QPointF_setX<RetType> {
-  fn setX(self , rsthis: & QPointF) -> RetType;
+pub trait QPoint_operator_div_equal_0<RetType> {
+  fn operator_div_equal_0(self , rsthis: & QPoint) -> RetType;
 }
-
-  // proto:  void QPointF::setX(qreal x);
-impl<'a> /*trait*/ QPointF_setX<()> for (f64) {
-  fn setX(self , rsthis: & QPointF) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QPointF4setXEd()};
-    let arg0 = self  as c_double;
-     unsafe {C_ZN7QPointF4setXEd(rsthis.qclsinst, arg0)};
+impl<'a> /*trait*/ QPoint_operator_div_equal_0<usize> for (f64) {
+  fn operator_div_equal_0(self , rsthis: & QPoint) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const f64 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN6QPointdVEd", 1,qtrt::FFITY_DOUBLE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  qreal & QPointF::ry();
-impl /*struct*/ QPointF {
-  pub fn ry<RetType, T: QPointF_ry<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.ry(self);
+// /usr/include/qt/QtCore/qpoint.h:79
+// index:0
+// Public static inline Visibility=Default Availability=Available
+// [4] int dotProduct(const QPoint &, const QPoint &)
+
+/*
+QPoint p( 3, 7);
+  QPoint q(-1, 4);
+  int lengthSquared = QPoint::dotProduct(p, q);   // lengthSquared becomes 25
+
+
+
+Returns the dot product of p1 and p2.
+
+This function was introduced in  Qt 5.1.
+*/
+impl /*struct*/ QPoint {
+  pub fn dotProduct_0<RetType, T: QPoint_dotProduct_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.dotProduct_0();
     // return 1;
   }
 }
-
-pub trait QPointF_ry<RetType> {
-  fn ry(self , rsthis: & QPointF) -> RetType;
+pub trait QPoint_dotProduct_0<RetType> {
+  fn dotProduct_0(self ) -> RetType;
 }
-
-  // proto:  qreal & QPointF::ry();
-impl<'a> /*trait*/ QPointF_ry<f64> for () {
-  fn ry(self , rsthis: & QPointF) -> f64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QPointF2ryEv()};
-    let mut ret = unsafe {C_ZN7QPointF2ryEv(rsthis.qclsinst)};
-    return ret as f64; // 1
+impl<'a> /*trait*/ QPoint_dotProduct_0<i32> for (usize,usize) {
+  fn dotProduct_0(self ) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN6QPoint10dotProductERKS_S1_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i32 = Default::default(); return dret;
   }
 }
 
-  // proto: static qreal QPointF::dotProduct(const QPointF & p1, const QPointF & p2);
-impl /*struct*/ QPointF {
-  pub fn dotProduct_s<RetType, T: QPointF_dotProduct_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.dotProduct_s();
-    // return 1;
-  }
+
+pub fn DeleteQPoint(this :*mut QPoint) {
+    // rv, err := qtrt::InvokeQtFunc6("_ZN6QPointD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
 }
+//  body block end
 
-pub trait QPointF_dotProduct_s<RetType> {
-  fn dotProduct_s(self ) -> RetType;
-}
+//  keep block begin
 
-  // proto: static qreal QPointF::dotProduct(const QPointF & p1, const QPointF & p2);
-impl<'a> /*trait*/ QPointF_dotProduct_s<f64> for (&'a QPointF, &'a QPointF) {
-  fn dotProduct_s(self ) -> f64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QPointF10dotProductERKS_S1_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN7QPointF10dotProductERKS_S1_(arg0, arg1)};
-    return ret as f64; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QPointF::setY(qreal y);
-impl /*struct*/ QPointF {
-  pub fn setY<RetType, T: QPointF_setY<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setY(self);
-    // return 1;
-  }
-}
-
-pub trait QPointF_setY<RetType> {
-  fn setY(self , rsthis: & QPointF) -> RetType;
-}
-
-  // proto:  void QPointF::setY(qreal y);
-impl<'a> /*trait*/ QPointF_setY<()> for (f64) {
-  fn setY(self , rsthis: & QPointF) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QPointF4setYEd()};
-    let arg0 = self  as c_double;
-     unsafe {C_ZN7QPointF4setYEd(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-// <= body block end
-
+//  keep block end

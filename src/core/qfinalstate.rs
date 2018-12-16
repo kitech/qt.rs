@@ -1,143 +1,243 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qfinalstate.h
-// dst-file: /src/core/qfinalstate.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QFinalState
+// package qtcore
+// /usr/include/qt/QtCore/qfinalstate.h
+// #include <qfinalstate.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
-use super::qabstractstate::*; // 773
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 10
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qstate::*; // 773
-use super::qobjectdefs::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QFinalState_Class_Size() -> c_int;
-  // proto:  void QFinalState::QFinalState(QState * parent);
-  fn C_ZN11QFinalStateC2EP6QState(arg0: *mut c_void) -> u64;
-  // proto:  void QFinalState::~QFinalState();
-  fn C_ZN11QFinalStateD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  const QMetaObject * QFinalState::metaObject();
-  fn C_ZNK11QFinalState10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-} // <= ext block end
+// void onEntry(QEvent *)
+// func (this *QFinalState) InheritOnEntry(f func(event *QEvent/*777 QEvent **/) /*void*/) {
+//  qtrt.SetAllInheritCallback(this, "onEntry", f)
+// }
 
-// body block begin =>
-// class sizeof(QFinalState)=1
-#[derive(Default)]
+// void onExit(QEvent *)
+// func (this *QFinalState) InheritOnExit(f func(event *QEvent/*777 QEvent **/) /*void*/) {
+//  qtrt.SetAllInheritCallback(this, "onExit", f)
+// }
+
+// bool event(QEvent *)
+// func (this *QFinalState) InheritEvent(f func(e *QEvent/*777 QEvent **/) bool) {
+//  qtrt.SetAllInheritCallback(this, "event", f)
+// }
+
+
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QFinalState)=16
 pub struct QFinalState {
   qbase: QAbstractState,
-  pub qclsinst: u64 /* *mut c_void*/,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QFinalState_ITF interface {
+//    QAbstractState_ITF
+//    QFinalState_PTR() *QFinalState
+//}
+//func (ptr *QFinalState) QFinalState_PTR() *QFinalState { return ptr }
 
 impl /*struct*/ QFinalState {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QFinalState {
-    return QFinalState{qbase: QAbstractState::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QFinalState {
+    return QFinalState{qclsinst: qthis, ..Default::default()};
   }
 }
-impl Deref for QFinalState {
-  type Target = QAbstractState;
+//impl Deref for QFinalState {
+//  type Target = QFinalStateBASE;
+//
+//  fn deref(&self) -> &QFinalStateBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QFinalStateBASE> for QFinalState {
+//  fn as_ref(& self) -> & QFinalStateBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qfinalstate.h:52
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject() const
 
-  fn deref(&self) -> &QAbstractState {
-    return & self.qbase;
-  }
-}
-impl AsRef<QAbstractState> for QFinalState {
-  fn as_ref(& self) -> & QAbstractState {
-    return & self.qbase;
-  }
-}
-  // proto:  void QFinalState::QFinalState(QState * parent);
+/*
+
+*/
 impl /*struct*/ QFinalState {
-  pub fn new<T: QFinalState_new>(value: T) -> QFinalState {
-    let rsthis = value.new();
+  pub fn metaObject_0<RetType, T: QFinalState_metaObject_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.metaObject_0(self);
+    // return 1;
+  }
+}
+pub trait QFinalState_metaObject_0<RetType> {
+  fn metaObject_0(self , rsthis: & QFinalState) -> RetType;
+}
+impl<'a> /*trait*/ QFinalState_metaObject_0<usize> for () {
+  fn metaObject_0(self , rsthis: & QFinalState) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QFinalState10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qfinalstate.h:54
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QFinalState(QState *)
+
+/*
+Constructs a new QFinalState object with the given parent state.
+*/
+// QFinalState(QState *) ctx.fn_proto_cpp
+impl /*struct*/ QFinalState {
+  pub fn QFinalState_0<T: QFinalState_QFinalState_0>(value: T) -> QFinalState {
+    let rsthis = value.QFinalState_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFinalState_new {
-  fn new(self) -> QFinalState;
+pub trait QFinalState_QFinalState_0 {
+  fn QFinalState_0(self) -> QFinalState;
 }
-
-  // proto:  void QFinalState::QFinalState(QState * parent);
-impl<'a> /*trait*/ QFinalState_new for (Option<&'a QState>) {
-  fn new(self) -> QFinalState {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QFinalState(QState *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QFinalState_QFinalState_0 for (usize) {
+  fn QFinalState_0(self) -> QFinalState {
     // unsafe{_ZN11QFinalStateC2EP6QState()};
-    let ctysz: c_int = unsafe{QFinalState_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN11QFinalStateC2EP6QState(arg0)};
-    let rsthis = QFinalState{qbase: QAbstractState::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN11QFinalStateC2EP6QState", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QFinalState{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QFinalState::~QFinalState();
+// /usr/include/qt/QtCore/qfinalstate.h:55
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QFinalState()
+
+/*
+
+*/
+pub fn DeleteQFinalState(this :*mut QFinalState) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN11QFinalStateD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 16)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qfinalstate.h:58
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void onEntry(QEvent *)
+
+/*
+Reimplemented from QAbstractState::onEntry().
+*/
 impl /*struct*/ QFinalState {
-  pub fn free<RetType, T: QFinalState_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
+  pub fn onEntry_0<RetType, T: QFinalState_onEntry_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.onEntry_0(self);
+    // return 1;
+  }
+}
+pub trait QFinalState_onEntry_0<RetType> {
+  fn onEntry_0(self , rsthis: & QFinalState) -> RetType;
+}
+impl<'a> /*trait*/ QFinalState_onEntry_0<(/*void*/)> for (usize) {
+  fn onEntry_0(self , rsthis: & QFinalState) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN11QFinalState7onEntryEP6QEvent", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QFinalState_free<RetType> {
-  fn free(self , rsthis: & QFinalState) -> RetType;
-}
+// /usr/include/qt/QtCore/qfinalstate.h:59
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [-2] void onExit(QEvent *)
 
-  // proto:  void QFinalState::~QFinalState();
-impl<'a> /*trait*/ QFinalState_free<()> for () {
-  fn free(self , rsthis: & QFinalState) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QFinalStateD2Ev()};
-     unsafe {C_ZN11QFinalStateD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  const QMetaObject * QFinalState::metaObject();
+/*
+Reimplemented from QAbstractState::onExit().
+*/
 impl /*struct*/ QFinalState {
-  pub fn metaObject<RetType, T: QFinalState_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.metaObject(self);
+  pub fn onExit_0<RetType, T: QFinalState_onExit_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.onExit_0(self);
+    // return 1;
+  }
+}
+pub trait QFinalState_onExit_0<RetType> {
+  fn onExit_0(self , rsthis: & QFinalState) -> RetType;
+}
+impl<'a> /*trait*/ QFinalState_onExit_0<(/*void*/)> for (usize) {
+  fn onExit_0(self , rsthis: & QFinalState) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN11QFinalState6onExitEP6QEvent", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QFinalState_metaObject<RetType> {
-  fn metaObject(self , rsthis: & QFinalState) -> RetType;
-}
+// /usr/include/qt/QtCore/qfinalstate.h:61
+// index:0
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool event(QEvent *)
 
-  // proto:  const QMetaObject * QFinalState::metaObject();
-impl<'a> /*trait*/ QFinalState_metaObject<QMetaObject> for () {
-  fn metaObject(self , rsthis: & QFinalState) -> QMetaObject {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK11QFinalState10metaObjectEv()};
-    let mut ret = unsafe {C_ZNK11QFinalState10metaObjectEv(rsthis.qclsinst)};
-    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
-    return ret1;
+/*
+Reimplemented from QObject::event().
+*/
+impl /*struct*/ QFinalState {
+  pub fn event_0<RetType, T: QFinalState_event_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.event_0(self);
     // return 1;
   }
 }
+pub trait QFinalState_event_0<RetType> {
+  fn event_0(self , rsthis: & QFinalState) -> RetType;
+}
+impl<'a> /*trait*/ QFinalState_event_0<bool> for (usize) {
+  fn event_0(self , rsthis: & QFinalState) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN11QFinalState5eventEP6QEvent", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
 
-// <= body block end
+//  body block end
 
+//  keep block begin
+
+//  keep block end

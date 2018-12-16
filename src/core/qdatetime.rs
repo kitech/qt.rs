@@ -1,2418 +1,2347 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qdatetime.h
-// dst-file: /src/core/qdatetime.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QDateTime
+// package qtcore
+// /usr/include/qt/QtCore/qdatetime.h
+// #include <qdatetime.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 31
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qstring::*; // 773
-// use super::qdatetime::QDate; // 773
-// use super::qdatetime::QTime; // 773
-use super::qtimezone::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QTime_Class_Size() -> c_int;
-  // proto:  QTime QTime::addMSecs(int ms);
-  fn C_ZNK5QTime8addMSecsEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
-  // proto: static QTime QTime::fromMSecsSinceStartOfDay(int msecs);
-  fn C_ZN5QTime24fromMSecsSinceStartOfDayEi(arg0: c_int) -> *mut c_void;
-  // proto: static QTime QTime::currentTime();
-  fn C_ZN5QTime11currentTimeEv() -> *mut c_void;
-  // proto:  int QTime::second();
-  fn C_ZNK5QTime6secondEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  int QTime::restart();
-  fn C_ZN5QTime7restartEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  void QTime::start();
-  fn C_ZN5QTime5startEv(qthis: u64 /* *mut c_void*/);
-  // proto:  bool QTime::isNull();
-  fn C_ZNK5QTime6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  int QTime::msecsSinceStartOfDay();
-  fn C_ZNK5QTime20msecsSinceStartOfDayEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  int QTime::hour();
-  fn C_ZNK5QTime4hourEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  int QTime::elapsed();
-  fn C_ZNK5QTime7elapsedEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  QTime QTime::addSecs(int secs);
-  fn C_ZNK5QTime7addSecsEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
-  // proto:  bool QTime::isValid();
-  fn C_ZNK5QTime7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  int QTime::msec();
-  fn C_ZNK5QTime4msecEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  void QTime::QTime(int h, int m, int s, int ms);
-  fn C_ZN5QTimeC2Eiiii(arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> u64;
-  // proto:  int QTime::secsTo(const QTime & );
-  fn C_ZNK5QTime6secsToERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
-  // proto:  void QTime::QTime();
-  fn C_ZN5QTimeC2Ev() -> u64;
-  // proto:  bool QTime::setHMS(int h, int m, int s, int ms);
-  fn C_ZN5QTime6setHMSEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> c_char;
-  // proto:  QString QTime::toString(const QString & format);
-  fn C_ZNK5QTime8toStringERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  int QTime::msecsTo(const QTime & );
-  fn C_ZNK5QTime7msecsToERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
-  // proto:  int QTime::minute();
-  fn C_ZNK5QTime6minuteEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto: static bool QTime::isValid(int h, int m, int s, int ms);
-  fn C_ZN5QTime7isValidEiiii(arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> c_char;
-  // proto: static QTime QTime::fromString(const QString & s, const QString & format);
-  fn C_ZN5QTime10fromStringERK7QStringS2_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn QDateTime_Class_Size() -> c_int;
-  // proto:  QDateTime QDateTime::toLocalTime();
-  fn C_ZNK9QDateTime11toLocalTimeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QDateTime::setOffsetFromUtc(int offsetSeconds);
-  fn C_ZN9QDateTime16setOffsetFromUtcEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto:  QTimeZone QDateTime::timeZone();
-  fn C_ZNK9QDateTime8timeZoneEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QDateTime::setTime(const QTime & time);
-  fn C_ZN9QDateTime7setTimeERK5QTime(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  qint64 QDateTime::toMSecsSinceEpoch();
-  fn C_ZNK9QDateTime17toMSecsSinceEpochEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
-  // proto:  void QDateTime::setTime_t(uint secsSince1Jan1970UTC);
-  fn C_ZN9QDateTime9setTime_tEj(qthis: u64 /* *mut c_void*/, arg0: c_uint);
-  // proto:  void QDateTime::QDateTime(const QDateTime & other);
-  fn C_ZN9QDateTimeC2ERKS_(arg0: *mut c_void) -> u64;
-  // proto:  void QDateTime::QDateTime();
-  fn C_ZN9QDateTimeC2Ev() -> u64;
-  // proto:  bool QDateTime::isDaylightTime();
-  fn C_ZNK9QDateTime14isDaylightTimeEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  bool QDateTime::isValid();
-  fn C_ZNK9QDateTime7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  QString QDateTime::toString(const QString & format);
-  fn C_ZNK9QDateTime8toStringERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  QDateTime QDateTime::addYears(int years);
-  fn C_ZNK9QDateTime8addYearsEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
-  // proto:  void QDateTime::setMSecsSinceEpoch(qint64 msecs);
-  fn C_ZN9QDateTime18setMSecsSinceEpochEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong);
-  // proto:  QDateTime QDateTime::toOffsetFromUtc(int offsetSeconds);
-  fn C_ZNK9QDateTime15toOffsetFromUtcEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
-  // proto:  void QDateTime::setUtcOffset(int seconds);
-  fn C_ZN9QDateTime12setUtcOffsetEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto:  QDateTime QDateTime::addSecs(qint64 secs);
-  fn C_ZNK9QDateTime7addSecsEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong) -> *mut c_void;
-  // proto: static QDateTime QDateTime::fromMSecsSinceEpoch(qint64 msecs);
-  fn C_ZN9QDateTime19fromMSecsSinceEpochEx(arg0: c_longlong) -> *mut c_void;
-  // proto:  void QDateTime::QDateTime(const QDate & date, const QTime & time, const QTimeZone & timeZone);
-  fn C_ZN9QDateTimeC2ERK5QDateRK5QTimeRK9QTimeZone(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> u64;
-  // proto: static QDateTime QDateTime::fromString(const QString & s, const QString & format);
-  fn C_ZN9QDateTime10fromStringERK7QStringS2_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  // proto:  void QDateTime::swap(QDateTime & other);
-  fn C_ZN9QDateTime4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  uint QDateTime::toTime_t();
-  fn C_ZNK9QDateTime8toTime_tEv(qthis: u64 /* *mut c_void*/) -> c_uint;
-  // proto:  QString QDateTime::timeZoneAbbreviation();
-  fn C_ZNK9QDateTime20timeZoneAbbreviationEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QDateTime QDateTime::toUTC();
-  fn C_ZNK9QDateTime5toUTCEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QDate QDateTime::date();
-  fn C_ZNK9QDateTime4dateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  bool QDateTime::isNull();
-  fn C_ZNK9QDateTime6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto: static qint64 QDateTime::currentMSecsSinceEpoch();
-  fn C_ZN9QDateTime22currentMSecsSinceEpochEv() -> c_longlong;
-  // proto:  int QDateTime::offsetFromUtc();
-  fn C_ZNK9QDateTime13offsetFromUtcEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  void QDateTime::QDateTime(const QDate & );
-  fn C_ZN9QDateTimeC2ERK5QDate(arg0: *mut c_void) -> u64;
-  // proto:  QDateTime QDateTime::addMSecs(qint64 msecs);
-  fn C_ZNK9QDateTime8addMSecsEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong) -> *mut c_void;
-  // proto:  qint64 QDateTime::secsTo(const QDateTime & );
-  fn C_ZNK9QDateTime6secsToERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_longlong;
-  // proto:  void QDateTime::~QDateTime();
-  fn C_ZN9QDateTimeD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  QDateTime QDateTime::addMonths(int months);
-  fn C_ZNK9QDateTime9addMonthsEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
-  // proto: static QDateTime QDateTime::currentDateTime();
-  fn C_ZN9QDateTime15currentDateTimeEv() -> *mut c_void;
-  // proto:  QDateTime QDateTime::toTimeZone(const QTimeZone & toZone);
-  fn C_ZNK9QDateTime10toTimeZoneERK9QTimeZone(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  qint64 QDateTime::msecsTo(const QDateTime & );
-  fn C_ZNK9QDateTime7msecsToERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_longlong;
-  // proto: static QDateTime QDateTime::fromTime_t(uint secsSince1Jan1970UTC);
-  fn C_ZN9QDateTime10fromTime_tEj(arg0: c_uint) -> *mut c_void;
-  // proto: static QDateTime QDateTime::fromTime_t(uint secsSince1Jan1970UTC, const QTimeZone & timeZone);
-  fn C_ZN9QDateTime10fromTime_tEjRK9QTimeZone(arg0: c_uint, arg1: *mut c_void) -> *mut c_void;
-  // proto:  void QDateTime::setDate(const QDate & date);
-  fn C_ZN9QDateTime7setDateERK5QDate(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  int QDateTime::utcOffset();
-  fn C_ZNK9QDateTime9utcOffsetEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto: static QDateTime QDateTime::fromMSecsSinceEpoch(qint64 msecs, const QTimeZone & timeZone);
-  fn C_ZN9QDateTime19fromMSecsSinceEpochExRK9QTimeZone(arg0: c_longlong, arg1: *mut c_void) -> *mut c_void;
-  // proto:  QTime QDateTime::time();
-  fn C_ZNK9QDateTime4timeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  qint64 QDateTime::daysTo(const QDateTime & );
-  fn C_ZNK9QDateTime6daysToERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_longlong;
-  // proto:  QDateTime QDateTime::addDays(qint64 days);
-  fn C_ZNK9QDateTime7addDaysEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong) -> *mut c_void;
-  // proto:  void QDateTime::setTimeZone(const QTimeZone & toZone);
-  fn C_ZN9QDateTime11setTimeZoneERK9QTimeZone(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto: static QDateTime QDateTime::currentDateTimeUtc();
-  fn C_ZN9QDateTime18currentDateTimeUtcEv() -> *mut c_void;
-  fn QDate_Class_Size() -> c_int;
-  // proto:  qint64 QDate::daysTo(const QDate & );
-  fn C_ZNK5QDate6daysToERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_longlong;
-  // proto:  QDate QDate::addYears(int years);
-  fn C_ZNK5QDate8addYearsEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
-  // proto:  int QDate::month();
-  fn C_ZNK5QDate5monthEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  qint64 QDate::toJulianDay();
-  fn C_ZNK5QDate11toJulianDayEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
-  // proto:  void QDate::QDate();
-  fn C_ZN5QDateC2Ev() -> u64;
-  // proto:  void QDate::getDate(int * year, int * month, int * day);
-  fn C_ZN5QDate7getDateEPiS0_S0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_int, arg1: *mut c_int, arg2: *mut c_int);
-  // proto: static QDate QDate::currentDate();
-  fn C_ZN5QDate11currentDateEv() -> *mut c_void;
-  // proto:  void QDate::QDate(int y, int m, int d);
-  fn C_ZN5QDateC2Eiii(arg0: c_int, arg1: c_int, arg2: c_int) -> u64;
-  // proto:  int QDate::weekNumber(int * yearNum);
-  fn C_ZNK5QDate10weekNumberEPi(qthis: u64 /* *mut c_void*/, arg0: *mut c_int) -> c_int;
-  // proto:  QString QDate::toString(const QString & format);
-  fn C_ZNK5QDate8toStringERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  int QDate::dayOfYear();
-  fn C_ZNK5QDate9dayOfYearEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  int QDate::day();
-  fn C_ZNK5QDate3dayEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  bool QDate::setDate(int year, int month, int day);
-  fn C_ZN5QDate7setDateEiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int) -> c_char;
-  // proto:  bool QDate::isNull();
-  fn C_ZNK5QDate6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto: static QDate QDate::fromJulianDay(qint64 jd);
-  fn C_ZN5QDate13fromJulianDayEx(arg0: c_longlong) -> *mut c_void;
-  // proto:  bool QDate::isValid();
-  fn C_ZNK5QDate7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  QDate QDate::addDays(qint64 days);
-  fn C_ZNK5QDate7addDaysEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong) -> *mut c_void;
-  // proto: static bool QDate::isValid(int y, int m, int d);
-  fn C_ZN5QDate7isValidEiii(arg0: c_int, arg1: c_int, arg2: c_int) -> c_char;
-  // proto:  int QDate::daysInMonth();
-  fn C_ZNK5QDate11daysInMonthEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto: static QDate QDate::fromString(const QString & s, const QString & format);
-  fn C_ZN5QDate10fromStringERK7QStringS2_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  // proto: static bool QDate::isLeapYear(int year);
-  fn C_ZN5QDate10isLeapYearEi(arg0: c_int) -> c_char;
-  // proto:  int QDate::daysInYear();
-  fn C_ZNK5QDate10daysInYearEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  int QDate::dayOfWeek();
-  fn C_ZNK5QDate9dayOfWeekEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  QDate QDate::addMonths(int months);
-  fn C_ZNK5QDate9addMonthsEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
-  // proto:  int QDate::year();
-  fn C_ZNK5QDate4yearEv(qthis: u64 /* *mut c_void*/) -> c_int;
-} // <= ext block end
 
-// body block begin =>
-// class sizeof(QTime)=4
-#[derive(Default)]
-pub struct QTime {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
-}
 
-// class sizeof(QDateTime)=1
-#[derive(Default)]
+/*
+
+*/
+#[derive(Default)] // class sizeof(QDateTime)=8
 pub struct QDateTime {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
-}
-
-// class sizeof(QDate)=8
-#[derive(Default)]
-pub struct QDate {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
-}
-
-impl /*struct*/ QTime {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QTime {
-    return QTime{qclsinst: qthis, ..Default::default()};
-  }
-}
-  // proto:  QTime QTime::addMSecs(int ms);
-impl /*struct*/ QTime {
-  pub fn addMSecs<RetType, T: QTime_addMSecs<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.addMSecs(self);
-    // return 1;
-  }
-}
-
-pub trait QTime_addMSecs<RetType> {
-  fn addMSecs(self , rsthis: & QTime) -> RetType;
-}
-
-  // proto:  QTime QTime::addMSecs(int ms);
-impl<'a> /*trait*/ QTime_addMSecs<QTime> for (i32) {
-  fn addMSecs(self , rsthis: & QTime) -> QTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QTime8addMSecsEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZNK5QTime8addMSecsEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto: static QTime QTime::fromMSecsSinceStartOfDay(int msecs);
-impl /*struct*/ QTime {
-  pub fn fromMSecsSinceStartOfDay_s<RetType, T: QTime_fromMSecsSinceStartOfDay_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.fromMSecsSinceStartOfDay_s();
-    // return 1;
-  }
-}
-
-pub trait QTime_fromMSecsSinceStartOfDay_s<RetType> {
-  fn fromMSecsSinceStartOfDay_s(self ) -> RetType;
-}
-
-  // proto: static QTime QTime::fromMSecsSinceStartOfDay(int msecs);
-impl<'a> /*trait*/ QTime_fromMSecsSinceStartOfDay_s<QTime> for (i32) {
-  fn fromMSecsSinceStartOfDay_s(self ) -> QTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QTime24fromMSecsSinceStartOfDayEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZN5QTime24fromMSecsSinceStartOfDayEi(arg0)};
-    let mut ret1 = QTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto: static QTime QTime::currentTime();
-impl /*struct*/ QTime {
-  pub fn currentTime_s<RetType, T: QTime_currentTime_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.currentTime_s();
-    // return 1;
-  }
-}
-
-pub trait QTime_currentTime_s<RetType> {
-  fn currentTime_s(self ) -> RetType;
-}
-
-  // proto: static QTime QTime::currentTime();
-impl<'a> /*trait*/ QTime_currentTime_s<QTime> for () {
-  fn currentTime_s(self ) -> QTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QTime11currentTimeEv()};
-    let mut ret = unsafe {C_ZN5QTime11currentTimeEv()};
-    let mut ret1 = QTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  int QTime::second();
-impl /*struct*/ QTime {
-  pub fn second<RetType, T: QTime_second<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.second(self);
-    // return 1;
-  }
-}
-
-pub trait QTime_second<RetType> {
-  fn second(self , rsthis: & QTime) -> RetType;
-}
-
-  // proto:  int QTime::second();
-impl<'a> /*trait*/ QTime_second<i32> for () {
-  fn second(self , rsthis: & QTime) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QTime6secondEv()};
-    let mut ret = unsafe {C_ZNK5QTime6secondEv(rsthis.qclsinst)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  int QTime::restart();
-impl /*struct*/ QTime {
-  pub fn restart<RetType, T: QTime_restart<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.restart(self);
-    // return 1;
-  }
-}
-
-pub trait QTime_restart<RetType> {
-  fn restart(self , rsthis: & QTime) -> RetType;
-}
-
-  // proto:  int QTime::restart();
-impl<'a> /*trait*/ QTime_restart<i32> for () {
-  fn restart(self , rsthis: & QTime) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QTime7restartEv()};
-    let mut ret = unsafe {C_ZN5QTime7restartEv(rsthis.qclsinst)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QTime::start();
-impl /*struct*/ QTime {
-  pub fn start<RetType, T: QTime_start<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.start(self);
-    // return 1;
-  }
-}
-
-pub trait QTime_start<RetType> {
-  fn start(self , rsthis: & QTime) -> RetType;
-}
-
-  // proto:  void QTime::start();
-impl<'a> /*trait*/ QTime_start<()> for () {
-  fn start(self , rsthis: & QTime) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QTime5startEv()};
-     unsafe {C_ZN5QTime5startEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  bool QTime::isNull();
-impl /*struct*/ QTime {
-  pub fn isNull<RetType, T: QTime_isNull<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isNull(self);
-    // return 1;
-  }
-}
-
-pub trait QTime_isNull<RetType> {
-  fn isNull(self , rsthis: & QTime) -> RetType;
-}
-
-  // proto:  bool QTime::isNull();
-impl<'a> /*trait*/ QTime_isNull<i8> for () {
-  fn isNull(self , rsthis: & QTime) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QTime6isNullEv()};
-    let mut ret = unsafe {C_ZNK5QTime6isNullEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  int QTime::msecsSinceStartOfDay();
-impl /*struct*/ QTime {
-  pub fn msecsSinceStartOfDay<RetType, T: QTime_msecsSinceStartOfDay<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.msecsSinceStartOfDay(self);
-    // return 1;
-  }
-}
-
-pub trait QTime_msecsSinceStartOfDay<RetType> {
-  fn msecsSinceStartOfDay(self , rsthis: & QTime) -> RetType;
-}
-
-  // proto:  int QTime::msecsSinceStartOfDay();
-impl<'a> /*trait*/ QTime_msecsSinceStartOfDay<i32> for () {
-  fn msecsSinceStartOfDay(self , rsthis: & QTime) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QTime20msecsSinceStartOfDayEv()};
-    let mut ret = unsafe {C_ZNK5QTime20msecsSinceStartOfDayEv(rsthis.qclsinst)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  int QTime::hour();
-impl /*struct*/ QTime {
-  pub fn hour<RetType, T: QTime_hour<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.hour(self);
-    // return 1;
-  }
-}
-
-pub trait QTime_hour<RetType> {
-  fn hour(self , rsthis: & QTime) -> RetType;
-}
-
-  // proto:  int QTime::hour();
-impl<'a> /*trait*/ QTime_hour<i32> for () {
-  fn hour(self , rsthis: & QTime) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QTime4hourEv()};
-    let mut ret = unsafe {C_ZNK5QTime4hourEv(rsthis.qclsinst)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  int QTime::elapsed();
-impl /*struct*/ QTime {
-  pub fn elapsed<RetType, T: QTime_elapsed<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.elapsed(self);
-    // return 1;
-  }
-}
-
-pub trait QTime_elapsed<RetType> {
-  fn elapsed(self , rsthis: & QTime) -> RetType;
-}
-
-  // proto:  int QTime::elapsed();
-impl<'a> /*trait*/ QTime_elapsed<i32> for () {
-  fn elapsed(self , rsthis: & QTime) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QTime7elapsedEv()};
-    let mut ret = unsafe {C_ZNK5QTime7elapsedEv(rsthis.qclsinst)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QTime QTime::addSecs(int secs);
-impl /*struct*/ QTime {
-  pub fn addSecs<RetType, T: QTime_addSecs<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.addSecs(self);
-    // return 1;
-  }
-}
-
-pub trait QTime_addSecs<RetType> {
-  fn addSecs(self , rsthis: & QTime) -> RetType;
-}
-
-  // proto:  QTime QTime::addSecs(int secs);
-impl<'a> /*trait*/ QTime_addSecs<QTime> for (i32) {
-  fn addSecs(self , rsthis: & QTime) -> QTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QTime7addSecsEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZNK5QTime7addSecsEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  bool QTime::isValid();
-impl /*struct*/ QTime {
-  pub fn isValid<RetType, T: QTime_isValid<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isValid(self);
-    // return 1;
-  }
-}
-
-pub trait QTime_isValid<RetType> {
-  fn isValid(self , rsthis: & QTime) -> RetType;
-}
-
-  // proto:  bool QTime::isValid();
-impl<'a> /*trait*/ QTime_isValid<i8> for () {
-  fn isValid(self , rsthis: & QTime) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QTime7isValidEv()};
-    let mut ret = unsafe {C_ZNK5QTime7isValidEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  int QTime::msec();
-impl /*struct*/ QTime {
-  pub fn msec<RetType, T: QTime_msec<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.msec(self);
-    // return 1;
-  }
-}
-
-pub trait QTime_msec<RetType> {
-  fn msec(self , rsthis: & QTime) -> RetType;
-}
-
-  // proto:  int QTime::msec();
-impl<'a> /*trait*/ QTime_msec<i32> for () {
-  fn msec(self , rsthis: & QTime) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QTime4msecEv()};
-    let mut ret = unsafe {C_ZNK5QTime4msecEv(rsthis.qclsinst)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QTime::QTime(int h, int m, int s, int ms);
-impl /*struct*/ QTime {
-  pub fn new<T: QTime_new>(value: T) -> QTime {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QTime_new {
-  fn new(self) -> QTime;
-}
-
-  // proto:  void QTime::QTime(int h, int m, int s, int ms);
-impl<'a> /*trait*/ QTime_new for (i32, i32, Option<i32>, Option<i32>) {
-  fn new(self) -> QTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QTimeC2Eiiii()};
-    let ctysz: c_int = unsafe{QTime_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
-    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap()})  as c_int;
-    let arg3 = (if self.3.is_none() {0} else {self.3.unwrap()})  as c_int;
-    let qthis: u64 = unsafe {C_ZN5QTimeC2Eiiii(arg0, arg1, arg2, arg3)};
-    let rsthis = QTime{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  int QTime::secsTo(const QTime & );
-impl /*struct*/ QTime {
-  pub fn secsTo<RetType, T: QTime_secsTo<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.secsTo(self);
-    // return 1;
-  }
-}
-
-pub trait QTime_secsTo<RetType> {
-  fn secsTo(self , rsthis: & QTime) -> RetType;
-}
-
-  // proto:  int QTime::secsTo(const QTime & );
-impl<'a> /*trait*/ QTime_secsTo<i32> for (&'a QTime) {
-  fn secsTo(self , rsthis: & QTime) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QTime6secsToERKS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK5QTime6secsToERKS_(rsthis.qclsinst, arg0)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QTime::QTime();
-impl<'a> /*trait*/ QTime_new for () {
-  fn new(self) -> QTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QTimeC2Ev()};
-    let ctysz: c_int = unsafe{QTime_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let qthis: u64 = unsafe {C_ZN5QTimeC2Ev()};
-    let rsthis = QTime{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  bool QTime::setHMS(int h, int m, int s, int ms);
-impl /*struct*/ QTime {
-  pub fn setHMS<RetType, T: QTime_setHMS<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setHMS(self);
-    // return 1;
-  }
-}
-
-pub trait QTime_setHMS<RetType> {
-  fn setHMS(self , rsthis: & QTime) -> RetType;
-}
-
-  // proto:  bool QTime::setHMS(int h, int m, int s, int ms);
-impl<'a> /*trait*/ QTime_setHMS<i8> for (i32, i32, i32, Option<i32>) {
-  fn setHMS(self , rsthis: & QTime) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QTime6setHMSEiiii()};
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2  as c_int;
-    let arg3 = (if self.3.is_none() {0} else {self.3.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZN5QTime6setHMSEiiii(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QString QTime::toString(const QString & format);
-impl /*struct*/ QTime {
-  pub fn toString<RetType, T: QTime_toString<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toString(self);
-    // return 1;
-  }
-}
-
-pub trait QTime_toString<RetType> {
-  fn toString(self , rsthis: & QTime) -> RetType;
-}
-
-  // proto:  QString QTime::toString(const QString & format);
-impl<'a> /*trait*/ QTime_toString<QString> for (&'a QString) {
-  fn toString(self , rsthis: & QTime) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QTime8toStringERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK5QTime8toStringERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  int QTime::msecsTo(const QTime & );
-impl /*struct*/ QTime {
-  pub fn msecsTo<RetType, T: QTime_msecsTo<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.msecsTo(self);
-    // return 1;
-  }
-}
-
-pub trait QTime_msecsTo<RetType> {
-  fn msecsTo(self , rsthis: & QTime) -> RetType;
-}
-
-  // proto:  int QTime::msecsTo(const QTime & );
-impl<'a> /*trait*/ QTime_msecsTo<i32> for (&'a QTime) {
-  fn msecsTo(self , rsthis: & QTime) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QTime7msecsToERKS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK5QTime7msecsToERKS_(rsthis.qclsinst, arg0)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  int QTime::minute();
-impl /*struct*/ QTime {
-  pub fn minute<RetType, T: QTime_minute<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.minute(self);
-    // return 1;
-  }
-}
-
-pub trait QTime_minute<RetType> {
-  fn minute(self , rsthis: & QTime) -> RetType;
-}
-
-  // proto:  int QTime::minute();
-impl<'a> /*trait*/ QTime_minute<i32> for () {
-  fn minute(self , rsthis: & QTime) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QTime6minuteEv()};
-    let mut ret = unsafe {C_ZNK5QTime6minuteEv(rsthis.qclsinst)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto: static bool QTime::isValid(int h, int m, int s, int ms);
-impl /*struct*/ QTime {
-  pub fn isValid_s<RetType, T: QTime_isValid_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.isValid_s();
-    // return 1;
-  }
-}
-
-pub trait QTime_isValid_s<RetType> {
-  fn isValid_s(self ) -> RetType;
-}
-
-  // proto: static bool QTime::isValid(int h, int m, int s, int ms);
-impl<'a> /*trait*/ QTime_isValid_s<i8> for (i32, i32, i32, Option<i32>) {
-  fn isValid_s(self ) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QTime7isValidEiiii()};
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2  as c_int;
-    let arg3 = (if self.3.is_none() {0} else {self.3.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZN5QTime7isValidEiiii(arg0, arg1, arg2, arg3)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto: static QTime QTime::fromString(const QString & s, const QString & format);
-impl /*struct*/ QTime {
-  pub fn fromString_s<RetType, T: QTime_fromString_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.fromString_s();
-    // return 1;
-  }
-}
-
-pub trait QTime_fromString_s<RetType> {
-  fn fromString_s(self ) -> RetType;
-}
-
-  // proto: static QTime QTime::fromString(const QString & s, const QString & format);
-impl<'a> /*trait*/ QTime_fromString_s<QTime> for (&'a QString, &'a QString) {
-  fn fromString_s(self ) -> QTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QTime10fromStringERK7QStringS2_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN5QTime10fromStringERK7QStringS2_(arg0, arg1)};
-    let mut ret1 = QTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
+  // qbase: none,
+  pub qclsinst: usize /* *mut c_void*/,
+}
+// type QDateTime_ITF interface {
+//    QDateTime_PTR() *QDateTime
+//}
+//func (ptr *QDateTime) QDateTime_PTR() *QDateTime { return ptr }
 
 impl /*struct*/ QDateTime {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QDateTime {
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QDateTime {
     return QDateTime{qclsinst: qthis, ..Default::default()};
   }
 }
-  // proto:  QDateTime QDateTime::toLocalTime();
+//impl Deref for QDateTime {
+//  type Target = QDateTimeBASE;
+//
+//  fn deref(&self) -> &QDateTimeBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QDateTimeBASE> for QDateTime {
+//  fn as_ref(& self) -> & QDateTimeBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qdatetime.h:261
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QDateTime()
+
+/*
+Constructs a null datetime (i.e. null date and null time). A null datetime is invalid, since the date is invalid.
+
+See also isValid().
+*/
+// QDateTime() ctx.fn_proto_cpp
 impl /*struct*/ QDateTime {
-  pub fn toLocalTime<RetType, T: QDateTime_toLocalTime<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toLocalTime(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_toLocalTime<RetType> {
-  fn toLocalTime(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  QDateTime QDateTime::toLocalTime();
-impl<'a> /*trait*/ QDateTime_toLocalTime<QDateTime> for () {
-  fn toLocalTime(self , rsthis: & QDateTime) -> QDateTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QDateTime11toLocalTimeEv()};
-    let mut ret = unsafe {C_ZNK9QDateTime11toLocalTimeEv(rsthis.qclsinst)};
-    let mut ret1 = QDateTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QDateTime::setOffsetFromUtc(int offsetSeconds);
-impl /*struct*/ QDateTime {
-  pub fn setOffsetFromUtc<RetType, T: QDateTime_setOffsetFromUtc<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setOffsetFromUtc(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_setOffsetFromUtc<RetType> {
-  fn setOffsetFromUtc(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  void QDateTime::setOffsetFromUtc(int offsetSeconds);
-impl<'a> /*trait*/ QDateTime_setOffsetFromUtc<()> for (i32) {
-  fn setOffsetFromUtc(self , rsthis: & QDateTime) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QDateTime16setOffsetFromUtcEi()};
-    let arg0 = self  as c_int;
-     unsafe {C_ZN9QDateTime16setOffsetFromUtcEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  QTimeZone QDateTime::timeZone();
-impl /*struct*/ QDateTime {
-  pub fn timeZone<RetType, T: QDateTime_timeZone<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.timeZone(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_timeZone<RetType> {
-  fn timeZone(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  QTimeZone QDateTime::timeZone();
-impl<'a> /*trait*/ QDateTime_timeZone<QTimeZone> for () {
-  fn timeZone(self , rsthis: & QDateTime) -> QTimeZone {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QDateTime8timeZoneEv()};
-    let mut ret = unsafe {C_ZNK9QDateTime8timeZoneEv(rsthis.qclsinst)};
-    let mut ret1 = QTimeZone::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QDateTime::setTime(const QTime & time);
-impl /*struct*/ QDateTime {
-  pub fn setTime<RetType, T: QDateTime_setTime<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setTime(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_setTime<RetType> {
-  fn setTime(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  void QDateTime::setTime(const QTime & time);
-impl<'a> /*trait*/ QDateTime_setTime<()> for (&'a QTime) {
-  fn setTime(self , rsthis: & QDateTime) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QDateTime7setTimeERK5QTime()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN9QDateTime7setTimeERK5QTime(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  qint64 QDateTime::toMSecsSinceEpoch();
-impl /*struct*/ QDateTime {
-  pub fn toMSecsSinceEpoch<RetType, T: QDateTime_toMSecsSinceEpoch<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toMSecsSinceEpoch(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_toMSecsSinceEpoch<RetType> {
-  fn toMSecsSinceEpoch(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  qint64 QDateTime::toMSecsSinceEpoch();
-impl<'a> /*trait*/ QDateTime_toMSecsSinceEpoch<i64> for () {
-  fn toMSecsSinceEpoch(self , rsthis: & QDateTime) -> i64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QDateTime17toMSecsSinceEpochEv()};
-    let mut ret = unsafe {C_ZNK9QDateTime17toMSecsSinceEpochEv(rsthis.qclsinst)};
-    return ret as i64; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QDateTime::setTime_t(uint secsSince1Jan1970UTC);
-impl /*struct*/ QDateTime {
-  pub fn setTime_t<RetType, T: QDateTime_setTime_t<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setTime_t(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_setTime_t<RetType> {
-  fn setTime_t(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  void QDateTime::setTime_t(uint secsSince1Jan1970UTC);
-impl<'a> /*trait*/ QDateTime_setTime_t<()> for (u32) {
-  fn setTime_t(self , rsthis: & QDateTime) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QDateTime9setTime_tEj()};
-    let arg0 = self  as c_uint;
-     unsafe {C_ZN9QDateTime9setTime_tEj(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QDateTime::QDateTime(const QDateTime & other);
-impl /*struct*/ QDateTime {
-  pub fn new<T: QDateTime_new>(value: T) -> QDateTime {
-    let rsthis = value.new();
+  pub fn QDateTime_0<T: QDateTime_QDateTime_0>(value: T) -> QDateTime {
+    let rsthis = value.QDateTime_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QDateTime_new {
-  fn new(self) -> QDateTime;
+pub trait QDateTime_QDateTime_0 {
+  fn QDateTime_0(self) -> QDateTime;
 }
-
-  // proto:  void QDateTime::QDateTime(const QDateTime & other);
-impl<'a> /*trait*/ QDateTime_new for (&'a QDateTime) {
-  fn new(self) -> QDateTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QDateTimeC2ERKS_()};
-    let ctysz: c_int = unsafe{QDateTime_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN9QDateTimeC2ERKS_(arg0)};
-    let rsthis = QDateTime{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QDateTime::QDateTime();
-impl<'a> /*trait*/ QDateTime_new for () {
-  fn new(self) -> QDateTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QDateTime() ctx.fn_proto_cpp
+impl<'a> /*trait*/ QDateTime_QDateTime_0 for () {
+  fn QDateTime_0(self) -> QDateTime {
     // unsafe{_ZN9QDateTimeC2Ev()};
-    let ctysz: c_int = unsafe{QDateTime_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let qthis: u64 = unsafe {C_ZN9QDateTimeC2Ev()};
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN9QDateTimeC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QDateTime{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  bool QDateTime::isDaylightTime();
+// /usr/include/qt/QtCore/qdatetime.h:262
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QDateTime(const QDate &)
+
+/*
+Constructs a null datetime (i.e. null date and null time). A null datetime is invalid, since the date is invalid.
+
+See also isValid().
+*/
+// QDateTime(const QDate &) ctx.fn_proto_cpp
 impl /*struct*/ QDateTime {
-  pub fn isDaylightTime<RetType, T: QDateTime_isDaylightTime<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isDaylightTime(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_isDaylightTime<RetType> {
-  fn isDaylightTime(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  bool QDateTime::isDaylightTime();
-impl<'a> /*trait*/ QDateTime_isDaylightTime<i8> for () {
-  fn isDaylightTime(self , rsthis: & QDateTime) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QDateTime14isDaylightTimeEv()};
-    let mut ret = unsafe {C_ZNK9QDateTime14isDaylightTimeEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  bool QDateTime::isValid();
-impl /*struct*/ QDateTime {
-  pub fn isValid<RetType, T: QDateTime_isValid<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isValid(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_isValid<RetType> {
-  fn isValid(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  bool QDateTime::isValid();
-impl<'a> /*trait*/ QDateTime_isValid<i8> for () {
-  fn isValid(self , rsthis: & QDateTime) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QDateTime7isValidEv()};
-    let mut ret = unsafe {C_ZNK9QDateTime7isValidEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QString QDateTime::toString(const QString & format);
-impl /*struct*/ QDateTime {
-  pub fn toString<RetType, T: QDateTime_toString<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toString(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_toString<RetType> {
-  fn toString(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  QString QDateTime::toString(const QString & format);
-impl<'a> /*trait*/ QDateTime_toString<QString> for (&'a QString) {
-  fn toString(self , rsthis: & QDateTime) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QDateTime8toStringERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK9QDateTime8toStringERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QDateTime QDateTime::addYears(int years);
-impl /*struct*/ QDateTime {
-  pub fn addYears<RetType, T: QDateTime_addYears<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.addYears(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_addYears<RetType> {
-  fn addYears(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  QDateTime QDateTime::addYears(int years);
-impl<'a> /*trait*/ QDateTime_addYears<QDateTime> for (i32) {
-  fn addYears(self , rsthis: & QDateTime) -> QDateTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QDateTime8addYearsEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZNK9QDateTime8addYearsEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QDateTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QDateTime::setMSecsSinceEpoch(qint64 msecs);
-impl /*struct*/ QDateTime {
-  pub fn setMSecsSinceEpoch<RetType, T: QDateTime_setMSecsSinceEpoch<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setMSecsSinceEpoch(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_setMSecsSinceEpoch<RetType> {
-  fn setMSecsSinceEpoch(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  void QDateTime::setMSecsSinceEpoch(qint64 msecs);
-impl<'a> /*trait*/ QDateTime_setMSecsSinceEpoch<()> for (i64) {
-  fn setMSecsSinceEpoch(self , rsthis: & QDateTime) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QDateTime18setMSecsSinceEpochEx()};
-    let arg0 = self  as c_longlong;
-     unsafe {C_ZN9QDateTime18setMSecsSinceEpochEx(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  QDateTime QDateTime::toOffsetFromUtc(int offsetSeconds);
-impl /*struct*/ QDateTime {
-  pub fn toOffsetFromUtc<RetType, T: QDateTime_toOffsetFromUtc<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toOffsetFromUtc(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_toOffsetFromUtc<RetType> {
-  fn toOffsetFromUtc(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  QDateTime QDateTime::toOffsetFromUtc(int offsetSeconds);
-impl<'a> /*trait*/ QDateTime_toOffsetFromUtc<QDateTime> for (i32) {
-  fn toOffsetFromUtc(self , rsthis: & QDateTime) -> QDateTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QDateTime15toOffsetFromUtcEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZNK9QDateTime15toOffsetFromUtcEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QDateTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QDateTime::setUtcOffset(int seconds);
-impl /*struct*/ QDateTime {
-  pub fn setUtcOffset<RetType, T: QDateTime_setUtcOffset<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setUtcOffset(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_setUtcOffset<RetType> {
-  fn setUtcOffset(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  void QDateTime::setUtcOffset(int seconds);
-impl<'a> /*trait*/ QDateTime_setUtcOffset<()> for (i32) {
-  fn setUtcOffset(self , rsthis: & QDateTime) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QDateTime12setUtcOffsetEi()};
-    let arg0 = self  as c_int;
-     unsafe {C_ZN9QDateTime12setUtcOffsetEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  QDateTime QDateTime::addSecs(qint64 secs);
-impl /*struct*/ QDateTime {
-  pub fn addSecs<RetType, T: QDateTime_addSecs<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.addSecs(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_addSecs<RetType> {
-  fn addSecs(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  QDateTime QDateTime::addSecs(qint64 secs);
-impl<'a> /*trait*/ QDateTime_addSecs<QDateTime> for (i64) {
-  fn addSecs(self , rsthis: & QDateTime) -> QDateTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QDateTime7addSecsEx()};
-    let arg0 = self  as c_longlong;
-    let mut ret = unsafe {C_ZNK9QDateTime7addSecsEx(rsthis.qclsinst, arg0)};
-    let mut ret1 = QDateTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto: static QDateTime QDateTime::fromMSecsSinceEpoch(qint64 msecs);
-impl /*struct*/ QDateTime {
-  pub fn fromMSecsSinceEpoch_s<RetType, T: QDateTime_fromMSecsSinceEpoch_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.fromMSecsSinceEpoch_s();
-    // return 1;
-  }
-}
-
-pub trait QDateTime_fromMSecsSinceEpoch_s<RetType> {
-  fn fromMSecsSinceEpoch_s(self ) -> RetType;
-}
-
-  // proto: static QDateTime QDateTime::fromMSecsSinceEpoch(qint64 msecs);
-impl<'a> /*trait*/ QDateTime_fromMSecsSinceEpoch_s<QDateTime> for (i64) {
-  fn fromMSecsSinceEpoch_s(self ) -> QDateTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QDateTime19fromMSecsSinceEpochEx()};
-    let arg0 = self  as c_longlong;
-    let mut ret = unsafe {C_ZN9QDateTime19fromMSecsSinceEpochEx(arg0)};
-    let mut ret1 = QDateTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QDateTime::QDateTime(const QDate & date, const QTime & time, const QTimeZone & timeZone);
-impl<'a> /*trait*/ QDateTime_new for (&'a QDate, &'a QTime, &'a QTimeZone) {
-  fn new(self) -> QDateTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QDateTimeC2ERK5QDateRK5QTimeRK9QTimeZone()};
-    let ctysz: c_int = unsafe{QDateTime_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN9QDateTimeC2ERK5QDateRK5QTimeRK9QTimeZone(arg0, arg1, arg2)};
-    let rsthis = QDateTime{qclsinst: qthis, ..Default::default()};
+  pub fn QDateTime_1<T: QDateTime_QDateTime_1>(value: T) -> QDateTime {
+    let rsthis = value.QDateTime_1();
     return rsthis;
     // return 1;
   }
 }
 
-  // proto: static QDateTime QDateTime::fromString(const QString & s, const QString & format);
-impl /*struct*/ QDateTime {
-  pub fn fromString_s<RetType, T: QDateTime_fromString_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.fromString_s();
-    // return 1;
-  }
+pub trait QDateTime_QDateTime_1 {
+  fn QDateTime_1(self) -> QDateTime;
 }
-
-pub trait QDateTime_fromString_s<RetType> {
-  fn fromString_s(self ) -> RetType;
-}
-
-  // proto: static QDateTime QDateTime::fromString(const QString & s, const QString & format);
-impl<'a> /*trait*/ QDateTime_fromString_s<QDateTime> for (&'a QString, &'a QString) {
-  fn fromString_s(self ) -> QDateTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QDateTime10fromStringERK7QStringS2_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN9QDateTime10fromStringERK7QStringS2_(arg0, arg1)};
-    let mut ret1 = QDateTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QDateTime::swap(QDateTime & other);
-impl /*struct*/ QDateTime {
-  pub fn swap<RetType, T: QDateTime_swap<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.swap(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_swap<RetType> {
-  fn swap(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  void QDateTime::swap(QDateTime & other);
-impl<'a> /*trait*/ QDateTime_swap<()> for (&'a QDateTime) {
-  fn swap(self , rsthis: & QDateTime) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QDateTime4swapERS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN9QDateTime4swapERS_(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  uint QDateTime::toTime_t();
-impl /*struct*/ QDateTime {
-  pub fn toTime_t<RetType, T: QDateTime_toTime_t<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toTime_t(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_toTime_t<RetType> {
-  fn toTime_t(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  uint QDateTime::toTime_t();
-impl<'a> /*trait*/ QDateTime_toTime_t<u32> for () {
-  fn toTime_t(self , rsthis: & QDateTime) -> u32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QDateTime8toTime_tEv()};
-    let mut ret = unsafe {C_ZNK9QDateTime8toTime_tEv(rsthis.qclsinst)};
-    return ret as u32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QString QDateTime::timeZoneAbbreviation();
-impl /*struct*/ QDateTime {
-  pub fn timeZoneAbbreviation<RetType, T: QDateTime_timeZoneAbbreviation<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.timeZoneAbbreviation(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_timeZoneAbbreviation<RetType> {
-  fn timeZoneAbbreviation(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  QString QDateTime::timeZoneAbbreviation();
-impl<'a> /*trait*/ QDateTime_timeZoneAbbreviation<QString> for () {
-  fn timeZoneAbbreviation(self , rsthis: & QDateTime) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QDateTime20timeZoneAbbreviationEv()};
-    let mut ret = unsafe {C_ZNK9QDateTime20timeZoneAbbreviationEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QDateTime QDateTime::toUTC();
-impl /*struct*/ QDateTime {
-  pub fn toUTC<RetType, T: QDateTime_toUTC<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toUTC(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_toUTC<RetType> {
-  fn toUTC(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  QDateTime QDateTime::toUTC();
-impl<'a> /*trait*/ QDateTime_toUTC<QDateTime> for () {
-  fn toUTC(self , rsthis: & QDateTime) -> QDateTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QDateTime5toUTCEv()};
-    let mut ret = unsafe {C_ZNK9QDateTime5toUTCEv(rsthis.qclsinst)};
-    let mut ret1 = QDateTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QDate QDateTime::date();
-impl /*struct*/ QDateTime {
-  pub fn date<RetType, T: QDateTime_date<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.date(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_date<RetType> {
-  fn date(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  QDate QDateTime::date();
-impl<'a> /*trait*/ QDateTime_date<QDate> for () {
-  fn date(self , rsthis: & QDateTime) -> QDate {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QDateTime4dateEv()};
-    let mut ret = unsafe {C_ZNK9QDateTime4dateEv(rsthis.qclsinst)};
-    let mut ret1 = QDate::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  bool QDateTime::isNull();
-impl /*struct*/ QDateTime {
-  pub fn isNull<RetType, T: QDateTime_isNull<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isNull(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_isNull<RetType> {
-  fn isNull(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  bool QDateTime::isNull();
-impl<'a> /*trait*/ QDateTime_isNull<i8> for () {
-  fn isNull(self , rsthis: & QDateTime) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QDateTime6isNullEv()};
-    let mut ret = unsafe {C_ZNK9QDateTime6isNullEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto: static qint64 QDateTime::currentMSecsSinceEpoch();
-impl /*struct*/ QDateTime {
-  pub fn currentMSecsSinceEpoch_s<RetType, T: QDateTime_currentMSecsSinceEpoch_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.currentMSecsSinceEpoch_s();
-    // return 1;
-  }
-}
-
-pub trait QDateTime_currentMSecsSinceEpoch_s<RetType> {
-  fn currentMSecsSinceEpoch_s(self ) -> RetType;
-}
-
-  // proto: static qint64 QDateTime::currentMSecsSinceEpoch();
-impl<'a> /*trait*/ QDateTime_currentMSecsSinceEpoch_s<i64> for () {
-  fn currentMSecsSinceEpoch_s(self ) -> i64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QDateTime22currentMSecsSinceEpochEv()};
-    let mut ret = unsafe {C_ZN9QDateTime22currentMSecsSinceEpochEv()};
-    return ret as i64; // 1
-    // return 1;
-  }
-}
-
-  // proto:  int QDateTime::offsetFromUtc();
-impl /*struct*/ QDateTime {
-  pub fn offsetFromUtc<RetType, T: QDateTime_offsetFromUtc<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.offsetFromUtc(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_offsetFromUtc<RetType> {
-  fn offsetFromUtc(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  int QDateTime::offsetFromUtc();
-impl<'a> /*trait*/ QDateTime_offsetFromUtc<i32> for () {
-  fn offsetFromUtc(self , rsthis: & QDateTime) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QDateTime13offsetFromUtcEv()};
-    let mut ret = unsafe {C_ZNK9QDateTime13offsetFromUtcEv(rsthis.qclsinst)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QDateTime::QDateTime(const QDate & );
-impl<'a> /*trait*/ QDateTime_new for (&'a QDate) {
-  fn new(self) -> QDateTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QDateTime(const QDate &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QDateTime_QDateTime_1 for (usize) {
+  fn QDateTime_1(self) -> QDateTime {
     // unsafe{_ZN9QDateTimeC2ERK5QDate()};
-    let ctysz: c_int = unsafe{QDateTime_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN9QDateTimeC2ERK5QDate(arg0)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN9QDateTimeC2ERK5QDate", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QDateTime{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  QDateTime QDateTime::addMSecs(qint64 msecs);
+// /usr/include/qt/QtCore/qdatetime.h:263
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QDateTime(const QDate &, const QTime &, Qt::TimeSpec)
+
+/*
+Constructs a null datetime (i.e. null date and null time). A null datetime is invalid, since the date is invalid.
+
+See also isValid().
+*/
+// QDateTime(const QDate &, const QTime &, Qt::TimeSpec) ctx.fn_proto_cpp
 impl /*struct*/ QDateTime {
-  pub fn addMSecs<RetType, T: QDateTime_addMSecs<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.addMSecs(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_addMSecs<RetType> {
-  fn addMSecs(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  QDateTime QDateTime::addMSecs(qint64 msecs);
-impl<'a> /*trait*/ QDateTime_addMSecs<QDateTime> for (i64) {
-  fn addMSecs(self , rsthis: & QDateTime) -> QDateTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QDateTime8addMSecsEx()};
-    let arg0 = self  as c_longlong;
-    let mut ret = unsafe {C_ZNK9QDateTime8addMSecsEx(rsthis.qclsinst, arg0)};
-    let mut ret1 = QDateTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  qint64 QDateTime::secsTo(const QDateTime & );
-impl /*struct*/ QDateTime {
-  pub fn secsTo<RetType, T: QDateTime_secsTo<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.secsTo(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_secsTo<RetType> {
-  fn secsTo(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  qint64 QDateTime::secsTo(const QDateTime & );
-impl<'a> /*trait*/ QDateTime_secsTo<i64> for (&'a QDateTime) {
-  fn secsTo(self , rsthis: & QDateTime) -> i64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QDateTime6secsToERKS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK9QDateTime6secsToERKS_(rsthis.qclsinst, arg0)};
-    return ret as i64; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QDateTime::~QDateTime();
-impl /*struct*/ QDateTime {
-  pub fn free<RetType, T: QDateTime_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_free<RetType> {
-  fn free(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  void QDateTime::~QDateTime();
-impl<'a> /*trait*/ QDateTime_free<()> for () {
-  fn free(self , rsthis: & QDateTime) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QDateTimeD2Ev()};
-     unsafe {C_ZN9QDateTimeD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  QDateTime QDateTime::addMonths(int months);
-impl /*struct*/ QDateTime {
-  pub fn addMonths<RetType, T: QDateTime_addMonths<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.addMonths(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_addMonths<RetType> {
-  fn addMonths(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  QDateTime QDateTime::addMonths(int months);
-impl<'a> /*trait*/ QDateTime_addMonths<QDateTime> for (i32) {
-  fn addMonths(self , rsthis: & QDateTime) -> QDateTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QDateTime9addMonthsEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZNK9QDateTime9addMonthsEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QDateTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto: static QDateTime QDateTime::currentDateTime();
-impl /*struct*/ QDateTime {
-  pub fn currentDateTime_s<RetType, T: QDateTime_currentDateTime_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.currentDateTime_s();
-    // return 1;
-  }
-}
-
-pub trait QDateTime_currentDateTime_s<RetType> {
-  fn currentDateTime_s(self ) -> RetType;
-}
-
-  // proto: static QDateTime QDateTime::currentDateTime();
-impl<'a> /*trait*/ QDateTime_currentDateTime_s<QDateTime> for () {
-  fn currentDateTime_s(self ) -> QDateTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QDateTime15currentDateTimeEv()};
-    let mut ret = unsafe {C_ZN9QDateTime15currentDateTimeEv()};
-    let mut ret1 = QDateTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QDateTime QDateTime::toTimeZone(const QTimeZone & toZone);
-impl /*struct*/ QDateTime {
-  pub fn toTimeZone<RetType, T: QDateTime_toTimeZone<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toTimeZone(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_toTimeZone<RetType> {
-  fn toTimeZone(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  QDateTime QDateTime::toTimeZone(const QTimeZone & toZone);
-impl<'a> /*trait*/ QDateTime_toTimeZone<QDateTime> for (&'a QTimeZone) {
-  fn toTimeZone(self , rsthis: & QDateTime) -> QDateTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QDateTime10toTimeZoneERK9QTimeZone()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK9QDateTime10toTimeZoneERK9QTimeZone(rsthis.qclsinst, arg0)};
-    let mut ret1 = QDateTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  qint64 QDateTime::msecsTo(const QDateTime & );
-impl /*struct*/ QDateTime {
-  pub fn msecsTo<RetType, T: QDateTime_msecsTo<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.msecsTo(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_msecsTo<RetType> {
-  fn msecsTo(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  qint64 QDateTime::msecsTo(const QDateTime & );
-impl<'a> /*trait*/ QDateTime_msecsTo<i64> for (&'a QDateTime) {
-  fn msecsTo(self , rsthis: & QDateTime) -> i64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QDateTime7msecsToERKS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK9QDateTime7msecsToERKS_(rsthis.qclsinst, arg0)};
-    return ret as i64; // 1
-    // return 1;
-  }
-}
-
-  // proto: static QDateTime QDateTime::fromTime_t(uint secsSince1Jan1970UTC);
-impl /*struct*/ QDateTime {
-  pub fn fromTime_t_s<RetType, T: QDateTime_fromTime_t_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.fromTime_t_s();
-    // return 1;
-  }
-}
-
-pub trait QDateTime_fromTime_t_s<RetType> {
-  fn fromTime_t_s(self ) -> RetType;
-}
-
-  // proto: static QDateTime QDateTime::fromTime_t(uint secsSince1Jan1970UTC);
-impl<'a> /*trait*/ QDateTime_fromTime_t_s<QDateTime> for (u32) {
-  fn fromTime_t_s(self ) -> QDateTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QDateTime10fromTime_tEj()};
-    let arg0 = self  as c_uint;
-    let mut ret = unsafe {C_ZN9QDateTime10fromTime_tEj(arg0)};
-    let mut ret1 = QDateTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto: static QDateTime QDateTime::fromTime_t(uint secsSince1Jan1970UTC, const QTimeZone & timeZone);
-impl<'a> /*trait*/ QDateTime_fromTime_t_s<QDateTime> for (u32, &'a QTimeZone) {
-  fn fromTime_t_s(self ) -> QDateTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QDateTime10fromTime_tEjRK9QTimeZone()};
-    let arg0 = self.0  as c_uint;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN9QDateTime10fromTime_tEjRK9QTimeZone(arg0, arg1)};
-    let mut ret1 = QDateTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QDateTime::setDate(const QDate & date);
-impl /*struct*/ QDateTime {
-  pub fn setDate<RetType, T: QDateTime_setDate<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setDate(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_setDate<RetType> {
-  fn setDate(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  void QDateTime::setDate(const QDate & date);
-impl<'a> /*trait*/ QDateTime_setDate<()> for (&'a QDate) {
-  fn setDate(self , rsthis: & QDateTime) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QDateTime7setDateERK5QDate()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN9QDateTime7setDateERK5QDate(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  int QDateTime::utcOffset();
-impl /*struct*/ QDateTime {
-  pub fn utcOffset<RetType, T: QDateTime_utcOffset<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.utcOffset(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_utcOffset<RetType> {
-  fn utcOffset(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  int QDateTime::utcOffset();
-impl<'a> /*trait*/ QDateTime_utcOffset<i32> for () {
-  fn utcOffset(self , rsthis: & QDateTime) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QDateTime9utcOffsetEv()};
-    let mut ret = unsafe {C_ZNK9QDateTime9utcOffsetEv(rsthis.qclsinst)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto: static QDateTime QDateTime::fromMSecsSinceEpoch(qint64 msecs, const QTimeZone & timeZone);
-impl<'a> /*trait*/ QDateTime_fromMSecsSinceEpoch_s<QDateTime> for (i64, &'a QTimeZone) {
-  fn fromMSecsSinceEpoch_s(self ) -> QDateTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QDateTime19fromMSecsSinceEpochExRK9QTimeZone()};
-    let arg0 = self.0  as c_longlong;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN9QDateTime19fromMSecsSinceEpochExRK9QTimeZone(arg0, arg1)};
-    let mut ret1 = QDateTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QTime QDateTime::time();
-impl /*struct*/ QDateTime {
-  pub fn time<RetType, T: QDateTime_time<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.time(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_time<RetType> {
-  fn time(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  QTime QDateTime::time();
-impl<'a> /*trait*/ QDateTime_time<QTime> for () {
-  fn time(self , rsthis: & QDateTime) -> QTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QDateTime4timeEv()};
-    let mut ret = unsafe {C_ZNK9QDateTime4timeEv(rsthis.qclsinst)};
-    let mut ret1 = QTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  qint64 QDateTime::daysTo(const QDateTime & );
-impl /*struct*/ QDateTime {
-  pub fn daysTo<RetType, T: QDateTime_daysTo<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.daysTo(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_daysTo<RetType> {
-  fn daysTo(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  qint64 QDateTime::daysTo(const QDateTime & );
-impl<'a> /*trait*/ QDateTime_daysTo<i64> for (&'a QDateTime) {
-  fn daysTo(self , rsthis: & QDateTime) -> i64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QDateTime6daysToERKS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK9QDateTime6daysToERKS_(rsthis.qclsinst, arg0)};
-    return ret as i64; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QDateTime QDateTime::addDays(qint64 days);
-impl /*struct*/ QDateTime {
-  pub fn addDays<RetType, T: QDateTime_addDays<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.addDays(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_addDays<RetType> {
-  fn addDays(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  QDateTime QDateTime::addDays(qint64 days);
-impl<'a> /*trait*/ QDateTime_addDays<QDateTime> for (i64) {
-  fn addDays(self , rsthis: & QDateTime) -> QDateTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QDateTime7addDaysEx()};
-    let arg0 = self  as c_longlong;
-    let mut ret = unsafe {C_ZNK9QDateTime7addDaysEx(rsthis.qclsinst, arg0)};
-    let mut ret1 = QDateTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QDateTime::setTimeZone(const QTimeZone & toZone);
-impl /*struct*/ QDateTime {
-  pub fn setTimeZone<RetType, T: QDateTime_setTimeZone<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setTimeZone(self);
-    // return 1;
-  }
-}
-
-pub trait QDateTime_setTimeZone<RetType> {
-  fn setTimeZone(self , rsthis: & QDateTime) -> RetType;
-}
-
-  // proto:  void QDateTime::setTimeZone(const QTimeZone & toZone);
-impl<'a> /*trait*/ QDateTime_setTimeZone<()> for (&'a QTimeZone) {
-  fn setTimeZone(self , rsthis: & QDateTime) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QDateTime11setTimeZoneERK9QTimeZone()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN9QDateTime11setTimeZoneERK9QTimeZone(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto: static QDateTime QDateTime::currentDateTimeUtc();
-impl /*struct*/ QDateTime {
-  pub fn currentDateTimeUtc_s<RetType, T: QDateTime_currentDateTimeUtc_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.currentDateTimeUtc_s();
-    // return 1;
-  }
-}
-
-pub trait QDateTime_currentDateTimeUtc_s<RetType> {
-  fn currentDateTimeUtc_s(self ) -> RetType;
-}
-
-  // proto: static QDateTime QDateTime::currentDateTimeUtc();
-impl<'a> /*trait*/ QDateTime_currentDateTimeUtc_s<QDateTime> for () {
-  fn currentDateTimeUtc_s(self ) -> QDateTime {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QDateTime18currentDateTimeUtcEv()};
-    let mut ret = unsafe {C_ZN9QDateTime18currentDateTimeUtcEv()};
-    let mut ret1 = QDateTime::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-impl /*struct*/ QDate {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QDate {
-    return QDate{qclsinst: qthis, ..Default::default()};
-  }
-}
-  // proto:  qint64 QDate::daysTo(const QDate & );
-impl /*struct*/ QDate {
-  pub fn daysTo<RetType, T: QDate_daysTo<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.daysTo(self);
-    // return 1;
-  }
-}
-
-pub trait QDate_daysTo<RetType> {
-  fn daysTo(self , rsthis: & QDate) -> RetType;
-}
-
-  // proto:  qint64 QDate::daysTo(const QDate & );
-impl<'a> /*trait*/ QDate_daysTo<i64> for (&'a QDate) {
-  fn daysTo(self , rsthis: & QDate) -> i64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QDate6daysToERKS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK5QDate6daysToERKS_(rsthis.qclsinst, arg0)};
-    return ret as i64; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QDate QDate::addYears(int years);
-impl /*struct*/ QDate {
-  pub fn addYears<RetType, T: QDate_addYears<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.addYears(self);
-    // return 1;
-  }
-}
-
-pub trait QDate_addYears<RetType> {
-  fn addYears(self , rsthis: & QDate) -> RetType;
-}
-
-  // proto:  QDate QDate::addYears(int years);
-impl<'a> /*trait*/ QDate_addYears<QDate> for (i32) {
-  fn addYears(self , rsthis: & QDate) -> QDate {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QDate8addYearsEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZNK5QDate8addYearsEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QDate::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  int QDate::month();
-impl /*struct*/ QDate {
-  pub fn month<RetType, T: QDate_month<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.month(self);
-    // return 1;
-  }
-}
-
-pub trait QDate_month<RetType> {
-  fn month(self , rsthis: & QDate) -> RetType;
-}
-
-  // proto:  int QDate::month();
-impl<'a> /*trait*/ QDate_month<i32> for () {
-  fn month(self , rsthis: & QDate) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QDate5monthEv()};
-    let mut ret = unsafe {C_ZNK5QDate5monthEv(rsthis.qclsinst)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  qint64 QDate::toJulianDay();
-impl /*struct*/ QDate {
-  pub fn toJulianDay<RetType, T: QDate_toJulianDay<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toJulianDay(self);
-    // return 1;
-  }
-}
-
-pub trait QDate_toJulianDay<RetType> {
-  fn toJulianDay(self , rsthis: & QDate) -> RetType;
-}
-
-  // proto:  qint64 QDate::toJulianDay();
-impl<'a> /*trait*/ QDate_toJulianDay<i64> for () {
-  fn toJulianDay(self , rsthis: & QDate) -> i64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QDate11toJulianDayEv()};
-    let mut ret = unsafe {C_ZNK5QDate11toJulianDayEv(rsthis.qclsinst)};
-    return ret as i64; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QDate::QDate();
-impl /*struct*/ QDate {
-  pub fn new<T: QDate_new>(value: T) -> QDate {
-    let rsthis = value.new();
+  pub fn QDateTime_2<T: QDateTime_QDateTime_2>(value: T) -> QDateTime {
+    let rsthis = value.QDateTime_2();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QDate_new {
-  fn new(self) -> QDate;
+pub trait QDateTime_QDateTime_2 {
+  fn QDateTime_2(self) -> QDateTime;
 }
-
-  // proto:  void QDate::QDate();
-impl<'a> /*trait*/ QDate_new for () {
-  fn new(self) -> QDate {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QDateC2Ev()};
-    let ctysz: c_int = unsafe{QDate_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let qthis: u64 = unsafe {C_ZN5QDateC2Ev()};
-    let rsthis = QDate{qclsinst: qthis, ..Default::default()};
+// QDateTime(const QDate &, const QTime &, Qt::TimeSpec) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QDateTime_QDateTime_2 for (usize,usize,i32) {
+  fn QDateTime_2(self) -> QDateTime {
+    // unsafe{_ZN9QDateTimeC2ERK5QDateRK5QTimeN2Qt8TimeSpecE()};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN9QDateTimeC2ERK5QDateRK5QTimeN2Qt8TimeSpecE", 3,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QDateTime{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QDate::getDate(int * year, int * month, int * day);
-impl /*struct*/ QDate {
-  pub fn getDate<RetType, T: QDate_getDate<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.getDate(self);
-    // return 1;
-  }
-}
+// /usr/include/qt/QtCore/qdatetime.h:265
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QDateTime(const QDate &, const QTime &, Qt::TimeSpec, int)
 
-pub trait QDate_getDate<RetType> {
-  fn getDate(self , rsthis: & QDate) -> RetType;
-}
+/*
+Constructs a null datetime (i.e. null date and null time). A null datetime is invalid, since the date is invalid.
 
-  // proto:  void QDate::getDate(int * year, int * month, int * day);
-impl<'a> /*trait*/ QDate_getDate<()> for (&'a mut Vec<i32>, &'a mut Vec<i32>, &'a mut Vec<i32>) {
-  fn getDate(self , rsthis: & QDate) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QDate7getDateEPiS0_S0_()};
-    let arg0 = self.0.as_ptr()  as *mut c_int;
-    let arg1 = self.1.as_ptr()  as *mut c_int;
-    let arg2 = self.2.as_ptr()  as *mut c_int;
-     unsafe {C_ZN5QDate7getDateEPiS0_S0_(rsthis.qclsinst, arg0, arg1, arg2)};
-    // return 1;
-  }
-}
-
-  // proto: static QDate QDate::currentDate();
-impl /*struct*/ QDate {
-  pub fn currentDate_s<RetType, T: QDate_currentDate_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.currentDate_s();
-    // return 1;
-  }
-}
-
-pub trait QDate_currentDate_s<RetType> {
-  fn currentDate_s(self ) -> RetType;
-}
-
-  // proto: static QDate QDate::currentDate();
-impl<'a> /*trait*/ QDate_currentDate_s<QDate> for () {
-  fn currentDate_s(self ) -> QDate {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QDate11currentDateEv()};
-    let mut ret = unsafe {C_ZN5QDate11currentDateEv()};
-    let mut ret1 = QDate::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QDate::QDate(int y, int m, int d);
-impl<'a> /*trait*/ QDate_new for (i32, i32, i32) {
-  fn new(self) -> QDate {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QDateC2Eiii()};
-    let ctysz: c_int = unsafe{QDate_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2  as c_int;
-    let qthis: u64 = unsafe {C_ZN5QDateC2Eiii(arg0, arg1, arg2)};
-    let rsthis = QDate{qclsinst: qthis, ..Default::default()};
+See also isValid().
+*/
+// QDateTime(const QDate &, const QTime &, Qt::TimeSpec, int) ctx.fn_proto_cpp
+impl /*struct*/ QDateTime {
+  pub fn QDateTime_3<T: QDateTime_QDateTime_3>(value: T) -> QDateTime {
+    let rsthis = value.QDateTime_3();
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  int QDate::weekNumber(int * yearNum);
-impl /*struct*/ QDate {
-  pub fn weekNumber<RetType, T: QDate_weekNumber<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.weekNumber(self);
+pub trait QDateTime_QDateTime_3 {
+  fn QDateTime_3(self) -> QDateTime;
+}
+// QDateTime(const QDate &, const QTime &, Qt::TimeSpec, int) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QDateTime_QDateTime_3 for (usize,usize,i32,i32) {
+  fn QDateTime_3(self) -> QDateTime {
+    // unsafe{_ZN9QDateTimeC2ERK5QDateRK5QTimeN2Qt8TimeSpecEi()};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let arg3 = (&self.3) as *const i32 as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN9QDateTimeC2ERK5QDateRK5QTimeN2Qt8TimeSpecEi", 4,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QDateTime{qclsinst: qthis, ..Default::default()};
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QDate_weekNumber<RetType> {
-  fn weekNumber(self , rsthis: & QDate) -> RetType;
-}
+// /usr/include/qt/QtCore/qdatetime.h:267
+// index:4
+// Public Visibility=Default Availability=Available
+// [-2] void QDateTime(const QDate &, const QTime &, const QTimeZone &)
 
-  // proto:  int QDate::weekNumber(int * yearNum);
-impl<'a> /*trait*/ QDate_weekNumber<i32> for (Option<&'a mut Vec<i32>>) {
-  fn weekNumber(self , rsthis: & QDate) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QDate10weekNumberEPi()};
-    let arg0 = (if self.is_none() {0 as *const i32} else {self.unwrap().as_ptr()})  as *mut c_int;
-    let mut ret = unsafe {C_ZNK5QDate10weekNumberEPi(rsthis.qclsinst, arg0)};
-    return ret as i32; // 1
+/*
+Constructs a null datetime (i.e. null date and null time). A null datetime is invalid, since the date is invalid.
+
+See also isValid().
+*/
+// QDateTime(const QDate &, const QTime &, const QTimeZone &) ctx.fn_proto_cpp
+impl /*struct*/ QDateTime {
+  pub fn QDateTime_4<T: QDateTime_QDateTime_4>(value: T) -> QDateTime {
+    let rsthis = value.QDateTime_4();
+    return rsthis;
     // return 1;
   }
 }
 
-  // proto:  QString QDate::toString(const QString & format);
-impl /*struct*/ QDate {
-  pub fn toString<RetType, T: QDate_toString<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toString(self);
+pub trait QDateTime_QDateTime_4 {
+  fn QDateTime_4(self) -> QDateTime;
+}
+// QDateTime(const QDate &, const QTime &, const QTimeZone &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QDateTime_QDateTime_4 for (usize,usize,usize) {
+  fn QDateTime_4(self) -> QDateTime {
+    // unsafe{_ZN9QDateTimeC2ERK5QDateRK5QTimeRK9QTimeZone()};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN9QDateTimeC2ERK5QDateRK5QTimeRK9QTimeZone", 3,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QDateTime{qclsinst: qthis, ..Default::default()};
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QDate_toString<RetType> {
-  fn toString(self , rsthis: & QDate) -> RetType;
+// /usr/include/qt/QtCore/qdatetime.h:271
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void ~QDateTime()
+
+/*
+
+*/
+pub fn DeleteQDateTime(this :*mut QDateTime) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN9QDateTimeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 8)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qdatetime.h:274
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QDateTime & operator=(QDateTime &&)
+
+/*
+
+*/
+impl /*struct*/ QDateTime {
+  pub fn operator_equal_0<RetType, T: QDateTime_operator_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_operator_equal_0<RetType> {
+  fn operator_equal_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_operator_equal_0<usize> for (usize) {
+  fn operator_equal_0(self , rsthis: & QDateTime) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QDateTimeaSEOS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
 }
 
-  // proto:  QString QDate::toString(const QString & format);
-impl<'a> /*trait*/ QDate_toString<QString> for (&'a QString) {
-  fn toString(self , rsthis: & QDate) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QDate8toStringERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK5QDate8toStringERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+// /usr/include/qt/QtCore/qdatetime.h:276
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QDateTime & operator=(const QDateTime &)
+
+/*
+
+*/
+impl /*struct*/ QDateTime {
+  pub fn operator_equal_1<RetType, T: QDateTime_operator_equal_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_1(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_operator_equal_1<RetType> {
+  fn operator_equal_1(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_operator_equal_1<usize> for (usize) {
+  fn operator_equal_1(self , rsthis: & QDateTime) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QDateTimeaSERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:278
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QDateTime &)
+
+/*
+Swaps this datetime with other. This operation is very fast and never fails.
+
+This function was introduced in  Qt 5.0.
+*/
+impl /*struct*/ QDateTime {
+  pub fn swap_0<RetType, T: QDateTime_swap_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.swap_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_swap_0<RetType> {
+  fn swap_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_swap_0<(/*void*/)> for (usize) {
+  fn swap_0(self , rsthis: & QDateTime) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN9QDateTime4swapERS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-  // proto:  int QDate::dayOfYear();
-impl /*struct*/ QDate {
-  pub fn dayOfYear<RetType, T: QDate_dayOfYear<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.dayOfYear(self);
+// /usr/include/qt/QtCore/qdatetime.h:280
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isNull() const
+
+/*
+Returns true if both the date and the time are null; otherwise returns false. A null datetime is invalid.
+
+See also QDate::isNull(), QTime::isNull(), and isValid().
+*/
+impl /*struct*/ QDateTime {
+  pub fn isNull_0<RetType, T: QDateTime_isNull_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isNull_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_isNull_0<RetType> {
+  fn isNull_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_isNull_0<bool> for () {
+  fn isNull_0(self , rsthis: & QDateTime) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime6isNullEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:281
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isValid() const
+
+/*
+Returns true if both the date and the time are valid and they are valid in the current Qt::TimeSpec, otherwise returns false.
+
+If the timeSpec() is Qt::LocalTime or Qt::TimeZone then the date and time are checked to see if they fall in the Standard Time to Daylight-Saving Time transition hour, i.e. if the transition is at 2am and the clock goes forward to 3am then the time from 02:00:00 to 02:59:59.999 is considered to be invalid.
+
+See also QDate::isValid() and QTime::isValid().
+*/
+impl /*struct*/ QDateTime {
+  pub fn isValid_0<RetType, T: QDateTime_isValid_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isValid_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_isValid_0<RetType> {
+  fn isValid_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_isValid_0<bool> for () {
+  fn isValid_0(self , rsthis: & QDateTime) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime7isValidEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:283
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QDate date() const
+
+/*
+Returns the date part of the datetime.
+
+See also setDate(), time(), and timeSpec().
+*/
+impl /*struct*/ QDateTime {
+  pub fn date_0<RetType, T: QDateTime_date_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.date_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_date_0<RetType> {
+  fn date_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_date_0<usize> for () {
+  fn date_0(self , rsthis: & QDateTime) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime4dateEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:284
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] QTime time() const
+
+/*
+Returns the time part of the datetime.
+
+See also setTime(), date(), and timeSpec().
+*/
+impl /*struct*/ QDateTime {
+  pub fn time_0<RetType, T: QDateTime_time_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.time_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_time_0<RetType> {
+  fn time_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_time_0<usize> for () {
+  fn time_0(self , rsthis: & QDateTime) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime4timeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:285
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] Qt::TimeSpec timeSpec() const
+
+/*
+Returns the time specification of the datetime.
+
+See also setTimeSpec(), date(), time(), and Qt::TimeSpec.
+*/
+impl /*struct*/ QDateTime {
+  pub fn timeSpec_0<RetType, T: QDateTime_timeSpec_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.timeSpec_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_timeSpec_0<RetType> {
+  fn timeSpec_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_timeSpec_0<i32> for () {
+  fn timeSpec_0(self , rsthis: & QDateTime) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime8timeSpecEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:286
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int offsetFromUtc() const
+
+/*
+Returns the current Offset From UTC in seconds.
+
+If the timeSpec() is Qt::OffsetFromUTC this will be the value originally set.
+
+If the timeSpec() is Qt::TimeZone this will be the offset effective in the Time Zone including any Daylight-Saving Offset.
+
+If the timeSpec() is Qt::LocalTime this will be the difference between the Local Time and UTC including any Daylight-Saving Offset.
+
+If the timeSpec() is Qt::UTC this will be 0.
+
+This function was introduced in  Qt 5.2.
+
+See also setOffsetFromUtc().
+*/
+impl /*struct*/ QDateTime {
+  pub fn offsetFromUtc_0<RetType, T: QDateTime_offsetFromUtc_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.offsetFromUtc_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_offsetFromUtc_0<RetType> {
+  fn offsetFromUtc_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_offsetFromUtc_0<i32> for () {
+  fn offsetFromUtc_0(self , rsthis: & QDateTime) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime13offsetFromUtcEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:288
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QTimeZone timeZone() const
+
+/*
+Returns the time zone of the datetime.
+
+If the timeSpec() is Qt::LocalTime then an instance of the current system time zone will be returned. Note however that if you copy this time zone the instance will not remain in sync if the system time zone changes.
+
+This function was introduced in  Qt 5.2.
+
+See also setTimeZone() and Qt::TimeSpec.
+*/
+impl /*struct*/ QDateTime {
+  pub fn timeZone_0<RetType, T: QDateTime_timeZone_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.timeZone_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_timeZone_0<RetType> {
+  fn timeZone_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_timeZone_0<usize> for () {
+  fn timeZone_0(self , rsthis: & QDateTime) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime8timeZoneEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:290
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString timeZoneAbbreviation() const
+
+/*
+Returns the Time Zone Abbreviation for the datetime.
+
+If the timeSpec() is Qt::UTC this will be "UTC".
+
+If the timeSpec() is Qt::OffsetFromUTC this will be in the format "UTC[+-]00:00".
+
+If the timeSpec() is Qt::LocalTime then the host system is queried for the correct abbreviation.
+
+Note that abbreviations may or may not be localized.
+
+Note too that the abbreviation is not guaranteed to be a unique value, i.e. different time zones may have the same abbreviation.
+
+This function was introduced in  Qt 5.2.
+
+See also timeSpec().
+*/
+impl /*struct*/ QDateTime {
+  pub fn timeZoneAbbreviation_0<RetType, T: QDateTime_timeZoneAbbreviation_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.timeZoneAbbreviation_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_timeZoneAbbreviation_0<RetType> {
+  fn timeZoneAbbreviation_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_timeZoneAbbreviation_0<usize> for () {
+  fn timeZoneAbbreviation_0(self , rsthis: & QDateTime) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime20timeZoneAbbreviationEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:291
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isDaylightTime() const
+
+/*
+Returns if this datetime falls in Daylight-Saving Time.
+
+If the Qt::TimeSpec is not Qt::LocalTime or Qt::TimeZone then will always return false.
+
+This function was introduced in  Qt 5.2.
+
+See also timeSpec().
+*/
+impl /*struct*/ QDateTime {
+  pub fn isDaylightTime_0<RetType, T: QDateTime_isDaylightTime_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isDaylightTime_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_isDaylightTime_0<RetType> {
+  fn isDaylightTime_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_isDaylightTime_0<bool> for () {
+  fn isDaylightTime_0(self , rsthis: & QDateTime) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime14isDaylightTimeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:293
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] qint64 toMSecsSinceEpoch() const
+
+/*
+Returns the datetime as the number of milliseconds that have passed since 1970-01-01T00:00:00.000, Coordinated Universal Time (Qt::UTC).
+
+On systems that do not support time zones, this function will behave as if local time were Qt::UTC.
+
+The behavior for this function is undefined if the datetime stored in this object is not valid. However, for all valid dates, this function returns a unique value.
+
+This function was introduced in  Qt 4.7.
+
+See also toSecsSinceEpoch() and setMSecsSinceEpoch().
+*/
+impl /*struct*/ QDateTime {
+  pub fn toMSecsSinceEpoch_0<RetType, T: QDateTime_toMSecsSinceEpoch_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toMSecsSinceEpoch_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_toMSecsSinceEpoch_0<RetType> {
+  fn toMSecsSinceEpoch_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_toMSecsSinceEpoch_0<i64> for () {
+  fn toMSecsSinceEpoch_0(self , rsthis: & QDateTime) -> i64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime17toMSecsSinceEpochEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i64 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:294
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] qint64 toSecsSinceEpoch() const
+
+/*
+Returns the datetime as the number of seconds that have passed since 1970-01-01T00:00:00.000, Coordinated Universal Time (Qt::UTC).
+
+On systems that do not support time zones, this function will behave as if local time were Qt::UTC.
+
+The behavior for this function is undefined if the datetime stored in this object is not valid. However, for all valid dates, this function returns a unique value.
+
+This function was introduced in  Qt 5.8.
+
+See also toMSecsSinceEpoch() and setSecsSinceEpoch().
+*/
+impl /*struct*/ QDateTime {
+  pub fn toSecsSinceEpoch_0<RetType, T: QDateTime_toSecsSinceEpoch_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toSecsSinceEpoch_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_toSecsSinceEpoch_0<RetType> {
+  fn toSecsSinceEpoch_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_toSecsSinceEpoch_0<i64> for () {
+  fn toSecsSinceEpoch_0(self , rsthis: & QDateTime) -> i64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime16toSecsSinceEpochEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i64 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:296
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setDate(const QDate &)
+
+/*
+Sets the date part of this datetime to date. If no time is set yet, it is set to midnight. If date is invalid, this QDateTime becomes invalid.
+
+See also date(), setTime(), and setTimeSpec().
+*/
+impl /*struct*/ QDateTime {
+  pub fn setDate_0<RetType, T: QDateTime_setDate_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setDate_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_setDate_0<RetType> {
+  fn setDate_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_setDate_0<(/*void*/)> for (usize) {
+  fn setDate_0(self , rsthis: & QDateTime) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN9QDateTime7setDateERK5QDate", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QDate_dayOfYear<RetType> {
-  fn dayOfYear(self , rsthis: & QDate) -> RetType;
-}
+// /usr/include/qt/QtCore/qdatetime.h:297
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setTime(const QTime &)
 
-  // proto:  int QDate::dayOfYear();
-impl<'a> /*trait*/ QDate_dayOfYear<i32> for () {
-  fn dayOfYear(self , rsthis: & QDate) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QDate9dayOfYearEv()};
-    let mut ret = unsafe {C_ZNK5QDate9dayOfYearEv(rsthis.qclsinst)};
-    return ret as i32; // 1
+/*
+Sets the time part of this datetime to time. If time is not valid, this function sets it to midnight. Therefore, it's possible to clear any set time in a QDateTime by setting it to a default QTime:
+
+
+  QDateTime dt = QDateTime::currentDateTime();
+  dt.setTime(QTime());
+
+
+
+See also time(), setDate(), and setTimeSpec().
+*/
+impl /*struct*/ QDateTime {
+  pub fn setTime_0<RetType, T: QDateTime_setTime_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setTime_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_setTime_0<RetType> {
+  fn setTime_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_setTime_0<(/*void*/)> for (usize) {
+  fn setTime_0(self , rsthis: & QDateTime) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN9QDateTime7setTimeERK5QTime", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-  // proto:  int QDate::day();
-impl /*struct*/ QDate {
-  pub fn day<RetType, T: QDate_day<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.day(self);
+// /usr/include/qt/QtCore/qdatetime.h:298
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setTimeSpec(Qt::TimeSpec)
+
+/*
+Sets the time specification used in this datetime to spec. The datetime will refer to a different point in time.
+
+If spec is Qt::OffsetFromUTC then the timeSpec() will be set to Qt::UTC, i.e. an effective offset of 0.
+
+If spec is Qt::TimeZone then the spec will be set to Qt::LocalTime, i.e. the current system time zone.
+
+Example:
+
+
+  QDateTime local(QDateTime::currentDateTime());
+  qDebug() << "Local time is:" << local;
+
+  QDateTime UTC(local);
+  UTC.setTimeSpec(Qt::UTC);
+  qDebug() << "UTC time is:" << UTC;
+
+  qDebug() << "There are" << local.secsTo(UTC) << "seconds difference between the datetimes.";
+
+
+
+See also timeSpec(), setDate(), setTime(), setTimeZone(), and Qt::TimeSpec.
+*/
+impl /*struct*/ QDateTime {
+  pub fn setTimeSpec_0<RetType, T: QDateTime_setTimeSpec_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setTimeSpec_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_setTimeSpec_0<RetType> {
+  fn setTimeSpec_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_setTimeSpec_0<(/*void*/)> for (i32) {
+  fn setTimeSpec_0(self , rsthis: & QDateTime) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN9QDateTime11setTimeSpecEN2Qt8TimeSpecE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QDate_day<RetType> {
-  fn day(self , rsthis: & QDate) -> RetType;
-}
+// /usr/include/qt/QtCore/qdatetime.h:299
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setOffsetFromUtc(int)
 
-  // proto:  int QDate::day();
-impl<'a> /*trait*/ QDate_day<i32> for () {
-  fn day(self , rsthis: & QDate) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QDate3dayEv()};
-    let mut ret = unsafe {C_ZNK5QDate3dayEv(rsthis.qclsinst)};
-    return ret as i32; // 1
+/*
+Sets the timeSpec() to Qt::OffsetFromUTC and the offset to offsetSeconds. The datetime will refer to a different point in time.
+
+The maximum and minimum offset is 14 positive or negative hours. If offsetSeconds is larger or smaller than that, then the result is undefined.
+
+If offsetSeconds is 0 then the timeSpec() will be set to Qt::UTC.
+
+This function was introduced in  Qt 5.2.
+
+See also isValid() and offsetFromUtc().
+*/
+impl /*struct*/ QDateTime {
+  pub fn setOffsetFromUtc_0<RetType, T: QDateTime_setOffsetFromUtc_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setOffsetFromUtc_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_setOffsetFromUtc_0<RetType> {
+  fn setOffsetFromUtc_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_setOffsetFromUtc_0<(/*void*/)> for (i32) {
+  fn setOffsetFromUtc_0(self , rsthis: & QDateTime) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN9QDateTime16setOffsetFromUtcEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-  // proto:  bool QDate::setDate(int year, int month, int day);
-impl /*struct*/ QDate {
-  pub fn setDate<RetType, T: QDate_setDate<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setDate(self);
+// /usr/include/qt/QtCore/qdatetime.h:301
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setTimeZone(const QTimeZone &)
+
+/*
+Sets the time zone used in this datetime to toZone. The datetime will refer to a different point in time.
+
+If toZone is invalid then the datetime will be invalid.
+
+This function was introduced in  Qt 5.2.
+
+See also timeZone() and Qt::TimeSpec.
+*/
+impl /*struct*/ QDateTime {
+  pub fn setTimeZone_0<RetType, T: QDateTime_setTimeZone_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setTimeZone_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_setTimeZone_0<RetType> {
+  fn setTimeZone_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_setTimeZone_0<(/*void*/)> for (usize) {
+  fn setTimeZone_0(self , rsthis: & QDateTime) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN9QDateTime11setTimeZoneERK9QTimeZone", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QDate_setDate<RetType> {
-  fn setDate(self , rsthis: & QDate) -> RetType;
-}
+// /usr/include/qt/QtCore/qdatetime.h:303
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setMSecsSinceEpoch(qint64)
 
-  // proto:  bool QDate::setDate(int year, int month, int day);
-impl<'a> /*trait*/ QDate_setDate<i8> for (i32, i32, i32) {
-  fn setDate(self , rsthis: & QDate) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QDate7setDateEiii()};
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2  as c_int;
-    let mut ret = unsafe {C_ZN5QDate7setDateEiii(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8; // 1
+/*
+Sets the date and time given the number of milliseconds msecs that have passed since 1970-01-01T00:00:00.000, Coordinated Universal Time (Qt::UTC). On systems that do not support time zones this function will behave as if local time were Qt::UTC.
+
+Note that passing the minimum of qint64 (std::numeric_limits<qint64>::min()) to msecs will result in undefined behavior.
+
+This function was introduced in  Qt 4.7.
+
+See also toMSecsSinceEpoch() and setSecsSinceEpoch().
+*/
+impl /*struct*/ QDateTime {
+  pub fn setMSecsSinceEpoch_0<RetType, T: QDateTime_setMSecsSinceEpoch_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setMSecsSinceEpoch_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_setMSecsSinceEpoch_0<RetType> {
+  fn setMSecsSinceEpoch_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_setMSecsSinceEpoch_0<(/*void*/)> for (i64) {
+  fn setMSecsSinceEpoch_0(self , rsthis: & QDateTime) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i64 as usize;
+     qtrt::InvokeQtFunc6("_ZN9QDateTime18setMSecsSinceEpochEx", 1,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-  // proto:  bool QDate::isNull();
-impl /*struct*/ QDate {
-  pub fn isNull<RetType, T: QDate_isNull<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isNull(self);
+// /usr/include/qt/QtCore/qdatetime.h:304
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setSecsSinceEpoch(qint64)
+
+/*
+Sets the date and time given the number of seconds secs that have passed since 1970-01-01T00:00:00.000, Coordinated Universal Time (Qt::UTC). On systems that do not support time zones this function will behave as if local time were Qt::UTC.
+
+This function was introduced in  Qt 5.8.
+
+See also toSecsSinceEpoch() and setMSecsSinceEpoch().
+*/
+impl /*struct*/ QDateTime {
+  pub fn setSecsSinceEpoch_0<RetType, T: QDateTime_setSecsSinceEpoch_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setSecsSinceEpoch_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_setSecsSinceEpoch_0<RetType> {
+  fn setSecsSinceEpoch_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_setSecsSinceEpoch_0<(/*void*/)> for (i64) {
+  fn setSecsSinceEpoch_0(self , rsthis: & QDateTime) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i64 as usize;
+     qtrt::InvokeQtFunc6("_ZN9QDateTime17setSecsSinceEpochEx", 1,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QDate_isNull<RetType> {
-  fn isNull(self , rsthis: & QDate) -> RetType;
+// /usr/include/qt/QtCore/qdatetime.h:307
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString toString(Qt::DateFormat) const
+
+/*
+Returns the datetime as a string. The format parameter determines the format of the result string.
+
+These expressions may be used for the date:
+
+
+ ExpressionOutput
+dthe day as number without a leading zero (1 to 31)
+ddthe day as number with a leading zero (01 to 31)
+dddthe abbreviated localized day name (e.g. 'Mon' to 'Sun'). Uses the system locale to localize the name, i.e. QLocale::system().
+ddddthe long localized day name (e.g. 'Monday' to 'Sunday'). Uses the system locale to localize the name, i.e. QLocale::system().
+Mthe month as number without a leading zero (1-12)
+MMthe month as number with a leading zero (01-12)
+MMMthe abbreviated localized month name (e.g. 'Jan' to 'Dec'). Uses the system locale to localize the name, i.e. QLocale::system().
+MMMMthe long localized month name (e.g. 'January' to 'December'). Uses the system locale to localize the name, i.e. QLocale::system().
+yythe year as two digit number (00-99)
+yyyythe year as four digit number
+
+
+These expressions may be used for the time:
+
+
+ ExpressionOutput
+hthe hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)
+hhthe hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)
+Hthe hour without a leading zero (0 to 23, even with AM/PM display)
+HHthe hour with a leading zero (00 to 23, even with AM/PM display)
+mthe minute without a leading zero (0 to 59)
+mmthe minute with a leading zero (00 to 59)
+sthe whole second without a leading zero (0 to 59)
+ssthe whole second with a leading zero where applicable (00 to 59)
+zthe fractional part of the second, to go after a decimal point, without trailing zeroes (0 to 999). Thus "s.z" reports the seconds to full available (millisecond) precision without trailing zeroes.
+zzzthe fractional part of the second, to millisecond precision, including trailing zeroes where applicable (000 to 999).
+AP or Ause AM/PM display. A/AP will be replaced by either "AM" or "PM".
+ap or ause am/pm display. a/ap will be replaced by either "am" or "pm".
+tthe timezone (for example "CEST")
+
+
+All other input characters will be ignored. Any sequence of characters that are enclosed in single quotes will be treated as text and not be used as an expression. Two consecutive single quotes ("''") are replaced by a singlequote in the output. Formats without separators (e.g. "HHmm") are currently not supported.
+
+Example format strings (assumed that the QDateTime is 21 May 2001 14:13:09.120):
+
+
+ FormatResult
+dd.MM.yyyy21.05.2001
+ddd MMMM d yyTue May 21 01
+hh:mm:ss.zzz14:13:09.120
+hh:mm:ss.z14:13:09.12
+h:m:s ap2:13:9 pm
+
+
+If the datetime is invalid, an empty string will be returned.
+
+See also fromString(), QDate::toString(), QTime::toString(), and QLocale::toString().
+*/
+impl /*struct*/ QDateTime {
+  pub fn toString_0<RetType, T: QDateTime_toString_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toString_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_toString_0<RetType> {
+  fn toString_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_toString_0<usize> for (i32) {
+  fn toString_0(self , rsthis: & QDateTime) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime8toStringEN2Qt10DateFormatE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
 }
 
-  // proto:  bool QDate::isNull();
-impl<'a> /*trait*/ QDate_isNull<i8> for () {
-  fn isNull(self , rsthis: & QDate) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QDate6isNullEv()};
-    let mut ret = unsafe {C_ZNK5QDate6isNullEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+// /usr/include/qt/QtCore/qdatetime.h:309
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QString toString(const QString &) const
+
+/*
+Returns the datetime as a string. The format parameter determines the format of the result string.
+
+These expressions may be used for the date:
+
+
+ ExpressionOutput
+dthe day as number without a leading zero (1 to 31)
+ddthe day as number with a leading zero (01 to 31)
+dddthe abbreviated localized day name (e.g. 'Mon' to 'Sun'). Uses the system locale to localize the name, i.e. QLocale::system().
+ddddthe long localized day name (e.g. 'Monday' to 'Sunday'). Uses the system locale to localize the name, i.e. QLocale::system().
+Mthe month as number without a leading zero (1-12)
+MMthe month as number with a leading zero (01-12)
+MMMthe abbreviated localized month name (e.g. 'Jan' to 'Dec'). Uses the system locale to localize the name, i.e. QLocale::system().
+MMMMthe long localized month name (e.g. 'January' to 'December'). Uses the system locale to localize the name, i.e. QLocale::system().
+yythe year as two digit number (00-99)
+yyyythe year as four digit number
+
+
+These expressions may be used for the time:
+
+
+ ExpressionOutput
+hthe hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)
+hhthe hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)
+Hthe hour without a leading zero (0 to 23, even with AM/PM display)
+HHthe hour with a leading zero (00 to 23, even with AM/PM display)
+mthe minute without a leading zero (0 to 59)
+mmthe minute with a leading zero (00 to 59)
+sthe whole second without a leading zero (0 to 59)
+ssthe whole second with a leading zero where applicable (00 to 59)
+zthe fractional part of the second, to go after a decimal point, without trailing zeroes (0 to 999). Thus "s.z" reports the seconds to full available (millisecond) precision without trailing zeroes.
+zzzthe fractional part of the second, to millisecond precision, including trailing zeroes where applicable (000 to 999).
+AP or Ause AM/PM display. A/AP will be replaced by either "AM" or "PM".
+ap or ause am/pm display. a/ap will be replaced by either "am" or "pm".
+tthe timezone (for example "CEST")
+
+
+All other input characters will be ignored. Any sequence of characters that are enclosed in single quotes will be treated as text and not be used as an expression. Two consecutive single quotes ("''") are replaced by a singlequote in the output. Formats without separators (e.g. "HHmm") are currently not supported.
+
+Example format strings (assumed that the QDateTime is 21 May 2001 14:13:09.120):
+
+
+ FormatResult
+dd.MM.yyyy21.05.2001
+ddd MMMM d yyTue May 21 01
+hh:mm:ss.zzz14:13:09.120
+hh:mm:ss.z14:13:09.12
+h:m:s ap2:13:9 pm
+
+
+If the datetime is invalid, an empty string will be returned.
+
+See also fromString(), QDate::toString(), QTime::toString(), and QLocale::toString().
+*/
+impl /*struct*/ QDateTime {
+  pub fn toString_1<RetType, T: QDateTime_toString_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toString_1(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_toString_1<RetType> {
+  fn toString_1(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_toString_1<usize> for (usize) {
+  fn toString_1(self , rsthis: & QDateTime) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime8toStringERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:311
+// index:2
+// Public Visibility=Default Availability=Available
+// [8] QString toString(QStringView) const
+
+/*
+Returns the datetime as a string. The format parameter determines the format of the result string.
+
+These expressions may be used for the date:
+
+
+ ExpressionOutput
+dthe day as number without a leading zero (1 to 31)
+ddthe day as number with a leading zero (01 to 31)
+dddthe abbreviated localized day name (e.g. 'Mon' to 'Sun'). Uses the system locale to localize the name, i.e. QLocale::system().
+ddddthe long localized day name (e.g. 'Monday' to 'Sunday'). Uses the system locale to localize the name, i.e. QLocale::system().
+Mthe month as number without a leading zero (1-12)
+MMthe month as number with a leading zero (01-12)
+MMMthe abbreviated localized month name (e.g. 'Jan' to 'Dec'). Uses the system locale to localize the name, i.e. QLocale::system().
+MMMMthe long localized month name (e.g. 'January' to 'December'). Uses the system locale to localize the name, i.e. QLocale::system().
+yythe year as two digit number (00-99)
+yyyythe year as four digit number
+
+
+These expressions may be used for the time:
+
+
+ ExpressionOutput
+hthe hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)
+hhthe hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)
+Hthe hour without a leading zero (0 to 23, even with AM/PM display)
+HHthe hour with a leading zero (00 to 23, even with AM/PM display)
+mthe minute without a leading zero (0 to 59)
+mmthe minute with a leading zero (00 to 59)
+sthe whole second without a leading zero (0 to 59)
+ssthe whole second with a leading zero where applicable (00 to 59)
+zthe fractional part of the second, to go after a decimal point, without trailing zeroes (0 to 999). Thus "s.z" reports the seconds to full available (millisecond) precision without trailing zeroes.
+zzzthe fractional part of the second, to millisecond precision, including trailing zeroes where applicable (000 to 999).
+AP or Ause AM/PM display. A/AP will be replaced by either "AM" or "PM".
+ap or ause am/pm display. a/ap will be replaced by either "am" or "pm".
+tthe timezone (for example "CEST")
+
+
+All other input characters will be ignored. Any sequence of characters that are enclosed in single quotes will be treated as text and not be used as an expression. Two consecutive single quotes ("''") are replaced by a singlequote in the output. Formats without separators (e.g. "HHmm") are currently not supported.
+
+Example format strings (assumed that the QDateTime is 21 May 2001 14:13:09.120):
+
+
+ FormatResult
+dd.MM.yyyy21.05.2001
+ddd MMMM d yyTue May 21 01
+hh:mm:ss.zzz14:13:09.120
+hh:mm:ss.z14:13:09.12
+h:m:s ap2:13:9 pm
+
+
+If the datetime is invalid, an empty string will be returned.
+
+See also fromString(), QDate::toString(), QTime::toString(), and QLocale::toString().
+*/
+impl /*struct*/ QDateTime {
+  pub fn toString_2<RetType, T: QDateTime_toString_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toString_2(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_toString_2<RetType> {
+  fn toString_2(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_toString_2<usize> for (usize) {
+  fn toString_2(self , rsthis: & QDateTime) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime8toStringE11QStringView", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:313
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QDateTime addDays(qint64) const
+
+/*
+Returns a QDateTime object containing a datetime ndays days later than the datetime of this object (or earlier if ndays is negative).
+
+If the timeSpec() is Qt::LocalTime and the resulting date and time fall in the Standard Time to Daylight-Saving Time transition hour then the result will be adjusted accordingly, i.e. if the transition is at 2am and the clock goes forward to 3am and the result falls between 2am and 3am then the result will be adjusted to fall after 3am.
+
+See also daysTo(), addMonths(), addYears(), and addSecs().
+*/
+impl /*struct*/ QDateTime {
+  pub fn addDays_0<RetType, T: QDateTime_addDays_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.addDays_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_addDays_0<RetType> {
+  fn addDays_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_addDays_0<usize> for (i64) {
+  fn addDays_0(self , rsthis: & QDateTime) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i64 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime7addDaysEx", 1,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:314
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QDateTime addMonths(int) const
+
+/*
+Returns a QDateTime object containing a datetime nmonths months later than the datetime of this object (or earlier if nmonths is negative).
+
+If the timeSpec() is Qt::LocalTime and the resulting date and time fall in the Standard Time to Daylight-Saving Time transition hour then the result will be adjusted accordingly, i.e. if the transition is at 2am and the clock goes forward to 3am and the result falls between 2am and 3am then the result will be adjusted to fall after 3am.
+
+See also daysTo(), addDays(), addYears(), and addSecs().
+*/
+impl /*struct*/ QDateTime {
+  pub fn addMonths_0<RetType, T: QDateTime_addMonths_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.addMonths_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_addMonths_0<RetType> {
+  fn addMonths_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_addMonths_0<usize> for (i32) {
+  fn addMonths_0(self , rsthis: & QDateTime) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime9addMonthsEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:315
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QDateTime addYears(int) const
+
+/*
+Returns a QDateTime object containing a datetime nyears years later than the datetime of this object (or earlier if nyears is negative).
+
+If the timeSpec() is Qt::LocalTime and the resulting date and time fall in the Standard Time to Daylight-Saving Time transition hour then the result will be adjusted accordingly, i.e. if the transition is at 2am and the clock goes forward to 3am and the result falls between 2am and 3am then the result will be adjusted to fall after 3am.
+
+See also daysTo(), addDays(), addMonths(), and addSecs().
+*/
+impl /*struct*/ QDateTime {
+  pub fn addYears_0<RetType, T: QDateTime_addYears_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.addYears_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_addYears_0<RetType> {
+  fn addYears_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_addYears_0<usize> for (i32) {
+  fn addYears_0(self , rsthis: & QDateTime) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime8addYearsEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:316
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QDateTime addSecs(qint64) const
+
+/*
+Returns a QDateTime object containing a datetime s seconds later than the datetime of this object (or earlier if s is negative).
+
+If this datetime is invalid, an invalid datetime will be returned.
+
+See also addMSecs(), secsTo(), addDays(), addMonths(), and addYears().
+*/
+impl /*struct*/ QDateTime {
+  pub fn addSecs_0<RetType, T: QDateTime_addSecs_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.addSecs_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_addSecs_0<RetType> {
+  fn addSecs_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_addSecs_0<usize> for (i64) {
+  fn addSecs_0(self , rsthis: & QDateTime) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i64 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime7addSecsEx", 1,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:317
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QDateTime addMSecs(qint64) const
+
+/*
+Returns a QDateTime object containing a datetime msecs miliseconds later than the datetime of this object (or earlier if msecs is negative).
+
+If this datetime is invalid, an invalid datetime will be returned.
+
+See also addSecs(), msecsTo(), addDays(), addMonths(), and addYears().
+*/
+impl /*struct*/ QDateTime {
+  pub fn addMSecs_0<RetType, T: QDateTime_addMSecs_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.addMSecs_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_addMSecs_0<RetType> {
+  fn addMSecs_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_addMSecs_0<usize> for (i64) {
+  fn addMSecs_0(self , rsthis: & QDateTime) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i64 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime8addMSecsEx", 1,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:319
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QDateTime toTimeSpec(Qt::TimeSpec) const
+
+/*
+Returns a copy of this datetime converted to the given time spec.
+
+If spec is Qt::OffsetFromUTC then it is set to Qt::UTC. To set to a spec of Qt::OffsetFromUTC use toOffsetFromUtc().
+
+If spec is Qt::TimeZone then it is set to Qt::LocalTime, i.e. the local Time Zone.
+
+Example:
+
+
+  QDateTime local(QDateTime::currentDateTime());
+  QDateTime UTC(local.toTimeSpec(Qt::UTC));
+  qDebug() << "Local time is:" << local;
+  qDebug() << "UTC time is:" << UTC;
+  qDebug() << "No difference between times:" << local.secsTo(UTC);
+
+
+
+See also timeSpec(), toTimeZone(), toUTC(), and toLocalTime().
+*/
+impl /*struct*/ QDateTime {
+  pub fn toTimeSpec_0<RetType, T: QDateTime_toTimeSpec_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toTimeSpec_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_toTimeSpec_0<RetType> {
+  fn toTimeSpec_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_toTimeSpec_0<usize> for (i32) {
+  fn toTimeSpec_0(self , rsthis: & QDateTime) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime10toTimeSpecEN2Qt8TimeSpecE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:320
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QDateTime toLocalTime() const
+
+/*
+Returns a datetime containing the date and time information in this datetime, but specified using the Qt::LocalTime definition.
+
+Example:
+
+
+  QDateTime UTC(QDateTime::currentDateTimeUtc());
+  QDateTime local(UTC.toLocalTime());
+  qDebug() << "UTC time is:" << UTC;
+  qDebug() << "Local time is:" << local;
+  qDebug() << "No difference between times:" << UTC.secsTo(local);
+
+
+
+See also toTimeSpec().
+*/
+impl /*struct*/ QDateTime {
+  pub fn toLocalTime_0<RetType, T: QDateTime_toLocalTime_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toLocalTime_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_toLocalTime_0<RetType> {
+  fn toLocalTime_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_toLocalTime_0<usize> for () {
+  fn toLocalTime_0(self , rsthis: & QDateTime) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime11toLocalTimeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:321
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QDateTime toUTC() const
+
+/*
+Returns a datetime containing the date and time information in this datetime, but specified using the Qt::UTC definition.
+
+Example:
+
+
+  QDateTime local(QDateTime::currentDateTime());
+  QDateTime UTC(local.toUTC());
+  qDebug() << "Local time is:" << local;
+  qDebug() << "UTC time is:" << UTC;
+  qDebug() << "No difference between times:" << local.secsTo(UTC);
+
+
+
+See also toTimeSpec().
+*/
+impl /*struct*/ QDateTime {
+  pub fn toUTC_0<RetType, T: QDateTime_toUTC_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toUTC_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_toUTC_0<RetType> {
+  fn toUTC_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_toUTC_0<usize> for () {
+  fn toUTC_0(self , rsthis: & QDateTime) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime5toUTCEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:322
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QDateTime toOffsetFromUtc(int) const
+
+/*
+Returns a copy of this datetime converted to a spec of Qt::OffsetFromUTC with the given offsetSeconds.
+
+If the offsetSeconds equals 0 then a UTC datetime will be returned
+
+This function was introduced in  Qt 5.2.
+
+See also setOffsetFromUtc(), offsetFromUtc(), and toTimeSpec().
+*/
+impl /*struct*/ QDateTime {
+  pub fn toOffsetFromUtc_0<RetType, T: QDateTime_toOffsetFromUtc_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toOffsetFromUtc_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_toOffsetFromUtc_0<RetType> {
+  fn toOffsetFromUtc_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_toOffsetFromUtc_0<usize> for (i32) {
+  fn toOffsetFromUtc_0(self , rsthis: & QDateTime) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime15toOffsetFromUtcEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:324
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QDateTime toTimeZone(const QTimeZone &) const
+
+/*
+Returns a copy of this datetime converted to the given timeZone
+
+This function was introduced in  Qt 5.2.
+
+See also timeZone() and toTimeSpec().
+*/
+impl /*struct*/ QDateTime {
+  pub fn toTimeZone_0<RetType, T: QDateTime_toTimeZone_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toTimeZone_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_toTimeZone_0<RetType> {
+  fn toTimeZone_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_toTimeZone_0<usize> for (usize) {
+  fn toTimeZone_0(self , rsthis: & QDateTime) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime10toTimeZoneERK9QTimeZone", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:327
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] qint64 daysTo(const QDateTime &) const
+
+/*
+Returns the number of days from this datetime to the other datetime. The number of days is counted as the number of times midnight is reached between this datetime to the other datetime. This means that a 10 minute difference from 23:55 to 0:05 the next day counts as one day.
+
+If the other datetime is earlier than this datetime, the value returned is negative.
+
+Example:
+
+
+  QDateTime startDate(QDate(2012, 7, 6), QTime(8, 30, 0));
+  QDateTime endDate(QDate(2012, 7, 7), QTime(16, 30, 0));
+  qDebug() << "Days from startDate to endDate: " << startDate.daysTo(endDate);
+
+  startDate = QDateTime(QDate(2012, 7, 6), QTime(23, 55, 0));
+  endDate = QDateTime(QDate(2012, 7, 7), QTime(0, 5, 0));
+  qDebug() << "Days from startDate to endDate: " << startDate.daysTo(endDate);
+
+  qSwap(startDate, endDate); // Make endDate before startDate.
+  qDebug() << "Days from startDate to endDate: " << startDate.daysTo(endDate);
+
+
+
+See also addDays(), secsTo(), and msecsTo().
+*/
+impl /*struct*/ QDateTime {
+  pub fn daysTo_0<RetType, T: QDateTime_daysTo_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.daysTo_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_daysTo_0<RetType> {
+  fn daysTo_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_daysTo_0<i64> for (usize) {
+  fn daysTo_0(self , rsthis: & QDateTime) -> i64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime6daysToERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i64 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:328
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] qint64 secsTo(const QDateTime &) const
+
+/*
+Returns the number of seconds from this datetime to the other datetime. If the other datetime is earlier than this datetime, the value returned is negative.
+
+Before performing the comparison, the two datetimes are converted to Qt::UTC to ensure that the result is correct if daylight-saving (DST) applies to one of the two datetimes but not the other.
+
+Returns 0 if either datetime is invalid.
+
+Example:
+
+
+  QDateTime now = QDateTime::currentDateTime();
+  QDateTime xmas(QDate(now.date().year(), 12, 25), QTime(0, 0));
+  qDebug("There are %d seconds to Christmas", now.secsTo(xmas));
+
+
+
+See also addSecs(), daysTo(), and QTime::secsTo().
+*/
+impl /*struct*/ QDateTime {
+  pub fn secsTo_0<RetType, T: QDateTime_secsTo_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.secsTo_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_secsTo_0<RetType> {
+  fn secsTo_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_secsTo_0<i64> for (usize) {
+  fn secsTo_0(self , rsthis: & QDateTime) -> i64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime6secsToERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i64 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:329
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] qint64 msecsTo(const QDateTime &) const
+
+/*
+Returns the number of milliseconds from this datetime to the other datetime. If the other datetime is earlier than this datetime, the value returned is negative.
+
+Before performing the comparison, the two datetimes are converted to Qt::UTC to ensure that the result is correct if daylight-saving (DST) applies to one of the two datetimes and but not the other.
+
+Returns 0 if either datetime is invalid.
+
+See also addMSecs(), daysTo(), and QTime::msecsTo().
+*/
+impl /*struct*/ QDateTime {
+  pub fn msecsTo_0<RetType, T: QDateTime_msecsTo_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.msecsTo_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_msecsTo_0<RetType> {
+  fn msecsTo_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_msecsTo_0<i64> for (usize) {
+  fn msecsTo_0(self , rsthis: & QDateTime) -> i64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime7msecsToERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i64 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:331
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QDateTime &) const
+
+/*
+
+*/
+impl /*struct*/ QDateTime {
+  pub fn operator_equal_equal_0<RetType, T: QDateTime_operator_equal_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_equal_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_operator_equal_equal_0<RetType> {
+  fn operator_equal_equal_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_operator_equal_equal_0<bool> for (usize) {
+  fn operator_equal_equal_0(self , rsthis: & QDateTime) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTimeeqERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:332
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QDateTime &) const
+
+/*
+
+*/
+impl /*struct*/ QDateTime {
+  pub fn operator_not_equal_0<RetType, T: QDateTime_operator_not_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_not_equal_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_operator_not_equal_0<RetType> {
+  fn operator_not_equal_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_operator_not_equal_0<bool> for (usize) {
+  fn operator_not_equal_0(self , rsthis: & QDateTime) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTimeneERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:333
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator<(const QDateTime &) const
+
+/*
+
+*/
+impl /*struct*/ QDateTime {
+  pub fn operator_less_than_0<RetType, T: QDateTime_operator_less_than_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_less_than_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_operator_less_than_0<RetType> {
+  fn operator_less_than_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_operator_less_than_0<bool> for (usize) {
+  fn operator_less_than_0(self , rsthis: & QDateTime) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTimeltERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:334
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator<=(const QDateTime &) const
+
+/*
+
+*/
+impl /*struct*/ QDateTime {
+  pub fn operator_less_than_equal_0<RetType, T: QDateTime_operator_less_than_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_less_than_equal_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_operator_less_than_equal_0<RetType> {
+  fn operator_less_than_equal_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_operator_less_than_equal_0<bool> for (usize) {
+  fn operator_less_than_equal_0(self , rsthis: & QDateTime) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTimeleERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:335
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator>(const QDateTime &) const
+
+/*
+
+*/
+impl /*struct*/ QDateTime {
+  pub fn operator_greater_than_0<RetType, T: QDateTime_operator_greater_than_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_greater_than_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_operator_greater_than_0<RetType> {
+  fn operator_greater_than_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_operator_greater_than_0<bool> for (usize) {
+  fn operator_greater_than_0(self , rsthis: & QDateTime) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTimegtERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:336
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator>=(const QDateTime &) const
+
+/*
+
+*/
+impl /*struct*/ QDateTime {
+  pub fn operator_greater_than_equal_0<RetType, T: QDateTime_operator_greater_than_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_greater_than_equal_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_operator_greater_than_equal_0<RetType> {
+  fn operator_greater_than_equal_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_operator_greater_than_equal_0<bool> for (usize) {
+  fn operator_greater_than_equal_0(self , rsthis: & QDateTime) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTimegeERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:339
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setUtcOffset(int)
+
+/*
+
+*/
+impl /*struct*/ QDateTime {
+  pub fn setUtcOffset_0<RetType, T: QDateTime_setUtcOffset_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setUtcOffset_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_setUtcOffset_0<RetType> {
+  fn setUtcOffset_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_setUtcOffset_0<(/*void*/)> for (i32) {
+  fn setUtcOffset_0(self , rsthis: & QDateTime) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN9QDateTime12setUtcOffsetEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-  // proto: static QDate QDate::fromJulianDay(qint64 jd);
-impl /*struct*/ QDate {
-  pub fn fromJulianDay_s<RetType, T: QDate_fromJulianDay_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.fromJulianDay_s();
+// /usr/include/qt/QtCore/qdatetime.h:340
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int utcOffset() const
+
+/*
+
+*/
+impl /*struct*/ QDateTime {
+  pub fn utcOffset_0<RetType, T: QDateTime_utcOffset_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.utcOffset_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_utcOffset_0<RetType> {
+  fn utcOffset_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_utcOffset_0<i32> for () {
+  fn utcOffset_0(self , rsthis: & QDateTime) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime9utcOffsetEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:343
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QDateTime currentDateTime()
+
+/*
+Returns the current datetime, as reported by the system clock, in the local time zone.
+
+See also currentDateTimeUtc(), QDate::currentDate(), QTime::currentTime(), and toTimeSpec().
+*/
+impl /*struct*/ QDateTime {
+  pub fn currentDateTime_0<RetType, T: QDateTime_currentDateTime_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.currentDateTime_0();
+    // return 1;
+  }
+}
+pub trait QDateTime_currentDateTime_0<RetType> {
+  fn currentDateTime_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_currentDateTime_0<usize> for () {
+  fn currentDateTime_0(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QDateTime15currentDateTimeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:344
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QDateTime currentDateTimeUtc()
+
+/*
+Returns the current datetime, as reported by the system clock, in UTC.
+
+This function was introduced in  Qt 4.7.
+
+See also currentDateTime(), QDate::currentDate(), QTime::currentTime(), and toTimeSpec().
+*/
+impl /*struct*/ QDateTime {
+  pub fn currentDateTimeUtc_0<RetType, T: QDateTime_currentDateTimeUtc_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.currentDateTimeUtc_0();
+    // return 1;
+  }
+}
+pub trait QDateTime_currentDateTimeUtc_0<RetType> {
+  fn currentDateTimeUtc_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_currentDateTimeUtc_0<usize> for () {
+  fn currentDateTimeUtc_0(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QDateTime18currentDateTimeUtcEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:346
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QDateTime fromString(const QString &, Qt::DateFormat)
+
+/*
+Returns the QDateTime represented by the string, using the format given, or an invalid datetime if this is not possible.
+
+Note for Qt::TextDate: It is recommended that you use the English short month names (e.g. "Jan"). Although localized month names can also be used, they depend on the user's locale settings.
+
+See also toString() and QLocale::toDateTime().
+*/
+impl /*struct*/ QDateTime {
+  pub fn fromString_0<RetType, T: QDateTime_fromString_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromString_0();
+    // return 1;
+  }
+}
+pub trait QDateTime_fromString_0<RetType> {
+  fn fromString_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_fromString_0<usize> for (usize,i32) {
+  fn fromString_0(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QDateTime10fromStringERK7QStringN2Qt10DateFormatE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:347
+// index:1
+// Public static Visibility=Default Availability=Available
+// [8] QDateTime fromString(const QString &, const QString &)
+
+/*
+Returns the QDateTime represented by the string, using the format given, or an invalid datetime if this is not possible.
+
+Note for Qt::TextDate: It is recommended that you use the English short month names (e.g. "Jan"). Although localized month names can also be used, they depend on the user's locale settings.
+
+See also toString() and QLocale::toDateTime().
+*/
+impl /*struct*/ QDateTime {
+  pub fn fromString_1<RetType, T: QDateTime_fromString_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromString_1();
+    // return 1;
+  }
+}
+pub trait QDateTime_fromString_1<RetType> {
+  fn fromString_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_fromString_1<usize> for (usize,usize) {
+  fn fromString_1(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QDateTime10fromStringERK7QStringS2_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:351
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] uint toTime_t() const
+
+/*
+
+*/
+impl /*struct*/ QDateTime {
+  pub fn toTime_t_0<RetType, T: QDateTime_toTime_t_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toTime_t_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_toTime_t_0<RetType> {
+  fn toTime_t_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_toTime_t_0<u32> for () {
+  fn toTime_t_0(self , rsthis: & QDateTime) -> u32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QDateTime8toTime_tEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: u32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qdatetime.h:352
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setTime_t(uint)
+
+/*
+
+*/
+impl /*struct*/ QDateTime {
+  pub fn setTime_t_0<RetType, T: QDateTime_setTime_t_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setTime_t_0(self);
+    // return 1;
+  }
+}
+pub trait QDateTime_setTime_t_0<RetType> {
+  fn setTime_t_0(self , rsthis: & QDateTime) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_setTime_t_0<(/*void*/)> for (u32) {
+  fn setTime_t_0(self , rsthis: & QDateTime) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const u32 as usize;
+     qtrt::InvokeQtFunc6("_ZN9QDateTime9setTime_tEj", 1,qtrt::FFITY_UINT32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QDate_fromJulianDay_s<RetType> {
-  fn fromJulianDay_s(self ) -> RetType;
-}
+// /usr/include/qt/QtCore/qdatetime.h:353
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QDateTime fromTime_t(uint)
 
-  // proto: static QDate QDate::fromJulianDay(qint64 jd);
-impl<'a> /*trait*/ QDate_fromJulianDay_s<QDate> for (i64) {
-  fn fromJulianDay_s(self ) -> QDate {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QDate13fromJulianDayEx()};
-    let arg0 = self  as c_longlong;
-    let mut ret = unsafe {C_ZN5QDate13fromJulianDayEx(arg0)};
-    let mut ret1 = QDate::inheritFrom(ret as u64);
-    return ret1;
+/*
+
+*/
+impl /*struct*/ QDateTime {
+  pub fn fromTime_t_0<RetType, T: QDateTime_fromTime_t_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromTime_t_0();
     // return 1;
   }
 }
-
-  // proto:  bool QDate::isValid();
-impl /*struct*/ QDate {
-  pub fn isValid<RetType, T: QDate_isValid<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isValid(self);
+pub trait QDateTime_fromTime_t_0<RetType> {
+  fn fromTime_t_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_fromTime_t_0<usize> for (u32) {
+  fn fromTime_t_0(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const u32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QDateTime10fromTime_tEj", 1,qtrt::FFITY_UINT32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QDate_isValid<RetType> {
-  fn isValid(self , rsthis: & QDate) -> RetType;
-}
+// /usr/include/qt/QtCore/qdatetime.h:354
+// index:1
+// Public static Visibility=Default Availability=Available
+// [8] QDateTime fromTime_t(uint, Qt::TimeSpec, int)
 
-  // proto:  bool QDate::isValid();
-impl<'a> /*trait*/ QDate_isValid<i8> for () {
-  fn isValid(self , rsthis: & QDate) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QDate7isValidEv()};
-    let mut ret = unsafe {C_ZNK5QDate7isValidEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+/*
+
+*/
+impl /*struct*/ QDateTime {
+  pub fn fromTime_t_1<RetType, T: QDateTime_fromTime_t_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromTime_t_1();
     // return 1;
   }
 }
-
-  // proto:  QDate QDate::addDays(qint64 days);
-impl /*struct*/ QDate {
-  pub fn addDays<RetType, T: QDate_addDays<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.addDays(self);
+pub trait QDateTime_fromTime_t_1<RetType> {
+  fn fromTime_t_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_fromTime_t_1<usize> for (u32,i32,i32) {
+  fn fromTime_t_1(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const u32 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QDateTime10fromTime_tEjN2Qt8TimeSpecEi", 3,qtrt::FFITY_UINT32,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QDate_addDays<RetType> {
-  fn addDays(self , rsthis: & QDate) -> RetType;
-}
+// /usr/include/qt/QtCore/qdatetime.h:356
+// index:2
+// Public static Visibility=Default Availability=Available
+// [8] QDateTime fromTime_t(uint, const QTimeZone &)
 
-  // proto:  QDate QDate::addDays(qint64 days);
-impl<'a> /*trait*/ QDate_addDays<QDate> for (i64) {
-  fn addDays(self , rsthis: & QDate) -> QDate {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QDate7addDaysEx()};
-    let arg0 = self  as c_longlong;
-    let mut ret = unsafe {C_ZNK5QDate7addDaysEx(rsthis.qclsinst, arg0)};
-    let mut ret1 = QDate::inheritFrom(ret as u64);
-    return ret1;
+/*
+
+*/
+impl /*struct*/ QDateTime {
+  pub fn fromTime_t_2<RetType, T: QDateTime_fromTime_t_2<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromTime_t_2();
     // return 1;
   }
 }
-
-  // proto: static bool QDate::isValid(int y, int m, int d);
-impl /*struct*/ QDate {
-  pub fn isValid_s<RetType, T: QDate_isValid_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.isValid_s();
+pub trait QDateTime_fromTime_t_2<RetType> {
+  fn fromTime_t_2(self ) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_fromTime_t_2<usize> for (u32,usize) {
+  fn fromTime_t_2(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const u32 as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QDateTime10fromTime_tEjRK9QTimeZone", 2,qtrt::FFITY_UINT32,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QDate_isValid_s<RetType> {
-  fn isValid_s(self ) -> RetType;
-}
+// /usr/include/qt/QtCore/qdatetime.h:359
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QDateTime fromMSecsSinceEpoch(qint64)
 
-  // proto: static bool QDate::isValid(int y, int m, int d);
-impl<'a> /*trait*/ QDate_isValid_s<i8> for (i32, i32, i32) {
-  fn isValid_s(self ) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QDate7isValidEiii()};
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2  as c_int;
-    let mut ret = unsafe {C_ZN5QDate7isValidEiii(arg0, arg1, arg2)};
-    return ret as i8; // 1
+/*
+Returns a datetime whose date and time are the number of milliseconds, msecs, that have passed since 1970-01-01T00:00:00.000, Coordinated Universal Time (Qt::UTC), and converted to Qt::LocalTime. On systems that do not support time zones, the time will be set as if local time were Qt::UTC.
+
+Note that there are possible values for msecs that lie outside the valid range of QDateTime, both negative and positive. The behavior of this function is undefined for those values.
+
+This function was introduced in  Qt 4.7.
+
+See also toMSecsSinceEpoch() and setMSecsSinceEpoch().
+*/
+impl /*struct*/ QDateTime {
+  pub fn fromMSecsSinceEpoch_0<RetType, T: QDateTime_fromMSecsSinceEpoch_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromMSecsSinceEpoch_0();
     // return 1;
   }
 }
-
-  // proto:  int QDate::daysInMonth();
-impl /*struct*/ QDate {
-  pub fn daysInMonth<RetType, T: QDate_daysInMonth<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.daysInMonth(self);
+pub trait QDateTime_fromMSecsSinceEpoch_0<RetType> {
+  fn fromMSecsSinceEpoch_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_fromMSecsSinceEpoch_0<usize> for (i64) {
+  fn fromMSecsSinceEpoch_0(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i64 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QDateTime19fromMSecsSinceEpochEx", 1,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QDate_daysInMonth<RetType> {
-  fn daysInMonth(self , rsthis: & QDate) -> RetType;
-}
+// /usr/include/qt/QtCore/qdatetime.h:361
+// index:1
+// Public static Visibility=Default Availability=Available
+// [8] QDateTime fromMSecsSinceEpoch(qint64, Qt::TimeSpec, int)
 
-  // proto:  int QDate::daysInMonth();
-impl<'a> /*trait*/ QDate_daysInMonth<i32> for () {
-  fn daysInMonth(self , rsthis: & QDate) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QDate11daysInMonthEv()};
-    let mut ret = unsafe {C_ZNK5QDate11daysInMonthEv(rsthis.qclsinst)};
-    return ret as i32; // 1
+/*
+Returns a datetime whose date and time are the number of milliseconds, msecs, that have passed since 1970-01-01T00:00:00.000, Coordinated Universal Time (Qt::UTC), and converted to Qt::LocalTime. On systems that do not support time zones, the time will be set as if local time were Qt::UTC.
+
+Note that there are possible values for msecs that lie outside the valid range of QDateTime, both negative and positive. The behavior of this function is undefined for those values.
+
+This function was introduced in  Qt 4.7.
+
+See also toMSecsSinceEpoch() and setMSecsSinceEpoch().
+*/
+impl /*struct*/ QDateTime {
+  pub fn fromMSecsSinceEpoch_1<RetType, T: QDateTime_fromMSecsSinceEpoch_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromMSecsSinceEpoch_1();
     // return 1;
   }
 }
-
-  // proto: static QDate QDate::fromString(const QString & s, const QString & format);
-impl /*struct*/ QDate {
-  pub fn fromString_s<RetType, T: QDate_fromString_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.fromString_s();
+pub trait QDateTime_fromMSecsSinceEpoch_1<RetType> {
+  fn fromMSecsSinceEpoch_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_fromMSecsSinceEpoch_1<usize> for (i64,i32,i32) {
+  fn fromMSecsSinceEpoch_1(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i64 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QDateTime19fromMSecsSinceEpochExN2Qt8TimeSpecEi", 3,qtrt::FFITY_SINT64,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QDate_fromString_s<RetType> {
-  fn fromString_s(self ) -> RetType;
-}
+// /usr/include/qt/QtCore/qdatetime.h:365
+// index:2
+// Public static Visibility=Default Availability=Available
+// [8] QDateTime fromMSecsSinceEpoch(qint64, const QTimeZone &)
 
-  // proto: static QDate QDate::fromString(const QString & s, const QString & format);
-impl<'a> /*trait*/ QDate_fromString_s<QDate> for (&'a QString, &'a QString) {
-  fn fromString_s(self ) -> QDate {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QDate10fromStringERK7QStringS2_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN5QDate10fromStringERK7QStringS2_(arg0, arg1)};
-    let mut ret1 = QDate::inheritFrom(ret as u64);
-    return ret1;
+/*
+Returns a datetime whose date and time are the number of milliseconds, msecs, that have passed since 1970-01-01T00:00:00.000, Coordinated Universal Time (Qt::UTC), and converted to Qt::LocalTime. On systems that do not support time zones, the time will be set as if local time were Qt::UTC.
+
+Note that there are possible values for msecs that lie outside the valid range of QDateTime, both negative and positive. The behavior of this function is undefined for those values.
+
+This function was introduced in  Qt 4.7.
+
+See also toMSecsSinceEpoch() and setMSecsSinceEpoch().
+*/
+impl /*struct*/ QDateTime {
+  pub fn fromMSecsSinceEpoch_2<RetType, T: QDateTime_fromMSecsSinceEpoch_2<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromMSecsSinceEpoch_2();
     // return 1;
   }
 }
-
-  // proto: static bool QDate::isLeapYear(int year);
-impl /*struct*/ QDate {
-  pub fn isLeapYear_s<RetType, T: QDate_isLeapYear_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.isLeapYear_s();
+pub trait QDateTime_fromMSecsSinceEpoch_2<RetType> {
+  fn fromMSecsSinceEpoch_2(self ) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_fromMSecsSinceEpoch_2<usize> for (i64,usize) {
+  fn fromMSecsSinceEpoch_2(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i64 as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QDateTime19fromMSecsSinceEpochExRK9QTimeZone", 2,qtrt::FFITY_SINT64,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QDate_isLeapYear_s<RetType> {
-  fn isLeapYear_s(self ) -> RetType;
-}
+// /usr/include/qt/QtCore/qdatetime.h:362
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QDateTime fromSecsSinceEpoch(qint64, Qt::TimeSpec, int)
 
-  // proto: static bool QDate::isLeapYear(int year);
-impl<'a> /*trait*/ QDate_isLeapYear_s<i8> for (i32) {
-  fn isLeapYear_s(self ) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QDate10isLeapYearEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZN5QDate10isLeapYearEi(arg0)};
-    return ret as i8; // 1
+/*
+Returns a datetime whose date and time are the number of seconds secs that have passed since 1970-01-01T00:00:00.000, Coordinated Universal Time (Qt::UTC) and converted to the given spec.
+
+Note that there are possible values for secs that lie outside the valid range of QDateTime, both negative and positive. The behavior of this function is undefined for those values.
+
+If the spec is not Qt::OffsetFromUTC then the offsetSeconds will be ignored. If the spec is Qt::OffsetFromUTC and the offsetSeconds is 0 then the spec will be set to Qt::UTC, i.e. an offset of 0 seconds.
+
+If spec is Qt::TimeZone then the spec will be set to Qt::LocalTime, i.e. the current system time zone.
+
+This function was introduced in  Qt 5.8.
+
+See also toSecsSinceEpoch() and setSecsSinceEpoch().
+*/
+impl /*struct*/ QDateTime {
+  pub fn fromSecsSinceEpoch_0<RetType, T: QDateTime_fromSecsSinceEpoch_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromSecsSinceEpoch_0();
     // return 1;
   }
 }
-
-  // proto:  int QDate::daysInYear();
-impl /*struct*/ QDate {
-  pub fn daysInYear<RetType, T: QDate_daysInYear<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.daysInYear(self);
+pub trait QDateTime_fromSecsSinceEpoch_0<RetType> {
+  fn fromSecsSinceEpoch_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_fromSecsSinceEpoch_0<usize> for (i64,i32,i32) {
+  fn fromSecsSinceEpoch_0(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i64 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QDateTime18fromSecsSinceEpochExN2Qt8TimeSpecEi", 3,qtrt::FFITY_SINT64,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QDate_daysInYear<RetType> {
-  fn daysInYear(self , rsthis: & QDate) -> RetType;
-}
+// /usr/include/qt/QtCore/qdatetime.h:366
+// index:1
+// Public static Visibility=Default Availability=Available
+// [8] QDateTime fromSecsSinceEpoch(qint64, const QTimeZone &)
 
-  // proto:  int QDate::daysInYear();
-impl<'a> /*trait*/ QDate_daysInYear<i32> for () {
-  fn daysInYear(self , rsthis: & QDate) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QDate10daysInYearEv()};
-    let mut ret = unsafe {C_ZNK5QDate10daysInYearEv(rsthis.qclsinst)};
-    return ret as i32; // 1
+/*
+Returns a datetime whose date and time are the number of seconds secs that have passed since 1970-01-01T00:00:00.000, Coordinated Universal Time (Qt::UTC) and converted to the given spec.
+
+Note that there are possible values for secs that lie outside the valid range of QDateTime, both negative and positive. The behavior of this function is undefined for those values.
+
+If the spec is not Qt::OffsetFromUTC then the offsetSeconds will be ignored. If the spec is Qt::OffsetFromUTC and the offsetSeconds is 0 then the spec will be set to Qt::UTC, i.e. an offset of 0 seconds.
+
+If spec is Qt::TimeZone then the spec will be set to Qt::LocalTime, i.e. the current system time zone.
+
+This function was introduced in  Qt 5.8.
+
+See also toSecsSinceEpoch() and setSecsSinceEpoch().
+*/
+impl /*struct*/ QDateTime {
+  pub fn fromSecsSinceEpoch_1<RetType, T: QDateTime_fromSecsSinceEpoch_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromSecsSinceEpoch_1();
     // return 1;
   }
 }
-
-  // proto:  int QDate::dayOfWeek();
-impl /*struct*/ QDate {
-  pub fn dayOfWeek<RetType, T: QDate_dayOfWeek<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.dayOfWeek(self);
+pub trait QDateTime_fromSecsSinceEpoch_1<RetType> {
+  fn fromSecsSinceEpoch_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_fromSecsSinceEpoch_1<usize> for (i64,usize) {
+  fn fromSecsSinceEpoch_1(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i64 as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QDateTime18fromSecsSinceEpochExRK9QTimeZone", 2,qtrt::FFITY_SINT64,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QDate_dayOfWeek<RetType> {
-  fn dayOfWeek(self , rsthis: & QDate) -> RetType;
-}
+// /usr/include/qt/QtCore/qdatetime.h:369
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] qint64 currentMSecsSinceEpoch()
 
-  // proto:  int QDate::dayOfWeek();
-impl<'a> /*trait*/ QDate_dayOfWeek<i32> for () {
-  fn dayOfWeek(self , rsthis: & QDate) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QDate9dayOfWeekEv()};
-    let mut ret = unsafe {C_ZNK5QDate9dayOfWeekEv(rsthis.qclsinst)};
-    return ret as i32; // 1
+/*
+Returns the number of milliseconds since 1970-01-01T00:00:00 Universal Coordinated Time. This number is like the POSIX time_t variable, but expressed in milliseconds instead.
+
+This function was introduced in  Qt 4.7.
+
+See also currentDateTime(), currentDateTimeUtc(), toTime_t(), and toTimeSpec().
+*/
+impl /*struct*/ QDateTime {
+  pub fn currentMSecsSinceEpoch_0<RetType, T: QDateTime_currentMSecsSinceEpoch_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.currentMSecsSinceEpoch_0();
     // return 1;
   }
 }
-
-  // proto:  QDate QDate::addMonths(int months);
-impl /*struct*/ QDate {
-  pub fn addMonths<RetType, T: QDate_addMonths<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.addMonths(self);
+pub trait QDateTime_currentMSecsSinceEpoch_0<RetType> {
+  fn currentMSecsSinceEpoch_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_currentMSecsSinceEpoch_0<i64> for () {
+  fn currentMSecsSinceEpoch_0(self ) -> i64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QDateTime22currentMSecsSinceEpochEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i64 = Default::default(); return dret;
   }
 }
 
-pub trait QDate_addMonths<RetType> {
-  fn addMonths(self , rsthis: & QDate) -> RetType;
-}
+// /usr/include/qt/QtCore/qdatetime.h:370
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] qint64 currentSecsSinceEpoch()
 
-  // proto:  QDate QDate::addMonths(int months);
-impl<'a> /*trait*/ QDate_addMonths<QDate> for (i32) {
-  fn addMonths(self , rsthis: & QDate) -> QDate {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QDate9addMonthsEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZNK5QDate9addMonthsEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QDate::inheritFrom(ret as u64);
-    return ret1;
+/*
+Returns the number of seconds since 1970-01-01T00:00:00 Universal Coordinated Time.
+
+This function was introduced in  Qt 5.8.
+
+See also currentMSecsSinceEpoch().
+*/
+impl /*struct*/ QDateTime {
+  pub fn currentSecsSinceEpoch_0<RetType, T: QDateTime_currentSecsSinceEpoch_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.currentSecsSinceEpoch_0();
     // return 1;
   }
 }
-
-  // proto:  int QDate::year();
-impl /*struct*/ QDate {
-  pub fn year<RetType, T: QDate_year<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.year(self);
+pub trait QDateTime_currentSecsSinceEpoch_0<RetType> {
+  fn currentSecsSinceEpoch_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QDateTime_currentSecsSinceEpoch_0<i64> for () {
+  fn currentSecsSinceEpoch_0(self ) -> i64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QDateTime21currentSecsSinceEpochEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i64 = Default::default(); return dret;
   }
 }
 
-pub trait QDate_year<RetType> {
-  fn year(self , rsthis: & QDate) -> RetType;
-}
+//  body block end
 
-  // proto:  int QDate::year();
-impl<'a> /*trait*/ QDate_year<i32> for () {
-  fn year(self , rsthis: & QDate) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QDate4yearEv()};
-    let mut ret = unsafe {C_ZNK5QDate4yearEv(rsthis.qclsinst)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
+//  keep block begin
 
-// <= body block end
-
+//  keep block end

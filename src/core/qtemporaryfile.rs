@@ -1,431 +1,628 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qtemporaryfile.h
-// dst-file: /src/core/qtemporaryfile.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QTemporaryFile
+// package qtcore
+// /usr/include/qt/QtCore/qtemporaryfile.h
+// #include <qtemporaryfile.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
-use super::qfile::*; // 773
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 10
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qstring::*; // 773
-use super::qobject::*; // 773
-use super::qobjectdefs::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QTemporaryFile_Class_Size() -> c_int;
-  // proto:  bool QTemporaryFile::autoRemove();
-  fn C_ZNK14QTemporaryFile10autoRemoveEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto: static QTemporaryFile * QTemporaryFile::createLocalFile(QFile & file);
-  fn C_ZN14QTemporaryFile15createLocalFileER5QFile(arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QTemporaryFile::QTemporaryFile(const QString & templateName);
-  fn C_ZN14QTemporaryFileC2ERK7QString(arg0: *mut c_void) -> u64;
-  // proto:  void QTemporaryFile::QTemporaryFile();
-  fn C_ZN14QTemporaryFileC2Ev() -> u64;
-  // proto:  void QTemporaryFile::QTemporaryFile(QObject * parent);
-  fn C_ZN14QTemporaryFileC2EP7QObject(arg0: *mut c_void) -> u64;
-  // proto:  void QTemporaryFile::~QTemporaryFile();
-  fn C_ZN14QTemporaryFileD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  const QMetaObject * QTemporaryFile::metaObject();
-  fn C_ZNK14QTemporaryFile10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QTemporaryFile::setAutoRemove(bool b);
-  fn C_ZN14QTemporaryFile13setAutoRemoveEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
-  // proto:  QString QTemporaryFile::fileName();
-  fn C_ZNK14QTemporaryFile8fileNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString QTemporaryFile::fileTemplate();
-  fn C_ZNK14QTemporaryFile12fileTemplateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto: static QTemporaryFile * QTemporaryFile::createNativeFile(const QString & fileName);
-  fn C_ZN14QTemporaryFile16createNativeFileERK7QString(arg0: *mut c_void) -> *mut c_void;
-  // proto:  bool QTemporaryFile::open();
-  fn C_ZN14QTemporaryFile4openEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto: static QTemporaryFile * QTemporaryFile::createLocalFile(const QString & fileName);
-  fn C_ZN14QTemporaryFile15createLocalFileERK7QString(arg0: *mut c_void) -> *mut c_void;
-  // proto: static QTemporaryFile * QTemporaryFile::createNativeFile(QFile & file);
-  fn C_ZN14QTemporaryFile16createNativeFileER5QFile(arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QTemporaryFile::setFileTemplate(const QString & name);
-  fn C_ZN14QTemporaryFile15setFileTemplateERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QTemporaryFile::QTemporaryFile(const QString & templateName, QObject * parent);
-  fn C_ZN14QTemporaryFileC2ERK7QStringP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> u64;
-} // <= ext block end
+// bool open(QIODevice::OpenMode)
+// func (this *QTemporaryFile) InheritOpen(f func(flags int) bool) {
+//  qtrt.SetAllInheritCallback(this, "open", f)
+// }
 
-// body block begin =>
-// class sizeof(QTemporaryFile)=1
-#[derive(Default)]
+
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QTemporaryFile)=16
 pub struct QTemporaryFile {
   qbase: QFile,
-  pub qclsinst: u64 /* *mut c_void*/,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QTemporaryFile_ITF interface {
+//    QFile_ITF
+//    QTemporaryFile_PTR() *QTemporaryFile
+//}
+//func (ptr *QTemporaryFile) QTemporaryFile_PTR() *QTemporaryFile { return ptr }
 
 impl /*struct*/ QTemporaryFile {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QTemporaryFile {
-    return QTemporaryFile{qbase: QFile::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QTemporaryFile {
+    return QTemporaryFile{qclsinst: qthis, ..Default::default()};
   }
 }
-impl Deref for QTemporaryFile {
-  type Target = QFile;
+//impl Deref for QTemporaryFile {
+//  type Target = QTemporaryFileBASE;
+//
+//  fn deref(&self) -> &QTemporaryFileBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QTemporaryFileBASE> for QTemporaryFile {
+//  fn as_ref(& self) -> & QTemporaryFileBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qtemporaryfile.h:61
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] const QMetaObject * metaObject() const
 
-  fn deref(&self) -> &QFile {
-    return & self.qbase;
-  }
-}
-impl AsRef<QFile> for QTemporaryFile {
-  fn as_ref(& self) -> & QFile {
-    return & self.qbase;
-  }
-}
-  // proto:  bool QTemporaryFile::autoRemove();
+/*
+
+*/
 impl /*struct*/ QTemporaryFile {
-  pub fn autoRemove<RetType, T: QTemporaryFile_autoRemove<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.autoRemove(self);
+  pub fn metaObject_0<RetType, T: QTemporaryFile_metaObject_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.metaObject_0(self);
     // return 1;
   }
 }
-
-pub trait QTemporaryFile_autoRemove<RetType> {
-  fn autoRemove(self , rsthis: & QTemporaryFile) -> RetType;
+pub trait QTemporaryFile_metaObject_0<RetType> {
+  fn metaObject_0(self , rsthis: & QTemporaryFile) -> RetType;
 }
-
-  // proto:  bool QTemporaryFile::autoRemove();
-impl<'a> /*trait*/ QTemporaryFile_autoRemove<i8> for () {
-  fn autoRemove(self , rsthis: & QTemporaryFile) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK14QTemporaryFile10autoRemoveEv()};
-    let mut ret = unsafe {C_ZNK14QTemporaryFile10autoRemoveEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+impl<'a> /*trait*/ QTemporaryFile_metaObject_0<usize> for () {
+  fn metaObject_0(self , rsthis: & QTemporaryFile) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK14QTemporaryFile10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto: static QTemporaryFile * QTemporaryFile::createLocalFile(QFile & file);
+// /usr/include/qt/QtCore/qtemporaryfile.h:66
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QTemporaryFile()
+
+/*
+Constructs a QTemporaryFile using as file template the application name returned by QCoreApplication::applicationName() (otherwise qt_temp) followed by ".XXXXXX". The file is stored in the system's temporary directory, QDir::tempPath().
+
+See also setFileTemplate() and QDir::tempPath().
+*/
+// QTemporaryFile() ctx.fn_proto_cpp
 impl /*struct*/ QTemporaryFile {
-  pub fn createLocalFile_s<RetType, T: QTemporaryFile_createLocalFile_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.createLocalFile_s();
-    // return 1;
-  }
-}
-
-pub trait QTemporaryFile_createLocalFile_s<RetType> {
-  fn createLocalFile_s(self ) -> RetType;
-}
-
-  // proto: static QTemporaryFile * QTemporaryFile::createLocalFile(QFile & file);
-impl<'a> /*trait*/ QTemporaryFile_createLocalFile_s<QTemporaryFile> for (&'a QFile) {
-  fn createLocalFile_s(self ) -> QTemporaryFile {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QTemporaryFile15createLocalFileER5QFile()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN14QTemporaryFile15createLocalFileER5QFile(arg0)};
-    let mut ret1 = QTemporaryFile::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QTemporaryFile::QTemporaryFile(const QString & templateName);
-impl /*struct*/ QTemporaryFile {
-  pub fn new<T: QTemporaryFile_new>(value: T) -> QTemporaryFile {
-    let rsthis = value.new();
+  pub fn QTemporaryFile_0<T: QTemporaryFile_QTemporaryFile_0>(value: T) -> QTemporaryFile {
+    let rsthis = value.QTemporaryFile_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTemporaryFile_new {
-  fn new(self) -> QTemporaryFile;
+pub trait QTemporaryFile_QTemporaryFile_0 {
+  fn QTemporaryFile_0(self) -> QTemporaryFile;
 }
-
-  // proto:  void QTemporaryFile::QTemporaryFile(const QString & templateName);
-impl<'a> /*trait*/ QTemporaryFile_new for (&'a QString) {
-  fn new(self) -> QTemporaryFile {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QTemporaryFileC2ERK7QString()};
-    let ctysz: c_int = unsafe{QTemporaryFile_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN14QTemporaryFileC2ERK7QString(arg0)};
-    let rsthis = QTemporaryFile{qbase: QFile::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QTemporaryFile::QTemporaryFile();
-impl<'a> /*trait*/ QTemporaryFile_new for () {
-  fn new(self) -> QTemporaryFile {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QTemporaryFile() ctx.fn_proto_cpp
+impl<'a> /*trait*/ QTemporaryFile_QTemporaryFile_0 for () {
+  fn QTemporaryFile_0(self) -> QTemporaryFile {
     // unsafe{_ZN14QTemporaryFileC2Ev()};
-    let ctysz: c_int = unsafe{QTemporaryFile_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let qthis: u64 = unsafe {C_ZN14QTemporaryFileC2Ev()};
-    let rsthis = QTemporaryFile{qbase: QFile::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN14QTemporaryFileC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QTemporaryFile{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QTemporaryFile::QTemporaryFile(QObject * parent);
-impl<'a> /*trait*/ QTemporaryFile_new for (&'a QObject) {
-  fn new(self) -> QTemporaryFile {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// /usr/include/qt/QtCore/qtemporaryfile.h:67
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QTemporaryFile(const QString &)
+
+/*
+Constructs a QTemporaryFile using as file template the application name returned by QCoreApplication::applicationName() (otherwise qt_temp) followed by ".XXXXXX". The file is stored in the system's temporary directory, QDir::tempPath().
+
+See also setFileTemplate() and QDir::tempPath().
+*/
+// QTemporaryFile(const QString &) ctx.fn_proto_cpp
+impl /*struct*/ QTemporaryFile {
+  pub fn QTemporaryFile_1<T: QTemporaryFile_QTemporaryFile_1>(value: T) -> QTemporaryFile {
+    let rsthis = value.QTemporaryFile_1();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QTemporaryFile_QTemporaryFile_1 {
+  fn QTemporaryFile_1(self) -> QTemporaryFile;
+}
+// QTemporaryFile(const QString &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QTemporaryFile_QTemporaryFile_1 for (usize) {
+  fn QTemporaryFile_1(self) -> QTemporaryFile {
+    // unsafe{_ZN14QTemporaryFileC2ERK7QString()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN14QTemporaryFileC2ERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QTemporaryFile{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qtemporaryfile.h:69
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QTemporaryFile(QObject *)
+
+/*
+Constructs a QTemporaryFile using as file template the application name returned by QCoreApplication::applicationName() (otherwise qt_temp) followed by ".XXXXXX". The file is stored in the system's temporary directory, QDir::tempPath().
+
+See also setFileTemplate() and QDir::tempPath().
+*/
+// QTemporaryFile(QObject *) ctx.fn_proto_cpp
+impl /*struct*/ QTemporaryFile {
+  pub fn QTemporaryFile_2<T: QTemporaryFile_QTemporaryFile_2>(value: T) -> QTemporaryFile {
+    let rsthis = value.QTemporaryFile_2();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QTemporaryFile_QTemporaryFile_2 {
+  fn QTemporaryFile_2(self) -> QTemporaryFile;
+}
+// QTemporaryFile(QObject *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QTemporaryFile_QTemporaryFile_2 for (usize) {
+  fn QTemporaryFile_2(self) -> QTemporaryFile {
     // unsafe{_ZN14QTemporaryFileC2EP7QObject()};
-    let ctysz: c_int = unsafe{QTemporaryFile_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN14QTemporaryFileC2EP7QObject(arg0)};
-    let rsthis = QTemporaryFile{qbase: QFile::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN14QTemporaryFileC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QTemporaryFile{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QTemporaryFile::~QTemporaryFile();
+// /usr/include/qt/QtCore/qtemporaryfile.h:70
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QTemporaryFile(const QString &, QObject *)
+
+/*
+Constructs a QTemporaryFile using as file template the application name returned by QCoreApplication::applicationName() (otherwise qt_temp) followed by ".XXXXXX". The file is stored in the system's temporary directory, QDir::tempPath().
+
+See also setFileTemplate() and QDir::tempPath().
+*/
+// QTemporaryFile(const QString &, QObject *) ctx.fn_proto_cpp
 impl /*struct*/ QTemporaryFile {
-  pub fn free<RetType, T: QTemporaryFile_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
+  pub fn QTemporaryFile_3<T: QTemporaryFile_QTemporaryFile_3>(value: T) -> QTemporaryFile {
+    let rsthis = value.QTemporaryFile_3();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QTemporaryFile_free<RetType> {
-  fn free(self , rsthis: & QTemporaryFile) -> RetType;
+pub trait QTemporaryFile_QTemporaryFile_3 {
+  fn QTemporaryFile_3(self) -> QTemporaryFile;
 }
-
-  // proto:  void QTemporaryFile::~QTemporaryFile();
-impl<'a> /*trait*/ QTemporaryFile_free<()> for () {
-  fn free(self , rsthis: & QTemporaryFile) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QTemporaryFileD2Ev()};
-     unsafe {C_ZN14QTemporaryFileD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  const QMetaObject * QTemporaryFile::metaObject();
-impl /*struct*/ QTemporaryFile {
-  pub fn metaObject<RetType, T: QTemporaryFile_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.metaObject(self);
-    // return 1;
-  }
-}
-
-pub trait QTemporaryFile_metaObject<RetType> {
-  fn metaObject(self , rsthis: & QTemporaryFile) -> RetType;
-}
-
-  // proto:  const QMetaObject * QTemporaryFile::metaObject();
-impl<'a> /*trait*/ QTemporaryFile_metaObject<QMetaObject> for () {
-  fn metaObject(self , rsthis: & QTemporaryFile) -> QMetaObject {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK14QTemporaryFile10metaObjectEv()};
-    let mut ret = unsafe {C_ZNK14QTemporaryFile10metaObjectEv(rsthis.qclsinst)};
-    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QTemporaryFile::setAutoRemove(bool b);
-impl /*struct*/ QTemporaryFile {
-  pub fn setAutoRemove<RetType, T: QTemporaryFile_setAutoRemove<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setAutoRemove(self);
-    // return 1;
-  }
-}
-
-pub trait QTemporaryFile_setAutoRemove<RetType> {
-  fn setAutoRemove(self , rsthis: & QTemporaryFile) -> RetType;
-}
-
-  // proto:  void QTemporaryFile::setAutoRemove(bool b);
-impl<'a> /*trait*/ QTemporaryFile_setAutoRemove<()> for (i8) {
-  fn setAutoRemove(self , rsthis: & QTemporaryFile) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QTemporaryFile13setAutoRemoveEb()};
-    let arg0 = self  as c_char;
-     unsafe {C_ZN14QTemporaryFile13setAutoRemoveEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  QString QTemporaryFile::fileName();
-impl /*struct*/ QTemporaryFile {
-  pub fn fileName<RetType, T: QTemporaryFile_fileName<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.fileName(self);
-    // return 1;
-  }
-}
-
-pub trait QTemporaryFile_fileName<RetType> {
-  fn fileName(self , rsthis: & QTemporaryFile) -> RetType;
-}
-
-  // proto:  QString QTemporaryFile::fileName();
-impl<'a> /*trait*/ QTemporaryFile_fileName<QString> for () {
-  fn fileName(self , rsthis: & QTemporaryFile) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK14QTemporaryFile8fileNameEv()};
-    let mut ret = unsafe {C_ZNK14QTemporaryFile8fileNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString QTemporaryFile::fileTemplate();
-impl /*struct*/ QTemporaryFile {
-  pub fn fileTemplate<RetType, T: QTemporaryFile_fileTemplate<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.fileTemplate(self);
-    // return 1;
-  }
-}
-
-pub trait QTemporaryFile_fileTemplate<RetType> {
-  fn fileTemplate(self , rsthis: & QTemporaryFile) -> RetType;
-}
-
-  // proto:  QString QTemporaryFile::fileTemplate();
-impl<'a> /*trait*/ QTemporaryFile_fileTemplate<QString> for () {
-  fn fileTemplate(self , rsthis: & QTemporaryFile) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK14QTemporaryFile12fileTemplateEv()};
-    let mut ret = unsafe {C_ZNK14QTemporaryFile12fileTemplateEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto: static QTemporaryFile * QTemporaryFile::createNativeFile(const QString & fileName);
-impl /*struct*/ QTemporaryFile {
-  pub fn createNativeFile_s<RetType, T: QTemporaryFile_createNativeFile_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.createNativeFile_s();
-    // return 1;
-  }
-}
-
-pub trait QTemporaryFile_createNativeFile_s<RetType> {
-  fn createNativeFile_s(self ) -> RetType;
-}
-
-  // proto: static QTemporaryFile * QTemporaryFile::createNativeFile(const QString & fileName);
-impl<'a> /*trait*/ QTemporaryFile_createNativeFile_s<QTemporaryFile> for (&'a QString) {
-  fn createNativeFile_s(self ) -> QTemporaryFile {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QTemporaryFile16createNativeFileERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN14QTemporaryFile16createNativeFileERK7QString(arg0)};
-    let mut ret1 = QTemporaryFile::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  bool QTemporaryFile::open();
-impl /*struct*/ QTemporaryFile {
-  pub fn open<RetType, T: QTemporaryFile_open<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.open(self);
-    // return 1;
-  }
-}
-
-pub trait QTemporaryFile_open<RetType> {
-  fn open(self , rsthis: & QTemporaryFile) -> RetType;
-}
-
-  // proto:  bool QTemporaryFile::open();
-impl<'a> /*trait*/ QTemporaryFile_open<i8> for () {
-  fn open(self , rsthis: & QTemporaryFile) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QTemporaryFile4openEv()};
-    let mut ret = unsafe {C_ZN14QTemporaryFile4openEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto: static QTemporaryFile * QTemporaryFile::createLocalFile(const QString & fileName);
-impl<'a> /*trait*/ QTemporaryFile_createLocalFile_s<QTemporaryFile> for (&'a QString) {
-  fn createLocalFile_s(self ) -> QTemporaryFile {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QTemporaryFile15createLocalFileERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN14QTemporaryFile15createLocalFileERK7QString(arg0)};
-    let mut ret1 = QTemporaryFile::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto: static QTemporaryFile * QTemporaryFile::createNativeFile(QFile & file);
-impl<'a> /*trait*/ QTemporaryFile_createNativeFile_s<QTemporaryFile> for (&'a QFile) {
-  fn createNativeFile_s(self ) -> QTemporaryFile {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QTemporaryFile16createNativeFileER5QFile()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN14QTemporaryFile16createNativeFileER5QFile(arg0)};
-    let mut ret1 = QTemporaryFile::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QTemporaryFile::setFileTemplate(const QString & name);
-impl /*struct*/ QTemporaryFile {
-  pub fn setFileTemplate<RetType, T: QTemporaryFile_setFileTemplate<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setFileTemplate(self);
-    // return 1;
-  }
-}
-
-pub trait QTemporaryFile_setFileTemplate<RetType> {
-  fn setFileTemplate(self , rsthis: & QTemporaryFile) -> RetType;
-}
-
-  // proto:  void QTemporaryFile::setFileTemplate(const QString & name);
-impl<'a> /*trait*/ QTemporaryFile_setFileTemplate<()> for (&'a QString) {
-  fn setFileTemplate(self , rsthis: & QTemporaryFile) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QTemporaryFile15setFileTemplateERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN14QTemporaryFile15setFileTemplateERK7QString(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QTemporaryFile::QTemporaryFile(const QString & templateName, QObject * parent);
-impl<'a> /*trait*/ QTemporaryFile_new for (&'a QString, &'a QObject) {
-  fn new(self) -> QTemporaryFile {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QTemporaryFile(const QString &, QObject *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QTemporaryFile_QTemporaryFile_3 for (usize,usize) {
+  fn QTemporaryFile_3(self) -> QTemporaryFile {
     // unsafe{_ZN14QTemporaryFileC2ERK7QStringP7QObject()};
-    let ctysz: c_int = unsafe{QTemporaryFile_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN14QTemporaryFileC2ERK7QStringP7QObject(arg0, arg1)};
-    let rsthis = QTemporaryFile{qbase: QFile::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN14QTemporaryFileC2ERK7QStringP7QObject", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QTemporaryFile{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qtemporaryfile.h:72
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [-2] void ~QTemporaryFile()
 
+/*
+
+*/
+pub fn DeleteQTemporaryFile(this :*mut QTemporaryFile) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN14QTemporaryFileD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 16)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qtemporaryfile.h:74
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool autoRemove() const
+
+/*
+Returns true if the QTemporaryFile is in auto remove mode. Auto-remove mode will automatically delete the filename from disk upon destruction. This makes it very easy to create your QTemporaryFile object on the stack, fill it with data, read from it, and finally on function return it will automatically clean up after itself.
+
+Auto-remove is on by default.
+
+See also setAutoRemove() and remove().
+*/
+impl /*struct*/ QTemporaryFile {
+  pub fn autoRemove_0<RetType, T: QTemporaryFile_autoRemove_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.autoRemove_0(self);
+    // return 1;
+  }
+}
+pub trait QTemporaryFile_autoRemove_0<RetType> {
+  fn autoRemove_0(self , rsthis: & QTemporaryFile) -> RetType;
+}
+impl<'a> /*trait*/ QTemporaryFile_autoRemove_0<bool> for () {
+  fn autoRemove_0(self , rsthis: & QTemporaryFile) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK14QTemporaryFile10autoRemoveEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qtemporaryfile.h:75
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setAutoRemove(bool)
+
+/*
+Sets the QTemporaryFile into auto-remove mode if b is true.
+
+Auto-remove is on by default.
+
+If you set this property to false, ensure the application provides a way to remove the file once it is no longer needed, including passing the responsibility on to another process. Always use the fileName() function to obtain the name and never try to guess the name that QTemporaryFile has generated.
+
+On some systems, if fileName() is not called before closing the file, the temporary file may be removed regardless of the state of this property. This behavior should not be relied upon, so application code should either call fileName() or leave the auto removal functionality enabled.
+
+See also autoRemove() and remove().
+*/
+impl /*struct*/ QTemporaryFile {
+  pub fn setAutoRemove_0<RetType, T: QTemporaryFile_setAutoRemove_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setAutoRemove_0(self);
+    // return 1;
+  }
+}
+pub trait QTemporaryFile_setAutoRemove_0<RetType> {
+  fn setAutoRemove_0(self , rsthis: & QTemporaryFile) -> RetType;
+}
+impl<'a> /*trait*/ QTemporaryFile_setAutoRemove_0<(/*void*/)> for (bool) {
+  fn setAutoRemove_0(self , rsthis: & QTemporaryFile) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const bool as usize;
+     qtrt::InvokeQtFunc6("_ZN14QTemporaryFile13setAutoRemoveEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qtemporaryfile.h:78
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool open()
+
+/*
+A QTemporaryFile will always be opened in QIODevice::ReadWrite mode, this allows easy access to the data in the file. This function will return true upon success and will set the fileName() to the unique filename used.
+
+See also fileName().
+*/
+impl /*struct*/ QTemporaryFile {
+  pub fn open_0<RetType, T: QTemporaryFile_open_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.open_0(self);
+    // return 1;
+  }
+}
+pub trait QTemporaryFile_open_0<RetType> {
+  fn open_0(self , rsthis: & QTemporaryFile) -> RetType;
+}
+impl<'a> /*trait*/ QTemporaryFile_open_0<bool> for () {
+  fn open_0(self , rsthis: & QTemporaryFile) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZN14QTemporaryFile4openEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qtemporaryfile.h:98
+// index:1
+// Protected virtual Visibility=Default Availability=Available
+// [1] bool open(QIODevice::OpenMode)
+
+/*
+A QTemporaryFile will always be opened in QIODevice::ReadWrite mode, this allows easy access to the data in the file. This function will return true upon success and will set the fileName() to the unique filename used.
+
+See also fileName().
+*/
+impl /*struct*/ QTemporaryFile {
+  pub fn open_1<RetType, T: QTemporaryFile_open_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.open_1(self);
+    // return 1;
+  }
+}
+pub trait QTemporaryFile_open_1<RetType> {
+  fn open_1(self , rsthis: & QTemporaryFile) -> RetType;
+}
+impl<'a> /*trait*/ QTemporaryFile_open_1<bool> for (i32) {
+  fn open_1(self , rsthis: & QTemporaryFile) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN14QTemporaryFile4openE6QFlagsIN9QIODevice12OpenModeFlagEE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qtemporaryfile.h:80
+// index:0
+// Public virtual Visibility=Default Availability=Available
+// [8] QString fileName() const
+
+/*
+Reimplemented from QFileDevice::fileName().
+
+Returns the complete unique filename backing the QTemporaryFile object. This string is null before the QTemporaryFile is opened, afterwards it will contain the fileTemplate() plus additional characters to make it unique.
+
+See also fileTemplate().
+*/
+impl /*struct*/ QTemporaryFile {
+  pub fn fileName_0<RetType, T: QTemporaryFile_fileName_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.fileName_0(self);
+    // return 1;
+  }
+}
+pub trait QTemporaryFile_fileName_0<RetType> {
+  fn fileName_0(self , rsthis: & QTemporaryFile) -> RetType;
+}
+impl<'a> /*trait*/ QTemporaryFile_fileName_0<usize> for () {
+  fn fileName_0(self , rsthis: & QTemporaryFile) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK14QTemporaryFile8fileNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qtemporaryfile.h:81
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString fileTemplate() const
+
+/*
+Returns the set file template. The default file template will be called qcoreappname.XXXXXX and be placed in QDir::tempPath().
+
+See also setFileTemplate().
+*/
+impl /*struct*/ QTemporaryFile {
+  pub fn fileTemplate_0<RetType, T: QTemporaryFile_fileTemplate_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.fileTemplate_0(self);
+    // return 1;
+  }
+}
+pub trait QTemporaryFile_fileTemplate_0<RetType> {
+  fn fileTemplate_0(self , rsthis: & QTemporaryFile) -> RetType;
+}
+impl<'a> /*trait*/ QTemporaryFile_fileTemplate_0<usize> for () {
+  fn fileTemplate_0(self , rsthis: & QTemporaryFile) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK14QTemporaryFile12fileTemplateEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qtemporaryfile.h:82
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setFileTemplate(const QString &)
+
+/*
+Sets the static portion of the file name to name. If the file template contains XXXXXX that will automatically be replaced with the unique part of the filename, otherwise a filename will be determined automatically based on the static portion specified.
+
+If name contains a relative file path, the path will be relative to the current working directory. You can use QDir::tempPath() to construct name if you want use the system's temporary directory.
+
+See also fileTemplate().
+*/
+impl /*struct*/ QTemporaryFile {
+  pub fn setFileTemplate_0<RetType, T: QTemporaryFile_setFileTemplate_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setFileTemplate_0(self);
+    // return 1;
+  }
+}
+pub trait QTemporaryFile_setFileTemplate_0<RetType> {
+  fn setFileTemplate_0(self , rsthis: & QTemporaryFile) -> RetType;
+}
+impl<'a> /*trait*/ QTemporaryFile_setFileTemplate_0<(/*void*/)> for (usize) {
+  fn setFileTemplate_0(self , rsthis: & QTemporaryFile) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN14QTemporaryFile15setFileTemplateERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qtemporaryfile.h:85
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool rename(const QString &)
+
+/*
+
+*/
+impl /*struct*/ QTemporaryFile {
+  pub fn rename_0<RetType, T: QTemporaryFile_rename_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.rename_0(self);
+    // return 1;
+  }
+}
+pub trait QTemporaryFile_rename_0<RetType> {
+  fn rename_0(self , rsthis: & QTemporaryFile) -> RetType;
+}
+impl<'a> /*trait*/ QTemporaryFile_rename_0<bool> for (usize) {
+  fn rename_0(self , rsthis: & QTemporaryFile) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN14QTemporaryFile6renameERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qtemporaryfile.h:88
+// index:0
+// Public static inline Visibility=Default Availability=Available
+// [8] QTemporaryFile * createLocalFile(const QString &)
+
+/*
+
+*/
+impl /*struct*/ QTemporaryFile {
+  pub fn createLocalFile_0<RetType, T: QTemporaryFile_createLocalFile_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.createLocalFile_0();
+    // return 1;
+  }
+}
+pub trait QTemporaryFile_createLocalFile_0<RetType> {
+  fn createLocalFile_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QTemporaryFile_createLocalFile_0<usize> for (usize) {
+  fn createLocalFile_0(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN14QTemporaryFile15createLocalFileERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qtemporaryfile.h:90
+// index:1
+// Public static inline Visibility=Default Availability=Available
+// [8] QTemporaryFile * createLocalFile(QFile &)
+
+/*
+
+*/
+impl /*struct*/ QTemporaryFile {
+  pub fn createLocalFile_1<RetType, T: QTemporaryFile_createLocalFile_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.createLocalFile_1();
+    // return 1;
+  }
+}
+pub trait QTemporaryFile_createLocalFile_1<RetType> {
+  fn createLocalFile_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QTemporaryFile_createLocalFile_1<usize> for (usize) {
+  fn createLocalFile_1(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN14QTemporaryFile15createLocalFileER5QFile", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qtemporaryfile.h:93
+// index:0
+// Public static inline Visibility=Default Availability=Available
+// [8] QTemporaryFile * createNativeFile(const QString &)
+
+/*
+If file is not already a native file, then a QTemporaryFile is created in QDir::tempPath(), the contents of file is copied into it, and a pointer to the temporary file is returned. Does nothing and returns 0 if file is already a native file.
+
+For example:
+
+
+  QFile f(":/resources/file.txt");
+  QTemporaryFile::createNativeFile(f); // Returns a pointer to a temporary file
+
+  QFile f("/users/qt/file.txt");
+  QTemporaryFile::createNativeFile(f); // Returns 0
+
+
+
+See also QFileInfo::isNativePath().
+*/
+impl /*struct*/ QTemporaryFile {
+  pub fn createNativeFile_0<RetType, T: QTemporaryFile_createNativeFile_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.createNativeFile_0();
+    // return 1;
+  }
+}
+pub trait QTemporaryFile_createNativeFile_0<RetType> {
+  fn createNativeFile_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QTemporaryFile_createNativeFile_0<usize> for (usize) {
+  fn createNativeFile_0(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN14QTemporaryFile16createNativeFileERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qtemporaryfile.h:95
+// index:1
+// Public static Visibility=Default Availability=Available
+// [8] QTemporaryFile * createNativeFile(QFile &)
+
+/*
+If file is not already a native file, then a QTemporaryFile is created in QDir::tempPath(), the contents of file is copied into it, and a pointer to the temporary file is returned. Does nothing and returns 0 if file is already a native file.
+
+For example:
+
+
+  QFile f(":/resources/file.txt");
+  QTemporaryFile::createNativeFile(f); // Returns a pointer to a temporary file
+
+  QFile f("/users/qt/file.txt");
+  QTemporaryFile::createNativeFile(f); // Returns 0
+
+
+
+See also QFileInfo::isNativePath().
+*/
+impl /*struct*/ QTemporaryFile {
+  pub fn createNativeFile_1<RetType, T: QTemporaryFile_createNativeFile_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.createNativeFile_1();
+    // return 1;
+  }
+}
+pub trait QTemporaryFile_createNativeFile_1<RetType> {
+  fn createNativeFile_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QTemporaryFile_createNativeFile_1<usize> for (usize) {
+  fn createNativeFile_1(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN14QTemporaryFile16createNativeFileER5QFile", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+//  body block end
+
+//  keep block begin
+
+//  keep block end

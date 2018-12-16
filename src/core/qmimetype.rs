@@ -1,507 +1,626 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qmimetype.h
-// dst-file: /src/core/qmimetype.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QMimeType
+// package qtcore
+// /usr/include/qt/QtCore/qmimetype.h
+// #include <qmimetype.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 24
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qstring::*; // 773
-use super::qstringlist::*; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QMimeType_Class_Size() -> c_int;
-  // proto:  void QMimeType::~QMimeType();
-  fn C_ZN9QMimeTypeD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  QString QMimeType::comment();
-  fn C_ZNK9QMimeType7commentEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QStringList QMimeType::aliases();
-  fn C_ZNK9QMimeType7aliasesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString QMimeType::filterString();
-  fn C_ZNK9QMimeType12filterStringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QStringList QMimeType::parentMimeTypes();
-  fn C_ZNK9QMimeType15parentMimeTypesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QMimeType::QMimeType(const QMimeType & other);
-  fn C_ZN9QMimeTypeC2ERKS_(arg0: *mut c_void) -> u64;
-  // proto:  bool QMimeType::inherits(const QString & mimeTypeName);
-  fn C_ZNK9QMimeType8inheritsERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
-  // proto:  bool QMimeType::isDefault();
-  fn C_ZNK9QMimeType9isDefaultEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  bool QMimeType::isValid();
-  fn C_ZNK9QMimeType7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QMimeType::QMimeType();
-  fn C_ZN9QMimeTypeC2Ev() -> u64;
-  // proto:  void QMimeType::swap(QMimeType & other);
-  fn C_ZN9QMimeType4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  QStringList QMimeType::suffixes();
-  fn C_ZNK9QMimeType8suffixesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString QMimeType::genericIconName();
-  fn C_ZNK9QMimeType15genericIconNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString QMimeType::iconName();
-  fn C_ZNK9QMimeType8iconNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QStringList QMimeType::allAncestors();
-  fn C_ZNK9QMimeType12allAncestorsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QStringList QMimeType::globPatterns();
-  fn C_ZNK9QMimeType12globPatternsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString QMimeType::name();
-  fn C_ZNK9QMimeType4nameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString QMimeType::preferredSuffix();
-  fn C_ZNK9QMimeType15preferredSuffixEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-} // <= ext block end
 
-// body block begin =>
-// class sizeof(QMimeType)=1
-#[derive(Default)]
+
+/*
+
+*/
+#[derive(Default)] // class sizeof(QMimeType)=8
 pub struct QMimeType {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
+  // qbase: none,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QMimeType_ITF interface {
+//    QMimeType_PTR() *QMimeType
+//}
+//func (ptr *QMimeType) QMimeType_PTR() *QMimeType { return ptr }
 
 impl /*struct*/ QMimeType {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QMimeType {
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QMimeType {
     return QMimeType{qclsinst: qthis, ..Default::default()};
   }
 }
-  // proto:  void QMimeType::~QMimeType();
+//impl Deref for QMimeType {
+//  type Target = QMimeTypeBASE;
+//
+//  fn deref(&self) -> &QMimeTypeBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QMimeTypeBASE> for QMimeType {
+//  fn as_ref(& self) -> & QMimeTypeBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qmimetype.h:78
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void QMimeType()
+
+/*
+Constructs this QMimeType object initialized with default property values that indicate an invalid MIME type.
+*/
+// QMimeType() ctx.fn_proto_cpp
 impl /*struct*/ QMimeType {
-  pub fn free<RetType, T: QMimeType_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
-    // return 1;
-  }
-}
-
-pub trait QMimeType_free<RetType> {
-  fn free(self , rsthis: & QMimeType) -> RetType;
-}
-
-  // proto:  void QMimeType::~QMimeType();
-impl<'a> /*trait*/ QMimeType_free<()> for () {
-  fn free(self , rsthis: & QMimeType) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QMimeTypeD2Ev()};
-     unsafe {C_ZN9QMimeTypeD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  QString QMimeType::comment();
-impl /*struct*/ QMimeType {
-  pub fn comment<RetType, T: QMimeType_comment<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.comment(self);
-    // return 1;
-  }
-}
-
-pub trait QMimeType_comment<RetType> {
-  fn comment(self , rsthis: & QMimeType) -> RetType;
-}
-
-  // proto:  QString QMimeType::comment();
-impl<'a> /*trait*/ QMimeType_comment<QString> for () {
-  fn comment(self , rsthis: & QMimeType) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QMimeType7commentEv()};
-    let mut ret = unsafe {C_ZNK9QMimeType7commentEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QStringList QMimeType::aliases();
-impl /*struct*/ QMimeType {
-  pub fn aliases<RetType, T: QMimeType_aliases<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.aliases(self);
-    // return 1;
-  }
-}
-
-pub trait QMimeType_aliases<RetType> {
-  fn aliases(self , rsthis: & QMimeType) -> RetType;
-}
-
-  // proto:  QStringList QMimeType::aliases();
-impl<'a> /*trait*/ QMimeType_aliases<QStringList> for () {
-  fn aliases(self , rsthis: & QMimeType) -> QStringList {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QMimeType7aliasesEv()};
-    let mut ret = unsafe {C_ZNK9QMimeType7aliasesEv(rsthis.qclsinst)};
-    let mut ret1 = QStringList::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString QMimeType::filterString();
-impl /*struct*/ QMimeType {
-  pub fn filterString<RetType, T: QMimeType_filterString<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.filterString(self);
-    // return 1;
-  }
-}
-
-pub trait QMimeType_filterString<RetType> {
-  fn filterString(self , rsthis: & QMimeType) -> RetType;
-}
-
-  // proto:  QString QMimeType::filterString();
-impl<'a> /*trait*/ QMimeType_filterString<QString> for () {
-  fn filterString(self , rsthis: & QMimeType) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QMimeType12filterStringEv()};
-    let mut ret = unsafe {C_ZNK9QMimeType12filterStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QStringList QMimeType::parentMimeTypes();
-impl /*struct*/ QMimeType {
-  pub fn parentMimeTypes<RetType, T: QMimeType_parentMimeTypes<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.parentMimeTypes(self);
-    // return 1;
-  }
-}
-
-pub trait QMimeType_parentMimeTypes<RetType> {
-  fn parentMimeTypes(self , rsthis: & QMimeType) -> RetType;
-}
-
-  // proto:  QStringList QMimeType::parentMimeTypes();
-impl<'a> /*trait*/ QMimeType_parentMimeTypes<QStringList> for () {
-  fn parentMimeTypes(self , rsthis: & QMimeType) -> QStringList {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QMimeType15parentMimeTypesEv()};
-    let mut ret = unsafe {C_ZNK9QMimeType15parentMimeTypesEv(rsthis.qclsinst)};
-    let mut ret1 = QStringList::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QMimeType::QMimeType(const QMimeType & other);
-impl /*struct*/ QMimeType {
-  pub fn new<T: QMimeType_new>(value: T) -> QMimeType {
-    let rsthis = value.new();
+  pub fn QMimeType_0<T: QMimeType_QMimeType_0>(value: T) -> QMimeType {
+    let rsthis = value.QMimeType_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMimeType_new {
-  fn new(self) -> QMimeType;
+pub trait QMimeType_QMimeType_0 {
+  fn QMimeType_0(self) -> QMimeType;
 }
-
-  // proto:  void QMimeType::QMimeType(const QMimeType & other);
-impl<'a> /*trait*/ QMimeType_new for (&'a QMimeType) {
-  fn new(self) -> QMimeType {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QMimeTypeC2ERKS_()};
-    let ctysz: c_int = unsafe{QMimeType_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN9QMimeTypeC2ERKS_(arg0)};
-    let rsthis = QMimeType{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  bool QMimeType::inherits(const QString & mimeTypeName);
-impl /*struct*/ QMimeType {
-  pub fn inherits<RetType, T: QMimeType_inherits<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.inherits(self);
-    // return 1;
-  }
-}
-
-pub trait QMimeType_inherits<RetType> {
-  fn inherits(self , rsthis: & QMimeType) -> RetType;
-}
-
-  // proto:  bool QMimeType::inherits(const QString & mimeTypeName);
-impl<'a> /*trait*/ QMimeType_inherits<i8> for (&'a QString) {
-  fn inherits(self , rsthis: & QMimeType) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QMimeType8inheritsERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK9QMimeType8inheritsERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  bool QMimeType::isDefault();
-impl /*struct*/ QMimeType {
-  pub fn isDefault<RetType, T: QMimeType_isDefault<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isDefault(self);
-    // return 1;
-  }
-}
-
-pub trait QMimeType_isDefault<RetType> {
-  fn isDefault(self , rsthis: & QMimeType) -> RetType;
-}
-
-  // proto:  bool QMimeType::isDefault();
-impl<'a> /*trait*/ QMimeType_isDefault<i8> for () {
-  fn isDefault(self , rsthis: & QMimeType) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QMimeType9isDefaultEv()};
-    let mut ret = unsafe {C_ZNK9QMimeType9isDefaultEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  bool QMimeType::isValid();
-impl /*struct*/ QMimeType {
-  pub fn isValid<RetType, T: QMimeType_isValid<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isValid(self);
-    // return 1;
-  }
-}
-
-pub trait QMimeType_isValid<RetType> {
-  fn isValid(self , rsthis: & QMimeType) -> RetType;
-}
-
-  // proto:  bool QMimeType::isValid();
-impl<'a> /*trait*/ QMimeType_isValid<i8> for () {
-  fn isValid(self , rsthis: & QMimeType) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QMimeType7isValidEv()};
-    let mut ret = unsafe {C_ZNK9QMimeType7isValidEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QMimeType::QMimeType();
-impl<'a> /*trait*/ QMimeType_new for () {
-  fn new(self) -> QMimeType {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QMimeType() ctx.fn_proto_cpp
+impl<'a> /*trait*/ QMimeType_QMimeType_0 for () {
+  fn QMimeType_0(self) -> QMimeType {
     // unsafe{_ZN9QMimeTypeC2Ev()};
-    let ctysz: c_int = unsafe{QMimeType_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let qthis: u64 = unsafe {C_ZN9QMimeTypeC2Ev()};
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN9QMimeTypeC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QMimeType{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QMimeType::swap(QMimeType & other);
+// /usr/include/qt/QtCore/qmimetype.h:80
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QMimeType & operator=(const QMimeType &)
+
+/*
+
+*/
 impl /*struct*/ QMimeType {
-  pub fn swap<RetType, T: QMimeType_swap<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.swap(self);
+  pub fn operator_equal_0<RetType, T: QMimeType_operator_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_0(self);
     // return 1;
   }
 }
-
-pub trait QMimeType_swap<RetType> {
-  fn swap(self , rsthis: & QMimeType) -> RetType;
+pub trait QMimeType_operator_equal_0<RetType> {
+  fn operator_equal_0(self , rsthis: & QMimeType) -> RetType;
 }
-
-  // proto:  void QMimeType::swap(QMimeType & other);
-impl<'a> /*trait*/ QMimeType_swap<()> for (&'a QMimeType) {
-  fn swap(self , rsthis: & QMimeType) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QMimeType4swapERS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN9QMimeType4swapERS_(rsthis.qclsinst, arg0)};
+impl<'a> /*trait*/ QMimeType_operator_equal_0<usize> for (usize) {
+  fn operator_equal_0(self , rsthis: & QMimeType) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QMimeTypeaSERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  QStringList QMimeType::suffixes();
+// /usr/include/qt/QtCore/qmimetype.h:82
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QMimeType & operator=(QMimeType &&)
+
+/*
+
+*/
 impl /*struct*/ QMimeType {
-  pub fn suffixes<RetType, T: QMimeType_suffixes<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.suffixes(self);
+  pub fn operator_equal_1<RetType, T: QMimeType_operator_equal_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_1(self);
     // return 1;
   }
 }
-
-pub trait QMimeType_suffixes<RetType> {
-  fn suffixes(self , rsthis: & QMimeType) -> RetType;
+pub trait QMimeType_operator_equal_1<RetType> {
+  fn operator_equal_1(self , rsthis: & QMimeType) -> RetType;
 }
-
-  // proto:  QStringList QMimeType::suffixes();
-impl<'a> /*trait*/ QMimeType_suffixes<QStringList> for () {
-  fn suffixes(self , rsthis: & QMimeType) -> QStringList {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QMimeType8suffixesEv()};
-    let mut ret = unsafe {C_ZNK9QMimeType8suffixesEv(rsthis.qclsinst)};
-    let mut ret1 = QStringList::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QMimeType_operator_equal_1<usize> for (usize) {
+  fn operator_equal_1(self , rsthis: & QMimeType) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN9QMimeTypeaSEOS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  QString QMimeType::genericIconName();
+// /usr/include/qt/QtCore/qmimetype.h:84
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QMimeType &)
+
+/*
+Swaps QMimeType other with this QMimeType object.
+
+This operation is very fast and never fails.
+
+The swap() method helps with the implementation of assignment operators in an exception-safe way. For more information consult More C++ Idioms - Copy-and-swap.
+*/
 impl /*struct*/ QMimeType {
-  pub fn genericIconName<RetType, T: QMimeType_genericIconName<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.genericIconName(self);
+  pub fn swap_0<RetType, T: QMimeType_swap_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.swap_0(self);
+    // return 1;
+  }
+}
+pub trait QMimeType_swap_0<RetType> {
+  fn swap_0(self , rsthis: & QMimeType) -> RetType;
+}
+impl<'a> /*trait*/ QMimeType_swap_0<(/*void*/)> for (usize) {
+  fn swap_0(self , rsthis: & QMimeType) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN9QMimeType4swapERS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QMimeType_genericIconName<RetType> {
-  fn genericIconName(self , rsthis: & QMimeType) -> RetType;
-}
+// /usr/include/qt/QtCore/qmimetype.h:89
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void ~QMimeType()
 
-  // proto:  QString QMimeType::genericIconName();
-impl<'a> /*trait*/ QMimeType_genericIconName<QString> for () {
-  fn genericIconName(self , rsthis: & QMimeType) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QMimeType15genericIconNameEv()};
-    let mut ret = unsafe {C_ZNK9QMimeType15genericIconNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
+/*
 
-  // proto:  QString QMimeType::iconName();
+*/
+pub fn DeleteQMimeType(this :*mut QMimeType) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN9QMimeTypeD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 8)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qmimetype.h:91
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(const QMimeType &) const
+
+/*
+
+*/
 impl /*struct*/ QMimeType {
-  pub fn iconName<RetType, T: QMimeType_iconName<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.iconName(self);
+  pub fn operator_equal_equal_0<RetType, T: QMimeType_operator_equal_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_equal_0(self);
     // return 1;
   }
 }
-
-pub trait QMimeType_iconName<RetType> {
-  fn iconName(self , rsthis: & QMimeType) -> RetType;
+pub trait QMimeType_operator_equal_equal_0<RetType> {
+  fn operator_equal_equal_0(self , rsthis: & QMimeType) -> RetType;
 }
-
-  // proto:  QString QMimeType::iconName();
-impl<'a> /*trait*/ QMimeType_iconName<QString> for () {
-  fn iconName(self , rsthis: & QMimeType) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QMimeType8iconNameEv()};
-    let mut ret = unsafe {C_ZNK9QMimeType8iconNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QMimeType_operator_equal_equal_0<bool> for (usize) {
+  fn operator_equal_equal_0(self , rsthis: & QMimeType) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QMimeTypeeqERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  QStringList QMimeType::allAncestors();
+// /usr/include/qt/QtCore/qmimetype.h:93
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QMimeType &) const
+
+/*
+
+*/
 impl /*struct*/ QMimeType {
-  pub fn allAncestors<RetType, T: QMimeType_allAncestors<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.allAncestors(self);
+  pub fn operator_not_equal_0<RetType, T: QMimeType_operator_not_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_not_equal_0(self);
     // return 1;
   }
 }
-
-pub trait QMimeType_allAncestors<RetType> {
-  fn allAncestors(self , rsthis: & QMimeType) -> RetType;
+pub trait QMimeType_operator_not_equal_0<RetType> {
+  fn operator_not_equal_0(self , rsthis: & QMimeType) -> RetType;
 }
-
-  // proto:  QStringList QMimeType::allAncestors();
-impl<'a> /*trait*/ QMimeType_allAncestors<QStringList> for () {
-  fn allAncestors(self , rsthis: & QMimeType) -> QStringList {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QMimeType12allAncestorsEv()};
-    let mut ret = unsafe {C_ZNK9QMimeType12allAncestorsEv(rsthis.qclsinst)};
-    let mut ret1 = QStringList::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QMimeType_operator_not_equal_0<bool> for (usize) {
+  fn operator_not_equal_0(self , rsthis: & QMimeType) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QMimeTypeneERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  QStringList QMimeType::globPatterns();
+// /usr/include/qt/QtCore/qmimetype.h:98
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isValid() const
+
+/*
+
+*/
 impl /*struct*/ QMimeType {
-  pub fn globPatterns<RetType, T: QMimeType_globPatterns<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.globPatterns(self);
+  pub fn isValid_0<RetType, T: QMimeType_isValid_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isValid_0(self);
     // return 1;
   }
 }
-
-pub trait QMimeType_globPatterns<RetType> {
-  fn globPatterns(self , rsthis: & QMimeType) -> RetType;
+pub trait QMimeType_isValid_0<RetType> {
+  fn isValid_0(self , rsthis: & QMimeType) -> RetType;
 }
-
-  // proto:  QStringList QMimeType::globPatterns();
-impl<'a> /*trait*/ QMimeType_globPatterns<QStringList> for () {
-  fn globPatterns(self , rsthis: & QMimeType) -> QStringList {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QMimeType12globPatternsEv()};
-    let mut ret = unsafe {C_ZNK9QMimeType12globPatternsEv(rsthis.qclsinst)};
-    let mut ret1 = QStringList::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QMimeType_isValid_0<bool> for () {
+  fn isValid_0(self , rsthis: & QMimeType) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QMimeType7isValidEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  QString QMimeType::name();
+// /usr/include/qt/QtCore/qmimetype.h:100
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isDefault() const
+
+/*
+
+*/
 impl /*struct*/ QMimeType {
-  pub fn name<RetType, T: QMimeType_name<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.name(self);
+  pub fn isDefault_0<RetType, T: QMimeType_isDefault_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isDefault_0(self);
     // return 1;
   }
 }
-
-pub trait QMimeType_name<RetType> {
-  fn name(self , rsthis: & QMimeType) -> RetType;
+pub trait QMimeType_isDefault_0<RetType> {
+  fn isDefault_0(self , rsthis: & QMimeType) -> RetType;
 }
-
-  // proto:  QString QMimeType::name();
-impl<'a> /*trait*/ QMimeType_name<QString> for () {
-  fn name(self , rsthis: & QMimeType) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QMimeType4nameEv()};
-    let mut ret = unsafe {C_ZNK9QMimeType4nameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QMimeType_isDefault_0<bool> for () {
+  fn isDefault_0(self , rsthis: & QMimeType) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QMimeType9isDefaultEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  QString QMimeType::preferredSuffix();
+// /usr/include/qt/QtCore/qmimetype.h:102
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString name() const
+
+/*
+
+*/
 impl /*struct*/ QMimeType {
-  pub fn preferredSuffix<RetType, T: QMimeType_preferredSuffix<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.preferredSuffix(self);
+  pub fn name_0<RetType, T: QMimeType_name_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.name_0(self);
     // return 1;
   }
 }
-
-pub trait QMimeType_preferredSuffix<RetType> {
-  fn preferredSuffix(self , rsthis: & QMimeType) -> RetType;
+pub trait QMimeType_name_0<RetType> {
+  fn name_0(self , rsthis: & QMimeType) -> RetType;
 }
-
-  // proto:  QString QMimeType::preferredSuffix();
-impl<'a> /*trait*/ QMimeType_preferredSuffix<QString> for () {
-  fn preferredSuffix(self , rsthis: & QMimeType) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QMimeType15preferredSuffixEv()};
-    let mut ret = unsafe {C_ZNK9QMimeType15preferredSuffixEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QMimeType_name_0<usize> for () {
+  fn name_0(self , rsthis: & QMimeType) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QMimeType4nameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-// <= body block end
+// /usr/include/qt/QtCore/qmimetype.h:103
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString comment() const
 
+/*
+
+*/
+impl /*struct*/ QMimeType {
+  pub fn comment_0<RetType, T: QMimeType_comment_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.comment_0(self);
+    // return 1;
+  }
+}
+pub trait QMimeType_comment_0<RetType> {
+  fn comment_0(self , rsthis: & QMimeType) -> RetType;
+}
+impl<'a> /*trait*/ QMimeType_comment_0<usize> for () {
+  fn comment_0(self , rsthis: & QMimeType) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QMimeType7commentEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qmimetype.h:104
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString genericIconName() const
+
+/*
+
+*/
+impl /*struct*/ QMimeType {
+  pub fn genericIconName_0<RetType, T: QMimeType_genericIconName_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.genericIconName_0(self);
+    // return 1;
+  }
+}
+pub trait QMimeType_genericIconName_0<RetType> {
+  fn genericIconName_0(self , rsthis: & QMimeType) -> RetType;
+}
+impl<'a> /*trait*/ QMimeType_genericIconName_0<usize> for () {
+  fn genericIconName_0(self , rsthis: & QMimeType) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QMimeType15genericIconNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qmimetype.h:105
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString iconName() const
+
+/*
+
+*/
+impl /*struct*/ QMimeType {
+  pub fn iconName_0<RetType, T: QMimeType_iconName_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.iconName_0(self);
+    // return 1;
+  }
+}
+pub trait QMimeType_iconName_0<RetType> {
+  fn iconName_0(self , rsthis: & QMimeType) -> RetType;
+}
+impl<'a> /*trait*/ QMimeType_iconName_0<usize> for () {
+  fn iconName_0(self , rsthis: & QMimeType) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QMimeType8iconNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qmimetype.h:106
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList globPatterns() const
+
+/*
+
+*/
+impl /*struct*/ QMimeType {
+  pub fn globPatterns_0<RetType, T: QMimeType_globPatterns_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.globPatterns_0(self);
+    // return 1;
+  }
+}
+pub trait QMimeType_globPatterns_0<RetType> {
+  fn globPatterns_0(self , rsthis: & QMimeType) -> RetType;
+}
+impl<'a> /*trait*/ QMimeType_globPatterns_0<usize> for () {
+  fn globPatterns_0(self , rsthis: & QMimeType) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QMimeType12globPatternsEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qmimetype.h:107
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList parentMimeTypes() const
+
+/*
+
+*/
+impl /*struct*/ QMimeType {
+  pub fn parentMimeTypes_0<RetType, T: QMimeType_parentMimeTypes_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.parentMimeTypes_0(self);
+    // return 1;
+  }
+}
+pub trait QMimeType_parentMimeTypes_0<RetType> {
+  fn parentMimeTypes_0(self , rsthis: & QMimeType) -> RetType;
+}
+impl<'a> /*trait*/ QMimeType_parentMimeTypes_0<usize> for () {
+  fn parentMimeTypes_0(self , rsthis: & QMimeType) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QMimeType15parentMimeTypesEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qmimetype.h:108
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList allAncestors() const
+
+/*
+
+*/
+impl /*struct*/ QMimeType {
+  pub fn allAncestors_0<RetType, T: QMimeType_allAncestors_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.allAncestors_0(self);
+    // return 1;
+  }
+}
+pub trait QMimeType_allAncestors_0<RetType> {
+  fn allAncestors_0(self , rsthis: & QMimeType) -> RetType;
+}
+impl<'a> /*trait*/ QMimeType_allAncestors_0<usize> for () {
+  fn allAncestors_0(self , rsthis: & QMimeType) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QMimeType12allAncestorsEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qmimetype.h:109
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList aliases() const
+
+/*
+
+*/
+impl /*struct*/ QMimeType {
+  pub fn aliases_0<RetType, T: QMimeType_aliases_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.aliases_0(self);
+    // return 1;
+  }
+}
+pub trait QMimeType_aliases_0<RetType> {
+  fn aliases_0(self , rsthis: & QMimeType) -> RetType;
+}
+impl<'a> /*trait*/ QMimeType_aliases_0<usize> for () {
+  fn aliases_0(self , rsthis: & QMimeType) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QMimeType7aliasesEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qmimetype.h:110
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList suffixes() const
+
+/*
+
+*/
+impl /*struct*/ QMimeType {
+  pub fn suffixes_0<RetType, T: QMimeType_suffixes_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.suffixes_0(self);
+    // return 1;
+  }
+}
+pub trait QMimeType_suffixes_0<RetType> {
+  fn suffixes_0(self , rsthis: & QMimeType) -> RetType;
+}
+impl<'a> /*trait*/ QMimeType_suffixes_0<usize> for () {
+  fn suffixes_0(self , rsthis: & QMimeType) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QMimeType8suffixesEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qmimetype.h:111
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString preferredSuffix() const
+
+/*
+
+*/
+impl /*struct*/ QMimeType {
+  pub fn preferredSuffix_0<RetType, T: QMimeType_preferredSuffix_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.preferredSuffix_0(self);
+    // return 1;
+  }
+}
+pub trait QMimeType_preferredSuffix_0<RetType> {
+  fn preferredSuffix_0(self , rsthis: & QMimeType) -> RetType;
+}
+impl<'a> /*trait*/ QMimeType_preferredSuffix_0<usize> for () {
+  fn preferredSuffix_0(self , rsthis: & QMimeType) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QMimeType15preferredSuffixEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qmimetype.h:113
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool inherits(const QString &) const
+
+/*
+Returns true if this mimetype is mimeTypeName, or inherits mimeTypeName (see parentMimeTypes()), or mimeTypeName is an alias for this mimetype.
+
+This method has been made invokable from QML since 5.10.
+*/
+impl /*struct*/ QMimeType {
+  pub fn inherits_0<RetType, T: QMimeType_inherits_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.inherits_0(self);
+    // return 1;
+  }
+}
+pub trait QMimeType_inherits_0<RetType> {
+  fn inherits_0(self , rsthis: & QMimeType) -> RetType;
+}
+impl<'a> /*trait*/ QMimeType_inherits_0<bool> for (usize) {
+  fn inherits_0(self , rsthis: & QMimeType) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QMimeType8inheritsERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qmimetype.h:115
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString filterString() const
+
+/*
+
+*/
+impl /*struct*/ QMimeType {
+  pub fn filterString_0<RetType, T: QMimeType_filterString_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.filterString_0(self);
+    // return 1;
+  }
+}
+pub trait QMimeType_filterString_0<RetType> {
+  fn filterString_0(self , rsthis: & QMimeType) -> RetType;
+}
+impl<'a> /*trait*/ QMimeType_filterString_0<usize> for () {
+  fn filterString_0(self , rsthis: & QMimeType) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QMimeType12filterStringEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+//  body block end
+
+//  keep block begin
+
+//  keep block end

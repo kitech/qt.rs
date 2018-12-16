@@ -1,5450 +1,10120 @@
-// auto generated, do not modify.
-// created: Mon Feb 22 23:57:02 2016
-// src-file: /QtCore/qstring.h
-// dst-file: /src/core/qstring.rs
-//
-
-// header block begin =>
-#![feature(libc)]
-#![feature(core)]
-#![feature(collections)]
-extern crate libc;
-use self::libc::*;
 
 
-// <= header block end
+// mod ::core::QString
+// package qtcore
+// /usr/include/qt/QtCore/qstring.h
+// #include <qstring.h>
+// #include <QtCore>
 
-// main block begin =>
-// <= main block end
+//  header block end
 
-// use block begin =>
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+
+/*
+#include <stdlib.h>
+// extern C begin: 52
+*/
+// import "C"
+// import "unsafe"
+// import "reflect"
+// import "fmt"
+// import "log"
+// import "github.com/kitech/qt.go/qtrt"
+use std::default::Default;
 use std::ops::Deref;
-use super::qchar::*; // 773
-use super::qregularexpression::*; // 773
-// use super::qstring::QStringRef; // 773
-use super::qregexp::*; // 773
-use super::qbytearray::*; // 773
-// use super::qvector::*; // 775
-// use super::qstring::QString; // 773
-// <= use block end
+use super::super::qtrt;
+use super::*;
+//  ext block end
 
-// ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
+//  body block begin
 
-extern {
-  fn QStringDataPtr_Class_Size() -> c_int;
-  fn QString_Class_Size() -> c_int;
-  // proto:  qlonglong QString::toLongLong(bool * ok, int base);
-  fn C_ZNK7QString10toLongLongEPbi(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_longlong;
-  // proto:  bool QString::isNull();
-  fn C_ZNK7QString6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  QString & QString::append(const QChar * uc, int len);
-  fn C_ZN7QString6appendEPK5QChari(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> *mut c_void;
-  // proto:  QString & QString::prepend(QChar c);
-  fn C_ZN7QString7prependE5QChar(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  QString & QString::insert(int i, QChar c);
-  fn C_ZN7QString6insertEi5QChar(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void) -> *mut c_void;
-  // proto:  QString QString::left(int n);
-  fn C_ZNK7QString4leftEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
-  // proto:  void QString::QString(QChar c);
-  fn C_ZN7QStringC2E5QChar(arg0: *mut c_void) -> u64;
-  // proto:  QString & QString::prepend(const char * s);
-  fn C_ZN7QString7prependEPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> *mut c_void;
-  // proto:  int QString::lastIndexOf(const QRegularExpression & re, int from);
-  fn C_ZNK7QString11lastIndexOfERK18QRegularExpressioni(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
-  // proto: static QString QString::number(int , int base);
-  fn C_ZN7QString6numberEii(arg0: c_int, arg1: c_int) -> *mut c_void;
-  // proto:  void QString::resize(int size);
-  fn C_ZN7QString6resizeEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto:  void QString::push_front(QChar c);
-  fn C_ZN7QString10push_frontE5QChar(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QString::QString();
-  fn C_ZN7QStringC2Ev() -> u64;
-  // proto:  double QString::toDouble(bool * ok);
-  fn C_ZNK7QString8toDoubleEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_double;
-  // proto:  QString QString::arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6, const QString & a7, const QString & a8);
-  fn C_ZNK7QString3argERKS_S1_S1_S1_S1_S1_S1_S1_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void, arg4: *mut c_void, arg5: *mut c_void, arg6: *mut c_void, arg7: *mut c_void) -> *mut c_void;
-  // proto:  QStringRef QString::rightRef(int n);
-  fn C_ZNK7QString8rightRefEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
-  // proto:  QString & QString::setNum(short , int base);
-  fn C_ZN7QString6setNumEsi(qthis: u64 /* *mut c_void*/, arg0: c_short, arg1: c_int) -> *mut c_void;
-  // proto:  void QString::QString(const QChar * unicode, int size);
-  fn C_ZN7QStringC2EPK5QChari(arg0: *mut c_void, arg1: c_int) -> u64;
-  // proto:  float QString::toFloat(bool * ok);
-  fn C_ZNK7QString7toFloatEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_float;
-  // proto:  int QString::count(const QRegularExpression & re);
-  fn C_ZNK7QString5countERK18QRegularExpression(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
-  // proto:  QStringRef QString::midRef(int position, int n);
-  fn C_ZNK7QString6midRefEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
-  // proto:  void QString::detach();
-  fn C_ZN7QString6detachEv(qthis: u64 /* *mut c_void*/);
-  // proto:  QString QString::arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4);
-  fn C_ZNK7QString3argERKS_S1_S1_S1_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void) -> *mut c_void;
-  // proto:  QString QString::arg(long a, int fieldwidth, int base, QChar fillChar);
-  fn C_ZNK7QString3argElii5QChar(qthis: u64 /* *mut c_void*/, arg0: c_long, arg1: c_int, arg2: c_int, arg3: *mut c_void) -> *mut c_void;
-  // proto:  int QString::count();
-  fn C_ZNK7QString5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  QString & QString::setNum(qulonglong , int base);
-  fn C_ZN7QString6setNumEyi(qthis: u64 /* *mut c_void*/, arg0: c_ulonglong, arg1: c_int) -> *mut c_void;
-  // proto:  void QString::push_back(QChar c);
-  fn C_ZN7QString9push_backE5QChar(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  QString & QString::setNum(float , char f, int prec);
-  fn C_ZN7QString6setNumEfci(qthis: u64 /* *mut c_void*/, arg0: c_float, arg1: c_char, arg2: c_int) -> *mut c_void;
-  // proto:  int QString::count(const QRegExp & );
-  fn C_ZNK7QString5countERK7QRegExp(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
-  // proto:  int QString::size();
-  fn C_ZNK7QString4sizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  QString & QString::insert(int i, const QChar * uc, int len);
-  fn C_ZN7QString6insertEiPK5QChari(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: c_int) -> *mut c_void;
-  // proto:  QString & QString::replace(int i, int len, const QChar * s, int slen);
-  fn C_ZN7QString7replaceEiiPK5QChari(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void, arg3: c_int) -> *mut c_void;
-  // proto: static QString QString::fromRawData(const QChar * , int size);
-  fn C_ZN7QString11fromRawDataEPK5QChari(arg0: *mut c_void, arg1: c_int) -> *mut c_void;
-  // proto:  QString QString::trimmed();
-  fn C_ZNO7QString7trimmedEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString & QString::insert(int i, const QString & s);
-  fn C_ZN7QString6insertEiRKS_(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void) -> *mut c_void;
-  // proto:  QString QString::arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5);
-  fn C_ZNK7QString3argERKS_S1_S1_S1_S1_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void, arg4: *mut c_void) -> *mut c_void;
-  // proto:  QString & QString::setRawData(const QChar * unicode, int size);
-  fn C_ZN7QString10setRawDataEPK5QChari(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> *mut c_void;
-  // proto:  QString & QString::prepend(const QString & s);
-  fn C_ZN7QString7prependERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  QString & QString::sprintf(const char * format);
-  fn C_ZN7QString7sprintfEPKcz(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> *mut c_void;
-  // proto:  ulong QString::toULong(bool * ok, int base);
-  fn C_ZNK7QString7toULongEPbi(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_ulong;
-  // proto:  void QString::chop(int n);
-  fn C_ZN7QString4chopEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto: static QString QString::fromUtf16(const ushort * , int size);
-  fn C_ZN7QString9fromUtf16EPKti(arg0: *mut c_ushort, arg1: c_int) -> *mut c_void;
-  // proto:  bool QString::isDetached();
-  fn C_ZNK7QString10isDetachedEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  QString & QString::setNum(qlonglong , int base);
-  fn C_ZN7QString6setNumExi(qthis: u64 /* *mut c_void*/, arg0: c_longlong, arg1: c_int) -> *mut c_void;
-  // proto:  QString QString::mid(int position, int n);
-  fn C_ZNK7QString3midEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
-  // proto: static QString QString::fromLocal8Bit(const char * str, int size);
-  fn C_ZN7QString13fromLocal8BitEPKci(arg0: *mut c_char, arg1: c_int) -> *mut c_void;
-  // proto:  void QString::swap(QString & other);
-  fn C_ZN7QString4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  QString & QString::vsprintf(const char * format, va_list ap);
-  fn C_ZN7QString8vsprintfEPKci(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> *mut c_void;
-  // proto: static QString QString::fromUtf8(const QByteArray & str);
-  fn C_ZN7QString8fromUtf8ERK10QByteArray(arg0: *mut c_void) -> *mut c_void;
-  // proto: static QString QString::fromUcs4(const char32_t * str, int size);
-  fn C_ZN7QString8fromUcs4EPKDii(arg0: *mut c_char, arg1: c_int) -> *mut c_void;
-  // proto:  QString QString::leftJustified(int width, QChar fill, bool trunc);
-  fn C_ZNK7QString13leftJustifiedEi5QCharb(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: c_char) -> *mut c_void;
-  // proto:  int QString::indexOf(const QRegExp & , int from);
-  fn C_ZNK7QString7indexOfERK7QRegExpi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
-  // proto:  void QString::push_back(const QString & s);
-  fn C_ZN7QString9push_backERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  int QString::lastIndexOf(QRegExp & , int from);
-  fn C_ZNK7QString11lastIndexOfER7QRegExpi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
-  // proto:  QString QString::arg(const QString & a1, const QString & a2, const QString & a3);
-  fn C_ZNK7QString3argERKS_S1_S1_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
-  // proto:  const ushort * QString::utf16();
-  fn C_ZNK7QString5utf16Ev(qthis: u64 /* *mut c_void*/) -> *mut c_ushort;
-  // proto:  int QString::toInt(bool * ok, int base);
-  fn C_ZNK7QString5toIntEPbi(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_int;
-  // proto:  QByteArray QString::toUtf8();
-  fn C_ZNO7QString6toUtf8Ev(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString QString::arg(double a, int fieldWidth, char fmt, int prec, QChar fillChar);
-  fn C_ZNK7QString3argEdici5QChar(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_int, arg2: c_char, arg3: c_int, arg4: *mut c_void) -> *mut c_void;
-  // proto:  QChar * QString::data();
-  fn C_ZN7QString4dataEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString QString::toCaseFolded();
-  fn C_ZNO7QString12toCaseFoldedEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString & QString::setNum(uint , int base);
-  fn C_ZN7QString6setNumEji(qthis: u64 /* *mut c_void*/, arg0: c_uint, arg1: c_int) -> *mut c_void;
-  // proto: static int QString::localeAwareCompare(const QString & s1, const QString & s2);
-  fn C_ZN7QString18localeAwareCompareERKS_S1_(arg0: *mut c_void, arg1: *mut c_void) -> c_int;
-  // proto:  void QString::QString(const char * ch);
-  fn C_ZN7QStringC2EPKc(arg0: *mut c_char) -> u64;
-  // proto: static QString QString::fromUtf16(const char16_t * str, int size);
-  fn C_ZN7QString9fromUtf16EPKDsi(arg0: *mut c_char, arg1: c_int) -> *mut c_void;
-  // proto:  QString & QString::replace(const QRegExp & rx, const QString & after);
-  fn C_ZN7QString7replaceERK7QRegExpRKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  // proto:  QString QString::repeated(int times);
-  fn C_ZNK7QString8repeatedEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
-  // proto:  QString QString::toLower();
-  fn C_ZNO7QString7toLowerEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString & QString::setUtf16(const ushort * utf16, int size);
-  fn C_ZN7QString8setUtf16EPKti(qthis: u64 /* *mut c_void*/, arg0: *mut c_ushort, arg1: c_int) -> *mut c_void;
-  // proto:  void QString::clear();
-  fn C_ZN7QString5clearEv(qthis: u64 /* *mut c_void*/);
-  // proto:  bool QString::contains(const QRegExp & rx);
-  fn C_ZNK7QString8containsERK7QRegExp(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
-  // proto:  bool QString::isSharedWith(const QString & other);
-  fn C_ZNK7QString12isSharedWithERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
-  // proto: static QString QString::fromLatin1(const QByteArray & str);
-  fn C_ZN7QString10fromLatin1ERK10QByteArray(arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QString::~QString();
-  fn C_ZN7QStringD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  QString & QString::remove(const QRegularExpression & re);
-  fn C_ZN7QString6removeERK18QRegularExpression(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  QString & QString::setNum(int , int base);
-  fn C_ZN7QString6setNumEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
-  // proto:  const_iterator QString::cend();
-  fn C_ZNK7QString4cendEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString QString::toHtmlEscaped();
-  fn C_ZNK7QString13toHtmlEscapedEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  int QString::lastIndexOf(const QRegularExpression & re, int from, QRegularExpressionMatch * rmatch);
-  fn C_ZNK7QString11lastIndexOfERK18QRegularExpressioniP23QRegularExpressionMatch(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> c_int;
-  // proto:  QString & QString::append(const QByteArray & s);
-  fn C_ZN7QString6appendERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto: static QString QString::fromLatin1(const char * str, int size);
-  fn C_ZN7QString10fromLatin1EPKci(arg0: *mut c_char, arg1: c_int) -> *mut c_void;
-  // proto:  bool QString::contains(const QRegularExpression & re, QRegularExpressionMatch * match);
-  fn C_ZNK7QString8containsERK18QRegularExpressionP23QRegularExpressionMatch(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
-  // proto:  int QString::indexOf(const QRegularExpression & re, int from, QRegularExpressionMatch * rmatch);
-  fn C_ZNK7QString7indexOfERK18QRegularExpressioniP23QRegularExpressionMatch(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> c_int;
-  // proto:  int QString::lastIndexOf(const QRegExp & , int from);
-  fn C_ZNK7QString11lastIndexOfERK7QRegExpi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
-  // proto:  int QString::toWCharArray(wchar_t * array);
-  fn C_ZNK7QString12toWCharArrayEPw(qthis: u64 /* *mut c_void*/, arg0: *mut wchar_t) -> c_int;
-  // proto:  const_iterator QString::cbegin();
-  fn C_ZNK7QString6cbeginEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString & QString::prepend(const QByteArray & s);
-  fn C_ZN7QString7prependERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  QString & QString::replace(int i, int len, const QString & after);
-  fn C_ZN7QString7replaceEiiRKS_(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
-  // proto:  QString QString::arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6, const QString & a7);
-  fn C_ZNK7QString3argERKS_S1_S1_S1_S1_S1_S1_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void, arg4: *mut c_void, arg5: *mut c_void, arg6: *mut c_void) -> *mut c_void;
-  // proto: static QString QString::fromWCharArray(const wchar_t * string, int size);
-  fn C_ZN7QString14fromWCharArrayEPKwi(arg0: *mut wchar_t, arg1: c_int) -> *mut c_void;
-  // proto:  QString & QString::fill(QChar c, int size);
-  fn C_ZN7QString4fillE5QChari(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> *mut c_void;
-  // proto:  const QChar * QString::constData();
-  fn C_ZNK7QString9constDataEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto: static QString QString::number(ulong , int base);
-  fn C_ZN7QString6numberEmi(arg0: c_ulong, arg1: c_int) -> *mut c_void;
-  // proto:  long QString::toLong(bool * ok, int base);
-  fn C_ZNK7QString6toLongEPbi(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_long;
-  // proto:  QString QString::toUpper();
-  fn C_ZNO7QString7toUpperEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  const_iterator QString::constEnd();
-  fn C_ZNK7QString8constEndEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  int QString::length();
-  fn C_ZNK7QString6lengthEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto: static QString QString::fromUtf8(const char * str, int size);
-  fn C_ZN7QString8fromUtf8EPKci(arg0: *mut c_char, arg1: c_int) -> *mut c_void;
-  // proto:  QString QString::simplified();
-  fn C_ZNO7QString10simplifiedEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto: static QString QString::number(qlonglong , int base);
-  fn C_ZN7QString6numberExi(arg0: c_longlong, arg1: c_int) -> *mut c_void;
-  // proto:  QStringRef QString::leftRef(int n);
-  fn C_ZNK7QString7leftRefEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
-  // proto:  QString & QString::setNum(long , int base);
-  fn C_ZN7QString6setNumEli(qthis: u64 /* *mut c_void*/, arg0: c_long, arg1: c_int) -> *mut c_void;
-  // proto:  QString QString::arg(const QString & a1, const QString & a2);
-  fn C_ZNK7QString3argERKS_S1_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  // proto:  bool QString::isSimpleText();
-  fn C_ZNK7QString12isSimpleTextEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto: static QString QString::fromUcs4(const uint * , int size);
-  fn C_ZN7QString8fromUcs4EPKji(arg0: *mut c_uint, arg1: c_int) -> *mut c_void;
-  // proto:  QString & QString::setUnicode(const QChar * unicode, int size);
-  fn C_ZN7QString10setUnicodeEPK5QChari(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> *mut c_void;
-  // proto:  bool QString::contains(QRegExp & rx);
-  fn C_ZNK7QString8containsER7QRegExp(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
-  // proto:  const_iterator QString::constBegin();
-  fn C_ZNK7QString10constBeginEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  const QChar * QString::unicode();
-  fn C_ZNK7QString7unicodeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString QString::arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6, const QString & a7, const QString & a8, const QString & a9);
-  fn C_ZNK7QString3argERKS_S1_S1_S1_S1_S1_S1_S1_S1_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void, arg4: *mut c_void, arg5: *mut c_void, arg6: *mut c_void, arg7: *mut c_void, arg8: *mut c_void) -> *mut c_void;
-  // proto:  int QString::indexOf(const QRegularExpression & re, int from);
-  fn C_ZNK7QString7indexOfERK18QRegularExpressioni(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
-  // proto: static QString QString::number(long , int base);
-  fn C_ZN7QString6numberEli(arg0: c_long, arg1: c_int) -> *mut c_void;
-  // proto: static QString QString::number(uint , int base);
-  fn C_ZN7QString6numberEji(arg0: c_uint, arg1: c_int) -> *mut c_void;
-  // proto: static QString QString::fromLocal8Bit(const QByteArray & str);
-  fn C_ZN7QString13fromLocal8BitERK10QByteArray(arg0: *mut c_void) -> *mut c_void;
-  // proto:  const QChar QString::at(int i);
-  fn C_ZNK7QString2atEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
-  // proto: static QString QString::asprintf(const char * format);
-  fn C_ZN7QString8asprintfEPKcz(arg0: *mut c_char) -> *mut c_void;
-  // proto:  void QString::QString(int size, QChar c);
-  fn C_ZN7QStringC2Ei5QChar(arg0: c_int, arg1: *mut c_void) -> u64;
-  // proto:  QByteArray QString::toLatin1();
-  fn C_ZNO7QString8toLatin1Ev(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString & QString::setNum(ulong , int base);
-  fn C_ZN7QString6setNumEmi(qthis: u64 /* *mut c_void*/, arg0: c_ulong, arg1: c_int) -> *mut c_void;
-  // proto:  void QString::push_front(const QString & s);
-  fn C_ZN7QString10push_frontERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  QString QString::arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6);
-  fn C_ZNK7QString3argERKS_S1_S1_S1_S1_S1_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void, arg4: *mut c_void, arg5: *mut c_void) -> *mut c_void;
-  // proto:  iterator QString::begin();
-  fn C_ZN7QString5beginEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto: static QString QString::number(double , char f, int prec);
-  fn C_ZN7QString6numberEdci(arg0: c_double, arg1: c_char, arg2: c_int) -> *mut c_void;
-  // proto:  iterator QString::end();
-  fn C_ZN7QString3endEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString & QString::append(QChar c);
-  fn C_ZN7QString6appendE5QChar(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  uint QString::toUInt(bool * ok, int base);
-  fn C_ZNK7QString6toUIntEPbi(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_uint;
-  // proto:  QString & QString::append(const QString & s);
-  fn C_ZN7QString6appendERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  QString QString::arg(qlonglong a, int fieldwidth, int base, QChar fillChar);
-  fn C_ZNK7QString3argExii5QChar(qthis: u64 /* *mut c_void*/, arg0: c_longlong, arg1: c_int, arg2: c_int, arg3: *mut c_void) -> *mut c_void;
-  // proto:  ushort QString::toUShort(bool * ok, int base);
-  fn C_ZNK7QString8toUShortEPbi(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_ushort;
-  // proto:  QString QString::arg(uint a, int fieldWidth, int base, QChar fillChar);
-  fn C_ZNK7QString3argEjii5QChar(qthis: u64 /* *mut c_void*/, arg0: c_uint, arg1: c_int, arg2: c_int, arg3: *mut c_void) -> *mut c_void;
-  // proto:  QString & QString::setNum(ushort , int base);
-  fn C_ZN7QString6setNumEti(qthis: u64 /* *mut c_void*/, arg0: c_ushort, arg1: c_int) -> *mut c_void;
-  // proto:  QByteArray QString::toLocal8Bit();
-  fn C_ZNO7QString11toLocal8BitEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString & QString::replace(const QRegularExpression & re, const QString & after);
-  fn C_ZN7QString7replaceERK18QRegularExpressionRKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  // proto:  QString & QString::setNum(double , char f, int prec);
-  fn C_ZN7QString6setNumEdci(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_char, arg2: c_int) -> *mut c_void;
-  // proto: static QString QString::number(qulonglong , int base);
-  fn C_ZN7QString6numberEyi(arg0: c_ulonglong, arg1: c_int) -> *mut c_void;
-  // proto:  QString QString::arg(ushort a, int fieldWidth, int base, QChar fillChar);
-  fn C_ZNK7QString3argEtii5QChar(qthis: u64 /* *mut c_void*/, arg0: c_ushort, arg1: c_int, arg2: c_int, arg3: *mut c_void) -> *mut c_void;
-  // proto:  void QString::QString(const QString & );
-  fn C_ZN7QStringC2ERKS_(arg0: *mut c_void) -> u64;
-  // proto:  QString QString::arg(short a, int fieldWidth, int base, QChar fillChar);
-  fn C_ZNK7QString3argEsii5QChar(qthis: u64 /* *mut c_void*/, arg0: c_short, arg1: c_int, arg2: c_int, arg3: *mut c_void) -> *mut c_void;
-  // proto:  void QString::QString(const QByteArray & a);
-  fn C_ZN7QStringC2ERK10QByteArray(arg0: *mut c_void) -> u64;
-  // proto: static QString QString::vasprintf(const char * format, va_list ap);
-  fn C_ZN7QString9vasprintfEPKci(arg0: *mut c_char, arg1: c_int) -> *mut c_void;
-  // proto:  qulonglong QString::toULongLong(bool * ok, int base);
-  fn C_ZNK7QString11toULongLongEPbi(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_ulonglong;
-  // proto:  QString & QString::append(const char * s);
-  fn C_ZN7QString6appendEPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> *mut c_void;
-  // proto:  int QString::capacity();
-  fn C_ZNK7QString8capacityEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  void QString::squeeze();
-  fn C_ZN7QString7squeezeEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QString::truncate(int pos);
-  fn C_ZN7QString8truncateEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto:  QString QString::arg(int a, int fieldWidth, int base, QChar fillChar);
-  fn C_ZNK7QString3argEiii5QChar(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: *mut c_void) -> *mut c_void;
-  // proto:  QString QString::arg(QChar a, int fieldWidth, QChar fillChar);
-  fn C_ZNK7QString3argE5QChariS0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
-  // proto:  int QString::localeAwareCompare(const QString & s);
-  fn C_ZNK7QString18localeAwareCompareERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
-  // proto:  QString & QString::remove(const QRegExp & rx);
-  fn C_ZN7QString6removeERK7QRegExp(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  bool QString::contains(const QRegularExpression & re);
-  fn C_ZNK7QString8containsERK18QRegularExpression(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
-  // proto:  int QString::indexOf(QRegExp & , int from);
-  fn C_ZNK7QString7indexOfER7QRegExpi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
-  // proto:  QString & QString::replace(int i, int len, QChar after);
-  fn C_ZN7QString7replaceEii5QChar(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
-  // proto:  bool QString::isRightToLeft();
-  fn C_ZNK7QString13isRightToLeftEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  QString QString::arg(char a, int fieldWidth, QChar fillChar);
-  fn C_ZNK7QString3argEci5QChar(qthis: u64 /* *mut c_void*/, arg0: c_char, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
-  // proto:  QVector<uint> QString::toUcs4();
-  fn C_ZNK7QString6toUcs4Ev(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString & QString::remove(int i, int len);
-  fn C_ZN7QString6removeEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
-  // proto:  bool QString::isEmpty();
-  fn C_ZNK7QString7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  QString QString::right(int n);
-  fn C_ZNK7QString5rightEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
-  // proto:  QString QString::rightJustified(int width, QChar fill, bool trunc);
-  fn C_ZNK7QString14rightJustifiedEi5QCharb(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: c_char) -> *mut c_void;
-  // proto:  QString QString::arg(const QString & a, int fieldWidth, QChar fillChar);
-  fn C_ZNK7QString3argERKS_i5QChar(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
-  // proto:  QString QString::arg(qulonglong a, int fieldwidth, int base, QChar fillChar);
-  fn C_ZNK7QString3argEyii5QChar(qthis: u64 /* *mut c_void*/, arg0: c_ulonglong, arg1: c_int, arg2: c_int, arg3: *mut c_void) -> *mut c_void;
-  // proto:  void QString::reserve(int size);
-  fn C_ZN7QString7reserveEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto:  short QString::toShort(bool * ok, int base);
-  fn C_ZNK7QString7toShortEPbi(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_short;
-  // proto:  QString QString::arg(ulong a, int fieldwidth, int base, QChar fillChar);
-  fn C_ZNK7QString3argEmii5QChar(qthis: u64 /* *mut c_void*/, arg0: c_ulong, arg1: c_int, arg2: c_int, arg3: *mut c_void) -> *mut c_void;
-  fn QLatin1String_Class_Size() -> c_int;
-  // proto:  const char * QLatin1String::data();
-  fn C_ZNK13QLatin1String4dataEv(qthis: u64 /* *mut c_void*/) -> *mut c_char;
-  // proto:  void QLatin1String::QLatin1String(const char * s);
-  fn C_ZN13QLatin1StringC2EPKc(arg0: *mut c_char) -> u64;
-  // proto:  int QLatin1String::size();
-  fn C_ZNK13QLatin1String4sizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  void QLatin1String::QLatin1String(const QByteArray & s);
-  fn C_ZN13QLatin1StringC2ERK10QByteArray(arg0: *mut c_void) -> u64;
-  // proto:  const char * QLatin1String::latin1();
-  fn C_ZNK13QLatin1String6latin1Ev(qthis: u64 /* *mut c_void*/) -> *mut c_char;
-  // proto:  void QLatin1String::QLatin1String(const char * s, int sz);
-  fn C_ZN13QLatin1StringC2EPKci(arg0: *mut c_char, arg1: c_int) -> u64;
-  fn QCharRef_Class_Size() -> c_int;
-  // proto:  bool QCharRef::isLetterOrNumber();
-  fn C_ZN8QCharRef16isLetterOrNumberEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  bool QCharRef::isDigit();
-  fn C_ZNK8QCharRef7isDigitEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  char QCharRef::toLatin1();
-  fn C_ZNK8QCharRef8toLatin1Ev(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QCharRef::setCell(uchar cell);
-  fn C_ZN8QCharRef7setCellEh(qthis: u64 /* *mut c_void*/, arg0: c_uchar);
-  // proto:  bool QCharRef::isMark();
-  fn C_ZNK8QCharRef6isMarkEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  int QCharRef::digitValue();
-  fn C_ZNK8QCharRef10digitValueEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  bool QCharRef::isLetter();
-  fn C_ZNK8QCharRef8isLetterEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  bool QCharRef::isNumber();
-  fn C_ZNK8QCharRef8isNumberEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  bool QCharRef::isPrint();
-  fn C_ZNK8QCharRef7isPrintEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  QChar QCharRef::toLower();
-  fn C_ZNK8QCharRef7toLowerEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QCharRef::setRow(uchar row);
-  fn C_ZN8QCharRef6setRowEh(qthis: u64 /* *mut c_void*/, arg0: c_uchar);
-  // proto:  bool QCharRef::isNull();
-  fn C_ZNK8QCharRef6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  QChar QCharRef::toTitleCase();
-  fn C_ZNK8QCharRef11toTitleCaseEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  bool QCharRef::hasMirrored();
-  fn C_ZNK8QCharRef11hasMirroredEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  uchar QCharRef::row();
-  fn C_ZNK8QCharRef3rowEv(qthis: u64 /* *mut c_void*/) -> c_uchar;
-  // proto:  ushort & QCharRef::unicode();
-  fn C_ZN8QCharRef7unicodeEv(qthis: u64 /* *mut c_void*/) -> c_ushort;
-  // proto:  bool QCharRef::isTitleCase();
-  fn C_ZNK8QCharRef11isTitleCaseEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  bool QCharRef::isUpper();
-  fn C_ZNK8QCharRef7isUpperEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  uchar QCharRef::cell();
-  fn C_ZNK8QCharRef4cellEv(qthis: u64 /* *mut c_void*/) -> c_uchar;
-  // proto:  QString QCharRef::decomposition();
-  fn C_ZNK8QCharRef13decompositionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  uchar QCharRef::combiningClass();
-  fn C_ZNK8QCharRef14combiningClassEv(qthis: u64 /* *mut c_void*/) -> c_uchar;
-  // proto:  QChar QCharRef::mirroredChar();
-  fn C_ZNK8QCharRef12mirroredCharEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  bool QCharRef::isSpace();
-  fn C_ZNK8QCharRef7isSpaceEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  bool QCharRef::isPunct();
-  fn C_ZNK8QCharRef7isPunctEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  QChar QCharRef::toUpper();
-  fn C_ZNK8QCharRef7toUpperEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  bool QCharRef::isLower();
-  fn C_ZNK8QCharRef7isLowerEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  fn QStringRef_Class_Size() -> c_int;
-  // proto:  short QStringRef::toShort(bool * ok, int base);
-  fn C_ZNK10QStringRef7toShortEPbi(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_short;
-  // proto:  void QStringRef::QStringRef(const QString * string);
-  fn C_ZN10QStringRefC2EPK7QString(arg0: *mut c_void) -> u64;
-  // proto:  qulonglong QStringRef::toULongLong(bool * ok, int base);
-  fn C_ZNK10QStringRef11toULongLongEPbi(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_ulonglong;
-  // proto:  void QStringRef::clear();
-  fn C_ZN10QStringRef5clearEv(qthis: u64 /* *mut c_void*/);
-  // proto:  int QStringRef::position();
-  fn C_ZNK10QStringRef8positionEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  long QStringRef::toLong(bool * ok, int base);
-  fn C_ZNK10QStringRef6toLongEPbi(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_long;
-  // proto:  const QChar * QStringRef::cbegin();
-  fn C_ZNK10QStringRef6cbeginEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  ushort QStringRef::toUShort(bool * ok, int base);
-  fn C_ZNK10QStringRef8toUShortEPbi(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_ushort;
-  // proto:  uint QStringRef::toUInt(bool * ok, int base);
-  fn C_ZNK10QStringRef6toUIntEPbi(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_uint;
-  // proto:  bool QStringRef::isEmpty();
-  fn C_ZNK10QStringRef7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  int QStringRef::localeAwareCompare(const QString & s);
-  fn C_ZNK10QStringRef18localeAwareCompareERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
-  // proto:  QByteArray QStringRef::toUtf8();
-  fn C_ZNK10QStringRef6toUtf8Ev(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  int QStringRef::size();
-  fn C_ZNK10QStringRef4sizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  const QChar * QStringRef::constData();
-  fn C_ZNK10QStringRef9constDataEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QStringRef QStringRef::left(int n);
-  fn C_ZNK10QStringRef4leftEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
-  // proto:  QVector<uint> QStringRef::toUcs4();
-  fn C_ZNK10QStringRef6toUcs4Ev(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  int QStringRef::count();
-  fn C_ZNK10QStringRef5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  void QStringRef::QStringRef(const QString * string, int position, int size);
-  fn C_ZN10QStringRefC2EPK7QStringii(arg0: *mut c_void, arg1: c_int, arg2: c_int) -> u64;
-  // proto:  void QStringRef::QStringRef();
-  fn C_ZN10QStringRefC2Ev() -> u64;
-  // proto:  QStringRef QStringRef::right(int n);
-  fn C_ZNK10QStringRef5rightEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
-  // proto:  const QChar QStringRef::at(int i);
-  fn C_ZNK10QStringRef2atEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
-  // proto:  double QStringRef::toDouble(bool * ok);
-  fn C_ZNK10QStringRef8toDoubleEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_double;
-  // proto:  bool QStringRef::isNull();
-  fn C_ZNK10QStringRef6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  const QChar * QStringRef::data();
-  fn C_ZNK10QStringRef4dataEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  qlonglong QStringRef::toLongLong(bool * ok, int base);
-  fn C_ZNK10QStringRef10toLongLongEPbi(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_longlong;
-  // proto:  QByteArray QStringRef::toLatin1();
-  fn C_ZNK10QStringRef8toLatin1Ev(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  const QChar * QStringRef::begin();
-  fn C_ZNK10QStringRef5beginEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  const QChar * QStringRef::unicode();
-  fn C_ZNK10QStringRef7unicodeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QStringRef QStringRef::mid(int pos, int n);
-  fn C_ZNK10QStringRef3midEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
-  // proto:  float QStringRef::toFloat(bool * ok);
-  fn C_ZNK10QStringRef7toFloatEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_float;
-  // proto:  const QString * QStringRef::string();
-  fn C_ZNK10QStringRef6stringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QString QStringRef::toString();
-  fn C_ZNK10QStringRef8toStringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QStringRef QStringRef::trimmed();
-  fn C_ZNK10QStringRef7trimmedEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  int QStringRef::toInt(bool * ok, int base);
-  fn C_ZNK10QStringRef5toIntEPbi(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_int;
-  // proto:  const QChar * QStringRef::cend();
-  fn C_ZNK10QStringRef4cendEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  QStringRef QStringRef::appendTo(QString * string);
-  fn C_ZNK10QStringRef8appendToEP7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  int QStringRef::length();
-  fn C_ZNK10QStringRef6lengthEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  void QStringRef::~QStringRef();
-  fn C_ZN10QStringRefD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  QByteArray QStringRef::toLocal8Bit();
-  fn C_ZNK10QStringRef11toLocal8BitEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  ulong QStringRef::toULong(bool * ok, int base);
-  fn C_ZNK10QStringRef7toULongEPbi(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_ulong;
-  // proto:  const QChar * QStringRef::end();
-  fn C_ZNK10QStringRef3endEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-} // <= ext block end
 
-// body block begin =>
-// class sizeof(QStringDataPtr)=8
-#[derive(Default)]
-pub struct QStringDataPtr {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
-}
 
-// class sizeof(QString)=8
-#[derive(Default)]
+/*
+
+*/
+#[derive(Default)] // class sizeof(QString)=8
 pub struct QString {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
+  // qbase: none,
+  pub qclsinst: usize /* *mut c_void*/,
 }
+// type QString_ITF interface {
+//    QString_PTR() *QString
+//}
+//func (ptr *QString) QString_PTR() *QString { return ptr }
 
-// class sizeof(QLatin1String)=16
-#[derive(Default)]
-pub struct QLatin1String {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
-}
-
-// class sizeof(QCharRef)=16
-#[derive(Default)]
-pub struct QCharRef {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
-}
-
-// class sizeof(QStringRef)=16
-#[derive(Default)]
-pub struct QStringRef {
-  // qbase: None,
-  pub qclsinst: u64 /* *mut c_void*/,
-}
-
-impl /*struct*/ QStringDataPtr {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QStringDataPtr {
-    return QStringDataPtr{qclsinst: qthis, ..Default::default()};
-  }
-}
 impl /*struct*/ QString {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QString {
+  pub fn inheritFrom(qthis: usize /* *mut c_void*/) -> QString {
     return QString{qclsinst: qthis, ..Default::default()};
   }
 }
-  // proto:  qlonglong QString::toLongLong(bool * ok, int base);
+//impl Deref for QString {
+//  type Target = QStringBASE;
+//
+//  fn deref(&self) -> &QStringBASE {
+//    return & self.qbase;
+//  }
+//}
+//impl AsRef<QStringBASE> for QString {
+//  fn as_ref(& self) -> & QStringBASE {
+//    return & self.qbase;
+//  }
+//}
+// /usr/include/qt/QtCore/qstring.h:217
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void QString()
+
+/*
+Constructs a null string. Null strings are also empty.
+
+See also isEmpty().
+*/
+// QString() ctx.fn_proto_cpp
 impl /*struct*/ QString {
-  pub fn toLongLong<RetType, T: QString_toLongLong<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toLongLong(self);
-    // return 1;
-  }
-}
-
-pub trait QString_toLongLong<RetType> {
-  fn toLongLong(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  qlonglong QString::toLongLong(bool * ok, int base);
-impl<'a> /*trait*/ QString_toLongLong<i64> for (Option<&'a mut Vec<i8>>, Option<i32>) {
-  fn toLongLong(self , rsthis: & QString) -> i64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString10toLongLongEPbi()};
-    let arg0 = (if self.0.is_none() {0 as *const i8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK7QString10toLongLongEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i64; // 1
-    // return 1;
-  }
-}
-
-  // proto:  bool QString::isNull();
-impl /*struct*/ QString {
-  pub fn isNull<RetType, T: QString_isNull<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isNull(self);
-    // return 1;
-  }
-}
-
-pub trait QString_isNull<RetType> {
-  fn isNull(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  bool QString::isNull();
-impl<'a> /*trait*/ QString_isNull<i8> for () {
-  fn isNull(self , rsthis: & QString) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString6isNullEv()};
-    let mut ret = unsafe {C_ZNK7QString6isNullEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::append(const QChar * uc, int len);
-impl /*struct*/ QString {
-  pub fn append<RetType, T: QString_append<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.append(self);
-    // return 1;
-  }
-}
-
-pub trait QString_append<RetType> {
-  fn append(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QString & QString::append(const QChar * uc, int len);
-impl<'a> /*trait*/ QString_append<QString> for (&'a QChar, i32) {
-  fn append(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6appendEPK5QChari()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
-    let mut ret = unsafe {C_ZN7QString6appendEPK5QChari(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::prepend(QChar c);
-impl /*struct*/ QString {
-  pub fn prepend<RetType, T: QString_prepend<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.prepend(self);
-    // return 1;
-  }
-}
-
-pub trait QString_prepend<RetType> {
-  fn prepend(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QString & QString::prepend(QChar c);
-impl<'a> /*trait*/ QString_prepend<QString> for (QChar) {
-  fn prepend(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString7prependE5QChar()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN7QString7prependE5QChar(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::insert(int i, QChar c);
-impl /*struct*/ QString {
-  pub fn insert<RetType, T: QString_insert<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.insert(self);
-    // return 1;
-  }
-}
-
-pub trait QString_insert<RetType> {
-  fn insert(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QString & QString::insert(int i, QChar c);
-impl<'a> /*trait*/ QString_insert<QString> for (i32, QChar) {
-  fn insert(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6insertEi5QChar()};
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN7QString6insertEi5QChar(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::left(int n);
-impl /*struct*/ QString {
-  pub fn left<RetType, T: QString_left<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.left(self);
-    // return 1;
-  }
-}
-
-pub trait QString_left<RetType> {
-  fn left(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QString QString::left(int n);
-impl<'a> /*trait*/ QString_left<QString> for (i32) {
-  fn left(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString4leftEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZNK7QString4leftEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QString::QString(QChar c);
-impl /*struct*/ QString {
-  pub fn new<T: QString_new>(value: T) -> QString {
-    let rsthis = value.new();
+  pub fn QString_0<T: QString_QString_0>(value: T) -> QString {
+    let rsthis = value.QString_0();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QString_new {
-  fn new(self) -> QString;
+pub trait QString_QString_0 {
+  fn QString_0(self) -> QString;
 }
-
-  // proto:  void QString::QString(QChar c);
-impl<'a> /*trait*/ QString_new for (QChar) {
-  fn new(self) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QStringC2E5QChar()};
-    let ctysz: c_int = unsafe{QString_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN7QStringC2E5QChar(arg0)};
-    let rsthis = QString{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::prepend(const char * s);
-impl<'a> /*trait*/ QString_prepend<QString> for (&'a  String) {
-  fn prepend(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString7prependEPKc()};
-    let arg0 = self.as_ptr()  as *mut c_char;
-    let mut ret = unsafe {C_ZN7QString7prependEPKc(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  int QString::lastIndexOf(const QRegularExpression & re, int from);
-impl /*struct*/ QString {
-  pub fn lastIndexOf<RetType, T: QString_lastIndexOf<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.lastIndexOf(self);
-    // return 1;
-  }
-}
-
-pub trait QString_lastIndexOf<RetType> {
-  fn lastIndexOf(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  int QString::lastIndexOf(const QRegularExpression & re, int from);
-impl<'a> /*trait*/ QString_lastIndexOf<i32> for (&'a QRegularExpression, Option<i32>) {
-  fn lastIndexOf(self , rsthis: & QString) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString11lastIndexOfERK18QRegularExpressioni()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK7QString11lastIndexOfERK18QRegularExpressioni(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto: static QString QString::number(int , int base);
-impl /*struct*/ QString {
-  pub fn number_s<RetType, T: QString_number_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.number_s();
-    // return 1;
-  }
-}
-
-pub trait QString_number_s<RetType> {
-  fn number_s(self ) -> RetType;
-}
-
-  // proto: static QString QString::number(int , int base);
-impl<'a> /*trait*/ QString_number_s<QString> for (i32, Option<i32>) {
-  fn number_s(self ) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6numberEii()};
-    let arg0 = self.0  as c_int;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZN7QString6numberEii(arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QString::resize(int size);
-impl /*struct*/ QString {
-  pub fn resize<RetType, T: QString_resize<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.resize(self);
-    // return 1;
-  }
-}
-
-pub trait QString_resize<RetType> {
-  fn resize(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  void QString::resize(int size);
-impl<'a> /*trait*/ QString_resize<()> for (i32) {
-  fn resize(self , rsthis: & QString) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6resizeEi()};
-    let arg0 = self  as c_int;
-     unsafe {C_ZN7QString6resizeEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QString::push_front(QChar c);
-impl /*struct*/ QString {
-  pub fn push_front<RetType, T: QString_push_front<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.push_front(self);
-    // return 1;
-  }
-}
-
-pub trait QString_push_front<RetType> {
-  fn push_front(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  void QString::push_front(QChar c);
-impl<'a> /*trait*/ QString_push_front<()> for (QChar) {
-  fn push_front(self , rsthis: & QString) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString10push_frontE5QChar()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN7QString10push_frontE5QChar(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QString::QString();
-impl<'a> /*trait*/ QString_new for () {
-  fn new(self) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QString() ctx.fn_proto_cpp
+impl<'a> /*trait*/ QString_QString_0 for () {
+  fn QString_0(self) -> QString {
     // unsafe{_ZN7QStringC2Ev()};
-    let ctysz: c_int = unsafe{QString_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let qthis: u64 = unsafe {C_ZN7QStringC2Ev()};
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN7QStringC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QString{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  double QString::toDouble(bool * ok);
+// /usr/include/qt/QtCore/qstring.h:218
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QString(const QChar *, int)
+
+/*
+Constructs a null string. Null strings are also empty.
+
+See also isEmpty().
+*/
+// QString(const QChar *, int) ctx.fn_proto_cpp
 impl /*struct*/ QString {
-  pub fn toDouble<RetType, T: QString_toDouble<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toDouble(self);
+  pub fn QString_1<T: QString_QString_1>(value: T) -> QString {
+    let rsthis = value.QString_1();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QString_toDouble<RetType> {
-  fn toDouble(self , rsthis: & QString) -> RetType;
+pub trait QString_QString_1 {
+  fn QString_1(self) -> QString;
 }
-
-  // proto:  double QString::toDouble(bool * ok);
-impl<'a> /*trait*/ QString_toDouble<f64> for (Option<&'a mut Vec<i8>>) {
-  fn toDouble(self , rsthis: & QString) -> f64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString8toDoubleEPb()};
-    let arg0 = (if self.is_none() {0 as *const i8} else {self.unwrap().as_ptr()})  as *mut c_char;
-    let mut ret = unsafe {C_ZNK7QString8toDoubleEPb(rsthis.qclsinst, arg0)};
-    return ret as f64; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6, const QString & a7, const QString & a8);
-impl /*struct*/ QString {
-  pub fn arg<RetType, T: QString_arg<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.arg(self);
-    // return 1;
-  }
-}
-
-pub trait QString_arg<RetType> {
-  fn arg(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QString QString::arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6, const QString & a7, const QString & a8);
-impl<'a> /*trait*/ QString_arg<QString> for (&'a QString, &'a QString, &'a QString, &'a QString, &'a QString, &'a QString, &'a QString, &'a QString) {
-  fn arg(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString3argERKS_S1_S1_S1_S1_S1_S1_S1_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
-    let arg3 = self.3.qclsinst  as *mut c_void;
-    let arg4 = self.4.qclsinst  as *mut c_void;
-    let arg5 = self.5.qclsinst  as *mut c_void;
-    let arg6 = self.6.qclsinst  as *mut c_void;
-    let arg7 = self.7.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString3argERKS_S1_S1_S1_S1_S1_S1_S1_(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QStringRef QString::rightRef(int n);
-impl /*struct*/ QString {
-  pub fn rightRef<RetType, T: QString_rightRef<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.rightRef(self);
-    // return 1;
-  }
-}
-
-pub trait QString_rightRef<RetType> {
-  fn rightRef(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QStringRef QString::rightRef(int n);
-impl<'a> /*trait*/ QString_rightRef<QStringRef> for (i32) {
-  fn rightRef(self , rsthis: & QString) -> QStringRef {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString8rightRefEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZNK7QString8rightRefEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QStringRef::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::setNum(short , int base);
-impl /*struct*/ QString {
-  pub fn setNum<RetType, T: QString_setNum<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setNum(self);
-    // return 1;
-  }
-}
-
-pub trait QString_setNum<RetType> {
-  fn setNum(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QString & QString::setNum(short , int base);
-impl<'a> /*trait*/ QString_setNum<QString> for (i16, Option<i32>) {
-  fn setNum(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6setNumEsi()};
-    let arg0 = self.0  as c_short;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZN7QString6setNumEsi(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QString::QString(const QChar * unicode, int size);
-impl<'a> /*trait*/ QString_new for (&'a QChar, Option<i32>) {
-  fn new(self) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QString(const QChar *, int) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QString_QString_1 for (usize,i32) {
+  fn QString_1(self) -> QString {
     // unsafe{_ZN7QStringC2EPK5QChari()};
-    let ctysz: c_int = unsafe{QString_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
-    let qthis: u64 = unsafe {C_ZN7QStringC2EPK5QChari(arg0, arg1)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN7QStringC2EPK5QChari", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QString{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  float QString::toFloat(bool * ok);
+// /usr/include/qt/QtCore/qstring.h:219
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QString(QChar)
+
+/*
+Constructs a null string. Null strings are also empty.
+
+See also isEmpty().
+*/
+// QString(QChar) ctx.fn_proto_cpp
 impl /*struct*/ QString {
-  pub fn toFloat<RetType, T: QString_toFloat<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toFloat(self);
+  pub fn QString_2<T: QString_QString_2>(value: T) -> QString {
+    let rsthis = value.QString_2();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QString_toFloat<RetType> {
-  fn toFloat(self , rsthis: & QString) -> RetType;
+pub trait QString_QString_2 {
+  fn QString_2(self) -> QString;
 }
-
-  // proto:  float QString::toFloat(bool * ok);
-impl<'a> /*trait*/ QString_toFloat<f32> for (Option<&'a mut Vec<i8>>) {
-  fn toFloat(self , rsthis: & QString) -> f32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString7toFloatEPb()};
-    let arg0 = (if self.is_none() {0 as *const i8} else {self.unwrap().as_ptr()})  as *mut c_char;
-    let mut ret = unsafe {C_ZNK7QString7toFloatEPb(rsthis.qclsinst, arg0)};
-    return ret as f32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  int QString::count(const QRegularExpression & re);
-impl /*struct*/ QString {
-  pub fn count<RetType, T: QString_count<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.count(self);
-    // return 1;
-  }
-}
-
-pub trait QString_count<RetType> {
-  fn count(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  int QString::count(const QRegularExpression & re);
-impl<'a> /*trait*/ QString_count<i32> for (&'a QRegularExpression) {
-  fn count(self , rsthis: & QString) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString5countERK18QRegularExpression()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString5countERK18QRegularExpression(rsthis.qclsinst, arg0)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QStringRef QString::midRef(int position, int n);
-impl /*struct*/ QString {
-  pub fn midRef<RetType, T: QString_midRef<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.midRef(self);
-    // return 1;
-  }
-}
-
-pub trait QString_midRef<RetType> {
-  fn midRef(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QStringRef QString::midRef(int position, int n);
-impl<'a> /*trait*/ QString_midRef<QStringRef> for (i32, Option<i32>) {
-  fn midRef(self , rsthis: & QString) -> QStringRef {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString6midRefEii()};
-    let arg0 = self.0  as c_int;
-    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK7QString6midRefEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QStringRef::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QString::detach();
-impl /*struct*/ QString {
-  pub fn detach<RetType, T: QString_detach<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.detach(self);
-    // return 1;
-  }
-}
-
-pub trait QString_detach<RetType> {
-  fn detach(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  void QString::detach();
-impl<'a> /*trait*/ QString_detach<()> for () {
-  fn detach(self , rsthis: & QString) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6detachEv()};
-     unsafe {C_ZN7QString6detachEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4);
-impl<'a> /*trait*/ QString_arg<QString> for (&'a QString, &'a QString, &'a QString, &'a QString) {
-  fn arg(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString3argERKS_S1_S1_S1_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
-    let arg3 = self.3.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString3argERKS_S1_S1_S1_(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::arg(long a, int fieldwidth, int base, QChar fillChar);
-impl<'a> /*trait*/ QString_arg<QString> for (i64, Option<i32>, Option<i32>, Option<QChar>) {
-  fn arg(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString3argElii5QChar()};
-    let arg0 = self.0  as c_long;
-    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
-    let arg2 = (if self.2.is_none() {10} else {self.2.unwrap()})  as c_int;
-    let arg3 = (if self.3.is_none() {QLatin1Char::new((0 as i8)).qclsinst} else {self.3.unwrap().qclsinst})  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString3argElii5QChar(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  int QString::count();
-impl<'a> /*trait*/ QString_count<i32> for () {
-  fn count(self , rsthis: & QString) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString5countEv()};
-    let mut ret = unsafe {C_ZNK7QString5countEv(rsthis.qclsinst)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::setNum(qulonglong , int base);
-impl<'a> /*trait*/ QString_setNum<QString> for (u64, Option<i32>) {
-  fn setNum(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6setNumEyi()};
-    let arg0 = self.0  as c_ulonglong;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZN7QString6setNumEyi(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QString::push_back(QChar c);
-impl /*struct*/ QString {
-  pub fn push_back<RetType, T: QString_push_back<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.push_back(self);
-    // return 1;
-  }
-}
-
-pub trait QString_push_back<RetType> {
-  fn push_back(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  void QString::push_back(QChar c);
-impl<'a> /*trait*/ QString_push_back<()> for (QChar) {
-  fn push_back(self , rsthis: & QString) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString9push_backE5QChar()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN7QString9push_backE5QChar(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::setNum(float , char f, int prec);
-impl<'a> /*trait*/ QString_setNum<QString> for (f32, Option<i8>, Option<i32>) {
-  fn setNum(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6setNumEfci()};
-    let arg0 = self.0  as c_float;
-    let arg1 = (if self.1.is_none() {'g' as i8} else {self.1.unwrap()})  as c_char;
-    let arg2 = (if self.2.is_none() {6} else {self.2.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZN7QString6setNumEfci(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  int QString::count(const QRegExp & );
-impl<'a> /*trait*/ QString_count<i32> for (&'a QRegExp) {
-  fn count(self , rsthis: & QString) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString5countERK7QRegExp()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString5countERK7QRegExp(rsthis.qclsinst, arg0)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  int QString::size();
-impl /*struct*/ QString {
-  pub fn size<RetType, T: QString_size<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.size(self);
-    // return 1;
-  }
-}
-
-pub trait QString_size<RetType> {
-  fn size(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  int QString::size();
-impl<'a> /*trait*/ QString_size<i32> for () {
-  fn size(self , rsthis: & QString) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString4sizeEv()};
-    let mut ret = unsafe {C_ZNK7QString4sizeEv(rsthis.qclsinst)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::insert(int i, const QChar * uc, int len);
-impl<'a> /*trait*/ QString_insert<QString> for (i32, &'a QChar, i32) {
-  fn insert(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6insertEiPK5QChari()};
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_int;
-    let mut ret = unsafe {C_ZN7QString6insertEiPK5QChari(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::replace(int i, int len, const QChar * s, int slen);
-impl /*struct*/ QString {
-  pub fn replace<RetType, T: QString_replace<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.replace(self);
-    // return 1;
-  }
-}
-
-pub trait QString_replace<RetType> {
-  fn replace(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QString & QString::replace(int i, int len, const QChar * s, int slen);
-impl<'a> /*trait*/ QString_replace<QString> for (i32, i32, &'a QChar, i32) {
-  fn replace(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString7replaceEiiPK5QChari()};
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2.qclsinst  as *mut c_void;
-    let arg3 = self.3  as c_int;
-    let mut ret = unsafe {C_ZN7QString7replaceEiiPK5QChari(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto: static QString QString::fromRawData(const QChar * , int size);
-impl /*struct*/ QString {
-  pub fn fromRawData_s<RetType, T: QString_fromRawData_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.fromRawData_s();
-    // return 1;
-  }
-}
-
-pub trait QString_fromRawData_s<RetType> {
-  fn fromRawData_s(self ) -> RetType;
-}
-
-  // proto: static QString QString::fromRawData(const QChar * , int size);
-impl<'a> /*trait*/ QString_fromRawData_s<QString> for (&'a QChar, i32) {
-  fn fromRawData_s(self ) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString11fromRawDataEPK5QChari()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
-    let mut ret = unsafe {C_ZN7QString11fromRawDataEPK5QChari(arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::trimmed();
-impl /*struct*/ QString {
-  pub fn trimmed<RetType, T: QString_trimmed<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.trimmed(self);
-    // return 1;
-  }
-}
-
-pub trait QString_trimmed<RetType> {
-  fn trimmed(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QString QString::trimmed();
-impl<'a> /*trait*/ QString_trimmed<QString> for () {
-  fn trimmed(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNO7QString7trimmedEv()};
-    let mut ret = unsafe {C_ZNO7QString7trimmedEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::insert(int i, const QString & s);
-impl<'a> /*trait*/ QString_insert<QString> for (i32, &'a QString) {
-  fn insert(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6insertEiRKS_()};
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN7QString6insertEiRKS_(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5);
-impl<'a> /*trait*/ QString_arg<QString> for (&'a QString, &'a QString, &'a QString, &'a QString, &'a QString) {
-  fn arg(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString3argERKS_S1_S1_S1_S1_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
-    let arg3 = self.3.qclsinst  as *mut c_void;
-    let arg4 = self.4.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString3argERKS_S1_S1_S1_S1_(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::setRawData(const QChar * unicode, int size);
-impl /*struct*/ QString {
-  pub fn setRawData<RetType, T: QString_setRawData<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setRawData(self);
-    // return 1;
-  }
-}
-
-pub trait QString_setRawData<RetType> {
-  fn setRawData(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QString & QString::setRawData(const QChar * unicode, int size);
-impl<'a> /*trait*/ QString_setRawData<QString> for (&'a QChar, i32) {
-  fn setRawData(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString10setRawDataEPK5QChari()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
-    let mut ret = unsafe {C_ZN7QString10setRawDataEPK5QChari(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::prepend(const QString & s);
-impl<'a> /*trait*/ QString_prepend<QString> for (&'a QString) {
-  fn prepend(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString7prependERKS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN7QString7prependERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::sprintf(const char * format);
-impl /*struct*/ QString {
-  pub fn sprintf<RetType, T: QString_sprintf<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.sprintf(self);
-    // return 1;
-  }
-}
-
-pub trait QString_sprintf<RetType> {
-  fn sprintf(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QString & QString::sprintf(const char * format);
-impl<'a> /*trait*/ QString_sprintf<QString> for (&'a  String) {
-  fn sprintf(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString7sprintfEPKcz()};
-    let arg0 = self.as_ptr()  as *mut c_char;
-    let mut ret = unsafe {C_ZN7QString7sprintfEPKcz(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  ulong QString::toULong(bool * ok, int base);
-impl /*struct*/ QString {
-  pub fn toULong<RetType, T: QString_toULong<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toULong(self);
-    // return 1;
-  }
-}
-
-pub trait QString_toULong<RetType> {
-  fn toULong(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  ulong QString::toULong(bool * ok, int base);
-impl<'a> /*trait*/ QString_toULong<u64> for (Option<&'a mut Vec<i8>>, Option<i32>) {
-  fn toULong(self , rsthis: & QString) -> u64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString7toULongEPbi()};
-    let arg0 = (if self.0.is_none() {0 as *const i8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK7QString7toULongEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as u64; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QString::chop(int n);
-impl /*struct*/ QString {
-  pub fn chop<RetType, T: QString_chop<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.chop(self);
-    // return 1;
-  }
-}
-
-pub trait QString_chop<RetType> {
-  fn chop(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  void QString::chop(int n);
-impl<'a> /*trait*/ QString_chop<()> for (i32) {
-  fn chop(self , rsthis: & QString) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString4chopEi()};
-    let arg0 = self  as c_int;
-     unsafe {C_ZN7QString4chopEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto: static QString QString::fromUtf16(const ushort * , int size);
-impl /*struct*/ QString {
-  pub fn fromUtf16_s<RetType, T: QString_fromUtf16_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.fromUtf16_s();
-    // return 1;
-  }
-}
-
-pub trait QString_fromUtf16_s<RetType> {
-  fn fromUtf16_s(self ) -> RetType;
-}
-
-  // proto: static QString QString::fromUtf16(const ushort * , int size);
-impl<'a> /*trait*/ QString_fromUtf16_s<QString> for (&'a  Vec<u16>, Option<i32>) {
-  fn fromUtf16_s(self ) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString9fromUtf16EPKti()};
-    let arg0 = self.0.as_ptr()  as *mut c_ushort;
-    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZN7QString9fromUtf16EPKti(arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  bool QString::isDetached();
-impl /*struct*/ QString {
-  pub fn isDetached<RetType, T: QString_isDetached<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isDetached(self);
-    // return 1;
-  }
-}
-
-pub trait QString_isDetached<RetType> {
-  fn isDetached(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  bool QString::isDetached();
-impl<'a> /*trait*/ QString_isDetached<i8> for () {
-  fn isDetached(self , rsthis: & QString) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString10isDetachedEv()};
-    let mut ret = unsafe {C_ZNK7QString10isDetachedEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::setNum(qlonglong , int base);
-impl<'a> /*trait*/ QString_setNum<QString> for (i64, Option<i32>) {
-  fn setNum(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6setNumExi()};
-    let arg0 = self.0  as c_longlong;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZN7QString6setNumExi(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::mid(int position, int n);
-impl /*struct*/ QString {
-  pub fn mid<RetType, T: QString_mid<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.mid(self);
-    // return 1;
-  }
-}
-
-pub trait QString_mid<RetType> {
-  fn mid(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QString QString::mid(int position, int n);
-impl<'a> /*trait*/ QString_mid<QString> for (i32, Option<i32>) {
-  fn mid(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString3midEii()};
-    let arg0 = self.0  as c_int;
-    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK7QString3midEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto: static QString QString::fromLocal8Bit(const char * str, int size);
-impl /*struct*/ QString {
-  pub fn fromLocal8Bit_s<RetType, T: QString_fromLocal8Bit_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.fromLocal8Bit_s();
-    // return 1;
-  }
-}
-
-pub trait QString_fromLocal8Bit_s<RetType> {
-  fn fromLocal8Bit_s(self ) -> RetType;
-}
-
-  // proto: static QString QString::fromLocal8Bit(const char * str, int size);
-impl<'a> /*trait*/ QString_fromLocal8Bit_s<QString> for (&'a  String, Option<i32>) {
-  fn fromLocal8Bit_s(self ) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString13fromLocal8BitEPKci()};
-    let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZN7QString13fromLocal8BitEPKci(arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QString::swap(QString & other);
-impl /*struct*/ QString {
-  pub fn swap<RetType, T: QString_swap<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.swap(self);
-    // return 1;
-  }
-}
-
-pub trait QString_swap<RetType> {
-  fn swap(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  void QString::swap(QString & other);
-impl<'a> /*trait*/ QString_swap<()> for (&'a QString) {
-  fn swap(self , rsthis: & QString) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString4swapERS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN7QString4swapERS_(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::vsprintf(const char * format, va_list ap);
-impl /*struct*/ QString {
-  pub fn vsprintf<RetType, T: QString_vsprintf<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.vsprintf(self);
-    // return 1;
-  }
-}
-
-pub trait QString_vsprintf<RetType> {
-  fn vsprintf(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QString & QString::vsprintf(const char * format, va_list ap);
-impl<'a> /*trait*/ QString_vsprintf<QString> for (&'a  String, i32) {
-  fn vsprintf(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString8vsprintfEPKci()};
-    let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = self.1  as c_int;
-    let mut ret = unsafe {C_ZN7QString8vsprintfEPKci(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto: static QString QString::fromUtf8(const QByteArray & str);
-impl /*struct*/ QString {
-  pub fn fromUtf8_s<RetType, T: QString_fromUtf8_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.fromUtf8_s();
-    // return 1;
-  }
-}
-
-pub trait QString_fromUtf8_s<RetType> {
-  fn fromUtf8_s(self ) -> RetType;
-}
-
-  // proto: static QString QString::fromUtf8(const QByteArray & str);
-impl<'a> /*trait*/ QString_fromUtf8_s<QString> for (&'a QByteArray) {
-  fn fromUtf8_s(self ) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString8fromUtf8ERK10QByteArray()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN7QString8fromUtf8ERK10QByteArray(arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto: static QString QString::fromUcs4(const char32_t * str, int size);
-impl /*struct*/ QString {
-  pub fn fromUcs4_s<RetType, T: QString_fromUcs4_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.fromUcs4_s();
-    // return 1;
-  }
-}
-
-pub trait QString_fromUcs4_s<RetType> {
-  fn fromUcs4_s(self ) -> RetType;
-}
-
-  // proto: static QString QString::fromUcs4(const char32_t * str, int size);
-impl<'a> /*trait*/ QString_fromUcs4_s<QString> for (&'a  String, Option<i32>) {
-  fn fromUcs4_s(self ) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString8fromUcs4EPKDii()};
-    let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZN7QString8fromUcs4EPKDii(arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::leftJustified(int width, QChar fill, bool trunc);
-impl /*struct*/ QString {
-  pub fn leftJustified<RetType, T: QString_leftJustified<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.leftJustified(self);
-    // return 1;
-  }
-}
-
-pub trait QString_leftJustified<RetType> {
-  fn leftJustified(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QString QString::leftJustified(int width, QChar fill, bool trunc);
-impl<'a> /*trait*/ QString_leftJustified<QString> for (i32, Option<QChar>, Option<i8>) {
-  fn leftJustified(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString13leftJustifiedEi5QCharb()};
-    let arg0 = self.0  as c_int;
-    let arg1 = (if self.1.is_none() {QLatin1Char::new((0 as i8)).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
-    let arg2 = (if self.2.is_none() {false as i8} else {self.2.unwrap()})  as c_char;
-    let mut ret = unsafe {C_ZNK7QString13leftJustifiedEi5QCharb(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  int QString::indexOf(const QRegExp & , int from);
-impl /*struct*/ QString {
-  pub fn indexOf<RetType, T: QString_indexOf<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.indexOf(self);
-    // return 1;
-  }
-}
-
-pub trait QString_indexOf<RetType> {
-  fn indexOf(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  int QString::indexOf(const QRegExp & , int from);
-impl<'a> /*trait*/ QString_indexOf<i32> for (&'a QRegExp, Option<i32>) {
-  fn indexOf(self , rsthis: & QString) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString7indexOfERK7QRegExpi()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK7QString7indexOfERK7QRegExpi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QString::push_back(const QString & s);
-impl<'a> /*trait*/ QString_push_back<()> for (&'a QString) {
-  fn push_back(self , rsthis: & QString) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString9push_backERKS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN7QString9push_backERKS_(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  int QString::lastIndexOf(QRegExp & , int from);
-impl<'a> /*trait*/ QString_lastIndexOf<i32> for (&'a QRegExp, Option<i32>) {
-  fn lastIndexOf(self , rsthis: & QString) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString11lastIndexOfER7QRegExpi()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK7QString11lastIndexOfER7QRegExpi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::arg(const QString & a1, const QString & a2, const QString & a3);
-impl<'a> /*trait*/ QString_arg<QString> for (&'a QString, &'a QString, &'a QString) {
-  fn arg(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString3argERKS_S1_S1_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString3argERKS_S1_S1_(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  const ushort * QString::utf16();
-impl /*struct*/ QString {
-  pub fn utf16<RetType, T: QString_utf16<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.utf16(self);
-    // return 1;
-  }
-}
-
-pub trait QString_utf16<RetType> {
-  fn utf16(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  const ushort * QString::utf16();
-impl<'a> /*trait*/ QString_utf16<*mut u16> for () {
-  fn utf16(self , rsthis: & QString) -> *mut u16 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString5utf16Ev()};
-    let mut ret = unsafe {C_ZNK7QString5utf16Ev(rsthis.qclsinst)};
-    return ret as *mut u16; // 1
-    // return 1;
-  }
-}
-
-  // proto:  int QString::toInt(bool * ok, int base);
-impl /*struct*/ QString {
-  pub fn toInt<RetType, T: QString_toInt<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toInt(self);
-    // return 1;
-  }
-}
-
-pub trait QString_toInt<RetType> {
-  fn toInt(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  int QString::toInt(bool * ok, int base);
-impl<'a> /*trait*/ QString_toInt<i32> for (Option<&'a mut Vec<i8>>, Option<i32>) {
-  fn toInt(self , rsthis: & QString) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString5toIntEPbi()};
-    let arg0 = (if self.0.is_none() {0 as *const i8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK7QString5toIntEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QByteArray QString::toUtf8();
-impl /*struct*/ QString {
-  pub fn toUtf8<RetType, T: QString_toUtf8<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toUtf8(self);
-    // return 1;
-  }
-}
-
-pub trait QString_toUtf8<RetType> {
-  fn toUtf8(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QByteArray QString::toUtf8();
-impl<'a> /*trait*/ QString_toUtf8<QByteArray> for () {
-  fn toUtf8(self , rsthis: & QString) -> QByteArray {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNO7QString6toUtf8Ev()};
-    let mut ret = unsafe {C_ZNO7QString6toUtf8Ev(rsthis.qclsinst)};
-    let mut ret1 = QByteArray::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::arg(double a, int fieldWidth, char fmt, int prec, QChar fillChar);
-impl<'a> /*trait*/ QString_arg<QString> for (f64, Option<i32>, Option<i8>, Option<i32>, Option<QChar>) {
-  fn arg(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString3argEdici5QChar()};
-    let arg0 = self.0  as c_double;
-    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
-    let arg2 = (if self.2.is_none() {'g' as i8} else {self.2.unwrap()})  as c_char;
-    let arg3 = (if self.3.is_none() {-1} else {self.3.unwrap()})  as c_int;
-    let arg4 = (if self.4.is_none() {QLatin1Char::new((0 as i8)).qclsinst} else {self.4.unwrap().qclsinst})  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString3argEdici5QChar(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QChar * QString::data();
-impl /*struct*/ QString {
-  pub fn data<RetType, T: QString_data<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.data(self);
-    // return 1;
-  }
-}
-
-pub trait QString_data<RetType> {
-  fn data(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QChar * QString::data();
-impl<'a> /*trait*/ QString_data<QChar> for () {
-  fn data(self , rsthis: & QString) -> QChar {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString4dataEv()};
-    let mut ret = unsafe {C_ZN7QString4dataEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::toCaseFolded();
-impl /*struct*/ QString {
-  pub fn toCaseFolded<RetType, T: QString_toCaseFolded<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toCaseFolded(self);
-    // return 1;
-  }
-}
-
-pub trait QString_toCaseFolded<RetType> {
-  fn toCaseFolded(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QString QString::toCaseFolded();
-impl<'a> /*trait*/ QString_toCaseFolded<QString> for () {
-  fn toCaseFolded(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNO7QString12toCaseFoldedEv()};
-    let mut ret = unsafe {C_ZNO7QString12toCaseFoldedEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::setNum(uint , int base);
-impl<'a> /*trait*/ QString_setNum<QString> for (u32, Option<i32>) {
-  fn setNum(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6setNumEji()};
-    let arg0 = self.0  as c_uint;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZN7QString6setNumEji(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto: static int QString::localeAwareCompare(const QString & s1, const QString & s2);
-impl /*struct*/ QString {
-  pub fn localeAwareCompare_s<RetType, T: QString_localeAwareCompare_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.localeAwareCompare_s();
-    // return 1;
-  }
-}
-
-pub trait QString_localeAwareCompare_s<RetType> {
-  fn localeAwareCompare_s(self ) -> RetType;
-}
-
-  // proto: static int QString::localeAwareCompare(const QString & s1, const QString & s2);
-impl<'a> /*trait*/ QString_localeAwareCompare_s<i32> for (&'a QString, &'a QString) {
-  fn localeAwareCompare_s(self ) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString18localeAwareCompareERKS_S1_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN7QString18localeAwareCompareERKS_S1_(arg0, arg1)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QString::QString(const char * ch);
-impl<'a> /*trait*/ QString_new for (&'a  String) {
-  fn new(self) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QStringC2EPKc()};
-    let ctysz: c_int = unsafe{QString_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.as_ptr()  as *mut c_char;
-    let qthis: u64 = unsafe {C_ZN7QStringC2EPKc(arg0)};
+// QString(QChar) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QString_QString_2 for (usize) {
+  fn QString_2(self) -> QString {
+    // unsafe{_ZN7QStringC2E5QChar()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN7QStringC2E5QChar", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QString{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto: static QString QString::fromUtf16(const char16_t * str, int size);
-impl<'a> /*trait*/ QString_fromUtf16_s<QString> for (&'a  String, Option<i32>) {
-  fn fromUtf16_s(self ) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString9fromUtf16EPKDsi()};
-    let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZN7QString9fromUtf16EPKDsi(arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
+// /usr/include/qt/QtCore/qstring.h:220
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QString(int, QChar)
 
-  // proto:  QString & QString::replace(const QRegExp & rx, const QString & after);
-impl<'a> /*trait*/ QString_replace<QString> for (&'a QRegExp, &'a QString) {
-  fn replace(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString7replaceERK7QRegExpRKS_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN7QString7replaceERK7QRegExpRKS_(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
+/*
+Constructs a null string. Null strings are also empty.
 
-  // proto:  QString QString::repeated(int times);
+See also isEmpty().
+*/
+// QString(int, QChar) ctx.fn_proto_cpp
 impl /*struct*/ QString {
-  pub fn repeated<RetType, T: QString_repeated<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.repeated(self);
+  pub fn QString_3<T: QString_QString_3>(value: T) -> QString {
+    let rsthis = value.QString_3();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QString_repeated<RetType> {
-  fn repeated(self , rsthis: & QString) -> RetType;
+pub trait QString_QString_3 {
+  fn QString_3(self) -> QString;
 }
-
-  // proto:  QString QString::repeated(int times);
-impl<'a> /*trait*/ QString_repeated<QString> for (i32) {
-  fn repeated(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString8repeatedEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZNK7QString8repeatedEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::toLower();
-impl /*struct*/ QString {
-  pub fn toLower<RetType, T: QString_toLower<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toLower(self);
-    // return 1;
-  }
-}
-
-pub trait QString_toLower<RetType> {
-  fn toLower(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QString QString::toLower();
-impl<'a> /*trait*/ QString_toLower<QString> for () {
-  fn toLower(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNO7QString7toLowerEv()};
-    let mut ret = unsafe {C_ZNO7QString7toLowerEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::setUtf16(const ushort * utf16, int size);
-impl /*struct*/ QString {
-  pub fn setUtf16<RetType, T: QString_setUtf16<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setUtf16(self);
-    // return 1;
-  }
-}
-
-pub trait QString_setUtf16<RetType> {
-  fn setUtf16(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QString & QString::setUtf16(const ushort * utf16, int size);
-impl<'a> /*trait*/ QString_setUtf16<QString> for (&'a  Vec<u16>, i32) {
-  fn setUtf16(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString8setUtf16EPKti()};
-    let arg0 = self.0.as_ptr()  as *mut c_ushort;
-    let arg1 = self.1  as c_int;
-    let mut ret = unsafe {C_ZN7QString8setUtf16EPKti(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QString::clear();
-impl /*struct*/ QString {
-  pub fn clear<RetType, T: QString_clear<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.clear(self);
-    // return 1;
-  }
-}
-
-pub trait QString_clear<RetType> {
-  fn clear(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  void QString::clear();
-impl<'a> /*trait*/ QString_clear<()> for () {
-  fn clear(self , rsthis: & QString) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString5clearEv()};
-     unsafe {C_ZN7QString5clearEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  bool QString::contains(const QRegExp & rx);
-impl /*struct*/ QString {
-  pub fn contains<RetType, T: QString_contains<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.contains(self);
-    // return 1;
-  }
-}
-
-pub trait QString_contains<RetType> {
-  fn contains(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  bool QString::contains(const QRegExp & rx);
-impl<'a> /*trait*/ QString_contains<i8> for (&'a QRegExp) {
-  fn contains(self , rsthis: & QString) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString8containsERK7QRegExp()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString8containsERK7QRegExp(rsthis.qclsinst, arg0)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  bool QString::isSharedWith(const QString & other);
-impl /*struct*/ QString {
-  pub fn isSharedWith<RetType, T: QString_isSharedWith<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isSharedWith(self);
-    // return 1;
-  }
-}
-
-pub trait QString_isSharedWith<RetType> {
-  fn isSharedWith(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  bool QString::isSharedWith(const QString & other);
-impl<'a> /*trait*/ QString_isSharedWith<i8> for (&'a QString) {
-  fn isSharedWith(self , rsthis: & QString) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString12isSharedWithERKS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString12isSharedWithERKS_(rsthis.qclsinst, arg0)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto: static QString QString::fromLatin1(const QByteArray & str);
-impl /*struct*/ QString {
-  pub fn fromLatin1_s<RetType, T: QString_fromLatin1_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.fromLatin1_s();
-    // return 1;
-  }
-}
-
-pub trait QString_fromLatin1_s<RetType> {
-  fn fromLatin1_s(self ) -> RetType;
-}
-
-  // proto: static QString QString::fromLatin1(const QByteArray & str);
-impl<'a> /*trait*/ QString_fromLatin1_s<QString> for (&'a QByteArray) {
-  fn fromLatin1_s(self ) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString10fromLatin1ERK10QByteArray()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN7QString10fromLatin1ERK10QByteArray(arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QString::~QString();
-impl /*struct*/ QString {
-  pub fn free<RetType, T: QString_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
-    // return 1;
-  }
-}
-
-pub trait QString_free<RetType> {
-  fn free(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  void QString::~QString();
-impl<'a> /*trait*/ QString_free<()> for () {
-  fn free(self , rsthis: & QString) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QStringD2Ev()};
-     unsafe {C_ZN7QStringD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::remove(const QRegularExpression & re);
-impl /*struct*/ QString {
-  pub fn remove<RetType, T: QString_remove<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.remove(self);
-    // return 1;
-  }
-}
-
-pub trait QString_remove<RetType> {
-  fn remove(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QString & QString::remove(const QRegularExpression & re);
-impl<'a> /*trait*/ QString_remove<QString> for (&'a QRegularExpression) {
-  fn remove(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6removeERK18QRegularExpression()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN7QString6removeERK18QRegularExpression(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::setNum(int , int base);
-impl<'a> /*trait*/ QString_setNum<QString> for (i32, Option<i32>) {
-  fn setNum(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6setNumEii()};
-    let arg0 = self.0  as c_int;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZN7QString6setNumEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  const_iterator QString::cend();
-impl /*struct*/ QString {
-  pub fn cend<RetType, T: QString_cend<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.cend(self);
-    // return 1;
-  }
-}
-
-pub trait QString_cend<RetType> {
-  fn cend(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  const_iterator QString::cend();
-impl<'a> /*trait*/ QString_cend<QChar> for () {
-  fn cend(self , rsthis: & QString) -> QChar {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString4cendEv()};
-    let mut ret = unsafe {C_ZNK7QString4cendEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::toHtmlEscaped();
-impl /*struct*/ QString {
-  pub fn toHtmlEscaped<RetType, T: QString_toHtmlEscaped<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toHtmlEscaped(self);
-    // return 1;
-  }
-}
-
-pub trait QString_toHtmlEscaped<RetType> {
-  fn toHtmlEscaped(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QString QString::toHtmlEscaped();
-impl<'a> /*trait*/ QString_toHtmlEscaped<QString> for () {
-  fn toHtmlEscaped(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString13toHtmlEscapedEv()};
-    let mut ret = unsafe {C_ZNK7QString13toHtmlEscapedEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  int QString::lastIndexOf(const QRegularExpression & re, int from, QRegularExpressionMatch * rmatch);
-impl<'a> /*trait*/ QString_lastIndexOf<i32> for (&'a QRegularExpression, i32, &'a QRegularExpressionMatch) {
-  fn lastIndexOf(self , rsthis: & QString) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString11lastIndexOfERK18QRegularExpressioniP23QRegularExpressionMatch()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString11lastIndexOfERK18QRegularExpressioniP23QRegularExpressionMatch(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::append(const QByteArray & s);
-impl<'a> /*trait*/ QString_append<QString> for (&'a QByteArray) {
-  fn append(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6appendERK10QByteArray()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN7QString6appendERK10QByteArray(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto: static QString QString::fromLatin1(const char * str, int size);
-impl<'a> /*trait*/ QString_fromLatin1_s<QString> for (&'a  String, Option<i32>) {
-  fn fromLatin1_s(self ) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString10fromLatin1EPKci()};
-    let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZN7QString10fromLatin1EPKci(arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  bool QString::contains(const QRegularExpression & re, QRegularExpressionMatch * match);
-impl<'a> /*trait*/ QString_contains<i8> for (&'a QRegularExpression, &'a QRegularExpressionMatch) {
-  fn contains(self , rsthis: & QString) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString8containsERK18QRegularExpressionP23QRegularExpressionMatch()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString8containsERK18QRegularExpressionP23QRegularExpressionMatch(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  int QString::indexOf(const QRegularExpression & re, int from, QRegularExpressionMatch * rmatch);
-impl<'a> /*trait*/ QString_indexOf<i32> for (&'a QRegularExpression, i32, &'a QRegularExpressionMatch) {
-  fn indexOf(self , rsthis: & QString) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString7indexOfERK18QRegularExpressioniP23QRegularExpressionMatch()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString7indexOfERK18QRegularExpressioniP23QRegularExpressionMatch(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  int QString::toWCharArray(wchar_t * array);
-impl /*struct*/ QString {
-  pub fn toWCharArray<RetType, T: QString_toWCharArray<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toWCharArray(self);
-    // return 1;
-  }
-}
-
-pub trait QString_toWCharArray<RetType> {
-  fn toWCharArray(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  int QString::toWCharArray(wchar_t * array);
-impl<'a> /*trait*/ QString_toWCharArray<i32> for (&'a  String) {
-  fn toWCharArray(self , rsthis: & QString) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString12toWCharArrayEPw()};
-    let arg0 = self.as_ptr()  as *mut wchar_t;
-    let mut ret = unsafe {C_ZNK7QString12toWCharArrayEPw(rsthis.qclsinst, arg0)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  const_iterator QString::cbegin();
-impl /*struct*/ QString {
-  pub fn cbegin<RetType, T: QString_cbegin<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.cbegin(self);
-    // return 1;
-  }
-}
-
-pub trait QString_cbegin<RetType> {
-  fn cbegin(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  const_iterator QString::cbegin();
-impl<'a> /*trait*/ QString_cbegin<QChar> for () {
-  fn cbegin(self , rsthis: & QString) -> QChar {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString6cbeginEv()};
-    let mut ret = unsafe {C_ZNK7QString6cbeginEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::prepend(const QByteArray & s);
-impl<'a> /*trait*/ QString_prepend<QString> for (&'a QByteArray) {
-  fn prepend(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString7prependERK10QByteArray()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN7QString7prependERK10QByteArray(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::replace(int i, int len, const QString & after);
-impl<'a> /*trait*/ QString_replace<QString> for (i32, i32, &'a QString) {
-  fn replace(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString7replaceEiiRKS_()};
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN7QString7replaceEiiRKS_(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6, const QString & a7);
-impl<'a> /*trait*/ QString_arg<QString> for (&'a QString, &'a QString, &'a QString, &'a QString, &'a QString, &'a QString, &'a QString) {
-  fn arg(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString3argERKS_S1_S1_S1_S1_S1_S1_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
-    let arg3 = self.3.qclsinst  as *mut c_void;
-    let arg4 = self.4.qclsinst  as *mut c_void;
-    let arg5 = self.5.qclsinst  as *mut c_void;
-    let arg6 = self.6.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString3argERKS_S1_S1_S1_S1_S1_S1_(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5, arg6)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto: static QString QString::fromWCharArray(const wchar_t * string, int size);
-impl /*struct*/ QString {
-  pub fn fromWCharArray_s<RetType, T: QString_fromWCharArray_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.fromWCharArray_s();
-    // return 1;
-  }
-}
-
-pub trait QString_fromWCharArray_s<RetType> {
-  fn fromWCharArray_s(self ) -> RetType;
-}
-
-  // proto: static QString QString::fromWCharArray(const wchar_t * string, int size);
-impl<'a> /*trait*/ QString_fromWCharArray_s<QString> for (&'a  String, Option<i32>) {
-  fn fromWCharArray_s(self ) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString14fromWCharArrayEPKwi()};
-    let arg0 = self.0.as_ptr()  as *mut wchar_t;
-    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZN7QString14fromWCharArrayEPKwi(arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::fill(QChar c, int size);
-impl /*struct*/ QString {
-  pub fn fill<RetType, T: QString_fill<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.fill(self);
-    // return 1;
-  }
-}
-
-pub trait QString_fill<RetType> {
-  fn fill(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QString & QString::fill(QChar c, int size);
-impl<'a> /*trait*/ QString_fill<QString> for (QChar, Option<i32>) {
-  fn fill(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString4fillE5QChari()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZN7QString4fillE5QChari(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  const QChar * QString::constData();
-impl /*struct*/ QString {
-  pub fn constData<RetType, T: QString_constData<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.constData(self);
-    // return 1;
-  }
-}
-
-pub trait QString_constData<RetType> {
-  fn constData(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  const QChar * QString::constData();
-impl<'a> /*trait*/ QString_constData<QChar> for () {
-  fn constData(self , rsthis: & QString) -> QChar {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString9constDataEv()};
-    let mut ret = unsafe {C_ZNK7QString9constDataEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto: static QString QString::number(ulong , int base);
-impl<'a> /*trait*/ QString_number_s<QString> for (u64, Option<i32>) {
-  fn number_s(self ) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6numberEmi()};
-    let arg0 = self.0  as c_ulong;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZN7QString6numberEmi(arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  long QString::toLong(bool * ok, int base);
-impl /*struct*/ QString {
-  pub fn toLong<RetType, T: QString_toLong<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toLong(self);
-    // return 1;
-  }
-}
-
-pub trait QString_toLong<RetType> {
-  fn toLong(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  long QString::toLong(bool * ok, int base);
-impl<'a> /*trait*/ QString_toLong<i64> for (Option<&'a mut Vec<i8>>, Option<i32>) {
-  fn toLong(self , rsthis: & QString) -> i64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString6toLongEPbi()};
-    let arg0 = (if self.0.is_none() {0 as *const i8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK7QString6toLongEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i64; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::toUpper();
-impl /*struct*/ QString {
-  pub fn toUpper<RetType, T: QString_toUpper<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toUpper(self);
-    // return 1;
-  }
-}
-
-pub trait QString_toUpper<RetType> {
-  fn toUpper(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QString QString::toUpper();
-impl<'a> /*trait*/ QString_toUpper<QString> for () {
-  fn toUpper(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNO7QString7toUpperEv()};
-    let mut ret = unsafe {C_ZNO7QString7toUpperEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  const_iterator QString::constEnd();
-impl /*struct*/ QString {
-  pub fn constEnd<RetType, T: QString_constEnd<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.constEnd(self);
-    // return 1;
-  }
-}
-
-pub trait QString_constEnd<RetType> {
-  fn constEnd(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  const_iterator QString::constEnd();
-impl<'a> /*trait*/ QString_constEnd<QChar> for () {
-  fn constEnd(self , rsthis: & QString) -> QChar {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString8constEndEv()};
-    let mut ret = unsafe {C_ZNK7QString8constEndEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  int QString::length();
-impl /*struct*/ QString {
-  pub fn length<RetType, T: QString_length<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.length(self);
-    // return 1;
-  }
-}
-
-pub trait QString_length<RetType> {
-  fn length(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  int QString::length();
-impl<'a> /*trait*/ QString_length<i32> for () {
-  fn length(self , rsthis: & QString) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString6lengthEv()};
-    let mut ret = unsafe {C_ZNK7QString6lengthEv(rsthis.qclsinst)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto: static QString QString::fromUtf8(const char * str, int size);
-impl<'a> /*trait*/ QString_fromUtf8_s<QString> for (&'a  String, Option<i32>) {
-  fn fromUtf8_s(self ) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString8fromUtf8EPKci()};
-    let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZN7QString8fromUtf8EPKci(arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::simplified();
-impl /*struct*/ QString {
-  pub fn simplified<RetType, T: QString_simplified<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.simplified(self);
-    // return 1;
-  }
-}
-
-pub trait QString_simplified<RetType> {
-  fn simplified(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QString QString::simplified();
-impl<'a> /*trait*/ QString_simplified<QString> for () {
-  fn simplified(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNO7QString10simplifiedEv()};
-    let mut ret = unsafe {C_ZNO7QString10simplifiedEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto: static QString QString::number(qlonglong , int base);
-impl<'a> /*trait*/ QString_number_s<QString> for (i64, Option<i32>) {
-  fn number_s(self ) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6numberExi()};
-    let arg0 = self.0  as c_longlong;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZN7QString6numberExi(arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QStringRef QString::leftRef(int n);
-impl /*struct*/ QString {
-  pub fn leftRef<RetType, T: QString_leftRef<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.leftRef(self);
-    // return 1;
-  }
-}
-
-pub trait QString_leftRef<RetType> {
-  fn leftRef(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QStringRef QString::leftRef(int n);
-impl<'a> /*trait*/ QString_leftRef<QStringRef> for (i32) {
-  fn leftRef(self , rsthis: & QString) -> QStringRef {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString7leftRefEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZNK7QString7leftRefEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QStringRef::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::arg(const QString & a1, const QString & a2);
-impl<'a> /*trait*/ QString_arg<QString> for (&'a QString, &'a QString) {
-  fn arg(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString3argERKS_S1_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString3argERKS_S1_(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  bool QString::isSimpleText();
-impl /*struct*/ QString {
-  pub fn isSimpleText<RetType, T: QString_isSimpleText<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isSimpleText(self);
-    // return 1;
-  }
-}
-
-pub trait QString_isSimpleText<RetType> {
-  fn isSimpleText(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  bool QString::isSimpleText();
-impl<'a> /*trait*/ QString_isSimpleText<i8> for () {
-  fn isSimpleText(self , rsthis: & QString) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString12isSimpleTextEv()};
-    let mut ret = unsafe {C_ZNK7QString12isSimpleTextEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto: static QString QString::fromUcs4(const uint * , int size);
-impl<'a> /*trait*/ QString_fromUcs4_s<QString> for (&'a  Vec<u32>, Option<i32>) {
-  fn fromUcs4_s(self ) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString8fromUcs4EPKji()};
-    let arg0 = self.0.as_ptr()  as *mut c_uint;
-    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZN7QString8fromUcs4EPKji(arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::setUnicode(const QChar * unicode, int size);
-impl /*struct*/ QString {
-  pub fn setUnicode<RetType, T: QString_setUnicode<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setUnicode(self);
-    // return 1;
-  }
-}
-
-pub trait QString_setUnicode<RetType> {
-  fn setUnicode(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QString & QString::setUnicode(const QChar * unicode, int size);
-impl<'a> /*trait*/ QString_setUnicode<QString> for (&'a QChar, i32) {
-  fn setUnicode(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString10setUnicodeEPK5QChari()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
-    let mut ret = unsafe {C_ZN7QString10setUnicodeEPK5QChari(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  const_iterator QString::constBegin();
-impl /*struct*/ QString {
-  pub fn constBegin<RetType, T: QString_constBegin<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.constBegin(self);
-    // return 1;
-  }
-}
-
-pub trait QString_constBegin<RetType> {
-  fn constBegin(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  const_iterator QString::constBegin();
-impl<'a> /*trait*/ QString_constBegin<QChar> for () {
-  fn constBegin(self , rsthis: & QString) -> QChar {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString10constBeginEv()};
-    let mut ret = unsafe {C_ZNK7QString10constBeginEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  const QChar * QString::unicode();
-impl /*struct*/ QString {
-  pub fn unicode<RetType, T: QString_unicode<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.unicode(self);
-    // return 1;
-  }
-}
-
-pub trait QString_unicode<RetType> {
-  fn unicode(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  const QChar * QString::unicode();
-impl<'a> /*trait*/ QString_unicode<QChar> for () {
-  fn unicode(self , rsthis: & QString) -> QChar {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString7unicodeEv()};
-    let mut ret = unsafe {C_ZNK7QString7unicodeEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6, const QString & a7, const QString & a8, const QString & a9);
-impl<'a> /*trait*/ QString_arg<QString> for (&'a QString, &'a QString, &'a QString, &'a QString, &'a QString, &'a QString, &'a QString, &'a QString, &'a QString) {
-  fn arg(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString3argERKS_S1_S1_S1_S1_S1_S1_S1_S1_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
-    let arg3 = self.3.qclsinst  as *mut c_void;
-    let arg4 = self.4.qclsinst  as *mut c_void;
-    let arg5 = self.5.qclsinst  as *mut c_void;
-    let arg6 = self.6.qclsinst  as *mut c_void;
-    let arg7 = self.7.qclsinst  as *mut c_void;
-    let arg8 = self.8.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString3argERKS_S1_S1_S1_S1_S1_S1_S1_S1_(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  int QString::indexOf(const QRegularExpression & re, int from);
-impl<'a> /*trait*/ QString_indexOf<i32> for (&'a QRegularExpression, Option<i32>) {
-  fn indexOf(self , rsthis: & QString) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString7indexOfERK18QRegularExpressioni()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK7QString7indexOfERK18QRegularExpressioni(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto: static QString QString::number(uint , int base);
-impl<'a> /*trait*/ QString_number_s<QString> for (u32, Option<i32>) {
-  fn number_s(self ) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6numberEji()};
-    let arg0 = self.0  as c_uint;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZN7QString6numberEji(arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto: static QString QString::fromLocal8Bit(const QByteArray & str);
-impl<'a> /*trait*/ QString_fromLocal8Bit_s<QString> for (&'a QByteArray) {
-  fn fromLocal8Bit_s(self ) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString13fromLocal8BitERK10QByteArray()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN7QString13fromLocal8BitERK10QByteArray(arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  const QChar QString::at(int i);
-impl /*struct*/ QString {
-  pub fn at<RetType, T: QString_at<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.at(self);
-    // return 1;
-  }
-}
-
-pub trait QString_at<RetType> {
-  fn at(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  const QChar QString::at(int i);
-impl<'a> /*trait*/ QString_at<QChar> for (i32) {
-  fn at(self , rsthis: & QString) -> QChar {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString2atEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZNK7QString2atEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QChar::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto: static QString QString::asprintf(const char * format);
-impl /*struct*/ QString {
-  pub fn asprintf_s<RetType, T: QString_asprintf_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.asprintf_s();
-    // return 1;
-  }
-}
-
-pub trait QString_asprintf_s<RetType> {
-  fn asprintf_s(self ) -> RetType;
-}
-
-  // proto: static QString QString::asprintf(const char * format);
-impl<'a> /*trait*/ QString_asprintf_s<QString> for (&'a  String) {
-  fn asprintf_s(self ) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString8asprintfEPKcz()};
-    let arg0 = self.as_ptr()  as *mut c_char;
-    let mut ret = unsafe {C_ZN7QString8asprintfEPKcz(arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QString::QString(int size, QChar c);
-impl<'a> /*trait*/ QString_new for (i32, QChar) {
-  fn new(self) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+// QString(int, QChar) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QString_QString_3 for (i32,usize) {
+  fn QString_3(self) -> QString {
     // unsafe{_ZN7QStringC2Ei5QChar()};
-    let ctysz: c_int = unsafe{QString_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN7QStringC2Ei5QChar(arg0, arg1)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN7QStringC2Ei5QChar", 2,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QString{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  QByteArray QString::toLatin1();
+// /usr/include/qt/QtCore/qstring.h:221
+// index:4
+// Public inline Visibility=Default Availability=Available
+// [-2] void QString(QLatin1String)
+
+/*
+Constructs a null string. Null strings are also empty.
+
+See also isEmpty().
+*/
+// QString(QLatin1String) ctx.fn_proto_cpp
 impl /*struct*/ QString {
-  pub fn toLatin1<RetType, T: QString_toLatin1<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toLatin1(self);
+  pub fn QString_4<T: QString_QString_4>(value: T) -> QString {
+    let rsthis = value.QString_4();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QString_toLatin1<RetType> {
-  fn toLatin1(self , rsthis: & QString) -> RetType;
+pub trait QString_QString_4 {
+  fn QString_4(self) -> QString;
 }
-
-  // proto:  QByteArray QString::toLatin1();
-impl<'a> /*trait*/ QString_toLatin1<QByteArray> for () {
-  fn toLatin1(self , rsthis: & QString) -> QByteArray {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNO7QString8toLatin1Ev()};
-    let mut ret = unsafe {C_ZNO7QString8toLatin1Ev(rsthis.qclsinst)};
-    let mut ret1 = QByteArray::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QString::push_front(const QString & s);
-impl<'a> /*trait*/ QString_push_front<()> for (&'a QString) {
-  fn push_front(self , rsthis: & QString) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString10push_frontERKS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN7QString10push_frontERKS_(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6);
-impl<'a> /*trait*/ QString_arg<QString> for (&'a QString, &'a QString, &'a QString, &'a QString, &'a QString, &'a QString) {
-  fn arg(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString3argERKS_S1_S1_S1_S1_S1_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
-    let arg3 = self.3.qclsinst  as *mut c_void;
-    let arg4 = self.4.qclsinst  as *mut c_void;
-    let arg5 = self.5.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString3argERKS_S1_S1_S1_S1_S1_(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  iterator QString::begin();
-impl /*struct*/ QString {
-  pub fn begin<RetType, T: QString_begin<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.begin(self);
-    // return 1;
-  }
-}
-
-pub trait QString_begin<RetType> {
-  fn begin(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  iterator QString::begin();
-impl<'a> /*trait*/ QString_begin<QChar> for () {
-  fn begin(self , rsthis: & QString) -> QChar {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString5beginEv()};
-    let mut ret = unsafe {C_ZN7QString5beginEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto: static QString QString::number(double , char f, int prec);
-impl<'a> /*trait*/ QString_number_s<QString> for (f64, Option<i8>, Option<i32>) {
-  fn number_s(self ) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6numberEdci()};
-    let arg0 = self.0  as c_double;
-    let arg1 = (if self.1.is_none() {'g' as i8} else {self.1.unwrap()})  as c_char;
-    let arg2 = (if self.2.is_none() {6} else {self.2.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZN7QString6numberEdci(arg0, arg1, arg2)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  iterator QString::end();
-impl /*struct*/ QString {
-  pub fn end<RetType, T: QString_end<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.end(self);
-    // return 1;
-  }
-}
-
-pub trait QString_end<RetType> {
-  fn end(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  iterator QString::end();
-impl<'a> /*trait*/ QString_end<QChar> for () {
-  fn end(self , rsthis: & QString) -> QChar {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString3endEv()};
-    let mut ret = unsafe {C_ZN7QString3endEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::append(QChar c);
-impl<'a> /*trait*/ QString_append<QString> for (QChar) {
-  fn append(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6appendE5QChar()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN7QString6appendE5QChar(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  uint QString::toUInt(bool * ok, int base);
-impl /*struct*/ QString {
-  pub fn toUInt<RetType, T: QString_toUInt<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toUInt(self);
-    // return 1;
-  }
-}
-
-pub trait QString_toUInt<RetType> {
-  fn toUInt(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  uint QString::toUInt(bool * ok, int base);
-impl<'a> /*trait*/ QString_toUInt<u32> for (Option<&'a mut Vec<i8>>, Option<i32>) {
-  fn toUInt(self , rsthis: & QString) -> u32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString6toUIntEPbi()};
-    let arg0 = (if self.0.is_none() {0 as *const i8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK7QString6toUIntEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as u32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::append(const QString & s);
-impl<'a> /*trait*/ QString_append<QString> for (&'a QString) {
-  fn append(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6appendERKS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN7QString6appendERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  ushort QString::toUShort(bool * ok, int base);
-impl /*struct*/ QString {
-  pub fn toUShort<RetType, T: QString_toUShort<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toUShort(self);
-    // return 1;
-  }
-}
-
-pub trait QString_toUShort<RetType> {
-  fn toUShort(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  ushort QString::toUShort(bool * ok, int base);
-impl<'a> /*trait*/ QString_toUShort<u16> for (Option<&'a mut Vec<i8>>, Option<i32>) {
-  fn toUShort(self , rsthis: & QString) -> u16 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString8toUShortEPbi()};
-    let arg0 = (if self.0.is_none() {0 as *const i8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK7QString8toUShortEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as u16; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::arg(uint a, int fieldWidth, int base, QChar fillChar);
-impl<'a> /*trait*/ QString_arg<QString> for (u32, Option<i32>, Option<i32>, Option<QChar>) {
-  fn arg(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString3argEjii5QChar()};
-    let arg0 = self.0  as c_uint;
-    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
-    let arg2 = (if self.2.is_none() {10} else {self.2.unwrap()})  as c_int;
-    let arg3 = (if self.3.is_none() {QLatin1Char::new((0 as i8)).qclsinst} else {self.3.unwrap().qclsinst})  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString3argEjii5QChar(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::setNum(ushort , int base);
-impl<'a> /*trait*/ QString_setNum<QString> for (u16, Option<i32>) {
-  fn setNum(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6setNumEti()};
-    let arg0 = self.0  as c_ushort;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZN7QString6setNumEti(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QByteArray QString::toLocal8Bit();
-impl /*struct*/ QString {
-  pub fn toLocal8Bit<RetType, T: QString_toLocal8Bit<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toLocal8Bit(self);
-    // return 1;
-  }
-}
-
-pub trait QString_toLocal8Bit<RetType> {
-  fn toLocal8Bit(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QByteArray QString::toLocal8Bit();
-impl<'a> /*trait*/ QString_toLocal8Bit<QByteArray> for () {
-  fn toLocal8Bit(self , rsthis: & QString) -> QByteArray {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNO7QString11toLocal8BitEv()};
-    let mut ret = unsafe {C_ZNO7QString11toLocal8BitEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::replace(const QRegularExpression & re, const QString & after);
-impl<'a> /*trait*/ QString_replace<QString> for (&'a QRegularExpression, &'a QString) {
-  fn replace(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString7replaceERK18QRegularExpressionRKS_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN7QString7replaceERK18QRegularExpressionRKS_(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::setNum(double , char f, int prec);
-impl<'a> /*trait*/ QString_setNum<QString> for (f64, Option<i8>, Option<i32>) {
-  fn setNum(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6setNumEdci()};
-    let arg0 = self.0  as c_double;
-    let arg1 = (if self.1.is_none() {'g' as i8} else {self.1.unwrap()})  as c_char;
-    let arg2 = (if self.2.is_none() {6} else {self.2.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZN7QString6setNumEdci(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::arg(ushort a, int fieldWidth, int base, QChar fillChar);
-impl<'a> /*trait*/ QString_arg<QString> for (u16, Option<i32>, Option<i32>, Option<QChar>) {
-  fn arg(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString3argEtii5QChar()};
-    let arg0 = self.0  as c_ushort;
-    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
-    let arg2 = (if self.2.is_none() {10} else {self.2.unwrap()})  as c_int;
-    let arg3 = (if self.3.is_none() {QLatin1Char::new((0 as i8)).qclsinst} else {self.3.unwrap().qclsinst})  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString3argEtii5QChar(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QString::QString(const QString & );
-impl<'a> /*trait*/ QString_new for (&'a QString) {
-  fn new(self) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QStringC2ERKS_()};
-    let ctysz: c_int = unsafe{QString_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN7QStringC2ERKS_(arg0)};
+// QString(QLatin1String) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QString_QString_4 for (usize) {
+  fn QString_4(self) -> QString {
+    // unsafe{_ZN7QStringC2E13QLatin1String()};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN7QStringC2E13QLatin1String", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QString{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  QString QString::arg(short a, int fieldWidth, int base, QChar fillChar);
-impl<'a> /*trait*/ QString_arg<QString> for (i16, Option<i32>, Option<i32>, Option<QChar>) {
-  fn arg(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString3argEsii5QChar()};
-    let arg0 = self.0  as c_short;
-    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
-    let arg2 = (if self.2.is_none() {10} else {self.2.unwrap()})  as c_int;
-    let arg3 = (if self.3.is_none() {QLatin1Char::new((0 as i8)).qclsinst} else {self.3.unwrap().qclsinst})  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString3argEsii5QChar(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+// /usr/include/qt/QtCore/qstring.h:682
+// index:5
+// Public inline Visibility=Default Availability=Available
+// [-2] void QString(const char *)
+
+/*
+Constructs a null string. Null strings are also empty.
+
+See also isEmpty().
+*/
+// QString(const char *) ctx.fn_proto_cpp
+impl /*struct*/ QString {
+  pub fn QString_5<T: QString_QString_5>(value: T) -> QString {
+    let rsthis = value.QString_5();
+    return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QString::QString(const QByteArray & a);
-impl<'a> /*trait*/ QString_new for (&'a QByteArray) {
-  fn new(self) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+pub trait QString_QString_5 {
+  fn QString_5(self) -> QString;
+}
+// QString(const char *) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QString_QString_5 for (usize) {
+  fn QString_5(self) -> QString {
+    // unsafe{_ZN7QStringC2EPKc()};
+    let arg0 = (self) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN7QStringC2EPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QString{qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:685
+// index:6
+// Public inline Visibility=Default Availability=Available
+// [-2] void QString(const QByteArray &)
+
+/*
+Constructs a null string. Null strings are also empty.
+
+See also isEmpty().
+*/
+// QString(const QByteArray &) ctx.fn_proto_cpp
+impl /*struct*/ QString {
+  pub fn QString_6<T: QString_QString_6>(value: T) -> QString {
+    let rsthis = value.QString_6();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QString_QString_6 {
+  fn QString_6(self) -> QString;
+}
+// QString(const QByteArray &) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QString_QString_6 for (usize) {
+  fn QString_6(self) -> QString {
     // unsafe{_ZN7QStringC2ERK10QByteArray()};
-    let ctysz: c_int = unsafe{QString_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN7QStringC2ERK10QByteArray(arg0)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN7QStringC2ERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QString{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto: static QString QString::vasprintf(const char * format, va_list ap);
+// /usr/include/qt/QtCore/qstring.h:811
+// index:7
+// Public Visibility=Default Availability=Available
+// [-2] void QString(int, Qt::Initialization)
+
+/*
+Constructs a null string. Null strings are also empty.
+
+See also isEmpty().
+*/
+// QString(int, Qt::Initialization) ctx.fn_proto_cpp
 impl /*struct*/ QString {
-  pub fn vasprintf_s<RetType, T: QString_vasprintf_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.vasprintf_s();
-    // return 1;
-  }
-}
-
-pub trait QString_vasprintf_s<RetType> {
-  fn vasprintf_s(self ) -> RetType;
-}
-
-  // proto: static QString QString::vasprintf(const char * format, va_list ap);
-impl<'a> /*trait*/ QString_vasprintf_s<QString> for (&'a  String, i32) {
-  fn vasprintf_s(self ) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString9vasprintfEPKci()};
-    let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = self.1  as c_int;
-    let mut ret = unsafe {C_ZN7QString9vasprintfEPKci(arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  qulonglong QString::toULongLong(bool * ok, int base);
-impl /*struct*/ QString {
-  pub fn toULongLong<RetType, T: QString_toULongLong<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toULongLong(self);
-    // return 1;
-  }
-}
-
-pub trait QString_toULongLong<RetType> {
-  fn toULongLong(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  qulonglong QString::toULongLong(bool * ok, int base);
-impl<'a> /*trait*/ QString_toULongLong<u64> for (Option<&'a mut Vec<i8>>, Option<i32>) {
-  fn toULongLong(self , rsthis: & QString) -> u64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString11toULongLongEPbi()};
-    let arg0 = (if self.0.is_none() {0 as *const i8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK7QString11toULongLongEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as u64; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::append(const char * s);
-impl<'a> /*trait*/ QString_append<QString> for (&'a  String) {
-  fn append(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6appendEPKc()};
-    let arg0 = self.as_ptr()  as *mut c_char;
-    let mut ret = unsafe {C_ZN7QString6appendEPKc(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  int QString::capacity();
-impl /*struct*/ QString {
-  pub fn capacity<RetType, T: QString_capacity<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.capacity(self);
-    // return 1;
-  }
-}
-
-pub trait QString_capacity<RetType> {
-  fn capacity(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  int QString::capacity();
-impl<'a> /*trait*/ QString_capacity<i32> for () {
-  fn capacity(self , rsthis: & QString) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString8capacityEv()};
-    let mut ret = unsafe {C_ZNK7QString8capacityEv(rsthis.qclsinst)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  void QString::squeeze();
-impl /*struct*/ QString {
-  pub fn squeeze<RetType, T: QString_squeeze<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.squeeze(self);
-    // return 1;
-  }
-}
-
-pub trait QString_squeeze<RetType> {
-  fn squeeze(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  void QString::squeeze();
-impl<'a> /*trait*/ QString_squeeze<()> for () {
-  fn squeeze(self , rsthis: & QString) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString7squeezeEv()};
-     unsafe {C_ZN7QString7squeezeEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QString::truncate(int pos);
-impl /*struct*/ QString {
-  pub fn truncate<RetType, T: QString_truncate<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.truncate(self);
-    // return 1;
-  }
-}
-
-pub trait QString_truncate<RetType> {
-  fn truncate(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  void QString::truncate(int pos);
-impl<'a> /*trait*/ QString_truncate<()> for (i32) {
-  fn truncate(self , rsthis: & QString) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString8truncateEi()};
-    let arg0 = self  as c_int;
-     unsafe {C_ZN7QString8truncateEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::arg(int a, int fieldWidth, int base, QChar fillChar);
-impl<'a> /*trait*/ QString_arg<QString> for (i32, Option<i32>, Option<i32>, Option<QChar>) {
-  fn arg(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString3argEiii5QChar()};
-    let arg0 = self.0  as c_int;
-    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
-    let arg2 = (if self.2.is_none() {10} else {self.2.unwrap()})  as c_int;
-    let arg3 = (if self.3.is_none() {QLatin1Char::new((0 as i8)).qclsinst} else {self.3.unwrap().qclsinst})  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString3argEiii5QChar(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::arg(QChar a, int fieldWidth, QChar fillChar);
-impl<'a> /*trait*/ QString_arg<QString> for (QChar, Option<i32>, Option<QChar>) {
-  fn arg(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString3argE5QChariS0_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
-    let arg2 = (if self.2.is_none() {QLatin1Char::new((0 as i8)).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString3argE5QChariS0_(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  int QString::localeAwareCompare(const QString & s);
-impl /*struct*/ QString {
-  pub fn localeAwareCompare<RetType, T: QString_localeAwareCompare<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.localeAwareCompare(self);
-    // return 1;
-  }
-}
-
-pub trait QString_localeAwareCompare<RetType> {
-  fn localeAwareCompare(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  int QString::localeAwareCompare(const QString & s);
-impl<'a> /*trait*/ QString_localeAwareCompare<i32> for (&'a QString) {
-  fn localeAwareCompare(self , rsthis: & QString) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString18localeAwareCompareERKS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString18localeAwareCompareERKS_(rsthis.qclsinst, arg0)};
-    return ret as i32; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::remove(const QRegExp & rx);
-impl<'a> /*trait*/ QString_remove<QString> for (&'a QRegExp) {
-  fn remove(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6removeERK7QRegExp()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN7QString6removeERK7QRegExp(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  bool QString::contains(const QRegularExpression & re);
-impl<'a> /*trait*/ QString_contains<i8> for (&'a QRegularExpression) {
-  fn contains(self , rsthis: & QString) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString8containsERK18QRegularExpression()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString8containsERK18QRegularExpression(rsthis.qclsinst, arg0)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::replace(int i, int len, QChar after);
-impl<'a> /*trait*/ QString_replace<QString> for (i32, i32, QChar) {
-  fn replace(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString7replaceEii5QChar()};
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZN7QString7replaceEii5QChar(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  bool QString::isRightToLeft();
-impl /*struct*/ QString {
-  pub fn isRightToLeft<RetType, T: QString_isRightToLeft<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isRightToLeft(self);
-    // return 1;
-  }
-}
-
-pub trait QString_isRightToLeft<RetType> {
-  fn isRightToLeft(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  bool QString::isRightToLeft();
-impl<'a> /*trait*/ QString_isRightToLeft<i8> for () {
-  fn isRightToLeft(self , rsthis: & QString) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString13isRightToLeftEv()};
-    let mut ret = unsafe {C_ZNK7QString13isRightToLeftEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::arg(char a, int fieldWidth, QChar fillChar);
-impl<'a> /*trait*/ QString_arg<QString> for (i8, Option<i32>, Option<QChar>) {
-  fn arg(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString3argEci5QChar()};
-    let arg0 = self.0  as c_char;
-    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
-    let arg2 = (if self.2.is_none() {QLatin1Char::new((0 as i8)).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString3argEci5QChar(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QVector<uint> QString::toUcs4();
-impl /*struct*/ QString {
-  pub fn toUcs4<RetType, T: QString_toUcs4<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toUcs4(self);
-    // return 1;
-  }
-}
-
-pub trait QString_toUcs4<RetType> {
-  fn toUcs4(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QVector<uint> QString::toUcs4();
-impl<'a> /*trait*/ QString_toUcs4<u64> for () {
-  fn toUcs4(self , rsthis: & QString) -> u64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString6toUcs4Ev()};
-    let mut ret = unsafe {C_ZNK7QString6toUcs4Ev(rsthis.qclsinst)};
-    return ret as u64; // 5
-    // return 1;
-  }
-}
-
-  // proto:  QString & QString::remove(int i, int len);
-impl<'a> /*trait*/ QString_remove<QString> for (i32, i32) {
-  fn remove(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString6removeEii()};
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
-    let mut ret = unsafe {C_ZN7QString6removeEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  bool QString::isEmpty();
-impl /*struct*/ QString {
-  pub fn isEmpty<RetType, T: QString_isEmpty<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isEmpty(self);
-    // return 1;
-  }
-}
-
-pub trait QString_isEmpty<RetType> {
-  fn isEmpty(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  bool QString::isEmpty();
-impl<'a> /*trait*/ QString_isEmpty<i8> for () {
-  fn isEmpty(self , rsthis: & QString) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString7isEmptyEv()};
-    let mut ret = unsafe {C_ZNK7QString7isEmptyEv(rsthis.qclsinst)};
-    return ret as i8; // 1
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::right(int n);
-impl /*struct*/ QString {
-  pub fn right<RetType, T: QString_right<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.right(self);
-    // return 1;
-  }
-}
-
-pub trait QString_right<RetType> {
-  fn right(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QString QString::right(int n);
-impl<'a> /*trait*/ QString_right<QString> for (i32) {
-  fn right(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString5rightEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZNK7QString5rightEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::rightJustified(int width, QChar fill, bool trunc);
-impl /*struct*/ QString {
-  pub fn rightJustified<RetType, T: QString_rightJustified<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.rightJustified(self);
-    // return 1;
-  }
-}
-
-pub trait QString_rightJustified<RetType> {
-  fn rightJustified(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  QString QString::rightJustified(int width, QChar fill, bool trunc);
-impl<'a> /*trait*/ QString_rightJustified<QString> for (i32, Option<QChar>, Option<i8>) {
-  fn rightJustified(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString14rightJustifiedEi5QCharb()};
-    let arg0 = self.0  as c_int;
-    let arg1 = (if self.1.is_none() {QLatin1Char::new((0 as i8)).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
-    let arg2 = (if self.2.is_none() {false as i8} else {self.2.unwrap()})  as c_char;
-    let mut ret = unsafe {C_ZNK7QString14rightJustifiedEi5QCharb(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::arg(const QString & a, int fieldWidth, QChar fillChar);
-impl<'a> /*trait*/ QString_arg<QString> for (&'a QString, Option<i32>, Option<QChar>) {
-  fn arg(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString3argERKS_i5QChar()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
-    let arg2 = (if self.2.is_none() {QLatin1Char::new((0 as i8)).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString3argERKS_i5QChar(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QString QString::arg(qulonglong a, int fieldwidth, int base, QChar fillChar);
-impl<'a> /*trait*/ QString_arg<QString> for (u64, Option<i32>, Option<i32>, Option<QChar>) {
-  fn arg(self , rsthis: & QString) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString3argEyii5QChar()};
-    let arg0 = self.0  as c_ulonglong;
-    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
-    let arg2 = (if self.2.is_none() {10} else {self.2.unwrap()})  as c_int;
-    let arg3 = (if self.3.is_none() {QLatin1Char::new((0 as i8)).qclsinst} else {self.3.unwrap().qclsinst})  as *mut c_void;
-    let mut ret = unsafe {C_ZNK7QString3argEyii5QChar(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QString::reserve(int size);
-impl /*struct*/ QString {
-  pub fn reserve<RetType, T: QString_reserve<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.reserve(self);
-    // return 1;
-  }
-}
-
-pub trait QString_reserve<RetType> {
-  fn reserve(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  void QString::reserve(int size);
-impl<'a> /*trait*/ QString_reserve<()> for (i32) {
-  fn reserve(self , rsthis: & QString) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QString7reserveEi()};
-    let arg0 = self  as c_int;
-     unsafe {C_ZN7QString7reserveEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  short QString::toShort(bool * ok, int base);
-impl /*struct*/ QString {
-  pub fn toShort<RetType, T: QString_toShort<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toShort(self);
-    // return 1;
-  }
-}
-
-pub trait QString_toShort<RetType> {
-  fn toShort(self , rsthis: & QString) -> RetType;
-}
-
-  // proto:  short QString::toShort(bool * ok, int base);
-impl<'a> /*trait*/ QString_toShort<i16> for (Option<&'a mut Vec<i8>>, Option<i32>) {
-  fn toShort(self , rsthis: & QString) -> i16 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QString7toShortEPbi()};
-    let arg0 = (if self.0.is_none() {0 as *const i8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK7QString7toShortEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i16; // 1
-    // return 1;
-  }
-}
-
-impl /*struct*/ QLatin1String {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QLatin1String {
-    return QLatin1String{qclsinst: qthis, ..Default::default()};
-  }
-}
-  // proto:  const char * QLatin1String::data();
-impl /*struct*/ QLatin1String {
-  pub fn data<RetType, T: QLatin1String_data<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.data(self);
-    // return 1;
-  }
-}
-
-pub trait QLatin1String_data<RetType> {
-  fn data(self , rsthis: & QLatin1String) -> RetType;
-}
-
-  // proto:  const char * QLatin1String::data();
-impl<'a> /*trait*/ QLatin1String_data<String> for () {
-  fn data(self , rsthis: & QLatin1String) -> String {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QLatin1String4dataEv()};
-    let mut ret = unsafe {C_ZNK13QLatin1String4dataEv(rsthis.qclsinst)};
-    let slen = unsafe {strlen(ret as *const i8)} as usize;
-    return unsafe{String::from_raw_parts(ret as *mut u8, slen, slen+1)};
-    // return 1;
-  }
-}
-
-  // proto:  void QLatin1String::QLatin1String(const char * s);
-impl /*struct*/ QLatin1String {
-  pub fn new<T: QLatin1String_new>(value: T) -> QLatin1String {
-    let rsthis = value.new();
+  pub fn QString_7<T: QString_QString_7>(value: T) -> QString {
+    let rsthis = value.QString_7();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QLatin1String_new {
-  fn new(self) -> QLatin1String;
+pub trait QString_QString_7 {
+  fn QString_7(self) -> QString;
 }
-
-  // proto:  void QLatin1String::QLatin1String(const char * s);
-impl<'a> /*trait*/ QLatin1String_new for (&'a  String) {
-  fn new(self) -> QLatin1String {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QLatin1StringC2EPKc()};
-    let ctysz: c_int = unsafe{QLatin1String_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.as_ptr()  as *mut c_char;
-    let qthis: u64 = unsafe {C_ZN13QLatin1StringC2EPKc(arg0)};
-    let rsthis = QLatin1String{qclsinst: qthis, ..Default::default()};
+// QString(int, Qt::Initialization) ctx.fn_proto_cpp
+impl<'a> /*trait*/ QString_QString_7 for (i32,i32) {
+  fn QString_7(self) -> QString {
+    // unsafe{_ZN7QStringC2EiN2Qt14InitializationE()};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN7QStringC2EiN2Qt14InitializationE", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let rsthis = QString{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  int QLatin1String::size();
-impl /*struct*/ QLatin1String {
-  pub fn size<RetType, T: QLatin1String_size<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.size(self);
+// /usr/include/qt/QtCore/qstring.h:223
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void ~QString()
+
+/*
+
+*/
+pub fn DeleteQString(this :*mut QString) {
+    // let rv = qtrt::InvokeQtFunc6("_ZN7QStringD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis());
+    // qtrt.Cmemset(this.GetCthis(), 9, 8)
+    // qtrt.ErrPrint(err, rv)
+    // this.SetCthis(nil)
+}
+// /usr/include/qt/QtCore/qstring.h:224
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString & operator=(QChar)
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_equal_0<RetType, T: QString_operator_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_0(self);
     // return 1;
   }
 }
-
-pub trait QLatin1String_size<RetType> {
-  fn size(self , rsthis: & QLatin1String) -> RetType;
+pub trait QString_operator_equal_0<RetType> {
+  fn operator_equal_0(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  int QLatin1String::size();
-impl<'a> /*trait*/ QLatin1String_size<i32> for () {
-  fn size(self , rsthis: & QLatin1String) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QLatin1String4sizeEv()};
-    let mut ret = unsafe {C_ZNK13QLatin1String4sizeEv(rsthis.qclsinst)};
-    return ret as i32; // 1
+impl<'a> /*trait*/ QString_operator_equal_0<usize> for (usize) {
+  fn operator_equal_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QStringaSE5QChar", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
+
+// /usr/include/qt/QtCore/qstring.h:225
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QString & operator=(const QString &)
 
-  // proto:  void QLatin1String::QLatin1String(const QByteArray & s);
-impl<'a> /*trait*/ QLatin1String_new for (&'a QByteArray) {
-  fn new(self) -> QLatin1String {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QLatin1StringC2ERK10QByteArray()};
-    let ctysz: c_int = unsafe{QLatin1String_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN13QLatin1StringC2ERK10QByteArray(arg0)};
-    let rsthis = QLatin1String{qclsinst: qthis, ..Default::default()};
-    return rsthis;
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_equal_1<RetType, T: QString_operator_equal_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_1(self);
     // return 1;
   }
 }
-
-  // proto:  const char * QLatin1String::latin1();
-impl /*struct*/ QLatin1String {
-  pub fn latin1<RetType, T: QLatin1String_latin1<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.latin1(self);
+pub trait QString_operator_equal_1<RetType> {
+  fn operator_equal_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_operator_equal_1<usize> for (usize) {
+  fn operator_equal_1(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QStringaSERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QLatin1String_latin1<RetType> {
-  fn latin1(self , rsthis: & QLatin1String) -> RetType;
-}
+// /usr/include/qt/QtCore/qstring.h:226
+// index:2
+// Public Visibility=Default Availability=Available
+// [8] QString & operator=(QLatin1String)
 
-  // proto:  const char * QLatin1String::latin1();
-impl<'a> /*trait*/ QLatin1String_latin1<String> for () {
-  fn latin1(self , rsthis: & QLatin1String) -> String {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QLatin1String6latin1Ev()};
-    let mut ret = unsafe {C_ZNK13QLatin1String6latin1Ev(rsthis.qclsinst)};
-    let slen = unsafe {strlen(ret as *const i8)} as usize;
-    return unsafe{String::from_raw_parts(ret as *mut u8, slen, slen+1)};
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_equal_2<RetType, T: QString_operator_equal_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_2(self);
     // return 1;
   }
 }
-
-  // proto:  void QLatin1String::QLatin1String(const char * s, int sz);
-impl<'a> /*trait*/ QLatin1String_new for (&'a  String, i32) {
-  fn new(self) -> QLatin1String {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QLatin1StringC2EPKci()};
-    let ctysz: c_int = unsafe{QLatin1String_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = self.1  as c_int;
-    let qthis: u64 = unsafe {C_ZN13QLatin1StringC2EPKci(arg0, arg1)};
-    let rsthis = QLatin1String{qclsinst: qthis, ..Default::default()};
-    return rsthis;
+pub trait QString_operator_equal_2<RetType> {
+  fn operator_equal_2(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_operator_equal_2<usize> for (usize) {
+  fn operator_equal_2(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QStringaSE13QLatin1String", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
+
+// /usr/include/qt/QtCore/qstring.h:229
+// index:3
+// Public inline Visibility=Default Availability=Available
+// [8] QString & operator=(QString &&)
 
-impl /*struct*/ QCharRef {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QCharRef {
-    return QCharRef{qclsinst: qthis, ..Default::default()};
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_equal_3<RetType, T: QString_operator_equal_3<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_3(self);
+    // return 1;
   }
 }
-  // proto:  bool QCharRef::isLetterOrNumber();
-impl /*struct*/ QCharRef {
-  pub fn isLetterOrNumber<RetType, T: QCharRef_isLetterOrNumber<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isLetterOrNumber(self);
+pub trait QString_operator_equal_3<RetType> {
+  fn operator_equal_3(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_operator_equal_3<usize> for (usize) {
+  fn operator_equal_3(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QStringaSEOS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QCharRef_isLetterOrNumber<RetType> {
-  fn isLetterOrNumber(self , rsthis: & QCharRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qstring.h:688
+// index:4
+// Public inline Visibility=Default Availability=Available
+// [8] QString & operator=(const char *)
 
-  // proto:  bool QCharRef::isLetterOrNumber();
-impl<'a> /*trait*/ QCharRef_isLetterOrNumber<i8> for () {
-  fn isLetterOrNumber(self , rsthis: & QCharRef) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QCharRef16isLetterOrNumberEv()};
-    let mut ret = unsafe {C_ZN8QCharRef16isLetterOrNumberEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_equal_4<RetType, T: QString_operator_equal_4<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_4(self);
     // return 1;
   }
 }
-
-  // proto:  bool QCharRef::isDigit();
-impl /*struct*/ QCharRef {
-  pub fn isDigit<RetType, T: QCharRef_isDigit<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isDigit(self);
+pub trait QString_operator_equal_4<RetType> {
+  fn operator_equal_4(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_operator_equal_4<usize> for (usize) {
+  fn operator_equal_4(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QStringaSEPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QCharRef_isDigit<RetType> {
-  fn isDigit(self , rsthis: & QCharRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qstring.h:690
+// index:5
+// Public inline Visibility=Default Availability=Available
+// [8] QString & operator=(const QByteArray &)
 
-  // proto:  bool QCharRef::isDigit();
-impl<'a> /*trait*/ QCharRef_isDigit<i8> for () {
-  fn isDigit(self , rsthis: & QCharRef) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QCharRef7isDigitEv()};
-    let mut ret = unsafe {C_ZNK8QCharRef7isDigitEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_equal_5<RetType, T: QString_operator_equal_5<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_5(self);
     // return 1;
   }
 }
-
-  // proto:  char QCharRef::toLatin1();
-impl /*struct*/ QCharRef {
-  pub fn toLatin1<RetType, T: QCharRef_toLatin1<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toLatin1(self);
+pub trait QString_operator_equal_5<RetType> {
+  fn operator_equal_5(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_operator_equal_5<usize> for (usize) {
+  fn operator_equal_5(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QStringaSERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QCharRef_toLatin1<RetType> {
-  fn toLatin1(self , rsthis: & QCharRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qstring.h:692
+// index:6
+// Public inline Visibility=Default Availability=Available
+// [8] QString & operator=(char)
 
-  // proto:  char QCharRef::toLatin1();
-impl<'a> /*trait*/ QCharRef_toLatin1<i8> for () {
-  fn toLatin1(self , rsthis: & QCharRef) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QCharRef8toLatin1Ev()};
-    let mut ret = unsafe {C_ZNK8QCharRef8toLatin1Ev(rsthis.qclsinst)};
-    return ret as i8; // 1
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_equal_6<RetType, T: QString_operator_equal_6<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_6(self);
     // return 1;
   }
 }
-
-  // proto:  void QCharRef::setCell(uchar cell);
-impl /*struct*/ QCharRef {
-  pub fn setCell<RetType, T: QCharRef_setCell<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setCell(self);
+pub trait QString_operator_equal_6<RetType> {
+  fn operator_equal_6(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_operator_equal_6<usize> for (i8) {
+  fn operator_equal_6(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i8 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QStringaSEc", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QCharRef_setCell<RetType> {
-  fn setCell(self , rsthis: & QCharRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qstring.h:232
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void swap(QString &)
 
-  // proto:  void QCharRef::setCell(uchar cell);
-impl<'a> /*trait*/ QCharRef_setCell<()> for (u8) {
-  fn setCell(self , rsthis: & QCharRef) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QCharRef7setCellEh()};
-    let arg0 = self  as c_uchar;
-     unsafe {C_ZN8QCharRef7setCellEh(rsthis.qclsinst, arg0)};
+/*
+Swaps string other with this string. This operation is very fast and never fails.
+
+This function was introduced in  Qt 4.8.
+*/
+impl /*struct*/ QString {
+  pub fn swap_0<RetType, T: QString_swap_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.swap_0(self);
     // return 1;
   }
 }
-
-  // proto:  bool QCharRef::isMark();
-impl /*struct*/ QCharRef {
-  pub fn isMark<RetType, T: QCharRef_isMark<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isMark(self);
+pub trait QString_swap_0<RetType> {
+  fn swap_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_swap_0<(/*void*/)> for (usize) {
+  fn swap_0(self , rsthis: & QString) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN7QString4swapERS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QCharRef_isMark<RetType> {
-  fn isMark(self , rsthis: & QCharRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qstring.h:233
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [4] int size() const
+
+/*
+Returns the number of characters in this string.
+
+The last character in the string is at position size() - 1.
+
+Example:
+
 
-  // proto:  bool QCharRef::isMark();
-impl<'a> /*trait*/ QCharRef_isMark<i8> for () {
-  fn isMark(self , rsthis: & QCharRef) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QCharRef6isMarkEv()};
-    let mut ret = unsafe {C_ZNK8QCharRef6isMarkEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+  QString str = "World";
+  int n = str.size();         // n == 5
+  str.data()[0];              // returns 'W'
+  str.data()[4];              // returns 'd'
+
+
+
+See also isEmpty() and resize().
+*/
+impl /*struct*/ QString {
+  pub fn size_0<RetType, T: QString_size_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.size_0(self);
     // return 1;
   }
 }
-
-  // proto:  int QCharRef::digitValue();
-impl /*struct*/ QCharRef {
-  pub fn digitValue<RetType, T: QCharRef_digitValue<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.digitValue(self);
+pub trait QString_size_0<RetType> {
+  fn size_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_size_0<i32> for () {
+  fn size_0(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString4sizeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i32 = Default::default(); return dret;
   }
 }
 
-pub trait QCharRef_digitValue<RetType> {
-  fn digitValue(self , rsthis: & QCharRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qstring.h:234
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [4] int count() const
+
+/*
+Returns the number of (potentially overlapping) occurrences of the string str in this string.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
 
-  // proto:  int QCharRef::digitValue();
-impl<'a> /*trait*/ QCharRef_digitValue<i32> for () {
-  fn digitValue(self , rsthis: & QCharRef) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QCharRef10digitValueEv()};
-    let mut ret = unsafe {C_ZNK8QCharRef10digitValueEv(rsthis.qclsinst)};
-    return ret as i32; // 1
+See also contains() and indexOf().
+*/
+impl /*struct*/ QString {
+  pub fn count_0<RetType, T: QString_count_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.count_0(self);
     // return 1;
   }
 }
-
-  // proto:  bool QCharRef::isLetter();
-impl /*struct*/ QCharRef {
-  pub fn isLetter<RetType, T: QCharRef_isLetter<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isLetter(self);
+pub trait QString_count_0<RetType> {
+  fn count_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_count_0<i32> for () {
+  fn count_0(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString5countEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i32 = Default::default(); return dret;
   }
 }
 
-pub trait QCharRef_isLetter<RetType> {
-  fn isLetter(self , rsthis: & QCharRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qstring.h:335
+// index:1
+// Public Visibility=Default Availability=Available
+// [4] int count(QChar, Qt::CaseSensitivity) const
+
+/*
+Returns the number of (potentially overlapping) occurrences of the string str in this string.
 
-  // proto:  bool QCharRef::isLetter();
-impl<'a> /*trait*/ QCharRef_isLetter<i8> for () {
-  fn isLetter(self , rsthis: & QCharRef) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QCharRef8isLetterEv()};
-    let mut ret = unsafe {C_ZNK8QCharRef8isLetterEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+See also contains() and indexOf().
+*/
+impl /*struct*/ QString {
+  pub fn count_1<RetType, T: QString_count_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.count_1(self);
     // return 1;
   }
 }
-
-  // proto:  bool QCharRef::isNumber();
-impl /*struct*/ QCharRef {
-  pub fn isNumber<RetType, T: QCharRef_isNumber<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isNumber(self);
+pub trait QString_count_1<RetType> {
+  fn count_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_count_1<i32> for (usize,i32) {
+  fn count_1(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString5countE5QCharN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i32 = Default::default(); return dret;
   }
 }
 
-pub trait QCharRef_isNumber<RetType> {
-  fn isNumber(self , rsthis: & QCharRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qstring.h:336
+// index:2
+// Public Visibility=Default Availability=Available
+// [4] int count(const QString &, Qt::CaseSensitivity) const
 
-  // proto:  bool QCharRef::isNumber();
-impl<'a> /*trait*/ QCharRef_isNumber<i8> for () {
-  fn isNumber(self , rsthis: & QCharRef) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QCharRef8isNumberEv()};
-    let mut ret = unsafe {C_ZNK8QCharRef8isNumberEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+/*
+Returns the number of (potentially overlapping) occurrences of the string str in this string.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+See also contains() and indexOf().
+*/
+impl /*struct*/ QString {
+  pub fn count_2<RetType, T: QString_count_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.count_2(self);
     // return 1;
   }
 }
-
-  // proto:  bool QCharRef::isPrint();
-impl /*struct*/ QCharRef {
-  pub fn isPrint<RetType, T: QCharRef_isPrint<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isPrint(self);
+pub trait QString_count_2<RetType> {
+  fn count_2(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_count_2<i32> for (usize,i32) {
+  fn count_2(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString5countERKS_N2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i32 = Default::default(); return dret;
   }
 }
 
-pub trait QCharRef_isPrint<RetType> {
-  fn isPrint(self , rsthis: & QCharRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qstring.h:337
+// index:3
+// Public Visibility=Default Availability=Available
+// [4] int count(const QStringRef &, Qt::CaseSensitivity) const
+
+/*
+Returns the number of (potentially overlapping) occurrences of the string str in this string.
 
-  // proto:  bool QCharRef::isPrint();
-impl<'a> /*trait*/ QCharRef_isPrint<i8> for () {
-  fn isPrint(self , rsthis: & QCharRef) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QCharRef7isPrintEv()};
-    let mut ret = unsafe {C_ZNK8QCharRef7isPrintEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+See also contains() and indexOf().
+*/
+impl /*struct*/ QString {
+  pub fn count_3<RetType, T: QString_count_3<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.count_3(self);
     // return 1;
   }
 }
-
-  // proto:  QChar QCharRef::toLower();
-impl /*struct*/ QCharRef {
-  pub fn toLower<RetType, T: QCharRef_toLower<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toLower(self);
+pub trait QString_count_3<RetType> {
+  fn count_3(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_count_3<i32> for (usize,i32) {
+  fn count_3(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString5countERK10QStringRefN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i32 = Default::default(); return dret;
   }
 }
 
-pub trait QCharRef_toLower<RetType> {
-  fn toLower(self , rsthis: & QCharRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qstring.h:343
+// index:4
+// Public Visibility=Default Availability=Available
+// [4] int count(const QRegExp &) const
+
+/*
+Returns the number of (potentially overlapping) occurrences of the string str in this string.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
 
-  // proto:  QChar QCharRef::toLower();
-impl<'a> /*trait*/ QCharRef_toLower<QChar> for () {
-  fn toLower(self , rsthis: & QCharRef) -> QChar {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QCharRef7toLowerEv()};
-    let mut ret = unsafe {C_ZNK8QCharRef7toLowerEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret as u64);
-    return ret1;
+See also contains() and indexOf().
+*/
+impl /*struct*/ QString {
+  pub fn count_4<RetType, T: QString_count_4<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.count_4(self);
     // return 1;
   }
 }
-
-  // proto:  void QCharRef::setRow(uchar row);
-impl /*struct*/ QCharRef {
-  pub fn setRow<RetType, T: QCharRef_setRow<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setRow(self);
+pub trait QString_count_4<RetType> {
+  fn count_4(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_count_4<i32> for (usize) {
+  fn count_4(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString5countERK7QRegExp", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i32 = Default::default(); return dret;
   }
 }
 
-pub trait QCharRef_setRow<RetType> {
-  fn setRow(self , rsthis: & QCharRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qstring.h:357
+// index:5
+// Public Visibility=Default Availability=Available
+// [4] int count(const QRegularExpression &) const
+
+/*
+Returns the number of (potentially overlapping) occurrences of the string str in this string.
 
-  // proto:  void QCharRef::setRow(uchar row);
-impl<'a> /*trait*/ QCharRef_setRow<()> for (u8) {
-  fn setRow(self , rsthis: & QCharRef) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QCharRef6setRowEh()};
-    let arg0 = self  as c_uchar;
-     unsafe {C_ZN8QCharRef6setRowEh(rsthis.qclsinst, arg0)};
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+See also contains() and indexOf().
+*/
+impl /*struct*/ QString {
+  pub fn count_5<RetType, T: QString_count_5<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.count_5(self);
     // return 1;
   }
 }
-
-  // proto:  bool QCharRef::isNull();
-impl /*struct*/ QCharRef {
-  pub fn isNull<RetType, T: QCharRef_isNull<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isNull(self);
+pub trait QString_count_5<RetType> {
+  fn count_5(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_count_5<i32> for (usize) {
+  fn count_5(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString5countERK18QRegularExpression", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i32 = Default::default(); return dret;
   }
 }
 
-pub trait QCharRef_isNull<RetType> {
-  fn isNull(self , rsthis: & QCharRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qstring.h:235
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [4] int length() const
 
-  // proto:  bool QCharRef::isNull();
-impl<'a> /*trait*/ QCharRef_isNull<i8> for () {
-  fn isNull(self , rsthis: & QCharRef) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QCharRef6isNullEv()};
-    let mut ret = unsafe {C_ZNK8QCharRef6isNullEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+/*
+Returns the number of characters in this string. Equivalent to size().
+
+See also resize().
+*/
+impl /*struct*/ QString {
+  pub fn length_0<RetType, T: QString_length_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.length_0(self);
     // return 1;
   }
 }
-
-  // proto:  QChar QCharRef::toTitleCase();
-impl /*struct*/ QCharRef {
-  pub fn toTitleCase<RetType, T: QCharRef_toTitleCase<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toTitleCase(self);
+pub trait QString_length_0<RetType> {
+  fn length_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_length_0<i32> for () {
+  fn length_0(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString6lengthEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i32 = Default::default(); return dret;
   }
 }
 
-pub trait QCharRef_toTitleCase<RetType> {
-  fn toTitleCase(self , rsthis: & QCharRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qstring.h:236
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool isEmpty() const
 
-  // proto:  QChar QCharRef::toTitleCase();
-impl<'a> /*trait*/ QCharRef_toTitleCase<QChar> for () {
-  fn toTitleCase(self , rsthis: & QCharRef) -> QChar {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QCharRef11toTitleCaseEv()};
-    let mut ret = unsafe {C_ZNK8QCharRef11toTitleCaseEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret as u64);
-    return ret1;
+/*
+Returns true if the string has no characters; otherwise returns false.
+
+Example:
+
+
+  QString().isEmpty();            // returns true
+  QString("").isEmpty();          // returns true
+  QString("x").isEmpty();         // returns false
+  QString("abc").isEmpty();       // returns false
+
+
+
+See also size().
+*/
+impl /*struct*/ QString {
+  pub fn isEmpty_0<RetType, T: QString_isEmpty_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isEmpty_0(self);
     // return 1;
   }
 }
-
-  // proto:  bool QCharRef::hasMirrored();
-impl /*struct*/ QCharRef {
-  pub fn hasMirrored<RetType, T: QCharRef_hasMirrored<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.hasMirrored(self);
+pub trait QString_isEmpty_0<RetType> {
+  fn isEmpty_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_isEmpty_0<bool> for () {
+  fn isEmpty_0(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString7isEmptyEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-pub trait QCharRef_hasMirrored<RetType> {
-  fn hasMirrored(self , rsthis: & QCharRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qstring.h:237
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void resize(int)
+
+/*
+Sets the size of the string to size characters.
+
+If size is greater than the current size, the string is extended to make it size characters long with the extra characters added to the end. The new characters are uninitialized.
+
+If size is less than the current size, characters are removed from the end.
+
+Example:
+
+
+  QString s = "Hello world";
+  s.resize(5);
+  // s == "Hello"
+
+  s.resize(8);
+  // s == "Hello???" (where ? stands for any character)
 
-  // proto:  bool QCharRef::hasMirrored();
-impl<'a> /*trait*/ QCharRef_hasMirrored<i8> for () {
-  fn hasMirrored(self , rsthis: & QCharRef) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QCharRef11hasMirroredEv()};
-    let mut ret = unsafe {C_ZNK8QCharRef11hasMirroredEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+
+
+If you want to append a certain number of identical characters to the string, use the resize(int, QChar) overload.
+
+If you want to expand the string so that it reaches a certain width and fill the new positions with a particular character, use the leftJustified() function:
+
+If size is negative, it is equivalent to passing zero.
+
+
+  QString r = "Hello";
+  r = r.leftJustified(10, ' ');
+  // r == "Hello     "
+
+
+
+See also truncate() and reserve().
+*/
+impl /*struct*/ QString {
+  pub fn resize_0<RetType, T: QString_resize_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.resize_0(self);
     // return 1;
   }
 }
-
-  // proto:  uchar QCharRef::row();
-impl /*struct*/ QCharRef {
-  pub fn row<RetType, T: QCharRef_row<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.row(self);
+pub trait QString_resize_0<RetType> {
+  fn resize_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_resize_0<(/*void*/)> for (i32) {
+  fn resize_0(self , rsthis: & QString) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN7QString6resizeEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
+
+// /usr/include/qt/QtCore/qstring.h:238
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void resize(int, QChar)
+
+/*
+Sets the size of the string to size characters.
+
+If size is greater than the current size, the string is extended to make it size characters long with the extra characters added to the end. The new characters are uninitialized.
+
+If size is less than the current size, characters are removed from the end.
+
+Example:
 
-pub trait QCharRef_row<RetType> {
-  fn row(self , rsthis: & QCharRef) -> RetType;
+
+  QString s = "Hello world";
+  s.resize(5);
+  // s == "Hello"
+
+  s.resize(8);
+  // s == "Hello???" (where ? stands for any character)
+
+
+
+If you want to append a certain number of identical characters to the string, use the resize(int, QChar) overload.
+
+If you want to expand the string so that it reaches a certain width and fill the new positions with a particular character, use the leftJustified() function:
+
+If size is negative, it is equivalent to passing zero.
+
+
+  QString r = "Hello";
+  r = r.leftJustified(10, ' ');
+  // r == "Hello     "
+
+
+
+See also truncate() and reserve().
+*/
+impl /*struct*/ QString {
+  pub fn resize_1<RetType, T: QString_resize_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.resize_1(self);
+    // return 1;
+  }
+}
+pub trait QString_resize_1<RetType> {
+  fn resize_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_resize_1<(/*void*/)> for (i32,usize) {
+  fn resize_1(self , rsthis: & QString) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN7QString6resizeEi5QChar", 2,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
 }
+
+// /usr/include/qt/QtCore/qstring.h:240
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString & fill(QChar, int)
+
+/*
+Sets every character in the string to character ch. If size is different from -1 (default), the string is resized to size beforehand.
+
+Example:
+
+
+  QString str = "Berlin";
+  str.fill('z');
+  // str == "zzzzzz"
+
+  str.fill('A', 2);
+  // str == "AA"
 
-  // proto:  uchar QCharRef::row();
-impl<'a> /*trait*/ QCharRef_row<u8> for () {
-  fn row(self , rsthis: & QCharRef) -> u8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QCharRef3rowEv()};
-    let mut ret = unsafe {C_ZNK8QCharRef3rowEv(rsthis.qclsinst)};
-    return ret as u8; // 1
+
+
+See also resize().
+*/
+impl /*struct*/ QString {
+  pub fn fill_0<RetType, T: QString_fill_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.fill_0(self);
+    // return 1;
+  }
+}
+pub trait QString_fill_0<RetType> {
+  fn fill_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_fill_0<usize> for (usize,i32) {
+  fn fill_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString4fillE5QChari", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
+
+// /usr/include/qt/QtCore/qstring.h:241
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void truncate(int)
+
+/*
+Truncates the string at the given position index.
 
-  // proto:  ushort & QCharRef::unicode();
-impl /*struct*/ QCharRef {
-  pub fn unicode<RetType, T: QCharRef_unicode<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.unicode(self);
+If the specified position index is beyond the end of the string, nothing happens.
+
+Example:
+
+
+  QString str = "Vladivostok";
+  str.truncate(4);
+  // str == "Vlad"
+
+
+
+If position is negative, it is equivalent to passing zero.
+
+See also chop(), resize(), left(), and QStringRef::truncate().
+*/
+impl /*struct*/ QString {
+  pub fn truncate_0<RetType, T: QString_truncate_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.truncate_0(self);
+    // return 1;
+  }
+}
+pub trait QString_truncate_0<RetType> {
+  fn truncate_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_truncate_0<(/*void*/)> for (i32) {
+  fn truncate_0(self , rsthis: & QString) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN7QString8truncateEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
+
+// /usr/include/qt/QtCore/qstring.h:242
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void chop(int)
+
+/*
+Removes n characters from the end of the string.
+
+If n is greater than or equal to size(), the result is an empty string; if n is negative, it is equivalent to passing zero.
+
+Example:
+
 
-pub trait QCharRef_unicode<RetType> {
-  fn unicode(self , rsthis: & QCharRef) -> RetType;
+  QString str("LOGOUT\r\n");
+  str.chop(2);
+  // str == "LOGOUT"
+
+
+
+If you want to remove characters from the beginning of the string, use remove() instead.
+
+See also truncate(), resize(), remove(), and QStringRef::chop().
+*/
+impl /*struct*/ QString {
+  pub fn chop_0<RetType, T: QString_chop_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.chop_0(self);
+    // return 1;
+  }
+}
+pub trait QString_chop_0<RetType> {
+  fn chop_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_chop_0<(/*void*/)> for (i32) {
+  fn chop_0(self , rsthis: & QString) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN7QString4chopEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
 }
+
+// /usr/include/qt/QtCore/qstring.h:244
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int capacity() const
+
+/*
+Returns the maximum number of characters that can be stored in the string without forcing a reallocation.
 
-  // proto:  ushort & QCharRef::unicode();
-impl<'a> /*trait*/ QCharRef_unicode<u16> for () {
-  fn unicode(self , rsthis: & QCharRef) -> u16 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QCharRef7unicodeEv()};
-    let mut ret = unsafe {C_ZN8QCharRef7unicodeEv(rsthis.qclsinst)};
-    return ret as u16; // 1
+The sole purpose of this function is to provide a means of fine tuning QString's memory usage. In general, you will rarely ever need to call this function. If you want to know how many characters are in the string, call size().
+
+See also reserve() and squeeze().
+*/
+impl /*struct*/ QString {
+  pub fn capacity_0<RetType, T: QString_capacity_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.capacity_0(self);
+    // return 1;
+  }
+}
+pub trait QString_capacity_0<RetType> {
+  fn capacity_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_capacity_0<i32> for () {
+  fn capacity_0(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString8capacityEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i32 = Default::default(); return dret;
   }
 }
+
+// /usr/include/qt/QtCore/qstring.h:245
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void reserve(int)
+
+/*
+Attempts to allocate memory for at least size characters. If you know in advance how large the string will be, you can call this function, and if you resize the string often you are likely to get better performance. If size is an underestimate, the worst that will happen is that the QString will be a bit slower.
+
+The sole purpose of this function is to provide a means of fine tuning QString's memory usage. In general, you will rarely ever need to call this function. If you want to change the size of the string, call resize().
+
+This function is useful for code that needs to build up a long string and wants to avoid repeated reallocation. In this example, we want to add to the string until some condition is true, and we're fairly sure that size is large enough to make a call to reserve() worthwhile:
+
+
+  QString result;
+  int maxSize;
+  bool condition;
+  QChar nextChar;
+
+  result.reserve(maxSize);
 
-  // proto:  bool QCharRef::isTitleCase();
-impl /*struct*/ QCharRef {
-  pub fn isTitleCase<RetType, T: QCharRef_isTitleCase<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isTitleCase(self);
+  while (condition)
+      result.append(nextChar);
+
+  result.squeeze();
+
+
+
+See also squeeze() and capacity().
+*/
+impl /*struct*/ QString {
+  pub fn reserve_0<RetType, T: QString_reserve_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.reserve_0(self);
+    // return 1;
+  }
+}
+pub trait QString_reserve_0<RetType> {
+  fn reserve_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_reserve_0<(/*void*/)> for (i32) {
+  fn reserve_0(self , rsthis: & QString) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+     qtrt::InvokeQtFunc6("_ZN7QString7reserveEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-pub trait QCharRef_isTitleCase<RetType> {
-  fn isTitleCase(self , rsthis: & QCharRef) -> RetType;
+// /usr/include/qt/QtCore/qstring.h:246
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void squeeze()
+
+/*
+Releases any memory not required to store the character data.
+
+The sole purpose of this function is to provide a means of fine tuning QString's memory usage. In general, you will rarely ever need to call this function.
+
+See also reserve() and capacity().
+*/
+impl /*struct*/ QString {
+  pub fn squeeze_0<RetType, T: QString_squeeze_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.squeeze_0(self);
+    // return 1;
+  }
+}
+pub trait QString_squeeze_0<RetType> {
+  fn squeeze_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_squeeze_0<(/*void*/)> for () {
+  fn squeeze_0(self , rsthis: & QString) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZN7QString7squeezeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
 }
+
+// /usr/include/qt/QtCore/qstring.h:248
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] const QChar * unicode() const
+
+/*
+Returns a Unicode representation of the string. The result remains valid until the string is modified.
+
+Note: The returned string may not be '\0'-terminated. Use size() to determine the length of the array.
 
-  // proto:  bool QCharRef::isTitleCase();
-impl<'a> /*trait*/ QCharRef_isTitleCase<i8> for () {
-  fn isTitleCase(self , rsthis: & QCharRef) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QCharRef11isTitleCaseEv()};
-    let mut ret = unsafe {C_ZNK8QCharRef11isTitleCaseEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+See also setUnicode(), utf16(), and fromRawData().
+*/
+impl /*struct*/ QString {
+  pub fn unicode_0<RetType, T: QString_unicode_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.unicode_0(self);
+    // return 1;
+  }
+}
+pub trait QString_unicode_0<RetType> {
+  fn unicode_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_unicode_0<usize> for () {
+  fn unicode_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString7unicodeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  bool QCharRef::isUpper();
-impl /*struct*/ QCharRef {
-  pub fn isUpper<RetType, T: QCharRef_isUpper<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isUpper(self);
+// /usr/include/qt/QtCore/qstring.h:249
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QChar * data()
+
+/*
+Returns a pointer to the data stored in the QString. The pointer can be used to access and modify the characters that compose the string.
+
+Unlike constData() and unicode(), the returned data is always '\0'-terminated.
+
+Example:
+
+
+  QString str = "Hello world";
+  QChar *data = str.data();
+  while (!data->isNull()) {
+      qDebug() << data->unicode();
+      ++data;
+  }
+
+
+
+Note that the pointer remains valid only as long as the string is not modified by other means. For read-only access, constData() is faster because it never causes a deep copy to occur.
+
+See also constData() and operator[]().
+*/
+impl /*struct*/ QString {
+  pub fn data_0<RetType, T: QString_data_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.data_0(self);
+    // return 1;
+  }
+}
+pub trait QString_data_0<RetType> {
+  fn data_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_data_0<usize> for () {
+  fn data_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString4dataEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
+
+// /usr/include/qt/QtCore/qstring.h:250
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] const QChar * data() const
+
+/*
+Returns a pointer to the data stored in the QString. The pointer can be used to access and modify the characters that compose the string.
 
-pub trait QCharRef_isUpper<RetType> {
-  fn isUpper(self , rsthis: & QCharRef) -> RetType;
+Unlike constData() and unicode(), the returned data is always '\0'-terminated.
+
+Example:
+
+
+  QString str = "Hello world";
+  QChar *data = str.data();
+  while (!data->isNull()) {
+      qDebug() << data->unicode();
+      ++data;
+  }
+
+
+
+Note that the pointer remains valid only as long as the string is not modified by other means. For read-only access, constData() is faster because it never causes a deep copy to occur.
+
+See also constData() and operator[]().
+*/
+impl /*struct*/ QString {
+  pub fn data_1<RetType, T: QString_data_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.data_1(self);
+    // return 1;
+  }
+}
+pub trait QString_data_1<RetType> {
+  fn data_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_data_1<usize> for () {
+  fn data_1(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString4dataEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
 }
+
+// /usr/include/qt/QtCore/qstring.h:251
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] const QChar * constData() const
+
+/*
+Returns a pointer to the data stored in the QString. The pointer can be used to access the characters that compose the string.
 
-  // proto:  bool QCharRef::isUpper();
-impl<'a> /*trait*/ QCharRef_isUpper<i8> for () {
-  fn isUpper(self , rsthis: & QCharRef) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QCharRef7isUpperEv()};
-    let mut ret = unsafe {C_ZNK8QCharRef7isUpperEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+Note that the pointer remains valid only as long as the string is not modified.
+
+Note: The returned string may not be '\0'-terminated. Use size() to determine the length of the array.
+
+See also data(), operator[](), and fromRawData().
+*/
+impl /*struct*/ QString {
+  pub fn constData_0<RetType, T: QString_constData_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.constData_0(self);
+    // return 1;
+  }
+}
+pub trait QString_constData_0<RetType> {
+  fn constData_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_constData_0<usize> for () {
+  fn constData_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString9constDataEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
+
+// /usr/include/qt/QtCore/qstring.h:253
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void detach()
+
+/*
 
-  // proto:  uchar QCharRef::cell();
-impl /*struct*/ QCharRef {
-  pub fn cell<RetType, T: QCharRef_cell<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.cell(self);
+*/
+impl /*struct*/ QString {
+  pub fn detach_0<RetType, T: QString_detach_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.detach_0(self);
     // return 1;
   }
 }
+pub trait QString_detach_0<RetType> {
+  fn detach_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_detach_0<(/*void*/)> for () {
+  fn detach_0(self , rsthis: & QString) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZN7QString6detachEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
 
-pub trait QCharRef_cell<RetType> {
-  fn cell(self , rsthis: & QCharRef) -> RetType;
+// /usr/include/qt/QtCore/qstring.h:254
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool isDetached() const
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn isDetached_0<RetType, T: QString_isDetached_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isDetached_0(self);
+    // return 1;
+  }
+}
+pub trait QString_isDetached_0<RetType> {
+  fn isDetached_0(self , rsthis: & QString) -> RetType;
 }
+impl<'a> /*trait*/ QString_isDetached_0<bool> for () {
+  fn isDetached_0(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString10isDetachedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:255
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool isSharedWith(const QString &) const
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn isSharedWith_0<RetType, T: QString_isSharedWith_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isSharedWith_0(self);
+    // return 1;
+  }
+}
+pub trait QString_isSharedWith_0<RetType> {
+  fn isSharedWith_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_isSharedWith_0<bool> for (usize) {
+  fn isSharedWith_0(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString12isSharedWithERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:256
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void clear()
+
+/*
+Clears the contents of the string and makes it null.
+
+See also resize() and isNull().
+*/
+impl /*struct*/ QString {
+  pub fn clear_0<RetType, T: QString_clear_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.clear_0(self);
+    // return 1;
+  }
+}
+pub trait QString_clear_0<RetType> {
+  fn clear_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_clear_0<(/*void*/)> for () {
+  fn clear_0(self , rsthis: & QString) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZN7QString5clearEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:258
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [2] const QChar at(int) const
+
+/*
+Returns the character at the given index position in the string.
+
+The position must be a valid index position in the string (i.e., 0 <= position < size()).
+
+See also operator[]().
+*/
+impl /*struct*/ QString {
+  pub fn at_0<RetType, T: QString_at_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.at_0(self);
+    // return 1;
+  }
+}
+pub trait QString_at_0<RetType> {
+  fn at_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_at_0<usize> for (i32) {
+  fn at_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString2atEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:259
+// index:0
+// Public Visibility=Default Availability=Available
+// [2] const QChar operator[](int) const
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_get_index_0<RetType, T: QString_operator_get_index_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_get_index_0(self);
+    // return 1;
+  }
+}
+pub trait QString_operator_get_index_0<RetType> {
+  fn operator_get_index_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_operator_get_index_0<usize> for (i32) {
+  fn operator_get_index_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QStringixEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:260
+// index:1
+// Public Visibility=Default Availability=Available
+// [16] QCharRef operator[](int)
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_get_index_1<RetType, T: QString_operator_get_index_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_get_index_1(self);
+    // return 1;
+  }
+}
+pub trait QString_operator_get_index_1<RetType> {
+  fn operator_get_index_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_operator_get_index_1<usize> for (i32) {
+  fn operator_get_index_1(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QStringixEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:261
+// index:2
+// Public Visibility=Default Availability=Available
+// [2] const QChar operator[](uint) const
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_get_index_2<RetType, T: QString_operator_get_index_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_get_index_2(self);
+    // return 1;
+  }
+}
+pub trait QString_operator_get_index_2<RetType> {
+  fn operator_get_index_2(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_operator_get_index_2<usize> for (u32) {
+  fn operator_get_index_2(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const u32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QStringixEj", 1,qtrt::FFITY_UINT32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:262
+// index:3
+// Public Visibility=Default Availability=Available
+// [16] QCharRef operator[](uint)
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_get_index_3<RetType, T: QString_operator_get_index_3<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_get_index_3(self);
+    // return 1;
+  }
+}
+pub trait QString_operator_get_index_3<RetType> {
+  fn operator_get_index_3(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_operator_get_index_3<usize> for (u32) {
+  fn operator_get_index_3(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const u32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QStringixEj", 1,qtrt::FFITY_UINT32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:264
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [2] QChar front() const
+
+/*
+Returns the first character in the string. Same as at(0).
+
+This function is provided for STL compatibility.
+
+Warning: Calling this function on an empty string constitutes undefined behavior.
+
+This function was introduced in  Qt 5.10.
+
+See also back(), at(), and operator[]().
+*/
+impl /*struct*/ QString {
+  pub fn front_0<RetType, T: QString_front_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.front_0(self);
+    // return 1;
+  }
+}
+pub trait QString_front_0<RetType> {
+  fn front_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_front_0<usize> for () {
+  fn front_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString5frontEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:265
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [16] QCharRef front()
+
+/*
+Returns the first character in the string. Same as at(0).
+
+This function is provided for STL compatibility.
+
+Warning: Calling this function on an empty string constitutes undefined behavior.
+
+This function was introduced in  Qt 5.10.
+
+See also back(), at(), and operator[]().
+*/
+impl /*struct*/ QString {
+  pub fn front_1<RetType, T: QString_front_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.front_1(self);
+    // return 1;
+  }
+}
+pub trait QString_front_1<RetType> {
+  fn front_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_front_1<usize> for () {
+  fn front_1(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString5frontEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:266
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [2] QChar back() const
+
+/*
+Returns the last character in the string. Same as at(size() - 1).
+
+This function is provided for STL compatibility.
+
+Warning: Calling this function on an empty string constitutes undefined behavior.
+
+This function was introduced in  Qt 5.10.
+
+See also front(), at(), and operator[]().
+*/
+impl /*struct*/ QString {
+  pub fn back_0<RetType, T: QString_back_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.back_0(self);
+    // return 1;
+  }
+}
+pub trait QString_back_0<RetType> {
+  fn back_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_back_0<usize> for () {
+  fn back_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString4backEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:267
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [16] QCharRef back()
+
+/*
+Returns the last character in the string. Same as at(size() - 1).
+
+This function is provided for STL compatibility.
+
+Warning: Calling this function on an empty string constitutes undefined behavior.
+
+This function was introduced in  Qt 5.10.
+
+See also front(), at(), and operator[]().
+*/
+impl /*struct*/ QString {
+  pub fn back_1<RetType, T: QString_back_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.back_1(self);
+    // return 1;
+  }
+}
+pub trait QString_back_1<RetType> {
+  fn back_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_back_1<usize> for () {
+  fn back_1(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString4backEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:269
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString arg(qlonglong, int, int, QChar) const
+
+/*
+Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
+
+fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
+
+This example shows how we might create a status string for reporting progress while processing a list of files:
+
+
+  QString i;           // current file's number
+  QString total;       // number of files to process
+  QString fileName;    // current file's name
+
+  QString status = QString("Processing file %1 of %2: %3")
+                  .arg(i).arg(total).arg(fileName);
+
+
+
+First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
+
+One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
+
+If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
+*/
+impl /*struct*/ QString {
+  pub fn arg_0<RetType, T: QString_arg_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.arg_0(self);
+    // return 1;
+  }
+}
+pub trait QString_arg_0<RetType> {
+  fn arg_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_arg_0<usize> for (i64,i32,i32,usize) {
+  fn arg_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i64 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let arg3 = (&self.3/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString3argExii5QChar", 4,qtrt::FFITY_SINT64,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:271
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QString arg(qulonglong, int, int, QChar) const
+
+/*
+Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
+
+fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
+
+This example shows how we might create a status string for reporting progress while processing a list of files:
+
+
+  QString i;           // current file's number
+  QString total;       // number of files to process
+  QString fileName;    // current file's name
+
+  QString status = QString("Processing file %1 of %2: %3")
+                  .arg(i).arg(total).arg(fileName);
+
+
+
+First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
+
+One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
+
+If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
+*/
+impl /*struct*/ QString {
+  pub fn arg_1<RetType, T: QString_arg_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.arg_1(self);
+    // return 1;
+  }
+}
+pub trait QString_arg_1<RetType> {
+  fn arg_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_arg_1<usize> for (u64,i32,i32,usize) {
+  fn arg_1(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const u64 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let arg3 = (&self.3/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString3argEyii5QChar", 4,qtrt::FFITY_UINT64,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:273
+// index:2
+// Public Visibility=Default Availability=Available
+// [8] QString arg(long, int, int, QChar) const
+
+/*
+Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
+
+fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
+
+This example shows how we might create a status string for reporting progress while processing a list of files:
+
+
+  QString i;           // current file's number
+  QString total;       // number of files to process
+  QString fileName;    // current file's name
+
+  QString status = QString("Processing file %1 of %2: %3")
+                  .arg(i).arg(total).arg(fileName);
+
+
+
+First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
+
+One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
+
+If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
+*/
+impl /*struct*/ QString {
+  pub fn arg_2<RetType, T: QString_arg_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.arg_2(self);
+    // return 1;
+  }
+}
+pub trait QString_arg_2<RetType> {
+  fn arg_2(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_arg_2<usize> for (i64,i32,i32,usize) {
+  fn arg_2(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i64 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let arg3 = (&self.3/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString3argElii5QChar", 4,qtrt::FFITY_SINT64,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:275
+// index:3
+// Public Visibility=Default Availability=Available
+// [8] QString arg(ulong, int, int, QChar) const
+
+/*
+Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
+
+fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
+
+This example shows how we might create a status string for reporting progress while processing a list of files:
+
+
+  QString i;           // current file's number
+  QString total;       // number of files to process
+  QString fileName;    // current file's name
+
+  QString status = QString("Processing file %1 of %2: %3")
+                  .arg(i).arg(total).arg(fileName);
+
+
+
+First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
+
+One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
+
+If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
+*/
+impl /*struct*/ QString {
+  pub fn arg_3<RetType, T: QString_arg_3<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.arg_3(self);
+    // return 1;
+  }
+}
+pub trait QString_arg_3<RetType> {
+  fn arg_3(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_arg_3<usize> for (u64,i32,i32,usize) {
+  fn arg_3(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const u64 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let arg3 = (&self.3/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString3argEmii5QChar", 4,qtrt::FFITY_UINT64,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:277
+// index:4
+// Public Visibility=Default Availability=Available
+// [8] QString arg(int, int, int, QChar) const
+
+/*
+Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
+
+fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
+
+This example shows how we might create a status string for reporting progress while processing a list of files:
+
+
+  QString i;           // current file's number
+  QString total;       // number of files to process
+  QString fileName;    // current file's name
+
+  QString status = QString("Processing file %1 of %2: %3")
+                  .arg(i).arg(total).arg(fileName);
+
+
+
+First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
+
+One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
+
+If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
+*/
+impl /*struct*/ QString {
+  pub fn arg_4<RetType, T: QString_arg_4<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.arg_4(self);
+    // return 1;
+  }
+}
+pub trait QString_arg_4<RetType> {
+  fn arg_4(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_arg_4<usize> for (i32,i32,i32,usize) {
+  fn arg_4(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let arg3 = (&self.3/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString3argEiii5QChar", 4,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:279
+// index:5
+// Public Visibility=Default Availability=Available
+// [8] QString arg(uint, int, int, QChar) const
+
+/*
+Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
+
+fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
+
+This example shows how we might create a status string for reporting progress while processing a list of files:
+
+
+  QString i;           // current file's number
+  QString total;       // number of files to process
+  QString fileName;    // current file's name
+
+  QString status = QString("Processing file %1 of %2: %3")
+                  .arg(i).arg(total).arg(fileName);
+
+
+
+First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
+
+One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
+
+If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
+*/
+impl /*struct*/ QString {
+  pub fn arg_5<RetType, T: QString_arg_5<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.arg_5(self);
+    // return 1;
+  }
+}
+pub trait QString_arg_5<RetType> {
+  fn arg_5(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_arg_5<usize> for (u32,i32,i32,usize) {
+  fn arg_5(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const u32 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let arg3 = (&self.3/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString3argEjii5QChar", 4,qtrt::FFITY_UINT32,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:281
+// index:6
+// Public Visibility=Default Availability=Available
+// [8] QString arg(short, int, int, QChar) const
+
+/*
+Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
+
+fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
+
+This example shows how we might create a status string for reporting progress while processing a list of files:
+
+
+  QString i;           // current file's number
+  QString total;       // number of files to process
+  QString fileName;    // current file's name
+
+  QString status = QString("Processing file %1 of %2: %3")
+                  .arg(i).arg(total).arg(fileName);
+
+
+
+First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
+
+One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
+
+If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
+*/
+impl /*struct*/ QString {
+  pub fn arg_6<RetType, T: QString_arg_6<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.arg_6(self);
+    // return 1;
+  }
+}
+pub trait QString_arg_6<RetType> {
+  fn arg_6(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_arg_6<usize> for (i16,i32,i32,usize) {
+  fn arg_6(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i16 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let arg3 = (&self.3/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString3argEsii5QChar", 4,qtrt::FFITY_SINT16,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:283
+// index:7
+// Public Visibility=Default Availability=Available
+// [8] QString arg(ushort, int, int, QChar) const
+
+/*
+Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
+
+fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
+
+This example shows how we might create a status string for reporting progress while processing a list of files:
+
+
+  QString i;           // current file's number
+  QString total;       // number of files to process
+  QString fileName;    // current file's name
+
+  QString status = QString("Processing file %1 of %2: %3")
+                  .arg(i).arg(total).arg(fileName);
+
+
+
+First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
+
+One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
+
+If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
+*/
+impl /*struct*/ QString {
+  pub fn arg_7<RetType, T: QString_arg_7<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.arg_7(self);
+    // return 1;
+  }
+}
+pub trait QString_arg_7<RetType> {
+  fn arg_7(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_arg_7<usize> for (u16,i32,i32,usize) {
+  fn arg_7(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const u16 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let arg3 = (&self.3/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString3argEtii5QChar", 4,qtrt::FFITY_UINT16,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:285
+// index:8
+// Public Visibility=Default Availability=Available
+// [8] QString arg(double, int, char, int, QChar) const
+
+/*
+Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
+
+fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
+
+This example shows how we might create a status string for reporting progress while processing a list of files:
+
+
+  QString i;           // current file's number
+  QString total;       // number of files to process
+  QString fileName;    // current file's name
+
+  QString status = QString("Processing file %1 of %2: %3")
+                  .arg(i).arg(total).arg(fileName);
+
+
+
+First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
+
+One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
+
+If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
+*/
+impl /*struct*/ QString {
+  pub fn arg_8<RetType, T: QString_arg_8<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.arg_8(self);
+    // return 1;
+  }
+}
+pub trait QString_arg_8<RetType> {
+  fn arg_8(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_arg_8<usize> for (f64,i32,i8,i32,usize) {
+  fn arg_8(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const f64 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i8 as usize;
+    let arg3 = (&self.3) as *const i32 as usize;
+    let arg4 = (&self.4/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString3argEdici5QChar", 5,qtrt::FFITY_DOUBLE,qtrt::FFITY_INT,qtrt::FFITY_SINT8,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,arg4,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:287
+// index:9
+// Public Visibility=Default Availability=Available
+// [8] QString arg(char, int, QChar) const
+
+/*
+Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
+
+fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
+
+This example shows how we might create a status string for reporting progress while processing a list of files:
+
+
+  QString i;           // current file's number
+  QString total;       // number of files to process
+  QString fileName;    // current file's name
+
+  QString status = QString("Processing file %1 of %2: %3")
+                  .arg(i).arg(total).arg(fileName);
+
+
+
+First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
+
+One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
+
+If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
+*/
+impl /*struct*/ QString {
+  pub fn arg_9<RetType, T: QString_arg_9<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.arg_9(self);
+    // return 1;
+  }
+}
+pub trait QString_arg_9<RetType> {
+  fn arg_9(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_arg_9<usize> for (i8,i32,usize) {
+  fn arg_9(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i8 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString3argEci5QChar", 3,qtrt::FFITY_SINT8,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:289
+// index:10
+// Public Visibility=Default Availability=Available
+// [8] QString arg(QChar, int, QChar) const
+
+/*
+Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
+
+fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
+
+This example shows how we might create a status string for reporting progress while processing a list of files:
+
+
+  QString i;           // current file's number
+  QString total;       // number of files to process
+  QString fileName;    // current file's name
+
+  QString status = QString("Processing file %1 of %2: %3")
+                  .arg(i).arg(total).arg(fileName);
+
+
+
+First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
+
+One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
+
+If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
+*/
+impl /*struct*/ QString {
+  pub fn arg_10<RetType, T: QString_arg_10<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.arg_10(self);
+    // return 1;
+  }
+}
+pub trait QString_arg_10<RetType> {
+  fn arg_10(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_arg_10<usize> for (usize,i32,usize) {
+  fn arg_10(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString3argE5QChariS0_", 3,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:292
+// index:11
+// Public Visibility=Default Availability=Available
+// [8] QString arg(const QString &, int, QChar) const
+
+/*
+Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
+
+fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
+
+This example shows how we might create a status string for reporting progress while processing a list of files:
+
+
+  QString i;           // current file's number
+  QString total;       // number of files to process
+  QString fileName;    // current file's name
+
+  QString status = QString("Processing file %1 of %2: %3")
+                  .arg(i).arg(total).arg(fileName);
+
+
+
+First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
+
+One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
+
+If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
+*/
+impl /*struct*/ QString {
+  pub fn arg_11<RetType, T: QString_arg_11<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.arg_11(self);
+    // return 1;
+  }
+}
+pub trait QString_arg_11<RetType> {
+  fn arg_11(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_arg_11<usize> for (usize,i32,usize) {
+  fn arg_11(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString3argERKS_i5QChar", 3,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:295
+// index:12
+// Public Visibility=Default Availability=Available
+// [8] QString arg(QStringView, int, QChar) const
+
+/*
+Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
+
+fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
+
+This example shows how we might create a status string for reporting progress while processing a list of files:
+
+
+  QString i;           // current file's number
+  QString total;       // number of files to process
+  QString fileName;    // current file's name
+
+  QString status = QString("Processing file %1 of %2: %3")
+                  .arg(i).arg(total).arg(fileName);
+
+
+
+First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
+
+One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
+
+If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
+*/
+impl /*struct*/ QString {
+  pub fn arg_12<RetType, T: QString_arg_12<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.arg_12(self);
+    // return 1;
+  }
+}
+pub trait QString_arg_12<RetType> {
+  fn arg_12(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_arg_12<usize> for (usize,i32,usize) {
+  fn arg_12(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString3argE11QStringViewi5QChar", 3,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:297
+// index:13
+// Public Visibility=Default Availability=Available
+// [8] QString arg(QLatin1String, int, QChar) const
+
+/*
+Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
+
+fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
+
+This example shows how we might create a status string for reporting progress while processing a list of files:
+
+
+  QString i;           // current file's number
+  QString total;       // number of files to process
+  QString fileName;    // current file's name
+
+  QString status = QString("Processing file %1 of %2: %3")
+                  .arg(i).arg(total).arg(fileName);
+
+
+
+First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
+
+One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
+
+If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
+*/
+impl /*struct*/ QString {
+  pub fn arg_13<RetType, T: QString_arg_13<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.arg_13(self);
+    // return 1;
+  }
+}
+pub trait QString_arg_13<RetType> {
+  fn arg_13(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_arg_13<usize> for (usize,i32,usize) {
+  fn arg_13(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString3argE13QLatin1Stringi5QChar", 3,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:299
+// index:14
+// Public Visibility=Default Availability=Available
+// [8] QString arg(const QString &, const QString &) const
+
+/*
+Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
+
+fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
+
+This example shows how we might create a status string for reporting progress while processing a list of files:
+
+
+  QString i;           // current file's number
+  QString total;       // number of files to process
+  QString fileName;    // current file's name
+
+  QString status = QString("Processing file %1 of %2: %3")
+                  .arg(i).arg(total).arg(fileName);
+
+
+
+First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
+
+One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
+
+If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
+*/
+impl /*struct*/ QString {
+  pub fn arg_14<RetType, T: QString_arg_14<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.arg_14(self);
+    // return 1;
+  }
+}
+pub trait QString_arg_14<RetType> {
+  fn arg_14(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_arg_14<usize> for (usize,usize) {
+  fn arg_14(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString3argERKS_S1_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:300
+// index:15
+// Public Visibility=Default Availability=Available
+// [8] QString arg(const QString &, const QString &, const QString &) const
+
+/*
+Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
+
+fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
+
+This example shows how we might create a status string for reporting progress while processing a list of files:
+
+
+  QString i;           // current file's number
+  QString total;       // number of files to process
+  QString fileName;    // current file's name
+
+  QString status = QString("Processing file %1 of %2: %3")
+                  .arg(i).arg(total).arg(fileName);
+
+
+
+First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
+
+One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
+
+If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
+*/
+impl /*struct*/ QString {
+  pub fn arg_15<RetType, T: QString_arg_15<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.arg_15(self);
+    // return 1;
+  }
+}
+pub trait QString_arg_15<RetType> {
+  fn arg_15(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_arg_15<usize> for (usize,usize,usize) {
+  fn arg_15(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString3argERKS_S1_S1_", 3,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:301
+// index:16
+// Public Visibility=Default Availability=Available
+// [8] QString arg(const QString &, const QString &, const QString &, const QString &) const
+
+/*
+Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
+
+fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
+
+This example shows how we might create a status string for reporting progress while processing a list of files:
+
+
+  QString i;           // current file's number
+  QString total;       // number of files to process
+  QString fileName;    // current file's name
+
+  QString status = QString("Processing file %1 of %2: %3")
+                  .arg(i).arg(total).arg(fileName);
+
+
+
+First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
+
+One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
+
+If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
+*/
+impl /*struct*/ QString {
+  pub fn arg_16<RetType, T: QString_arg_16<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.arg_16(self);
+    // return 1;
+  }
+}
+pub trait QString_arg_16<RetType> {
+  fn arg_16(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_arg_16<usize> for (usize,usize,usize,usize) {
+  fn arg_16(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
+    let arg3 = (&self.3/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString3argERKS_S1_S1_S1_", 4,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:303
+// index:17
+// Public Visibility=Default Availability=Available
+// [8] QString arg(const QString &, const QString &, const QString &, const QString &, const QString &) const
+
+/*
+Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
+
+fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
+
+This example shows how we might create a status string for reporting progress while processing a list of files:
+
+
+  QString i;           // current file's number
+  QString total;       // number of files to process
+  QString fileName;    // current file's name
+
+  QString status = QString("Processing file %1 of %2: %3")
+                  .arg(i).arg(total).arg(fileName);
+
+
+
+First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
+
+One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
+
+If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
+*/
+impl /*struct*/ QString {
+  pub fn arg_17<RetType, T: QString_arg_17<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.arg_17(self);
+    // return 1;
+  }
+}
+pub trait QString_arg_17<RetType> {
+  fn arg_17(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_arg_17<usize> for (usize,usize,usize,usize,usize) {
+  fn arg_17(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
+    let arg3 = (&self.3/*.qclsinst*/) as *const usize as usize;
+    let arg4 = (&self.4/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString3argERKS_S1_S1_S1_S1_", 5,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,arg4,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:305
+// index:18
+// Public Visibility=Default Availability=Available
+// [8] QString arg(const QString &, const QString &, const QString &, const QString &, const QString &, const QString &) const
+
+/*
+Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
+
+fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
+
+This example shows how we might create a status string for reporting progress while processing a list of files:
+
+
+  QString i;           // current file's number
+  QString total;       // number of files to process
+  QString fileName;    // current file's name
+
+  QString status = QString("Processing file %1 of %2: %3")
+                  .arg(i).arg(total).arg(fileName);
+
+
+
+First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
+
+One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
+
+If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
+*/
+impl /*struct*/ QString {
+  pub fn arg_18<RetType, T: QString_arg_18<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.arg_18(self);
+    // return 1;
+  }
+}
+pub trait QString_arg_18<RetType> {
+  fn arg_18(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_arg_18<usize> for (usize,usize,usize,usize,usize,usize) {
+  fn arg_18(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
+    let arg3 = (&self.3/*.qclsinst*/) as *const usize as usize;
+    let arg4 = (&self.4/*.qclsinst*/) as *const usize as usize;
+    let arg5 = (&self.5/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString3argERKS_S1_S1_S1_S1_S1_", 6,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,arg4,arg5,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:307
+// index:19
+// Public Visibility=Default Availability=Available
+// [8] QString arg(const QString &, const QString &, const QString &, const QString &, const QString &, const QString &, const QString &) const
+
+/*
+Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
+
+fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
+
+This example shows how we might create a status string for reporting progress while processing a list of files:
+
+
+  QString i;           // current file's number
+  QString total;       // number of files to process
+  QString fileName;    // current file's name
+
+  QString status = QString("Processing file %1 of %2: %3")
+                  .arg(i).arg(total).arg(fileName);
+
+
+
+First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
+
+One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
+
+If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
+*/
+impl /*struct*/ QString {
+  pub fn arg_19<RetType, T: QString_arg_19<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.arg_19(self);
+    // return 1;
+  }
+}
+pub trait QString_arg_19<RetType> {
+  fn arg_19(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_arg_19<usize> for (usize,usize,usize,usize,usize,usize,usize) {
+  fn arg_19(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
+    let arg3 = (&self.3/*.qclsinst*/) as *const usize as usize;
+    let arg4 = (&self.4/*.qclsinst*/) as *const usize as usize;
+    let arg5 = (&self.5/*.qclsinst*/) as *const usize as usize;
+    let arg6 = (&self.6/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString3argERKS_S1_S1_S1_S1_S1_S1_", 7,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,arg4,arg5,arg6,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:310
+// index:20
+// Public Visibility=Default Availability=Available
+// [8] QString arg(const QString &, const QString &, const QString &, const QString &, const QString &, const QString &, const QString &, const QString &) const
+
+/*
+Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
+
+fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
+
+This example shows how we might create a status string for reporting progress while processing a list of files:
+
+
+  QString i;           // current file's number
+  QString total;       // number of files to process
+  QString fileName;    // current file's name
+
+  QString status = QString("Processing file %1 of %2: %3")
+                  .arg(i).arg(total).arg(fileName);
+
+
+
+First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
+
+One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
+
+If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
+*/
+impl /*struct*/ QString {
+  pub fn arg_20<RetType, T: QString_arg_20<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.arg_20(self);
+    // return 1;
+  }
+}
+pub trait QString_arg_20<RetType> {
+  fn arg_20(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_arg_20<usize> for (usize,usize,usize,usize,usize,usize,usize,usize) {
+  fn arg_20(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
+    let arg3 = (&self.3/*.qclsinst*/) as *const usize as usize;
+    let arg4 = (&self.4/*.qclsinst*/) as *const usize as usize;
+    let arg5 = (&self.5/*.qclsinst*/) as *const usize as usize;
+    let arg6 = (&self.6/*.qclsinst*/) as *const usize as usize;
+    let arg7 = (&self.7/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString3argERKS_S1_S1_S1_S1_S1_S1_S1_", 8,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,arg4,arg5,arg6,arg7,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:313
+// index:21
+// Public Visibility=Default Availability=Available
+// [8] QString arg(const QString &, const QString &, const QString &, const QString &, const QString &, const QString &, const QString &, const QString &, const QString &) const
+
+/*
+Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
+
+fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
+
+This example shows how we might create a status string for reporting progress while processing a list of files:
+
+
+  QString i;           // current file's number
+  QString total;       // number of files to process
+  QString fileName;    // current file's name
+
+  QString status = QString("Processing file %1 of %2: %3")
+                  .arg(i).arg(total).arg(fileName);
+
+
+
+First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
+
+One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
+
+If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
+*/
+impl /*struct*/ QString {
+  pub fn arg_21<RetType, T: QString_arg_21<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.arg_21(self);
+    // return 1;
+  }
+}
+pub trait QString_arg_21<RetType> {
+  fn arg_21(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_arg_21<usize> for (usize,usize,usize,usize,usize,usize,usize,usize,usize) {
+  fn arg_21(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
+    let arg3 = (&self.3/*.qclsinst*/) as *const usize as usize;
+    let arg4 = (&self.4/*.qclsinst*/) as *const usize as usize;
+    let arg5 = (&self.5/*.qclsinst*/) as *const usize as usize;
+    let arg6 = (&self.6/*.qclsinst*/) as *const usize as usize;
+    let arg7 = (&self.7/*.qclsinst*/) as *const usize as usize;
+    let arg8 = (&self.8/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString3argERKS_S1_S1_S1_S1_S1_S1_S1_S1_", 9,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,arg0,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:322
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int indexOf(QChar, int, Qt::CaseSensitivity) const
+
+/*
+Returns the index position of the first occurrence of the string str in this string, searching forward from index position from. Returns -1 if str is not found.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+Example:
+
+
+  QString x = "sticky question";
+  QString y = "sti";
+  x.indexOf(y);               // returns 0
+  x.indexOf(y, 1);            // returns 10
+  x.indexOf(y, 10);           // returns 10
+  x.indexOf(y, 11);           // returns -1
+
+
+
+If from is -1, the search starts at the last character; if it is -2, at the next to last character and so on.
+
+See also lastIndexOf(), contains(), and count().
+*/
+impl /*struct*/ QString {
+  pub fn indexOf_0<RetType, T: QString_indexOf_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.indexOf_0(self);
+    // return 1;
+  }
+}
+pub trait QString_indexOf_0<RetType> {
+  fn indexOf_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_indexOf_0<i32> for (usize,i32,i32) {
+  fn indexOf_0(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString7indexOfE5QChariN2Qt15CaseSensitivityE", 3,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:323
+// index:1
+// Public Visibility=Default Availability=Available
+// [4] int indexOf(const QString &, int, Qt::CaseSensitivity) const
+
+/*
+Returns the index position of the first occurrence of the string str in this string, searching forward from index position from. Returns -1 if str is not found.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+Example:
+
+
+  QString x = "sticky question";
+  QString y = "sti";
+  x.indexOf(y);               // returns 0
+  x.indexOf(y, 1);            // returns 10
+  x.indexOf(y, 10);           // returns 10
+  x.indexOf(y, 11);           // returns -1
+
+
+
+If from is -1, the search starts at the last character; if it is -2, at the next to last character and so on.
+
+See also lastIndexOf(), contains(), and count().
+*/
+impl /*struct*/ QString {
+  pub fn indexOf_1<RetType, T: QString_indexOf_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.indexOf_1(self);
+    // return 1;
+  }
+}
+pub trait QString_indexOf_1<RetType> {
+  fn indexOf_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_indexOf_1<i32> for (usize,i32,i32) {
+  fn indexOf_1(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString7indexOfERKS_iN2Qt15CaseSensitivityE", 3,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:324
+// index:2
+// Public Visibility=Default Availability=Available
+// [4] int indexOf(QLatin1String, int, Qt::CaseSensitivity) const
+
+/*
+Returns the index position of the first occurrence of the string str in this string, searching forward from index position from. Returns -1 if str is not found.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+Example:
+
+
+  QString x = "sticky question";
+  QString y = "sti";
+  x.indexOf(y);               // returns 0
+  x.indexOf(y, 1);            // returns 10
+  x.indexOf(y, 10);           // returns 10
+  x.indexOf(y, 11);           // returns -1
+
+
+
+If from is -1, the search starts at the last character; if it is -2, at the next to last character and so on.
+
+See also lastIndexOf(), contains(), and count().
+*/
+impl /*struct*/ QString {
+  pub fn indexOf_2<RetType, T: QString_indexOf_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.indexOf_2(self);
+    // return 1;
+  }
+}
+pub trait QString_indexOf_2<RetType> {
+  fn indexOf_2(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_indexOf_2<i32> for (usize,i32,i32) {
+  fn indexOf_2(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString7indexOfE13QLatin1StringiN2Qt15CaseSensitivityE", 3,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:325
+// index:3
+// Public Visibility=Default Availability=Available
+// [4] int indexOf(const QStringRef &, int, Qt::CaseSensitivity) const
+
+/*
+Returns the index position of the first occurrence of the string str in this string, searching forward from index position from. Returns -1 if str is not found.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+Example:
+
+
+  QString x = "sticky question";
+  QString y = "sti";
+  x.indexOf(y);               // returns 0
+  x.indexOf(y, 1);            // returns 10
+  x.indexOf(y, 10);           // returns 10
+  x.indexOf(y, 11);           // returns -1
+
+
+
+If from is -1, the search starts at the last character; if it is -2, at the next to last character and so on.
+
+See also lastIndexOf(), contains(), and count().
+*/
+impl /*struct*/ QString {
+  pub fn indexOf_3<RetType, T: QString_indexOf_3<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.indexOf_3(self);
+    // return 1;
+  }
+}
+pub trait QString_indexOf_3<RetType> {
+  fn indexOf_3(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_indexOf_3<i32> for (usize,i32,i32) {
+  fn indexOf_3(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString7indexOfERK10QStringRefiN2Qt15CaseSensitivityE", 3,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:340
+// index:4
+// Public Visibility=Default Availability=Available
+// [4] int indexOf(const QRegExp &, int) const
+
+/*
+Returns the index position of the first occurrence of the string str in this string, searching forward from index position from. Returns -1 if str is not found.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+Example:
+
+
+  QString x = "sticky question";
+  QString y = "sti";
+  x.indexOf(y);               // returns 0
+  x.indexOf(y, 1);            // returns 10
+  x.indexOf(y, 10);           // returns 10
+  x.indexOf(y, 11);           // returns -1
+
+
+
+If from is -1, the search starts at the last character; if it is -2, at the next to last character and so on.
+
+See also lastIndexOf(), contains(), and count().
+*/
+impl /*struct*/ QString {
+  pub fn indexOf_4<RetType, T: QString_indexOf_4<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.indexOf_4(self);
+    // return 1;
+  }
+}
+pub trait QString_indexOf_4<RetType> {
+  fn indexOf_4(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_indexOf_4<i32> for (usize,i32) {
+  fn indexOf_4(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString7indexOfERK7QRegExpi", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:345
+// index:5
+// Public Visibility=Default Availability=Available
+// [4] int indexOf(QRegExp &, int) const
+
+/*
+Returns the index position of the first occurrence of the string str in this string, searching forward from index position from. Returns -1 if str is not found.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+Example:
+
+
+  QString x = "sticky question";
+  QString y = "sti";
+  x.indexOf(y);               // returns 0
+  x.indexOf(y, 1);            // returns 10
+  x.indexOf(y, 10);           // returns 10
+  x.indexOf(y, 11);           // returns -1
+
+
+
+If from is -1, the search starts at the last character; if it is -2, at the next to last character and so on.
+
+See also lastIndexOf(), contains(), and count().
+*/
+impl /*struct*/ QString {
+  pub fn indexOf_5<RetType, T: QString_indexOf_5<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.indexOf_5(self);
+    // return 1;
+  }
+}
+pub trait QString_indexOf_5<RetType> {
+  fn indexOf_5(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_indexOf_5<i32> for (usize,i32) {
+  fn indexOf_5(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString7indexOfER7QRegExpi", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:351
+// index:6
+// Public Visibility=Default Availability=Available
+// [4] int indexOf(const QRegularExpression &, int) const
+
+/*
+Returns the index position of the first occurrence of the string str in this string, searching forward from index position from. Returns -1 if str is not found.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+Example:
+
+
+  QString x = "sticky question";
+  QString y = "sti";
+  x.indexOf(y);               // returns 0
+  x.indexOf(y, 1);            // returns 10
+  x.indexOf(y, 10);           // returns 10
+  x.indexOf(y, 11);           // returns -1
+
+
+
+If from is -1, the search starts at the last character; if it is -2, at the next to last character and so on.
+
+See also lastIndexOf(), contains(), and count().
+*/
+impl /*struct*/ QString {
+  pub fn indexOf_6<RetType, T: QString_indexOf_6<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.indexOf_6(self);
+    // return 1;
+  }
+}
+pub trait QString_indexOf_6<RetType> {
+  fn indexOf_6(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_indexOf_6<i32> for (usize,i32) {
+  fn indexOf_6(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString7indexOfERK18QRegularExpressioni", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:352
+// index:7
+// Public Visibility=Default Availability=Available
+// [4] int indexOf(const QRegularExpression &, int, QRegularExpressionMatch *) const
+
+/*
+Returns the index position of the first occurrence of the string str in this string, searching forward from index position from. Returns -1 if str is not found.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+Example:
+
+
+  QString x = "sticky question";
+  QString y = "sti";
+  x.indexOf(y);               // returns 0
+  x.indexOf(y, 1);            // returns 10
+  x.indexOf(y, 10);           // returns 10
+  x.indexOf(y, 11);           // returns -1
+
+
+
+If from is -1, the search starts at the last character; if it is -2, at the next to last character and so on.
+
+See also lastIndexOf(), contains(), and count().
+*/
+impl /*struct*/ QString {
+  pub fn indexOf_7<RetType, T: QString_indexOf_7<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.indexOf_7(self);
+    // return 1;
+  }
+}
+pub trait QString_indexOf_7<RetType> {
+  fn indexOf_7(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_indexOf_7<i32> for (usize,i32,usize) {
+  fn indexOf_7(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString7indexOfERK18QRegularExpressioniP23QRegularExpressionMatch", 3,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:326
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int lastIndexOf(QChar, int, Qt::CaseSensitivity) const
+
+/*
+Returns the index position of the last occurrence of the string str in this string, searching backward from index position from. If from is -1 (default), the search starts at the last character; if from is -2, at the next to last character and so on. Returns -1 if str is not found.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+Example:
+
+
+  QString x = "crazy azimuths";
+  QString y = "az";
+  x.lastIndexOf(y);           // returns 6
+  x.lastIndexOf(y, 6);        // returns 6
+  x.lastIndexOf(y, 5);        // returns 2
+  x.lastIndexOf(y, 1);        // returns -1
+
+
+
+See also indexOf(), contains(), and count().
+*/
+impl /*struct*/ QString {
+  pub fn lastIndexOf_0<RetType, T: QString_lastIndexOf_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.lastIndexOf_0(self);
+    // return 1;
+  }
+}
+pub trait QString_lastIndexOf_0<RetType> {
+  fn lastIndexOf_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_lastIndexOf_0<i32> for (usize,i32,i32) {
+  fn lastIndexOf_0(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString11lastIndexOfE5QChariN2Qt15CaseSensitivityE", 3,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:327
+// index:1
+// Public Visibility=Default Availability=Available
+// [4] int lastIndexOf(const QString &, int, Qt::CaseSensitivity) const
+
+/*
+Returns the index position of the last occurrence of the string str in this string, searching backward from index position from. If from is -1 (default), the search starts at the last character; if from is -2, at the next to last character and so on. Returns -1 if str is not found.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+Example:
+
+
+  QString x = "crazy azimuths";
+  QString y = "az";
+  x.lastIndexOf(y);           // returns 6
+  x.lastIndexOf(y, 6);        // returns 6
+  x.lastIndexOf(y, 5);        // returns 2
+  x.lastIndexOf(y, 1);        // returns -1
+
+
+
+See also indexOf(), contains(), and count().
+*/
+impl /*struct*/ QString {
+  pub fn lastIndexOf_1<RetType, T: QString_lastIndexOf_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.lastIndexOf_1(self);
+    // return 1;
+  }
+}
+pub trait QString_lastIndexOf_1<RetType> {
+  fn lastIndexOf_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_lastIndexOf_1<i32> for (usize,i32,i32) {
+  fn lastIndexOf_1(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString11lastIndexOfERKS_iN2Qt15CaseSensitivityE", 3,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:328
+// index:2
+// Public Visibility=Default Availability=Available
+// [4] int lastIndexOf(QLatin1String, int, Qt::CaseSensitivity) const
+
+/*
+Returns the index position of the last occurrence of the string str in this string, searching backward from index position from. If from is -1 (default), the search starts at the last character; if from is -2, at the next to last character and so on. Returns -1 if str is not found.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+Example:
+
+
+  QString x = "crazy azimuths";
+  QString y = "az";
+  x.lastIndexOf(y);           // returns 6
+  x.lastIndexOf(y, 6);        // returns 6
+  x.lastIndexOf(y, 5);        // returns 2
+  x.lastIndexOf(y, 1);        // returns -1
+
+
+
+See also indexOf(), contains(), and count().
+*/
+impl /*struct*/ QString {
+  pub fn lastIndexOf_2<RetType, T: QString_lastIndexOf_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.lastIndexOf_2(self);
+    // return 1;
+  }
+}
+pub trait QString_lastIndexOf_2<RetType> {
+  fn lastIndexOf_2(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_lastIndexOf_2<i32> for (usize,i32,i32) {
+  fn lastIndexOf_2(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString11lastIndexOfE13QLatin1StringiN2Qt15CaseSensitivityE", 3,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:329
+// index:3
+// Public Visibility=Default Availability=Available
+// [4] int lastIndexOf(const QStringRef &, int, Qt::CaseSensitivity) const
+
+/*
+Returns the index position of the last occurrence of the string str in this string, searching backward from index position from. If from is -1 (default), the search starts at the last character; if from is -2, at the next to last character and so on. Returns -1 if str is not found.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+Example:
+
+
+  QString x = "crazy azimuths";
+  QString y = "az";
+  x.lastIndexOf(y);           // returns 6
+  x.lastIndexOf(y, 6);        // returns 6
+  x.lastIndexOf(y, 5);        // returns 2
+  x.lastIndexOf(y, 1);        // returns -1
+
+
+
+See also indexOf(), contains(), and count().
+*/
+impl /*struct*/ QString {
+  pub fn lastIndexOf_3<RetType, T: QString_lastIndexOf_3<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.lastIndexOf_3(self);
+    // return 1;
+  }
+}
+pub trait QString_lastIndexOf_3<RetType> {
+  fn lastIndexOf_3(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_lastIndexOf_3<i32> for (usize,i32,i32) {
+  fn lastIndexOf_3(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString11lastIndexOfERK10QStringRefiN2Qt15CaseSensitivityE", 3,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:341
+// index:4
+// Public Visibility=Default Availability=Available
+// [4] int lastIndexOf(const QRegExp &, int) const
+
+/*
+Returns the index position of the last occurrence of the string str in this string, searching backward from index position from. If from is -1 (default), the search starts at the last character; if from is -2, at the next to last character and so on. Returns -1 if str is not found.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+Example:
+
+
+  QString x = "crazy azimuths";
+  QString y = "az";
+  x.lastIndexOf(y);           // returns 6
+  x.lastIndexOf(y, 6);        // returns 6
+  x.lastIndexOf(y, 5);        // returns 2
+  x.lastIndexOf(y, 1);        // returns -1
+
+
+
+See also indexOf(), contains(), and count().
+*/
+impl /*struct*/ QString {
+  pub fn lastIndexOf_4<RetType, T: QString_lastIndexOf_4<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.lastIndexOf_4(self);
+    // return 1;
+  }
+}
+pub trait QString_lastIndexOf_4<RetType> {
+  fn lastIndexOf_4(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_lastIndexOf_4<i32> for (usize,i32) {
+  fn lastIndexOf_4(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString11lastIndexOfERK7QRegExpi", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:346
+// index:5
+// Public Visibility=Default Availability=Available
+// [4] int lastIndexOf(QRegExp &, int) const
+
+/*
+Returns the index position of the last occurrence of the string str in this string, searching backward from index position from. If from is -1 (default), the search starts at the last character; if from is -2, at the next to last character and so on. Returns -1 if str is not found.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+Example:
+
+
+  QString x = "crazy azimuths";
+  QString y = "az";
+  x.lastIndexOf(y);           // returns 6
+  x.lastIndexOf(y, 6);        // returns 6
+  x.lastIndexOf(y, 5);        // returns 2
+  x.lastIndexOf(y, 1);        // returns -1
+
+
+
+See also indexOf(), contains(), and count().
+*/
+impl /*struct*/ QString {
+  pub fn lastIndexOf_5<RetType, T: QString_lastIndexOf_5<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.lastIndexOf_5(self);
+    // return 1;
+  }
+}
+pub trait QString_lastIndexOf_5<RetType> {
+  fn lastIndexOf_5(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_lastIndexOf_5<i32> for (usize,i32) {
+  fn lastIndexOf_5(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString11lastIndexOfER7QRegExpi", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:353
+// index:6
+// Public Visibility=Default Availability=Available
+// [4] int lastIndexOf(const QRegularExpression &, int) const
+
+/*
+Returns the index position of the last occurrence of the string str in this string, searching backward from index position from. If from is -1 (default), the search starts at the last character; if from is -2, at the next to last character and so on. Returns -1 if str is not found.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+Example:
+
+
+  QString x = "crazy azimuths";
+  QString y = "az";
+  x.lastIndexOf(y);           // returns 6
+  x.lastIndexOf(y, 6);        // returns 6
+  x.lastIndexOf(y, 5);        // returns 2
+  x.lastIndexOf(y, 1);        // returns -1
+
+
+
+See also indexOf(), contains(), and count().
+*/
+impl /*struct*/ QString {
+  pub fn lastIndexOf_6<RetType, T: QString_lastIndexOf_6<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.lastIndexOf_6(self);
+    // return 1;
+  }
+}
+pub trait QString_lastIndexOf_6<RetType> {
+  fn lastIndexOf_6(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_lastIndexOf_6<i32> for (usize,i32) {
+  fn lastIndexOf_6(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString11lastIndexOfERK18QRegularExpressioni", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:354
+// index:7
+// Public Visibility=Default Availability=Available
+// [4] int lastIndexOf(const QRegularExpression &, int, QRegularExpressionMatch *) const
+
+/*
+Returns the index position of the last occurrence of the string str in this string, searching backward from index position from. If from is -1 (default), the search starts at the last character; if from is -2, at the next to last character and so on. Returns -1 if str is not found.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+Example:
+
+
+  QString x = "crazy azimuths";
+  QString y = "az";
+  x.lastIndexOf(y);           // returns 6
+  x.lastIndexOf(y, 6);        // returns 6
+  x.lastIndexOf(y, 5);        // returns 2
+  x.lastIndexOf(y, 1);        // returns -1
+
+
+
+See also indexOf(), contains(), and count().
+*/
+impl /*struct*/ QString {
+  pub fn lastIndexOf_7<RetType, T: QString_lastIndexOf_7<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.lastIndexOf_7(self);
+    // return 1;
+  }
+}
+pub trait QString_lastIndexOf_7<RetType> {
+  fn lastIndexOf_7(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_lastIndexOf_7<i32> for (usize,i32,usize) {
+  fn lastIndexOf_7(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString11lastIndexOfERK18QRegularExpressioniP23QRegularExpressionMatch", 3,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:331
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool contains(QChar, Qt::CaseSensitivity) const
+
+/*
+Returns true if this string contains an occurrence of the string str; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+Example:
+
+
+  QString str = "Peter Pan";
+  str.contains("peter", Qt::CaseInsensitive);    // returns true
+
+
+
+See also indexOf() and count().
+*/
+impl /*struct*/ QString {
+  pub fn contains_0<RetType, T: QString_contains_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.contains_0(self);
+    // return 1;
+  }
+}
+pub trait QString_contains_0<RetType> {
+  fn contains_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_contains_0<bool> for (usize,i32) {
+  fn contains_0(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString8containsE5QCharN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:332
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [1] bool contains(const QString &, Qt::CaseSensitivity) const
+
+/*
+Returns true if this string contains an occurrence of the string str; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+Example:
+
+
+  QString str = "Peter Pan";
+  str.contains("peter", Qt::CaseInsensitive);    // returns true
+
+
+
+See also indexOf() and count().
+*/
+impl /*struct*/ QString {
+  pub fn contains_1<RetType, T: QString_contains_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.contains_1(self);
+    // return 1;
+  }
+}
+pub trait QString_contains_1<RetType> {
+  fn contains_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_contains_1<bool> for (usize,i32) {
+  fn contains_1(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString8containsERKS_N2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:333
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [1] bool contains(QLatin1String, Qt::CaseSensitivity) const
+
+/*
+Returns true if this string contains an occurrence of the string str; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+Example:
+
+
+  QString str = "Peter Pan";
+  str.contains("peter", Qt::CaseInsensitive);    // returns true
+
+
+
+See also indexOf() and count().
+*/
+impl /*struct*/ QString {
+  pub fn contains_2<RetType, T: QString_contains_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.contains_2(self);
+    // return 1;
+  }
+}
+pub trait QString_contains_2<RetType> {
+  fn contains_2(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_contains_2<bool> for (usize,i32) {
+  fn contains_2(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString8containsE13QLatin1StringN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:334
+// index:3
+// Public inline Visibility=Default Availability=Available
+// [1] bool contains(const QStringRef &, Qt::CaseSensitivity) const
+
+/*
+Returns true if this string contains an occurrence of the string str; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+Example:
+
+
+  QString str = "Peter Pan";
+  str.contains("peter", Qt::CaseInsensitive);    // returns true
+
+
+
+See also indexOf() and count().
+*/
+impl /*struct*/ QString {
+  pub fn contains_3<RetType, T: QString_contains_3<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.contains_3(self);
+    // return 1;
+  }
+}
+pub trait QString_contains_3<RetType> {
+  fn contains_3(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_contains_3<bool> for (usize,i32) {
+  fn contains_3(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString8containsERK10QStringRefN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:342
+// index:4
+// Public inline Visibility=Default Availability=Available
+// [1] bool contains(const QRegExp &) const
+
+/*
+Returns true if this string contains an occurrence of the string str; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+Example:
+
+
+  QString str = "Peter Pan";
+  str.contains("peter", Qt::CaseInsensitive);    // returns true
+
+
+
+See also indexOf() and count().
+*/
+impl /*struct*/ QString {
+  pub fn contains_4<RetType, T: QString_contains_4<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.contains_4(self);
+    // return 1;
+  }
+}
+pub trait QString_contains_4<RetType> {
+  fn contains_4(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_contains_4<bool> for (usize) {
+  fn contains_4(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString8containsERK7QRegExp", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:347
+// index:5
+// Public inline Visibility=Default Availability=Available
+// [1] bool contains(QRegExp &) const
+
+/*
+Returns true if this string contains an occurrence of the string str; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+Example:
+
+
+  QString str = "Peter Pan";
+  str.contains("peter", Qt::CaseInsensitive);    // returns true
+
+
+
+See also indexOf() and count().
+*/
+impl /*struct*/ QString {
+  pub fn contains_5<RetType, T: QString_contains_5<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.contains_5(self);
+    // return 1;
+  }
+}
+pub trait QString_contains_5<RetType> {
+  fn contains_5(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_contains_5<bool> for (usize) {
+  fn contains_5(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString8containsER7QRegExp", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:355
+// index:6
+// Public Visibility=Default Availability=Available
+// [1] bool contains(const QRegularExpression &) const
+
+/*
+Returns true if this string contains an occurrence of the string str; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+Example:
+
+
+  QString str = "Peter Pan";
+  str.contains("peter", Qt::CaseInsensitive);    // returns true
+
+
+
+See also indexOf() and count().
+*/
+impl /*struct*/ QString {
+  pub fn contains_6<RetType, T: QString_contains_6<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.contains_6(self);
+    // return 1;
+  }
+}
+pub trait QString_contains_6<RetType> {
+  fn contains_6(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_contains_6<bool> for (usize) {
+  fn contains_6(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString8containsERK18QRegularExpression", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:356
+// index:7
+// Public Visibility=Default Availability=Available
+// [1] bool contains(const QRegularExpression &, QRegularExpressionMatch *) const
+
+/*
+Returns true if this string contains an occurrence of the string str; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+Example:
+
+
+  QString str = "Peter Pan";
+  str.contains("peter", Qt::CaseInsensitive);    // returns true
+
+
+
+See also indexOf() and count().
+*/
+impl /*struct*/ QString {
+  pub fn contains_7<RetType, T: QString_contains_7<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.contains_7(self);
+    // return 1;
+  }
+}
+pub trait QString_contains_7<RetType> {
+  fn contains_7(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_contains_7<bool> for (usize,usize) {
+  fn contains_7(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString8containsERK18QRegularExpressionP23QRegularExpressionMatch", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:369
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString section(QChar, int, int, QString::SectionFlags) const
+
+/*
+This function returns a section of the string.
+
+This string is treated as a sequence of fields separated by the character, sep. The returned string consists of the fields from position start to position end inclusive. If end is not specified, all fields from position start to the end of the string are included. Fields are numbered 0, 1, 2, etc., counting from the left, and -1, -2, etc., counting from right to left.
+
+The flags argument can be used to affect some aspects of the function's behavior, e.g. whether to be case sensitive, whether to skip empty fields and how to deal with leading and trailing separators; see SectionFlags.
+
+
+  QString str;
+  QString csv = "forename,middlename,surname,phone";
+  QString path = "/usr/local/bin/myapp"; // First field is empty
+  QString::SectionFlag flag = QString::SectionSkipEmpty;
+
+  str = csv.section(',', 2, 2);   // str == "surname"
+  str = path.section('/', 3, 4);  // str == "bin/myapp"
+  str = path.section('/', 3, 3, flag); // str == "myapp"
+
+
+
+If start or end is negative, we count fields from the right of the string, the right-most field being -1, the one from right-most field being -2, and so on.
+
+
+  str = csv.section(',', -3, -2);  // str == "middlename,surname"
+  str = path.section('/', -1); // str == "myapp"
+
+
+
+See also split().
+*/
+impl /*struct*/ QString {
+  pub fn section_0<RetType, T: QString_section_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.section_0(self);
+    // return 1;
+  }
+}
+pub trait QString_section_0<RetType> {
+  fn section_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_section_0<usize> for (usize,i32,i32,i32) {
+  fn section_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let arg3 = (&self.3) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString7sectionE5QCharii6QFlagsINS_11SectionFlagEE", 4,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:370
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QString section(const QString &, int, int, QString::SectionFlags) const
+
+/*
+This function returns a section of the string.
+
+This string is treated as a sequence of fields separated by the character, sep. The returned string consists of the fields from position start to position end inclusive. If end is not specified, all fields from position start to the end of the string are included. Fields are numbered 0, 1, 2, etc., counting from the left, and -1, -2, etc., counting from right to left.
+
+The flags argument can be used to affect some aspects of the function's behavior, e.g. whether to be case sensitive, whether to skip empty fields and how to deal with leading and trailing separators; see SectionFlags.
+
+
+  QString str;
+  QString csv = "forename,middlename,surname,phone";
+  QString path = "/usr/local/bin/myapp"; // First field is empty
+  QString::SectionFlag flag = QString::SectionSkipEmpty;
+
+  str = csv.section(',', 2, 2);   // str == "surname"
+  str = path.section('/', 3, 4);  // str == "bin/myapp"
+  str = path.section('/', 3, 3, flag); // str == "myapp"
+
+
+
+If start or end is negative, we count fields from the right of the string, the right-most field being -1, the one from right-most field being -2, and so on.
+
+
+  str = csv.section(',', -3, -2);  // str == "middlename,surname"
+  str = path.section('/', -1); // str == "myapp"
+
+
+
+See also split().
+*/
+impl /*struct*/ QString {
+  pub fn section_1<RetType, T: QString_section_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.section_1(self);
+    // return 1;
+  }
+}
+pub trait QString_section_1<RetType> {
+  fn section_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_section_1<usize> for (usize,i32,i32,i32) {
+  fn section_1(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let arg3 = (&self.3) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString7sectionERKS_ii6QFlagsINS_11SectionFlagEE", 4,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:372
+// index:2
+// Public Visibility=Default Availability=Available
+// [8] QString section(const QRegExp &, int, int, QString::SectionFlags) const
+
+/*
+This function returns a section of the string.
+
+This string is treated as a sequence of fields separated by the character, sep. The returned string consists of the fields from position start to position end inclusive. If end is not specified, all fields from position start to the end of the string are included. Fields are numbered 0, 1, 2, etc., counting from the left, and -1, -2, etc., counting from right to left.
+
+The flags argument can be used to affect some aspects of the function's behavior, e.g. whether to be case sensitive, whether to skip empty fields and how to deal with leading and trailing separators; see SectionFlags.
+
+
+  QString str;
+  QString csv = "forename,middlename,surname,phone";
+  QString path = "/usr/local/bin/myapp"; // First field is empty
+  QString::SectionFlag flag = QString::SectionSkipEmpty;
+
+  str = csv.section(',', 2, 2);   // str == "surname"
+  str = path.section('/', 3, 4);  // str == "bin/myapp"
+  str = path.section('/', 3, 3, flag); // str == "myapp"
+
+
+
+If start or end is negative, we count fields from the right of the string, the right-most field being -1, the one from right-most field being -2, and so on.
+
+
+  str = csv.section(',', -3, -2);  // str == "middlename,surname"
+  str = path.section('/', -1); // str == "myapp"
+
+
+
+See also split().
+*/
+impl /*struct*/ QString {
+  pub fn section_2<RetType, T: QString_section_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.section_2(self);
+    // return 1;
+  }
+}
+pub trait QString_section_2<RetType> {
+  fn section_2(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_section_2<usize> for (usize,i32,i32,i32) {
+  fn section_2(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let arg3 = (&self.3) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString7sectionERK7QRegExpii6QFlagsINS_11SectionFlagEE", 4,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:375
+// index:3
+// Public Visibility=Default Availability=Available
+// [8] QString section(const QRegularExpression &, int, int, QString::SectionFlags) const
+
+/*
+This function returns a section of the string.
+
+This string is treated as a sequence of fields separated by the character, sep. The returned string consists of the fields from position start to position end inclusive. If end is not specified, all fields from position start to the end of the string are included. Fields are numbered 0, 1, 2, etc., counting from the left, and -1, -2, etc., counting from right to left.
+
+The flags argument can be used to affect some aspects of the function's behavior, e.g. whether to be case sensitive, whether to skip empty fields and how to deal with leading and trailing separators; see SectionFlags.
+
+
+  QString str;
+  QString csv = "forename,middlename,surname,phone";
+  QString path = "/usr/local/bin/myapp"; // First field is empty
+  QString::SectionFlag flag = QString::SectionSkipEmpty;
+
+  str = csv.section(',', 2, 2);   // str == "surname"
+  str = path.section('/', 3, 4);  // str == "bin/myapp"
+  str = path.section('/', 3, 3, flag); // str == "myapp"
+
+
+
+If start or end is negative, we count fields from the right of the string, the right-most field being -1, the one from right-most field being -2, and so on.
+
+
+  str = csv.section(',', -3, -2);  // str == "middlename,surname"
+  str = path.section('/', -1); // str == "myapp"
+
+
+
+See also split().
+*/
+impl /*struct*/ QString {
+  pub fn section_3<RetType, T: QString_section_3<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.section_3(self);
+    // return 1;
+  }
+}
+pub trait QString_section_3<RetType> {
+  fn section_3(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_section_3<usize> for (usize,i32,i32,i32) {
+  fn section_3(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let arg3 = (&self.3) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString7sectionERK18QRegularExpressionii6QFlagsINS_11SectionFlagEE", 4,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:377
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString left(int) const
+
+/*
+Returns a substring that contains the n leftmost characters of the string.
+
+The entire string is returned if n is greater than or equal to size(), or less than zero.
+
+
+  QString x = "Pineapple";
+  QString y = x.left(4);      // y == "Pine"
+
+
+
+See also right(), mid(), startsWith(), chopped(), chop(), and truncate().
+*/
+impl /*struct*/ QString {
+  pub fn left_0<RetType, T: QString_left_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.left_0(self);
+    // return 1;
+  }
+}
+pub trait QString_left_0<RetType> {
+  fn left_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_left_0<usize> for (i32) {
+  fn left_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString4leftEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:378
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString right(int) const
+
+/*
+Returns a substring that contains the n rightmost characters of the string.
+
+The entire string is returned if n is greater than or equal to size(), or less than zero.
+
+
+  QString x = "Pineapple";
+  QString y = x.right(5);      // y == "apple"
+
+
+
+See also left(), mid(), endsWith(), chopped(), chop(), and truncate().
+*/
+impl /*struct*/ QString {
+  pub fn right_0<RetType, T: QString_right_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.right_0(self);
+    // return 1;
+  }
+}
+pub trait QString_right_0<RetType> {
+  fn right_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_right_0<usize> for (i32) {
+  fn right_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString5rightEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:379
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString mid(int, int) const
+
+/*
+Returns a string that contains n characters of this string, starting at the specified position index.
+
+Returns a null string if the position index exceeds the length of the string. If there are less than n characters available in the string starting at the given position, or if n is -1 (default), the function returns all characters that are available from the specified position.
+
+Example:
+
+
+  QString x = "Nine pineapples";
+  QString y = x.mid(5, 4);            // y == "pine"
+  QString z = x.mid(5);               // z == "pineapples"
+
+
+
+See also left(), right(), chopped(), chop(), and truncate().
+*/
+impl /*struct*/ QString {
+  pub fn mid_0<RetType, T: QString_mid_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.mid_0(self);
+    // return 1;
+  }
+}
+pub trait QString_mid_0<RetType> {
+  fn mid_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_mid_0<usize> for (i32,i32) {
+  fn mid_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString3midEii", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:380
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QString chopped(int) const
+
+/*
+Returns a substring that contains the size() - len leftmost characters of this string.
+
+Note: The behavior is undefined if len is negative or greater than size().
+
+This function was introduced in  Qt 5.10.
+
+See also endsWith(), left(), right(), mid(), chop(), and truncate().
+*/
+impl /*struct*/ QString {
+  pub fn chopped_0<RetType, T: QString_chopped_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.chopped_0(self);
+    // return 1;
+  }
+}
+pub trait QString_chopped_0<RetType> {
+  fn chopped_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_chopped_0<usize> for (i32) {
+  fn chopped_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString7choppedEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:384
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QStringRef leftRef(int) const
+
+/*
+Returns a substring reference to the n leftmost characters of the string.
+
+If n is greater than or equal to size(), or less than zero, a reference to the entire string is returned.
+
+
+  QString x = "Pineapple";
+  QStringRef y = x.leftRef(4);        // y == "Pine"
+
+
+
+This function was introduced in  Qt 4.4.
+
+See also left(), rightRef(), midRef(), and startsWith().
+*/
+impl /*struct*/ QString {
+  pub fn leftRef_0<RetType, T: QString_leftRef_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.leftRef_0(self);
+    // return 1;
+  }
+}
+pub trait QString_leftRef_0<RetType> {
+  fn leftRef_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_leftRef_0<usize> for (i32) {
+  fn leftRef_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString7leftRefEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:385
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QStringRef rightRef(int) const
+
+/*
+Returns a substring reference to the n rightmost characters of the string.
+
+If n is greater than or equal to size(), or less than zero, a reference to the entire string is returned.
+
+
+  QString x = "Pineapple";
+  QStringRef y = x.rightRef(5);       // y == "apple"
+
+
+
+This function was introduced in  Qt 4.4.
+
+See also right(), leftRef(), midRef(), and endsWith().
+*/
+impl /*struct*/ QString {
+  pub fn rightRef_0<RetType, T: QString_rightRef_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.rightRef_0(self);
+    // return 1;
+  }
+}
+pub trait QString_rightRef_0<RetType> {
+  fn rightRef_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_rightRef_0<usize> for (i32) {
+  fn rightRef_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString8rightRefEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:386
+// index:0
+// Public Visibility=Default Availability=Available
+// [16] QStringRef midRef(int, int) const
+
+/*
+Returns a substring reference to n characters of this string, starting at the specified position.
+
+If the position exceeds the length of the string, a null reference is returned.
+
+If there are less than n characters available in the string, starting at the given position, or if n is -1 (default), the function returns all characters from the specified position onwards.
+
+Example:
+
+
+  QString x = "Nine pineapples";
+  QStringRef y = x.midRef(5, 4);      // y == "pine"
+  QStringRef z = x.midRef(5);         // z == "pineapples"
+
+
+
+This function was introduced in  Qt 4.4.
+
+See also mid(), leftRef(), and rightRef().
+*/
+impl /*struct*/ QString {
+  pub fn midRef_0<RetType, T: QString_midRef_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.midRef_0(self);
+    // return 1;
+  }
+}
+pub trait QString_midRef_0<RetType> {
+  fn midRef_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_midRef_0<usize> for (i32,i32) {
+  fn midRef_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString6midRefEii", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:389
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool startsWith(const QString &, Qt::CaseSensitivity) const
+
+/*
+Returns true if the string starts with s; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+
+  QString str = "Bananas";
+  str.startsWith("Ban");     // returns true
+  str.startsWith("Car");     // returns false
+
+
+
+See also endsWith().
+*/
+impl /*struct*/ QString {
+  pub fn startsWith_0<RetType, T: QString_startsWith_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.startsWith_0(self);
+    // return 1;
+  }
+}
+pub trait QString_startsWith_0<RetType> {
+  fn startsWith_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_startsWith_0<bool> for (usize,i32) {
+  fn startsWith_0(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString10startsWithERKS_N2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:390
+// index:1
+// Public Visibility=Default Availability=Available
+// [1] bool startsWith(const QStringRef &, Qt::CaseSensitivity) const
+
+/*
+Returns true if the string starts with s; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+
+  QString str = "Bananas";
+  str.startsWith("Ban");     // returns true
+  str.startsWith("Car");     // returns false
+
+
+
+See also endsWith().
+*/
+impl /*struct*/ QString {
+  pub fn startsWith_1<RetType, T: QString_startsWith_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.startsWith_1(self);
+    // return 1;
+  }
+}
+pub trait QString_startsWith_1<RetType> {
+  fn startsWith_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_startsWith_1<bool> for (usize,i32) {
+  fn startsWith_1(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString10startsWithERK10QStringRefN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:392
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [1] bool startsWith(QStringView, Qt::CaseSensitivity) const
+
+/*
+Returns true if the string starts with s; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+
+  QString str = "Bananas";
+  str.startsWith("Ban");     // returns true
+  str.startsWith("Car");     // returns false
+
+
+
+See also endsWith().
+*/
+impl /*struct*/ QString {
+  pub fn startsWith_2<RetType, T: QString_startsWith_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.startsWith_2(self);
+    // return 1;
+  }
+}
+pub trait QString_startsWith_2<RetType> {
+  fn startsWith_2(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_startsWith_2<bool> for (usize,i32) {
+  fn startsWith_2(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString10startsWithE11QStringViewN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:394
+// index:3
+// Public Visibility=Default Availability=Available
+// [1] bool startsWith(QLatin1String, Qt::CaseSensitivity) const
+
+/*
+Returns true if the string starts with s; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+
+  QString str = "Bananas";
+  str.startsWith("Ban");     // returns true
+  str.startsWith("Car");     // returns false
+
+
+
+See also endsWith().
+*/
+impl /*struct*/ QString {
+  pub fn startsWith_3<RetType, T: QString_startsWith_3<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.startsWith_3(self);
+    // return 1;
+  }
+}
+pub trait QString_startsWith_3<RetType> {
+  fn startsWith_3(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_startsWith_3<bool> for (usize,i32) {
+  fn startsWith_3(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString10startsWithE13QLatin1StringN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:395
+// index:4
+// Public Visibility=Default Availability=Available
+// [1] bool startsWith(QChar, Qt::CaseSensitivity) const
+
+/*
+Returns true if the string starts with s; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+
+  QString str = "Bananas";
+  str.startsWith("Ban");     // returns true
+  str.startsWith("Car");     // returns false
+
+
+
+See also endsWith().
+*/
+impl /*struct*/ QString {
+  pub fn startsWith_4<RetType, T: QString_startsWith_4<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.startsWith_4(self);
+    // return 1;
+  }
+}
+pub trait QString_startsWith_4<RetType> {
+  fn startsWith_4(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_startsWith_4<bool> for (usize,i32) {
+  fn startsWith_4(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString10startsWithE5QCharN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:398
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool endsWith(const QString &, Qt::CaseSensitivity) const
+
+/*
+Returns true if the string ends with s; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+
+  QString str = "Bananas";
+  str.endsWith("anas");         // returns true
+  str.endsWith("pple");         // returns false
+
+
+
+See also startsWith().
+*/
+impl /*struct*/ QString {
+  pub fn endsWith_0<RetType, T: QString_endsWith_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.endsWith_0(self);
+    // return 1;
+  }
+}
+pub trait QString_endsWith_0<RetType> {
+  fn endsWith_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_endsWith_0<bool> for (usize,i32) {
+  fn endsWith_0(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString8endsWithERKS_N2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:399
+// index:1
+// Public Visibility=Default Availability=Available
+// [1] bool endsWith(const QStringRef &, Qt::CaseSensitivity) const
+
+/*
+Returns true if the string ends with s; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+
+  QString str = "Bananas";
+  str.endsWith("anas");         // returns true
+  str.endsWith("pple");         // returns false
+
+
+
+See also startsWith().
+*/
+impl /*struct*/ QString {
+  pub fn endsWith_1<RetType, T: QString_endsWith_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.endsWith_1(self);
+    // return 1;
+  }
+}
+pub trait QString_endsWith_1<RetType> {
+  fn endsWith_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_endsWith_1<bool> for (usize,i32) {
+  fn endsWith_1(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString8endsWithERK10QStringRefN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:401
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [1] bool endsWith(QStringView, Qt::CaseSensitivity) const
+
+/*
+Returns true if the string ends with s; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+
+  QString str = "Bananas";
+  str.endsWith("anas");         // returns true
+  str.endsWith("pple");         // returns false
+
+
+
+See also startsWith().
+*/
+impl /*struct*/ QString {
+  pub fn endsWith_2<RetType, T: QString_endsWith_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.endsWith_2(self);
+    // return 1;
+  }
+}
+pub trait QString_endsWith_2<RetType> {
+  fn endsWith_2(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_endsWith_2<bool> for (usize,i32) {
+  fn endsWith_2(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString8endsWithE11QStringViewN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:403
+// index:3
+// Public Visibility=Default Availability=Available
+// [1] bool endsWith(QLatin1String, Qt::CaseSensitivity) const
+
+/*
+Returns true if the string ends with s; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+
+  QString str = "Bananas";
+  str.endsWith("anas");         // returns true
+  str.endsWith("pple");         // returns false
+
+
+
+See also startsWith().
+*/
+impl /*struct*/ QString {
+  pub fn endsWith_3<RetType, T: QString_endsWith_3<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.endsWith_3(self);
+    // return 1;
+  }
+}
+pub trait QString_endsWith_3<RetType> {
+  fn endsWith_3(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_endsWith_3<bool> for (usize,i32) {
+  fn endsWith_3(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString8endsWithE13QLatin1StringN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:404
+// index:4
+// Public Visibility=Default Availability=Available
+// [1] bool endsWith(QChar, Qt::CaseSensitivity) const
+
+/*
+Returns true if the string ends with s; otherwise returns false.
+
+If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
+
+
+  QString str = "Bananas";
+  str.endsWith("anas");         // returns true
+  str.endsWith("pple");         // returns false
+
+
+
+See also startsWith().
+*/
+impl /*struct*/ QString {
+  pub fn endsWith_4<RetType, T: QString_endsWith_4<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.endsWith_4(self);
+    // return 1;
+  }
+}
+pub trait QString_endsWith_4<RetType> {
+  fn endsWith_4(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_endsWith_4<bool> for (usize,i32) {
+  fn endsWith_4(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString8endsWithE5QCharN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: bool = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:406
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString leftJustified(int, QChar, bool) const
+
+/*
+Returns a string of size width that contains this string padded by the fill character.
+
+If truncate is false and the size() of the string is more than width, then the returned string is a copy of the string.
+
+
+  QString s = "apple";
+  QString t = s.leftJustified(8, '.');    // t == "apple..."
+
+
+
+If truncate is true and the size() of the string is more than width, then any characters in a copy of the string after position width are removed, and the copy is returned.
+
+
+  QString str = "Pineapple";
+  str = str.leftJustified(5, '.', true);    // str == "Pinea"
+
+
+
+See also rightJustified().
+*/
+impl /*struct*/ QString {
+  pub fn leftJustified_0<RetType, T: QString_leftJustified_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.leftJustified_0(self);
+    // return 1;
+  }
+}
+pub trait QString_leftJustified_0<RetType> {
+  fn leftJustified_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_leftJustified_0<usize> for (i32,usize,bool) {
+  fn leftJustified_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2) as *const bool as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString13leftJustifiedEi5QCharb", 3,qtrt::FFITY_INT,qtrt::FFITY_POINTER,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:407
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString rightJustified(int, QChar, bool) const
+
+/*
+Returns a string of size() width that contains the fill character followed by the string. For example:
+
+
+  QString s = "apple";
+  QString t = s.rightJustified(8, '.');    // t == "...apple"
+
+
+
+If truncate is false and the size() of the string is more than width, then the returned string is a copy of the string.
+
+If truncate is true and the size() of the string is more than width, then the resulting string is truncated at position width.
+
+
+  QString str = "Pineapple";
+  str = str.rightJustified(5, '.', true);    // str == "Pinea"
+
+
+
+See also leftJustified().
+*/
+impl /*struct*/ QString {
+  pub fn rightJustified_0<RetType, T: QString_rightJustified_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.rightJustified_0(self);
+    // return 1;
+  }
+}
+pub trait QString_rightJustified_0<RetType> {
+  fn rightJustified_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_rightJustified_0<usize> for (i32,usize,bool) {
+  fn rightJustified_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2) as *const bool as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString14rightJustifiedEi5QCharb", 3,qtrt::FFITY_INT,qtrt::FFITY_POINTER,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:417
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QString toLower() const
+
+/*
+Returns a lowercase copy of the string.
+
+
+  QString str = "The Qt PROJECT";
+  str = str.toLower();        // str == "the qt project"
+
+
+
+The case conversion will always happen in the 'C' locale. For locale dependent case folding use QLocale::toLower()
+
+See also toUpper() and QLocale::toLower().
+*/
+impl /*struct*/ QString {
+  pub fn toLower_0<RetType, T: QString_toLower_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toLower_0(self);
+    // return 1;
+  }
+}
+pub trait QString_toLower_0<RetType> {
+  fn toLower_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_toLower_0<usize> for () {
+  fn toLower_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNKR7QString7toLowerEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:419
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QString toLower()
+
+/*
+Returns a lowercase copy of the string.
+
+
+  QString str = "The Qt PROJECT";
+  str = str.toLower();        // str == "the qt project"
+
+
+
+The case conversion will always happen in the 'C' locale. For locale dependent case folding use QLocale::toLower()
+
+See also toUpper() and QLocale::toLower().
+*/
+impl /*struct*/ QString {
+  pub fn toLower_1<RetType, T: QString_toLower_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toLower_1(self);
+    // return 1;
+  }
+}
+pub trait QString_toLower_1<RetType> {
+  fn toLower_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_toLower_1<usize> for () {
+  fn toLower_1(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNO7QString7toLowerEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:421
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QString toUpper() const
+
+/*
+Returns an uppercase copy of the string.
+
+
+  QString str = "TeXt";
+  str = str.toUpper();        // str == "TEXT"
+
+
+
+The case conversion will always happen in the 'C' locale. For locale dependent case folding use QLocale::toUpper()
+
+See also toLower() and QLocale::toLower().
+*/
+impl /*struct*/ QString {
+  pub fn toUpper_0<RetType, T: QString_toUpper_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toUpper_0(self);
+    // return 1;
+  }
+}
+pub trait QString_toUpper_0<RetType> {
+  fn toUpper_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_toUpper_0<usize> for () {
+  fn toUpper_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNKR7QString7toUpperEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:423
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QString toUpper()
+
+/*
+Returns an uppercase copy of the string.
+
+
+  QString str = "TeXt";
+  str = str.toUpper();        // str == "TEXT"
+
+
+
+The case conversion will always happen in the 'C' locale. For locale dependent case folding use QLocale::toUpper()
+
+See also toLower() and QLocale::toLower().
+*/
+impl /*struct*/ QString {
+  pub fn toUpper_1<RetType, T: QString_toUpper_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toUpper_1(self);
+    // return 1;
+  }
+}
+pub trait QString_toUpper_1<RetType> {
+  fn toUpper_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_toUpper_1<usize> for () {
+  fn toUpper_1(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNO7QString7toUpperEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:425
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QString toCaseFolded() const
+
+/*
+Returns the case folded equivalent of the string. For most Unicode characters this is the same as toLower().
+*/
+impl /*struct*/ QString {
+  pub fn toCaseFolded_0<RetType, T: QString_toCaseFolded_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toCaseFolded_0(self);
+    // return 1;
+  }
+}
+pub trait QString_toCaseFolded_0<RetType> {
+  fn toCaseFolded_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_toCaseFolded_0<usize> for () {
+  fn toCaseFolded_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNKR7QString12toCaseFoldedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:427
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QString toCaseFolded()
+
+/*
+Returns the case folded equivalent of the string. For most Unicode characters this is the same as toLower().
+*/
+impl /*struct*/ QString {
+  pub fn toCaseFolded_1<RetType, T: QString_toCaseFolded_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toCaseFolded_1(self);
+    // return 1;
+  }
+}
+pub trait QString_toCaseFolded_1<RetType> {
+  fn toCaseFolded_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_toCaseFolded_1<usize> for () {
+  fn toCaseFolded_1(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNO7QString12toCaseFoldedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:429
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QString trimmed() const
+
+/*
+Returns a string that has whitespace removed from the start and the end.
+
+Whitespace means any character for which QChar::isSpace() returns true. This includes the ASCII characters '\t', '\n', '\v', '\f', '\r', and ' '.
+
+Example:
+
+
+  QString str = "  lots\t of\nwhitespace\r\n ";
+  str = str.trimmed();
+  // str == "lots\t of\nwhitespace"
+
+
+
+Unlike simplified(), trimmed() leaves internal whitespace alone.
+
+See also simplified().
+*/
+impl /*struct*/ QString {
+  pub fn trimmed_0<RetType, T: QString_trimmed_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.trimmed_0(self);
+    // return 1;
+  }
+}
+pub trait QString_trimmed_0<RetType> {
+  fn trimmed_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_trimmed_0<usize> for () {
+  fn trimmed_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNKR7QString7trimmedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:431
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QString trimmed()
+
+/*
+Returns a string that has whitespace removed from the start and the end.
+
+Whitespace means any character for which QChar::isSpace() returns true. This includes the ASCII characters '\t', '\n', '\v', '\f', '\r', and ' '.
+
+Example:
+
+
+  QString str = "  lots\t of\nwhitespace\r\n ";
+  str = str.trimmed();
+  // str == "lots\t of\nwhitespace"
+
+
+
+Unlike simplified(), trimmed() leaves internal whitespace alone.
+
+See also simplified().
+*/
+impl /*struct*/ QString {
+  pub fn trimmed_1<RetType, T: QString_trimmed_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.trimmed_1(self);
+    // return 1;
+  }
+}
+pub trait QString_trimmed_1<RetType> {
+  fn trimmed_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_trimmed_1<usize> for () {
+  fn trimmed_1(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNO7QString7trimmedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:433
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QString simplified() const
+
+/*
+Returns a string that has whitespace removed from the start and the end, and that has each sequence of internal whitespace replaced with a single space.
+
+Whitespace means any character for which QChar::isSpace() returns true. This includes the ASCII characters '\t', '\n', '\v', '\f', '\r', and ' '.
+
+Example:
+
+
+  QString str = "  lots\t of\nwhitespace\r\n ";
+  str = str.simplified();
+  // str == "lots of whitespace";
+
+
+
+See also trimmed().
+*/
+impl /*struct*/ QString {
+  pub fn simplified_0<RetType, T: QString_simplified_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.simplified_0(self);
+    // return 1;
+  }
+}
+pub trait QString_simplified_0<RetType> {
+  fn simplified_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_simplified_0<usize> for () {
+  fn simplified_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNKR7QString10simplifiedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:435
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QString simplified()
+
+/*
+Returns a string that has whitespace removed from the start and the end, and that has each sequence of internal whitespace replaced with a single space.
+
+Whitespace means any character for which QChar::isSpace() returns true. This includes the ASCII characters '\t', '\n', '\v', '\f', '\r', and ' '.
+
+Example:
+
+
+  QString str = "  lots\t of\nwhitespace\r\n ";
+  str = str.simplified();
+  // str == "lots of whitespace";
+
+
+
+See also trimmed().
+*/
+impl /*struct*/ QString {
+  pub fn simplified_1<RetType, T: QString_simplified_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.simplified_1(self);
+    // return 1;
+  }
+}
+pub trait QString_simplified_1<RetType> {
+  fn simplified_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_simplified_1<usize> for () {
+  fn simplified_1(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNO7QString10simplifiedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:447
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString toHtmlEscaped() const
+
+/*
+Converts a plain text string to an HTML string with HTML metacharacters <, >, &, and " replaced by HTML entities.
+
+Example:
+
+
+  QString plain = "#include <QtCore>"
+  QString html = plain.toHtmlEscaped();
+  // html == "#include &lt;QtCore&gt;"
+
+
+
+This function was introduced in  Qt 5.0.
+*/
+impl /*struct*/ QString {
+  pub fn toHtmlEscaped_0<RetType, T: QString_toHtmlEscaped_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toHtmlEscaped_0(self);
+    // return 1;
+  }
+}
+pub trait QString_toHtmlEscaped_0<RetType> {
+  fn toHtmlEscaped_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_toHtmlEscaped_0<usize> for () {
+  fn toHtmlEscaped_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString13toHtmlEscapedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:465
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QString & operator+=(QChar)
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_add_equal_0<RetType, T: QString_operator_add_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_add_equal_0(self);
+    // return 1;
+  }
+}
+pub trait QString_operator_add_equal_0<RetType> {
+  fn operator_add_equal_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_operator_add_equal_0<usize> for (usize) {
+  fn operator_add_equal_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QStringpLE5QChar", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:473
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QString & operator+=(QChar::SpecialCharacter)
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_add_equal_1<RetType, T: QString_operator_add_equal_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_add_equal_1(self);
+    // return 1;
+  }
+}
+pub trait QString_operator_add_equal_1<RetType> {
+  fn operator_add_equal_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_operator_add_equal_1<usize> for (i32) {
+  fn operator_add_equal_1(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QStringpLEN5QChar16SpecialCharacterE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:474
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [8] QString & operator+=(const QString &)
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_add_equal_2<RetType, T: QString_operator_add_equal_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_add_equal_2(self);
+    // return 1;
+  }
+}
+pub trait QString_operator_add_equal_2<RetType> {
+  fn operator_add_equal_2(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_operator_add_equal_2<usize> for (usize) {
+  fn operator_add_equal_2(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QStringpLERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:475
+// index:3
+// Public inline Visibility=Default Availability=Available
+// [8] QString & operator+=(const QStringRef &)
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_add_equal_3<RetType, T: QString_operator_add_equal_3<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_add_equal_3(self);
+    // return 1;
+  }
+}
+pub trait QString_operator_add_equal_3<RetType> {
+  fn operator_add_equal_3(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_operator_add_equal_3<usize> for (usize) {
+  fn operator_add_equal_3(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QStringpLERK10QStringRef", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:476
+// index:4
+// Public inline Visibility=Default Availability=Available
+// [8] QString & operator+=(QLatin1String)
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_add_equal_4<RetType, T: QString_operator_add_equal_4<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_add_equal_4(self);
+    // return 1;
+  }
+}
+pub trait QString_operator_add_equal_4<RetType> {
+  fn operator_add_equal_4(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_operator_add_equal_4<usize> for (usize) {
+  fn operator_add_equal_4(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QStringpLE13QLatin1String", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:708
+// index:5
+// Public inline Visibility=Default Availability=Available
+// [8] QString & operator+=(const char *)
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_add_equal_5<RetType, T: QString_operator_add_equal_5<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_add_equal_5(self);
+    // return 1;
+  }
+}
+pub trait QString_operator_add_equal_5<RetType> {
+  fn operator_add_equal_5(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_operator_add_equal_5<usize> for (usize) {
+  fn operator_add_equal_5(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QStringpLEPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:710
+// index:6
+// Public inline Visibility=Default Availability=Available
+// [8] QString & operator+=(const QByteArray &)
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_add_equal_6<RetType, T: QString_operator_add_equal_6<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_add_equal_6(self);
+    // return 1;
+  }
+}
+pub trait QString_operator_add_equal_6<RetType> {
+  fn operator_add_equal_6(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_operator_add_equal_6<usize> for (usize) {
+  fn operator_add_equal_6(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QStringpLERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:712
+// index:7
+// Public inline Visibility=Default Availability=Available
+// [8] QString & operator+=(char)
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_add_equal_7<RetType, T: QString_operator_add_equal_7<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_add_equal_7(self);
+    // return 1;
+  }
+}
+pub trait QString_operator_add_equal_7<RetType> {
+  fn operator_add_equal_7(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_operator_add_equal_7<usize> for (i8) {
+  fn operator_add_equal_7(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i8 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QStringpLEc", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:478
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString & remove(int, int)
+
+/*
+Removes n characters from the string, starting at the given position index, and returns a reference to the string.
+
+If the specified position index is within the string, but position + n is beyond the end of the string, the string is truncated at the specified position.
+
+
+  QString s = "Montreal";
+  s.remove(1, 4);
+  // s == "Meal"
+
+
+
+See also insert() and replace().
+*/
+impl /*struct*/ QString {
+  pub fn remove_0<RetType, T: QString_remove_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.remove_0(self);
+    // return 1;
+  }
+}
+pub trait QString_remove_0<RetType> {
+  fn remove_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_remove_0<usize> for (i32,i32) {
+  fn remove_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString6removeEii", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:479
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QString & remove(QChar, Qt::CaseSensitivity)
+
+/*
+Removes n characters from the string, starting at the given position index, and returns a reference to the string.
+
+If the specified position index is within the string, but position + n is beyond the end of the string, the string is truncated at the specified position.
+
+
+  QString s = "Montreal";
+  s.remove(1, 4);
+  // s == "Meal"
+
+
+
+See also insert() and replace().
+*/
+impl /*struct*/ QString {
+  pub fn remove_1<RetType, T: QString_remove_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.remove_1(self);
+    // return 1;
+  }
+}
+pub trait QString_remove_1<RetType> {
+  fn remove_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_remove_1<usize> for (usize,i32) {
+  fn remove_1(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString6removeE5QCharN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:480
+// index:2
+// Public Visibility=Default Availability=Available
+// [8] QString & remove(const QString &, Qt::CaseSensitivity)
+
+/*
+Removes n characters from the string, starting at the given position index, and returns a reference to the string.
+
+If the specified position index is within the string, but position + n is beyond the end of the string, the string is truncated at the specified position.
+
+
+  QString s = "Montreal";
+  s.remove(1, 4);
+  // s == "Meal"
+
+
+
+See also insert() and replace().
+*/
+impl /*struct*/ QString {
+  pub fn remove_2<RetType, T: QString_remove_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.remove_2(self);
+    // return 1;
+  }
+}
+pub trait QString_remove_2<RetType> {
+  fn remove_2(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_remove_2<usize> for (usize,i32) {
+  fn remove_2(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString6removeERKS_N2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:495
+// index:3
+// Public inline Visibility=Default Availability=Available
+// [8] QString & remove(const QRegExp &)
+
+/*
+Removes n characters from the string, starting at the given position index, and returns a reference to the string.
+
+If the specified position index is within the string, but position + n is beyond the end of the string, the string is truncated at the specified position.
+
+
+  QString s = "Montreal";
+  s.remove(1, 4);
+  // s == "Meal"
+
+
+
+See also insert() and replace().
+*/
+impl /*struct*/ QString {
+  pub fn remove_3<RetType, T: QString_remove_3<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.remove_3(self);
+    // return 1;
+  }
+}
+pub trait QString_remove_3<RetType> {
+  fn remove_3(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_remove_3<usize> for (usize) {
+  fn remove_3(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString6removeERK7QRegExp", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:500
+// index:4
+// Public inline Visibility=Default Availability=Available
+// [8] QString & remove(const QRegularExpression &)
+
+/*
+Removes n characters from the string, starting at the given position index, and returns a reference to the string.
+
+If the specified position index is within the string, but position + n is beyond the end of the string, the string is truncated at the specified position.
+
+
+  QString s = "Montreal";
+  s.remove(1, 4);
+  // s == "Meal"
+
+
+
+See also insert() and replace().
+*/
+impl /*struct*/ QString {
+  pub fn remove_4<RetType, T: QString_remove_4<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.remove_4(self);
+    // return 1;
+  }
+}
+pub trait QString_remove_4<RetType> {
+  fn remove_4(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_remove_4<usize> for (usize) {
+  fn remove_4(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString6removeERK18QRegularExpression", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:481
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString & replace(int, int, QChar)
+
+/*
+Replaces n characters beginning at index position with the string after and returns a reference to this string.
+
+Note: If the specified position index is within the string, but position + n goes outside the strings range, then n will be adjusted to stop at the end of the string.
+
+Example:
+
+
+  QString x = "Say yes!";
+  QString y = "no";
+  x.replace(4, 3, y);
+  // x == "Say no!"
+
+
+
+See also insert() and remove().
+*/
+impl /*struct*/ QString {
+  pub fn replace_0<RetType, T: QString_replace_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.replace_0(self);
+    // return 1;
+  }
+}
+pub trait QString_replace_0<RetType> {
+  fn replace_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_replace_0<usize> for (i32,i32,usize) {
+  fn replace_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString7replaceEii5QChar", 3,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:482
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QString & replace(int, int, const QChar *, int)
+
+/*
+Replaces n characters beginning at index position with the string after and returns a reference to this string.
+
+Note: If the specified position index is within the string, but position + n goes outside the strings range, then n will be adjusted to stop at the end of the string.
+
+Example:
+
+
+  QString x = "Say yes!";
+  QString y = "no";
+  x.replace(4, 3, y);
+  // x == "Say no!"
+
+
+
+See also insert() and remove().
+*/
+impl /*struct*/ QString {
+  pub fn replace_1<RetType, T: QString_replace_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.replace_1(self);
+    // return 1;
+  }
+}
+pub trait QString_replace_1<RetType> {
+  fn replace_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_replace_1<usize> for (i32,i32,usize,i32) {
+  fn replace_1(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
+    let arg3 = (&self.3) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString7replaceEiiPK5QChari", 4,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:483
+// index:2
+// Public Visibility=Default Availability=Available
+// [8] QString & replace(int, int, const QString &)
+
+/*
+Replaces n characters beginning at index position with the string after and returns a reference to this string.
+
+Note: If the specified position index is within the string, but position + n goes outside the strings range, then n will be adjusted to stop at the end of the string.
+
+Example:
+
+
+  QString x = "Say yes!";
+  QString y = "no";
+  x.replace(4, 3, y);
+  // x == "Say no!"
+
+
+
+See also insert() and remove().
+*/
+impl /*struct*/ QString {
+  pub fn replace_2<RetType, T: QString_replace_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.replace_2(self);
+    // return 1;
+  }
+}
+pub trait QString_replace_2<RetType> {
+  fn replace_2(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_replace_2<usize> for (i32,i32,usize) {
+  fn replace_2(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString7replaceEiiRKS_", 3,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:484
+// index:3
+// Public Visibility=Default Availability=Available
+// [8] QString & replace(QChar, QChar, Qt::CaseSensitivity)
+
+/*
+Replaces n characters beginning at index position with the string after and returns a reference to this string.
+
+Note: If the specified position index is within the string, but position + n goes outside the strings range, then n will be adjusted to stop at the end of the string.
+
+Example:
+
+
+  QString x = "Say yes!";
+  QString y = "no";
+  x.replace(4, 3, y);
+  // x == "Say no!"
+
+
+
+See also insert() and remove().
+*/
+impl /*struct*/ QString {
+  pub fn replace_3<RetType, T: QString_replace_3<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.replace_3(self);
+    // return 1;
+  }
+}
+pub trait QString_replace_3<RetType> {
+  fn replace_3(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_replace_3<usize> for (usize,usize,i32) {
+  fn replace_3(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString7replaceE5QCharS0_N2Qt15CaseSensitivityE", 3,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:485
+// index:4
+// Public Visibility=Default Availability=Available
+// [8] QString & replace(const QChar *, int, const QChar *, int, Qt::CaseSensitivity)
+
+/*
+Replaces n characters beginning at index position with the string after and returns a reference to this string.
+
+Note: If the specified position index is within the string, but position + n goes outside the strings range, then n will be adjusted to stop at the end of the string.
+
+Example:
+
+
+  QString x = "Say yes!";
+  QString y = "no";
+  x.replace(4, 3, y);
+  // x == "Say no!"
+
+
+
+See also insert() and remove().
+*/
+impl /*struct*/ QString {
+  pub fn replace_4<RetType, T: QString_replace_4<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.replace_4(self);
+    // return 1;
+  }
+}
+pub trait QString_replace_4<RetType> {
+  fn replace_4(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_replace_4<usize> for (usize,i32,usize,i32,i32) {
+  fn replace_4(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
+    let arg3 = (&self.3) as *const i32 as usize;
+    let arg4 = (&self.4) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString7replaceEPK5QChariS2_iN2Qt15CaseSensitivityE", 5,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,arg4,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:486
+// index:5
+// Public Visibility=Default Availability=Available
+// [8] QString & replace(QLatin1String, QLatin1String, Qt::CaseSensitivity)
+
+/*
+Replaces n characters beginning at index position with the string after and returns a reference to this string.
+
+Note: If the specified position index is within the string, but position + n goes outside the strings range, then n will be adjusted to stop at the end of the string.
+
+Example:
+
+
+  QString x = "Say yes!";
+  QString y = "no";
+  x.replace(4, 3, y);
+  // x == "Say no!"
+
+
+
+See also insert() and remove().
+*/
+impl /*struct*/ QString {
+  pub fn replace_5<RetType, T: QString_replace_5<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.replace_5(self);
+    // return 1;
+  }
+}
+pub trait QString_replace_5<RetType> {
+  fn replace_5(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_replace_5<usize> for (usize,usize,i32) {
+  fn replace_5(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString7replaceE13QLatin1StringS0_N2Qt15CaseSensitivityE", 3,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:487
+// index:6
+// Public Visibility=Default Availability=Available
+// [8] QString & replace(QLatin1String, const QString &, Qt::CaseSensitivity)
+
+/*
+Replaces n characters beginning at index position with the string after and returns a reference to this string.
+
+Note: If the specified position index is within the string, but position + n goes outside the strings range, then n will be adjusted to stop at the end of the string.
+
+Example:
+
+
+  QString x = "Say yes!";
+  QString y = "no";
+  x.replace(4, 3, y);
+  // x == "Say no!"
+
+
+
+See also insert() and remove().
+*/
+impl /*struct*/ QString {
+  pub fn replace_6<RetType, T: QString_replace_6<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.replace_6(self);
+    // return 1;
+  }
+}
+pub trait QString_replace_6<RetType> {
+  fn replace_6(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_replace_6<usize> for (usize,usize,i32) {
+  fn replace_6(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString7replaceE13QLatin1StringRKS_N2Qt15CaseSensitivityE", 3,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:488
+// index:7
+// Public Visibility=Default Availability=Available
+// [8] QString & replace(const QString &, QLatin1String, Qt::CaseSensitivity)
+
+/*
+Replaces n characters beginning at index position with the string after and returns a reference to this string.
+
+Note: If the specified position index is within the string, but position + n goes outside the strings range, then n will be adjusted to stop at the end of the string.
+
+Example:
+
+
+  QString x = "Say yes!";
+  QString y = "no";
+  x.replace(4, 3, y);
+  // x == "Say no!"
+
+
+
+See also insert() and remove().
+*/
+impl /*struct*/ QString {
+  pub fn replace_7<RetType, T: QString_replace_7<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.replace_7(self);
+    // return 1;
+  }
+}
+pub trait QString_replace_7<RetType> {
+  fn replace_7(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_replace_7<usize> for (usize,usize,i32) {
+  fn replace_7(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString7replaceERKS_13QLatin1StringN2Qt15CaseSensitivityE", 3,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:489
+// index:8
+// Public Visibility=Default Availability=Available
+// [8] QString & replace(const QString &, const QString &, Qt::CaseSensitivity)
+
+/*
+Replaces n characters beginning at index position with the string after and returns a reference to this string.
+
+Note: If the specified position index is within the string, but position + n goes outside the strings range, then n will be adjusted to stop at the end of the string.
+
+Example:
+
+
+  QString x = "Say yes!";
+  QString y = "no";
+  x.replace(4, 3, y);
+  // x == "Say no!"
+
+
+
+See also insert() and remove().
+*/
+impl /*struct*/ QString {
+  pub fn replace_8<RetType, T: QString_replace_8<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.replace_8(self);
+    // return 1;
+  }
+}
+pub trait QString_replace_8<RetType> {
+  fn replace_8(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_replace_8<usize> for (usize,usize,i32) {
+  fn replace_8(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString7replaceERKS_S1_N2Qt15CaseSensitivityE", 3,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:491
+// index:9
+// Public Visibility=Default Availability=Available
+// [8] QString & replace(QChar, const QString &, Qt::CaseSensitivity)
+
+/*
+Replaces n characters beginning at index position with the string after and returns a reference to this string.
+
+Note: If the specified position index is within the string, but position + n goes outside the strings range, then n will be adjusted to stop at the end of the string.
+
+Example:
+
+
+  QString x = "Say yes!";
+  QString y = "no";
+  x.replace(4, 3, y);
+  // x == "Say no!"
+
+
+
+See also insert() and remove().
+*/
+impl /*struct*/ QString {
+  pub fn replace_9<RetType, T: QString_replace_9<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.replace_9(self);
+    // return 1;
+  }
+}
+pub trait QString_replace_9<RetType> {
+  fn replace_9(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_replace_9<usize> for (usize,usize,i32) {
+  fn replace_9(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString7replaceE5QCharRKS_N2Qt15CaseSensitivityE", 3,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:492
+// index:10
+// Public Visibility=Default Availability=Available
+// [8] QString & replace(QChar, QLatin1String, Qt::CaseSensitivity)
+
+/*
+Replaces n characters beginning at index position with the string after and returns a reference to this string.
+
+Note: If the specified position index is within the string, but position + n goes outside the strings range, then n will be adjusted to stop at the end of the string.
+
+Example:
+
+
+  QString x = "Say yes!";
+  QString y = "no";
+  x.replace(4, 3, y);
+  // x == "Say no!"
+
+
+
+See also insert() and remove().
+*/
+impl /*struct*/ QString {
+  pub fn replace_10<RetType, T: QString_replace_10<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.replace_10(self);
+    // return 1;
+  }
+}
+pub trait QString_replace_10<RetType> {
+  fn replace_10(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_replace_10<usize> for (usize,usize,i32) {
+  fn replace_10(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString7replaceE5QChar13QLatin1StringN2Qt15CaseSensitivityE", 3,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:494
+// index:11
+// Public Visibility=Default Availability=Available
+// [8] QString & replace(const QRegExp &, const QString &)
+
+/*
+Replaces n characters beginning at index position with the string after and returns a reference to this string.
+
+Note: If the specified position index is within the string, but position + n goes outside the strings range, then n will be adjusted to stop at the end of the string.
+
+Example:
+
+
+  QString x = "Say yes!";
+  QString y = "no";
+  x.replace(4, 3, y);
+  // x == "Say no!"
+
+
+
+See also insert() and remove().
+*/
+impl /*struct*/ QString {
+  pub fn replace_11<RetType, T: QString_replace_11<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.replace_11(self);
+    // return 1;
+  }
+}
+pub trait QString_replace_11<RetType> {
+  fn replace_11(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_replace_11<usize> for (usize,usize) {
+  fn replace_11(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString7replaceERK7QRegExpRKS_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:499
+// index:12
+// Public Visibility=Default Availability=Available
+// [8] QString & replace(const QRegularExpression &, const QString &)
+
+/*
+Replaces n characters beginning at index position with the string after and returns a reference to this string.
+
+Note: If the specified position index is within the string, but position + n goes outside the strings range, then n will be adjusted to stop at the end of the string.
+
+Example:
+
+
+  QString x = "Say yes!";
+  QString y = "no";
+  x.replace(4, 3, y);
+  // x == "Say no!"
+
+
+
+See also insert() and remove().
+*/
+impl /*struct*/ QString {
+  pub fn replace_12<RetType, T: QString_replace_12<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.replace_12(self);
+    // return 1;
+  }
+}
+pub trait QString_replace_12<RetType> {
+  fn replace_12(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_replace_12<usize> for (usize,usize) {
+  fn replace_12(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString7replaceERK18QRegularExpressionRKS_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:506
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QStringList split(const QString &, QString::SplitBehavior, Qt::CaseSensitivity) const
+
+/*
+Splits the string into substrings wherever sep occurs, and returns the list of those strings. If sep does not match anywhere in the string, split() returns a single-element list containing this string.
+
+cs specifies whether sep should be matched case sensitively or case insensitively.
+
+If behavior is QString::SkipEmptyParts, empty entries don't appear in the result. By default, empty entries are kept.
+
+Example:
+
+
+  QString str = "a,,b,c";
+
+  QStringList list1 = str.split(',');
+  // list1: [ "a", "", "b", "c" ]
+
+  QStringList list2 = str.split(',', QString::SkipEmptyParts);
+  // list2: [ "a", "b", "c" ]
+
+
+
+If sep is empty, split() returns an empty string, followed by each of the string's characters, followed by another empty string:
+
+
+  QString str = "abc";
+  auto parts = str.split("");
+  // parts: {"", "a", "b", "c", ""}
+
+
+
+To understand this behavior, recall that the empty string matches everywhere, so the above is qualitatively the same as:
+
+
+  QString str = "/a/b/c/";
+  auto parts = str.split('/');
+  // parts: {"", "a", "b", "c", ""}
+
+
+
+See also QStringList::join() and section().
+*/
+impl /*struct*/ QString {
+  pub fn split_0<RetType, T: QString_split_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.split_0(self);
+    // return 1;
+  }
+}
+pub trait QString_split_0<RetType> {
+  fn split_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_split_0<usize> for (usize,i32,i32) {
+  fn split_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString5splitERKS_NS_13SplitBehaviorEN2Qt15CaseSensitivityE", 3,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:510
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QStringList split(QChar, QString::SplitBehavior, Qt::CaseSensitivity) const
+
+/*
+Splits the string into substrings wherever sep occurs, and returns the list of those strings. If sep does not match anywhere in the string, split() returns a single-element list containing this string.
+
+cs specifies whether sep should be matched case sensitively or case insensitively.
+
+If behavior is QString::SkipEmptyParts, empty entries don't appear in the result. By default, empty entries are kept.
+
+Example:
+
+
+  QString str = "a,,b,c";
+
+  QStringList list1 = str.split(',');
+  // list1: [ "a", "", "b", "c" ]
+
+  QStringList list2 = str.split(',', QString::SkipEmptyParts);
+  // list2: [ "a", "b", "c" ]
+
+
+
+If sep is empty, split() returns an empty string, followed by each of the string's characters, followed by another empty string:
+
+
+  QString str = "abc";
+  auto parts = str.split("");
+  // parts: {"", "a", "b", "c", ""}
+
+
+
+To understand this behavior, recall that the empty string matches everywhere, so the above is qualitatively the same as:
+
+
+  QString str = "/a/b/c/";
+  auto parts = str.split('/');
+  // parts: {"", "a", "b", "c", ""}
+
+
+
+See also QStringList::join() and section().
+*/
+impl /*struct*/ QString {
+  pub fn split_1<RetType, T: QString_split_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.split_1(self);
+    // return 1;
+  }
+}
+pub trait QString_split_1<RetType> {
+  fn split_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_split_1<usize> for (usize,i32,i32) {
+  fn split_1(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString5splitE5QCharNS_13SplitBehaviorEN2Qt15CaseSensitivityE", 3,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:515
+// index:2
+// Public Visibility=Default Availability=Available
+// [8] QStringList split(const QRegExp &, QString::SplitBehavior) const
+
+/*
+Splits the string into substrings wherever sep occurs, and returns the list of those strings. If sep does not match anywhere in the string, split() returns a single-element list containing this string.
+
+cs specifies whether sep should be matched case sensitively or case insensitively.
+
+If behavior is QString::SkipEmptyParts, empty entries don't appear in the result. By default, empty entries are kept.
+
+Example:
+
+
+  QString str = "a,,b,c";
+
+  QStringList list1 = str.split(',');
+  // list1: [ "a", "", "b", "c" ]
+
+  QStringList list2 = str.split(',', QString::SkipEmptyParts);
+  // list2: [ "a", "b", "c" ]
+
+
+
+If sep is empty, split() returns an empty string, followed by each of the string's characters, followed by another empty string:
+
+
+  QString str = "abc";
+  auto parts = str.split("");
+  // parts: {"", "a", "b", "c", ""}
+
+
+
+To understand this behavior, recall that the empty string matches everywhere, so the above is qualitatively the same as:
+
+
+  QString str = "/a/b/c/";
+  auto parts = str.split('/');
+  // parts: {"", "a", "b", "c", ""}
+
+
+
+See also QStringList::join() and section().
+*/
+impl /*struct*/ QString {
+  pub fn split_2<RetType, T: QString_split_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.split_2(self);
+    // return 1;
+  }
+}
+pub trait QString_split_2<RetType> {
+  fn split_2(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_split_2<usize> for (usize,i32) {
+  fn split_2(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString5splitERK7QRegExpNS_13SplitBehaviorE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:519
+// index:3
+// Public Visibility=Default Availability=Available
+// [8] QStringList split(const QRegularExpression &, QString::SplitBehavior) const
+
+/*
+Splits the string into substrings wherever sep occurs, and returns the list of those strings. If sep does not match anywhere in the string, split() returns a single-element list containing this string.
+
+cs specifies whether sep should be matched case sensitively or case insensitively.
+
+If behavior is QString::SkipEmptyParts, empty entries don't appear in the result. By default, empty entries are kept.
+
+Example:
+
+
+  QString str = "a,,b,c";
+
+  QStringList list1 = str.split(',');
+  // list1: [ "a", "", "b", "c" ]
+
+  QStringList list2 = str.split(',', QString::SkipEmptyParts);
+  // list2: [ "a", "b", "c" ]
+
+
+
+If sep is empty, split() returns an empty string, followed by each of the string's characters, followed by another empty string:
+
+
+  QString str = "abc";
+  auto parts = str.split("");
+  // parts: {"", "a", "b", "c", ""}
+
+
+
+To understand this behavior, recall that the empty string matches everywhere, so the above is qualitatively the same as:
+
+
+  QString str = "/a/b/c/";
+  auto parts = str.split('/');
+  // parts: {"", "a", "b", "c", ""}
+
+
+
+See also QStringList::join() and section().
+*/
+impl /*struct*/ QString {
+  pub fn split_3<RetType, T: QString_split_3<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.split_3(self);
+    // return 1;
+  }
+}
+pub trait QString_split_3<RetType> {
+  fn split_3(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_split_3<usize> for (usize,i32) {
+  fn split_3(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString5splitERK18QRegularExpressionNS_13SplitBehaviorE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:528
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString normalized(QString::NormalizationForm, QChar::UnicodeVersion) const
+
+/*
+Returns the string in the given Unicode normalization mode, according to the given version of the Unicode standard.
+*/
+impl /*struct*/ QString {
+  pub fn normalized_0<RetType, T: QString_normalized_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.normalized_0(self);
+    // return 1;
+  }
+}
+pub trait QString_normalized_0<RetType> {
+  fn normalized_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_normalized_0<usize> for (i32,i32) {
+  fn normalized_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString10normalizedENS_17NormalizationFormEN5QChar14UnicodeVersionE", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:530
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString repeated(int) const
+
+/*
+Returns a copy of this string repeated the specified number of times.
+
+If times is less than 1, an empty string is returned.
+
+Example:
+
+
+  QString str("ab");
+  str.repeated(4);            // returns "abababab"
+
+
+
+This function was introduced in  Qt 4.5.
+*/
+impl /*struct*/ QString {
+  pub fn repeated_0<RetType, T: QString_repeated_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.repeated_0(self);
+    // return 1;
+  }
+}
+pub trait QString_repeated_0<RetType> {
+  fn repeated_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_repeated_0<usize> for (i32) {
+  fn repeated_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString8repeatedEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:532
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] const ushort * utf16() const
+
+/*
+Returns the QString as a '\0'-terminated array of unsigned shorts. The result remains valid until the string is modified.
+
+The returned string is in host byte order.
+
+See also setUtf16() and unicode().
+*/
+impl /*struct*/ QString {
+  pub fn utf16_0<RetType, T: QString_utf16_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.utf16_0(self);
+    // return 1;
+  }
+}
+pub trait QString_utf16_0<RetType> {
+  fn utf16_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_utf16_0<usize> for () {
+  fn utf16_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString5utf16Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:535
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QByteArray toLatin1() const
+
+/*
+Returns a Latin-1 representation of the string as a QByteArray.
+
+The returned byte array is undefined if the string contains non-Latin1 characters. Those characters may be suppressed or replaced with a question mark.
+
+See also fromLatin1(), toUtf8(), toLocal8Bit(), QTextCodec, and qConvertToLatin1().
+*/
+impl /*struct*/ QString {
+  pub fn toLatin1_0<RetType, T: QString_toLatin1_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toLatin1_0(self);
+    // return 1;
+  }
+}
+pub trait QString_toLatin1_0<RetType> {
+  fn toLatin1_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_toLatin1_0<usize> for () {
+  fn toLatin1_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNKR7QString8toLatin1Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:537
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QByteArray toLatin1()
+
+/*
+Returns a Latin-1 representation of the string as a QByteArray.
+
+The returned byte array is undefined if the string contains non-Latin1 characters. Those characters may be suppressed or replaced with a question mark.
+
+See also fromLatin1(), toUtf8(), toLocal8Bit(), QTextCodec, and qConvertToLatin1().
+*/
+impl /*struct*/ QString {
+  pub fn toLatin1_1<RetType, T: QString_toLatin1_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toLatin1_1(self);
+    // return 1;
+  }
+}
+pub trait QString_toLatin1_1<RetType> {
+  fn toLatin1_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_toLatin1_1<usize> for () {
+  fn toLatin1_1(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNO7QString8toLatin1Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:539
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QByteArray toUtf8() const
+
+/*
+Returns a UTF-8 representation of the string as a QByteArray.
+
+UTF-8 is a Unicode codec and can represent all characters in a Unicode string like QString.
+
+See also fromUtf8(), toLatin1(), toLocal8Bit(), QTextCodec, and qConvertToUtf8().
+*/
+impl /*struct*/ QString {
+  pub fn toUtf8_0<RetType, T: QString_toUtf8_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toUtf8_0(self);
+    // return 1;
+  }
+}
+pub trait QString_toUtf8_0<RetType> {
+  fn toUtf8_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_toUtf8_0<usize> for () {
+  fn toUtf8_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNKR7QString6toUtf8Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:541
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QByteArray toUtf8()
+
+/*
+Returns a UTF-8 representation of the string as a QByteArray.
+
+UTF-8 is a Unicode codec and can represent all characters in a Unicode string like QString.
+
+See also fromUtf8(), toLatin1(), toLocal8Bit(), QTextCodec, and qConvertToUtf8().
+*/
+impl /*struct*/ QString {
+  pub fn toUtf8_1<RetType, T: QString_toUtf8_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toUtf8_1(self);
+    // return 1;
+  }
+}
+pub trait QString_toUtf8_1<RetType> {
+  fn toUtf8_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_toUtf8_1<usize> for () {
+  fn toUtf8_1(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNO7QString6toUtf8Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:543
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QByteArray toLocal8Bit() const
+
+/*
+Returns the local 8-bit representation of the string as a QByteArray. The returned byte array is undefined if the string contains characters not supported by the local 8-bit encoding.
+
+QTextCodec::codecForLocale() is used to perform the conversion from Unicode. If the locale encoding could not be determined, this function does the same as toLatin1().
+
+If this string contains any characters that cannot be encoded in the locale, the returned byte array is undefined. Those characters may be suppressed or replaced by another.
+
+See also fromLocal8Bit(), toLatin1(), toUtf8(), and QTextCodec.
+*/
+impl /*struct*/ QString {
+  pub fn toLocal8Bit_0<RetType, T: QString_toLocal8Bit_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toLocal8Bit_0(self);
+    // return 1;
+  }
+}
+pub trait QString_toLocal8Bit_0<RetType> {
+  fn toLocal8Bit_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_toLocal8Bit_0<usize> for () {
+  fn toLocal8Bit_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNKR7QString11toLocal8BitEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:545
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QByteArray toLocal8Bit()
+
+/*
+Returns the local 8-bit representation of the string as a QByteArray. The returned byte array is undefined if the string contains characters not supported by the local 8-bit encoding.
+
+QTextCodec::codecForLocale() is used to perform the conversion from Unicode. If the locale encoding could not be determined, this function does the same as toLatin1().
+
+If this string contains any characters that cannot be encoded in the locale, the returned byte array is undefined. Those characters may be suppressed or replaced by another.
+
+See also fromLocal8Bit(), toLatin1(), toUtf8(), and QTextCodec.
+*/
+impl /*struct*/ QString {
+  pub fn toLocal8Bit_1<RetType, T: QString_toLocal8Bit_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toLocal8Bit_1(self);
+    // return 1;
+  }
+}
+pub trait QString_toLocal8Bit_1<RetType> {
+  fn toLocal8Bit_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_toLocal8Bit_1<usize> for () {
+  fn toLocal8Bit_1(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNO7QString11toLocal8BitEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:555
+// index:0
+// Public static inline Visibility=Default Availability=Available
+// [8] QString fromLatin1(const char *, int)
+
+/*
+Returns a QString initialized with the first size characters of the Latin-1 string str.
+
+If size is -1 (default), it is taken to be strlen(str).
+
+See also toLatin1(), fromUtf8(), and fromLocal8Bit().
+*/
+impl /*struct*/ QString {
+  pub fn fromLatin1_0<RetType, T: QString_fromLatin1_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromLatin1_0();
+    // return 1;
+  }
+}
+pub trait QString_fromLatin1_0<RetType> {
+  fn fromLatin1_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QString_fromLatin1_0<usize> for (usize,i32) {
+  fn fromLatin1_0(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (self.0) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString10fromLatin1EPKci", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:568
+// index:1
+// Public static inline Visibility=Default Availability=Available
+// [8] QString fromLatin1(const QByteArray &)
+
+/*
+Returns a QString initialized with the first size characters of the Latin-1 string str.
+
+If size is -1 (default), it is taken to be strlen(str).
+
+See also toLatin1(), fromUtf8(), and fromLocal8Bit().
+*/
+impl /*struct*/ QString {
+  pub fn fromLatin1_1<RetType, T: QString_fromLatin1_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromLatin1_1();
+    // return 1;
+  }
+}
+pub trait QString_fromLatin1_1<RetType> {
+  fn fromLatin1_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QString_fromLatin1_1<usize> for (usize) {
+  fn fromLatin1_1(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString10fromLatin1ERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:560
+// index:0
+// Public static inline Visibility=Default Availability=Available
+// [8] QString fromUtf8(const char *, int)
+
+/*
+Returns a QString initialized with the first size bytes of the UTF-8 string str.
+
+If size is -1 (default), it is taken to be strlen(str).
+
+UTF-8 is a Unicode codec and can represent all characters in a Unicode string like QString. However, invalid sequences are possible with UTF-8 and, if any such are found, they will be replaced with one or more "replacement characters", or suppressed. These include non-Unicode sequences, non-characters, overlong sequences or surrogate codepoints encoded into UTF-8.
+
+This function can be used to process incoming data incrementally as long as all UTF-8 characters are terminated within the incoming data. Any unterminated characters at the end of the string will be replaced or suppressed. In order to do stateful decoding, please use QTextDecoder.
+
+See also toUtf8(), fromLatin1(), and fromLocal8Bit().
+*/
+impl /*struct*/ QString {
+  pub fn fromUtf8_0<RetType, T: QString_fromUtf8_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromUtf8_0();
+    // return 1;
+  }
+}
+pub trait QString_fromUtf8_0<RetType> {
+  fn fromUtf8_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QString_fromUtf8_0<usize> for (usize,i32) {
+  fn fromUtf8_0(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (self.0) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString8fromUtf8EPKci", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:570
+// index:1
+// Public static inline Visibility=Default Availability=Available
+// [8] QString fromUtf8(const QByteArray &)
+
+/*
+Returns a QString initialized with the first size bytes of the UTF-8 string str.
+
+If size is -1 (default), it is taken to be strlen(str).
+
+UTF-8 is a Unicode codec and can represent all characters in a Unicode string like QString. However, invalid sequences are possible with UTF-8 and, if any such are found, they will be replaced with one or more "replacement characters", or suppressed. These include non-Unicode sequences, non-characters, overlong sequences or surrogate codepoints encoded into UTF-8.
+
+This function can be used to process incoming data incrementally as long as all UTF-8 characters are terminated within the incoming data. Any unterminated characters at the end of the string will be replaced or suppressed. In order to do stateful decoding, please use QTextDecoder.
+
+See also toUtf8(), fromLatin1(), and fromLocal8Bit().
+*/
+impl /*struct*/ QString {
+  pub fn fromUtf8_1<RetType, T: QString_fromUtf8_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromUtf8_1();
+    // return 1;
+  }
+}
+pub trait QString_fromUtf8_1<RetType> {
+  fn fromUtf8_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QString_fromUtf8_1<usize> for (usize) {
+  fn fromUtf8_1(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString8fromUtf8ERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:564
+// index:0
+// Public static inline Visibility=Default Availability=Available
+// [8] QString fromLocal8Bit(const char *, int)
+
+/*
+Returns a QString initialized with the first size characters of the 8-bit string str.
+
+If size is -1 (default), it is taken to be strlen(str).
+
+QTextCodec::codecForLocale() is used to perform the conversion.
+
+See also toLocal8Bit(), fromLatin1(), and fromUtf8().
+*/
+impl /*struct*/ QString {
+  pub fn fromLocal8Bit_0<RetType, T: QString_fromLocal8Bit_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromLocal8Bit_0();
+    // return 1;
+  }
+}
+pub trait QString_fromLocal8Bit_0<RetType> {
+  fn fromLocal8Bit_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QString_fromLocal8Bit_0<usize> for (usize,i32) {
+  fn fromLocal8Bit_0(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (self.0) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString13fromLocal8BitEPKci", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:572
+// index:1
+// Public static inline Visibility=Default Availability=Available
+// [8] QString fromLocal8Bit(const QByteArray &)
+
+/*
+Returns a QString initialized with the first size characters of the 8-bit string str.
+
+If size is -1 (default), it is taken to be strlen(str).
+
+QTextCodec::codecForLocale() is used to perform the conversion.
+
+See also toLocal8Bit(), fromLatin1(), and fromUtf8().
+*/
+impl /*struct*/ QString {
+  pub fn fromLocal8Bit_1<RetType, T: QString_fromLocal8Bit_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromLocal8Bit_1();
+    // return 1;
+  }
+}
+pub trait QString_fromLocal8Bit_1<RetType> {
+  fn fromLocal8Bit_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QString_fromLocal8Bit_1<usize> for (usize) {
+  fn fromLocal8Bit_1(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString13fromLocal8BitERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:574
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QString fromUtf16(const ushort *, int)
+
+/*
+Returns a QString initialized with the first size characters of the Unicode string unicode (ISO-10646-UTF-16 encoded).
+
+If size is -1 (default), unicode must be terminated with a 0.
+
+This function checks for a Byte Order Mark (BOM). If it is missing, host byte order is assumed.
+
+This function is slow compared to the other Unicode conversions. Use QString(const QChar *, int) or QString(const QChar *) if possible.
+
+QString makes a deep copy of the Unicode data.
+
+See also utf16(), setUtf16(), and fromStdU16String().
+*/
+impl /*struct*/ QString {
+  pub fn fromUtf16_0<RetType, T: QString_fromUtf16_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromUtf16_0();
+    // return 1;
+  }
+}
+pub trait QString_fromUtf16_0<RetType> {
+  fn fromUtf16_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QString_fromUtf16_0<usize> for (usize,i32) {
+  fn fromUtf16_0(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString9fromUtf16EPKti", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:579
+// index:1
+// Public static inline Visibility=Default Availability=Available
+// [8] QString fromUtf16(const char16_t *, int)
+
+/*
+Returns a QString initialized with the first size characters of the Unicode string unicode (ISO-10646-UTF-16 encoded).
+
+If size is -1 (default), unicode must be terminated with a 0.
+
+This function checks for a Byte Order Mark (BOM). If it is missing, host byte order is assumed.
+
+This function is slow compared to the other Unicode conversions. Use QString(const QChar *, int) or QString(const QChar *) if possible.
+
+QString makes a deep copy of the Unicode data.
+
+See also utf16(), setUtf16(), and fromStdU16String().
+*/
+impl /*struct*/ QString {
+  pub fn fromUtf16_1<RetType, T: QString_fromUtf16_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromUtf16_1();
+    // return 1;
+  }
+}
+pub trait QString_fromUtf16_1<RetType> {
+  fn fromUtf16_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QString_fromUtf16_1<usize> for (usize,i32) {
+  fn fromUtf16_1(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString9fromUtf16EPKDsi", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:575
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QString fromUcs4(const uint *, int)
+
+/*
+Returns a QString initialized with the first size characters of the Unicode string unicode (ISO-10646-UCS-4 encoded).
+
+If size is -1 (default), unicode must be terminated with a 0.
+
+This function was introduced in  Qt 4.2.
+
+See also toUcs4(), fromUtf16(), utf16(), setUtf16(), fromWCharArray(), and fromStdU32String().
+*/
+impl /*struct*/ QString {
+  pub fn fromUcs4_0<RetType, T: QString_fromUcs4_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromUcs4_0();
+    // return 1;
+  }
+}
+pub trait QString_fromUcs4_0<RetType> {
+  fn fromUcs4_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QString_fromUcs4_0<usize> for (usize,i32) {
+  fn fromUcs4_0(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString8fromUcs4EPKji", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:581
+// index:1
+// Public static inline Visibility=Default Availability=Available
+// [8] QString fromUcs4(const char32_t *, int)
+
+/*
+Returns a QString initialized with the first size characters of the Unicode string unicode (ISO-10646-UCS-4 encoded).
+
+If size is -1 (default), unicode must be terminated with a 0.
+
+This function was introduced in  Qt 4.2.
+
+See also toUcs4(), fromUtf16(), utf16(), setUtf16(), fromWCharArray(), and fromStdU32String().
+*/
+impl /*struct*/ QString {
+  pub fn fromUcs4_1<RetType, T: QString_fromUcs4_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromUcs4_1();
+    // return 1;
+  }
+}
+pub trait QString_fromUcs4_1<RetType> {
+  fn fromUcs4_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QString_fromUcs4_1<usize> for (usize,i32) {
+  fn fromUcs4_1(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString8fromUcs4EPKDii", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:576
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QString fromRawData(const QChar *, int)
+
+/*
+Constructs a QString that uses the first size Unicode characters in the array unicode. The data in unicode is not copied. The caller must be able to guarantee that unicode will not be deleted or modified as long as the QString (or an unmodified copy of it) exists.
+
+Any attempts to modify the QString or copies of it will cause it to create a deep copy of the data, ensuring that the raw data isn't modified.
+
+Here's an example of how we can use a QRegularExpression on raw data in memory without requiring to copy the data into a QString:
+
+
+  QRegularExpression pattern("\u00A4");
+  static const QChar unicode[] = {
+          0x005A, 0x007F, 0x00A4, 0x0060,
+          0x1009, 0x0020, 0x0020};
+  int size = sizeof(unicode) / sizeof(QChar);
+
+  QString str = QString::fromRawData(unicode, size);
+  if (str.contains(pattern) {
+      // ...
+  }
+
+
+
+Warning: A string created with fromRawData() is not '\0'-terminated, unless the raw data contains a '\0' character at position size. This means unicode() will not return a '\0'-terminated string (although utf16() does, at the cost of copying the raw data).
+
+See also fromUtf16() and setRawData().
+*/
+impl /*struct*/ QString {
+  pub fn fromRawData_0<RetType, T: QString_fromRawData_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromRawData_0();
+    // return 1;
+  }
+}
+pub trait QString_fromRawData_0<RetType> {
+  fn fromRawData_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QString_fromRawData_0<usize> for (usize,i32) {
+  fn fromRawData_0(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString11fromRawDataEPK5QChari", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:594
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [4] int toWCharArray(wchar_t *) const
+
+/*
+Fills the array with the data contained in this QString object. The array is encoded in UTF-16 on platforms where wchar_t is 2 bytes wide (e.g. windows) and in UCS-4 on platforms where wchar_t is 4 bytes wide (most Unix systems).
+
+array has to be allocated by the caller and contain enough space to hold the complete string (allocating the array with the same length as the string is always sufficient).
+
+This function returns the actual length of the string in array.
+
+Note: This function does not append a null character to the array.
+
+This function was introduced in  Qt 4.2.
+
+See also utf16(), toUcs4(), toLatin1(), toUtf8(), toLocal8Bit(), and toStdWString().
+*/
+impl /*struct*/ QString {
+  pub fn toWCharArray_0<RetType, T: QString_toWCharArray_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toWCharArray_0(self);
+    // return 1;
+  }
+}
+pub trait QString_toWCharArray_0<RetType> {
+  fn toWCharArray_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_toWCharArray_0<i32> for (usize) {
+  fn toWCharArray_0(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString12toWCharArrayEPw", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:595
+// index:0
+// Public static inline Visibility=Default Availability=Available
+// [8] QString fromWCharArray(const wchar_t *, int)
+
+/*
+Returns a copy of the string, where the encoding of string depends on the size of wchar. If wchar is 4 bytes, the string is interpreted as UCS-4, if wchar is 2 bytes it is interpreted as UTF-16.
+
+If size is -1 (default), the string has to be 0 terminated.
+
+This function was introduced in  Qt 4.2.
+
+See also fromUtf16(), fromLatin1(), fromLocal8Bit(), fromUtf8(), fromUcs4(), and fromStdWString().
+*/
+impl /*struct*/ QString {
+  pub fn fromWCharArray_0<RetType, T: QString_fromWCharArray_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromWCharArray_0();
+    // return 1;
+  }
+}
+pub trait QString_fromWCharArray_0<RetType> {
+  fn fromWCharArray_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QString_fromWCharArray_0<usize> for (usize,i32) {
+  fn fromWCharArray_0(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString14fromWCharArrayEPKwi", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:597
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString & setRawData(const QChar *, int)
+
+/*
+Resets the QString to use the first size Unicode characters in the array unicode. The data in unicode is not copied. The caller must be able to guarantee that unicode will not be deleted or modified as long as the QString (or an unmodified copy of it) exists.
+
+This function can be used instead of fromRawData() to re-use existings QString objects to save memory re-allocations.
+
+This function was introduced in  Qt 4.7.
+
+See also fromRawData().
+*/
+impl /*struct*/ QString {
+  pub fn setRawData_0<RetType, T: QString_setRawData_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setRawData_0(self);
+    // return 1;
+  }
+}
+pub trait QString_setRawData_0<RetType> {
+  fn setRawData_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_setRawData_0<usize> for (usize,i32) {
+  fn setRawData_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString10setRawDataEPK5QChari", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:598
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString & setUnicode(const QChar *, int)
+
+/*
+Resizes the string to size characters and copies unicode into the string.
+
+If unicode is 0, nothing is copied, but the string is still resized to size.
+
+See also unicode() and setUtf16().
+*/
+impl /*struct*/ QString {
+  pub fn setUnicode_0<RetType, T: QString_setUnicode_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setUnicode_0(self);
+    // return 1;
+  }
+}
+pub trait QString_setUnicode_0<RetType> {
+  fn setUnicode_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_setUnicode_0<usize> for (usize,i32) {
+  fn setUnicode_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString10setUnicodeEPK5QChari", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:599
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QString & setUtf16(const ushort *, int)
+
+/*
+Resizes the string to size characters and copies unicode into the string.
+
+If unicode is 0, nothing is copied, but the string is still resized to size.
+
+Note that unlike fromUtf16(), this function does not consider BOMs and possibly differing byte ordering.
+
+See also utf16() and setUnicode().
+*/
+impl /*struct*/ QString {
+  pub fn setUtf16_0<RetType, T: QString_setUtf16_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setUtf16_0(self);
+    // return 1;
+  }
+}
+pub trait QString_setUtf16_0<RetType> {
+  fn setUtf16_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_setUtf16_0<usize> for (usize,i32) {
+  fn setUtf16_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString8setUtf16EPKti", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:601
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int compare(const QString &, Qt::CaseSensitivity) const
+
+/*
+Compares s1 with s2 and returns an integer less than, equal to, or greater than zero if s1 is less than, equal to, or greater than s2.
+
+If cs is Qt::CaseSensitive, the comparison is case sensitive; otherwise the comparison is case insensitive.
+
+Case sensitive comparison is based exclusively on the numeric Unicode values of the characters and is very fast, but is not what a human would expect. Consider sorting user-visible strings with localeAwareCompare().
+
+
+  int x = QString::compare("aUtO", "AuTo", Qt::CaseInsensitive);  // x == 0
+  int y = QString::compare("auto", "Car", Qt::CaseSensitive);     // y > 0
+  int z = QString::compare("auto", "Car", Qt::CaseInsensitive);   // z < 0
+
+
+
+This function was introduced in  Qt 4.2.
+
+See also operator==(), operator<(), and operator>().
+*/
+impl /*struct*/ QString {
+  pub fn compare_0<RetType, T: QString_compare_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.compare_0(self);
+    // return 1;
+  }
+}
+pub trait QString_compare_0<RetType> {
+  fn compare_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_compare_0<i32> for (usize,i32) {
+  fn compare_0(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString7compareERKS_N2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:602
+// index:1
+// Public Visibility=Default Availability=Available
+// [4] int compare(QLatin1String, Qt::CaseSensitivity) const
+
+/*
+Compares s1 with s2 and returns an integer less than, equal to, or greater than zero if s1 is less than, equal to, or greater than s2.
+
+If cs is Qt::CaseSensitive, the comparison is case sensitive; otherwise the comparison is case insensitive.
+
+Case sensitive comparison is based exclusively on the numeric Unicode values of the characters and is very fast, but is not what a human would expect. Consider sorting user-visible strings with localeAwareCompare().
+
+
+  int x = QString::compare("aUtO", "AuTo", Qt::CaseInsensitive);  // x == 0
+  int y = QString::compare("auto", "Car", Qt::CaseSensitive);     // y > 0
+  int z = QString::compare("auto", "Car", Qt::CaseInsensitive);   // z < 0
+
+
+
+This function was introduced in  Qt 4.2.
+
+See also operator==(), operator<(), and operator>().
+*/
+impl /*struct*/ QString {
+  pub fn compare_1<RetType, T: QString_compare_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.compare_1(self);
+    // return 1;
+  }
+}
+pub trait QString_compare_1<RetType> {
+  fn compare_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_compare_1<i32> for (usize,i32) {
+  fn compare_1(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString7compareE13QLatin1StringN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:604
+// index:2
+// Public static inline Visibility=Default Availability=Available
+// [4] int compare(const QString &, const QString &, Qt::CaseSensitivity)
+
+/*
+Compares s1 with s2 and returns an integer less than, equal to, or greater than zero if s1 is less than, equal to, or greater than s2.
+
+If cs is Qt::CaseSensitive, the comparison is case sensitive; otherwise the comparison is case insensitive.
+
+Case sensitive comparison is based exclusively on the numeric Unicode values of the characters and is very fast, but is not what a human would expect. Consider sorting user-visible strings with localeAwareCompare().
+
+
+  int x = QString::compare("aUtO", "AuTo", Qt::CaseInsensitive);  // x == 0
+  int y = QString::compare("auto", "Car", Qt::CaseSensitive);     // y > 0
+  int z = QString::compare("auto", "Car", Qt::CaseInsensitive);   // z < 0
+
+
+
+This function was introduced in  Qt 4.2.
+
+See also operator==(), operator<(), and operator>().
+*/
+impl /*struct*/ QString {
+  pub fn compare_2<RetType, T: QString_compare_2<RetType>>( overload_args: T) -> RetType {
+    return overload_args.compare_2();
+    // return 1;
+  }
+}
+pub trait QString_compare_2<RetType> {
+  fn compare_2(self ) -> RetType;
+}
+impl<'a> /*trait*/ QString_compare_2<i32> for (usize,usize,i32) {
+  fn compare_2(self ) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString7compareERKS_S1_N2Qt15CaseSensitivityE", 3,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:608
+// index:3
+// Public static inline Visibility=Default Availability=Available
+// [4] int compare(const QString &, QLatin1String, Qt::CaseSensitivity)
+
+/*
+Compares s1 with s2 and returns an integer less than, equal to, or greater than zero if s1 is less than, equal to, or greater than s2.
+
+If cs is Qt::CaseSensitive, the comparison is case sensitive; otherwise the comparison is case insensitive.
+
+Case sensitive comparison is based exclusively on the numeric Unicode values of the characters and is very fast, but is not what a human would expect. Consider sorting user-visible strings with localeAwareCompare().
+
+
+  int x = QString::compare("aUtO", "AuTo", Qt::CaseInsensitive);  // x == 0
+  int y = QString::compare("auto", "Car", Qt::CaseSensitive);     // y > 0
+  int z = QString::compare("auto", "Car", Qt::CaseInsensitive);   // z < 0
+
+
+
+This function was introduced in  Qt 4.2.
+
+See also operator==(), operator<(), and operator>().
+*/
+impl /*struct*/ QString {
+  pub fn compare_3<RetType, T: QString_compare_3<RetType>>( overload_args: T) -> RetType {
+    return overload_args.compare_3();
+    // return 1;
+  }
+}
+pub trait QString_compare_3<RetType> {
+  fn compare_3(self ) -> RetType;
+}
+impl<'a> /*trait*/ QString_compare_3<i32> for (usize,usize,i32) {
+  fn compare_3(self ) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString7compareERKS_13QLatin1StringN2Qt15CaseSensitivityE", 3,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:611
+// index:4
+// Public static inline Visibility=Default Availability=Available
+// [4] int compare(QLatin1String, const QString &, Qt::CaseSensitivity)
+
+/*
+Compares s1 with s2 and returns an integer less than, equal to, or greater than zero if s1 is less than, equal to, or greater than s2.
+
+If cs is Qt::CaseSensitive, the comparison is case sensitive; otherwise the comparison is case insensitive.
+
+Case sensitive comparison is based exclusively on the numeric Unicode values of the characters and is very fast, but is not what a human would expect. Consider sorting user-visible strings with localeAwareCompare().
+
+
+  int x = QString::compare("aUtO", "AuTo", Qt::CaseInsensitive);  // x == 0
+  int y = QString::compare("auto", "Car", Qt::CaseSensitive);     // y > 0
+  int z = QString::compare("auto", "Car", Qt::CaseInsensitive);   // z < 0
+
+
+
+This function was introduced in  Qt 4.2.
+
+See also operator==(), operator<(), and operator>().
+*/
+impl /*struct*/ QString {
+  pub fn compare_4<RetType, T: QString_compare_4<RetType>>( overload_args: T) -> RetType {
+    return overload_args.compare_4();
+    // return 1;
+  }
+}
+pub trait QString_compare_4<RetType> {
+  fn compare_4(self ) -> RetType;
+}
+impl<'a> /*trait*/ QString_compare_4<i32> for (usize,usize,i32) {
+  fn compare_4(self ) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString7compareE13QLatin1StringRKS_N2Qt15CaseSensitivityE", 3,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:615
+// index:5
+// Public inline Visibility=Default Availability=Available
+// [4] int compare(const QStringRef &, Qt::CaseSensitivity) const
+
+/*
+Compares s1 with s2 and returns an integer less than, equal to, or greater than zero if s1 is less than, equal to, or greater than s2.
+
+If cs is Qt::CaseSensitive, the comparison is case sensitive; otherwise the comparison is case insensitive.
+
+Case sensitive comparison is based exclusively on the numeric Unicode values of the characters and is very fast, but is not what a human would expect. Consider sorting user-visible strings with localeAwareCompare().
+
+
+  int x = QString::compare("aUtO", "AuTo", Qt::CaseInsensitive);  // x == 0
+  int y = QString::compare("auto", "Car", Qt::CaseSensitive);     // y > 0
+  int z = QString::compare("auto", "Car", Qt::CaseInsensitive);   // z < 0
+
+
+
+This function was introduced in  Qt 4.2.
+
+See also operator==(), operator<(), and operator>().
+*/
+impl /*struct*/ QString {
+  pub fn compare_5<RetType, T: QString_compare_5<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.compare_5(self);
+    // return 1;
+  }
+}
+pub trait QString_compare_5<RetType> {
+  fn compare_5(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_compare_5<i32> for (usize,i32) {
+  fn compare_5(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString7compareERK10QStringRefN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:616
+// index:6
+// Public static Visibility=Default Availability=Available
+// [4] int compare(const QString &, const QStringRef &, Qt::CaseSensitivity)
+
+/*
+Compares s1 with s2 and returns an integer less than, equal to, or greater than zero if s1 is less than, equal to, or greater than s2.
+
+If cs is Qt::CaseSensitive, the comparison is case sensitive; otherwise the comparison is case insensitive.
+
+Case sensitive comparison is based exclusively on the numeric Unicode values of the characters and is very fast, but is not what a human would expect. Consider sorting user-visible strings with localeAwareCompare().
+
+
+  int x = QString::compare("aUtO", "AuTo", Qt::CaseInsensitive);  // x == 0
+  int y = QString::compare("auto", "Car", Qt::CaseSensitive);     // y > 0
+  int z = QString::compare("auto", "Car", Qt::CaseInsensitive);   // z < 0
+
+
+
+This function was introduced in  Qt 4.2.
+
+See also operator==(), operator<(), and operator>().
+*/
+impl /*struct*/ QString {
+  pub fn compare_6<RetType, T: QString_compare_6<RetType>>( overload_args: T) -> RetType {
+    return overload_args.compare_6();
+    // return 1;
+  }
+}
+pub trait QString_compare_6<RetType> {
+  fn compare_6(self ) -> RetType;
+}
+impl<'a> /*trait*/ QString_compare_6<i32> for (usize,usize,i32) {
+  fn compare_6(self ) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString7compareERKS_RK10QStringRefN2Qt15CaseSensitivityE", 3,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:619
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int localeAwareCompare(const QString &) const
+
+/*
+Compares s1 with s2 and returns an integer less than, equal to, or greater than zero if s1 is less than, equal to, or greater than s2.
+
+The comparison is performed in a locale- and also platform-dependent manner. Use this function to present sorted lists of strings to the user.
+
+On macOS and iOS this function compares according the "Order for sorted lists" setting in the International preferences panel.
+
+See also compare() and QLocale.
+*/
+impl /*struct*/ QString {
+  pub fn localeAwareCompare_0<RetType, T: QString_localeAwareCompare_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.localeAwareCompare_0(self);
+    // return 1;
+  }
+}
+pub trait QString_localeAwareCompare_0<RetType> {
+  fn localeAwareCompare_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_localeAwareCompare_0<i32> for (usize) {
+  fn localeAwareCompare_0(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString18localeAwareCompareERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:620
+// index:1
+// Public static inline Visibility=Default Availability=Available
+// [4] int localeAwareCompare(const QString &, const QString &)
+
+/*
+Compares s1 with s2 and returns an integer less than, equal to, or greater than zero if s1 is less than, equal to, or greater than s2.
+
+The comparison is performed in a locale- and also platform-dependent manner. Use this function to present sorted lists of strings to the user.
+
+On macOS and iOS this function compares according the "Order for sorted lists" setting in the International preferences panel.
+
+See also compare() and QLocale.
+*/
+impl /*struct*/ QString {
+  pub fn localeAwareCompare_1<RetType, T: QString_localeAwareCompare_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.localeAwareCompare_1();
+    // return 1;
+  }
+}
+pub trait QString_localeAwareCompare_1<RetType> {
+  fn localeAwareCompare_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QString_localeAwareCompare_1<i32> for (usize,usize) {
+  fn localeAwareCompare_1(self ) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString18localeAwareCompareERKS_S1_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:623
+// index:2
+// Public Visibility=Default Availability=Available
+// [4] int localeAwareCompare(const QStringRef &) const
+
+/*
+Compares s1 with s2 and returns an integer less than, equal to, or greater than zero if s1 is less than, equal to, or greater than s2.
+
+The comparison is performed in a locale- and also platform-dependent manner. Use this function to present sorted lists of strings to the user.
+
+On macOS and iOS this function compares according the "Order for sorted lists" setting in the International preferences panel.
+
+See also compare() and QLocale.
+*/
+impl /*struct*/ QString {
+  pub fn localeAwareCompare_2<RetType, T: QString_localeAwareCompare_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.localeAwareCompare_2(self);
+    // return 1;
+  }
+}
+pub trait QString_localeAwareCompare_2<RetType> {
+  fn localeAwareCompare_2(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_localeAwareCompare_2<i32> for (usize) {
+  fn localeAwareCompare_2(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString18localeAwareCompareERK10QStringRef", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:624
+// index:3
+// Public static Visibility=Default Availability=Available
+// [4] int localeAwareCompare(const QString &, const QStringRef &)
+
+/*
+Compares s1 with s2 and returns an integer less than, equal to, or greater than zero if s1 is less than, equal to, or greater than s2.
+
+The comparison is performed in a locale- and also platform-dependent manner. Use this function to present sorted lists of strings to the user.
+
+On macOS and iOS this function compares according the "Order for sorted lists" setting in the International preferences panel.
+
+See also compare() and QLocale.
+*/
+impl /*struct*/ QString {
+  pub fn localeAwareCompare_3<RetType, T: QString_localeAwareCompare_3<RetType>>( overload_args: T) -> RetType {
+    return overload_args.localeAwareCompare_3();
+    // return 1;
+  }
+}
+pub trait QString_localeAwareCompare_3<RetType> {
+  fn localeAwareCompare_3(self ) -> RetType;
+}
+impl<'a> /*trait*/ QString_localeAwareCompare_3<i32> for (usize,usize) {
+  fn localeAwareCompare_3(self ) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString18localeAwareCompareERKS_RK10QStringRef", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:627
+// index:0
+// Public Visibility=Default Availability=Available
+// [2] short toShort(bool *, int) const
+
+/*
+Returns the string converted to a short using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
+
+If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+
+If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
+
+The string conversion will always happen in the 'C' locale. For locale dependent conversion use QLocale::toShort()
+
+Example:
+
+
+  QString str = "FF";
+  bool ok;
+
+  short hex = str.toShort(&ok, 16);   // hex == 255, ok == true
+  short dec = str.toShort(&ok, 10);   // dec == 0, ok == false
+
+
+
+See also number(), toUShort(), toInt(), and QLocale::toShort().
+*/
+impl /*struct*/ QString {
+  pub fn toShort_0<RetType, T: QString_toShort_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toShort_0(self);
+    // return 1;
+  }
+}
+pub trait QString_toShort_0<RetType> {
+  fn toShort_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_toShort_0<i16> for (usize,i32) {
+  fn toShort_0(self , rsthis: & QString) -> i16 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString7toShortEPbi", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i16 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:628
+// index:0
+// Public Visibility=Default Availability=Available
+// [2] ushort toUShort(bool *, int) const
+
+/*
+Returns the string converted to an unsigned short using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
+
+If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+
+If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
+
+The string conversion will always happen in the 'C' locale. For locale dependent conversion use QLocale::toUShort()
+
+Example:
+
+
+  QString str = "FF";
+  bool ok;
+
+  ushort hex = str.toUShort(&ok, 16);     // hex == 255, ok == true
+  ushort dec = str.toUShort(&ok, 10);     // dec == 0, ok == false
+
+
+
+See also number(), toShort(), and QLocale::toUShort().
+*/
+impl /*struct*/ QString {
+  pub fn toUShort_0<RetType, T: QString_toUShort_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toUShort_0(self);
+    // return 1;
+  }
+}
+pub trait QString_toUShort_0<RetType> {
+  fn toUShort_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_toUShort_0<u16> for (usize,i32) {
+  fn toUShort_0(self , rsthis: & QString) -> u16 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString8toUShortEPbi", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: u16 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:629
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] int toInt(bool *, int) const
+
+/*
+Returns the string converted to an int using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
+
+If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+
+If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
+
+The string conversion will always happen in the 'C' locale. For locale dependent conversion use QLocale::toInt()
+
+Example:
+
+
+  QString str = "FF";
+  bool ok;
+  int hex = str.toInt(&ok, 16);       // hex == 255, ok == true
+  int dec = str.toInt(&ok, 10);       // dec == 0, ok == false
+
+
+
+See also number(), toUInt(), toDouble(), and QLocale::toInt().
+*/
+impl /*struct*/ QString {
+  pub fn toInt_0<RetType, T: QString_toInt_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toInt_0(self);
+    // return 1;
+  }
+}
+pub trait QString_toInt_0<RetType> {
+  fn toInt_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_toInt_0<i32> for (usize,i32) {
+  fn toInt_0(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString5toIntEPbi", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:630
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] uint toUInt(bool *, int) const
+
+/*
+Returns the string converted to an unsigned int using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
+
+If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+
+If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
+
+The string conversion will always happen in the 'C' locale. For locale dependent conversion use QLocale::toUInt()
+
+Example:
+
+
+  QString str = "FF";
+  bool ok;
+
+  uint hex = str.toUInt(&ok, 16);     // hex == 255, ok == true
+  uint dec = str.toUInt(&ok, 10);     // dec == 0, ok == false
+
+
+
+See also number(), toInt(), and QLocale::toUInt().
+*/
+impl /*struct*/ QString {
+  pub fn toUInt_0<RetType, T: QString_toUInt_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toUInt_0(self);
+    // return 1;
+  }
+}
+pub trait QString_toUInt_0<RetType> {
+  fn toUInt_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_toUInt_0<u32> for (usize,i32) {
+  fn toUInt_0(self , rsthis: & QString) -> u32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString6toUIntEPbi", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: u32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:631
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] long toLong(bool *, int) const
+
+/*
+Returns the string converted to a long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
+
+If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+
+If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
+
+The string conversion will always happen in the 'C' locale. For locale dependent conversion use QLocale::toLongLong()
+
+Example:
+
+
+  QString str = "FF";
+  bool ok;
+
+  long hex = str.toLong(&ok, 16);     // hex == 255, ok == true
+  long dec = str.toLong(&ok, 10);     // dec == 0, ok == false
+
+
+
+See also number(), toULong(), toInt(), and QLocale::toInt().
+*/
+impl /*struct*/ QString {
+  pub fn toLong_0<RetType, T: QString_toLong_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toLong_0(self);
+    // return 1;
+  }
+}
+pub trait QString_toLong_0<RetType> {
+  fn toLong_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_toLong_0<i64> for (usize,i32) {
+  fn toLong_0(self , rsthis: & QString) -> i64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString6toLongEPbi", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i64 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:632
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] ulong toULong(bool *, int) const
+
+/*
+Returns the string converted to an unsigned long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
+
+If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+
+If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
+
+The string conversion will always happen in the 'C' locale. For locale dependent conversion use QLocale::toULongLong()
+
+Example:
+
+
+  QString str = "FF";
+  bool ok;
+
+  ulong hex = str.toULong(&ok, 16);   // hex == 255, ok == true
+  ulong dec = str.toULong(&ok, 10);   // dec == 0, ok == false
+
+
+
+See also number() and QLocale::toUInt().
+*/
+impl /*struct*/ QString {
+  pub fn toULong_0<RetType, T: QString_toULong_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toULong_0(self);
+    // return 1;
+  }
+}
+pub trait QString_toULong_0<RetType> {
+  fn toULong_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_toULong_0<u64> for (usize,i32) {
+  fn toULong_0(self , rsthis: & QString) -> u64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString7toULongEPbi", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: u64 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:633
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] qlonglong toLongLong(bool *, int) const
+
+/*
+Returns the string converted to a long long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
+
+If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+
+If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
+
+The string conversion will always happen in the 'C' locale. For locale dependent conversion use QLocale::toLongLong()
+
+Example:
+
+
+  QString str = "FF";
+  bool ok;
+
+  qint64 hex = str.toLongLong(&ok, 16);      // hex == 255, ok == true
+  qint64 dec = str.toLongLong(&ok, 10);      // dec == 0, ok == false
+
+
+
+See also number(), toULongLong(), toInt(), and QLocale::toLongLong().
+*/
+impl /*struct*/ QString {
+  pub fn toLongLong_0<RetType, T: QString_toLongLong_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toLongLong_0(self);
+    // return 1;
+  }
+}
+pub trait QString_toLongLong_0<RetType> {
+  fn toLongLong_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_toLongLong_0<i64> for (usize,i32) {
+  fn toLongLong_0(self , rsthis: & QString) -> i64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString10toLongLongEPbi", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: i64 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:634
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] qulonglong toULongLong(bool *, int) const
+
+/*
+Returns the string converted to an unsigned long long using base base, which is 10 by default and must be between 2 and 36, or 0. Returns 0 if the conversion fails.
+
+If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+
+If base is 0, the C language convention is used: If the string begins with "0x", base 16 is used; if the string begins with "0", base 8 is used; otherwise, base 10 is used.
+
+The string conversion will always happen in the 'C' locale. For locale dependent conversion use QLocale::toULongLong()
+
+Example:
+
+
+  QString str = "FF";
+  bool ok;
+
+  quint64 hex = str.toULongLong(&ok, 16);    // hex == 255, ok == true
+  quint64 dec = str.toULongLong(&ok, 10);    // dec == 0, ok == false
+
+
+
+See also number(), toLongLong(), and QLocale::toULongLong().
+*/
+impl /*struct*/ QString {
+  pub fn toULongLong_0<RetType, T: QString_toULongLong_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toULongLong_0(self);
+    // return 1;
+  }
+}
+pub trait QString_toULongLong_0<RetType> {
+  fn toULongLong_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_toULongLong_0<u64> for (usize,i32) {
+  fn toULongLong_0(self , rsthis: & QString) -> u64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const usize as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString11toULongLongEPbi", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: u64 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:635
+// index:0
+// Public Visibility=Default Availability=Available
+// [4] float toFloat(bool *) const
+
+/*
+Returns the string converted to a float value.
+
+If a conversion error occurs, *ok is set to false; otherwise *ok is set to true. Returns 0.0 if the conversion fails.
+
+The string conversion will always happen in the 'C' locale. For locale dependent conversion use QLocale::toFloat()
+
+Example:
+
+
+  QString str1 = "1234.56";
+  str1.toFloat();             // returns 1234.56
+
+  bool ok;
+  QString str2 = "R2D2";
+  str2.toFloat(&ok);          // returns 0.0, sets ok to false
+
+
+
+See also number(), toDouble(), toInt(), and QLocale::toFloat().
+*/
+impl /*struct*/ QString {
+  pub fn toFloat_0<RetType, T: QString_toFloat_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toFloat_0(self);
+    // return 1;
+  }
+}
+pub trait QString_toFloat_0<RetType> {
+  fn toFloat_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_toFloat_0<f32> for (usize) {
+  fn toFloat_0(self , rsthis: & QString) -> f32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString7toFloatEPb", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: f32 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:636
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] double toDouble(bool *) const
+
+/*
+Returns the string converted to a double value.
+
+Returns 0.0 if the conversion fails.
+
+If a conversion error occurs, *ok is set to false; otherwise *ok is set to true.
+
+
+  QString str = "1234.56";
+  double val = str.toDouble();   // val == 1234.56
+
+
+
+Warning: The QString content may only contain valid numerical characters which includes the plus/minus sign, the characters g and e used in scientific notation, and the decimal point. Including the unit or additional characters leads to a conversion error.
+
+
+  bool ok;
+  double d;
+
+  d = QString( "1234.56e-02" ).toDouble(&ok); // ok == true, d == 12.3456
+
+
+
+The string conversion will always happen in the 'C' locale. For locale dependent conversion use QLocale::toDouble()
+
+
+  d = QString( "1234,56" ).toDouble(&ok); // ok == false
+  d = QString( "1234.56" ).toDouble(&ok); // ok == true, d == 1234.56
+
+
+
+For historical reasons, this function does not handle thousands group separators. If you need to convert such numbers, use QLocale::toDouble().
+
+
+  d = QString( "1,234,567.89" ).toDouble(&ok); // ok == false
+  d = QString( "1234567.89" ).toDouble(&ok); // ok == true
+
+
+
+See also number(), QLocale::setDefault(), QLocale::toDouble(), and trimmed().
+*/
+impl /*struct*/ QString {
+  pub fn toDouble_0<RetType, T: QString_toDouble_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toDouble_0(self);
+    // return 1;
+  }
+}
+pub trait QString_toDouble_0<RetType> {
+  fn toDouble_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_toDouble_0<f64> for (usize) {
+  fn toDouble_0(self , rsthis: & QString) -> f64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString8toDoubleEPb", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: f64 = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:638
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QString & setNum(short, int)
+
+/*
+Sets the string to the printed value of n in the specified base, and returns a reference to the string.
+
+The base is 10 by default and must be between 2 and 36. For bases other than 10, n is treated as an unsigned integer.
+
+
+  QString str;
+  str.setNum(1234);       // str == "1234"
+
+
+
+The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
+*/
+impl /*struct*/ QString {
+  pub fn setNum_0<RetType, T: QString_setNum_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setNum_0(self);
+    // return 1;
+  }
+}
+pub trait QString_setNum_0<RetType> {
+  fn setNum_0(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_setNum_0<usize> for (i16,i32) {
+  fn setNum_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i16 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString6setNumEsi", 2,qtrt::FFITY_SINT16,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:639
+// index:1
+// Public Visibility=Default Availability=Available
+// [8] QString & setNum(ushort, int)
+
+/*
+Sets the string to the printed value of n in the specified base, and returns a reference to the string.
+
+The base is 10 by default and must be between 2 and 36. For bases other than 10, n is treated as an unsigned integer.
+
+
+  QString str;
+  str.setNum(1234);       // str == "1234"
+
+
+
+The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
+*/
+impl /*struct*/ QString {
+  pub fn setNum_1<RetType, T: QString_setNum_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setNum_1(self);
+    // return 1;
+  }
+}
+pub trait QString_setNum_1<RetType> {
+  fn setNum_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_setNum_1<usize> for (u16,i32) {
+  fn setNum_1(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const u16 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString6setNumEti", 2,qtrt::FFITY_UINT16,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:640
+// index:2
+// Public Visibility=Default Availability=Available
+// [8] QString & setNum(int, int)
+
+/*
+Sets the string to the printed value of n in the specified base, and returns a reference to the string.
+
+The base is 10 by default and must be between 2 and 36. For bases other than 10, n is treated as an unsigned integer.
+
+
+  QString str;
+  str.setNum(1234);       // str == "1234"
+
+
+
+The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
+*/
+impl /*struct*/ QString {
+  pub fn setNum_2<RetType, T: QString_setNum_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setNum_2(self);
+    // return 1;
+  }
+}
+pub trait QString_setNum_2<RetType> {
+  fn setNum_2(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_setNum_2<usize> for (i32,i32) {
+  fn setNum_2(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString6setNumEii", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:641
+// index:3
+// Public Visibility=Default Availability=Available
+// [8] QString & setNum(uint, int)
+
+/*
+Sets the string to the printed value of n in the specified base, and returns a reference to the string.
+
+The base is 10 by default and must be between 2 and 36. For bases other than 10, n is treated as an unsigned integer.
+
+
+  QString str;
+  str.setNum(1234);       // str == "1234"
+
+
+
+The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
+*/
+impl /*struct*/ QString {
+  pub fn setNum_3<RetType, T: QString_setNum_3<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setNum_3(self);
+    // return 1;
+  }
+}
+pub trait QString_setNum_3<RetType> {
+  fn setNum_3(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_setNum_3<usize> for (u32,i32) {
+  fn setNum_3(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const u32 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString6setNumEji", 2,qtrt::FFITY_UINT32,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:642
+// index:4
+// Public Visibility=Default Availability=Available
+// [8] QString & setNum(long, int)
+
+/*
+Sets the string to the printed value of n in the specified base, and returns a reference to the string.
+
+The base is 10 by default and must be between 2 and 36. For bases other than 10, n is treated as an unsigned integer.
+
+
+  QString str;
+  str.setNum(1234);       // str == "1234"
+
+
+
+The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
+*/
+impl /*struct*/ QString {
+  pub fn setNum_4<RetType, T: QString_setNum_4<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setNum_4(self);
+    // return 1;
+  }
+}
+pub trait QString_setNum_4<RetType> {
+  fn setNum_4(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_setNum_4<usize> for (i64,i32) {
+  fn setNum_4(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i64 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString6setNumEli", 2,qtrt::FFITY_SINT64,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:643
+// index:5
+// Public Visibility=Default Availability=Available
+// [8] QString & setNum(ulong, int)
+
+/*
+Sets the string to the printed value of n in the specified base, and returns a reference to the string.
+
+The base is 10 by default and must be between 2 and 36. For bases other than 10, n is treated as an unsigned integer.
+
+
+  QString str;
+  str.setNum(1234);       // str == "1234"
+
+
+
+The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
+*/
+impl /*struct*/ QString {
+  pub fn setNum_5<RetType, T: QString_setNum_5<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setNum_5(self);
+    // return 1;
+  }
+}
+pub trait QString_setNum_5<RetType> {
+  fn setNum_5(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_setNum_5<usize> for (u64,i32) {
+  fn setNum_5(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const u64 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString6setNumEmi", 2,qtrt::FFITY_UINT64,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:644
+// index:6
+// Public Visibility=Default Availability=Available
+// [8] QString & setNum(qlonglong, int)
+
+/*
+Sets the string to the printed value of n in the specified base, and returns a reference to the string.
+
+The base is 10 by default and must be between 2 and 36. For bases other than 10, n is treated as an unsigned integer.
+
+
+  QString str;
+  str.setNum(1234);       // str == "1234"
+
+
+
+The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
+*/
+impl /*struct*/ QString {
+  pub fn setNum_6<RetType, T: QString_setNum_6<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setNum_6(self);
+    // return 1;
+  }
+}
+pub trait QString_setNum_6<RetType> {
+  fn setNum_6(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_setNum_6<usize> for (i64,i32) {
+  fn setNum_6(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i64 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString6setNumExi", 2,qtrt::FFITY_SINT64,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:645
+// index:7
+// Public Visibility=Default Availability=Available
+// [8] QString & setNum(qulonglong, int)
+
+/*
+Sets the string to the printed value of n in the specified base, and returns a reference to the string.
+
+The base is 10 by default and must be between 2 and 36. For bases other than 10, n is treated as an unsigned integer.
+
+
+  QString str;
+  str.setNum(1234);       // str == "1234"
+
+
+
+The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
+*/
+impl /*struct*/ QString {
+  pub fn setNum_7<RetType, T: QString_setNum_7<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setNum_7(self);
+    // return 1;
+  }
+}
+pub trait QString_setNum_7<RetType> {
+  fn setNum_7(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_setNum_7<usize> for (u64,i32) {
+  fn setNum_7(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const u64 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString6setNumEyi", 2,qtrt::FFITY_UINT64,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:646
+// index:8
+// Public Visibility=Default Availability=Available
+// [8] QString & setNum(float, char, int)
+
+/*
+Sets the string to the printed value of n in the specified base, and returns a reference to the string.
+
+The base is 10 by default and must be between 2 and 36. For bases other than 10, n is treated as an unsigned integer.
+
+
+  QString str;
+  str.setNum(1234);       // str == "1234"
+
+
+
+The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
+*/
+impl /*struct*/ QString {
+  pub fn setNum_8<RetType, T: QString_setNum_8<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setNum_8(self);
+    // return 1;
+  }
+}
+pub trait QString_setNum_8<RetType> {
+  fn setNum_8(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_setNum_8<usize> for (f32,i8,i32) {
+  fn setNum_8(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const f32 as usize;
+    let arg1 = (&self.1) as *const i8 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString6setNumEfci", 3,qtrt::FFITY_FLOAT,qtrt::FFITY_SINT8,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:647
+// index:9
+// Public Visibility=Default Availability=Available
+// [8] QString & setNum(double, char, int)
+
+/*
+Sets the string to the printed value of n in the specified base, and returns a reference to the string.
+
+The base is 10 by default and must be between 2 and 36. For bases other than 10, n is treated as an unsigned integer.
+
+
+  QString str;
+  str.setNum(1234);       // str == "1234"
+
+
+
+The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
+*/
+impl /*struct*/ QString {
+  pub fn setNum_9<RetType, T: QString_setNum_9<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setNum_9(self);
+    // return 1;
+  }
+}
+pub trait QString_setNum_9<RetType> {
+  fn setNum_9(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_setNum_9<usize> for (f64,i8,i32) {
+  fn setNum_9(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const f64 as usize;
+    let arg1 = (&self.1) as *const i8 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString6setNumEdci", 3,qtrt::FFITY_DOUBLE,qtrt::FFITY_SINT8,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qstring.h:649
+// index:0
+// Public static Visibility=Default Availability=Available
+// [8] QString number(int, int)
+
+/*
+Returns a string equivalent of the number n according to the specified base.
+
+The base is 10 by default and must be between 2 and 36. For bases other than 10, n is treated as an unsigned integer.
+
+The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
+
+
+  long a = 63;
+  QString s = QString::number(a, 16);             // s == "3f"
+  QString t = QString::number(a, 16).toUpper();     // t == "3F"
+
+
 
-  // proto:  uchar QCharRef::cell();
-impl<'a> /*trait*/ QCharRef_cell<u8> for () {
-  fn cell(self , rsthis: & QCharRef) -> u8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QCharRef4cellEv()};
-    let mut ret = unsafe {C_ZNK8QCharRef4cellEv(rsthis.qclsinst)};
-    return ret as u8; // 1
+See also setNum().
+*/
+impl /*struct*/ QString {
+  pub fn number_0<RetType, T: QString_number_0<RetType>>( overload_args: T) -> RetType {
+    return overload_args.number_0();
     // return 1;
   }
 }
-
-  // proto:  QString QCharRef::decomposition();
-impl /*struct*/ QCharRef {
-  pub fn decomposition<RetType, T: QCharRef_decomposition<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.decomposition(self);
+pub trait QString_number_0<RetType> {
+  fn number_0(self ) -> RetType;
+}
+impl<'a> /*trait*/ QString_number_0<usize> for (i32,i32) {
+  fn number_0(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i32 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString6numberEii", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QCharRef_decomposition<RetType> {
-  fn decomposition(self , rsthis: & QCharRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qstring.h:650
+// index:1
+// Public static Visibility=Default Availability=Available
+// [8] QString number(uint, int)
 
-  // proto:  QString QCharRef::decomposition();
-impl<'a> /*trait*/ QCharRef_decomposition<QString> for () {
-  fn decomposition(self , rsthis: & QCharRef) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QCharRef13decompositionEv()};
-    let mut ret = unsafe {C_ZNK8QCharRef13decompositionEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
-}
+/*
+Returns a string equivalent of the number n according to the specified base.
 
-  // proto:  uchar QCharRef::combiningClass();
-impl /*struct*/ QCharRef {
-  pub fn combiningClass<RetType, T: QCharRef_combiningClass<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.combiningClass(self);
-    // return 1;
-  }
-}
+The base is 10 by default and must be between 2 and 36. For bases other than 10, n is treated as an unsigned integer.
 
-pub trait QCharRef_combiningClass<RetType> {
-  fn combiningClass(self , rsthis: & QCharRef) -> RetType;
-}
+The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
+
+
+  long a = 63;
+  QString s = QString::number(a, 16);             // s == "3f"
+  QString t = QString::number(a, 16).toUpper();     // t == "3F"
 
-  // proto:  uchar QCharRef::combiningClass();
-impl<'a> /*trait*/ QCharRef_combiningClass<u8> for () {
-  fn combiningClass(self , rsthis: & QCharRef) -> u8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QCharRef14combiningClassEv()};
-    let mut ret = unsafe {C_ZNK8QCharRef14combiningClassEv(rsthis.qclsinst)};
-    return ret as u8; // 1
+
+
+See also setNum().
+*/
+impl /*struct*/ QString {
+  pub fn number_1<RetType, T: QString_number_1<RetType>>( overload_args: T) -> RetType {
+    return overload_args.number_1();
     // return 1;
   }
 }
-
-  // proto:  QChar QCharRef::mirroredChar();
-impl /*struct*/ QCharRef {
-  pub fn mirroredChar<RetType, T: QCharRef_mirroredChar<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.mirroredChar(self);
+pub trait QString_number_1<RetType> {
+  fn number_1(self ) -> RetType;
+}
+impl<'a> /*trait*/ QString_number_1<usize> for (u32,i32) {
+  fn number_1(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const u32 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString6numberEji", 2,qtrt::FFITY_UINT32,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QCharRef_mirroredChar<RetType> {
-  fn mirroredChar(self , rsthis: & QCharRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qstring.h:651
+// index:2
+// Public static Visibility=Default Availability=Available
+// [8] QString number(long, int)
+
+/*
+Returns a string equivalent of the number n according to the specified base.
+
+The base is 10 by default and must be between 2 and 36. For bases other than 10, n is treated as an unsigned integer.
+
+The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
+
+
+  long a = 63;
+  QString s = QString::number(a, 16);             // s == "3f"
+  QString t = QString::number(a, 16).toUpper();     // t == "3F"
+
+
 
-  // proto:  QChar QCharRef::mirroredChar();
-impl<'a> /*trait*/ QCharRef_mirroredChar<QChar> for () {
-  fn mirroredChar(self , rsthis: & QCharRef) -> QChar {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QCharRef12mirroredCharEv()};
-    let mut ret = unsafe {C_ZNK8QCharRef12mirroredCharEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret as u64);
-    return ret1;
+See also setNum().
+*/
+impl /*struct*/ QString {
+  pub fn number_2<RetType, T: QString_number_2<RetType>>( overload_args: T) -> RetType {
+    return overload_args.number_2();
     // return 1;
   }
 }
-
-  // proto:  bool QCharRef::isSpace();
-impl /*struct*/ QCharRef {
-  pub fn isSpace<RetType, T: QCharRef_isSpace<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isSpace(self);
+pub trait QString_number_2<RetType> {
+  fn number_2(self ) -> RetType;
+}
+impl<'a> /*trait*/ QString_number_2<usize> for (i64,i32) {
+  fn number_2(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i64 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString6numberEli", 2,qtrt::FFITY_SINT64,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QCharRef_isSpace<RetType> {
-  fn isSpace(self , rsthis: & QCharRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qstring.h:652
+// index:3
+// Public static Visibility=Default Availability=Available
+// [8] QString number(ulong, int)
+
+/*
+Returns a string equivalent of the number n according to the specified base.
+
+The base is 10 by default and must be between 2 and 36. For bases other than 10, n is treated as an unsigned integer.
+
+The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
+
+
+  long a = 63;
+  QString s = QString::number(a, 16);             // s == "3f"
+  QString t = QString::number(a, 16).toUpper();     // t == "3F"
 
-  // proto:  bool QCharRef::isSpace();
-impl<'a> /*trait*/ QCharRef_isSpace<i8> for () {
-  fn isSpace(self , rsthis: & QCharRef) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QCharRef7isSpaceEv()};
-    let mut ret = unsafe {C_ZNK8QCharRef7isSpaceEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+
+
+See also setNum().
+*/
+impl /*struct*/ QString {
+  pub fn number_3<RetType, T: QString_number_3<RetType>>( overload_args: T) -> RetType {
+    return overload_args.number_3();
     // return 1;
   }
 }
-
-  // proto:  bool QCharRef::isPunct();
-impl /*struct*/ QCharRef {
-  pub fn isPunct<RetType, T: QCharRef_isPunct<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isPunct(self);
+pub trait QString_number_3<RetType> {
+  fn number_3(self ) -> RetType;
+}
+impl<'a> /*trait*/ QString_number_3<usize> for (u64,i32) {
+  fn number_3(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const u64 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString6numberEmi", 2,qtrt::FFITY_UINT64,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QCharRef_isPunct<RetType> {
-  fn isPunct(self , rsthis: & QCharRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qstring.h:653
+// index:4
+// Public static Visibility=Default Availability=Available
+// [8] QString number(qlonglong, int)
+
+/*
+Returns a string equivalent of the number n according to the specified base.
+
+The base is 10 by default and must be between 2 and 36. For bases other than 10, n is treated as an unsigned integer.
+
+The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
 
-  // proto:  bool QCharRef::isPunct();
-impl<'a> /*trait*/ QCharRef_isPunct<i8> for () {
-  fn isPunct(self , rsthis: & QCharRef) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QCharRef7isPunctEv()};
-    let mut ret = unsafe {C_ZNK8QCharRef7isPunctEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+
+  long a = 63;
+  QString s = QString::number(a, 16);             // s == "3f"
+  QString t = QString::number(a, 16).toUpper();     // t == "3F"
+
+
+
+See also setNum().
+*/
+impl /*struct*/ QString {
+  pub fn number_4<RetType, T: QString_number_4<RetType>>( overload_args: T) -> RetType {
+    return overload_args.number_4();
     // return 1;
   }
 }
-
-  // proto:  QChar QCharRef::toUpper();
-impl /*struct*/ QCharRef {
-  pub fn toUpper<RetType, T: QCharRef_toUpper<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toUpper(self);
+pub trait QString_number_4<RetType> {
+  fn number_4(self ) -> RetType;
+}
+impl<'a> /*trait*/ QString_number_4<usize> for (i64,i32) {
+  fn number_4(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const i64 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString6numberExi", 2,qtrt::FFITY_SINT64,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QCharRef_toUpper<RetType> {
-  fn toUpper(self , rsthis: & QCharRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qstring.h:654
+// index:5
+// Public static Visibility=Default Availability=Available
+// [8] QString number(qulonglong, int)
+
+/*
+Returns a string equivalent of the number n according to the specified base.
 
-  // proto:  QChar QCharRef::toUpper();
-impl<'a> /*trait*/ QCharRef_toUpper<QChar> for () {
-  fn toUpper(self , rsthis: & QCharRef) -> QChar {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QCharRef7toUpperEv()};
-    let mut ret = unsafe {C_ZNK8QCharRef7toUpperEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret as u64);
-    return ret1;
+The base is 10 by default and must be between 2 and 36. For bases other than 10, n is treated as an unsigned integer.
+
+The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
+
+
+  long a = 63;
+  QString s = QString::number(a, 16);             // s == "3f"
+  QString t = QString::number(a, 16).toUpper();     // t == "3F"
+
+
+
+See also setNum().
+*/
+impl /*struct*/ QString {
+  pub fn number_5<RetType, T: QString_number_5<RetType>>( overload_args: T) -> RetType {
+    return overload_args.number_5();
     // return 1;
   }
 }
-
-  // proto:  bool QCharRef::isLower();
-impl /*struct*/ QCharRef {
-  pub fn isLower<RetType, T: QCharRef_isLower<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isLower(self);
+pub trait QString_number_5<RetType> {
+  fn number_5(self ) -> RetType;
+}
+impl<'a> /*trait*/ QString_number_5<usize> for (u64,i32) {
+  fn number_5(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const u64 as usize;
+    let arg1 = (&self.1) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString6numberEyi", 2,qtrt::FFITY_UINT64,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QCharRef_isLower<RetType> {
-  fn isLower(self , rsthis: & QCharRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qstring.h:655
+// index:6
+// Public static Visibility=Default Availability=Available
+// [8] QString number(double, char, int)
+
+/*
+Returns a string equivalent of the number n according to the specified base.
+
+The base is 10 by default and must be between 2 and 36. For bases other than 10, n is treated as an unsigned integer.
+
+The formatting always uses QLocale::C, i.e., English/UnitedStates. To get a localized string representation of a number, use QLocale::toString() with the appropriate locale.
+
+
+  long a = 63;
+  QString s = QString::number(a, 16);             // s == "3f"
+  QString t = QString::number(a, 16).toUpper();     // t == "3F"
+
+
 
-  // proto:  bool QCharRef::isLower();
-impl<'a> /*trait*/ QCharRef_isLower<i8> for () {
-  fn isLower(self , rsthis: & QCharRef) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QCharRef7isLowerEv()};
-    let mut ret = unsafe {C_ZNK8QCharRef7isLowerEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+See also setNum().
+*/
+impl /*struct*/ QString {
+  pub fn number_6<RetType, T: QString_number_6<RetType>>( overload_args: T) -> RetType {
+    return overload_args.number_6();
     // return 1;
   }
 }
-
-impl /*struct*/ QStringRef {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QStringRef {
-    return QStringRef{qclsinst: qthis, ..Default::default()};
-  }
+pub trait QString_number_6<RetType> {
+  fn number_6(self ) -> RetType;
 }
-  // proto:  short QStringRef::toShort(bool * ok, int base);
-impl /*struct*/ QStringRef {
-  pub fn toShort<RetType, T: QStringRef_toShort<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toShort(self);
+impl<'a> /*trait*/ QString_number_6<usize> for (f64,i8,i32) {
+  fn number_6(self ) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0) as *const f64 as usize;
+    let arg1 = (&self.1) as *const i8 as usize;
+    let arg2 = (&self.2) as *const i32 as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString6numberEdci", 3,qtrt::FFITY_DOUBLE,qtrt::FFITY_SINT8,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-pub trait QStringRef_toShort<RetType> {
-  fn toShort(self , rsthis: & QStringRef) -> RetType;
-}
+// /usr/include/qt/QtCore/qstring.h:664
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator==(QLatin1String) const
 
-  // proto:  short QStringRef::toShort(bool * ok, int base);
-impl<'a> /*trait*/ QStringRef_toShort<i16> for (Option<&'a mut Vec<i8>>, Option<i32>) {
-  fn toShort(self , rsthis: & QStringRef) -> i16 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef7toShortEPbi()};
-    let arg0 = (if self.0.is_none() {0 as *const i8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK10QStringRef7toShortEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i16; // 1
-    // return 1;
-  }
-}
+/*
 
-  // proto:  void QStringRef::QStringRef(const QString * string);
-impl /*struct*/ QStringRef {
-  pub fn new<T: QStringRef_new>(value: T) -> QStringRef {
-    let rsthis = value.new();
-    return rsthis;
+*/
+impl /*struct*/ QString {
+  pub fn operator_equal_equal_0<RetType, T: QString_operator_equal_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_equal_0(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_new {
-  fn new(self) -> QStringRef;
+pub trait QString_operator_equal_equal_0<RetType> {
+  fn operator_equal_equal_0(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  void QStringRef::QStringRef(const QString * string);
-impl<'a> /*trait*/ QStringRef_new for (&'a QString) {
-  fn new(self) -> QStringRef {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QStringRefC2EPK7QString()};
-    let ctysz: c_int = unsafe{QStringRef_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    let qthis: u64 = unsafe {C_ZN10QStringRefC2EPK7QString(arg0)};
-    let rsthis = QStringRef{qclsinst: qthis, ..Default::default()};
-    return rsthis;
+impl<'a> /*trait*/ QString_operator_equal_equal_0<bool> for (usize) {
+  fn operator_equal_equal_0(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QStringeqE13QLatin1String", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  qulonglong QStringRef::toULongLong(bool * ok, int base);
-impl /*struct*/ QStringRef {
-  pub fn toULongLong<RetType, T: QStringRef_toULongLong<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toULongLong(self);
+// /usr/include/qt/QtCore/qstring.h:715
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator==(const char *) const
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_equal_equal_1<RetType, T: QString_operator_equal_equal_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_equal_1(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_toULongLong<RetType> {
-  fn toULongLong(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_operator_equal_equal_1<RetType> {
+  fn operator_equal_equal_1(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  qulonglong QStringRef::toULongLong(bool * ok, int base);
-impl<'a> /*trait*/ QStringRef_toULongLong<u64> for (Option<&'a mut Vec<i8>>, Option<i32>) {
-  fn toULongLong(self , rsthis: & QStringRef) -> u64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef11toULongLongEPbi()};
-    let arg0 = (if self.0.is_none() {0 as *const i8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK10QStringRef11toULongLongEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as u64; // 1
+impl<'a> /*trait*/ QString_operator_equal_equal_1<bool> for (usize) {
+  fn operator_equal_equal_1(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QStringeqEPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  void QStringRef::clear();
-impl /*struct*/ QStringRef {
-  pub fn clear<RetType, T: QStringRef_clear<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.clear(self);
+// /usr/include/qt/QtCore/qstring.h:722
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator==(const QByteArray &) const
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_equal_equal_2<RetType, T: QString_operator_equal_equal_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_equal_equal_2(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_clear<RetType> {
-  fn clear(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_operator_equal_equal_2<RetType> {
+  fn operator_equal_equal_2(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  void QStringRef::clear();
-impl<'a> /*trait*/ QStringRef_clear<()> for () {
-  fn clear(self , rsthis: & QStringRef) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QStringRef5clearEv()};
-     unsafe {C_ZN10QStringRef5clearEv(rsthis.qclsinst)};
+impl<'a> /*trait*/ QString_operator_equal_equal_2<bool> for (usize) {
+  fn operator_equal_equal_2(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QStringeqERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  int QStringRef::position();
-impl /*struct*/ QStringRef {
-  pub fn position<RetType, T: QStringRef_position<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.position(self);
+// /usr/include/qt/QtCore/qstring.h:665
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator<(QLatin1String) const
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_less_than_0<RetType, T: QString_operator_less_than_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_less_than_0(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_position<RetType> {
-  fn position(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_operator_less_than_0<RetType> {
+  fn operator_less_than_0(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  int QStringRef::position();
-impl<'a> /*trait*/ QStringRef_position<i32> for () {
-  fn position(self , rsthis: & QStringRef) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef8positionEv()};
-    let mut ret = unsafe {C_ZNK10QStringRef8positionEv(rsthis.qclsinst)};
-    return ret as i32; // 1
+impl<'a> /*trait*/ QString_operator_less_than_0<bool> for (usize) {
+  fn operator_less_than_0(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QStringltE13QLatin1String", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  long QStringRef::toLong(bool * ok, int base);
-impl /*struct*/ QStringRef {
-  pub fn toLong<RetType, T: QStringRef_toLong<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toLong(self);
+// /usr/include/qt/QtCore/qstring.h:717
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator<(const char *) const
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_less_than_1<RetType, T: QString_operator_less_than_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_less_than_1(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_toLong<RetType> {
-  fn toLong(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_operator_less_than_1<RetType> {
+  fn operator_less_than_1(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  long QStringRef::toLong(bool * ok, int base);
-impl<'a> /*trait*/ QStringRef_toLong<i64> for (Option<&'a mut Vec<i8>>, Option<i32>) {
-  fn toLong(self , rsthis: & QStringRef) -> i64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef6toLongEPbi()};
-    let arg0 = (if self.0.is_none() {0 as *const i8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK10QStringRef6toLongEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i64; // 1
+impl<'a> /*trait*/ QString_operator_less_than_1<bool> for (usize) {
+  fn operator_less_than_1(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QStringltEPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  const QChar * QStringRef::cbegin();
-impl /*struct*/ QStringRef {
-  pub fn cbegin<RetType, T: QStringRef_cbegin<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.cbegin(self);
+// /usr/include/qt/QtCore/qstring.h:724
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator<(const QByteArray &) const
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_less_than_2<RetType, T: QString_operator_less_than_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_less_than_2(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_cbegin<RetType> {
-  fn cbegin(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_operator_less_than_2<RetType> {
+  fn operator_less_than_2(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  const QChar * QStringRef::cbegin();
-impl<'a> /*trait*/ QStringRef_cbegin<QChar> for () {
-  fn cbegin(self , rsthis: & QStringRef) -> QChar {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef6cbeginEv()};
-    let mut ret = unsafe {C_ZNK10QStringRef6cbeginEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QString_operator_less_than_2<bool> for (usize) {
+  fn operator_less_than_2(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QStringltERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  ushort QStringRef::toUShort(bool * ok, int base);
-impl /*struct*/ QStringRef {
-  pub fn toUShort<RetType, T: QStringRef_toUShort<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toUShort(self);
+// /usr/include/qt/QtCore/qstring.h:666
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool operator>(QLatin1String) const
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_greater_than_0<RetType, T: QString_operator_greater_than_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_greater_than_0(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_toUShort<RetType> {
-  fn toUShort(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_operator_greater_than_0<RetType> {
+  fn operator_greater_than_0(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  ushort QStringRef::toUShort(bool * ok, int base);
-impl<'a> /*trait*/ QStringRef_toUShort<u16> for (Option<&'a mut Vec<i8>>, Option<i32>) {
-  fn toUShort(self , rsthis: & QStringRef) -> u16 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef8toUShortEPbi()};
-    let arg0 = (if self.0.is_none() {0 as *const i8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK10QStringRef8toUShortEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as u16; // 1
+impl<'a> /*trait*/ QString_operator_greater_than_0<bool> for (usize) {
+  fn operator_greater_than_0(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QStringgtE13QLatin1String", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  uint QStringRef::toUInt(bool * ok, int base);
-impl /*struct*/ QStringRef {
-  pub fn toUInt<RetType, T: QStringRef_toUInt<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toUInt(self);
+// /usr/include/qt/QtCore/qstring.h:719
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator>(const char *) const
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_greater_than_1<RetType, T: QString_operator_greater_than_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_greater_than_1(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_toUInt<RetType> {
-  fn toUInt(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_operator_greater_than_1<RetType> {
+  fn operator_greater_than_1(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  uint QStringRef::toUInt(bool * ok, int base);
-impl<'a> /*trait*/ QStringRef_toUInt<u32> for (Option<&'a mut Vec<i8>>, Option<i32>) {
-  fn toUInt(self , rsthis: & QStringRef) -> u32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef6toUIntEPbi()};
-    let arg0 = (if self.0.is_none() {0 as *const i8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK10QStringRef6toUIntEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as u32; // 1
+impl<'a> /*trait*/ QString_operator_greater_than_1<bool> for (usize) {
+  fn operator_greater_than_1(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QStringgtEPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  bool QStringRef::isEmpty();
-impl /*struct*/ QStringRef {
-  pub fn isEmpty<RetType, T: QStringRef_isEmpty<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isEmpty(self);
+// /usr/include/qt/QtCore/qstring.h:725
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator>(const QByteArray &) const
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_greater_than_2<RetType, T: QString_operator_greater_than_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_greater_than_2(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_isEmpty<RetType> {
-  fn isEmpty(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_operator_greater_than_2<RetType> {
+  fn operator_greater_than_2(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  bool QStringRef::isEmpty();
-impl<'a> /*trait*/ QStringRef_isEmpty<i8> for () {
-  fn isEmpty(self , rsthis: & QStringRef) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef7isEmptyEv()};
-    let mut ret = unsafe {C_ZNK10QStringRef7isEmptyEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+impl<'a> /*trait*/ QString_operator_greater_than_2<bool> for (usize) {
+  fn operator_greater_than_2(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QStringgtERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  int QStringRef::localeAwareCompare(const QString & s);
-impl /*struct*/ QStringRef {
-  pub fn localeAwareCompare<RetType, T: QStringRef_localeAwareCompare<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.localeAwareCompare(self);
+// /usr/include/qt/QtCore/qstring.h:667
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(QLatin1String) const
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_not_equal_0<RetType, T: QString_operator_not_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_not_equal_0(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_localeAwareCompare<RetType> {
-  fn localeAwareCompare(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_operator_not_equal_0<RetType> {
+  fn operator_not_equal_0(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  int QStringRef::localeAwareCompare(const QString & s);
-impl<'a> /*trait*/ QStringRef_localeAwareCompare<i32> for (&'a QString) {
-  fn localeAwareCompare(self , rsthis: & QStringRef) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef18localeAwareCompareERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK10QStringRef18localeAwareCompareERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i32; // 1
+impl<'a> /*trait*/ QString_operator_not_equal_0<bool> for (usize) {
+  fn operator_not_equal_0(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QStringneE13QLatin1String", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  QByteArray QStringRef::toUtf8();
-impl /*struct*/ QStringRef {
-  pub fn toUtf8<RetType, T: QStringRef_toUtf8<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toUtf8(self);
+// /usr/include/qt/QtCore/qstring.h:716
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const char *) const
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_not_equal_1<RetType, T: QString_operator_not_equal_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_not_equal_1(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_toUtf8<RetType> {
-  fn toUtf8(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_operator_not_equal_1<RetType> {
+  fn operator_not_equal_1(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  QByteArray QStringRef::toUtf8();
-impl<'a> /*trait*/ QStringRef_toUtf8<QByteArray> for () {
-  fn toUtf8(self , rsthis: & QStringRef) -> QByteArray {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef6toUtf8Ev()};
-    let mut ret = unsafe {C_ZNK10QStringRef6toUtf8Ev(rsthis.qclsinst)};
-    let mut ret1 = QByteArray::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QString_operator_not_equal_1<bool> for (usize) {
+  fn operator_not_equal_1(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QStringneEPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  int QStringRef::size();
-impl /*struct*/ QStringRef {
-  pub fn size<RetType, T: QStringRef_size<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.size(self);
+// /usr/include/qt/QtCore/qstring.h:723
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator!=(const QByteArray &) const
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_not_equal_2<RetType, T: QString_operator_not_equal_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_not_equal_2(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_size<RetType> {
-  fn size(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_operator_not_equal_2<RetType> {
+  fn operator_not_equal_2(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  int QStringRef::size();
-impl<'a> /*trait*/ QStringRef_size<i32> for () {
-  fn size(self , rsthis: & QStringRef) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef4sizeEv()};
-    let mut ret = unsafe {C_ZNK10QStringRef4sizeEv(rsthis.qclsinst)};
-    return ret as i32; // 1
+impl<'a> /*trait*/ QString_operator_not_equal_2<bool> for (usize) {
+  fn operator_not_equal_2(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QStringneERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  const QChar * QStringRef::constData();
-impl /*struct*/ QStringRef {
-  pub fn constData<RetType, T: QStringRef_constData<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.constData(self);
+// /usr/include/qt/QtCore/qstring.h:668
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator<=(QLatin1String) const
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_less_than_equal_0<RetType, T: QString_operator_less_than_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_less_than_equal_0(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_constData<RetType> {
-  fn constData(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_operator_less_than_equal_0<RetType> {
+  fn operator_less_than_equal_0(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  const QChar * QStringRef::constData();
-impl<'a> /*trait*/ QStringRef_constData<QChar> for () {
-  fn constData(self , rsthis: & QStringRef) -> QChar {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef9constDataEv()};
-    let mut ret = unsafe {C_ZNK10QStringRef9constDataEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QString_operator_less_than_equal_0<bool> for (usize) {
+  fn operator_less_than_equal_0(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QStringleE13QLatin1String", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  QStringRef QStringRef::left(int n);
-impl /*struct*/ QStringRef {
-  pub fn left<RetType, T: QStringRef_left<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.left(self);
+// /usr/include/qt/QtCore/qstring.h:718
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator<=(const char *) const
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_less_than_equal_1<RetType, T: QString_operator_less_than_equal_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_less_than_equal_1(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_left<RetType> {
-  fn left(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_operator_less_than_equal_1<RetType> {
+  fn operator_less_than_equal_1(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  QStringRef QStringRef::left(int n);
-impl<'a> /*trait*/ QStringRef_left<QStringRef> for (i32) {
-  fn left(self , rsthis: & QStringRef) -> QStringRef {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef4leftEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZNK10QStringRef4leftEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QStringRef::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QString_operator_less_than_equal_1<bool> for (usize) {
+  fn operator_less_than_equal_1(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QStringleEPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  QVector<uint> QStringRef::toUcs4();
-impl /*struct*/ QStringRef {
-  pub fn toUcs4<RetType, T: QStringRef_toUcs4<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toUcs4(self);
+// /usr/include/qt/QtCore/qstring.h:726
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator<=(const QByteArray &) const
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_less_than_equal_2<RetType, T: QString_operator_less_than_equal_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_less_than_equal_2(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_toUcs4<RetType> {
-  fn toUcs4(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_operator_less_than_equal_2<RetType> {
+  fn operator_less_than_equal_2(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  QVector<uint> QStringRef::toUcs4();
-impl<'a> /*trait*/ QStringRef_toUcs4<u64> for () {
-  fn toUcs4(self , rsthis: & QStringRef) -> u64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef6toUcs4Ev()};
-    let mut ret = unsafe {C_ZNK10QStringRef6toUcs4Ev(rsthis.qclsinst)};
-    return ret as u64; // 5
+impl<'a> /*trait*/ QString_operator_less_than_equal_2<bool> for (usize) {
+  fn operator_less_than_equal_2(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QStringleERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  int QStringRef::count();
-impl /*struct*/ QStringRef {
-  pub fn count<RetType, T: QStringRef_count<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.count(self);
+// /usr/include/qt/QtCore/qstring.h:669
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator>=(QLatin1String) const
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_greater_than_equal_0<RetType, T: QString_operator_greater_than_equal_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_greater_than_equal_0(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_count<RetType> {
-  fn count(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_operator_greater_than_equal_0<RetType> {
+  fn operator_greater_than_equal_0(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  int QStringRef::count();
-impl<'a> /*trait*/ QStringRef_count<i32> for () {
-  fn count(self , rsthis: & QStringRef) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef5countEv()};
-    let mut ret = unsafe {C_ZNK10QStringRef5countEv(rsthis.qclsinst)};
-    return ret as i32; // 1
+impl<'a> /*trait*/ QString_operator_greater_than_equal_0<bool> for (usize) {
+  fn operator_greater_than_equal_0(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QStringgeE13QLatin1String", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  void QStringRef::QStringRef(const QString * string, int position, int size);
-impl<'a> /*trait*/ QStringRef_new for (&'a QString, i32, i32) {
-  fn new(self) -> QStringRef {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QStringRefC2EPK7QStringii()};
-    let ctysz: c_int = unsafe{QStringRef_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2  as c_int;
-    let qthis: u64 = unsafe {C_ZN10QStringRefC2EPK7QStringii(arg0, arg1, arg2)};
-    let rsthis = QStringRef{qclsinst: qthis, ..Default::default()};
-    return rsthis;
+// /usr/include/qt/QtCore/qstring.h:720
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator>=(const char *) const
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_greater_than_equal_1<RetType, T: QString_operator_greater_than_equal_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_greater_than_equal_1(self);
     // return 1;
   }
 }
-
-  // proto:  void QStringRef::QStringRef();
-impl<'a> /*trait*/ QStringRef_new for () {
-  fn new(self) -> QStringRef {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QStringRefC2Ev()};
-    let ctysz: c_int = unsafe{QStringRef_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let qthis: u64 = unsafe {C_ZN10QStringRefC2Ev()};
-    let rsthis = QStringRef{qclsinst: qthis, ..Default::default()};
-    return rsthis;
+pub trait QString_operator_greater_than_equal_1<RetType> {
+  fn operator_greater_than_equal_1(self , rsthis: & QString) -> RetType;
+}
+impl<'a> /*trait*/ QString_operator_greater_than_equal_1<bool> for (usize) {
+  fn operator_greater_than_equal_1(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (self) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QStringgeEPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  QStringRef QStringRef::right(int n);
-impl /*struct*/ QStringRef {
-  pub fn right<RetType, T: QStringRef_right<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.right(self);
+// /usr/include/qt/QtCore/qstring.h:727
+// index:2
+// Public inline Visibility=Default Availability=Available
+// [1] bool operator>=(const QByteArray &) const
+
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn operator_greater_than_equal_2<RetType, T: QString_operator_greater_than_equal_2<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.operator_greater_than_equal_2(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_right<RetType> {
-  fn right(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_operator_greater_than_equal_2<RetType> {
+  fn operator_greater_than_equal_2(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  QStringRef QStringRef::right(int n);
-impl<'a> /*trait*/ QStringRef_right<QStringRef> for (i32) {
-  fn right(self , rsthis: & QStringRef) -> QStringRef {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef5rightEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZNK10QStringRef5rightEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QStringRef::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QString_operator_greater_than_equal_2<bool> for (usize) {
+  fn operator_greater_than_equal_2(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QStringgeERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  const QChar QStringRef::at(int i);
-impl /*struct*/ QStringRef {
-  pub fn at<RetType, T: QStringRef_at<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.at(self);
+// /usr/include/qt/QtCore/qstring.h:750
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QString::iterator begin()
+
+/*
+Returns an STL-style iterator pointing to the first character in the string.
+
+See also constBegin() and end().
+*/
+impl /*struct*/ QString {
+  pub fn begin_0<RetType, T: QString_begin_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.begin_0(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_at<RetType> {
-  fn at(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_begin_0<RetType> {
+  fn begin_0(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  const QChar QStringRef::at(int i);
-impl<'a> /*trait*/ QStringRef_at<QChar> for (i32) {
-  fn at(self , rsthis: & QStringRef) -> QChar {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef2atEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {C_ZNK10QStringRef2atEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QChar::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QString_begin_0<usize> for () {
+  fn begin_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString5beginEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  double QStringRef::toDouble(bool * ok);
-impl /*struct*/ QStringRef {
-  pub fn toDouble<RetType, T: QStringRef_toDouble<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toDouble(self);
+// /usr/include/qt/QtCore/qstring.h:751
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QString::const_iterator begin() const
+
+/*
+Returns an STL-style iterator pointing to the first character in the string.
+
+See also constBegin() and end().
+*/
+impl /*struct*/ QString {
+  pub fn begin_1<RetType, T: QString_begin_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.begin_1(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_toDouble<RetType> {
-  fn toDouble(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_begin_1<RetType> {
+  fn begin_1(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  double QStringRef::toDouble(bool * ok);
-impl<'a> /*trait*/ QStringRef_toDouble<f64> for (Option<&'a mut Vec<i8>>) {
-  fn toDouble(self , rsthis: & QStringRef) -> f64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef8toDoubleEPb()};
-    let arg0 = (if self.is_none() {0 as *const i8} else {self.unwrap().as_ptr()})  as *mut c_char;
-    let mut ret = unsafe {C_ZNK10QStringRef8toDoubleEPb(rsthis.qclsinst, arg0)};
-    return ret as f64; // 1
+impl<'a> /*trait*/ QString_begin_1<usize> for () {
+  fn begin_1(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString5beginEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
 
-  // proto:  bool QStringRef::isNull();
-impl /*struct*/ QStringRef {
-  pub fn isNull<RetType, T: QStringRef_isNull<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isNull(self);
+// /usr/include/qt/QtCore/qstring.h:752
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QString::const_iterator cbegin() const
+
+/*
+Returns a const STL-style iterator pointing to the first character in the string.
+
+This function was introduced in  Qt 5.0.
+
+See also begin() and cend().
+*/
+impl /*struct*/ QString {
+  pub fn cbegin_0<RetType, T: QString_cbegin_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.cbegin_0(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_isNull<RetType> {
-  fn isNull(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_cbegin_0<RetType> {
+  fn cbegin_0(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  bool QStringRef::isNull();
-impl<'a> /*trait*/ QStringRef_isNull<i8> for () {
-  fn isNull(self , rsthis: & QStringRef) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef6isNullEv()};
-    let mut ret = unsafe {C_ZNK10QStringRef6isNullEv(rsthis.qclsinst)};
-    return ret as i8; // 1
+impl<'a> /*trait*/ QString_cbegin_0<usize> for () {
+  fn cbegin_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString6cbeginEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
+
+// /usr/include/qt/QtCore/qstring.h:753
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QString::const_iterator constBegin() const
 
-  // proto:  const QChar * QStringRef::data();
-impl /*struct*/ QStringRef {
-  pub fn data<RetType, T: QStringRef_data<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.data(self);
+/*
+Returns a const STL-style iterator pointing to the first character in the string.
+
+See also begin() and constEnd().
+*/
+impl /*struct*/ QString {
+  pub fn constBegin_0<RetType, T: QString_constBegin_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.constBegin_0(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_data<RetType> {
-  fn data(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_constBegin_0<RetType> {
+  fn constBegin_0(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  const QChar * QStringRef::data();
-impl<'a> /*trait*/ QStringRef_data<QChar> for () {
-  fn data(self , rsthis: & QStringRef) -> QChar {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef4dataEv()};
-    let mut ret = unsafe {C_ZNK10QStringRef4dataEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QString_constBegin_0<usize> for () {
+  fn constBegin_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString10constBeginEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
+
+// /usr/include/qt/QtCore/qstring.h:754
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QString::iterator end()
 
-  // proto:  qlonglong QStringRef::toLongLong(bool * ok, int base);
-impl /*struct*/ QStringRef {
-  pub fn toLongLong<RetType, T: QStringRef_toLongLong<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toLongLong(self);
+/*
+Returns an STL-style iterator pointing to the imaginary character after the last character in the string.
+
+See also begin() and constEnd().
+*/
+impl /*struct*/ QString {
+  pub fn end_0<RetType, T: QString_end_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.end_0(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_toLongLong<RetType> {
-  fn toLongLong(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_end_0<RetType> {
+  fn end_0(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  qlonglong QStringRef::toLongLong(bool * ok, int base);
-impl<'a> /*trait*/ QStringRef_toLongLong<i64> for (Option<&'a mut Vec<i8>>, Option<i32>) {
-  fn toLongLong(self , rsthis: & QStringRef) -> i64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef10toLongLongEPbi()};
-    let arg0 = (if self.0.is_none() {0 as *const i8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK10QStringRef10toLongLongEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i64; // 1
+impl<'a> /*trait*/ QString_end_0<usize> for () {
+  fn end_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QString3endEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
+
+// /usr/include/qt/QtCore/qstring.h:755
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [8] QString::const_iterator end() const
 
-  // proto:  QByteArray QStringRef::toLatin1();
-impl /*struct*/ QStringRef {
-  pub fn toLatin1<RetType, T: QStringRef_toLatin1<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toLatin1(self);
+/*
+Returns an STL-style iterator pointing to the imaginary character after the last character in the string.
+
+See also begin() and constEnd().
+*/
+impl /*struct*/ QString {
+  pub fn end_1<RetType, T: QString_end_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.end_1(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_toLatin1<RetType> {
-  fn toLatin1(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_end_1<RetType> {
+  fn end_1(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  QByteArray QStringRef::toLatin1();
-impl<'a> /*trait*/ QStringRef_toLatin1<QByteArray> for () {
-  fn toLatin1(self , rsthis: & QStringRef) -> QByteArray {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef8toLatin1Ev()};
-    let mut ret = unsafe {C_ZNK10QStringRef8toLatin1Ev(rsthis.qclsinst)};
-    let mut ret1 = QByteArray::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QString_end_1<usize> for () {
+  fn end_1(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString3endEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
+
+// /usr/include/qt/QtCore/qstring.h:756
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QString::const_iterator cend() const
+
+/*
+Returns a const STL-style iterator pointing to the imaginary character after the last character in the list.
+
+This function was introduced in  Qt 5.0.
 
-  // proto:  const QChar * QStringRef::begin();
-impl /*struct*/ QStringRef {
-  pub fn begin<RetType, T: QStringRef_begin<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.begin(self);
+See also cbegin() and end().
+*/
+impl /*struct*/ QString {
+  pub fn cend_0<RetType, T: QString_cend_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.cend_0(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_begin<RetType> {
-  fn begin(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_cend_0<RetType> {
+  fn cend_0(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  const QChar * QStringRef::begin();
-impl<'a> /*trait*/ QStringRef_begin<QChar> for () {
-  fn begin(self , rsthis: & QStringRef) -> QChar {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef5beginEv()};
-    let mut ret = unsafe {C_ZNK10QStringRef5beginEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QString_cend_0<usize> for () {
+  fn cend_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString4cendEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
+
+// /usr/include/qt/QtCore/qstring.h:757
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [8] QString::const_iterator constEnd() const
+
+/*
+Returns a const STL-style iterator pointing to the imaginary character after the last character in the list.
 
-  // proto:  const QChar * QStringRef::unicode();
-impl /*struct*/ QStringRef {
-  pub fn unicode<RetType, T: QStringRef_unicode<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.unicode(self);
+See also constBegin() and end().
+*/
+impl /*struct*/ QString {
+  pub fn constEnd_0<RetType, T: QString_constEnd_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.constEnd_0(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_unicode<RetType> {
-  fn unicode(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_constEnd_0<RetType> {
+  fn constEnd_0(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  const QChar * QStringRef::unicode();
-impl<'a> /*trait*/ QStringRef_unicode<QChar> for () {
-  fn unicode(self , rsthis: & QStringRef) -> QChar {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef7unicodeEv()};
-    let mut ret = unsafe {C_ZNK10QStringRef7unicodeEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QString_constEnd_0<usize> for () {
+  fn constEnd_0(self , rsthis: & QString) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString8constEndEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: usize = Default::default(); return dret;
   }
 }
+
+// /usr/include/qt/QtCore/qstring.h:773
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void push_back(QChar)
+
+/*
+This function is provided for STL compatibility, appending the given other string onto the end of this string. It is equivalent to append(other).
 
-  // proto:  QStringRef QStringRef::mid(int pos, int n);
-impl /*struct*/ QStringRef {
-  pub fn mid<RetType, T: QStringRef_mid<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.mid(self);
+See also append().
+*/
+impl /*struct*/ QString {
+  pub fn push_back_0<RetType, T: QString_push_back_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.push_back_0(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_mid<RetType> {
-  fn mid(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_push_back_0<RetType> {
+  fn push_back_0(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  QStringRef QStringRef::mid(int pos, int n);
-impl<'a> /*trait*/ QStringRef_mid<QStringRef> for (i32, Option<i32>) {
-  fn mid(self , rsthis: & QStringRef) -> QStringRef {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef3midEii()};
-    let arg0 = self.0  as c_int;
-    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK10QStringRef3midEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QStringRef::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QString_push_back_0<(/*void*/)> for (usize) {
+  fn push_back_0(self , rsthis: & QString) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN7QString9push_backE5QChar", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
+
+// /usr/include/qt/QtCore/qstring.h:774
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [-2] void push_back(const QString &)
+
+/*
+This function is provided for STL compatibility, appending the given other string onto the end of this string. It is equivalent to append(other).
 
-  // proto:  float QStringRef::toFloat(bool * ok);
-impl /*struct*/ QStringRef {
-  pub fn toFloat<RetType, T: QStringRef_toFloat<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toFloat(self);
+See also append().
+*/
+impl /*struct*/ QString {
+  pub fn push_back_1<RetType, T: QString_push_back_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.push_back_1(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_toFloat<RetType> {
-  fn toFloat(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_push_back_1<RetType> {
+  fn push_back_1(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  float QStringRef::toFloat(bool * ok);
-impl<'a> /*trait*/ QStringRef_toFloat<f32> for (Option<&'a mut Vec<i8>>) {
-  fn toFloat(self , rsthis: & QStringRef) -> f32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef7toFloatEPb()};
-    let arg0 = (if self.is_none() {0 as *const i8} else {self.unwrap().as_ptr()})  as *mut c_char;
-    let mut ret = unsafe {C_ZNK10QStringRef7toFloatEPb(rsthis.qclsinst, arg0)};
-    return ret as f32; // 1
+impl<'a> /*trait*/ QString_push_back_1<(/*void*/)> for (usize) {
+  fn push_back_1(self , rsthis: & QString) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN7QString9push_backERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
+
+// /usr/include/qt/QtCore/qstring.h:775
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void push_front(QChar)
+
+/*
+This function is provided for STL compatibility, prepending the given other string to the beginning of this string. It is equivalent to prepend(other).
 
-  // proto:  const QString * QStringRef::string();
-impl /*struct*/ QStringRef {
-  pub fn string<RetType, T: QStringRef_string<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.string(self);
+See also prepend().
+*/
+impl /*struct*/ QString {
+  pub fn push_front_0<RetType, T: QString_push_front_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.push_front_0(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_string<RetType> {
-  fn string(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_push_front_0<RetType> {
+  fn push_front_0(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  const QString * QStringRef::string();
-impl<'a> /*trait*/ QStringRef_string<QString> for () {
-  fn string(self , rsthis: & QStringRef) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef6stringEv()};
-    let mut ret = unsafe {C_ZNK10QStringRef6stringEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QString_push_front_0<(/*void*/)> for (usize) {
+  fn push_front_0(self , rsthis: & QString) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN7QString10push_frontE5QChar", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
+
+// /usr/include/qt/QtCore/qstring.h:776
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [-2] void push_front(const QString &)
+
+/*
+This function is provided for STL compatibility, prepending the given other string to the beginning of this string. It is equivalent to prepend(other).
 
-  // proto:  QString QStringRef::toString();
-impl /*struct*/ QStringRef {
-  pub fn toString<RetType, T: QStringRef_toString<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toString(self);
+See also prepend().
+*/
+impl /*struct*/ QString {
+  pub fn push_front_1<RetType, T: QString_push_front_1<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.push_front_1(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_toString<RetType> {
-  fn toString(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_push_front_1<RetType> {
+  fn push_front_1(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  QString QStringRef::toString();
-impl<'a> /*trait*/ QStringRef_toString<QString> for () {
-  fn toString(self , rsthis: & QStringRef) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef8toStringEv()};
-    let mut ret = unsafe {C_ZNK10QStringRef8toStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QString_push_front_1<(/*void*/)> for (usize) {
+  fn push_front_1(self , rsthis: & QString) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN7QString10push_frontERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
+
+// /usr/include/qt/QtCore/qstring.h:777
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void shrink_to_fit()
+
+/*
+This function is provided for STL compatibility. It is equivalent to squeeze().
 
-  // proto:  QStringRef QStringRef::trimmed();
-impl /*struct*/ QStringRef {
-  pub fn trimmed<RetType, T: QStringRef_trimmed<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.trimmed(self);
+This function was introduced in  Qt 5.10.
+
+See also squeeze().
+*/
+impl /*struct*/ QString {
+  pub fn shrink_to_fit_0<RetType, T: QString_shrink_to_fit_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.shrink_to_fit_0(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_trimmed<RetType> {
-  fn trimmed(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_shrink_to_fit_0<RetType> {
+  fn shrink_to_fit_0(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  QStringRef QStringRef::trimmed();
-impl<'a> /*trait*/ QStringRef_trimmed<QStringRef> for () {
-  fn trimmed(self , rsthis: & QStringRef) -> QStringRef {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef7trimmedEv()};
-    let mut ret = unsafe {C_ZNK10QStringRef7trimmedEv(rsthis.qclsinst)};
-    let mut ret1 = QStringRef::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QString_shrink_to_fit_0<(/*void*/)> for () {
+  fn shrink_to_fit_0(self , rsthis: & QString) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+     qtrt::InvokeQtFunc6("_ZN7QString13shrink_to_fitEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
+
+// /usr/include/qt/QtCore/qstring.h:780
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [32] std::string toStdString() const
 
-  // proto:  int QStringRef::toInt(bool * ok, int base);
-impl /*struct*/ QStringRef {
-  pub fn toInt<RetType, T: QStringRef_toInt<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toInt(self);
+/*
+Returns a std::string object with the data contained in this QString. The Unicode data is converted into 8-bit characters using the toUtf8() function.
+
+This method is mostly useful to pass a QString to a function that accepts a std::string object.
+
+See also toLatin1(), toUtf8(), toLocal8Bit(), and QByteArray::toStdString().
+*/
+impl /*struct*/ QString {
+  pub fn toStdString_0<RetType, T: QString_toStdString_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toStdString_0(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_toInt<RetType> {
-  fn toInt(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_toStdString_0<RetType> {
+  fn toStdString_0(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  int QStringRef::toInt(bool * ok, int base);
-impl<'a> /*trait*/ QStringRef_toInt<i32> for (Option<&'a mut Vec<i8>>, Option<i32>) {
-  fn toInt(self , rsthis: & QStringRef) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef5toIntEPbi()};
-    let arg0 = (if self.0.is_none() {0 as *const i8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK10QStringRef5toIntEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32; // 1
+impl<'a> /*trait*/ QString_toStdString_0<i32> for () {
+  fn toStdString_0(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString11toStdStringB5cxx11Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i32 = Default::default(); return dret;
   }
 }
 
-  // proto:  const QChar * QStringRef::cend();
-impl /*struct*/ QStringRef {
-  pub fn cend<RetType, T: QStringRef_cend<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.cend(self);
+// /usr/include/qt/QtCore/qstring.h:782
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [32] std::wstring toStdWString() const
+
+/*
+Returns a std::wstring object with the data contained in this QString. The std::wstring is encoded in utf16 on platforms where wchar_t is 2 bytes wide (e.g. windows) and in ucs4 on platforms where wchar_t is 4 bytes wide (most Unix systems).
+
+This method is mostly useful to pass a QString to a function that accepts a std::wstring object.
+
+See also utf16(), toLatin1(), toUtf8(), toLocal8Bit(), toStdU16String(), and toStdU32String().
+*/
+impl /*struct*/ QString {
+  pub fn toStdWString_0<RetType, T: QString_toStdWString_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toStdWString_0(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_cend<RetType> {
-  fn cend(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_toStdWString_0<RetType> {
+  fn toStdWString_0(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  const QChar * QStringRef::cend();
-impl<'a> /*trait*/ QStringRef_cend<QChar> for () {
-  fn cend(self , rsthis: & QStringRef) -> QChar {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef4cendEv()};
-    let mut ret = unsafe {C_ZNK10QStringRef4cendEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QString_toStdWString_0<i32> for () {
+  fn toStdWString_0(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString12toStdWStringB5cxx11Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i32 = Default::default(); return dret;
   }
 }
+
+// /usr/include/qt/QtCore/qstring.h:786
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [32] std::u16string toStdU16String() const
+
+/*
+Returns a std::u16string object with the data contained in this QString. The Unicode data is the same as returned by the utf16() method.
+
+This function was introduced in  Qt 5.5.
 
-  // proto:  QStringRef QStringRef::appendTo(QString * string);
-impl /*struct*/ QStringRef {
-  pub fn appendTo<RetType, T: QStringRef_appendTo<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.appendTo(self);
+See also utf16(), toStdWString(), and toStdU32String().
+*/
+impl /*struct*/ QString {
+  pub fn toStdU16String_0<RetType, T: QString_toStdU16String_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toStdU16String_0(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_appendTo<RetType> {
-  fn appendTo(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_toStdU16String_0<RetType> {
+  fn toStdU16String_0(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  QStringRef QStringRef::appendTo(QString * string);
-impl<'a> /*trait*/ QStringRef_appendTo<QStringRef> for (&'a QString) {
-  fn appendTo(self , rsthis: & QStringRef) -> QStringRef {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef8appendToEP7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {C_ZNK10QStringRef8appendToEP7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QStringRef::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QString_toStdU16String_0<i32> for () {
+  fn toStdU16String_0(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString14toStdU16StringB5cxx11Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i32 = Default::default(); return dret;
   }
 }
+
+// /usr/include/qt/QtCore/qstring.h:788
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [32] std::u32string toStdU32String() const
+
+/*
+Returns a std::u32string object with the data contained in this QString. The Unicode data is the same as returned by the toUcs4() method.
 
-  // proto:  int QStringRef::length();
-impl /*struct*/ QStringRef {
-  pub fn length<RetType, T: QStringRef_length<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.length(self);
+This function was introduced in  Qt 5.5.
+
+See also toUcs4(), toStdWString(), and toStdU16String().
+*/
+impl /*struct*/ QString {
+  pub fn toStdU32String_0<RetType, T: QString_toStdU32String_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.toStdU32String_0(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_length<RetType> {
-  fn length(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_toStdU32String_0<RetType> {
+  fn toStdU32String_0(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  int QStringRef::length();
-impl<'a> /*trait*/ QStringRef_length<i32> for () {
-  fn length(self , rsthis: & QStringRef) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef6lengthEv()};
-    let mut ret = unsafe {C_ZNK10QStringRef6lengthEv(rsthis.qclsinst)};
-    return ret as i32; // 1
+impl<'a> /*trait*/ QString_toStdU32String_0<i32> for () {
+  fn toStdU32String_0(self , rsthis: & QString) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString14toStdU32StringB5cxx11Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: i32 = Default::default(); return dret;
   }
 }
+
+// /usr/include/qt/QtCore/qstring.h:805
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [1] bool isNull() const
 
-  // proto:  void QStringRef::~QStringRef();
-impl /*struct*/ QStringRef {
-  pub fn free<RetType, T: QStringRef_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
+/*
+Returns true if this string is null; otherwise returns false.
+
+Example:
+
+
+  QString().isNull();             // returns true
+  QString("").isNull();           // returns false
+  QString("abc").isNull();        // returns false
+
+
+
+Qt makes a distinction between null strings and empty strings for historical reasons. For most applications, what matters is whether or not a string contains any data, and this can be determined using the isEmpty() function.
+
+See also isEmpty().
+*/
+impl /*struct*/ QString {
+  pub fn isNull_0<RetType, T: QString_isNull_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isNull_0(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_free<RetType> {
-  fn free(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_isNull_0<RetType> {
+  fn isNull_0(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  void QStringRef::~QStringRef();
-impl<'a> /*trait*/ QStringRef_free<()> for () {
-  fn free(self , rsthis: & QStringRef) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QStringRefD2Ev()};
-     unsafe {C_ZN10QStringRefD2Ev(rsthis.qclsinst)};
+impl<'a> /*trait*/ QString_isNull_0<bool> for () {
+  fn isNull_0(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString6isNullEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
+
+// /usr/include/qt/QtCore/qstring.h:808
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isSimpleText() const
 
-  // proto:  QByteArray QStringRef::toLocal8Bit();
-impl /*struct*/ QStringRef {
-  pub fn toLocal8Bit<RetType, T: QStringRef_toLocal8Bit<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toLocal8Bit(self);
+/*
+
+*/
+impl /*struct*/ QString {
+  pub fn isSimpleText_0<RetType, T: QString_isSimpleText_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isSimpleText_0(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_toLocal8Bit<RetType> {
-  fn toLocal8Bit(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_isSimpleText_0<RetType> {
+  fn isSimpleText_0(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  QByteArray QStringRef::toLocal8Bit();
-impl<'a> /*trait*/ QStringRef_toLocal8Bit<QByteArray> for () {
-  fn toLocal8Bit(self , rsthis: & QStringRef) -> QByteArray {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef11toLocal8BitEv()};
-    let mut ret = unsafe {C_ZNK10QStringRef11toLocal8BitEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray::inheritFrom(ret as u64);
-    return ret1;
+impl<'a> /*trait*/ QString_isSimpleText_0<bool> for () {
+  fn isSimpleText_0(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString12isSimpleTextEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
+
+// /usr/include/qt/QtCore/qstring.h:809
+// index:0
+// Public Visibility=Default Availability=Available
+// [1] bool isRightToLeft() const
 
-  // proto:  ulong QStringRef::toULong(bool * ok, int base);
-impl /*struct*/ QStringRef {
-  pub fn toULong<RetType, T: QStringRef_toULong<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toULong(self);
+/*
+Returns true if the string is read right to left.
+
+See also QStringRef::isRightToLeft().
+*/
+impl /*struct*/ QString {
+  pub fn isRightToLeft_0<RetType, T: QString_isRightToLeft_0<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.isRightToLeft_0(self);
     // return 1;
   }
 }
-
-pub trait QStringRef_toULong<RetType> {
-  fn toULong(self , rsthis: & QStringRef) -> RetType;
+pub trait QString_isRightToLeft_0<RetType> {
+  fn isRightToLeft_0(self , rsthis: & QString) -> RetType;
 }
-
-  // proto:  ulong QStringRef::toULong(bool * ok, int base);
-impl<'a> /*trait*/ QStringRef_toULong<u64> for (Option<&'a mut Vec<i8>>, Option<i32>) {
-  fn toULong(self , rsthis: & QStringRef) -> u64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef7toULongEPbi()};
-    let arg0 = (if self.0.is_none() {0 as *const i8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
-    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
-    let mut ret = unsafe {C_ZNK10QStringRef7toULongEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as u64; // 1
+impl<'a> /*trait*/ QString_isRightToLeft_0<bool> for () {
+  fn isRightToLeft_0(self , rsthis: & QString) -> bool {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QString13isRightToLeftEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
+    let dret: bool = Default::default(); return dret;
   }
 }
 
-  // proto:  const QChar * QStringRef::end();
-impl /*struct*/ QStringRef {
-  pub fn end<RetType, T: QStringRef_end<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.end(self);
-    // return 1;
-  }
+
+/*
+
+
+*/
+pub type QString__SectionFlag = i32;
+// 
+pub const QString__SectionDefault :QString__SectionFlag = 0;
+// 
+pub const QString__SectionSkipEmpty :QString__SectionFlag = 1;
+// 
+pub const QString__SectionIncludeLeadingSep :QString__SectionFlag = 2;
+// 
+pub const QString__SectionIncludeTrailingSep :QString__SectionFlag = 4;
+// 
+pub const QString__SectionCaseInsensitiveSeps :QString__SectionFlag = 8;
+pub fn QString_SectionFlagItemName(val: i32) ->String {
+  match val {
+     QString__SectionDefault => // 0
+     {return String::from("SectionDefault");}
+     QString__SectionSkipEmpty => // 1
+     {return String::from("SectionSkipEmpty");}
+     QString__SectionIncludeLeadingSep => // 2
+     {return String::from("SectionIncludeLeadingSep");}
+     QString__SectionIncludeTrailingSep => // 4
+     {return String::from("SectionIncludeTrailingSep");}
+     QString__SectionCaseInsensitiveSeps => // 8
+     {return String::from("SectionCaseInsensitiveSeps");}
+  _ => {return format!("{}", val);}
+}
+}
+pub fn QString_SectionFlagItemName_s(val: i32) ->String {
+  //var nilthis *QString
+  //return nilthis.SectionFlagItemName(val);
+  return QString_SectionFlagItemName(val);
 }
 
-pub trait QStringRef_end<RetType> {
-  fn end(self , rsthis: & QStringRef) -> RetType;
+
+/*
+This enum specifies how the split() function should behave with respect to empty strings.
+
+
+
+See also split().
+
+*/
+pub type QString__SplitBehavior = i32;
+// If a field is empty, keep it in the result.
+pub const QString__KeepEmptyParts :QString__SplitBehavior = 0;
+// If a field is empty, don't include it in the result.
+pub const QString__SkipEmptyParts :QString__SplitBehavior = 1;
+pub fn QString_SplitBehaviorItemName(val: i32) ->String {
+  match val {
+     QString__KeepEmptyParts => // 0
+     {return String::from("KeepEmptyParts");}
+     QString__SkipEmptyParts => // 1
+     {return String::from("SkipEmptyParts");}
+  _ => {return format!("{}", val);}
+}
 }
+pub fn QString_SplitBehaviorItemName_s(val: i32) ->String {
+  //var nilthis *QString
+  //return nilthis.SplitBehaviorItemName(val);
+  return QString_SplitBehaviorItemName(val);
+}
 
-  // proto:  const QChar * QStringRef::end();
-impl<'a> /*trait*/ QStringRef_end<QChar> for () {
-  fn end(self , rsthis: & QStringRef) -> QChar {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QStringRef3endEv()};
-    let mut ret = unsafe {C_ZNK10QStringRef3endEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret as u64);
-    return ret1;
-    // return 1;
-  }
+
+/*
+This enum describes the various normalized forms of Unicode text.
+
+
+
+See also normalized() and Unicode Standard Annex #15.
+
+*/
+pub type QString__NormalizationForm = i32;
+// Canonical Decomposition
+pub const QString__NormalizationForm_D :QString__NormalizationForm = 0;
+// Canonical Decomposition followed by Canonical Composition
+pub const QString__NormalizationForm_C :QString__NormalizationForm = 1;
+// Compatibility Decomposition
+pub const QString__NormalizationForm_KD :QString__NormalizationForm = 2;
+// Compatibility Decomposition followed by Canonical Composition
+pub const QString__NormalizationForm_KC :QString__NormalizationForm = 3;
+pub fn QString_NormalizationFormItemName(val: i32) ->String {
+  match val {
+     QString__NormalizationForm_D => // 0
+     {return String::from("NormalizationForm_D");}
+     QString__NormalizationForm_C => // 1
+     {return String::from("NormalizationForm_C");}
+     QString__NormalizationForm_KD => // 2
+     {return String::from("NormalizationForm_KD");}
+     QString__NormalizationForm_KC => // 3
+     {return String::from("NormalizationForm_KC");}
+  _ => {return format!("{}", val);}
 }
+}
+pub fn QString_NormalizationFormItemName_s(val: i32) ->String {
+  //var nilthis *QString
+  //return nilthis.NormalizationFormItemName(val);
+  return QString_NormalizationFormItemName(val);
+}
+
+//  body block end
 
-// <= body block end
+//  keep block begin
 
+//  keep block end
