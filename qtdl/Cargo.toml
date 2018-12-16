@@ -1,0 +1,7 @@
+[package]
+name = "qtdl"
+version = "0.1.0"
+authors = ["egitop <egitop@uhole.xyz>"]
+edition = "2018"
+
+[dependencies]

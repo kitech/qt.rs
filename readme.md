@@ -42,3 +42,7 @@ This project provides bindings that allow the QT Gui toolkit to be used from the
 * Operator methods support
 
 
+## workspace struct
+
+see wstree.txt
+

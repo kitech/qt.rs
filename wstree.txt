@@ -1,0 +1,43 @@
+.
+├── examples
+│   └── button.rs
+├── hello
+│   ├── Cargo.lock
+│   ├── Cargo.toml
+│   ├── lib
+│   ├── src
+│   └── target
+├── qt5
+│   ├── Cargo.lock
+│   ├── Cargo.toml
+│   └── src
+├── qtcore
+│   ├── Cargo.toml
+│   └── src
+├── qtdl
+│   ├── Cargo.toml
+│   └── src
+├── qtgui
+│   ├── Cargo.toml
+│   └── src
+├── qtrt
+│   ├── Cargo.toml
+│   └── src
+├── qtwidgets
+│   ├── Cargo.toml
+│   └── src
+├── readme.md
+├── src
+│   ├── core      -> ../qtcore/src
+│   ├── gui       -> ../qtgui/src
+│   ├── network   -> ../qtnetwork/src
+│   ├── qml       -> ../qtqml/src
+│   ├── qtrt      -> ../qtrt/src
+│   ├── quick     -> ../qtquick/src
+│   └── widgets   -> ../qtwidgets/src
+├── target
+│   ├── debug
+│   └── release
+└── wstree.txt
+
+28 directories, 13 files
